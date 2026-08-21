@@ -4,11 +4,11 @@ import { getCalculatorsByCategory, categoryCount } from "@/lib/registry";
 import { SITE_NAME } from "@/lib/site";
 import { Icon } from "@/components/Icon";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { MegaMenu, type MegaMenuCategory } from "@/components/layout/MegaMenu";
+import { FullscreenNav, type NavCategory } from "@/components/layout/FullscreenNav";
 import { OpenFinderButton } from "@/components/finder/OpenFinderButton";
 
 export function Header() {
-  const menu: MegaMenuCategory[] = CATEGORIES.filter(
+  const menu: NavCategory[] = CATEGORIES.filter(
     (c) => categoryCount(c.slug) > 0
   ).map((c) => ({
     slug: c.slug,
@@ -16,7 +16,7 @@ export function Header() {
     icon: c.icon,
     count: categoryCount(c.slug),
     tools: getCalculatorsByCategory(c.slug)
-      .slice(0, 5)
+      .slice(0, 8)
       .map((k) => ({
         label: k.title.replace(/ Calculator| Converter/i, ""),
         href: `/${k.categorySlug}/${k.slug}`,
@@ -36,7 +36,7 @@ export function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">
-          <MegaMenu menu={menu} />
+          <FullscreenNav menu={menu} />
           <Link
             href="/calculators"
             className="rounded-full px-3.5 py-2 text-sm font-medium text-text-secondary hover:bg-surface-2 hover:text-text-primary transition-colors"
