@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Icon } from "@/components/Icon";
-import { getCategoryColor } from "@/lib/category-config";
 import { SITE_NAME } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -17,9 +17,12 @@ export interface NavCategory {
 }
 
 export function FullscreenNav({ menu }: { menu: NavCategory[] }) {
-  const [mounted, setMounted] = useState(false); // in the DOM
-  const [visible, setVisible] = useState(false); // animated into view
+  const [mounted, setMounted] = useState(false);
+  const [visible, setVisible] = useState(false);
   const [canPortal, setCanPortal] = useState(false);
+  const [query, setQuery] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
+  const router = useRouter();
 
   useEffect(() => setCanPortal(true), []);
 
@@ -30,15 +33,23 @@ export function FullscreenNav({ menu }: { menu: NavCategory[] }) {
   };
   const toggle = () => (mounted ? close() : open());
 
-  // Flip to visible one tick after mount so the off-screen state paints first,
-  // then the transform transitions. Timer-based (not rAF) so it still runs when
-  // the tab is backgrounded/occluded.
+  // Flip to visible one tick after mount (timer, not rAF — works when occluded).
   useEffect(() => {
     if (!mounted) return;
     const t = setTimeout(() => setVisible(true), 20);
     return () => clearTimeout(t);
   }, [mounted]);
 
+  // Autofocus the search input once the overlay is on screen.
+  useEffect(() => {
+    if (visible) {
+      const t = setTimeout(() => inputRef.current?.focus(), 60);
+      return () => clearTimeout(t);
+    }
+    if (!mounted) setQuery("");
+  }, [visible, mounted]);
+
+  // Escape to close + scroll lock while open.
   useEffect(() => {
     if (!mounted) return;
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && close();
@@ -51,6 +62,29 @@ export function FullscreenNav({ menu }: { menu: NavCategory[] }) {
     };
   }, [mounted]);
 
+  const q = query.trim().toLowerCase();
+
+  // Filter tools live; drop categories with no matches while searching.
+  const filtered = useMemo(() => {
+    if (!q) return menu.map((c) => ({ ...c, shown: c.tools.slice(0, 8), searching: false }));
+    return menu
+      .map((c) => ({
+        ...c,
+        shown: c.tools.filter((t) => t.label.toLowerCase().includes(q)),
+        searching: true,
+      }))
+      .filter((c) => c.shown.length > 0);
+  }, [menu, q]);
+
+  const firstMatch = q ? filtered[0]?.shown[0]?.href : undefined;
+
+  const goFirst = () => {
+    if (firstMatch) {
+      close();
+      router.push(firstMatch);
+    }
+  };
+
   const overlay = (
     <div
       role="dialog"
@@ -62,20 +96,15 @@ export function FullscreenNav({ menu }: { menu: NavCategory[] }) {
         visible ? "translate-y-0" : "-translate-y-full"
       )}
     >
-      {/* Drifting background orbs (pure CSS) */}
       <div className="nav-orb nav-orb-1" aria-hidden />
       <div className="nav-orb nav-orb-2" aria-hidden />
       <div className="nav-orb nav-orb-3" aria-hidden />
 
       <div className="relative z-10 h-full overflow-y-auto">
-        <div className="mx-auto max-w-[1200px] px-6 py-12 sm:px-10 sm:py-16 lg:px-20">
+        <div className="mx-auto max-w-[1200px] px-6 py-12 sm:px-10 sm:py-14 lg:px-20">
           {/* Top row */}
           <div className="flex items-center justify-between">
-            <Link
-              href="/"
-              onClick={close}
-              className="flex items-center gap-2 text-white"
-            >
+            <Link href="/" onClick={close} className="flex items-center gap-2 text-white">
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[linear-gradient(135deg,var(--brand),var(--brand-600))]">
                 <Icon name="Calculator" size={19} />
               </span>
@@ -91,48 +120,70 @@ export function FullscreenNav({ menu }: { menu: NavCategory[] }) {
             </button>
           </div>
 
+          {/* Search */}
+          <div className="relative mx-auto mt-8 w-full max-w-[400px]">
+            <Icon
+              name="Search"
+              size={16}
+              className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-white/40"
+            />
+            <input
+              ref={inputRef}
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && goFirst()}
+              placeholder="Search calculators..."
+              aria-label="Search calculators"
+              className="h-12 w-full rounded-full border border-white/15 bg-white/[0.06] pl-11 pr-4 text-sm text-white placeholder:text-white/40 outline-none transition-colors focus:border-brand focus:bg-white/[0.09]"
+            />
+          </div>
+
           {/* Category grid */}
-          <div className="nav-stagger mt-14 grid grid-cols-1 gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-            {menu.map((cat) => {
-              const color = getCategoryColor(cat.slug);
-              return (
-                <div key={cat.slug}>
+          {filtered.length > 0 ? (
+            <div className="nav-stagger mt-12 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+              {filtered.map((cat) => (
+                <div key={cat.slug} className="border-t border-white/[0.08] pt-6">
                   <Link
                     href={`/${cat.slug}`}
                     onClick={close}
-                    className="flex items-center gap-2.5"
-                    style={{ color }}
+                    className="flex items-center gap-2.5 text-white"
                   >
-                    <Icon name={cat.icon} size={22} />
-                    <span className="font-display text-[22px] font-bold">
+                    <Icon name={cat.icon} size={22} className="text-white/40" />
+                    <span className="font-display text-[22px] font-semibold">
                       {cat.name}
                     </span>
                   </Link>
                   <ul className="mt-4">
-                    {cat.tools.slice(0, 8).map((t) => (
+                    {cat.shown.map((t) => (
                       <li key={t.href}>
                         <Link
                           href={t.href}
                           onClick={close}
-                          className="block w-fit py-0.5 text-sm font-normal leading-[2] text-white/55 transition-all duration-200 hover:translate-x-1 hover:text-white"
+                          className="block w-fit py-0.5 text-sm font-normal leading-[2] text-white/[0.65] transition-all duration-150 ease-out hover:translate-x-1.5 hover:text-white"
                         >
                           {t.label}
                         </Link>
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    href={`/${cat.slug}`}
-                    onClick={close}
-                    className="mt-3 inline-flex items-center gap-1 text-sm font-medium"
-                    style={{ color }}
-                  >
-                    See all {cat.count} →
-                  </Link>
+                  {!cat.searching && cat.count > cat.shown.length && (
+                    <Link
+                      href={`/${cat.slug}`}
+                      onClick={close}
+                      className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-brand hover:underline"
+                    >
+                      See all {cat.count} →
+                    </Link>
+                  )}
                 </div>
-              );
-            })}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <p className="mt-16 text-center text-sm text-white/50">
+              No calculators match &ldquo;{query}&rdquo;.
+            </p>
+          )}
         </div>
       </div>
     </div>
@@ -153,10 +204,7 @@ export function FullscreenNav({ menu }: { menu: NavCategory[] }) {
         )}
       >
         {mounted ? "Close" : "Tools"}
-        <Icon
-          name={mounted ? "X" : "ChevronDown"}
-          size={mounted ? 14 : 15}
-        />
+        <Icon name={mounted ? "X" : "ChevronDown"} size={mounted ? 14 : 15} />
       </button>
       {canPortal && mounted && createPortal(overlay, document.body)}
     </>

@@ -15,12 +15,10 @@ export function Header() {
     name: c.name,
     icon: c.icon,
     count: categoryCount(c.slug),
-    tools: getCalculatorsByCategory(c.slug)
-      .slice(0, 8)
-      .map((k) => ({
-        label: k.title.replace(/ Calculator| Converter/i, ""),
-        href: `/${k.categorySlug}/${k.slug}`,
-      })),
+    tools: getCalculatorsByCategory(c.slug).map((k) => ({
+      label: k.title.replace(/ Calculator| Converter/i, ""),
+      href: `/${k.categorySlug}/${k.slug}`,
+    })),
   }));
 
   return (

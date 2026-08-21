@@ -286,46 +286,49 @@ input:-webkit-autofill:focus {
   animation: slide-up 0.32s var(--ease-out-expo) both;
 }
 
-/* Full-screen nav overlay — drifting background orbs (pure CSS) */
-@keyframes orb-drift {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-  50% {
-    transform: translate3d(5%, -4%, 0) scale(1.15);
-  }
+/* Full-screen nav overlay — floating background orbs (pure CSS) */
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(30px, -40px); }
+}
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-20px, 30px); }
+}
+@keyframes orbFloat3 {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(15px, -20px); }
+  66% { transform: translate(-25px, 10px); }
 }
 .nav-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(60px);
   pointer-events: none;
   will-change: transform;
 }
 .nav-orb-1 {
-  top: -12%;
-  left: -6%;
-  width: 520px;
-  height: 520px;
-  background: radial-gradient(circle, rgba(14, 165, 233, 0.14), transparent 70%);
-  animation: orb-drift 24s ease-in-out infinite;
+  top: -20%;
+  left: 10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(10, 132, 255, 0.12) 0%, transparent 70%);
+  animation: orbFloat1 25s ease-in-out infinite;
 }
 .nav-orb-2 {
-  bottom: -18%;
-  right: -6%;
-  width: 620px;
-  height: 620px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.13), transparent 70%);
-  animation: orb-drift 30s ease-in-out infinite reverse;
+  top: 40%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(48, 209, 88, 0.07) 0%, transparent 70%);
+  animation: orbFloat2 30s ease-in-out infinite;
 }
 .nav-orb-3 {
-  top: 28%;
-  right: 22%;
-  width: 440px;
-  height: 440px;
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.1), transparent 70%);
-  animation: orb-drift 27s ease-in-out infinite;
+  bottom: -10%;
+  left: 30%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(10, 132, 255, 0.06) 0%, transparent 70%);
+  animation: orbFloat3 35s ease-in-out infinite;
 }
 
 /* Staggered fade-in for the overlay's category columns */
