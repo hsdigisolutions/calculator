@@ -14,7 +14,7 @@ const ContentSecurityPolicy = [
   "style-src 'self' 'unsafe-inline'",
   "font-src 'self'",
   "img-src 'self' data: blob:",
-  "connect-src 'self'",
+  "connect-src 'self' https://vitals.vercel-insights.com",
   "frame-src 'none'",
   "object-src 'none'",
   "base-uri 'self'",
