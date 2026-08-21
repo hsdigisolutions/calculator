@@ -2,26 +2,402 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================================
+   DESIGN TOKENS — dark-first, both themes designed.
+   Source of truth: --color-* / law tokens.
+   Compatibility aliases (--brand, --surface, …) map onto them
+   so the Tailwind layer and components share one system.
+   ============================================================ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+
+  /* ---- Grounds ---- */
+  --color-bg: #080808;
+  --color-surface-1: #111113;
+  --color-surface-2: #18181b;
+  --color-surface-3: #222226;
+  --color-surface-4: #2a2a2f;
+
+  /* ---- Borders ---- */
+  --color-border: rgba(255, 255, 255, 0.06);
+  --color-border-hover: rgba(255, 255, 255, 0.12);
+  --color-border-focus: rgba(14, 165, 233, 0.5);
+
+  /* ---- Brand accent — electric sky, specific to this platform ---- */
+  --color-accent: #0ea5e9;
+  --color-accent-strong: #0369a1;
+  --color-accent-dim: rgba(14, 165, 233, 0.15);
+  --color-accent-glow: 0 0 24px rgba(14, 165, 233, 0.35),
+    0 0 64px rgba(14, 165, 233, 0.15);
+
+  /* ---- Semantic ---- */
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+
+  /* ---- Text ---- */
+  --color-text-primary: #f4f4f5;
+  --color-text-secondary: rgba(244, 244, 245, 0.64);
+  --color-text-tertiary: rgba(244, 244, 245, 0.52);
+  --color-text-accent: #38bdf8;
+
+  /* ---- Shadows ---- */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.6), 0 2px 4px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.65), 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.7), 0 8px 16px rgba(0, 0, 0, 0.4);
+  --shadow-2xl: 0 32px 80px rgba(0, 0, 0, 0.75), 0 16px 32px rgba(0, 0, 0, 0.5);
+
+  /* ---- Radius ---- */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-full: 9999px;
+
+  /* ---- Easing ---- */
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+
+  /* ---- Durations ---- */
+  --duration-micro: 150ms;
+  --duration-fast: 250ms;
+  --duration-standard: 400ms;
+  --duration-deliberate: 600ms;
+  --duration-scenic: 900ms;
+
+  /* ---- Fonts (wired via next/font in layout.tsx) ---- */
+  --font-display: var(--font-syne), "Clash Display", system-ui, sans-serif;
+  --font-body: var(--font-dmsans), -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: var(--font-jetbrains), "SF Mono", "Fira Code", monospace;
+  --font-utility: var(--font-dmmono), "Courier New", monospace;
+
+  /* ============ Compatibility aliases used by Tailwind + components ============ */
+  --brand: var(--color-accent);
+  --brand-600: var(--color-accent-strong);
+  --bg: var(--color-bg);
+  --surface: var(--color-surface-1);
+  --surface-2: var(--color-surface-2);
+  --surface-3: var(--color-surface-3);
+  --border: var(--color-border);
+  --border-strong: var(--color-border-hover);
+  --text-primary: var(--color-text-primary);
+  --text-secondary: var(--color-text-secondary);
+  --text-tertiary: var(--color-text-tertiary);
+  --success: var(--color-success);
+  --warning: var(--color-warning);
+  --danger: var(--color-danger);
+  --font-sans: var(--font-body);
+  --glass-bg: rgba(17, 17, 19, 0.65);
+  --glow-blue: var(--color-accent-glow);
+  --focus-ring: 0 0 0 4px rgba(14, 165, 233, 0.3);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ---------------- Light theme ---------------- */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-bg: #f8f8fa;
+  --color-surface-1: #ffffff;
+  --color-surface-2: #f1f1f5;
+  --color-surface-3: #ebebf0;
+  --color-surface-4: #dddde6;
+  --color-border: rgba(0, 0, 0, 0.15);
+  --color-border-hover: rgba(0, 0, 0, 0.25);
+  --color-border-focus: rgba(2, 132, 199, 0.6);
+  --color-accent: #0284c7;
+  --color-accent-strong: #036aa1;
+  --color-accent-dim: rgba(2, 132, 199, 0.1);
+  --color-accent-glow: 0 0 16px rgba(2, 132, 199, 0.2);
+  --color-text-primary: #09090b;
+  --color-text-secondary: rgba(9, 9, 11, 0.64);
+  --color-text-tertiary: rgba(9, 9, 11, 0.6);
+  --color-text-accent: #0284c7;
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.14);
+  --shadow-2xl: 0 32px 80px rgba(0, 0, 0, 0.16);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --focus-ring: 0 0 0 4px rgba(2, 132, 199, 0.25);
+}
+
+/* Follow system when the user hasn't explicitly chosen dark */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --color-bg: #f8f8fa;
+    --color-surface-1: #ffffff;
+    --color-surface-2: #f1f1f5;
+    --color-surface-3: #ebebf0;
+    --color-surface-4: #dddde6;
+    --color-border: rgba(0, 0, 0, 0.07);
+    --color-border-hover: rgba(0, 0, 0, 0.13);
+    --color-accent: #0284c7;
+    --color-accent-strong: #036aa1;
+    --color-accent-dim: rgba(2, 132, 199, 0.1);
+    --color-accent-glow: 0 0 16px rgba(2, 132, 199, 0.2);
+    --color-text-primary: #09090b;
+    --color-text-secondary: rgba(9, 9, 11, 0.55);
+    --color-text-tertiary: rgba(9, 9, 11, 0.35);
+    --color-text-accent: #0284c7;
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.06);
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+    --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.14);
+    --shadow-2xl: 0 32px 80px rgba(0, 0, 0, 0.16);
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --focus-ring: 0 0 0 4px rgba(2, 132, 199, 0.25);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* ---------------- Base ---------------- */
+* {
+  border-color: var(--color-border);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100dvh;
+}
+
+/* Display type for headings — Syne, tight tracking */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.03em;
+}
+
+/* Uppercase utility labels use DM Mono */
+.util {
+  font-family: var(--font-utility);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+::selection {
+  background: rgba(14, 165, 233, 0.32);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------------- Form controls ---------------- */
+/* Component classes set background/focus; these are safe fallbacks that fix
+   native-control quirks (Safari text fill, autofill, spinners, option list). */
+input,
+textarea,
+select {
+  color: var(--color-text-primary);
+  -webkit-text-fill-color: var(--color-text-primary);
+  caret-color: var(--color-accent);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-tertiary);
+  -webkit-text-fill-color: var(--color-text-tertiary);
+  opacity: 1; /* Firefox lowers placeholder opacity by default */
+}
+
+/* Remove number-input spinner arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* Native select popup list — cannot be styled by utility classes */
+select option {
+  background-color: var(--color-surface-2);
+  color: var(--color-text-primary);
+}
+
+/* Keep our dark well through autofill instead of the browser's yellow */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--color-surface-3) inset !important;
+  -webkit-text-fill-color: var(--color-text-primary) !important;
+  caret-color: var(--color-accent);
+}
+
+/* ---------------- Keyframes ---------------- */
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  10%, 90% { transform: translateX(-1px); }
+  20%, 80% { transform: translateX(2px); }
+  30%, 50%, 70% { transform: translateX(-4px); }
+  40%, 60% { transform: translateX(4px); }
+}
+.animate-shake {
+  animation: shake 0.4s var(--ease-out-quart) both;
+}
+
+/* Slow mesh drift for the hero background */
+@keyframes mesh-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(2%, -2%, 0) scale(1.08);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+/* Scroll-reveal: elements start hidden, .is-visible releases them */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--duration-deliberate) var(--ease-out-expo),
+    transform var(--duration-deliberate) var(--ease-out-expo);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered children — reveal siblings in sequence when the container enters */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--duration-deliberate) var(--ease-out-expo),
+    transform var(--duration-deliberate) var(--ease-out-expo);
+}
+.stagger.is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+.stagger.is-visible > *:nth-child(1) { transition-delay: 0ms; }
+.stagger.is-visible > *:nth-child(2) { transition-delay: 80ms; }
+.stagger.is-visible > *:nth-child(3) { transition-delay: 160ms; }
+.stagger.is-visible > *:nth-child(4) { transition-delay: 240ms; }
+.stagger.is-visible > *:nth-child(5) { transition-delay: 320ms; }
+.stagger.is-visible > *:nth-child(6) { transition-delay: 400ms; }
+.stagger.is-visible > *:nth-child(7) { transition-delay: 480ms; }
+.stagger.is-visible > *:nth-child(8) { transition-delay: 560ms; }
+.stagger.is-visible > *:nth-child(9) { transition-delay: 640ms; }
+.stagger.is-visible > *:nth-child(10) { transition-delay: 720ms; }
+
+/* 3D cursor-follow tilt. JS updates --rx / --ry only; transform lives here. */
+.tilt {
+  transform: perspective(800px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg))
+    translateY(var(--tilt-lift, 0));
+  transform-style: preserve-3d;
+  transition: transform var(--duration-fast) var(--ease-out-quart);
+  will-change: transform;
+}
+
+/* Animated hero mesh — three drifting radial gradients, very slow */
+.mesh {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+.mesh::before,
+.mesh::after {
+  content: "";
+  position: absolute;
+  inset: -25%;
+  background:
+    radial-gradient(38% 32% at 28% 22%, rgba(14, 165, 233, 0.16), transparent 70%),
+    radial-gradient(34% 30% at 76% 30%, rgba(99, 102, 241, 0.12), transparent 70%),
+    radial-gradient(40% 36% at 50% 80%, rgba(14, 165, 233, 0.08), transparent 72%);
+  animation: mesh-drift 26s var(--ease-linear, linear) infinite;
+}
+.mesh::after {
+  animation-duration: 34s;
+  animation-direction: reverse;
+  opacity: 0.7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mesh::before,
+  .mesh::after {
+    animation: none;
+  }
+  .tilt {
+    transform: none;
+  }
+}
+
+/* Thin premium scrollbars */
+.scroll-row {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-surface-3) transparent;
+}
+.scroll-row::-webkit-scrollbar {
+  height: 6px;
+}
+.scroll-row::-webkit-scrollbar-thumb {
+  background: var(--color-surface-3);
+  border-radius: var(--radius-full);
+}
+
+/* ---------------- Reduced motion — degrade to opacity only ---------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    transform: none;
   }
 }
