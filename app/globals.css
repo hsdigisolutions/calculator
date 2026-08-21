@@ -272,6 +272,20 @@ input:-webkit-autofill:focus {
   }
 }
 
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.animate-slide-up {
+  animation: slide-up 0.32s var(--ease-out-expo) both;
+}
+
 @keyframes shake {
   10%, 90% { transform: translateX(-1px); }
   20%, 80% { transform: translateX(2px); }
@@ -371,6 +385,18 @@ input:-webkit-autofill:focus {
   }
   .tilt {
     transform: none;
+  }
+}
+
+/* Print: drop chrome so a calculator + result prints cleanly */
+@media print {
+  header,
+  footer {
+    display: none !important;
+  }
+  body::before,
+  .mesh {
+    display: none !important;
   }
 }
 

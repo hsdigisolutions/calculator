@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, useCallback } from "react";
+import { useMemo, useState, useCallback, useEffect, useRef } from "react";
 import type {
   CalculatorDefinition,
   CalculatorField,
@@ -8,6 +8,7 @@ import type {
   ComputeInputs,
 } from "@/lib/types";
 import { getEngine } from "@/lib/engines";
+import { trackCalculatorUsed } from "@/lib/analytics";
 import {
   cn,
   formatResult,
@@ -77,6 +78,15 @@ export function CalculatorShell({
     primaryRaw !== undefined &&
     (typeof primaryRaw === "string" || Number.isFinite(primaryRaw));
 
+  // Fire an analytics event the first time this calculator produces a result.
+  const trackedRef = useRef(false);
+  useEffect(() => {
+    if (hasResult && !trackedRef.current) {
+      trackedRef.current = true;
+      trackCalculatorUsed(definition.slug, definition.category);
+    }
+  }, [hasResult, definition.slug, definition.category]);
+
   const setField = useCallback((id: string, value: string) => {
     setValues((prev) => ({ ...prev, [id]: value }));
   }, []);
@@ -143,23 +153,25 @@ export function CalculatorShell({
       {/* Divider */}
       <div className="my-6 h-px bg-line" />
 
-      {/* Result */}
-      <ResultDisplay
-        primary={primary}
-        primaryRaw={primaryRaw}
-        primaryIsNumber={primaryIsNumber}
-        hasResult={hasResult}
-        secondary={secondary}
-        outputs={outputs}
-        onCopy={copyResult}
-        copied={copied}
-      />
+      {/* Result — announced to assistive tech, fixed min-height to avoid CLS */}
+      <div role="status" aria-live="polite" className="min-h-[132px]">
+        <ResultDisplay
+          primary={primary}
+          primaryRaw={primaryRaw}
+          primaryIsNumber={primaryIsNumber}
+          hasResult={hasResult}
+          secondary={secondary}
+          outputs={outputs}
+          onCopy={copyResult}
+          copied={copied}
+        />
+      </div>
 
       {disclaimer && (
-        <p className="mt-6 flex gap-2 text-xs text-text-tertiary leading-relaxed">
-          <Icon name="Info" size={14} className="mt-0.5 shrink-0" />
-          <span>{disclaimer}</span>
-        </p>
+        <div className="mt-6 flex gap-3 rounded-xl border border-warning/25 bg-warning/10 p-4">
+          <Icon name="Info" size={17} className="mt-0.5 shrink-0 text-warning" />
+          <p className="text-xs leading-relaxed text-text-secondary">{disclaimer}</p>
+        </div>
       )}
     </Card>
   );

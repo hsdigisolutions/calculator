@@ -6,6 +6,8 @@ import { SITE_URL } from "@/lib/site";
 import { calculatorAppSchema, articleSchema, ROBOTS } from "@/lib/schema";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
+import { ShareBar } from "@/components/calculator/ShareBar";
+import { HowToUse } from "@/components/calculator/HowToUse";
 import { FormulaPanel } from "@/components/calculator/FormulaPanel";
 import { ExamplePanel } from "@/components/calculator/ExamplePanel";
 import { FAQSection } from "@/components/calculator/FAQSection";
@@ -88,6 +90,9 @@ export default async function CalculatorPage({
           {calc.title}
         </h1>
         <p className="mt-3 text-lg text-text-secondary">{calc.shortDescription}</p>
+        <div className="mt-4">
+          <ShareBar title={calc.title} />
+        </div>
       </div>
 
       <div className="mt-8 max-w-calc">
@@ -97,6 +102,7 @@ export default async function CalculatorPage({
       <div className="max-w-calc">
         <FormulaPanel definition={calc} />
         <ExamplePanel definition={calc} />
+        <HowToUse definition={calc} />
         <FAQSection definition={calc} />
       </div>
 

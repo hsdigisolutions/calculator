@@ -64,3 +64,32 @@ export function getRelatedCalculators(slugs: string[]): CalculatorDefinition[] {
 export function categoryCount(categorySlug: string): number {
   return getCalculatorsByCategory(categorySlug).length;
 }
+
+export interface SearchIndexItem {
+  href: string;
+  label: string;
+  category: string;
+  /** lower-cased haystack of keywords for matching */
+  keywords: string;
+}
+
+/**
+ * Lightweight client-safe index for the CalculatorFinder. Auto-built from the
+ * registry so every current and future calculator is findable with no manual
+ * intent map to maintain.
+ */
+export function getSearchIndex(): SearchIndexItem[] {
+  return getActiveCalculators().map((c) => ({
+    href: `/${c.categorySlug}/${c.slug}`,
+    label: c.title,
+    category: c.category,
+    keywords: [
+      c.primaryKeyword,
+      ...c.secondaryKeywords,
+      c.title,
+      c.shortDescription,
+    ]
+      .join(" ")
+      .toLowerCase(),
+  }));
+}

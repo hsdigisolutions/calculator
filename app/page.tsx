@@ -78,6 +78,45 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Intent navigation — "what are you trying to figure out?" */}
+      <section className="w-full border-t border-line bg-surface/30">
+        <div className={`${INNER} py-14 sm:py-16`}>
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
+            What are you trying to figure out?
+          </h2>
+          <div className="mt-6 grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { icon: "Landmark", title: "Plan your money", slug: "finance", blurb: "Mortgages, loans & interest" },
+              { icon: "HeartPulse", title: "Stay healthy", slug: "health", blurb: "BMI, calories & body metrics" },
+              { icon: "Sigma", title: "Crunch numbers", slug: "math", blurb: "Percentages, fractions & more" },
+              { icon: "ArrowLeftRight", title: "Convert units", slug: "converters", blurb: "Length, weight & temperature" },
+            ].map((it) => {
+              const n = categoryCount(it.slug);
+              return (
+                <Link
+                  key={it.slug}
+                  href={`/${it.slug}`}
+                  className="group flex flex-col gap-3 rounded-2xl border border-line bg-surface p-5 shadow-sm hover:shadow-lg hover:-translate-y-0.5 hover:border-line-strong transition-all duration-300 ease-spring"
+                >
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand/10 text-brand">
+                    <Icon name={it.icon} size={22} />
+                  </span>
+                  <div>
+                    <h3 className="font-semibold text-text-primary">{it.title}</h3>
+                    <p className="mt-1 text-sm text-text-secondary">{it.blurb}</p>
+                  </div>
+                  {n > 0 && (
+                    <span className="mt-auto text-xs font-medium text-text-tertiary">
+                      {n} {n === 1 ? "tool" : "tools"} →
+                    </span>
+                  )}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Category grid */}
       <section className="w-full">
         <div className={`${INNER} py-16 sm:py-20`}>
