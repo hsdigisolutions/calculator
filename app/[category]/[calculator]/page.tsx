@@ -8,6 +8,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
 import { ShareBar } from "@/components/calculator/ShareBar";
 import { HowToUse } from "@/components/calculator/HowToUse";
+import { CalculatorSidebar } from "@/components/calculator/CalculatorSidebar";
 import { FormulaPanel } from "@/components/calculator/FormulaPanel";
 import { ExamplePanel } from "@/components/calculator/ExamplePanel";
 import { FAQSection } from "@/components/calculator/FAQSection";
@@ -85,25 +86,33 @@ export default async function CalculatorPage({
         ]}
       />
 
-      <div className="max-w-calc">
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-text-primary">
-          {calc.title}
-        </h1>
-        <p className="mt-3 text-lg text-text-secondary">{calc.shortDescription}</p>
-        <div className="mt-4">
-          <ShareBar title={calc.title} />
+      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-10 xl:gap-14">
+        <div className="min-w-0">
+          <header className="max-w-calc">
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-text-primary">
+              {calc.title}
+            </h1>
+            <p className="mt-3 text-lg text-text-secondary">
+              {calc.shortDescription}
+            </p>
+            <div className="mt-4">
+              <ShareBar title={calc.title} />
+            </div>
+          </header>
+
+          <div className="mt-8 max-w-calc">
+            <CalculatorShell definition={calc} />
+          </div>
+
+          <div className="max-w-calc">
+            <FormulaPanel definition={calc} />
+            <ExamplePanel definition={calc} />
+            <HowToUse definition={calc} />
+            <FAQSection definition={calc} />
+          </div>
         </div>
-      </div>
 
-      <div className="mt-8 max-w-calc">
-        <CalculatorShell definition={calc} />
-      </div>
-
-      <div className="max-w-calc">
-        <FormulaPanel definition={calc} />
-        <ExamplePanel definition={calc} />
-        <HowToUse definition={calc} />
-        <FAQSection definition={calc} />
+        <CalculatorSidebar definition={calc} />
       </div>
 
       <RelatedCalculators definition={calc} />

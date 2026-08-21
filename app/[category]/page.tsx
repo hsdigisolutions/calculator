@@ -5,7 +5,7 @@ import { getCalculatorsByCategory } from "@/lib/registry";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { collectionPageSchema, ROBOTS } from "@/lib/schema";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { CalculatorCard } from "@/components/CalculatorCard";
+import { CategoryGridFilter } from "@/components/category/CategoryGridFilter";
 import { Icon } from "@/components/Icon";
 
 export const dynamicParams = false;
@@ -83,11 +83,17 @@ export default async function CategoryPage({
       </div>
 
       {calcs.length > 0 ? (
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {calcs.map((c) => (
-            <CalculatorCard key={c.slug} calc={c} />
-          ))}
-        </div>
+        <CategoryGridFilter
+          icon={category.icon}
+          items={calcs.map((c) => ({
+            title: c.title,
+            href: `/${c.categorySlug}/${c.slug}`,
+            shortDescription: c.shortDescription,
+            keywords: [c.primaryKeyword, ...c.secondaryKeywords]
+              .join(" ")
+              .toLowerCase(),
+          }))}
+        />
       ) : (
         <p className="mt-10 text-text-secondary">
           Calculators in this category are coming soon.

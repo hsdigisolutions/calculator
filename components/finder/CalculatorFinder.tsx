@@ -56,6 +56,13 @@ export function CalculatorFinder({ index }: { index: SearchIndexItem[] }) {
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
+  // Allow other UI (e.g. the header search icon) to open the finder
+  useEffect(() => {
+    const openIt = () => setOpen(true);
+    window.addEventListener("calcvora:open-finder", openIt);
+    return () => window.removeEventListener("calcvora:open-finder", openIt);
+  }, []);
+
   const results = useMemo(() => {
     const q = query.trim();
     if (q.length < 2) return [];
