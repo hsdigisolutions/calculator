@@ -426,6 +426,90 @@ export const CATEGORIES: Category[] = [
       },
     ],
   },
+  {
+    slug: "engineering",
+    name: "Engineering",
+    icon: "Wrench",
+    tagline: "Mechanical & electrical formulas",
+    description: "Solve engineering formulas fast.",
+    seoIntro:
+      "Free engineering calculators for gear ratio, voltage divider, stress and strain, motor power, beam deflection and Reynolds number. Each shows the formula, a worked example and clear SI-unit results.",
+    about:
+      "Engineering calculators apply the working formulas of mechanical and electrical design — gear ratio, the voltage divider, stress and strain, motor power, beam deflection and the Reynolds number — so you can move from known quantities to the answer without rearranging equations or fumbling unit conversions by hand. Each tool takes the values you have, computes in consistent SI units, and returns the figure you need alongside useful secondary results, which is exactly the kind of quick, reliable check that keeps a design moving. These calculations underpin coursework, prototyping and everyday shop-floor decisions, and the mistakes that creep in are almost always slips in algebra or mixed units rather than a misunderstanding of the physics. A tool that pins the units down and shows the formula removes that risk and lets you concentrate on the design intent. Students verify homework and learn the method; makers size motors, gears and resistor networks; and practising engineers sanity-check a figure before it goes into a drawing or a bill of materials. Every calculator here states the formula it uses and a worked example, so the result is transparent rather than a black box, and it follows standard textbook definitions. The limitation to keep in mind is that these are idealised models: they assume linear-elastic material, steady flow, ideal gears and clean inputs, and do not capture friction, thermal effects, fatigue, safety factors or manufacturing tolerance. Treat the output as the exact theoretical value for the numbers you enter, then apply the appropriate safety margins and standards before committing to a real build.",
+    faqs: [
+      {
+        question: "Are these engineering calculators accurate enough for real designs?",
+        answer:
+          "The mathematics is exact for the idealised model each tool implements, and results are precise to the decimals shown. Real designs, though, must add safety factors, allow for friction, temperature, fatigue and material variability, and comply with the relevant code or standard. Use these calculators to check working, compare options and build intuition, then validate the final design against the applicable engineering standards and a qualified reviewer before anything is manufactured or loaded.",
+      },
+      {
+        question: "What units do these calculators expect?",
+        answer:
+          "They work in SI base and derived units — metres, kilograms, seconds, amperes, newtons, pascals, watts and volts — because mixing unit systems is the single most common source of error in engineering calculation. Every input field is labelled with the unit it expects, and several tools return a convenient secondary figure as well, such as horsepower alongside watts or megapascals alongside pascals, so you can read the result in whichever unit your work calls for.",
+      },
+      {
+        question: "Why does my calculated beam deflection differ from a real beam?",
+        answer:
+          "Because the standard deflection formulas assume an idealised beam: a single material behaving linearly, a perfectly defined support condition, and a clean point or uniform load. A real beam carries connection flexibility, self-weight, load sharing, material scatter and support give that the simple equation omits. The calculator gives the exact theoretical deflection for your inputs, which is ideal for comparison and preliminary sizing; confirm a load-bearing design with full analysis and the governing structural code.",
+      },
+    ],
+  },
+  {
+    slug: "sports",
+    name: "Sports",
+    icon: "Trophy",
+    tagline: "Training, pace & performance",
+    description: "Train smarter with the numbers.",
+    seoIntro:
+      "Free sports calculators for one-rep max, VO2 max, swim pace, calorie burn and race time prediction. Each shows the formula, a worked example and clear results to guide your training.",
+    about:
+      "Sports calculators turn training inputs — a set completed in the gym, a test effort on the track, a swim split, a session's duration — into the numbers that guide smarter training: an estimated one-rep max, a VO2 max fitness score, a pace per hundred metres, calories burned, or a predicted finish time at a new distance. Their value is that they replace guesswork with an established formula, giving athletes a consistent baseline to plan loads against and to measure progress over a season. Lifters use a one-rep-max estimate to set working weights as a percentage of their maximum without the risk of testing a true max; runners predict a marathon time from a recent 10K and pace their long runs; swimmers track pace across sets; and anyone building a training plan uses calorie estimates to balance fuelling against output. The methods here are the ones coaches and sports scientists rely on — the Epley and Brzycki formulas for one-rep max, the Cooper and race-based estimates for VO2 max, and the standard pace and MET-based calorie relationships — and each tool shows its formula and a worked example so the logic is transparent. The essential caveat is that these are population-level estimates built from averages, not measured values for you specifically: a lifter's true max depends on technique and rep quality, VO2 max from a field test is an approximation of a lab measurement, and calorie burn varies with fitness, terrain and efficiency. Use the figures to plan, pace and track trends, not as precise physiological readings.",
+    faqs: [
+      {
+        question: "How accurate is an estimated one-rep max?",
+        answer:
+          "It is a good estimate, not a guaranteed lift. Formulas like Epley and Brzycki predict your maximum from a weight you can lift for several reps, and they are most accurate in the low-rep range — under about five reps — where the relationship holds tightly. Above ten reps the estimate drifts, because endurance and technique start to dominate. Use it to set training percentages safely, and confirm a true max under supervision only when it genuinely matters.",
+      },
+      {
+        question: "Can a calculator really predict my race time?",
+        answer:
+          "It can give a realistic target, within limits. Race prediction extrapolates from a recent result using a standard endurance model, and it works well when the new distance is not too far from the one you have raced and your training suits it. Predicting a marathon from a single fast 5K tends to be optimistic, because endurance at long distances depends on training volume the formula cannot see. Treat the prediction as a pacing guide, then adjust for your specific fitness.",
+      },
+      {
+        question: "How is calorie burn during exercise estimated?",
+        answer:
+          "Most estimates use MET values — a measure of an activity's intensity relative to rest — combined with your body weight and the duration of the session. Multiplying the activity's MET rating by weight and time gives a solid approximation of energy expended. The figure is an estimate because real burn shifts with your fitness, efficiency, terrain and effort, and two people doing the same workout can differ noticeably. Use it to guide fuelling and track trends rather than as an exact count.",
+      },
+    ],
+  },
+  {
+    slug: "technology",
+    name: "Technology",
+    icon: "Cpu",
+    tagline: "Data, networks & displays",
+    description: "Practical tech and networking math.",
+    seoIntro:
+      "Free technology calculators for download time, bandwidth, IP subnets, screen PPI, video bitrate and uptime SLA. Each shows the formula, a worked example and clear results.",
+    about:
+      "Technology calculators handle the practical arithmetic behind data, networks and displays — how long a file takes to download at a given speed, the bandwidth a stream or user load demands, the usable hosts in an IP subnet, the pixel density of a screen, the bitrate a video needs, and the downtime an uptime SLA actually permits. These are the everyday figures that engineers, administrators and technically minded users reach for when planning capacity, sizing infrastructure or specifying hardware, and they are easy to get wrong because the units are unforgiving: bits versus bytes, decimal versus binary, percentages that translate into surprisingly precise minutes of allowed outage. A tool that fixes the conventions and shows its working removes that ambiguity. Network administrators plan subnets and check that an SLA leaves room for maintenance; developers estimate transfer times and streaming bandwidth; and buyers compare screen sharpness across devices of different sizes and resolutions. Each calculator applies the standard method — file size over throughput for download time, host bits for subnet capacity, the diagonal-pixel formula for PPI, and the percentage-of-a-period definition for SLA downtime — and shows the formula and a worked example so the result is transparent rather than a guess. The main convention to keep in mind is the bit-versus-byte and decimal-versus-binary distinction that trips up so many estimates: connection speeds are quoted in bits per second while file sizes are in bytes, and these tools state which they use. Treat the figures as accurate for the inputs you provide, and allow for real-world overhead like protocol headers and congestion.",
+    faqs: [
+      {
+        question: "Why does a download take longer than the file size divided by my speed?",
+        answer:
+          "Two reasons. First, the units differ: internet speeds are quoted in bits per second while files are measured in bytes, and a byte is eight bits, so a 100 Mbps line moves roughly 12.5 megabytes per second, not 100. Second, real transfers carry protocol overhead, latency and congestion that the ideal figure ignores. The download-time tool converts bits to bytes correctly; add a margin of overhead to match what you actually observe.",
+      },
+      {
+        question: "How many usable hosts are in a subnet?",
+        answer:
+          "It depends on the number of host bits, which the subnet mask defines. The usable count is two raised to the number of host bits, minus two — one address is reserved for the network itself and one for the broadcast address. A /24 subnet has eight host bits, giving 254 usable addresses. The subnet calculator works this out from the mask or prefix you enter, along with the network and broadcast addresses, so you can plan address space without manual binary arithmetic.",
+      },
+      {
+        question: "What does a given uptime SLA mean in real downtime?",
+        answer:
+          "An SLA percentage translates into a concrete allowance of outage over a period. Ninety-nine percent uptime permits over seven hours of downtime a month, while 99.9 percent allows around forty-three minutes and 99.99 percent only about four. Each additional nine cuts the permitted downtime roughly tenfold, which is why the gap between them costs so much to engineer. The SLA calculator converts a target percentage into allowed downtime per day, month and year so you can judge feasibility.",
+      },
+    ],
+  },
 ];
 
 export const CATEGORY_MAP: Record<string, Category> = Object.fromEntries(

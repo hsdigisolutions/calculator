@@ -28,6 +28,9 @@ import { scienceMoreCalculators } from "./calculators/science-wave3-more";
 import { realEstateWave3Calculators } from "./calculators/realestate-wave3";
 import { automotiveWave3Calculators } from "./calculators/automotive-wave3";
 import { cookingWave3Calculators } from "./calculators/cooking-wave3";
+import { engineeringWave3Calculators } from "./calculators/engineering-wave3";
+import { sportsWave3Calculators } from "./calculators/sports-wave3";
+import { technologyWave3Calculators } from "./calculators/technology-wave3";
 
 /** All calculator definitions, before de-duplication. */
 const RAW_CALCULATORS: CalculatorDefinition[] = [
@@ -60,6 +63,9 @@ const RAW_CALCULATORS: CalculatorDefinition[] = [
   ...realEstateWave3Calculators,
   ...automotiveWave3Calculators,
   ...cookingWave3Calculators,
+  ...engineeringWave3Calculators,
+  ...sportsWave3Calculators,
+  ...technologyWave3Calculators,
 ];
 
 // Merge/skip duplicates: keep the FIRST occurrence of each slug (existing,

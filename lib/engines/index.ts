@@ -8,6 +8,9 @@ import { scienceMoreEngines } from "./science-wave3-more";
 import { realEstateWave3Engines } from "./realestate-wave3";
 import { automotiveWave3Engines } from "./automotive-wave3";
 import { cookingWave3Engines } from "./cooking-wave3";
+import { engineeringWave3Engines } from "./engineering-wave3";
+import { sportsWave3Engines } from "./sports-wave3";
+import { technologyWave3Engines } from "./technology-wave3";
 
 /* ------------------------------------------------------------------ *
  * Pure calculation engines. No formatting, no display concerns.
@@ -430,6 +433,9 @@ export const engines: Record<string, ComputeFn> = {
   ...realEstateWave3Engines,
   ...automotiveWave3Engines,
   ...cookingWave3Engines,
+  ...engineeringWave3Engines,
+  ...sportsWave3Engines,
+  ...technologyWave3Engines,
 };
 
 export function getEngine(slug: string): ComputeFn | undefined {
