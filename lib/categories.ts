@@ -314,6 +314,34 @@ export const CATEGORIES: Category[] = [
       },
     ],
   },
+  {
+    slug: "science",
+    name: "Science",
+    icon: "Atom",
+    tagline: "Physics, chemistry & motion",
+    description: "Solve physics and chemistry formulas instantly.",
+    seoIntro:
+      "Free science calculators for physics and chemistry — Ohm's law, density, force, kinetic energy, pH and speed. Each shows the formula, a worked example and clear SI-unit results.",
+    about:
+      "Science calculators apply the core formulas of physics and chemistry — Ohm's law, density, Newton's second law, kinetic energy, pH and the speed-distance-time relationship — so you can get an exact answer without rearranging equations by hand. Each tool takes the quantities you know, works in consistent SI units, and returns the value you need along with useful secondary figures like power, momentum or pounds-force. These calculations sit at the heart of schoolwork, lab reports and practical engineering, and small slips in unit handling or algebra are where mistakes creep in. A calculator that pins down the units and shows the formula removes that risk and lets you focus on understanding the result. Students use them to check homework and learn the method; teachers build worked examples; hobbyists size electronics, mix solutions or work out motion; and engineers sanity-check figures before committing them to a design. Every tool here states the formula it applies and a worked example, so the answer is transparent rather than a black box, and the science follows standard, textbook definitions. The main limitation to keep in mind is that these are idealised formulas — they assume clean inputs and do not model real-world complications like friction, temperature effects or measurement error, so treat the output as the exact theoretical value for the numbers you enter.",
+    faqs: [
+      {
+        question: "Are these science calculators accurate?",
+        answer:
+          "Yes. They implement standard textbook formulas exactly and compute in consistent SI units, so results are precise to the decimals shown. The figures are idealised, meaning they assume clean inputs and ignore real-world effects such as friction, resistance heating, temperature or measurement error. For homework, lab estimates and design sanity-checks they are reliable; for a physical experiment, expect small differences between the theoretical value and what you actually measure.",
+      },
+      {
+        question: "What units do these calculators use?",
+        answer:
+          "They work in SI base units — metres, kilograms, seconds, amperes and their derived units like newtons, joules and volts — because mixing unit systems is the most common source of error in physics and chemistry. Each field is labelled with the unit it expects, and several tools also return a convenient secondary unit, such as pounds-force alongside newtons or miles per hour alongside kilometres per hour, so you can read the answer in whichever unit suits you.",
+      },
+      {
+        question: "Can I use these for school or exams?",
+        answer:
+          "They are ideal for checking homework and learning the method, since every tool shows the formula and a worked example you can reproduce by hand. That matters because most exams do not allow a calculator that solves the whole problem for you, so understanding the steps is what earns marks. Use these tools to confirm your own working and to build intuition for how each variable changes the result, not as a substitute for learning the underlying physics.",
+      },
+    ],
+  },
 ];
 
 export const CATEGORY_MAP: Record<string, Category> = Object.fromEntries(

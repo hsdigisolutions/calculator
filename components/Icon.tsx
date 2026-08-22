@@ -152,6 +152,14 @@ const PATHS: Record<string, ReactNode> = {
       <circle cx="17" cy="19" r="1.6" />
     </>
   ),
+  Atom: (
+    <>
+      <circle cx="12" cy="12" r="1.4" />
+      <ellipse cx="12" cy="12" rx="10" ry="4.2" />
+      <ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(60 12 12)" />
+      <ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(120 12 12)" />
+    </>
+  ),
   Megaphone: (
     <>
       <path d="M4 10v4h3l9 5V5L7 10H4z" />

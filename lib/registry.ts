@@ -23,6 +23,7 @@ import { dateTimeWave2Calculators } from "./calculators/datetime-wave2";
 import { convertersWave2Calculators } from "./calculators/converters-wave2";
 import { businessWave2Calculators } from "./calculators/business-wave2";
 import { everydayWave2Calculators } from "./calculators/everyday-wave2";
+import { scienceWave3Calculators } from "./calculators/science-wave3";
 
 /** All calculator definitions, before de-duplication. */
 const RAW_CALCULATORS: CalculatorDefinition[] = [
@@ -50,6 +51,7 @@ const RAW_CALCULATORS: CalculatorDefinition[] = [
   ...ecommerceCalculators,
   ...marketingCalculators,
   ...everydayWave2Calculators,
+  ...scienceWave3Calculators,
 ];
 
 // Merge/skip duplicates: keep the FIRST occurrence of each slug (existing,
