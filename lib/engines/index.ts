@@ -4,6 +4,10 @@ import { extendedEngines } from "./extended";
 import { wave2Engines } from "./extended-wave2";
 import { wave2OtherEngines } from "./extended-wave2-other";
 import { scienceWave3Engines } from "./science-wave3";
+import { scienceMoreEngines } from "./science-wave3-more";
+import { realEstateWave3Engines } from "./realestate-wave3";
+import { automotiveWave3Engines } from "./automotive-wave3";
+import { cookingWave3Engines } from "./cooking-wave3";
 
 /* ------------------------------------------------------------------ *
  * Pure calculation engines. No formatting, no display concerns.
@@ -422,6 +426,10 @@ export const engines: Record<string, ComputeFn> = {
   roas,
   ...extendedEngines,
   ...scienceWave3Engines,
+  ...scienceMoreEngines,
+  ...realEstateWave3Engines,
+  ...automotiveWave3Engines,
+  ...cookingWave3Engines,
 };
 
 export function getEngine(slug: string): ComputeFn | undefined {

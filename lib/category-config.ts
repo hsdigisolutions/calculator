@@ -16,6 +16,12 @@ export const CATEGORY_COLORS: Record<string, string> = {
   marketing: "#EF4444",
   everyday: "#14B8A6",
   science: "#2DD4BF",
+  "real-estate": "#0D9488",
+  automotive: "#E11D48",
+  cooking: "#D97706",
+  engineering: "#3B82F6",
+  sports: "#F97316",
+  technology: "#6366F1",
 };
 
 export function getCategoryColor(slug: string): string {

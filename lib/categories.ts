@@ -342,6 +342,90 @@ export const CATEGORIES: Category[] = [
       },
     ],
   },
+  {
+    slug: "real-estate",
+    name: "Real Estate",
+    icon: "Home",
+    tagline: "Property, mortgages & rentals",
+    description: "Analyze property deals and mortgages.",
+    seoIntro:
+      "Free real estate calculators for cap rate, rent versus buy, loan-to-value, down payment, closing costs, property tax and refinancing. Each shows its formula, a worked example and a clear breakdown.",
+    about:
+      "Real estate calculators put the arithmetic of buying, financing and renting property within reach — the capitalization rate that gauges an investment's yield, the loan-to-value ratio a lender scrutinises, the cash a down payment demands, the closing costs that stack up at signing, the annual property tax bill, and the break-even point where refinancing finally pays off. Property is the largest transaction most people ever make, and a fractional shift in a rate, a tax mill levy or a fee schedule moves the outcome by thousands of dollars, so running the figures before you commit is time well spent. First-time buyers weigh whether renting or purchasing suits their timeline; landlords screen rental deals on cap rate and cash flow; homeowners test whether a lower rate justifies the cost of refinancing; and everyone needs to know the real cash required to close. Each tool applies the standard methods — net operating income divided by price for cap rate, loan balance over appraised value for loan-to-value, assessed value times the local rate for property tax — and shows the formula, a worked example and a full breakdown rather than a lone figure. The limitation to hold onto is that these are estimates: actual property taxes, insurance premiums, HOA dues, appraisal values and lender fees vary by location and change over time, and rental returns depend on occupancy and upkeep. Use the results to compare deals and understand the mechanics, then confirm the specifics with your lender, agent or tax office.",
+    faqs: [
+      {
+        question: "What is a good cap rate for a rental property?",
+        answer:
+          "There is no universal number, because cap rate reflects both risk and location. Many investors look for something in the range of four to ten percent, with lower rates in expensive, stable markets and higher rates where risk or vacancy runs higher. A high cap rate can signal strong yield or a troubled area, so read it alongside condition, tenancy and growth prospects rather than chasing the biggest figure alone.",
+      },
+      {
+        question: "Is it better to rent or buy a home?",
+        answer:
+          "It depends mostly on how long you will stay and on local prices. Buying rewards a longer horizon, because closing costs and agent fees take years of appreciation and equity to recover, while renting suits mobility and uncertain plans. A rent-versus-buy tool weighs your down payment, mortgage, taxes and expected appreciation against rent and its increases, giving you a break-even timeline to judge which path fits your situation.",
+      },
+      {
+        question: "What is loan-to-value and why does it matter?",
+        answer:
+          "Loan-to-value is the mortgage amount expressed as a percentage of the property's appraised value, so a two hundred thousand dollar loan on a two hundred fifty thousand dollar home is eighty percent. Lenders use it to price risk: a lower ratio usually means a better rate and avoids private mortgage insurance, which is often required above eighty percent. Watching your loan-to-value helps you plan a down payment and time when to refinance.",
+      },
+    ],
+  },
+  {
+    slug: "automotive",
+    name: "Automotive",
+    icon: "Car",
+    tagline: "Fuel, loans & tires",
+    description: "Run the numbers on car costs.",
+    seoIntro:
+      "Free automotive calculators for fuel cost, MPG, electric-vehicle savings, tire size and car loans. Each shows the formula, a worked example and a clear breakdown so the numbers make sense.",
+    about:
+      "Automotive calculators translate the ongoing costs and specifications of driving into figures you can plan around — the fuel a trip will burn and what it costs, the miles per gallon a vehicle actually returns, the savings an electric car offers over petrol, the real diameter behind a tire size code, and the monthly payment on a car loan. A vehicle is among the more expensive things a household owns and runs, and fuel, financing and tires add up quietly over the years, so seeing the numbers plainly helps you buy and drive within budget. Commuters estimate the annual cost of their drive; shoppers compare the running cost of a hybrid or electric model against a conventional one; road-trippers budget fuel before setting off; and anyone changing wheels checks that a new tire size clears the arches and keeps the speedometer honest. Each tool applies the standard method — distance divided by fuel used for economy, price times consumption for trip cost, the amortization formula for a loan payment — and shows the formula, a worked example and a breakdown so the result is transparent rather than a guess. The limitation worth remembering is that real driving rarely matches the ideal: fuel economy swings with speed, load, terrain, weather and driving style, electricity and fuel prices move constantly, and lender rates and fees vary. Treat these figures as well-grounded estimates for comparing choices and budgeting, then confirm exact prices and loan terms with your dealer, lender or energy provider.",
+    faqs: [
+      {
+        question: "How is fuel economy actually calculated?",
+        answer:
+          "Fuel economy divides distance travelled by fuel consumed, so a car covering three hundred miles on ten gallons returns thirty miles per gallon. Metric figures invert this, expressing litres per hundred kilometres instead. The cleanest way to measure your own is to fill the tank, reset the trip meter, drive normally, then refill and divide the miles by the gallons added. Real economy varies with speed, load and conditions, so average several tanks for a reliable number.",
+      },
+      {
+        question: "Do electric vehicles really save money?",
+        answer:
+          "Usually on running costs, because electricity per mile typically costs less than petrol and electric motors need less routine maintenance, with no oil changes and fewer moving parts. The savings depend on local electricity and fuel prices, how much you drive, and whether you charge at home or at pricier public stations. A higher purchase price can offset fuel savings, so compare total cost over the years you plan to keep the vehicle, not just the price at the pump.",
+      },
+      {
+        question: "Why does changing tire size affect my speedometer?",
+        answer:
+          "Because a speedometer counts wheel rotations and assumes a fixed rolling distance per turn. A taller tire covers more ground per rotation, so you are actually going faster than the dial reads; a shorter tire does the reverse. A tire size code encodes width, aspect ratio and rim diameter, from which overall diameter follows. Keeping a new size within roughly three percent of the original diameter keeps the speedometer accurate and preserves handling and clearance.",
+      },
+    ],
+  },
+  {
+    slug: "cooking",
+    name: "Cooking",
+    icon: "ChefHat",
+    tagline: "Recipes, conversions & times",
+    description: "Scale recipes and convert kitchen units.",
+    seoIntro:
+      "Free cooking calculators for recipe scaling, baking weight and volume conversions, and cooking times. Each shows the formula, a worked example and clear results for confident kitchen work.",
+    about:
+      "Cooking calculators take the fiddly arithmetic out of the kitchen — scaling a recipe up for a crowd or down for two, converting between cups, grams, ounces and millilitres, and adjusting cooking times when quantities or pan sizes change. Recipes are written for a fixed yield and often in whichever units the author preferred, which leaves home cooks juggling awkward fractions and unfamiliar measures at exactly the moment their hands are full. These tools resolve that in a second, turning a recipe for four into one for ten, or a stubborn cup measure into the grams a kitchen scale wants. Home cooks resize family recipes for gatherings; bakers convert volume to weight for the precision that good pastry demands; meal-preppers batch dishes up cleanly; and anyone following a recipe from another country translates its units without second-guessing. Each tool applies the standard method — a simple ratio for scaling, defined density and unit factors for conversions — and shows its working so you can trust and reproduce the result. The important limitation is that ingredient conversions between volume and weight depend on the ingredient itself: a cup of flour, sugar and butter each weigh different amounts, so these tools use standard reference densities that suit most cooking but may differ slightly from a specific brand or how firmly you pack a measure. Baking rewards weighing over volume for that reason. Treat the figures as reliable starting points, and trust taste, texture and a thermometer for the final call.",
+    faqs: [
+      {
+        question: "How do I scale a recipe up or down?",
+        answer:
+          "Multiply every ingredient by a single scaling factor — the new yield divided by the original. To take a recipe for four up to six, multiply each quantity by one and a half. Amounts scale cleanly, but seasoning, cooking time and pan size do not always follow in step: taste and adjust salt and spices, and expect timing to shift when depth or surface area changes. A scaling tool handles the multiplication so you can focus on those judgement calls.",
+      },
+      {
+        question: "Why should I weigh baking ingredients instead of measuring by volume?",
+        answer:
+          "Because volume is unreliable for dry ingredients, especially flour. A cup of flour can vary by a fair margin depending on how firmly it is packed and whether it has settled, which throws off the flour-to-liquid balance that baking depends on. Weighing in grams removes that variability and gives the same result every time. This is why serious baking recipes list weights, and why a conversion tool that turns cups into grams makes your results far more consistent.",
+      },
+      {
+        question: "Do cooking times change when I scale a recipe?",
+        answer:
+          "Often, but not in proportion to the quantity. Doubling a soup barely changes the simmer once it is hot, while a larger roast or a deeper cake needs meaningfully longer to cook through. Timing depends more on thickness, depth and pan size than on total volume, so use the original time as a guide and judge doneness by temperature, colour and texture. A thermometer is the most reliable check whenever you change the batch size.",
+      },
+    ],
+  },
 ];
 
 export const CATEGORY_MAP: Record<string, Category> = Object.fromEntries(
