@@ -259,6 +259,34 @@ export const CATEGORIES: Category[] = [
     ],
   },
   {
+    slug: "everyday",
+    name: "Everyday Life",
+    icon: "Calculator",
+    tagline: "Tips, discounts, taxes & splits",
+    description: "Everyday calculations for smarter spending.",
+    seoIntro:
+      "Free everyday calculators for tips, bill splitting, discounts, sales tax, and unit price comparison. Fast, free tools for smarter daily decisions.",
+    about:
+      "Everyday calculators handle the small-but-important arithmetic that comes up constantly in daily life — figuring out a fair tip, splitting a restaurant bill among friends, calculating how much you save with a discount, working out the sales tax on a purchase, or comparing unit prices to find the better grocery deal. These calculations feel simple until you're sitting at a table with six friends trying to do the math in your head, or standing in a store comparing a sale price to a bulk price on the fly. These tools eliminate the mental effort and the mistakes it produces, delivering an exact answer in seconds. They follow standard arithmetic definitions: tip percentage applies to the pre-tax bill amount, unit price divides total cost by quantity using whatever unit you specify, sales tax follows the percentage-of-price formula, and a discount reduces the original price by the stated amount or percentage. Each tool shows exactly what it computed so the result is easy to verify. The only practical limitations to note are that sales tax rates vary by jurisdiction and product type — this calculator uses whatever rate you enter, so you need to know the applicable rate for your purchase — and tipping customs vary by country and service type, so the defaults (18% for restaurants) reflect common US practice but you can always enter any percentage that fits your situation.",
+    faqs: [
+      {
+        question: "How do I quickly calculate a tip in my head?",
+        answer:
+          "For a 20% tip, take the total bill and move the decimal point one place left to get 10%, then double it. On a $45 bill: 10% is $4.50, doubled is $9 — your 20% tip. For 15%, take the 10% figure and add half: $4.50 + $2.25 = $6.75. For a rough 18%, find 20% and subtract 10% of that tip: $9 − $0.90 = $8.10. These shortcuts get you to a reasonable tip without a calculator, though the tool gives you the exact figure whenever precision matters.",
+      },
+      {
+        question: "What is the difference between a percentage discount and a fixed-amount discount?",
+        answer:
+          "A percentage discount scales with the original price — 30% off a $200 item saves $60, while 30% off a $50 item saves only $15. A fixed-amount discount is the same regardless of price — $20 off is always $20. Which is better depends on the item price: a percentage discount beats a fixed-dollar coupon when the item is expensive enough that the percentage produces a larger saving than the dollar amount, and the fixed coupon wins when the percentage would be smaller. The discount calculator shows both the saving and the final price so you can compare deals directly.",
+      },
+      {
+        question: "Are unit price comparisons always reliable for finding the best value?",
+        answer:
+          "Unit price is the most objective measure of cost per unit of quantity, so it is reliable as long as you are comparing identical or equivalent products. The main caveats are quality differences between brands, waste before use (bulk buying of perishables that spoil before you finish them wipes out any unit-price saving), and storage — a lower unit price means nothing if you have nowhere to keep the larger size. Use unit price to compare, then factor in those practical constraints before deciding.",
+      },
+    ],
+  },
+  {
     slug: "marketing",
     name: "Marketing",
     icon: "Megaphone",

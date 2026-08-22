@@ -1,6 +1,8 @@
 import type { ComputeFn } from "../types";
 import { num } from "../utils";
 import { extendedEngines } from "./extended";
+import { wave2Engines } from "./extended-wave2";
+import { wave2OtherEngines } from "./extended-wave2-other";
 
 /* ------------------------------------------------------------------ *
  * Pure calculation engines. No formatting, no display concerns.
@@ -396,6 +398,9 @@ const roas: ComputeFn = (i) => {
  * The interactive shell looks up its compute function here.
  */
 export const engines: Record<string, ComputeFn> = {
+  // Wave 2 first so existing/extended engines win on any shared id (merge/skip).
+  ...wave2Engines,
+  ...wave2OtherEngines,
   percentage,
   "percentage-increase": percentageIncrease,
   "percentage-difference": percentageDifference,

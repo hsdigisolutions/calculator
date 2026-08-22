@@ -16,27 +16,48 @@ import { dateTimeExtraCalculators } from "./calculators/datetime-extra";
 import { converterExtraCalculators } from "./calculators/converters-extra";
 import { businessExtraCalculators } from "./calculators/business-extra";
 import { constructionExtraCalculators } from "./calculators/construction-extra";
+import { financeWave2Calculators } from "./calculators/finance-wave2";
+import { healthWave2Calculators } from "./calculators/health-wave2";
+import { mathWave2Calculators } from "./calculators/math-wave2";
+import { dateTimeWave2Calculators } from "./calculators/datetime-wave2";
+import { convertersWave2Calculators } from "./calculators/converters-wave2";
+import { businessWave2Calculators } from "./calculators/business-wave2";
+import { everydayWave2Calculators } from "./calculators/everyday-wave2";
 
-/** All calculator definitions in the platform. */
-export const ALL_CALCULATORS: CalculatorDefinition[] = [
+/** All calculator definitions, before de-duplication. */
+const RAW_CALCULATORS: CalculatorDefinition[] = [
   ...mathCalculators,
   ...mathExtraCalculators,
+  ...mathWave2Calculators,
   ...financeCalculators,
   ...financeExtraCalculators,
+  ...financeWave2Calculators,
   ...healthCalculators,
   ...healthExtraCalculators,
+  ...healthWave2Calculators,
   ...dateTimeCalculators,
   ...dateTimeExtraCalculators,
+  ...dateTimeWave2Calculators,
   ...converterCalculators,
   ...converterExtraCalculators,
+  ...convertersWave2Calculators,
   ...businessCalculators,
   ...businessExtraCalculators,
+  ...businessWave2Calculators,
   ...constructionCalculators,
   ...constructionExtraCalculators,
   ...educationCalculators,
   ...ecommerceCalculators,
   ...marketingCalculators,
+  ...everydayWave2Calculators,
 ];
+
+// Merge/skip duplicates: keep the FIRST occurrence of each slug (existing,
+// tested calculators are listed before their wave2 counterparts), so wave2
+// never collides with an existing tool's route, engine or content.
+export const ALL_CALCULATORS: CalculatorDefinition[] = RAW_CALCULATORS.filter(
+  (c, i) => RAW_CALCULATORS.findIndex((x) => x.slug === c.slug) === i
+);
 
 const BY_SLUG = new Map(ALL_CALCULATORS.map((c) => [c.slug, c]));
 
