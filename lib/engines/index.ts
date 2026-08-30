@@ -27,6 +27,13 @@ import { datetimeR5Engines } from "./datetime-r5-wave3";
 import { technologyR5Engines } from "./technology-r5-wave3";
 import { scienceR5Engines } from "./science-r5-wave3";
 import { autoSportsR5Engines } from "./auto-sports-r5-wave3";
+import { businessR6Engines } from "./business-r6-wave3";
+import { educationR6Engines } from "./education-r6-wave3";
+import { ecommerceR6Engines } from "./ecommerce-r6-wave3";
+import { engineeringR6Engines } from "./engineering-r6-wave3";
+import { cookingR6Engines } from "./cooking-r6-wave3";
+import { everydayR6Engines } from "./everyday-r6-wave3";
+import { realestateR6Engines } from "./realestate-r6-wave3";
 
 /* ------------------------------------------------------------------ *
  * Pure calculation engines. No formatting, no display concerns.
@@ -468,6 +475,13 @@ export const engines: Record<string, ComputeFn> = {
   ...technologyR5Engines,
   ...scienceR5Engines,
   ...autoSportsR5Engines,
+  ...businessR6Engines,
+  ...educationR6Engines,
+  ...ecommerceR6Engines,
+  ...engineeringR6Engines,
+  ...cookingR6Engines,
+  ...everydayR6Engines,
+  ...realestateR6Engines,
 };
 
 export function getEngine(slug: string): ComputeFn | undefined {
