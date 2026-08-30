@@ -1,0 +1,427 @@
+import type { CalculatorDefinition } from "../types";
+
+export const financeR7Calculators: CalculatorDefinition[] = [
+  {
+    id: "simple-vs-compound",
+    slug: "simple-vs-compound-interest-calculator",
+    category: "Finance",
+    categorySlug: "finance",
+    title: "Simple vs Compound Interest Calculator",
+    shortDescription: "Compare simple and compound interest side by side.",
+    seoTitle: "Simple vs Compound Interest Calculator — Free Comparison Tool",
+    metaDescription:
+      "Free simple vs compound interest calculator. Compare the interest earned under simple and compound growth on the same principal, rate and term.",
+    primaryKeyword: "simple vs compound interest calculator",
+    secondaryKeywords: ["compound vs simple interest", "interest comparison calculator", "difference simple compound interest"],
+    fields: [
+      { id: "principal", label: "Principal", type: "number", unit: "$", placeholder: "10000", required: true, span: 2, min: 0 },
+      { id: "annualRate", label: "Annual interest rate", type: "number", unit: "%", placeholder: "5", required: true, span: 1, min: 0, step: 0.01 },
+      { id: "years", label: "Years", type: "number", placeholder: "10", required: true, span: 1, min: 0, step: 0.01 },
+    ],
+    results: [
+      { id: "simpleInterest", label: "Simple interest", format: "currency", currency: "USD", decimals: 2, isPrimary: true },
+      { id: "compoundInterest", label: "Compound interest", format: "currency", currency: "USD", decimals: 2, isPrimary: false },
+      { id: "difference", label: "Extra from compounding", format: "currency", currency: "USD", decimals: 2, isPrimary: false },
+    ],
+    formula: "Simple = P × r × t · Compound = P × [(1 + r)^t − 1], r = rate ÷ 100",
+    explanation:
+      "The figures shown here compare how much interest the same deposit earns under simple interest versus compound interest, along with the extra that compounding adds. It matters because the two methods diverge dramatically over time: simple interest pays only on your original principal, while compound interest pays on the principal plus all the interest already earned, so the gap widens every year. This simple vs compound interest calculator applies both formulas to identical inputs — the same principal, rate and term — so you can see the difference cleanly rather than guessing. Simple interest grows in a straight line, adding the same amount each year, whereas compound interest curves upward as returns start earning returns of their own. Savers and borrowers use this comparison to understand why long-horizon investments favor compounding, why high-rate debt that compounds is so costly, and how the choice of method changes the outcome. The comparison also makes the time factor vivid: over short periods the two are close, but over decades compounding can earn several times more. Treat the result as a clean, pre-tax illustration of the mechanism, and remember that most real savings accounts and loans compound, so the compound figure is usually the one that reflects reality.",
+    formulaExplanation:
+      "P is the principal, r is the annual rate written as a decimal, and t is the number of years. Simple interest is P × r × t, adding the same flat amount each year because it is always charged on the original principal alone. Compound interest is P × [(1 + r)^t − 1]: the term (1 + r)^t grows the balance by the rate every year on the whole running total, and subtracting one strips out the principal to leave just the interest. The difference between the two is what compounding earns beyond a straight line, and the exponent is why that gap accelerates over time.",
+    example: {
+      inputs: { principal: 10000, annualRate: 5, years: 10 },
+      explanation: "$10,000 at 5% for 10 years earns $5,000 of simple interest but $6,288.95 compounded — about $1,289 more from compounding.",
+    },
+    faqs: [
+      { question: "What is the core difference between simple and compound interest?", answer: "Simple interest is calculated only on your original principal, so it adds the same fixed amount every period and grows in a straight line. Compound interest is calculated on the principal plus all previously earned interest, so each period's interest is slightly larger than the last. That reinvestment of earned interest is what makes compound growth curve upward and pull steadily ahead of simple interest the longer the money is invested." },
+      { question: "When does compounding make the biggest difference?", answer: "The gap between compound and simple interest grows with both the interest rate and the length of time invested. Over one or two years at a low rate the two are nearly identical, but over decades or at high rates compounding can earn several times more. Time is the more powerful lever, which is why starting to save early matters so much: the extra years let interest build on interest for far longer." },
+      { question: "Which method do banks and loans actually use?", answer: "Most everyday savings accounts, credit cards and loans use compound interest, typically compounded daily or monthly, so the compound figure usually reflects reality. Simple interest appears in some specific products, such as certain auto loans, car title loans and short-term personal loans, where interest is charged only on the principal. Always check the terms of a specific account or loan, since the method materially changes what you earn or owe." },
+      { question: "Does a higher rate or more time matter more?", answer: "Both increase compound growth, but time has an outsized effect because the exponent in the compound formula rewards additional years more than proportionally. A modest rate compounded over many decades often beats a higher rate over a short period. This is the mathematical reason financial planners stress starting early and staying invested, rather than chasing the highest possible return over a brief window and then stopping." },
+      { question: "Is this calculation before or after tax and inflation?", answer: "The figures shown are nominal and pre-tax, illustrating the raw mechanics of each interest method without adjusting for taxes or rising prices. In reality, interest earned may be taxable, and inflation erodes the real purchasing power of the future amount. Use the comparison to understand the mechanism, then subtract an estimate for tax and inflation if you need to judge what the money will genuinely be worth later." },
+    ],
+    relatedCalculators: ["compound-interest-calculator", "investment-calculator", "savings-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+    formulaSource: "U.S. SEC — Investor.gov",
+    sourceUrl: "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator",
+  },
+  {
+    id: "loan-affordability",
+    slug: "loan-affordability-calculator",
+    category: "Finance",
+    categorySlug: "finance",
+    title: "Loan Affordability Calculator",
+    shortDescription: "Find the loan a monthly payment can support.",
+    seoTitle: "Loan Affordability Calculator — How Much Can I Borrow",
+    metaDescription:
+      "Free loan affordability calculator. Find the maximum loan a fixed monthly payment supports at a given interest rate and term in years.",
+    primaryKeyword: "loan affordability calculator",
+    secondaryKeywords: ["how much loan can i afford", "maximum loan calculator", "borrowing power calculator"],
+    fields: [
+      { id: "monthlyPayment", label: "Monthly payment", type: "number", unit: "$", placeholder: "1000", required: true, span: 1, min: 0 },
+      { id: "annualRate", label: "Annual interest rate", type: "number", unit: "%", placeholder: "6", required: true, span: 1, min: 0, step: 0.01 },
+      { id: "years", label: "Loan term", type: "number", unit: "years", placeholder: "5", required: true, span: 2, min: 0, step: 0.01 },
+    ],
+    results: [
+      { id: "maxLoanAmount", label: "Maximum loan amount", format: "currency", currency: "USD", decimals: 2, isPrimary: true },
+    ],
+    formula: "Loan = payment × (1 − (1 + r)^−N) ÷ r, r = rate ÷ 1200, N = years × 12",
+    explanation:
+      "The maximum loan amount shown here is the largest sum you could borrow while keeping the monthly payment within a figure you choose, given the interest rate and the length of the loan. It matters because lenders and buyers alike tend to think in monthly payments, yet the headline decision is how much total debt to take on, so working backward from an affordable payment keeps borrowing grounded in what your budget can actually sustain. This loan affordability calculator converts the annual rate to a monthly rate, then reverses the standard amortization formula to find the present value of your payment stream — that present value is the loan such a payment can repay over the term. Reversing the amortization math is the correct approach because it is the exact calculation a lender performs to set a payment, so the loan it returns is one that genuinely amortizes to zero at those terms. Borrowers use a loan affordability calculator to set a ceiling before applying, to see how the rate and term stretch or shrink their borrowing power, and to compare offers. Keep in mind the result is the loan principal only: fees, insurance and other costs sit on top, and a payment a lender approves is not always one that fits comfortably alongside your other commitments.",
+    formulaExplanation:
+      "The monthly rate r is the annual rate divided by 1200, and N is the number of monthly payments, or years times twelve. The loan a payment supports is the present value of that payment stream: payment × (1 − (1 + r)^−N) ÷ r, which discounts every future payment back to today's dollars and sums them. When the rate is zero the formula collapses to payment × N, since there is no interest to discount. A larger payment, a lower rate or a longer term each raises the loan the same budget can support.",
+    example: {
+      inputs: { monthlyPayment: 1000, annualRate: 6, years: 5 },
+      explanation: "A $1,000 monthly payment at 6% over 5 years supports a loan of about $51,726.",
+    },
+    faqs: [
+      { question: "How is the maximum loan amount calculated?", answer: "The tool takes the payment you can afford and works out the loan whose scheduled payments exactly match it over the term. It converts your annual rate to a monthly rate, then computes the present value of your payment stream — the sum of every future payment discounted back to today. That present value is the largest loan your payment can fully repay, which is the same math a lender uses when sizing a payment to a loan." },
+      { question: "Should I borrow the maximum the tool shows?", answer: "Not necessarily. The figure is the largest loan a given payment supports, not a recommendation. A payment that is technically affordable can still leave little room for emergencies, savings or a change in income. Financial planners generally advise borrowing below your maximum and keeping total debt payments to a modest share of income, so aim for a payment that fits comfortably alongside your other bills rather than the highest one you can technically manage." },
+      { question: "How does the loan term change how much I can borrow?", answer: "A longer term spreads the balance over more payments, so each payment is smaller and the same monthly budget supports a larger loan. The trade-off is that a longer term means more total interest paid over the life of the loan, even though the monthly figure looks easier. Shorter terms restrict how much you can borrow for a given payment but cost far less in interest overall, so weigh the larger balance against the added cost." },
+      { question: "Does this include taxes, insurance and fees?", answer: "No. The result is the loan principal only — the amount you borrow and repay with interest. For a mortgage or auto loan, additional costs such as property taxes, insurance, origination fees and other charges are separate and can meaningfully raise your true monthly outlay. Leave room in your budget for those extras, and treat the loan figure here as the financing portion rather than the full cost of the purchase." },
+      { question: "What interest rate should I enter?", answer: "Use the annual percentage rate you realistically expect to be offered, which depends on your credit, the loan type and current market rates. If you have not been quoted a rate, enter a slightly conservative estimate so you do not overstate your borrowing power. Once a lender pre-approves you with a firm rate, rerun the calculation, since even a small change in rate noticeably shifts the maximum loan a fixed payment can support." },
+    ],
+    relatedCalculators: ["loan-calculator", "compound-interest-calculator", "investment-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+    formulaSource: "Consumer Financial Protection Bureau (CFPB)",
+    sourceUrl: "https://www.consumerfinance.gov/",
+  },
+  {
+    id: "effective-annual-rate",
+    slug: "effective-annual-rate-calculator",
+    category: "Finance",
+    categorySlug: "finance",
+    title: "Effective Annual Rate Calculator",
+    shortDescription: "Convert a nominal rate into its true annual yield.",
+    seoTitle: "Effective Annual Rate Calculator — Free EAR / APY Tool",
+    metaDescription:
+      "Free effective annual rate calculator. Convert a nominal interest rate and compounding frequency into the true effective annual rate (EAR).",
+    primaryKeyword: "effective annual rate calculator",
+    secondaryKeywords: ["ear calculator", "effective interest rate calculator", "nominal to effective rate"],
+    fields: [
+      { id: "nominalRate", label: "Nominal annual rate", type: "number", unit: "%", placeholder: "12", required: true, span: 1, min: 0, step: 0.01 },
+      { id: "compoundsPerYear", label: "Compounds per year", type: "number", placeholder: "12", required: true, span: 1, min: 1 },
+    ],
+    results: [
+      { id: "ear", label: "Effective annual rate", format: "percentage", decimals: 4, isPrimary: true },
+    ],
+    formula: "EAR = [(1 + nominal ÷ 100 ÷ n)^n − 1] × 100, n = compounds per year",
+    explanation:
+      "The effective annual rate shown here is the true yearly rate you actually earn or pay once compounding is taken into account, converted from a nominal rate quoted at a given compounding frequency. It matters because a nominal, or stated, rate understates the real cost or return whenever interest compounds more than once a year — each intra-year compounding period adds interest that itself earns interest, so the effective rate is always at least as high as the nominal rate and rises with more frequent compounding. This effective annual rate calculator divides the nominal rate by the number of periods, compounds it that many times, and expresses the result as a single annual figure. Doing so lets you compare products fairly: two accounts with the same nominal rate but different compounding schedules — one monthly, one daily — deliver different real returns, and only the effective rate reveals the difference. Savers use the effective annual rate to compare deposit accounts and CDs on equal footing, while borrowers use it to see the genuine cost of a loan or credit card whose rate is quoted nominally. Because it standardizes the effect of compounding into one number, the effective annual rate is the honest basis for comparison, which is why disclosure rules often require the effective figure, sometimes called APY on savings, to appear alongside the nominal rate.",
+    formulaExplanation:
+      "The nominal rate divided by 100 turns the percentage into a decimal, and dividing by n gives the rate charged in each compounding period, where n is the number of periods per year. Raising (1 + that periodic rate) to the power n compounds it across the whole year, capturing interest earned on earlier interest. Subtracting one strips out the original principal to leave the pure growth, and multiplying by 100 returns it to a percentage. The more compounding periods there are, the higher the effective rate climbs above the nominal one.",
+    example: {
+      inputs: { nominalRate: 12, compoundsPerYear: 12 },
+      explanation: "A 12% nominal rate compounded monthly has an effective annual rate of about 12.6825%.",
+    },
+    faqs: [
+      { question: "What is the difference between nominal and effective rates?", answer: "The nominal rate is the stated annual rate before compounding is considered, while the effective annual rate reflects the true annual return or cost after compounding within the year. If interest compounds more than once a year, the effective rate is higher than the nominal rate, because interest is earned on interest partway through the year. Only the effective rate lets you compare products that compound at different frequencies on a fair, apples-to-apples basis." },
+      { question: "Why does compounding frequency change the effective rate?", answer: "Each time interest compounds, it is added to the balance and starts earning interest itself. The more often that happens within a year, the more of these interest-on-interest cycles occur, so the effective rate rises. Daily compounding produces a higher effective rate than monthly, which beats annual, even when the nominal rate is identical. This is why comparing only the nominal rate can be misleading, and why the effective rate is the honest measure of what you actually get." },
+      { question: "Is the effective annual rate the same as APY?", answer: "For savings products, yes — annual percentage yield (APY) is the effective annual rate that banks are required to disclose so savers can compare accounts fairly. On the borrowing side, the closely related concept appears alongside APR, though APR sometimes bundles in fees rather than pure compounding. The underlying math is the same: take a nominal rate and a compounding frequency and express the true annual effect as one standardized percentage." },
+      { question: "How do I compare two accounts with this?", answer: "Enter each account's nominal rate and its compounding frequency, then compare the resulting effective annual rates rather than the stated rates. The account with the higher effective rate genuinely pays more, even if its nominal rate looks the same or slightly lower than a rival that compounds less often. This removes the distortion caused by different compounding schedules and gives you a single, comparable number for each option you are weighing." },
+      { question: "What is continuous compounding?", answer: "Continuous compounding is the theoretical limit where interest compounds an infinite number of times per year, calculated with the exponential constant e rather than a finite number of periods. It produces the highest possible effective rate for a given nominal rate, though the difference from daily compounding is tiny in practice. This tool uses a finite number of periods that you specify, which matches how real accounts and loans actually compound." },
+    ],
+    relatedCalculators: ["compound-interest-calculator", "investment-calculator", "savings-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+    formulaSource: "U.S. SEC — Investor.gov",
+    sourceUrl: "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator",
+  },
+  {
+    id: "sinking-fund",
+    slug: "sinking-fund-calculator",
+    category: "Finance",
+    categorySlug: "finance",
+    title: "Sinking Fund Calculator",
+    shortDescription: "Find the monthly deposit to reach a savings goal.",
+    seoTitle: "Sinking Fund Calculator — Free Savings Goal Tool",
+    metaDescription:
+      "Free sinking fund calculator. Find the level monthly deposit needed to reach a future savings goal at a given return over a set number of years.",
+    primaryKeyword: "sinking fund calculator",
+    secondaryKeywords: ["savings goal calculator", "monthly deposit calculator", "how much to save each month"],
+    fields: [
+      { id: "futureGoal", label: "Savings goal", type: "number", unit: "$", placeholder: "50000", required: true, span: 2, min: 0 },
+      { id: "annualRate", label: "Annual return", type: "number", unit: "%", placeholder: "6", required: true, span: 1, min: 0, step: 0.01 },
+      { id: "years", label: "Years to save", type: "number", placeholder: "10", required: true, span: 1, min: 0, step: 0.01 },
+    ],
+    results: [
+      { id: "monthlyDeposit", label: "Required monthly deposit", format: "currency", currency: "USD", decimals: 2, isPrimary: true },
+    ],
+    formula: "Deposit = goal × r ÷ [(1 + r)^N − 1], r = rate ÷ 1200, N = years × 12",
+    explanation:
+      "The required monthly deposit shown here is the steady amount you would need to set aside each month to reach a specific savings goal by a target date, assuming your savings earn a given return along the way. It matters because most big financial goals — a down payment, a new car, a wedding, a replacement roof — have both a price tag and a deadline, and a sinking fund turns that pair into a concrete monthly habit rather than a vague intention. This sinking fund calculator reverses the future value of an annuity: instead of asking what a series of deposits grows into, it fixes the ending value and solves for the deposit that gets you there. It converts the annual return to a monthly rate and accounts for the fact that earlier deposits compound for longer than later ones, so the required amount is smaller than simply dividing the goal by the number of months. Savers use a sinking fund calculator to budget for planned expenses, to spread a large future cost into manageable pieces, and to see how a higher return or a longer timeline lightens the monthly load. Because the projection assumes a constant return, treat it as a disciplined plan and revisit it if your actual returns or timeline shift.",
+    formulaExplanation:
+      "The monthly rate r is the annual return divided by 1200, and N is the number of monthly deposits, or years times twelve. Rearranging the future value of an annuity to solve for the payment gives deposit = goal × r ÷ [(1 + r)^N − 1]. The bracketed term is how much a stream of one-dollar deposits would grow to over N months, so dividing the goal by it scales the deposit to hit exactly that target. When the return is zero the formula becomes goal ÷ N, a simple split, because there is no growth to help reach the goal.",
+    example: {
+      inputs: { futureGoal: 50000, annualRate: 6, years: 10 },
+      explanation: "To reach $50,000 in 10 years at a 6% return, you would need to deposit about $305 a month.",
+    },
+    faqs: [
+      { question: "What is a sinking fund?", answer: "A sinking fund is money you set aside gradually to pay for a specific, expected future expense — a car replacement, home repairs, a vacation or an insurance premium. Rather than being caught off guard by a large one-off cost, you spread it into small, regular deposits over the months or years leading up to it. Businesses use the same concept to save for bond repayments or major asset replacements, setting aside funds systematically toward a known obligation." },
+      { question: "How does the expected return affect my deposit?", answer: "A higher assumed return means your savings grow faster, so you need to deposit less each month to reach the same goal. A lower return, or keeping the money in cash that earns almost nothing, means you must contribute more yourself. Because returns are uncertain, it is safer to assume a modest, realistic rate for money you will need on a fixed date, and to hold shorter-term goals in low-risk accounts rather than volatile investments." },
+      { question: "How is a sinking fund different from an emergency fund?", answer: "A sinking fund targets a known, planned expense with a rough amount and date, so you can calculate exactly how much to save each month. An emergency fund covers unknown, unexpected events — a job loss, a medical bill, an urgent repair — and is typically sized as several months of living expenses rather than a specific goal. Both are useful; a sinking fund handles the predictable, while an emergency fund cushions the unpredictable." },
+      { question: "Where should I keep a sinking fund?", answer: "For goals within a few years, favor safe, liquid places such as a high-yield savings account, a money market account or short-term CDs, where the balance will not fall just before you need it. For goals many years away, some savers accept more risk for higher returns, but the closer the deadline, the more the money should shift toward safety. Match the account's risk and access to how soon you will spend the funds." },
+      { question: "What if I cannot afford the required monthly deposit?", answer: "If the calculated deposit is out of reach, you have three levers: extend the timeline so the cost spreads over more months, lower the goal amount, or seek a higher return by accepting more risk, which is rarely wise for near-term needs. Extending the deadline is usually the safest adjustment. Even saving a smaller amount than required still builds progress and reduces how much you must borrow or find later." },
+    ],
+    relatedCalculators: ["savings-calculator", "compound-interest-calculator", "investment-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+    formulaSource: "U.S. SEC — Investor.gov",
+    sourceUrl: "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator",
+  },
+  {
+    id: "debt-snowball",
+    slug: "debt-snowball-calculator",
+    category: "Finance",
+    categorySlug: "finance",
+    title: "Debt Snowball Calculator",
+    shortDescription: "See how long a fixed payment takes to clear a debt.",
+    seoTitle: "Debt Snowball Calculator — Free Debt Payoff Time Tool",
+    metaDescription:
+      "Free debt snowball calculator. See how many months a fixed monthly payment takes to clear a debt and the total interest paid at a given rate.",
+    primaryKeyword: "debt snowball calculator",
+    secondaryKeywords: ["debt payoff calculator", "months to pay off debt", "debt payoff time calculator"],
+    fields: [
+      { id: "totalDebt", label: "Total debt", type: "number", unit: "$", placeholder: "10000", required: true, span: 2, min: 0 },
+      { id: "monthlyPayment", label: "Monthly payment", type: "number", unit: "$", placeholder: "300", required: true, span: 1, min: 0 },
+      { id: "annualRate", label: "Interest rate (APR)", type: "number", unit: "%", placeholder: "12", required: true, span: 1, min: 0, step: 0.01 },
+    ],
+    results: [
+      { id: "monthsToPayoff", label: "Months to payoff", format: "number", decimals: 0, unit: "months", isPrimary: true },
+      { id: "totalInterest", label: "Total interest", format: "currency", currency: "USD", decimals: 2, isPrimary: false },
+    ],
+    formula: "n = −ln(1 − debt × r ÷ payment) ÷ ln(1 + r), r = APR ÷ 1200",
+    explanation:
+      "The months-to-payoff figure shown here is how long a fixed monthly payment takes to eliminate a debt, and the total interest is the extra you pay on top of the balance to get there. It matters because the debt snowball method — attacking one balance with a steady, committed payment until it is gone — depends on knowing your finish line, and seeing the timeline and interest cost turns a daunting balance into a concrete plan with an end date. This debt snowball calculator converts the annual rate to a monthly rate, charges interest on the shrinking balance each month, and solves for the number of payments that drive the balance to zero, then reports the interest accumulated along the way. The logarithmic formula is needed because the balance falls by a different amount every month — early payments cover more interest, later ones more principal — so the payoff curve is not a straight line. Borrowers use a debt snowball calculator to estimate how long a single debt will take, to see how raising the payment shortens the timeline and cuts interest, and to stay motivated as the balance drops. A crucial guardrail appears here: if the payment does not exceed the monthly interest, the balance never shrinks and the debt is never repaid, so the tool returns no result to signal that the payment must rise.",
+    formulaExplanation:
+      "The monthly rate r is the APR divided by 1200. Each month interest of debt × r is added and the payment reduces what remains, so the balance follows a declining curve rather than falling in equal steps. Rearranging that curve to solve for the number of payments gives n = −ln(1 − debt × r ÷ payment) ÷ ln(1 + r). If the payment is less than or equal to debt × r, the value inside the logarithm is zero or negative, no finite payoff exists, and the tool shows no result — a warning that the payment must exceed the monthly interest to make progress.",
+    example: {
+      inputs: { totalDebt: 10000, monthlyPayment: 300, annualRate: 12 },
+      explanation: "A $10,000 debt at 12% APR paid at $300 a month clears in 41 months and costs about $2,225 in interest.",
+    },
+    faqs: [
+      { question: "What is the debt snowball method?", answer: "The debt snowball is a payoff strategy where you list your debts smallest to largest, make minimum payments on all of them, and throw every extra dollar at the smallest balance until it is gone. You then roll that freed-up payment onto the next debt, building momentum like a snowball. Its strength is psychological: clearing small balances quickly delivers early wins that keep you motivated, even though it is not always the cheapest order mathematically." },
+      { question: "How is the snowball different from the avalanche method?", answer: "The snowball orders debts by balance, smallest first, to maximize motivation from quick wins. The debt avalanche orders them by interest rate, highest first, to minimize total interest paid. The avalanche is usually cheaper overall, but the snowball's early victories help many people stick with the plan. This tool computes the payoff time and interest for a single debt at a fixed payment, which applies to whichever ordering strategy you choose to follow." },
+      { question: "Why does the payment have to exceed the monthly interest?", answer: "Each month, interest is charged on the outstanding balance. If your payment is only equal to or less than that interest, the entire payment is consumed by interest and the principal never falls, so the debt lasts forever or even grows. For the balance to shrink, the payment must cover the month's interest and leave something over to reduce principal, which is why the tool returns no result when the payment is too small." },
+      { question: "How much interest will I pay in total?", answer: "The total interest is the sum of all your payments minus the original balance — the extra you hand the lender for the privilege of borrowing. It depends heavily on the interest rate and how fast you pay: a higher rate or a smaller payment stretches the timeline and multiplies the interest. Raising your monthly payment shortens the payoff and can cut total interest sharply, since the balance that accrues interest shrinks faster." },
+      { question: "How can I pay off my debt faster?", answer: "Increase the monthly payment, since every extra dollar goes straight to principal and reduces the interest charged the following month, compounding the benefit. You can also lower the rate through a balance transfer or consolidation loan, freeing more of each payment for principal. Even modest increases in the payment can shave months off the timeline. Try raising the payment in this tool to see how quickly both the months and the total interest drop." },
+    ],
+    relatedCalculators: ["credit-card-payoff-calculator", "loan-calculator", "loan-affordability-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+    formulaSource: "Consumer Financial Protection Bureau (CFPB)",
+    sourceUrl: "https://www.consumerfinance.gov/",
+  },
+  {
+    id: "dividend-yield",
+    slug: "dividend-yield-calculator",
+    category: "Finance",
+    categorySlug: "finance",
+    title: "Dividend Yield Calculator",
+    shortDescription: "Find a stock's dividend yield from price and payout.",
+    seoTitle: "Dividend Yield Calculator — Free Stock Yield Tool",
+    metaDescription:
+      "Free dividend yield calculator. Find a stock's dividend yield from its annual dividend per share and current share price as a percentage.",
+    primaryKeyword: "dividend yield calculator",
+    secondaryKeywords: ["stock dividend yield calculator", "dividend yield formula", "annual dividend yield"],
+    fields: [
+      { id: "annualDividendPerShare", label: "Annual dividend per share", type: "number", unit: "$", placeholder: "2.50", required: true, span: 1, min: 0, step: 0.01 },
+      { id: "sharePrice", label: "Current share price", type: "number", unit: "$", placeholder: "50", required: true, span: 1, min: 0, step: 0.01 },
+    ],
+    results: [
+      { id: "dividendYield", label: "Dividend yield", format: "percentage", decimals: 2, isPrimary: true },
+    ],
+    formula: "Dividend yield = annual dividend per share ÷ share price × 100",
+    explanation:
+      "The dividend yield shown here is the annual dividend a stock pays expressed as a percentage of its current share price, which tells you how much cash income each dollar invested returns per year. It matters because yield lets you compare the income from very different stocks on equal footing, and it is a core metric for income-focused investors who rely on dividends for cash flow rather than share-price gains alone. This dividend yield calculator divides the annual dividend per share by the current price and multiplies by 100. Because price sits in the denominator, yield moves inversely to price: when a stock's price falls, its yield rises, and vice versa, which is why a sudden spike in yield can signal a dropping share price rather than a genuinely better deal. Investors use dividend yield to screen income stocks, to compare a stock's payout against bonds or savings rates, and to gauge whether a dividend looks sustainable. A very high yield deserves scrutiny, since it can reflect a falling price that anticipates a dividend cut. Remember that yield captures only the income return; total return also includes any change in the share price, and dividends can be raised, cut or suspended by the company at any time, so a current yield is a snapshot rather than a guarantee.",
+    formulaExplanation:
+      "The annual dividend per share is the total cash a company expects to pay on one share over a year, and the share price is what one share currently costs. Dividing the dividend by the price gives the income return per dollar invested, and multiplying by 100 turns that ratio into a percentage. Because the price is in the denominator, a rising price lowers the yield while a falling price raises it, so yield and price always move in opposite directions for a fixed dividend.",
+    example: {
+      inputs: { annualDividendPerShare: 2.5, sharePrice: 50 },
+      explanation: "A stock paying $2.50 a year at a $50 share price has a dividend yield of 5%.",
+    },
+    faqs: [
+      { question: "What is a good dividend yield?", answer: "There is no single right number; it depends on the sector, the company's maturity and prevailing interest rates. Established, slower-growth companies often yield 2–5%, while high-growth firms may pay little or nothing, reinvesting instead. Yields far above the market can be a red flag, sometimes signaling a depressed price or an unsustainable payout. Compare a stock's yield to its peers and to safer income sources like bonds rather than chasing the highest number." },
+      { question: "Why does dividend yield rise when the price falls?", answer: "Yield is the annual dividend divided by the current price, so with the dividend held constant, a lower price produces a higher yield. This inverse relationship means a rising yield is not automatically good news: it can reflect a falling share price that investors have marked down because they expect trouble, possibly including a dividend cut. Always check whether a high yield comes from a healthy payout or simply from a sinking stock price." },
+      { question: "Is a higher dividend yield always better?", answer: "No. A very high yield can indicate that the market has driven the price down over concerns about the company's prospects, and an unusually large payout relative to earnings may not be sustainable. If the company cuts or suspends the dividend, both the income and often the share price fall. A moderate, well-covered dividend from a financially sound company is usually preferable to a headline yield that carries hidden risk of being slashed." },
+      { question: "What is the difference between yield and total return?", answer: "Dividend yield measures only the cash income a stock pays relative to its price. Total return combines that dividend income with any change in the share price over the holding period, so it captures the full picture of what you earn or lose. A stock can have a high yield but a negative total return if its price falls, or a low yield but a strong total return driven by price appreciation." },
+      { question: "How often are dividends actually paid?", answer: "Most U.S. companies that pay dividends do so quarterly, though some pay monthly, semi-annually or annually, and a few issue occasional special dividends. This calculator uses the annual dividend per share, so if you only know the quarterly amount, multiply it by four before entering it. Companies can raise, cut or suspend dividends at any time based on their earnings and priorities, so a current yield reflects today's payout, not a guaranteed future one." },
+    ],
+    relatedCalculators: ["investment-calculator", "compound-interest-calculator", "retirement-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+    sensitivity: "finance",
+    formulaSource: "U.S. SEC — Investor.gov",
+    sourceUrl: "https://www.investor.gov/",
+  },
+  {
+    id: "pe-ratio",
+    slug: "pe-ratio-calculator",
+    category: "Finance",
+    categorySlug: "finance",
+    title: "P/E Ratio Calculator",
+    shortDescription: "Find a stock's price-to-earnings ratio.",
+    seoTitle: "P/E Ratio Calculator — Free Price-to-Earnings Tool",
+    metaDescription:
+      "Free P/E ratio calculator. Find a stock's price-to-earnings ratio from its share price and earnings per share to gauge relative valuation.",
+    primaryKeyword: "pe ratio calculator",
+    secondaryKeywords: ["price to earnings ratio calculator", "p/e ratio formula", "stock valuation calculator"],
+    fields: [
+      { id: "sharePrice", label: "Share price", type: "number", unit: "$", placeholder: "150", required: true, span: 1, min: 0, step: 0.01 },
+      { id: "earningsPerShare", label: "Earnings per share (EPS)", type: "number", unit: "$", placeholder: "5", required: true, span: 1, step: 0.01 },
+    ],
+    results: [
+      { id: "peRatio", label: "P/E ratio", format: "number", decimals: 2, isPrimary: true },
+    ],
+    formula: "P/E ratio = share price ÷ earnings per share",
+    explanation:
+      "The price-to-earnings ratio shown here is a stock's share price divided by its earnings per share, telling you how many dollars investors are paying for each dollar of the company's annual earnings. It matters because the P/E ratio is one of the most widely used valuation yardsticks, offering a quick sense of whether a stock looks expensive or cheap relative to its profits, its own history, its peers or the broader market. This P/E ratio calculator divides the price by earnings per share to produce that multiple. A higher P/E means investors are paying more per dollar of current earnings, often because they expect strong future growth; a lower P/E can indicate a bargain, modest growth expectations, or underlying problems. Investors use the P/E ratio to compare companies within the same industry, to judge a stock against its historical range, and as one input among many in deciding what to buy. It has real limits: earnings can be distorted by one-off events or accounting choices, the ratio is meaningless when earnings are zero or negative, and a company with no profits has no meaningful P/E at all. The ratio also says nothing on its own about growth rates, debt or the quality of earnings, so it is best read alongside other metrics rather than treated as a standalone verdict on value.",
+    formulaExplanation:
+      "The share price is what one share currently costs, and earnings per share is the company's net profit divided by the number of shares outstanding over the same period. Dividing price by earnings per share gives the P/E multiple — the number of years of current earnings, at today's level, that the price represents. A higher result means investors pay more per dollar of earnings. The ratio is undefined when earnings per share is zero, and negative when the company is losing money, so it only carries meaning for profitable firms.",
+    example: {
+      inputs: { sharePrice: 150, earningsPerShare: 5 },
+      explanation: "A $150 stock earning $5 per share has a P/E ratio of 30 — investors pay $30 for each $1 of annual earnings.",
+    },
+    faqs: [
+      { question: "What does the P/E ratio tell you?", answer: "The price-to-earnings ratio shows how much investors are willing to pay for each dollar of a company's earnings. A high P/E suggests the market expects strong future growth and is pricing that in, while a low P/E can signal modest expectations, a possible bargain, or hidden trouble. It is a quick gauge of relative valuation, most useful when compared against similar companies, the stock's own history, or the overall market average." },
+      { question: "What is a good P/E ratio?", answer: "There is no universal figure, because P/E norms vary widely by industry and by economic conditions. Fast-growing technology firms often trade at high multiples, while mature utilities or banks trade much lower. Rather than judging a P/E in isolation, compare it to direct competitors and to the company's own historical range. A ratio that looks high or low only becomes meaningful in context, alongside the company's growth prospects and risks." },
+      { question: "What is the difference between trailing and forward P/E?", answer: "Trailing P/E uses earnings from the past twelve months, so it is based on actual reported results. Forward P/E uses analysts' estimates of earnings for the coming year, so it reflects expectations rather than history. Trailing is concrete but backward-looking; forward is timely but depends on forecasts that may prove wrong. This calculator works with whichever earnings-per-share figure you enter, so choose the one that matches the comparison you want to make." },
+      { question: "Why can't you calculate P/E for an unprofitable company?", answer: "The P/E ratio divides price by earnings per share, so if earnings are zero the ratio is undefined, and if earnings are negative the ratio becomes negative and loses its usual meaning. Many young or turnaround companies operate at a loss, so investors turn to other measures for them, such as price-to-sales. A negative or missing P/E simply means the metric does not apply, not that the stock is worthless." },
+      { question: "Should I rely on the P/E ratio alone?", answer: "No. The P/E ratio is a useful starting point but ignores growth rates, debt levels, cash flow and the quality or one-off nature of earnings. Two companies with the same P/E can have very different prospects. Seasoned investors combine it with metrics like the PEG ratio, which adjusts for growth, along with debt ratios and cash-flow analysis, treating P/E as one lens rather than a complete picture of a stock's value." },
+    ],
+    relatedCalculators: ["investment-calculator", "dividend-yield-calculator", "compound-interest-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+    sensitivity: "finance",
+    formulaSource: "U.S. SEC — Investor.gov",
+    sourceUrl: "https://www.investor.gov/",
+  },
+  {
+    id: "bond-current-yield",
+    slug: "bond-yield-calculator",
+    category: "Finance",
+    categorySlug: "finance",
+    title: "Bond Current Yield Calculator",
+    shortDescription: "Find a bond's current yield from coupon and price.",
+    seoTitle: "Bond Current Yield Calculator — Free Bond Yield Tool",
+    metaDescription:
+      "Free bond current yield calculator. Find a bond's current yield from its annual coupon payment and current market price as a percentage.",
+    primaryKeyword: "bond yield calculator",
+    secondaryKeywords: ["bond current yield calculator", "current yield formula", "bond income yield"],
+    fields: [
+      { id: "annualCouponPayment", label: "Annual coupon payment", type: "number", unit: "$", placeholder: "50", required: true, span: 1, min: 0, step: 0.01 },
+      { id: "bondPrice", label: "Current bond price", type: "number", unit: "$", placeholder: "950", required: true, span: 1, min: 0, step: 0.01 },
+    ],
+    results: [
+      { id: "currentYield", label: "Current yield", format: "percentage", decimals: 3, isPrimary: true },
+    ],
+    formula: "Current yield = annual coupon payment ÷ bond price × 100",
+    explanation:
+      "The current yield shown here is a bond's annual coupon payment expressed as a percentage of its current market price, telling you the income return you earn per dollar invested at today's price. It matters because bonds often trade above or below their face value, so the coupon rate printed on the bond — which is based on face value — no longer reflects the true income you get when you buy at a different price. This bond current yield calculator divides the annual coupon by the price you pay and multiplies by 100. When a bond trades below face value, at a discount, its current yield is higher than its coupon rate; when it trades above face value, at a premium, the current yield is lower. Investors use current yield to compare the income of bonds bought at different prices, to weigh a bond against other income sources, and as a quick read on income relative to cost. It is important to note what current yield leaves out: it measures only the coupon income relative to price and ignores any capital gain or loss you realize if you hold the bond to maturity and it repays face value. For that fuller picture, investors turn to yield to maturity. Treat current yield as a snapshot of income return, not the total return of holding the bond to the end.",
+    formulaExplanation:
+      "The annual coupon payment is the fixed cash a bond pays each year, set as a percentage of its face value. The current price is what the bond costs to buy in the market today, which may differ from face value. Dividing the annual coupon by the current price gives the income return per dollar actually invested, and multiplying by 100 makes it a percentage. Because the price is the denominator, buying at a discount raises the current yield above the coupon rate, while buying at a premium pushes it below.",
+    example: {
+      inputs: { annualCouponPayment: 50, bondPrice: 950 },
+      explanation: "A bond paying $50 a year bought at $950 has a current yield of about 5.263%, above its 5% coupon because it trades at a discount.",
+    },
+    faqs: [
+      { question: "What is a bond's current yield?", answer: "Current yield is the annual coupon income a bond pays divided by its current market price, shown as a percentage. It tells you the income return you actually earn at the price you pay, rather than the coupon rate set against face value. Because bonds trade above or below face value, the current yield is often the more useful income figure when comparing bonds you might buy at differing market prices." },
+      { question: "How does current yield differ from the coupon rate?", answer: "The coupon rate is fixed at issue and calculated on the bond's face value, so it never changes. The current yield is calculated on the bond's current market price, which fluctuates, so it changes as the price moves. When a bond trades at a discount below face value, its current yield exceeds the coupon rate; when it trades at a premium above face value, the current yield falls below the coupon rate." },
+      { question: "What is the difference between current yield and yield to maturity?", answer: "Current yield measures only the coupon income relative to today's price and ignores any gain or loss from the price converging to face value at maturity. Yield to maturity accounts for that capital gain or loss plus the timing of all cash flows, giving the total annualized return if you hold the bond to maturity. Yield to maturity is more complete but more complex; current yield is a simpler income snapshot." },
+      { question: "Why do bond prices and yields move in opposite directions?", answer: "A bond's coupon payments are fixed, so when its market price falls, those same payments represent a larger return on the lower price, pushing the yield up. When the price rises, the fixed payments are a smaller return on the higher price, pulling the yield down. This inverse relationship is fundamental to bonds, and it is why rising interest rates, which push new-bond yields up, tend to lower the prices of existing bonds." },
+      { question: "Does current yield account for reinvested coupons or fees?", answer: "No. Current yield is a simple ratio of annual coupon income to price and assumes nothing about reinvesting the coupons, taxes or transaction costs. It also ignores any capital gain or loss at maturity. For a fuller measure of what you will actually earn, consider yield to maturity and factor in your tax situation and any fees. Use current yield as a quick income comparison, not a complete return calculation." },
+    ],
+    relatedCalculators: ["investment-calculator", "compound-interest-calculator", "dividend-yield-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+    sensitivity: "finance",
+    formulaSource: "U.S. SEC — Investor.gov",
+    sourceUrl: "https://www.investor.gov/",
+  },
+  {
+    id: "stock-break-even",
+    slug: "stock-break-even-calculator",
+    category: "Finance",
+    categorySlug: "finance",
+    title: "Stock Break-Even Calculator",
+    shortDescription: "Find the price a stock must reach to break even.",
+    seoTitle: "Stock Break-Even Calculator — Free Break-Even Price Tool",
+    metaDescription:
+      "Free stock break-even calculator. Find the share price you must reach to break even after buy price, share count and total trading fees.",
+    primaryKeyword: "stock break even calculator",
+    secondaryKeywords: ["break even price calculator", "stock break even price", "share break even calculator"],
+    fields: [
+      { id: "buyPrice", label: "Buy price per share", type: "number", unit: "$", placeholder: "100", required: true, span: 1, min: 0, step: 0.01 },
+      { id: "shares", label: "Number of shares", type: "number", placeholder: "10", required: true, span: 1, min: 0, step: 1 },
+      { id: "totalFees", label: "Total fees", type: "number", unit: "$", placeholder: "20", required: true, span: 2, min: 0, step: 0.01 },
+    ],
+    results: [
+      { id: "breakEvenPrice", label: "Break-even price", format: "currency", currency: "USD", decimals: 2, isPrimary: true },
+    ],
+    formula: "Break-even price = (buy price × shares + total fees) ÷ shares",
+    explanation:
+      "The break-even price shown here is the share price a stock must reach for your position to cover its full cost, including the trading fees you paid to buy it. It matters because your true cost is not just the price per share — commissions, spreads and other fees raise the bar the stock must clear before you actually make a profit, and ignoring them makes a position look profitable when it is not yet. This stock break-even calculator adds your total purchase cost and fees, then divides by the number of shares to find the per-share price at which selling would return exactly what you put in, with no gain and no loss. Investors and traders use the break-even price to set realistic profit targets, to decide where to place sell orders, and to understand how much fees eat into small or frequent trades. The effect of fees is proportionally larger on small positions, so the break-even price sits noticeably above the buy price when you hold few shares, and barely above it when you hold many. Keep in mind this calculation covers the fees to buy; if you also pay a fee to sell, or owe taxes on any gain, your real break-even is a little higher still. Use it as a clear floor for what the stock must earn just to leave you even.",
+    formulaExplanation:
+      "Buy price times the number of shares is your total spent on the shares themselves, and adding the total fees gives the complete cash outlay to open the position. Dividing that combined cost by the number of shares spreads it evenly across every share, producing the per-share price at which selling would exactly return your outlay. Any price above the break-even yields a profit; any price below it a loss. Because fees are fixed while shares vary, the break-even sits further above the buy price when you own fewer shares.",
+    example: {
+      inputs: { buyPrice: 100, shares: 10, totalFees: 20 },
+      explanation: "Buying 10 shares at $100 with $20 in fees means the stock must reach $102 per share just to break even.",
+    },
+    faqs: [
+      { question: "What is a stock break-even price?", answer: "The break-even price is the share price at which selling your holding returns exactly what you invested, leaving neither a profit nor a loss. It includes not only the price you paid per share but also the trading fees you incurred to buy. Reaching this price means you have recovered your full cost; only above it do you start making an actual gain. It is a practical floor for setting profit targets." },
+      { question: "Why do fees raise my break-even price?", answer: "Fees add to your total cost without adding any shares, so the stock must rise enough to recover both the purchase price and those fees before you profit. Spread across your shares, the fees lift the per-share price you need to reach. On small positions this bump is proportionally larger, which is why frequent trading of small amounts can be quietly expensive: the stock has to climb further each time just to cover costs." },
+      { question: "Does this include the cost of selling?", answer: "This calculation covers the fees you paid to buy the shares. If your broker also charges a fee to sell, your true break-even is slightly higher, because you must recover that selling cost too. Likewise, taxes on any realized gain further raise the price at which you keep money after everything. For a conservative target, add any expected selling fee to the total fees, or treat the result as a minimum." },
+      { question: "How does the number of shares affect break-even?", answer: "The buy price per share is unaffected by share count, but fixed fees are spread across however many shares you own. With few shares, the fees add a larger amount per share, pushing the break-even noticeably above the buy price. With many shares, the same fees are diluted across the position, so the break-even sits only marginally above the purchase price. Larger positions therefore absorb fixed trading costs more efficiently." },
+      { question: "Should I factor in taxes and dividends?", answer: "This tool focuses on price and trading fees, not taxes or income. If you sell at a gain, capital gains tax reduces what you keep, effectively raising your real break-even, while any dividends received while holding lower your effective cost. For a precise after-tax break-even, adjust for your tax rate and any dividends collected. Use the figure here as a clean, pre-tax floor for the price the stock must reach." },
+    ],
+    relatedCalculators: ["investment-calculator", "dividend-yield-calculator", "pe-ratio-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+    sensitivity: "finance",
+    formulaSource: "U.S. SEC — Investor.gov",
+    sourceUrl: "https://www.investor.gov/",
+  },
+  {
+    id: "nest-egg",
+    slug: "retirement-nest-egg-calculator",
+    category: "Finance",
+    categorySlug: "finance",
+    title: "Retirement Nest Egg Calculator",
+    shortDescription: "Find the savings target your retirement needs.",
+    seoTitle: "Retirement Nest Egg Calculator — Free Savings Target Tool",
+    metaDescription:
+      "Free retirement nest egg calculator. Find the savings target you need from your annual expenses and a safe withdrawal rate like the 4% rule.",
+    primaryKeyword: "retirement nest egg calculator",
+    secondaryKeywords: ["nest egg calculator", "retirement savings target", "4 percent rule calculator"],
+    fields: [
+      { id: "annualExpenses", label: "Annual retirement expenses", type: "number", unit: "$", placeholder: "40000", required: true, span: 2, min: 0 },
+      { id: "withdrawalRate", label: "Safe withdrawal rate", type: "number", unit: "%", placeholder: "4", defaultValue: 4, required: true, span: 2, min: 0, step: 0.1 },
+    ],
+    results: [
+      { id: "nestEggTarget", label: "Nest egg target", format: "currency", currency: "USD", decimals: 2, isPrimary: true },
+      { id: "monthlyIncomeSupported", label: "Monthly income supported", format: "currency", currency: "USD", decimals: 2, isPrimary: false },
+    ],
+    formula: "Nest egg = annual expenses ÷ (withdrawal rate ÷ 100) · Monthly income = annual expenses ÷ 12",
+    explanation:
+      "The nest egg target shown here is the total amount you would need saved to fund your retirement, based on the annual expenses you expect and the rate at which you plan to withdraw from your savings each year. It matters because retirement planning hinges on a single big question — how much is enough — and framing it around a sustainable withdrawal rate turns an abstract worry into a concrete number to aim for. This retirement nest egg calculator divides your desired annual spending by your withdrawal rate to find the portfolio size that can support that spending. The logic is the mirror image of the well-known 4% rule: if you plan to withdraw 4% of your savings in the first year, you need twenty-five times your annual expenses, because dividing by 0.04 is the same as multiplying by twenty-five. A lower withdrawal rate demands a larger nest egg but is safer against outliving your money, while a higher rate needs less saved but carries more risk. Savers use this target to set a retirement goal, to see how their spending assumptions drive the number, and to test how conservative or aggressive a withdrawal rate changes what they must accumulate. Treat the result as a planning guidepost: it does not account for Social Security, pensions, taxes, market sequence risk or changing expenses, so refine it with a fuller retirement plan as your date approaches.",
+    formulaExplanation:
+      "Annual expenses is the yearly spending you want your savings to cover, and the withdrawal rate is the percentage of your nest egg you plan to draw each year. Dividing the withdrawal rate by 100 turns it into a decimal, and dividing your annual expenses by that decimal gives the total savings whose withdrawal rate produces exactly your spending. A 4% rate, for instance, means dividing by 0.04, or multiplying expenses by twenty-five. The monthly income figure simply divides annual expenses by twelve to show the spending the target is built to support.",
+    example: {
+      inputs: { annualExpenses: 40000, withdrawalRate: 4 },
+      explanation: "Spending $40,000 a year at a 4% withdrawal rate requires a nest egg of $1,000,000, supporting about $3,333 a month.",
+    },
+    faqs: [
+      { question: "What is the 4% rule?", answer: "The 4% rule is a retirement guideline suggesting you can withdraw 4% of your savings in your first year of retirement, then adjust that amount for inflation each year, with a strong chance the money lasts about thirty years. It implies a nest egg of twenty-five times your annual expenses. It comes from historical market studies and is a useful starting point, though it is a rule of thumb rather than a guarantee." },
+      { question: "How does the withdrawal rate change my target?", answer: "The withdrawal rate is the denominator, so a lower rate means a larger nest egg and a higher rate a smaller one. Withdrawing 3% requires about thirty-three times your annual expenses, while 5% requires only twenty times. A lower rate is more conservative and better protects against outliving your savings or a rough market early in retirement, but demands that you save more. The right rate balances safety against how much you can realistically accumulate." },
+      { question: "Does this account for Social Security or a pension?", answer: "No. The target reflects funding your full annual expenses from savings alone. If you expect Social Security, a pension or other income in retirement, you can subtract that annual income from your expenses first, then enter only the shortfall your savings must cover. That reduces the nest egg you need. This tool deliberately keeps the calculation simple, so layer in guaranteed income sources separately to refine your true savings goal." },
+      { question: "Is the nest egg target adjusted for inflation and taxes?", answer: "The target is in today's dollars and does not model taxes. In practice, inflation raises your spending needs over time, and the classic 4% rule assumes you increase withdrawals with inflation each year, which the underlying studies build in. Taxes on withdrawals from pre-tax accounts also reduce what you can spend. Treat the figure as a real-terms planning estimate, and account for your expected tax situation when judging how much spendable income it truly provides." },
+      { question: "How accurate is this as a retirement plan?", answer: "It is a helpful first estimate, not a complete plan. It assumes steady spending, a fixed withdrawal rate and ignores market sequence risk — the danger of poor returns early in retirement — as well as changing expenses, healthcare costs and longevity. Real retirement planning also weighs asset allocation, guaranteed income and flexibility to adjust spending. Use this target to set a goal and gauge progress, then build a fuller plan, ideally with a professional, as retirement nears." },
+    ],
+    relatedCalculators: ["retirement-calculator", "investment-calculator", "compound-interest-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+    formulaSource: "U.S. SEC — Investor.gov",
+    sourceUrl: "https://www.investor.gov/",
+  },
+];
