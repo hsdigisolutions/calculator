@@ -22,6 +22,11 @@ import { healthR4Engines } from "./health-r4-wave3";
 import { mathR4Engines } from "./math-r4-wave3";
 import { convertersR4Engines } from "./converters-r4-wave3";
 import { constructionR4Engines } from "./construction-r4-wave3";
+import { marketingR5Engines } from "./marketing-r5-wave3";
+import { datetimeR5Engines } from "./datetime-r5-wave3";
+import { technologyR5Engines } from "./technology-r5-wave3";
+import { scienceR5Engines } from "./science-r5-wave3";
+import { autoSportsR5Engines } from "./auto-sports-r5-wave3";
 
 /* ------------------------------------------------------------------ *
  * Pure calculation engines. No formatting, no display concerns.
@@ -458,6 +463,11 @@ export const engines: Record<string, ComputeFn> = {
   ...mathR4Engines,
   ...convertersR4Engines,
   ...constructionR4Engines,
+  ...marketingR5Engines,
+  ...datetimeR5Engines,
+  ...technologyR5Engines,
+  ...scienceR5Engines,
+  ...autoSportsR5Engines,
 };
 
 export function getEngine(slug: string): ComputeFn | undefined {
