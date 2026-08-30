@@ -41,6 +41,12 @@ import { financeR7Engines } from "./finance-r7-wave3";
 import { healthR7Engines } from "./health-r7-wave3";
 import { mathR7Engines } from "./math-r7-wave3";
 import { scienceR7Engines } from "./science-r7-wave3";
+import { convertersR8Engines } from "./converters-r8-wave3";
+import { technologyR8Engines } from "./technology-r8-wave3";
+import { sportsR8Engines } from "./sports-r8-wave3";
+import { datetimeR8Engines } from "./datetime-r8-wave3";
+import { constructionR8Engines } from "./construction-r8-wave3";
+import { businessR8Engines } from "./business-r8-wave3";
 
 /* ------------------------------------------------------------------ *
  * Pure calculation engines. No formatting, no display concerns.
@@ -496,6 +502,12 @@ export const engines: Record<string, ComputeFn> = {
   ...healthR7Engines,
   ...mathR7Engines,
   ...scienceR7Engines,
+  ...convertersR8Engines,
+  ...technologyR8Engines,
+  ...sportsR8Engines,
+  ...datetimeR8Engines,
+  ...constructionR8Engines,
+  ...businessR8Engines,
 };
 
 export function getEngine(slug: string): ComputeFn | undefined {

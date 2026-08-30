@@ -61,6 +61,12 @@ import { financeR7Calculators } from "./calculators/finance-r7-wave3";
 import { healthR7Calculators } from "./calculators/health-r7-wave3";
 import { mathR7Calculators } from "./calculators/math-r7-wave3";
 import { scienceR7Calculators } from "./calculators/science-r7-wave3";
+import { convertersR8Calculators } from "./calculators/converters-r8-wave3";
+import { technologyR8Calculators } from "./calculators/technology-r8-wave3";
+import { sportsR8Calculators } from "./calculators/sports-r8-wave3";
+import { datetimeR8Calculators } from "./calculators/datetime-r8-wave3";
+import { constructionR8Calculators } from "./calculators/construction-r8-wave3";
+import { businessR8Calculators } from "./calculators/business-r8-wave3";
 
 /** All calculator definitions, before de-duplication. */
 const RAW_CALCULATORS: CalculatorDefinition[] = [
@@ -126,6 +132,12 @@ const RAW_CALCULATORS: CalculatorDefinition[] = [
   ...healthR7Calculators,
   ...mathR7Calculators,
   ...scienceR7Calculators,
+  ...convertersR8Calculators,
+  ...technologyR8Calculators,
+  ...sportsR8Calculators,
+  ...datetimeR8Calculators,
+  ...constructionR8Calculators,
+  ...businessR8Calculators,
 ];
 
 // Merge/skip duplicates: keep the FIRST occurrence of each slug (existing,
