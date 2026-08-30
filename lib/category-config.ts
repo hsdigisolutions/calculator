@@ -22,6 +22,8 @@ export const CATEGORY_COLORS: Record<string, string> = {
   engineering: "#3B82F6",
   sports: "#F97316",
   technology: "#6366F1",
+  environment: "#16A34A",
+  logistics: "#64748B",
 };
 
 export function getCategoryColor(slug: string): string {

@@ -152,6 +152,20 @@ const PATHS: Record<string, ReactNode> = {
       <circle cx="17" cy="19" r="1.6" />
     </>
   ),
+  Leaf: (
+    <>
+      <path d="M11 20A7 7 0 0 1 4 13C4 7 12 4 20 4c0 8-4 12-9 12z" />
+      <path d="M4.5 19.5C7 15 10 13 14 12" />
+    </>
+  ),
+  Truck: (
+    <>
+      <path d="M2 6h11v9H2z" />
+      <path d="M13 9h4l3 3v3h-7z" />
+      <circle cx="6" cy="18" r="1.6" />
+      <circle cx="17" cy="18" r="1.6" />
+    </>
+  ),
   Home: (
     <>
       <path d="M3 10.5 12 3l9 7.5" />

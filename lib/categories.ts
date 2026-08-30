@@ -510,6 +510,62 @@ export const CATEGORIES: Category[] = [
       },
     ],
   },
+  {
+    slug: "environment",
+    name: "Environment",
+    icon: "Leaf",
+    tagline: "Energy, carbon & sustainability",
+    description: "Measure your environmental impact.",
+    seoIntro:
+      "Free environment calculators for carbon footprint, solar savings, flight emissions, home energy cost, EV charging and water use. Each shows the formula, a worked example and clear results.",
+    about:
+      "Environment calculators put a number on the everyday choices that shape your carbon footprint and energy bills — the emissions from a year of driving and flying, the electricity a household draws, the savings a rooftop solar array returns, the cost of charging an electric car, and the water a home gets through. Climate impact can feel abstract, and these tools make it concrete by converting familiar quantities like miles driven, kilowatt-hours used or litres consumed into figures you can compare and act on. Households use them to see where their emissions actually come from and to test whether a change — switching to solar, flying less, driving electric — pays off financially as well as environmentally; renters estimate energy costs before signing a lease; and anyone weighing a green upgrade wants the payback period in plain terms. Each tool applies a standard method — emissions factors published by environmental agencies, coverage and yield rates for solar, and straightforward cost-per-unit arithmetic for energy and water — and shows the formula and a worked example so the result is transparent rather than a slogan. The limitation to keep in mind is that emissions factors and utility rates vary by region and change over time: the carbon intensity of your electricity grid, the price per kilowatt-hour, and the sunlight your roof receives all depend on where you live. Treat the figures as well-grounded estimates for comparing options and understanding your impact, then confirm local rates and factors with your utility or a certified installer.",
+    faqs: [
+      {
+        question: "How is a carbon footprint calculated?",
+        answer:
+          "A carbon footprint multiplies each activity by an emissions factor — the kilograms of carbon dioxide released per unit. Driving a mile, burning a litre of fuel or using a kilowatt-hour of grid electricity each carries a published factor, and summing them gives your total. These calculators use standard factors from environmental agencies, but the real figure depends on your local grid mix and habits, so treat it as a solid estimate rather than an exact measurement.",
+      },
+      {
+        question: "Is home solar worth the investment?",
+        answer:
+          "It usually depends on three things: how much sunlight your roof receives, the local price of electricity, and the upfront cost after any incentives. A solar calculator estimates annual generation and the bill savings it produces, then divides the system cost by those savings to give a payback period. Sunnier regions and higher electricity prices shorten it. Confirm your roof's orientation and a firm quote with a certified installer before committing.",
+      },
+      {
+        question: "Do electric vehicles really lower emissions?",
+        answer:
+          "Generally yes over their lifetime, because an electric motor is far more efficient than a combustion engine and produces no tailpipe emissions. How much cleaner depends on your electricity grid: charging from renewable or nuclear power cuts emissions sharply, while a coal-heavy grid narrows the gap. Manufacturing a battery adds upfront emissions that driving then offsets. Compare using your region's grid intensity, which these tools let you enter, for a realistic figure.",
+      },
+    ],
+  },
+  {
+    slug: "logistics",
+    name: "Logistics",
+    icon: "Truck",
+    tagline: "Shipping, freight & warehousing",
+    description: "Plan shipments and freight costs.",
+    seoIntro:
+      "Free logistics calculators for dimensional weight, CBM, pallet counts, freight density, landed cost and container loading. Each shows the formula, a worked example and clear results.",
+    about:
+      "Logistics calculators handle the arithmetic that decides what a shipment costs and whether it fits — dimensional weight, cubic metres, how many cartons fit on a pallet, freight density and class, the landed cost of imported goods, and how much a container will hold. Freight is priced on whichever is greater, actual weight or the space a parcel occupies, so a light but bulky box can cost far more than its scale weight suggests, and getting these numbers wrong turns a thin margin into a loss. Importers, e-commerce sellers, warehouse teams and shipping coordinators use these tools to quote accurately, compare carriers, and plan how goods stack and travel. Each tool applies the standard method carriers themselves use — dimensional weight as length times width times height divided by a dimensional factor, cubic metres from the same dimensions, pallet and container fit from unit and load dimensions, and landed cost as the sum of goods, freight, duty and handling — and shows the formula and a worked example so the figure is transparent. The limitation to keep in mind is that carriers set their own dimensional divisors, duty rates depend on commodity codes and country of origin, and real-world stacking is constrained by weight limits, fragility and load stability that a pure volume calculation cannot see. Treat the results as accurate for the inputs you provide, then confirm the dimensional factor, tariff and pallet configuration with your carrier or customs broker before booking a shipment.",
+    faqs: [
+      {
+        question: "What is dimensional weight and why do carriers use it?",
+        answer:
+          "Dimensional weight prices a shipment by the space it occupies rather than its actual mass. Carriers calculate it by multiplying length, width and height and dividing by a dimensional factor they set, then bill whichever is greater — the dimensional or the actual weight. This stops light, bulky parcels from taking up van space cheaply. Because each carrier uses a different divisor, always check theirs, since it directly changes the price you pay.",
+      },
+      {
+        question: "How do I calculate the CBM of a shipment?",
+        answer:
+          "Cubic metres, or CBM, measures the volume a shipment occupies. Multiply the length, width and height of each carton in metres, then add the cartons together. A box of 0.5 by 0.4 by 0.3 metres is 0.06 CBM, so ten of them make 0.6 CBM. Sea freight is often priced per cubic metre, so an accurate CBM figure is essential for quoting and planning how much fits in a container.",
+      },
+      {
+        question: "What is landed cost and why does it matter?",
+        answer:
+          "Landed cost is the total price of getting a product to your door — the goods plus freight, insurance, import duty, customs fees and handling. It matters because the sticker price of imported goods hides these additions, and a product that looks cheap at the factory can become unprofitable once duty and shipping are added. Calculating it before you order reveals your true unit cost, so you can price for profit before the gap appears.",
+      },
+    ],
+  },
 ];
 
 export const CATEGORY_MAP: Record<string, Category> = Object.fromEntries(

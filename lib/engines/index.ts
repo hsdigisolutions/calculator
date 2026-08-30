@@ -4,6 +4,7 @@ import { extendedEngines } from "./extended";
 import { wave2Engines } from "./extended-wave2";
 import { wave2OtherEngines } from "./extended-wave2-other";
 import { scienceWave3Engines } from "./science-wave3";
+import { healthMoreEngines } from "./health-more-wave3";
 import { scienceMoreEngines } from "./science-wave3-more";
 import { realEstateWave3Engines } from "./realestate-wave3";
 import { automotiveWave3Engines } from "./automotive-wave3";
@@ -11,6 +12,11 @@ import { cookingWave3Engines } from "./cooking-wave3";
 import { engineeringWave3Engines } from "./engineering-wave3";
 import { sportsWave3Engines } from "./sports-wave3";
 import { technologyWave3Engines } from "./technology-wave3";
+import { environmentWave3Engines } from "./environment-wave3";
+import { logisticsWave3Engines } from "./logistics-wave3";
+import { financeMoreEngines } from "./finance-more-wave3";
+import { mathMoreEngines } from "./math-more-wave3";
+import { everydayMoreEngines } from "./everyday-more-wave3";
 
 /* ------------------------------------------------------------------ *
  * Pure calculation engines. No formatting, no display concerns.
@@ -429,13 +435,19 @@ export const engines: Record<string, ComputeFn> = {
   roas,
   ...extendedEngines,
   ...scienceWave3Engines,
+  ...healthMoreEngines,
   ...scienceMoreEngines,
+  ...mathMoreEngines,
   ...realEstateWave3Engines,
   ...automotiveWave3Engines,
   ...cookingWave3Engines,
   ...engineeringWave3Engines,
   ...sportsWave3Engines,
   ...technologyWave3Engines,
+  ...environmentWave3Engines,
+  ...logisticsWave3Engines,
+  ...financeMoreEngines,
+  ...everydayMoreEngines,
 };
 
 export function getEngine(slug: string): ComputeFn | undefined {

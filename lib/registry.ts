@@ -24,13 +24,19 @@ import { convertersWave2Calculators } from "./calculators/converters-wave2";
 import { businessWave2Calculators } from "./calculators/business-wave2";
 import { everydayWave2Calculators } from "./calculators/everyday-wave2";
 import { scienceWave3Calculators } from "./calculators/science-wave3";
+import { healthMoreCalculators } from "./calculators/health-more-wave3";
 import { scienceMoreCalculators } from "./calculators/science-wave3-more";
+import { mathMoreCalculators } from "./calculators/math-more-wave3";
 import { realEstateWave3Calculators } from "./calculators/realestate-wave3";
 import { automotiveWave3Calculators } from "./calculators/automotive-wave3";
 import { cookingWave3Calculators } from "./calculators/cooking-wave3";
 import { engineeringWave3Calculators } from "./calculators/engineering-wave3";
 import { sportsWave3Calculators } from "./calculators/sports-wave3";
 import { technologyWave3Calculators } from "./calculators/technology-wave3";
+import { environmentWave3Calculators } from "./calculators/environment-wave3";
+import { logisticsWave3Calculators } from "./calculators/logistics-wave3";
+import { financeMoreCalculators } from "./calculators/finance-more-wave3";
+import { everydayMoreCalculators } from "./calculators/everyday-more-wave3";
 
 /** All calculator definitions, before de-duplication. */
 const RAW_CALCULATORS: CalculatorDefinition[] = [
@@ -43,6 +49,7 @@ const RAW_CALCULATORS: CalculatorDefinition[] = [
   ...healthCalculators,
   ...healthExtraCalculators,
   ...healthWave2Calculators,
+  ...healthMoreCalculators,
   ...dateTimeCalculators,
   ...dateTimeExtraCalculators,
   ...dateTimeWave2Calculators,
@@ -60,12 +67,17 @@ const RAW_CALCULATORS: CalculatorDefinition[] = [
   ...everydayWave2Calculators,
   ...scienceWave3Calculators,
   ...scienceMoreCalculators,
+  ...mathMoreCalculators,
   ...realEstateWave3Calculators,
   ...automotiveWave3Calculators,
   ...cookingWave3Calculators,
   ...engineeringWave3Calculators,
   ...sportsWave3Calculators,
   ...technologyWave3Calculators,
+  ...environmentWave3Calculators,
+  ...logisticsWave3Calculators,
+  ...financeMoreCalculators,
+  ...everydayMoreCalculators,
 ];
 
 // Merge/skip duplicates: keep the FIRST occurrence of each slug (existing,

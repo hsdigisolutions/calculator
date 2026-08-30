@@ -1,46 +1,18 @@
 import { ImageResponse } from "next/og";
-import { CATEGORIES } from "@/lib/categories";
+import { getCategory } from "@/lib/categories";
+import { getCategoryColor } from "@/lib/category-config";
 
-// Statically prerender one OG image per category at build time (nodejs runtime).
-export function generateStaticParams() {
-  return CATEGORIES.map((c) => ({ category: c.slug }));
-}
-
-export const dynamicParams = false;
-
-const CATEGORY_COLORS: Record<string, string> = {
-  finance: "#0EA5E9",
-  health: "#22C55E",
-  math: "#8B5CF6",
-  "date-time": "#F59E0B",
-  converters: "#06B6D4",
-  business: "#EC4899",
-  construction: "#F97316",
-  education: "#10B981",
-  ecommerce: "#6366F1",
-  marketing: "#EF4444",
-};
-
-const CATEGORY_LABELS: Record<string, string> = {
-  finance: "Finance",
-  health: "Health & Fitness",
-  math: "Math & Numbers",
-  "date-time": "Date & Time",
-  converters: "Converters",
-  business: "Business",
-  construction: "Construction",
-  education: "Education",
-  ecommerce: "E-commerce",
-  marketing: "Marketing",
-};
+// Generated on demand (nodejs runtime) and CDN-cached, so build time stays flat
+// as categories grow rather than prerendering every image up front.
+export const dynamic = "force-dynamic";
 
 export async function GET(
   _request: Request,
   { params }: { params: Promise<{ category: string }> }
 ) {
   const { category } = await params;
-  const color = CATEGORY_COLORS[category] ?? "#0EA5E9";
-  const label = CATEGORY_LABELS[category] ?? "Calculators";
+  const color = getCategoryColor(category);
+  const label = getCategory(category)?.name ?? "Calculators";
   // Precompute as single strings so each div has exactly one text child
   // (Satori requires display:flex on any div with multiple children).
   const headline = `Free ${label} Calculators`;
