@@ -1,0 +1,438 @@
+import type { CalculatorDefinition } from "../types";
+
+export const constructionR4Calculators: CalculatorDefinition[] = [
+  {
+    id: "gravel",
+    slug: "gravel-calculator",
+    category: "Construction",
+    categorySlug: "construction",
+    title: "Gravel Calculator",
+    shortDescription: "Estimate cubic yards and tons of gravel needed.",
+    seoTitle: "Gravel Calculator — Cubic Yards & Tons",
+    metaDescription:
+      "Free gravel calculator. Estimate the cubic yards and tons of gravel needed for a driveway, path or base from length, width, depth and a waste margin.",
+    primaryKeyword: "gravel calculator",
+    secondaryKeywords: ["gravel yardage calculator", "how much gravel do i need", "gravel tons calculator"],
+    fields: [
+      { id: "length", label: "Length", type: "number", unit: "ft", placeholder: "40", required: true, span: 1, min: 0, step: 0.01 },
+      { id: "width", label: "Width", type: "number", unit: "ft", placeholder: "12", required: true, span: 1, min: 0, step: 0.01 },
+      { id: "depth", label: "Depth", type: "number", unit: "in", placeholder: "4", required: true, span: 1, min: 0, step: 0.1 },
+      { id: "wastePercent", label: "Waste allowance", type: "number", unit: "%", placeholder: "0", required: false, span: 1, min: 0, max: 50, defaultValue: 0, helpText: "Optional extra for compaction and spillage." },
+    ],
+    results: [
+      { id: "cubicYards", label: "Gravel needed", format: "number", decimals: 2, unit: "yd³", isPrimary: true },
+      { id: "tons", label: "Approximate weight", format: "number", decimals: 2, unit: "tons", isPrimary: false, description: "At ~1.4 tons per cubic yard" },
+    ],
+    formula: "Volume (ft³) = length × width × (depth ÷ 12); yd³ = ft³ ÷ 27 × (1 + waste%); tons = yd³ × 1.4",
+    formulaExplanation:
+      "Length times width gives the ground area the gravel will cover in square feet, and multiplying by depth turns that flat area into a three-dimensional volume. Depth is divided by 12 first because it is entered in inches while length and width are in feet, so every dimension shares one unit before they are multiplied. Dividing the resulting cubic feet by 27 converts to cubic yards, since one cubic yard holds 27 cubic feet, and multiplying by one plus the waste fraction adds a margin. Multiplying yardage by 1.4 estimates weight in US tons, the rough density of common crushed gravel delivered dry.",
+    formulaSource: "Standard construction estimation (area/volume method)",
+    explanation:
+      "A gravel calculator works out how much stone you need for a driveway, path, patio base or drainage layer, and reports it in both the cubic yards suppliers quote and the tons trucks are weighed by. You enter the length and width of the area and the depth of gravel you want, and the tool multiplies them into a volume, converting the depth from inches to feet so all three dimensions share one scale before dividing by 27 to reach cubic yards. Volume is the natural language of aggregate because bulk gravel is sold loose by the cubic yard or ton rather than in tidy packages. Ordering short means a second delivery fee and a seam where old and new stone meet at different compaction, while ordering long leaves a pile you must spread or haul away. Because gravel settles as it is compacted and some always scatters off the edges during spreading, the calculator lets you add a waste margin on purpose — many crews add 5 to 10 percent for compaction and spillage rather than discovering the shortfall on site. The length-times-width-times-depth method is standard estimation practice because a spread of gravel is simply a shallow rectangular volume. Contractors, landscapers and homeowners rely on it to price jobs and load trucks with confidence.",
+    example: {
+      inputs: { length: 40, width: 12, depth: 4, wastePercent: 0 },
+      explanation: "40 × 12 × (4÷12) = 160 ft³ ≈ 5.93 yd³, about 8.3 tons of gravel before any waste margin.",
+    },
+    faqs: [
+      { question: "How many tons of gravel are in a cubic yard?", answer: "Common crushed gravel weighs roughly 1.4 US tons per cubic yard when delivered dry, and this calculator uses that figure to convert yardage into an approximate tonnage. The exact number varies with stone type, size and moisture — wet gravel and dense crushed rock run heavier, while lighter decorative stone runs less. Ask your supplier for the density of the specific product to fine-tune the weight." },
+      { question: "How deep should a gravel driveway be?", answer: "A residential gravel driveway usually needs about 4 inches of surface stone, and often more total depth once you include a coarser base layer beneath it, bringing the excavation to 6 to 8 inches. Depth drives volume directly in the formula, so every extra inch adds noticeable material. Softer or frequently used ground benefits from a deeper, layered build that resists rutting and drains well." },
+      { question: "Should I add extra gravel for compaction?", answer: "Yes. Loose gravel settles as it is rolled or driven on, so the compacted depth ends up less than the loose depth you spread. Adding a 5 to 10 percent waste margin covers that settlement plus the stone that scatters off the edges and works into the subgrade. Use the waste field to build that cushion in rather than measuring the exact volume and coming up short on site." },
+      { question: "Does this calculator include a margin for waste?", answer: "Only if you enter one. The waste field defaults to zero so the base result is the exact geometric volume of the area you describe, which keeps the figure transparent and easy to check. Type a percentage — commonly 5 to 10 percent — to add an allowance for compaction, spillage and uneven subgrade. Keeping the raw volume separate lets you scale the margin to the job and the ground conditions." },
+      { question: "How do I measure gravel for an irregular area?", answer: "Split the space into simple rectangles, calculate the volume of each with its own length, width and depth, then add the results together. For a rough curve, approximate it as the rectangle that best contains it and let the waste margin absorb the small overage. Measuring carefully and rounding area up slightly is safer than rounding down, since a short load costs a second delivery." },
+    ],
+    relatedCalculators: ["concrete-calculator", "paint-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+  },
+  {
+    id: "mulch",
+    slug: "mulch-calculator",
+    category: "Construction",
+    categorySlug: "construction",
+    title: "Mulch Calculator",
+    shortDescription: "Estimate cubic yards and bags of mulch needed.",
+    seoTitle: "Mulch Calculator — Cubic Yards & Bags",
+    metaDescription:
+      "Free mulch calculator. Estimate the cubic yards and number of 2-cubic-foot bags of mulch needed to cover a bed from length, width and depth.",
+    primaryKeyword: "mulch calculator",
+    secondaryKeywords: ["how much mulch do i need", "mulch bags calculator", "mulch yardage calculator"],
+    fields: [
+      { id: "length", label: "Bed length", type: "number", unit: "ft", placeholder: "20", required: true, span: 1, min: 0, step: 0.01 },
+      { id: "width", label: "Bed width", type: "number", unit: "ft", placeholder: "10", required: true, span: 1, min: 0, step: 0.01 },
+      { id: "depth", label: "Mulch depth", type: "number", unit: "in", placeholder: "3", required: true, span: 2, min: 0, step: 0.1 },
+    ],
+    results: [
+      { id: "cubicYards", label: "Mulch needed", format: "number", decimals: 2, unit: "yd³", isPrimary: true },
+      { id: "bags2cuft", label: "2-cu-ft bags", format: "number", decimals: 0, unit: "bags", isPrimary: false },
+    ],
+    formula: "Volume (ft³) = length × width × (depth ÷ 12); yd³ = ft³ ÷ 27; bags = ⌈ft³ ÷ 2⌉",
+    formulaExplanation:
+      "Bed length times width gives the surface area in square feet, and multiplying by depth converts that flat area into a volume. Depth is divided by 12 first to change inches into feet so all three dimensions share one unit before being multiplied together. Dividing the resulting cubic feet by 27 gives cubic yards, because a cubic yard contains 27 cubic feet, which is how bulk mulch is delivered. Dividing the cubic feet by 2 and rounding up gives the number of standard 2-cubic-foot bags, since you can only buy whole bags and a partial bag still counts as one purchase.",
+    formulaSource: "Standard construction estimation (area/volume method)",
+    explanation:
+      "A mulch calculator tells you how much mulch to buy to cover a garden bed at the depth you want, giving the answer both in the cubic yards used for bulk delivery and in the 2-cubic-foot bags sold at garden centers. You enter the bed length, width and the depth of mulch you plan to spread, and the tool multiplies them into a volume, converting depth from inches to feet so the dimensions match, then divides by 27 for cubic yards and by 2 for bag count. Mulch is bought by volume because it is a loose, bulky material, and getting the depth right matters horticulturally as well as financially. Too thin a layer fails to suppress weeds or hold moisture, while too thick a layer can smother roots and starve the soil of oxygen — two to four inches is the usual target. Buying loose by the yard is far cheaper for large beds, while bags suit small jobs and easy handling. Because beds are rarely perfect rectangles and mulch settles and scatters as it is spread, it is wise to round measurements up and add a small margin. The length-times-width-times-depth method is standard estimation practice: a mulch layer is simply a shallow rectangular volume of material sitting on the soil.",
+    example: {
+      inputs: { length: 20, width: 10, depth: 3 },
+      explanation: "20 × 10 × (3÷12) = 50 ft³ ≈ 1.85 yd³, which is 25 of the standard 2-cubic-foot bags.",
+    },
+    faqs: [
+      { question: "How many bags of mulch are in a cubic yard?", answer: "A cubic yard holds 27 cubic feet, so it equals about 13.5 of the standard 2-cubic-foot bags most garden centers sell. That is why buying loose by the yard is usually far cheaper for large beds — you avoid paying for the packaging and the labor of filling many small bags. For a small bed, though, a handful of bags is easier to transport and handle than a bulk delivery pile." },
+      { question: "How deep should I spread mulch?", answer: "Two to four inches is the usual range for most garden beds. A depth around three inches suppresses weeds and holds soil moisture well without smothering plant roots or blocking oxygen from the soil. Go thinner near plant stems and tree trunks, keeping mulch from piling against the bark. Depth drives the volume directly in the formula, so doubling the depth doubles the mulch you need to buy." },
+      { question: "Should I buy extra mulch?", answer: "A small margin is sensible. Beds are rarely perfect rectangles, mulch settles and compacts after spreading, and some scatters onto paths or lawn during the work. Rounding your measurements up and adding roughly 5 to 10 percent covers these losses so you are not left with a thin patch or an extra trip to the store. Leftover mulch stores easily and tops up beds later in the season." },
+      { question: "Is bagged or bulk mulch cheaper?", answer: "Bulk mulch delivered by the cubic yard is almost always cheaper per unit volume than bagged mulch, because you are not paying for packaging or bagging labor. The trade-off is that bulk arrives as a pile you must shovel and barrow, and often has a delivery fee. For small jobs the convenience of a few bags outweighs the saving, while large beds favor a bulk order." },
+      { question: "Does this calculator account for settling?", answer: "The result is the exact volume of the bed at the depth you enter, with no settling allowance added, which keeps the number transparent. Mulch does compress a little after spreading and watering, so if you want the settled depth to match your target, add a small margin of around 5 to 10 percent yourself. Measuring the bed generously and rounding up achieves the same cushion in practice." },
+    ],
+    relatedCalculators: ["concrete-calculator", "paint-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+  },
+  {
+    id: "rebar",
+    slug: "rebar-calculator",
+    category: "Construction",
+    categorySlug: "construction",
+    title: "Rebar Calculator",
+    shortDescription: "Estimate rebar bars and total length for a slab grid.",
+    seoTitle: "Rebar Calculator — Bars & Total Length",
+    metaDescription:
+      "Free rebar calculator. Estimate the number of rebar bars and total lineal feet needed for a slab grid from slab dimensions and bar spacing.",
+    primaryKeyword: "rebar calculator",
+    secondaryKeywords: ["rebar spacing calculator", "how much rebar do i need", "rebar grid calculator"],
+    fields: [
+      { id: "slabLength", label: "Slab length", type: "number", unit: "ft", placeholder: "20", required: true, span: 1, min: 0, step: 0.01 },
+      { id: "slabWidth", label: "Slab width", type: "number", unit: "ft", placeholder: "10", required: true, span: 1, min: 0, step: 0.01 },
+      { id: "spacing", label: "Bar spacing", type: "number", unit: "in", placeholder: "12", required: true, span: 2, min: 1, step: 0.5, helpText: "Center-to-center spacing of the grid." },
+    ],
+    results: [
+      { id: "totalBars", label: "Total bars", format: "number", decimals: 0, unit: "bars", isPrimary: true },
+      { id: "totalLengthFt", label: "Total rebar length", format: "number", decimals: 1, unit: "ft", isPrimary: false },
+    ],
+    formula: "Bars each way = ⌊(span in inches) ÷ spacing⌋ + 1; total length = (bars widthwise × slab width) + (bars lengthwise × slab length)",
+    formulaExplanation:
+      "A reinforcing grid runs bars in both directions across the slab. The number of bars laid across the width is found by dividing the slab length in inches by the spacing, taking the whole number, and adding one so both edges carry a bar. The same logic applied the other way gives the bars laid along the length. Each set of bars spans the opposite dimension, so the widthwise bars are as long as the slab width and the lengthwise bars are as long as the slab length. Multiplying each count by its bar length and summing the two gives the total lineal feet of rebar to order.",
+    formulaSource: "Standard construction estimation (grid layout method)",
+    explanation:
+      "A rebar calculator estimates how many reinforcing bars and how much total bar length a concrete slab needs, based on the slab's dimensions and the spacing of the reinforcing grid. Reinforcement is laid as a grid — one set of bars running one way and another set running across it — so the tool counts the bars needed in each direction and adds up their combined length in feet. For each direction it divides the slab dimension by the bar spacing, takes the whole number of gaps, and adds one so that a bar sits at both edges of the grid rather than leaving the perimeter unreinforced. Getting reinforcement right matters because steel gives concrete its tensile strength: concrete is strong in compression but cracks easily under bending and tension, and a correctly spaced grid holds those cracks tight and keeps the slab acting as one piece. This calculator is a clear planning estimate that assumes a simple rectangular slab and a uniform grid; it does not add lap-splice overlaps where bars join, edge cover setbacks, or bends, so treat the total length as a baseline and add a margin. Builders, DIYers and estimators use it to price steel and plan a layout before ordering. Always follow your local building code and any engineer's drawing for the required bar size, grade and spacing.",
+    example: {
+      inputs: { slabLength: 20, slabWidth: 10, spacing: 12 },
+      explanation: "Bars widthwise = ⌊240÷12⌋+1 = 21; bars lengthwise = ⌊120÷12⌋+1 = 11; total 32 bars, 21×10 + 11×20 = 430 ft.",
+    },
+    faqs: [
+      { question: "What rebar spacing should I use for a slab?", answer: "Residential slabs commonly use a grid spaced 12 to 18 inches on center, but the right spacing depends on the slab's thickness, the loads it carries and the bar size, and is set by local code or an engineer. Closer spacing means more steel and a stronger, crack-resistant slab. Always follow the structural drawing or building department requirement for your project rather than guessing at a spacing." },
+      { question: "Does this include overlap for splicing bars?", answer: "No. The total length is a clean grid estimate that does not add lap splices — the overlap where two bars are tied together end to end, typically around 40 bar diameters. On any slab larger than a single bar length you will need these overlaps, so add a margin of roughly 10 to 15 percent to the calculated total to cover splices, plus a little for waste and offcuts when you order." },
+      { question: "How much extra rebar should I order?", answer: "Add around 10 to 15 percent to the calculated length to cover lap splices where bars join, offcuts, and the occasional damaged bar. Steel is ordered in fixed stock lengths, so you will also round up to whole bars. Ordering a small surplus is cheaper than pausing a pour to fetch more steel, and leftover bar is easy to store and reuse on future jobs." },
+      { question: "Why add one bar to each direction?", answer: "Dividing the slab dimension by the spacing counts the gaps between bars, not the bars themselves. A row with four gaps has five bars, so the formula adds one to place a bar at both edges of the grid. Skipping that plus-one would leave the slab perimeter without reinforcement and undercount the steel. This fencepost logic is standard whenever you count evenly spaced items across a length." },
+      { question: "Does bar spacing affect slab strength?", answer: "Yes, strongly. Closer bar spacing puts more steel into the slab, which resists tension and bending better and holds any cracks that form tighter and finer. Wider spacing uses less steel but gives less crack control and load capacity. The correct spacing balances strength against cost for the expected loads, and should come from your building code or a structural engineer rather than being chosen for material savings alone." },
+    ],
+    relatedCalculators: ["concrete-calculator", "tile-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+  },
+  {
+    id: "drywall",
+    slug: "drywall-calculator",
+    category: "Construction",
+    categorySlug: "construction",
+    title: "Drywall Calculator",
+    shortDescription: "Estimate drywall sheets and screws for a wall area.",
+    seoTitle: "Drywall Calculator — Sheets & Screws",
+    metaDescription:
+      "Free drywall calculator. Estimate the number of drywall sheets and screws needed for a wall or ceiling area, with a built-in waste allowance.",
+    primaryKeyword: "drywall calculator",
+    secondaryKeywords: ["how many drywall sheets do i need", "sheetrock calculator", "drywall sheets calculator"],
+    fields: [
+      { id: "wallArea", label: "Area to cover", type: "number", unit: "sq ft", placeholder: "1000", required: true, span: 2, min: 0, step: 0.01 },
+      { id: "sheetWidth", label: "Sheet width", type: "number", unit: "ft", placeholder: "4", required: false, span: 1, min: 0, step: 0.1, defaultValue: 4 },
+      { id: "sheetHeight", label: "Sheet length", type: "number", unit: "ft", placeholder: "8", required: false, span: 1, min: 0, step: 0.1, defaultValue: 8 },
+    ],
+    results: [
+      { id: "sheets", label: "Sheets to buy", format: "number", decimals: 0, unit: "sheets", isPrimary: true, description: "Includes 10% waste" },
+      { id: "screwsApprox", label: "Screws (approx.)", format: "number", decimals: 0, unit: "screws", isPrimary: false },
+    ],
+    formula: "Sheet area = width × height; sheets = ⌈area ÷ sheet area × 1.10⌉; screws ≈ sheets × 32",
+    formulaExplanation:
+      "Sheet width times height gives the area a single panel covers, defaulting to the common 4-by-8-foot sheet at 32 square feet. Dividing the total wall area by that per-sheet area gives how many panels cover the surface exactly. Multiplying by 1.10 adds a ten percent allowance for cuts around openings, breakage and offcuts, and rounding up ensures you buy whole sheets rather than fractions. The screw estimate multiplies the sheet count by 32, a typical fastener count per sheet when screwing into framing spaced 16 inches apart along the edges and through the field of each panel.",
+    formulaSource: "Standard construction estimation (area method)",
+    explanation:
+      "A drywall calculator tells you how many sheets of drywall and roughly how many screws you need to cover a wall or ceiling, starting from the total area and the size of the sheets you will use. It works out the area one sheet covers by multiplying its width and height — the standard panel is 4 by 8 feet, or 32 square feet — then divides the total area by that figure and adds a waste allowance before rounding up to whole sheets. The built-in ten percent margin matters because real rooms are full of doors, windows, outlets and corners, and every cut around them leaves an offcut that often cannot be reused, while handling and lifting large panels inevitably cracks a few. Ordering the bare minimum almost guarantees a mid-job shortfall. The screw figure, about 32 fasteners per sheet, reflects the usual pattern of screwing along the edges and through the field into framing spaced 16 inches on center. This is a planning estimate for a rectangular area; on complex layouts, subtract only large openings and let the waste margin absorb the small ones. Homeowners, remodelers and drywall crews use it to price a job and load the truck. The area-divided-by-sheet-area method is standard practice because covering a wall is fundamentally about fitting flat panels across a flat surface.",
+    example: {
+      inputs: { wallArea: 1000, sheetWidth: 4, sheetHeight: 8 },
+      explanation: "A 4×8 sheet covers 32 ft². 1000 ÷ 32 × 1.10 = 34.4 → 35 sheets, and about 35 × 32 = 1,120 screws.",
+    },
+    faqs: [
+      { question: "How many drywall sheets do I need per square foot?", answer: "Divide the area you are covering by the area of one sheet. A standard 4-by-8-foot sheet covers 32 square feet, so 1,000 square feet of wall needs about 31 sheets before waste and 35 once a ten percent allowance is added. Larger 4-by-12 sheets cover 48 square feet and mean fewer joints to tape, though they are heavier and harder to maneuver in tight spaces." },
+      { question: "How much waste should I allow for drywall?", answer: "Around ten percent is a sensible default, and this calculator builds that in automatically. The margin covers cuts around doors, windows, outlets and corners, the offcuts those cuts leave behind, and panels cracked during lifting and handling. Rooms with many openings, angled ceilings or small closets waste more, so lean higher for complex layouts. Buying a spare sheet or two is far cheaper than halting the job for a store run." },
+      { question: "How many screws does drywall need?", answer: "This tool estimates about 32 screws per sheet, which reflects the common pattern of fastening along panel edges and through the field into studs or joists spaced 16 inches on center. Ceilings and fire-rated assemblies often call for closer screw spacing and therefore more fasteners, so treat 32 as a baseline. Always follow the fastener schedule in your local building code for the specific assembly you are building." },
+      { question: "Should I subtract doors and windows?", answer: "For a quick estimate you can enter the gross wall area and let the ten percent waste margin absorb small openings, since the offcuts around them are rarely reusable. If a room has very large openings — a wide garage door, a picture window or an open stairwell — subtract those areas from the total so you do not badly over-order. For ordinary doors and windows, leaving them in is the safer, simpler choice." },
+      { question: "What size drywall sheet should I use?", answer: "The 4-by-8-foot sheet is the most common and the easiest for one or two people to handle. Longer 4-by-12 sheets cover more area with fewer seams, which speeds taping and gives a cleaner finish on long walls and ceilings, but they weigh more and are awkward in tight rooms. Enter whatever sheet size you plan to buy and the calculator adjusts the count to match its coverage." },
+    ],
+    relatedCalculators: ["paint-calculator", "concrete-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+  },
+  {
+    id: "roofing",
+    slug: "roofing-calculator",
+    category: "Construction",
+    categorySlug: "construction",
+    title: "Roofing Calculator",
+    shortDescription: "Estimate roofing squares and shingle bundles needed.",
+    seoTitle: "Roofing Calculator — Squares & Shingle Bundles",
+    metaDescription:
+      "Free roofing calculator. Estimate roofing squares and shingle bundles needed from roof area, pitch factor and a waste allowance.",
+    primaryKeyword: "roofing calculator",
+    secondaryKeywords: ["shingle calculator", "roofing squares calculator", "how many bundles of shingles"],
+    fields: [
+      { id: "roofArea", label: "Roof area (plan)", type: "number", unit: "sq ft", placeholder: "2000", required: true, span: 2, min: 0, step: 0.01, helpText: "Footprint area before pitch adjustment." },
+      { id: "pitchFactor", label: "Pitch factor", type: "number", placeholder: "1.05", required: false, span: 1, min: 1, step: 0.01, defaultValue: 1.05, helpText: "Multiplier for roof slope (~1.05 low, ~1.25 steep)." },
+      { id: "wastePercent", label: "Waste allowance", type: "number", unit: "%", placeholder: "10", required: false, span: 1, min: 0, max: 50, defaultValue: 10 },
+    ],
+    results: [
+      { id: "squares", label: "Roofing squares", format: "number", decimals: 2, unit: "squares", isPrimary: true, description: "1 square = 100 sq ft" },
+      { id: "bundles", label: "Shingle bundles", format: "number", decimals: 0, unit: "bundles", isPrimary: false, description: "At 3 bundles per square" },
+    ],
+    formula: "Adjusted area = roof area × pitch factor × (1 + waste%); squares = adjusted area ÷ 100; bundles = ⌈squares × 3⌉",
+    formulaExplanation:
+      "The plan or footprint area is multiplied by a pitch factor because a sloped roof has more surface than the flat outline it casts on the ground — the steeper the slope, the larger the multiplier. Multiplying by one plus the waste fraction adds an allowance for the extra shingles lost to starter courses, ridge caps, hip and valley cuts, and breakage. Dividing the adjusted area by 100 converts square feet into roofing squares, the industry unit where one square equals 100 square feet. Multiplying squares by three gives bundles, since three bundles of standard architectural shingles typically cover one square, and rounding up buys whole bundles.",
+    formulaSource: "Standard construction estimation (area method)",
+    explanation:
+      "A roofing calculator estimates how much shingle material a roof needs, expressed in the two units the trade uses: roofing squares, where one square equals 100 square feet, and bundles of shingles, with three bundles covering a square. You start from the roof's plan area — the flat footprint — then apply a pitch factor because a sloped roof always has more surface than the outline it casts on the ground. A gentle slope adds only a few percent, while a steep roof can add a quarter or more, and using the flat footprint alone would badly under-order. The tool then adds a waste allowance for the material lost to starter courses, ridge caps, and the many angled cuts at hips and valleys, before converting to squares and bundles and rounding up to whole bundles. Getting this right matters because a roof must be watertight in one continuous job; running short mid-installation risks a delay that leaves the deck exposed to weather. The area-times-pitch method is standard estimation practice, and the ten percent default waste suits a simple gable roof — complex roofs with many hips, valleys and dormers waste more and deserve a higher margin. Roofers, estimators and homeowners use it to price a reroof and order the right number of bundles the first time.",
+    example: {
+      inputs: { roofArea: 2000, pitchFactor: 1.05, wastePercent: 10 },
+      explanation: "2000 × 1.05 × 1.10 = 2,310 ft² = 23.1 squares, and 23.1 × 3 = 69.3 → 70 bundles of shingles.",
+    },
+    faqs: [
+      { question: "What is a roofing square?", answer: "A roofing square is the trade's standard unit of roof area, equal to 100 square feet. Roofers quote materials and labor by the square rather than the square foot because it keeps the numbers manageable — a typical house roof might be 20 to 30 squares. Shingles, underlayment and estimates are all sized this way, which is why the calculator converts your area into squares before working out bundles." },
+      { question: "How many bundles of shingles are in a square?", answer: "For most standard three-tab and architectural shingles, three bundles cover one roofing square, or 100 square feet, and this calculator uses that ratio. Some heavier or premium shingles come four or even five bundles to the square, so check the coverage printed on the wrapper for your specific product. Bundles are also the practical carrying unit — each weighs enough that one is a comfortable load up a ladder." },
+      { question: "What pitch factor should I use?", answer: "The pitch factor converts flat footprint area into actual sloped roof area. A low-slope roof uses a small multiplier near 1.05, a common medium slope around 1.12 to 1.15, and a steep roof 1.25 or more. If you know the pitch in rise-over-run, you can look up the exact factor, but entering an approximate value for your roof's steepness gets you close. Steeper roofs genuinely have more surface, so the multiplier is essential." },
+      { question: "How much waste should I add for roofing?", answer: "Ten percent is a reasonable default for a simple gable roof and is built in here. Roofs with many hips, valleys, dormers or penetrations waste more shingles to angled cuts and should use 12 to 15 percent or higher. The waste also covers starter strips, ridge caps and breakage. Because a roof must be finished watertight in one go, a generous margin is cheaper than risking a shortfall partway through." },
+      { question: "Does this replace a professional roof measurement?", answer: "No. This is a planning estimate to help you budget and order, based on a plan area and a slope multiplier rather than a measured survey of every plane. For a firm quote, a roofer will measure each roof section, account for the exact pitch, and add flashing, underlayment and ridge materials the calculator does not size. Use the result to sanity-check a quote and understand the scale of the job." },
+    ],
+    relatedCalculators: ["concrete-calculator", "paint-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+  },
+  {
+    id: "insulation",
+    slug: "insulation-calculator",
+    category: "Construction",
+    categorySlug: "construction",
+    title: "Insulation Calculator",
+    shortDescription: "Estimate how many bags or batts of insulation you need.",
+    seoTitle: "Insulation Calculator — Bags & Batts Needed",
+    metaDescription:
+      "Free insulation calculator. Estimate how many bags or batts of insulation you need to cover a wall, ceiling or attic area by coverage per bag.",
+    primaryKeyword: "insulation calculator",
+    secondaryKeywords: ["how much insulation do i need", "insulation batts calculator", "attic insulation calculator"],
+    fields: [
+      { id: "area", label: "Area to insulate", type: "number", unit: "sq ft", placeholder: "800", required: true, span: 2, min: 0, step: 0.01 },
+      { id: "batCoverage", label: "Coverage per bag", type: "number", unit: "sq ft", placeholder: "40", required: false, span: 2, min: 0, step: 0.1, defaultValue: 40, helpText: "Square feet covered per bag or bundle." },
+    ],
+    results: [
+      { id: "bags", label: "Bags needed", format: "number", decimals: 0, unit: "bags", isPrimary: true },
+    ],
+    formula: "Bags = ⌈area ÷ coverage per bag⌉",
+    formulaExplanation:
+      "The area you need to insulate is divided by the number of square feet a single bag or bundle covers, which is printed on the packaging and varies with the insulation's R-value and thickness. The result is how many bags of material the surface requires. Because insulation is sold only in whole bags and a partial bag still counts as a full purchase, the figure is rounded up. Higher R-value and thicker batts cover fewer square feet per bag, so entering the coverage from the exact product you plan to buy keeps the estimate accurate for your job.",
+    formulaSource: "Standard construction estimation (area method)",
+    explanation:
+      "An insulation calculator works out how many bags or bundles of insulation you need to cover a wall, ceiling or attic, by dividing the area to be insulated by the coverage each bag provides. Coverage is printed on every package and depends on the product's R-value and thickness: a thicker, higher-R batt fills more of each cavity and so covers fewer square feet per bag, while a thinner product stretches further. Because you can only buy whole bags, the tool rounds up. Insulation is worth estimating carefully because it directly controls a building's comfort and energy bills — gaps, thin spots and compressed batts all leak heat and undercut the rated R-value, so it pays to cover the whole area properly rather than skimp. At the same time, buying far too much wastes money and clutters the site. Entering the coverage figure from the specific product you intend to use, rather than a generic number, is what makes the estimate reliable, since coverage varies widely between materials and R-values. This calculator handles the area-based bag count; it does not adjust for framing that displaces some cavity space or for the extra material tucked around obstructions, so adding a small margin is wise. Homeowners, remodelers and insulation installers use it to plan an attic top-up or a wall job and buy close to the right amount the first time.",
+    example: {
+      inputs: { area: 800, batCoverage: 40 },
+      explanation: "800 ÷ 40 = 20, so you need 20 bags to cover an 800-square-foot area at 40 sq ft per bag.",
+    },
+    faqs: [
+      { question: "How do I find the coverage per bag?", answer: "The coverage is printed on the insulation packaging, usually stated as square feet at a given R-value and installed thickness. It varies widely: a high-R attic batt covers far fewer square feet per bag than a thin wall batt. Read the figure for the exact product you plan to buy and enter it here, rather than relying on a generic number, because using the wrong coverage throws the whole bag count off." },
+      { question: "Does R-value change how much I need?", answer: "Yes, indirectly. A higher R-value means a thicker or denser product, so each bag covers fewer square feet, and you will need more bags for the same area. The R-value itself is chosen to meet the thermal performance your climate and building code require. Pick the R-value first, then read that product's coverage and enter it, so the calculator counts bags for the material you are actually installing." },
+      { question: "Should I buy extra insulation?", answer: "A small margin is sensible. Framing members displace some cavity space, obstructions like wiring and pipes need material tucked around them, and attics have irregular edges and access points that are easy to underestimate. Adding roughly 5 to 10 percent, or simply rounding your area up, avoids a shortfall that leaves a cold gap. Insulation stores easily, so a leftover bag or two is more useful than an uninsulated patch." },
+      { question: "Why does compressing insulation reduce its value?", answer: "Insulation works by trapping still air in its fibers, and that trapped air is what resists heat flow. Compressing a batt into a space thinner than its rating squeezes out the air pockets, lowering the effective R-value even though the material is present. That is why you should fill cavities to the intended thickness and avoid over-stuffing. Cover the full area properly rather than cramming too much material into too little space." },
+      { question: "Does this calculator work for blown-in insulation?", answer: "It works if the product states coverage per bag at your target depth, which blown-in cellulose and fiberglass packaging does — usually as a coverage chart tied to the finished depth and R-value. Read the square feet per bag for the depth you want, enter it as the coverage, and the tool returns the bag count. For loose fill, remember that settling over time means installing slightly deeper than the final target depth." },
+    ],
+    relatedCalculators: ["paint-calculator", "concrete-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+  },
+  {
+    id: "deck-board",
+    slug: "deck-board-calculator",
+    category: "Construction",
+    categorySlug: "construction",
+    title: "Deck Board Calculator",
+    shortDescription: "Estimate deck boards and lineal feet for a deck.",
+    seoTitle: "Deck Board Calculator — Boards & Lineal Feet",
+    metaDescription:
+      "Free deck board calculator. Estimate how many deck boards and how much lineal footage you need from deck size, board width, length and gap.",
+    primaryKeyword: "deck board calculator",
+    secondaryKeywords: ["decking calculator", "how many deck boards do i need", "deck boards lineal feet"],
+    fields: [
+      { id: "deckLength", label: "Deck length", type: "number", unit: "ft", placeholder: "16", required: true, span: 1, min: 0, step: 0.01, helpText: "Length the boards run along." },
+      { id: "deckWidth", label: "Deck width", type: "number", unit: "ft", placeholder: "12", required: true, span: 1, min: 0, step: 0.01, helpText: "Width the rows span across." },
+      { id: "boardWidth", label: "Board width", type: "number", unit: "in", placeholder: "5.5", required: false, span: 1, min: 0, step: 0.1, defaultValue: 5.5 },
+      { id: "boardLength", label: "Board length", type: "number", unit: "ft", placeholder: "8", required: false, span: 1, min: 0, step: 0.1, defaultValue: 8 },
+      { id: "gap", label: "Gap between boards", type: "number", unit: "in", placeholder: "0.125", required: false, span: 2, min: 0, step: 0.03125, defaultValue: 0.125, helpText: "Spacing for drainage and expansion." },
+    ],
+    results: [
+      { id: "boards", label: "Boards to buy", format: "number", decimals: 0, unit: "boards", isPrimary: true },
+      { id: "linealFeet", label: "Total lineal feet", format: "number", decimals: 1, unit: "ft", isPrimary: false },
+    ],
+    formula: "Row width = (board width + gap) ÷ 12; rows = ⌈deck width ÷ row width⌉; boards per row = ⌈deck length ÷ board length⌉; boards = rows × boards per row",
+    formulaExplanation:
+      "Each board plus its drainage gap occupies an effective width, converted from inches to feet by dividing by 12. Dividing the deck width by that effective width and rounding up gives the number of rows needed to span the deck, since a partial row still requires a full board. Boards run the length of the deck, so dividing the deck length by the stock board length and rounding up gives how many boards make up one row end to end. Multiplying rows by boards per row gives the total boards, and multiplying rows by the deck length gives the total lineal feet of decking to order.",
+    formulaSource: "Standard construction estimation (area/coverage method)",
+    explanation:
+      "A deck board calculator estimates how many boards and how much total lineal footage you need to surface a deck, accounting for the small gap left between boards for drainage and expansion. You enter the deck's length and width, the width and length of the boards you will use, and the gap between them. The tool adds the gap to each board's width to find the effective space one board occupies, divides the deck width by that figure to count the rows needed across the deck, then works out how many boards make up each row along the length, and multiplies the two. That gap matters more than it seems: decking must be spaced so water drains through and the boards can swell and shrink with weather without buckling, and even an eighth of an inch across many rows changes the board count. Rounding up at each step reflects that you buy whole boards and a partial row still needs a full board. This is a planning estimate for a simple rectangular deck laid in straight rows; picture-frame borders, diagonal patterns and stairs use more, so add a waste margin of around 10 percent on top. Deck builders, carpenters and homeowners use it to price decking and order lumber. The row-and-length method is standard practice because a deck surface is simply parallel rows of boards covering a rectangle.",
+    example: {
+      inputs: { deckLength: 16, deckWidth: 12, boardWidth: 5.5, boardLength: 8, gap: 0.125 },
+      explanation: "Row = (5.5+0.125)/12 = 0.469 ft; rows = ⌈12÷0.469⌉ = 26; boards/row = ⌈16÷8⌉ = 2; 52 boards, 416 lineal feet.",
+    },
+    faqs: [
+      { question: "How much gap should I leave between deck boards?", answer: "An eighth of an inch, or about 3 to 6 millimeters, is typical for most decking, allowing rainwater to drain through and the boards to expand and contract with temperature and moisture. Some composite products and installation systems specify their own gap, so check the manufacturer's guidance. Wet or freshly treated wood shrinks as it dries, so it can be laid tighter, while dry boards need the full gap to avoid buckling later." },
+      { question: "How many deck boards do I need?", answer: "It depends on the deck size, the board width and the gap between boards. The calculator counts the rows needed to span the deck width, works out how many boards make up each row along the length, and multiplies them. As a rough check, a wider board covers more per row so you need fewer, while a larger gap slightly increases the row count. Always add a waste margin for cuts and pattern work on top." },
+      { question: "Should I add extra for waste?", answer: "Yes. This estimate assumes simple straight rows, but real decks lose material to end cuts, a picture-frame border, stairs, and the occasional warped or split board rejected on site. Adding around 10 percent, and more for diagonal or herringbone layouts, covers those losses. Ordering a few spare boards also lets you replace a damaged plank years later with lumber that has weathered alongside the rest of the deck." },
+      { question: "What is lineal feet in decking?", answer: "Lineal feet, or linear feet, is the total end-to-end length of board you need, measured along the boards regardless of their width. Lumber yards often price and sell decking by the lineal foot, so this figure lets you order and budget directly. It is the number of rows multiplied by the deck length. Note that lineal feet differs from square feet, which measures the surface area the boards cover." },
+      { question: "Does board direction change the count?", answer: "It can. This calculator assumes boards run along the deck length with rows stacked across the width. Running the boards the other way, or on a diagonal, changes how many rows there are and how much each row must be pieced together, which affects both the board count and the waste. Diagonal layouts in particular use noticeably more material because of the angled cuts, so add extra margin when planning one." },
+    ],
+    relatedCalculators: ["concrete-calculator", "paint-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+  },
+  {
+    id: "fence",
+    slug: "fence-calculator",
+    category: "Construction",
+    categorySlug: "construction",
+    title: "Fence Calculator",
+    shortDescription: "Estimate fence posts, sections and pickets needed.",
+    seoTitle: "Fence Calculator — Posts, Sections & Pickets",
+    metaDescription:
+      "Free fence calculator. Estimate the posts, sections and pickets needed for a fence from the total length and post spacing.",
+    primaryKeyword: "fence calculator",
+    secondaryKeywords: ["fence post calculator", "how many fence pickets do i need", "fence materials calculator"],
+    fields: [
+      { id: "fenceLength", label: "Fence length", type: "number", unit: "ft", placeholder: "100", required: true, span: 1, min: 0, step: 0.01 },
+      { id: "postSpacing", label: "Post spacing", type: "number", unit: "ft", placeholder: "8", required: false, span: 1, min: 1, step: 0.1, defaultValue: 8, helpText: "Center-to-center distance between posts." },
+    ],
+    results: [
+      { id: "posts", label: "Posts needed", format: "number", decimals: 0, unit: "posts", isPrimary: true },
+      { id: "sections", label: "Sections", format: "number", decimals: 0, unit: "sections", isPrimary: false },
+      { id: "pickets", label: "Pickets (6 in)", format: "number", decimals: 0, unit: "pickets", isPrimary: false, description: "At 6-inch picket width" },
+    ],
+    formula: "Sections = ⌈fence length ÷ post spacing⌉; posts = sections + 1; pickets = ⌈fence length ÷ 0.5⌉",
+    formulaExplanation:
+      "Dividing the fence length by the post spacing and rounding up gives the number of sections, or panels, between posts, since a partial run still needs its own section. The post count is the section count plus one, because a fence with several sections needs a post at both ends as well as between every pair of sections — the fencepost principle. Pickets are counted by dividing the fence length in feet by 0.5, treating each picket as roughly six inches wide, and rounding up. This picket figure assumes boards butted edge to edge; a spaced or shadowbox layout would change the count.",
+    formulaSource: "Standard construction estimation (linear layout method)",
+    explanation:
+      "A fence calculator estimates the main materials a straight fence run needs — posts, sections and pickets — from just the total length and the spacing you want between posts. It divides the length by the post spacing to count the sections, or panels, then adds one post because a fence always needs a post at both ends in addition to the ones between panels. This plus-one is the classic fencepost problem: five sections in a row are held up by six posts, not five. Pickets are estimated from the length assuming each board is about six inches wide and butted against its neighbors, so the tool divides the length by half a foot. Getting these counts right matters because posts are the costly, labor-heavy part of a fence — each one means digging, setting and often concreting — so knowing the number up front drives both the budget and the day's work. This is a planning estimate for a straight run with evenly spaced posts; corners, gates and changes in direction each add a post, and sloped ground needs extra allowance, so add a small margin. It also assumes solid, butted pickets — a spaced picket or shadowbox style changes the board count. Homeowners, fencers and landscapers use it to price a project and order posts, rails and boards before breaking ground. The divide-and-add-one method is standard practice for anything spaced evenly along a line.",
+    example: {
+      inputs: { fenceLength: 100, postSpacing: 8 },
+      explanation: "Sections = ⌈100÷8⌉ = 13; posts = 13 + 1 = 14; pickets = ⌈100÷0.5⌉ = 200 six-inch pickets.",
+    },
+    faqs: [
+      { question: "How far apart should fence posts be?", answer: "Six to eight feet on center is the usual range for most wood and vinyl fences, with eight feet common because it suits standard rail lengths. Closer spacing makes a stronger, stiffer fence and suits tall or windy sites, while wider spacing uses fewer posts but flexes more. Heavier fences and gate openings need posts closer together or beefier posts. Enter your intended spacing and the calculator counts the posts and sections to match." },
+      { question: "Why is there one more post than sections?", answer: "Because posts sit at the ends of sections, not in the middle. A single section needs a post at each end — two posts for one panel. Add another section and you add one post, not two, since the middle post is shared. So the post count is always the number of sections plus one. This fencepost principle is easy to forget and is exactly why counting sections alone leaves you one post short." },
+      { question: "How many pickets do I need?", answer: "It depends on picket width and whether they are butted tight or spaced apart. This calculator assumes six-inch pickets set edge to edge, so it divides the fence length by half a foot. Narrower pickets or a gap between them changes the count — a spaced or shadowbox layout uses fewer or more boards respectively. Enter your real picket width by adjusting for it, and always add a few spares for splits and culls." },
+      { question: "Does this account for corners and gates?", answer: "No. This is a straight-run estimate, and every corner or change in direction adds a post, while each gate needs a sturdier post on each side and reduces the picket run. Add one post per corner and plan gate posts separately, since they carry the swinging weight and often need to be larger and set deeper. Treat the result as a baseline and add these fittings for your specific layout." },
+      { question: "How much extra fencing material should I buy?", answer: "Add a small margin, around 5 to 10 percent on pickets and rails, to cover splits, warped boards and cutting waste, plus spare posts for corners and gates the straight-run formula does not count. Sloped or uneven ground also consumes a little more material as panels are stepped or raked. Buying a few spares up front avoids a mid-project trip and lets you match lumber from the same batch later." },
+    ],
+    relatedCalculators: ["concrete-calculator", "paint-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+  },
+  {
+    id: "flooring",
+    slug: "flooring-calculator",
+    category: "Construction",
+    categorySlug: "construction",
+    title: "Flooring Calculator",
+    shortDescription: "Estimate flooring boxes and square footage needed.",
+    seoTitle: "Flooring Calculator — Boxes & Square Footage",
+    metaDescription:
+      "Free flooring calculator. Estimate how many boxes of flooring and total square footage you need for a room, with a built-in waste allowance.",
+    primaryKeyword: "flooring calculator",
+    secondaryKeywords: ["how much flooring do i need", "laminate flooring calculator", "flooring boxes calculator"],
+    fields: [
+      { id: "roomLength", label: "Room length", type: "number", unit: "ft", placeholder: "12", required: true, span: 1, min: 0, step: 0.01 },
+      { id: "roomWidth", label: "Room width", type: "number", unit: "ft", placeholder: "10", required: true, span: 1, min: 0, step: 0.01 },
+      { id: "boxCoverage", label: "Coverage per box", type: "number", unit: "sq ft", placeholder: "20", required: false, span: 1, min: 0, step: 0.1, defaultValue: 20 },
+      { id: "wastePercent", label: "Waste allowance", type: "number", unit: "%", placeholder: "10", required: false, span: 1, min: 0, max: 50, defaultValue: 10 },
+    ],
+    results: [
+      { id: "boxes", label: "Boxes to buy", format: "number", decimals: 0, unit: "boxes", isPrimary: true, description: "Includes waste allowance" },
+      { id: "totalSqFt", label: "Total area needed", format: "number", decimals: 1, unit: "sq ft", isPrimary: false },
+    ],
+    formula: "Area = length × width; total = area × (1 + waste%); boxes = ⌈total ÷ coverage per box⌉",
+    formulaExplanation:
+      "Room length times width gives the floor area in square feet. Multiplying by one plus the waste fraction adds an allowance for the planks lost to end cuts, the offcut at the end of each row that often cannot start the next, and boards culled for defects. Dividing that adjusted area by the square footage one box covers — printed on the carton — gives how many boxes are required, and rounding up buys whole boxes since flooring is not sold loose. Entering the coverage from the exact product matters because box coverage varies widely between plank sizes and flooring types.",
+    formulaSource: "Standard construction estimation (area method)",
+    explanation:
+      "A flooring calculator tells you how many boxes of flooring to buy for a room and the total square footage to order, starting from the room's dimensions and the coverage printed on each box. It multiplies length by width for the floor area, adds a waste allowance, then divides by the per-box coverage and rounds up to whole boxes. The waste step is the part people skip and regret: laying planks or tiles wastes material at the end of every row, where the offcut is often too short to begin the next row, and more is lost to cuts around doorways, hearths and irregular walls, plus the odd damaged or off-color board pulled from the run. Ordering only the exact area almost always leaves you short, and a later top-up may come from a different dye lot or batch that does not match. The built-in ten percent allowance suits a simple rectangular room laid straight; diagonal or herringbone patterns and rooms with many jogs and alcoves waste more and deserve a higher margin. Because coverage varies enormously between products — wide planks, narrow strips, large tiles — entering the figure from the box you are actually buying is what keeps the count right. Homeowners, installers and renovators use it to price a floor and buy enough the first time, ideally with a spare box set aside for future repairs from the same batch.",
+    example: {
+      inputs: { roomLength: 12, roomWidth: 10, boxCoverage: 20, wastePercent: 10 },
+      explanation: "12 × 10 = 120 ft²; ×1.10 = 132 ft²; 132 ÷ 20 = 6.6 → 7 boxes of flooring.",
+    },
+    faqs: [
+      { question: "How much flooring waste should I allow?", answer: "Ten percent is the usual starting point for a simple rectangular room laid in straight rows, and it is built into this calculator. Diagonal and herringbone layouts, rooms with many corners, alcoves or angled walls, and long narrow planks all waste more, so step up to 15 percent or higher for those. The margin covers end-of-row offcuts, cuts around obstacles, and boards culled for damage or color. It is cheaper to buy a spare box than to reorder mismatched stock." },
+      { question: "Why does box coverage vary so much?", answer: "Because flooring comes in many plank and tile sizes and materials, each box holds a different total area. A carton of wide, long planks may cover 25 square feet, while narrow strips or small tiles cover less per box. The coverage is printed on every carton. Always enter that exact figure rather than a generic number, since using the wrong coverage is the biggest source of error in a flooring estimate." },
+      { question: "Should I keep spare flooring after installing?", answer: "Yes. Set aside at least a spare box, or a few extra planks, from the same purchase and batch. Flooring color and finish shift subtly between production runs and dye lots, so a future repair using freshly bought stock can stand out against the original floor. Labeled spares stored flat and dry let you swap a damaged plank years later with a piece that matches the rest of the room exactly." },
+      { question: "How do I measure a room for flooring?", answer: "For a rectangular room, multiply the length by the width to get the floor area in square feet. For an L-shaped or irregular room, divide it into rectangles, calculate each, and add them together. Measure into doorways and closets you intend to floor, and round dimensions up rather than down. Then let the waste allowance handle the cuts, so a slightly generous measurement is safer than a tight one." },
+      { question: "Does this calculator include underlayment?", answer: "No. It estimates only the flooring boxes and area; underlayment, transition strips, trim and adhesive are separate items you buy to suit the product and subfloor. Underlayment is usually sold by the roll with its own coverage, so calculate it from the same room area. Check whether your flooring has an attached pad, since that can eliminate the need for a separate underlayment layer beneath it." },
+    ],
+    relatedCalculators: ["tile-calculator", "concrete-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+  },
+  {
+    id: "brick",
+    slug: "brick-calculator",
+    category: "Construction",
+    categorySlug: "construction",
+    title: "Brick Calculator",
+    shortDescription: "Estimate how many bricks you need for a wall.",
+    seoTitle: "Brick Calculator — How Many Bricks Do I Need?",
+    metaDescription:
+      "Free brick calculator. Estimate how many bricks you need for a wall from the area and brick type, with a built-in waste allowance.",
+    primaryKeyword: "brick calculator",
+    secondaryKeywords: ["how many bricks do i need", "bricks per square foot", "brick wall calculator"],
+    fields: [
+      { id: "wallArea", label: "Wall area", type: "number", unit: "sq ft", placeholder: "200", required: true, span: 2, min: 0, step: 0.01 },
+      {
+        id: "brickType",
+        label: "Brick type",
+        type: "select",
+        required: true,
+        span: 2,
+        defaultValue: "modular",
+        options: [
+          { value: "modular", label: "Modular (6.86 / sq ft)" },
+          { value: "standard", label: "Standard (6.55 / sq ft)" },
+          { value: "queen", label: "Queen (5.76 / sq ft)" },
+        ],
+        helpText: "Bricks per square foot depends on brick size.",
+      },
+    ],
+    results: [
+      { id: "bricks", label: "Bricks (exact)", format: "number", decimals: 0, unit: "bricks", isPrimary: false },
+      { id: "bricksWithWaste", label: "Bricks to buy", format: "number", decimals: 0, unit: "bricks", isPrimary: true, description: "Includes 5% waste" },
+    ],
+    formula: "Bricks = ⌈wall area × bricks per sq ft⌉; bricks to buy = ⌈bricks × 1.05⌉",
+    formulaExplanation:
+      "Each brick type covers a known number of bricks per square foot of wall face, including the mortar joints around it — modular runs about 6.86, standard 6.55, and queen 5.76, with larger bricks covering more area and so needing fewer per square foot. Multiplying the wall area by that rate gives the exact brick count to face the wall, rounded up to a whole brick. Multiplying by 1.05 adds a five percent waste allowance for the bricks lost to cuts at corners and openings and to breakage in handling, and rounding up again ensures you buy whole bricks rather than fractions.",
+    formulaSource: "Standard construction estimation (area method)",
+    explanation:
+      "A brick calculator estimates how many bricks you need to build or face a wall, from the wall's area and the size of brick you are using. Different brick sizes cover different amounts of wall, so the tool uses a bricks-per-square-foot rate for each common type — modular, standard and queen — that already includes the mortar joints between bricks. It multiplies the wall area by that rate for the exact count, then adds a five percent waste allowance and rounds up, because bricks are cut at corners and openings, snapped to fit, and cracked in handling, and you cannot buy a fraction of one. That waste margin is the difference between finishing the wall and stopping one course short. The per-square-foot rates assume a standard single-brick face with typical mortar joints; a double-thickness wall, or unusually thick or thin joints, changes the count, so treat the figure as a solid planning estimate rather than an exact bill of materials. Getting the number right up front matters because bricks are heavy and often delivered on pallets with a lead time, so a shortfall means both a delay and a delivery charge, while a large surplus ties up money and storage. Bricklayers, builders and homeowners use it to price a wall, a pier or a veneer and order close to the right quantity, keeping a few spares for later repairs.",
+    example: {
+      inputs: { wallArea: 200, brickType: "modular" },
+      explanation: "200 × 6.86 = 1,372 bricks exactly; ×1.05 for waste = 1,441 bricks to buy.",
+    },
+    faqs: [
+      { question: "How many bricks are in a square foot?", answer: "It depends on the brick size, because a larger brick covers more wall. This calculator uses about 6.86 bricks per square foot for modular, 6.55 for standard, and 5.76 for queen bricks, with each rate including the mortar joints between them. Larger bricks like queen size cover more face area, so you need fewer per square foot. Pick the type that matches the brick you are buying for an accurate count." },
+      { question: "What is the difference between the brick types?", answer: "The types differ in size, which changes how many fit in a square foot of wall. Modular is a common standardized size, standard is slightly different in its dimensions, and queen bricks are larger and cover more area, so fewer are needed. The size also affects the wall's appearance and the coursing. Choose the type that matches your actual brick, since using the wrong rate throws the count off noticeably over a large wall." },
+      { question: "How much waste should I allow for bricks?", answer: "Around five percent is the usual allowance and is built into this calculator's buy figure. It covers the bricks cut and snapped to fit at corners, ends and around window and door openings, plus the ones chipped or cracked during delivery and handling. Walls with many openings or intricate detailing waste more, so consider raising the margin. A modest surplus is far cheaper than a second pallet delivery to finish the last course." },
+      { question: "Does this include the mortar?", answer: "The per-square-foot rates already account for the space mortar joints take between bricks, which is why fewer bricks fit than the bare brick size alone would suggest. However, the calculator counts only bricks — it does not estimate the volume of mortar or the number of mortar bags you need. Estimate mortar separately from the wall area and joint size, typically budgeting several bags of mix per hundreds of bricks laid." },
+      { question: "Does wall thickness change the brick count?", answer: "Yes. These rates assume a single-brick-thick wall or veneer face. A double-thickness or solid load-bearing wall built two bricks deep uses roughly twice as many bricks for the same face area, and header courses that tie the layers together add more. If you are building a thicker wall, multiply the result accordingly, or calculate each wythe separately, and confirm the bonding pattern with your plans or a mason." },
+    ],
+    relatedCalculators: ["concrete-calculator", "tile-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+  },
+];

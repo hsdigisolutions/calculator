@@ -37,6 +37,11 @@ import { environmentWave3Calculators } from "./calculators/environment-wave3";
 import { logisticsWave3Calculators } from "./calculators/logistics-wave3";
 import { financeMoreCalculators } from "./calculators/finance-more-wave3";
 import { everydayMoreCalculators } from "./calculators/everyday-more-wave3";
+import { financeR4Calculators } from "./calculators/finance-r4-wave3";
+import { healthR4Calculators } from "./calculators/health-r4-wave3";
+import { mathR4Calculators } from "./calculators/math-r4-wave3";
+import { convertersR4Calculators } from "./calculators/converters-r4-wave3";
+import { constructionR4Calculators } from "./calculators/construction-r4-wave3";
 
 /** All calculator definitions, before de-duplication. */
 const RAW_CALCULATORS: CalculatorDefinition[] = [
@@ -78,6 +83,11 @@ const RAW_CALCULATORS: CalculatorDefinition[] = [
   ...logisticsWave3Calculators,
   ...financeMoreCalculators,
   ...everydayMoreCalculators,
+  ...financeR4Calculators,
+  ...healthR4Calculators,
+  ...mathR4Calculators,
+  ...convertersR4Calculators,
+  ...constructionR4Calculators,
 ];
 
 // Merge/skip duplicates: keep the FIRST occurrence of each slug (existing,

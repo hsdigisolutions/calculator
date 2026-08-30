@@ -1,0 +1,455 @@
+import type { CalculatorDefinition, CalculatorField } from "../types";
+
+const sexField: CalculatorField = {
+  id: "sex", label: "Sex", type: "select", required: true, span: 1, defaultValue: "male",
+  options: [
+    { value: "male", label: "Male" },
+    { value: "female", label: "Female" },
+  ],
+};
+
+export const healthR4Calculators: CalculatorDefinition[] = [
+  {
+    id: "lean-body-mass",
+    slug: "lean-body-mass-calculator",
+    category: "Health",
+    categorySlug: "health",
+    title: "Lean Body Mass Calculator",
+    shortDescription: "Estimate lean mass and fat mass from height and weight.",
+    seoTitle: "Lean Body Mass Calculator — Boer Formula (LBM)",
+    metaDescription:
+      "Free lean body mass calculator. Estimate your lean body mass and fat mass in kilograms from height, weight and sex using the Boer formula.",
+    primaryKeyword: "lean body mass calculator",
+    secondaryKeywords: ["lbm calculator", "boer formula", "fat free mass calculator"],
+    fields: [
+      { id: "weightKg", label: "Weight", type: "number", unit: "kg", placeholder: "80", required: true, span: 1, min: 0 },
+      { id: "heightCm", label: "Height", type: "number", unit: "cm", placeholder: "180", required: true, span: 1, min: 0 },
+      sexField,
+    ],
+    results: [
+      { id: "leanBodyMass", label: "Lean body mass", format: "number", decimals: 1, unit: "kg", isPrimary: true },
+      { id: "bodyFatMass", label: "Body fat mass", format: "number", decimals: 1, unit: "kg", isPrimary: false },
+    ],
+    formula: "Male LBM = 0.407×kg + 0.267×cm − 19.2; Female LBM = 0.252×kg + 0.473×cm − 48.3",
+    explanation:
+      "Lean body mass is everything in your body that is not fat: muscle, bone, organs, connective tissue and the water they hold. A lean body mass calculator estimates that fat-free portion, which matters far more than total weight for judging fitness, strength potential and even certain drug doses that are targeted to lean tissue rather than overall size. This tool uses the Boer formula, one of the most widely cited equations for predicting lean mass from height, weight and sex, and it separates the scale reading into the part that is metabolically active and the part that is stored energy. Knowing your lean body mass helps you set smarter goals: during a fat-loss phase the aim is to shed fat mass while preserving lean mass, and a rising lean figure alongside steady weight often signals successful muscle gain that the scale alone would hide. Athletes and clinicians use a lean body mass calculator to scale protein needs, gauge body composition changes over time, and interpret strength relative to the tissue that produces it. Because the Boer equation is derived from population averages, it is an estimate rather than a lab measurement; methods like DEXA, hydrostatic weighing or bioelectrical impedance measure body composition more directly. Still, tracking the same formula over weeks gives a consistent, useful picture of how your body is changing, and it is a valuable complement to body-fat percentage and simple weight tracking.",
+    formulaExplanation:
+      "The Boer formula predicts lean body mass as a weighted sum of body weight and height, with different coefficients for men and women that reflect their typical differences in muscle and fat distribution. Weight contributes because heavier bodies generally carry more of every tissue, while height contributes because taller frames hold more lean structure. Subtracting a constant calibrates the equation to real measured lean-mass data. Fat mass is then simply total weight minus the estimated lean mass.",
+    example: {
+      inputs: { weightKg: 80, heightCm: 180, sex: "male" },
+      explanation: "For an 80 kg, 180 cm man: 0.407×80 + 0.267×180 − 19.2 ≈ 61.4 kg lean, leaving about 18.6 kg fat.",
+    },
+    faqs: [
+      { question: "What is a healthy lean body mass?", answer: "There is no single ideal figure because lean mass scales with height, frame and sex. Instead of a target number, watch the direction of change: preserving or increasing lean mass while losing fat is the goal for most people. Men typically carry proportionally more lean mass than women. Comparing your lean mass over time on the same formula is far more useful than chasing an absolute value someone else quotes." },
+      { question: "How is lean body mass different from muscle mass?", answer: "Lean body mass includes all fat-free tissue: skeletal muscle plus bone, organs, skin, blood and body water. Muscle mass is only one component of it, usually a bit under half of lean mass in an average adult. So your muscle mass is always smaller than your lean body mass. Most formulas, including Boer, estimate total lean mass rather than muscle alone, because muscle is hard to isolate without imaging." },
+      { question: "Which lean body mass formula is most accurate?", answer: "The Boer, James and Hume equations are the most commonly used, and Boer tends to perform well across a broad range of adults. All are population estimates, so none matches a direct measurement for a specific individual. For accuracy within a few percent, a DEXA scan, hydrostatic weighing or a Bod Pod is the reference standard. For everyday tracking, pick one formula and use it consistently rather than switching between them." },
+      { question: "Why does lean body mass matter for drug dosing?", answer: "Some medications, particularly certain anaesthetics and chemotherapy agents, distribute mainly into lean tissue rather than fat. Dosing by total weight can then overdose people who carry more fat, so clinicians sometimes calculate doses from lean body mass or adjusted body weight instead. This is one reason a lean body mass calculator appears in clinical references, though any real dosing decision must be made by a qualified prescriber, not a general tool." },
+      { question: "Can I increase my lean body mass?", answer: "Yes. Progressive resistance training combined with adequate protein, usually around 1.6 to 2.2 grams per kilogram of body weight for those building muscle, and sufficient overall calories and sleep, drives gains in lean mass over months. Older adults especially benefit, since strength training counters the natural age-related loss of muscle. Gains are gradual, so tracking lean mass every few weeks with the same formula shows progress the bathroom scale can mask." },
+    ],
+    relatedCalculators: ["bmi-calculator", "body-fat-calculator", "ideal-weight-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+    sensitivity: "health",
+    formulaSource: "Boer P. (1984), American Journal of Physiology",
+    sourceUrl: "https://pubmed.ncbi.nlm.nih.gov/6496691/",
+  },
+  {
+    id: "army-body-fat",
+    slug: "army-body-fat-calculator",
+    category: "Health",
+    categorySlug: "health",
+    title: "Army Body Fat Calculator",
+    shortDescription: "Estimate body fat using the tape measurement method.",
+    seoTitle: "Army Body Fat Calculator — Tape Method Body Fat %",
+    metaDescription:
+      "Free army body fat calculator using the circumference tape method. Estimate your body fat percentage from neck, waist, hip and height measurements.",
+    primaryKeyword: "army body fat calculator",
+    secondaryKeywords: ["tape measure body fat", "navy body fat calculator", "circumference body fat"],
+    fields: [
+      sexField,
+      { id: "heightCm", label: "Height", type: "number", unit: "cm", placeholder: "180", required: true, span: 1, min: 0 },
+      { id: "neckCm", label: "Neck circumference", type: "number", unit: "cm", placeholder: "38", required: true, span: 1, min: 0 },
+      { id: "waistCm", label: "Waist circumference", type: "number", unit: "cm", placeholder: "85", required: true, span: 1, min: 0 },
+      { id: "hipCm", label: "Hip circumference", type: "number", unit: "cm", placeholder: "95", required: false, span: 1, min: 0, helpText: "Women only — measure at the widest point." },
+    ],
+    results: [
+      { id: "bodyFatPercent", label: "Body fat percentage", format: "percentage", decimals: 1, isPrimary: true },
+    ],
+    formula: "Circumference (US Navy) method using log10 of neck, waist, hip and height",
+    explanation:
+      "The army body fat calculator estimates your body fat percentage from a handful of tape measurements rather than expensive equipment, which is exactly why the method is used for fitness screening in military and tactical settings. It applies the US Navy circumference formula, the same approach adopted by the armed forces to assess whether members meet body-composition standards. Instead of pinching skinfolds or standing in a scanner, you measure your neck and waist, plus hips for women, along with your height, and the equation converts those circumferences into an estimated fat percentage. The logic is that fat accumulates in predictable places, so the girth of the waist relative to the neck and frame reveals roughly how much of your body is fat. Because it needs only a flexible tape, an army body fat calculator is cheap, quick and repeatable at home, making it popular well beyond the military with anyone tracking a cut or a recomposition. Accuracy is reasonable for average builds but can drift for very muscular or unusually shaped individuals, since the tape cannot see internal composition. Measure on bare skin, keep the tape snug and level, take the waist at the navel for men and the narrowest point for women, and measure the neck just below the larynx. Use the same technique each time so your trend is reliable, and treat the figure as a practical screening estimate rather than a laboratory value.",
+    formulaExplanation:
+      "The US Navy method models body fat as a function of the logarithm of circumference differences scaled by height. For men it uses waist minus neck, capturing abdominal fat above the frame's baseline girth; for women it adds hip circumference because women store more fat around the hips. Taking the base-10 logarithm reflects the non-linear way girth relates to fat, and the constants were fitted against hydrostatic-weighing reference data to return a percentage.",
+    example: {
+      inputs: { sex: "male", heightCm: 180, neckCm: 38, waistCm: 85 },
+      explanation: "For a 180 cm man with a 38 cm neck and 85 cm waist, the formula returns roughly 15% body fat.",
+    },
+    faqs: [
+      { question: "How accurate is the army tape method?", answer: "For people of average build it typically lands within about three to four percent of a hydrostatic or DEXA measurement, which is good for a tool needing only a tape. Accuracy falls for very lean, very muscular or unusually proportioned bodies, because circumferences cannot distinguish muscle from fat. It is best used to track changes over time with consistent technique rather than to pin down one exact number, and it should not replace clinical body-composition testing." },
+      { question: "Where exactly do I measure my waist and neck?", answer: "Measure the neck just below the larynx, or Adam's apple, with the tape sloping slightly down at the front. For men, measure the waist horizontally at the navel; for women, at the narrowest point of the torso. Hips, for women, are measured at the widest point of the buttocks. Keep the tape snug but not compressing the skin, breathe normally, and take each reading two or three times to average out error." },
+      { question: "Why do women need a hip measurement but men do not?", answer: "Women naturally store a larger share of body fat around the hips and thighs, so the female version of the Navy formula includes hip circumference to capture that fat and return an accurate estimate. Men store proportionally more fat abdominally, which the waist-minus-neck term already reflects, so a hip measurement adds little. Using the correct sex-specific formula matters, because applying the male equation to a woman would understate her body fat." },
+      { question: "What is a healthy body fat percentage?", answer: "General fitness ranges are roughly 10 to 20 percent for men and 18 to 28 percent for women, with athletes often lower and essential-fat minimums near 3 percent for men and 12 percent for women. Body fat naturally rises with age. These bands are guides, not strict cutoffs, and health depends on more than fat alone. Very low body fat carries its own risks, so extremely lean targets are not advisable for most people." },
+      { question: "Is the tape method the same as the Navy calculator?", answer: "Yes. The army or military tape method and the US Navy body fat calculator use the same circumference-based equations, developed by the Naval Health Research Center. Different branches set their own pass or fail thresholds and occasionally tweak measuring sites, but the underlying formula converting neck, waist, hip and height into a body fat percentage is identical. This calculator uses that standard equation, so results match typical Navy and army screening tools closely." },
+    ],
+    relatedCalculators: ["body-fat-calculator", "bmi-calculator", "ideal-weight-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+    sensitivity: "health",
+    formulaSource: "US Navy / Naval Health Research Center circumference method",
+    sourceUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1424733/",
+  },
+  {
+    id: "target-heart-rate",
+    slug: "target-heart-rate-calculator",
+    category: "Health",
+    categorySlug: "health",
+    title: "Target Heart Rate Calculator",
+    shortDescription: "Find your training heart rate from age and intensity.",
+    seoTitle: "Target Heart Rate Calculator — Karvonen & % Max HR",
+    metaDescription:
+      "Free target heart rate calculator. Find your ideal training heart rate in beats per minute from age, intensity and resting heart rate using the Karvonen method.",
+    primaryKeyword: "target heart rate calculator",
+    secondaryKeywords: ["karvonen formula", "training heart rate", "heart rate zone calculator"],
+    fields: [
+      { id: "age", label: "Age", type: "number", unit: "years", placeholder: "30", required: true, span: 1, min: 0 },
+      { id: "restingHeartRate", label: "Resting heart rate", type: "number", unit: "bpm", placeholder: "60", required: false, span: 1, min: 0, helpText: "Optional — enables the Karvonen method." },
+      { id: "intensityPercent", label: "Intensity", type: "number", unit: "%", placeholder: "70", required: true, span: 2, min: 0, max: 100, defaultValue: "70" },
+    ],
+    results: [
+      { id: "targetBpm", label: "Target heart rate", format: "number", decimals: 0, unit: "bpm", isPrimary: true },
+      { id: "maxHeartRate", label: "Maximum heart rate", format: "number", decimals: 0, unit: "bpm", isPrimary: false },
+    ],
+    formula: "With resting HR: ((maxHR − rest) × intensity) + rest; otherwise maxHR × intensity. maxHR = 220 − age",
+    explanation:
+      "Your target heart rate is the beats-per-minute range you aim for during exercise to train at the right intensity for your goal, and a target heart rate calculator turns your age and desired effort into a concrete number to chase on a monitor. The tool first estimates your maximum heart rate as 220 minus your age, then scales that ceiling to the intensity you choose. If you also enter a resting heart rate, it switches to the more personalised Karvonen method, which works from your heart rate reserve, the gap between resting and maximum, and adds your resting rate back in. That reserve-based approach tailors the target to your fitness, because a well-conditioned heart with a low resting rate produces a different training zone than an untrained one at the same percentage. People use a target heart rate calculator to make workouts purposeful: easy zones near 50 to 60 percent build an aerobic base and aid recovery, moderate zones around 70 percent improve endurance and burn a healthy mix of fuel, and hard zones above 80 percent sharpen speed and threshold. Training by heart rate keeps you honest, preventing easy days from creeping too hard and hard days from being too soft. Remember that 220-minus-age is an average with real individual scatter, so treat the target as a well-informed guide, adjust to how you feel, and consult a doctor before high-intensity training if you have any cardiac risk factors.",
+    formulaExplanation:
+      "The simple method multiplies your estimated maximum heart rate by the chosen intensity percentage, giving a target as a flat fraction of the ceiling. The Karvonen method is more individual: it takes your heart rate reserve, maximum minus resting, multiplies that by the intensity, then adds resting back. This anchors the zone to your own baseline, so fitter people with lower resting rates get targets matched to their conditioning rather than to age alone.",
+    example: {
+      inputs: { age: 30, restingHeartRate: 60, intensityPercent: 70 },
+      explanation: "Max HR 190; Karvonen: ((190 − 60) × 0.70) + 60 = 151 bpm target.",
+    },
+    faqs: [
+      { question: "What is the difference between the two methods?", answer: "The percentage-of-maximum method simply takes a fraction of your estimated max heart rate, which is quick but ignores individual fitness. The Karvonen method works from heart rate reserve, the difference between your resting and maximum rates, so it accounts for how conditioned your heart is. Karvonen generally gives a slightly higher, more personalised target and is preferred when you know your true resting heart rate, measured first thing in the morning before rising." },
+      { question: "How do I measure my resting heart rate accurately?", answer: "Measure it in the morning before getting out of bed, when you are fully rested and calm. Count your pulse at the wrist or neck for a full 60 seconds, or use a heart-rate monitor or fitness tracker. Take it on several consecutive days and average the readings, since caffeine, stress, poor sleep and illness all raise it. A typical adult resting rate is 60 to 100 beats per minute, and lower often reflects better fitness." },
+      { question: "What intensity should I train at?", answer: "It depends on your goal. Around 50 to 60 percent suits warm-ups, recovery and beginners; 60 to 70 percent builds an aerobic base and endurance; 70 to 80 percent improves cardiovascular fitness and is the classic moderate training zone; and 80 to 90 percent develops speed and lactate threshold for experienced athletes. Most balanced programmes spend the majority of time in easy-to-moderate zones with occasional harder efforts, rather than training hard every session." },
+      { question: "Is 220 minus age reliable for everyone?", answer: "It is a population average and can be off by ten to fifteen beats per minute for any individual, because true maximum heart rate depends on genetics and physiology, not age alone. Formulas like 208 minus 0.7 times age fit large groups slightly better. For precise personal figures a supervised maximal exercise test is the gold standard. For general training the estimate is fine, provided you treat the resulting zones as flexible guides." },
+      { question: "Should I see a doctor before training in high zones?", answer: "If you have heart disease, high blood pressure, diabetes, are over 40 and previously sedentary, or experience chest pain, dizziness or unusual breathlessness, consult a doctor before training near your maximum heart rate. For most healthy people, exercising within target zones is safe and highly beneficial. A medical check and, ideally, a supervised stress test give both peace of mind and a far more accurate personal maximum than any age-based estimate." },
+    ],
+    relatedCalculators: ["bmr-calculator", "tdee-calculator", "calorie-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+    sensitivity: "health",
+    formulaSource: "American Heart Association; Karvonen et al. (1957)",
+    sourceUrl: "https://www.heart.org/en/healthy-living/fitness/fitness-basics/target-heart-rates",
+  },
+  {
+    id: "calorie-deficit",
+    slug: "calorie-deficit-calculator",
+    category: "Health",
+    categorySlug: "health",
+    title: "Calorie Deficit Calculator",
+    shortDescription: "Find the daily deficit needed to reach a weight goal.",
+    seoTitle: "Calorie Deficit Calculator — Daily Deficit for Weight Loss",
+    metaDescription:
+      "Free calorie deficit calculator. Work out the daily calorie deficit and target intake needed to lose a set amount of weight over a chosen number of weeks.",
+    primaryKeyword: "calorie deficit calculator",
+    secondaryKeywords: ["weight loss calorie calculator", "daily deficit calculator", "calorie deficit for weight loss"],
+    fields: [
+      { id: "maintenanceCalories", label: "Maintenance calories", type: "number", unit: "kcal", placeholder: "2500", required: true, span: 1, min: 0, helpText: "Your daily calories to maintain weight (TDEE)." },
+      { id: "targetWeightLossKg", label: "Target weight loss", type: "number", unit: "kg", placeholder: "5", required: true, span: 1, min: 0 },
+      { id: "weeks", label: "Timeframe", type: "number", unit: "weeks", placeholder: "10", required: true, span: 2, min: 0 },
+    ],
+    results: [
+      { id: "dailyDeficit", label: "Daily calorie deficit", format: "number", decimals: 0, unit: "kcal", isPrimary: true },
+      { id: "dailyCalories", label: "Target daily calories", format: "number", decimals: 0, unit: "kcal", isPrimary: false },
+    ],
+    formula: "Daily deficit = (target kg × 7700) ÷ (weeks × 7); target intake = maintenance − daily deficit",
+    explanation:
+      "A calorie deficit is the gap between the energy you burn and the energy you eat, and it is the fundamental driver of weight loss: eat less than you spend, and your body makes up the difference by drawing on stored fat. A calorie deficit calculator works backwards from a goal, taking the weight you want to lose and the time you have, and telling you how large a daily deficit that requires and what daily calorie intake to aim for. The engine rests on the well-known approximation that a kilogram of body fat stores roughly 7,700 calories, so losing five kilograms means creating a total deficit of about 38,500 calories, spread across your chosen timeframe. Dividing that total by the number of days yields the deficit you need each day, and subtracting it from your maintenance calories, your total daily energy expenditure, gives your target intake. People rely on a calorie deficit calculator to make weight loss concrete and paced rather than a vague intention, and to sanity-check whether a goal is realistic. A safe, sustainable rate is generally about 0.5 to 1 kilogram per week, which usually means a deficit of roughly 500 to 1,000 calories a day. Aggressive deficits risk muscle loss, fatigue and rebound. The 7,700-calorie rule is a useful average, not an exact law, since metabolism adapts as you lose weight, so review your target intake and adjust as progress and appetite change over time.",
+    formulaExplanation:
+      "The calculation converts a weight goal into an energy goal using the constant that one kilogram of fat holds about 7,700 calories. Multiplying your target loss by 7,700 gives the total energy deficit required. Dividing by the number of days in your timeframe, weeks times seven, spreads that deficit evenly per day. Subtracting the daily deficit from your maintenance calories reveals the intake that should produce the loss at the pace you chose.",
+    example: {
+      inputs: { maintenanceCalories: 2500, targetWeightLossKg: 5, weeks: 10 },
+      explanation: "5 kg × 7700 = 38,500 kcal over 70 days = 550 kcal/day deficit, so eat about 1,950 kcal daily.",
+    },
+    faqs: [
+      { question: "How big a calorie deficit is safe?", answer: "Most guidelines suggest a deficit of about 500 to 1,000 calories per day, producing roughly 0.5 to 1 kilogram of loss per week. Going much lower than around 1,200 calories a day for women or 1,500 for men risks nutrient shortfalls, muscle loss and rebound eating. A moderate deficit preserves more muscle and is easier to sustain. If this calculator suggests an extreme deficit, extend your timeframe to keep the daily figure reasonable and healthy." },
+      { question: "Is the 7,700 calories per kilogram rule accurate?", answer: "It is a widely used approximation, not an exact constant. A kilogram of body fat stores close to 7,700 calories, but real weight change also involves water, glycogen and lean tissue, and metabolism adapts as you lose weight, slowing the rate over time. So actual results often lag the simple prediction, especially in later weeks. Treat the number as a solid starting estimate and adjust based on your measured progress every few weeks." },
+      { question: "Why has my weight loss stalled despite a deficit?", answer: "Plateaus are common because the body adapts: as you lose weight your maintenance calories fall, shrinking your effective deficit, and metabolism can down-regulate slightly. Water retention, especially with stress, poor sleep or a high-salt day, can also mask fat loss on the scale. Recalculate your maintenance at your new weight, tighten portion tracking, ensure adequate protein and be patient, since the scale often catches up after a whoosh of water loss." },
+      { question: "Will a calorie deficit cost me muscle?", answer: "It can, but you can limit muscle loss substantially. Keep the deficit moderate rather than extreme, eat plenty of protein, around 1.6 to 2.2 grams per kilogram of body weight, and do regular resistance training to signal your body to preserve muscle. Losing weight too fast, neglecting protein or skipping strength work all increase the share of weight lost as muscle. A slower, protein-rich, strength-supported approach protects lean mass best." },
+      { question: "Do I still need to exercise to lose weight?", answer: "You can create a deficit through diet alone, but exercise makes it easier and healthier. Activity raises the calories you burn, so you can eat a little more for the same deficit, and resistance training protects muscle while cardio benefits your heart. Exercise also improves mood, sleep and appetite regulation. For lasting results, most people find combining a modest dietary deficit with regular movement more sustainable than relying on either alone." },
+    ],
+    relatedCalculators: ["tdee-calculator", "bmr-calculator", "calorie-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+    sensitivity: "health",
+    formulaSource: "NIH / standard energy-balance guidance (≈7,700 kcal per kg fat)",
+    sourceUrl: "https://www.niddk.nih.gov/health-information/weight-management",
+  },
+  {
+    id: "water-intake-daily",
+    slug: "water-intake-daily-calculator",
+    category: "Health",
+    categorySlug: "health",
+    title: "Daily Water Intake Calculator",
+    shortDescription: "Estimate how much water to drink each day.",
+    seoTitle: "Daily Water Intake Calculator — How Much Water to Drink",
+    metaDescription:
+      "Free daily water intake calculator. Estimate how many litres and ounces of water you should drink each day based on your body weight and exercise.",
+    primaryKeyword: "daily water intake calculator",
+    secondaryKeywords: ["how much water should i drink", "water intake by weight", "hydration calculator"],
+    fields: [
+      { id: "weightKg", label: "Body weight", type: "number", unit: "kg", placeholder: "70", required: true, span: 1, min: 0 },
+      { id: "exerciseMinutes", label: "Exercise time", type: "number", unit: "min", placeholder: "60", required: false, span: 1, min: 0, helpText: "Optional — daily minutes of exercise." },
+    ],
+    results: [
+      { id: "litersPerDay", label: "Water per day", format: "number", decimals: 2, unit: "L", isPrimary: true },
+      { id: "ouncesPerDay", label: "Water per day", format: "number", decimals: 0, unit: "oz", isPrimary: false },
+    ],
+    formula: "Litres = (35 × kg + (exercise min ÷ 30) × 350) ÷ 1000; ounces = litres × 33.814",
+    explanation:
+      "Water is essential to nearly every process in the body, from regulating temperature and cushioning joints to transporting nutrients and flushing waste, and a daily water intake calculator gives you a personalised target rather than the one-size-fits-all eight glasses rule. This tool bases your baseline on body weight, using a common guideline of about 35 millilitres of water per kilogram, then adds roughly 350 millilitres for every 30 minutes of exercise to replace what you lose through sweat and faster breathing. The result is expressed in both litres and fluid ounces so it is easy to track against a bottle or app. Individual needs vary with climate, altitude, pregnancy, illness and diet, but weight-based targeting captures the biggest driver, since a larger body simply holds and cycles more water. People use a daily water intake calculator to fight the low-grade dehydration that quietly saps concentration, energy and mood, and to build a consistent hydration habit. Remember that around a fifth of your fluid typically comes from food, especially fruits and vegetables, and that other drinks count too, so you rarely need to hit the entire figure from plain water alone. The clearest real-time gauge is your urine: pale straw colour signals good hydration, while dark yellow means drink more. Do not force excessive amounts, as overhydration is possible; instead use the calculated figure as a sensible daily aim and let thirst and urine colour fine-tune it.",
+    formulaExplanation:
+      "The baseline multiplies body weight by 35 millilitres per kilogram, reflecting evidence that fluid needs scale with body size because larger bodies have more cells and greater metabolic turnover. Exercise adds demand because sweat and heavier breathing shed water, so the formula adds about 350 millilitres for each half hour of activity. Dividing by 1,000 converts millilitres to litres, and multiplying litres by 33.814 gives US fluid ounces for convenience.",
+    example: {
+      inputs: { weightKg: 70, exerciseMinutes: 60 },
+      explanation: "(35 × 70 + (60 ÷ 30) × 350) ÷ 1000 = (2450 + 700) ÷ 1000 = 3.15 L, about 107 oz.",
+    },
+    faqs: [
+      { question: "Does all my fluid have to come from plain water?", answer: "No. Around 20 percent of your daily fluid typically comes from food, particularly water-rich fruits, vegetables and soups. Other beverages such as milk, juice, tea and even moderate coffee also contribute, despite the myth that caffeine is strongly dehydrating. Plain water is the healthiest, calorie-free choice, but you do not need to reach the whole target from water alone. Aim for the total intake across all fluids and watery foods combined." },
+      { question: "How do I know if I am drinking enough?", answer: "Urine colour is the simplest real-time indicator: pale straw or light yellow suggests good hydration, while dark yellow or amber signals you need more. Frequency matters too, most people urinate every few hours. Other signs of dehydration include thirst, dry mouth, headache, fatigue and reduced concentration. Since thirst can lag behind actual need, especially in older adults, using a calculated target plus urine colour together gives a reliable picture of your hydration." },
+      { question: "Can I drink too much water?", answer: "Yes, though it is uncommon. Drinking excessive amounts in a short time can dilute blood sodium, a dangerous condition called hyponatraemia that mainly affects endurance athletes who overdrink during long events. For most people the kidneys easily handle normal intake and simply excrete the excess. Spread your intake through the day rather than gulping large volumes at once, and let thirst and this calculated target guide you rather than forcing litres beyond comfort." },
+      { question: "Does exercise really change how much I need?", answer: "Yes, significantly. Physical activity increases fluid loss through sweat and faster breathing, and the hotter or more intense the session, the more you lose. This calculator adds roughly 350 millilitres per 30 minutes of exercise as a general allowance, but heavy sweaters and hot-climate athletes may need more. Drink before, during and after activity, and for long or intense efforts consider replacing electrolytes too, since sweat carries sodium and other minerals alongside water." },
+      { question: "Do factors like weather and pregnancy matter?", answer: "They do. Hot or humid weather, high altitude, fever, vomiting, diarrhoea, breastfeeding and pregnancy all raise fluid needs, sometimes substantially. Dry indoor heating in winter can also increase losses. This calculator gives a solid baseline from weight and exercise, but treat it as a starting point and increase intake in these situations. If you have kidney disease, heart failure or take medication affecting fluid balance, follow your doctor's specific hydration advice instead." },
+    ],
+    relatedCalculators: ["bmr-calculator", "tdee-calculator", "calorie-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+    sensitivity: "health",
+    formulaSource: "U.S. National Academies of Sciences (Dietary Reference Intakes for water)",
+    sourceUrl: "https://www.cdc.gov/nutrition/data-statistics/plain-water-the-healthier-choice.html",
+  },
+  {
+    id: "ponderal-index",
+    slug: "ponderal-index-calculator",
+    category: "Health",
+    categorySlug: "health",
+    title: "Ponderal Index Calculator",
+    shortDescription: "Assess body leanness using weight and height cubed.",
+    seoTitle: "Ponderal Index Calculator — Corpulence Index",
+    metaDescription:
+      "Free ponderal index calculator. Compute your ponderal index (corpulence index) from weight and height cubed for a height-adjusted measure of leanness.",
+    primaryKeyword: "ponderal index calculator",
+    secondaryKeywords: ["corpulence index", "ponderal index formula", "body leanness index"],
+    fields: [
+      { id: "weightKg", label: "Weight", type: "number", unit: "kg", placeholder: "70", required: true, span: 1, min: 0 },
+      { id: "heightCm", label: "Height", type: "number", unit: "cm", placeholder: "175", required: true, span: 1, min: 0 },
+    ],
+    results: [
+      { id: "ponderalIndex", label: "Ponderal index", format: "number", decimals: 1, unit: "kg/m³", isPrimary: true },
+    ],
+    formula: "Ponderal index = weight(kg) ÷ height(m)³",
+    explanation:
+      "The ponderal index, also called the corpulence index, is a measure of leanness that divides body weight by height cubed rather than height squared as body mass index does. A ponderal index calculator produces this figure, which many researchers consider more reliable than BMI across the extremes of stature, because cubing height better reflects how a three-dimensional body's mass should scale with its linear size. BMI's use of height squared systematically flags very tall people as heavier and very short people as lighter than they really are relative to build; the ponderal index reduces that distortion, which is why it is often preferred in studies of unusually tall or short populations and, especially, in neonatology. In newborns the ponderal index is a standard tool for assessing whether a baby's weight is appropriate for its length, helping identify growth restriction that a length or weight alone might miss. For adults, a typical ponderal index falls in a band around the low-to-mid teens in kilograms per metre cubed, with lower values indicating a leaner or more slender frame and higher values a stockier one. A ponderal index calculator is therefore useful whenever height-scaling matters, offering a complementary view alongside BMI, waist measures and body-fat estimates. Like all single-number indices it cannot distinguish muscle from fat or reveal where weight sits, so read it as one input among several rather than a standalone verdict on health, and interpret extreme values in context with a clinician.",
+    formulaExplanation:
+      "The ponderal index divides weight by height raised to the third power because mass is fundamentally a three-dimensional, volumetric quantity, and volume scales with the cube of a linear dimension like height. BMI's height-squared denominator under-corrects for stature, so tall and short people are misranked; cubing height aligns the scaling more closely with true geometry. Height is converted from centimetres to metres first, then cubed, giving units of kilograms per cubic metre.",
+    example: {
+      inputs: { weightKg: 70, heightCm: 175 },
+      explanation: "70 ÷ (1.75)³ = 70 ÷ 5.359 ≈ 13.1 kg/m³, a typical adult ponderal index.",
+    },
+    faqs: [
+      { question: "How is the ponderal index different from BMI?", answer: "Both relate weight to height, but BMI divides weight by height squared while the ponderal index divides by height cubed. Cubing height accounts better for the fact that body mass is three-dimensional, so the ponderal index stays more consistent across very tall and very short people, whom BMI tends to misclassify. For adults of average height the two give broadly similar impressions, but the ponderal index is favoured at the extremes of stature and in newborns." },
+      { question: "What is a normal ponderal index?", answer: "For adults, values roughly in the range of 11 to 15 kilograms per cubic metre are common, with lower numbers indicating a leaner, more slender build and higher numbers a heavier one. There is no universally fixed cutoff as there is for BMI categories, partly because the index is used less in routine adult practice. It is most valuable for tracking change or comparing within a group rather than against a single strict threshold." },
+      { question: "Why is the ponderal index used for newborns?", answer: "In neonatology the ponderal index helps assess whether a baby's weight is proportionate to its length, which is key to spotting intrauterine growth restriction. A baby can have a normal weight but be long and thin, or short and heavy, and the index captures this shape information that weight or length alone misses. A low neonatal ponderal index suggests asymmetric growth restriction and can flag babies needing closer monitoring after birth." },
+      { question: "Can the ponderal index tell me my body fat?", answer: "No. Like BMI, the ponderal index is based only on weight and height, so it cannot distinguish fat from muscle or show where weight is stored. A muscular athlete may register a high value without excess fat, and the index says nothing about visceral fat specifically. For body composition you need methods such as skinfolds, bioelectrical impedance, the tape method or a DEXA scan. Use the ponderal index as a shape indicator, not a fat gauge." },
+      { question: "Should I use the ponderal index instead of BMI?", answer: "Not necessarily instead, but as a complement. BMI remains the standard because clear health-risk categories are defined for it and it is widely understood. The ponderal index is worth calculating if you are very tall or very short, since BMI can misjudge you, or if you simply want a second height-adjusted perspective. For most decisions, viewing several measures together, BMI, waist-to-height ratio, body fat and the ponderal index, gives a fuller picture than any one alone." },
+    ],
+    relatedCalculators: ["bmi-calculator", "body-fat-calculator", "ideal-weight-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+    sensitivity: "health",
+    formulaSource: "Rohrer's index (corpulence index), standard anthropometry",
+    sourceUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2930234/",
+  },
+  {
+    id: "alcohol-units",
+    slug: "alcohol-units-calculator",
+    category: "Health",
+    categorySlug: "health",
+    title: "Alcohol Units Calculator",
+    shortDescription: "Count units and grams of alcohol in a drink.",
+    seoTitle: "Alcohol Units Calculator — UK Units & Grams",
+    metaDescription:
+      "Free alcohol units calculator. Work out the number of UK alcohol units and grams of pure alcohol in any drink from its volume and ABV percentage.",
+    primaryKeyword: "alcohol units calculator",
+    secondaryKeywords: ["uk units of alcohol", "grams of alcohol calculator", "how many units in a drink"],
+    fields: [
+      { id: "volumeMl", label: "Drink volume", type: "number", unit: "ml", placeholder: "500", required: true, span: 1, min: 0 },
+      { id: "abvPercent", label: "ABV", type: "number", unit: "%", placeholder: "5", required: true, span: 1, min: 0, step: 0.1, helpText: "Alcohol by volume, shown on the label." },
+    ],
+    results: [
+      { id: "units", label: "Alcohol units", format: "number", decimals: 1, isPrimary: true },
+      { id: "gramsAlcohol", label: "Pure alcohol", format: "number", decimals: 1, unit: "g", isPrimary: false },
+    ],
+    formula: "UK units = volume(ml) × ABV(%) ÷ 1000; grams = volume × (ABV ÷ 100) × 0.789",
+    explanation:
+      "An alcohol units calculator translates any drink into a standard measure of how much pure alcohol it actually contains, cutting through the confusion of different glass sizes and strengths. In the UK, one unit is defined as 10 millilitres, or about 8 grams, of pure alcohol, the amount an average adult can process in roughly an hour. This tool computes units directly from a drink's volume and its alcohol by volume percentage, the ABV printed on every label, and also reports the grams of pure alcohol for those who prefer that measure or follow guidance from other countries. Understanding units matters because health guidance is written in them: the UK Chief Medical Officers advise drinking no more than 14 units per week for both men and women, spread across three or more days, with several alcohol-free days. It is remarkably easy to underestimate intake, since a large glass of strong wine or a craft beer in a big measure can contain three or more units on its own. An alcohol units calculator helps you keep an honest running tally, compare drinks fairly and stay within lower-risk limits. Regularly exceeding those limits raises the risk of liver disease, several cancers, high blood pressure and dependence. Use this tool to plan a night out, track a week's consumption, or simply understand a drink you are unfamiliar with, and remember that no level of drinking is completely risk-free.",
+    formulaExplanation:
+      "The UK unit formula multiplies the drink's volume in millilitres by its ABV percentage and divides by 1,000, which follows directly from the definition that one unit is 10 millilitres of pure alcohol. To find the mass of alcohol, the volume of pure alcohol, volume times ABV over 100, is multiplied by 0.789, the density of ethanol in grams per millilitre, converting that liquid volume into grams for nutrition-style labelling and international comparisons.",
+    example: {
+      inputs: { volumeMl: 500, abvPercent: 5 },
+      explanation: "A 500 ml beer at 5% ABV = 500 × 5 ÷ 1000 = 2.5 units, containing about 19.7 g of pure alcohol.",
+    },
+    faqs: [
+      { question: "What exactly is one unit of alcohol?", answer: "In the UK, one unit equals 10 millilitres or roughly 8 grams of pure alcohol, chosen because it is about the amount an average adult body clears in an hour. That translates to a single 25 ml measure of spirits at 40 percent, while a pint of strong beer or a large glass of wine can be three units or more. Units let you compare very different drinks on a common scale of actual alcohol content." },
+      { question: "How many units are safe to drink?", answer: "UK Chief Medical Officers advise keeping to no more than 14 units per week for both men and women, spread evenly over three or more days rather than saved up, with some drink-free days. This level keeps health risks low but not zero. Regularly drinking above 14 units raises the risk of liver disease, several cancers and high blood pressure. Other countries set different limits, so check the guidance that applies to you." },
+      { question: "Why does drink strength vary so much?", answer: "ABV, alcohol by volume, ranges widely: light beers sit near 3.5 percent, standard lagers around 5, strong craft beers 7 to 9, wines 11 to 14, fortified wines around 20, and spirits typically 40 percent. Because units depend on both volume and ABV, a small glass of a strong drink can carry more alcohol than a large glass of a weak one. Always check the label's ABV, as a stronger drink means more units in the same measure." },
+      { question: "How long does it take to process the alcohol?", answer: "The body clears roughly one unit per hour on average, though this varies with sex, weight, food, liver health and genetics. So a drink containing three units takes about three hours to leave your system, and nothing reliably speeds this up, not coffee, water or a cold shower. This is why alcohol can linger the morning after heavy drinking, potentially leaving you over a driving limit long after your last drink." },
+      { question: "Are grams or units the better measure?", answer: "They measure the same thing in different scales. The UK and Ireland use units, where one unit is 8 grams of alcohol, while many other countries and scientific studies use grams directly, and some define a standard drink as 10 or 14 grams. This calculator shows both so you can follow whichever guidance applies to you. Grams are more precise and internationally comparable; units are the everyday shorthand in British health advice." },
+    ],
+    relatedCalculators: ["bmi-calculator", "bmr-calculator", "calorie-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+    sensitivity: "health",
+    formulaSource: "UK NHS / Chief Medical Officers' alcohol unit guidance",
+    sourceUrl: "https://www.nhs.uk/live-well/alcohol-advice/calculating-alcohol-units/",
+  },
+  {
+    id: "sleep-cycle",
+    slug: "sleep-cycle-calculator",
+    category: "Health",
+    categorySlug: "health",
+    title: "Sleep Cycle Calculator",
+    shortDescription: "Find the best bedtime to wake between sleep cycles.",
+    seoTitle: "Sleep Cycle Calculator — Best Bedtime by Wake Time",
+    metaDescription:
+      "Free sleep cycle calculator. Enter your wake-up time to find the best bedtimes that let you wake at the end of a 90-minute sleep cycle feeling refreshed.",
+    primaryKeyword: "sleep cycle calculator",
+    secondaryKeywords: ["bedtime calculator", "sleep calculator", "when should i go to bed"],
+    fields: [
+      { id: "wakeHour", label: "Wake-up hour", type: "number", unit: "0-23", placeholder: "7", required: true, span: 1, min: 0, max: 23, helpText: "24-hour clock, e.g. 7 for 7am." },
+      { id: "wakeMinute", label: "Wake-up minute", type: "number", unit: "0-59", placeholder: "0", required: true, span: 1, min: 0, max: 59 },
+    ],
+    results: [
+      { id: "bedtime6cycles", label: "Bedtime for 6 cycles (9h)", format: "text", isPrimary: true },
+      { id: "bedtime5cycles", label: "Bedtime for 5 cycles (7.5h)", format: "text", isPrimary: false },
+      { id: "bedtime4cycles", label: "Bedtime for 4 cycles (6h)", format: "text", isPrimary: false },
+    ],
+    formula: "Bedtime = wake time − (cycles × 90 min + 15 min to fall asleep), wrapped over 24 hours",
+    explanation:
+      "Sleep is not one uniform state but a repeating journey through light sleep, deep sleep and REM, and each full loop of these stages lasts roughly 90 minutes. A sleep cycle calculator uses that rhythm to suggest bedtimes that let you wake at the end of a cycle rather than in the middle of deep sleep, when grogginess, known as sleep inertia, is worst. You enter the time you need to get up, and the tool counts back in 90-minute blocks, adding a typical 15 minutes to fall asleep, to reveal the ideal moments to turn off the light. Waking naturally between cycles, in lighter sleep, tends to leave you feeling clearer and more refreshed than an alarm that jolts you out of deep slumber, even if the total sleep is similar. Most adults do best with five to six cycles a night, about seven and a half to nine hours, so the calculator highlights those options along with a shorter four-cycle fallback for tight nights. A sleep cycle calculator is handy for planning an early start, recovering a consistent schedule, or simply understanding why some mornings feel harder than others. Bear in mind that 90 minutes is an average; real cycles vary from person to person and even across the night, and the time to fall asleep differs too. Treat the suggested bedtimes as smart targets, keep a regular schedule, and let how you feel on waking fine-tune which option suits you best.",
+    formulaExplanation:
+      "The calculator counts backward from your wake time in blocks of 90 minutes, the average length of one full sleep cycle through light, deep and REM stages, and adds a fixed 15 minutes to account for the time most people take to drift off. Subtracting the total from the wake time gives each candidate bedtime, and the result is wrapped around a 24-hour clock so bedtimes falling on the previous evening display correctly in hours and minutes.",
+    example: {
+      inputs: { wakeHour: 7, wakeMinute: 0 },
+      explanation: "To wake at 07:00, six cycles plus 15 minutes means a bedtime of 21:45; five cycles means 23:15.",
+    },
+    faqs: [
+      { question: "How long is one sleep cycle really?", answer: "On average a full cycle through light sleep, deep sleep and REM lasts about 90 minutes, which is why this calculator uses that figure. In reality cycles range from roughly 70 to 120 minutes and change across the night, with deep sleep dominating early cycles and REM lengthening toward morning. Because 90 minutes is an average, the suggested bedtimes are close approximations rather than exact, so use how refreshed you feel on waking to fine-tune them." },
+      { question: "Why do I feel groggy even after enough sleep?", answer: "That heavy, foggy feeling is sleep inertia, and it happens when an alarm wakes you out of deep, slow-wave sleep rather than from a lighter stage. Timing your wake-up near the end of a cycle, in lighter sleep, reduces it, which is the whole idea behind this calculator. Inconsistent bedtimes, alcohol, sleep disorders and simply not getting enough total sleep also worsen morning grogginess, so total sleep and regularity matter alongside cycle timing." },
+      { question: "Is it better to sleep more cycles or a full night?", answer: "Total sleep still matters most; cycle timing is a refinement, not a replacement for adequate sleep. Most adults need seven to nine hours, roughly five to six cycles. If forced to choose, do not sacrifice a whole cycle just to hit a round number, because chronic short sleep harms health more than occasional mistimed waking. Aim first for enough sleep, then use cycle timing to pick which bedtime within that healthy range feels best." },
+      { question: "Does the 15 minutes to fall asleep apply to me?", answer: "It is an average; healthy sleep onset typically takes 10 to 20 minutes. If you routinely drop off faster or slower, mentally adjust the suggested bedtimes accordingly. Falling asleep in under five minutes can actually signal significant sleep deprivation, while regularly taking longer than 30 minutes may point to insomnia or too much stimulation before bed. Consistent difficulty falling asleep is worth discussing with a healthcare professional rather than simply shifting bedtime." },
+      { question: "How can I improve my sleep quality overall?", answer: "Keep a consistent sleep and wake schedule, even at weekends, to stabilise your body clock. Make the bedroom dark, quiet and cool, avoid screens, caffeine and heavy meals in the hours before bed, and get daylight exposure in the morning. Regular exercise helps, though not too close to bedtime. A wind-down routine signals your body to prepare for sleep. These habits improve both how quickly you fall asleep and how restorative each cycle is." },
+    ],
+    relatedCalculators: ["bmr-calculator", "tdee-calculator", "calorie-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+    sensitivity: "health",
+    formulaSource: "Sleep Foundation (sleep cycle architecture, ~90 minutes)",
+    sourceUrl: "https://www.sleepfoundation.org/stages-of-sleep",
+  },
+  {
+    id: "macros-by-goal",
+    slug: "macros-by-goal-calculator",
+    category: "Health",
+    categorySlug: "health",
+    title: "Macros by Goal Calculator",
+    shortDescription: "Split a calorie target into protein, carbs and fat.",
+    seoTitle: "Macros by Goal Calculator — Protein, Carbs & Fat Split",
+    metaDescription:
+      "Free macros by goal calculator. Split any daily calorie target into grams of protein, carbs and fat for balanced, low-carb or high-protein goals.",
+    primaryKeyword: "macros by goal calculator",
+    secondaryKeywords: ["macro split calculator", "protein carb fat calculator", "macronutrient ratio calculator"],
+    fields: [
+      { id: "calories", label: "Daily calorie target", type: "number", unit: "kcal", placeholder: "2000", required: true, span: 1, min: 0 },
+      {
+        id: "goal", label: "Goal", type: "select", required: true, span: 1, defaultValue: "balanced",
+        options: [
+          { value: "balanced", label: "Balanced (30/40/30)" },
+          { value: "lowcarb", label: "Low carb (40/20/40)" },
+          { value: "highprotein", label: "High protein (40/35/25)" },
+        ],
+      },
+    ],
+    results: [
+      { id: "proteinGrams", label: "Protein", format: "number", decimals: 0, unit: "g", isPrimary: true },
+      { id: "carbsGrams", label: "Carbohydrates", format: "number", decimals: 0, unit: "g", isPrimary: false },
+      { id: "fatGrams", label: "Fat", format: "number", decimals: 0, unit: "g", isPrimary: false },
+    ],
+    formula: "Grams = calories × ratio ÷ energy per gram (protein & carbs 4 kcal/g, fat 9 kcal/g)",
+    explanation:
+      "Once you know how many calories to eat each day, the next question is how to divide them between protein, carbohydrate and fat, the three macronutrients that supply energy. A macros by goal calculator answers that by splitting your chosen calorie target into grams of each macro according to a ratio suited to your objective. This tool offers three common templates: a balanced 30/40/30 split that works well for general health and maintenance, a low-carb 40/20/40 split favoured for fat loss and appetite control, and a high-protein 40/35/25 split geared toward building or preserving muscle. Because protein and carbohydrate each provide about 4 calories per gram while fat provides about 9, the calculator converts each macro's slice of your calories into grams you can actually track. Getting your macros right, not just your total calories, influences body composition, satiety, energy levels and training performance. Adequate protein preserves muscle during a calorie deficit and keeps you full; carbohydrates fuel intense exercise and brain function; and fats support hormones and the absorption of fat-soluble vitamins. A macros by goal calculator turns an abstract ratio into a concrete daily plan of grams, which is far easier to hit using a food-tracking app or nutrition labels. Ratios are starting points, not rigid rules, so adjust based on how you feel, perform and progress. Whatever the split, prioritising whole, minimally processed foods and enough protein tends to matter more than chasing perfect percentages.",
+    formulaExplanation:
+      "Each goal assigns a percentage of total calories to protein, carbohydrate and fat. The calculator multiplies your calorie target by each percentage to find the calories for that macro, then divides by the macro's energy density to convert to grams. Protein and carbohydrate yield about 4 calories per gram, so their calories are divided by 4, while fat yields about 9 calories per gram and is divided by 9, giving the grams to eat daily.",
+    example: {
+      inputs: { calories: 2000, goal: "balanced" },
+      explanation: "At 2000 kcal balanced: protein 600 kcal ÷ 4 = 150 g, carbs 800 ÷ 4 = 200 g, fat 600 ÷ 9 ≈ 67 g.",
+    },
+    faqs: [
+      { question: "Which macro split should I choose?", answer: "It depends on your goal and preferences. A balanced 30/40/30 split suits general health and is easy to sustain. Low carb, around 40/20/40, can help with fat loss and blood-sugar control and suits people who feel better on fewer carbs. High protein, roughly 40/35/25, favours muscle building and preservation, especially during a deficit or heavy training. There is no single best ratio, so pick the one matching your objective and adjust based on results and how you feel." },
+      { question: "How much protein do I really need?", answer: "General health needs are around 0.8 grams per kilogram of body weight, but active people and those losing weight benefit from much more, commonly 1.6 to 2.2 grams per kilogram, to build or preserve muscle and stay full. The high-protein and low-carb templates here push protein higher for that reason. If a percentage-based split gives you far less protein than these body-weight targets, lean toward the higher-protein option or raise protein directly." },
+      { question: "Why does fat have 9 calories per gram?", answer: "Fat is the most energy-dense macronutrient because of its chemical structure: its long chains of carbon and hydrogen store more energy per gram than the partially oxygenated structures of carbohydrate and protein, which each provide about 4 calories per gram. This is why small amounts of fat add up quickly in calorie terms, and why the calculator divides fat calories by 9 rather than 4 when converting to grams. Alcohol, for reference, sits between them at about 7." },
+      { question: "Do macros matter more than total calories?", answer: "For weight change, total calories are the primary driver, but macros strongly affect the quality of that change and how you feel. The same calories with adequate protein preserve more muscle and control hunger better than a low-protein diet. Carb and fat balance influences energy, training and satiety. So think of it as a hierarchy: set calories first for weight direction, then tune macros, especially protein, for body composition, performance and adherence." },
+      { question: "Should the grams be exact every day?", answer: "No, precision to the gram is unnecessary and unrealistic. Aim to land within roughly five to ten grams of your protein target and in the general vicinity for carbs and fat, averaged across the week rather than obsessing over a single day. Consistency and hitting protein reliably matter far more than perfection. Use these figures as flexible daily targets, and let real-world results over several weeks guide any adjustments to the ratio or totals." },
+    ],
+    relatedCalculators: ["macro-calculator", "protein-calculator", "tdee-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+    sensitivity: "health",
+    formulaSource: "USDA / Institute of Medicine Acceptable Macronutrient Distribution Ranges",
+    sourceUrl: "https://www.nal.usda.gov/human-nutrition-and-food-safety/dietary-guidance",
+  },
+  {
+    id: "bmi-prime",
+    slug: "bmi-prime-calculator",
+    category: "Health",
+    categorySlug: "health",
+    title: "BMI Prime Calculator",
+    shortDescription: "See your BMI as a ratio of the upper healthy limit.",
+    seoTitle: "BMI Prime Calculator — BMI Relative to 25",
+    metaDescription:
+      "Free BMI Prime calculator. Express your body mass index as a ratio of the upper healthy limit of 25 to see at a glance how far above or below it you are.",
+    primaryKeyword: "bmi prime calculator",
+    secondaryKeywords: ["bmi prime", "bmi ratio calculator", "bmi relative to 25"],
+    fields: [
+      { id: "weightKg", label: "Weight", type: "number", unit: "kg", placeholder: "70", required: true, span: 1, min: 0 },
+      { id: "heightCm", label: "Height", type: "number", unit: "cm", placeholder: "175", required: true, span: 1, min: 0 },
+    ],
+    results: [
+      { id: "bmiPrime", label: "BMI Prime", format: "number", decimals: 2, isPrimary: true },
+      { id: "bmi", label: "Body mass index", format: "number", decimals: 1, unit: "kg/m²", isPrimary: false },
+    ],
+    formula: "BMI = weight ÷ height²(m); BMI Prime = BMI ÷ 25",
+    explanation:
+      "BMI Prime is a simple refinement of the familiar body mass index that expresses your BMI as a ratio of the upper limit of the healthy range, which the World Health Organization sets at 25. A BMI Prime calculator first works out your ordinary BMI by dividing weight in kilograms by height in metres squared, then divides that by 25 to produce a dimensionless number centred on 1. The appeal is instant interpretability: a BMI Prime of exactly 1.0 means you sit right at the top of the healthy range, below 1.0 means you are within or under it, and above 1.0 tells you directly how far into overweight or obese territory you fall. A value of 1.2, for instance, means your BMI is 20 percent above the healthy ceiling. This makes BMI Prime especially handy for comparing individuals or populations at a glance and for communicating degree of overweight as a proportion rather than an abstract index. A BMI Prime calculator carries all the same conveniences and the same limitations as standard BMI: it uses only height and weight, so it cannot distinguish muscle from fat or show where fat is stored, and it can misclassify very muscular or older individuals. Read it alongside measures like waist-to-height ratio and body-fat percentage for a fuller picture. Still, as a quick, intuitive rescaling of BMI, it offers an easy way to see exactly where you stand relative to the healthy threshold.",
+    formulaExplanation:
+      "BMI Prime divides your body mass index by 25, the upper boundary of the WHO healthy-weight range, turning BMI into a ratio centred on 1. Because 25 is the reference, a BMI Prime of 1 marks the top of healthy, and any value directly states the proportional distance from that line: 0.9 is ten percent below, 1.3 is thirty percent above. The underlying BMI is weight in kilograms over height in metres squared.",
+    example: {
+      inputs: { weightKg: 70, heightCm: 175 },
+      explanation: "BMI = 70 ÷ 1.75² = 22.9; BMI Prime = 22.9 ÷ 25 ≈ 0.91, meaning about 9% below the healthy ceiling.",
+    },
+    faqs: [
+      { question: "What does my BMI Prime number mean?", answer: "BMI Prime is your BMI divided by 25, so 1.0 sits exactly at the top of the healthy range. Below 0.74 corresponds to underweight, 0.74 to 1.0 is healthy, 1.0 to 1.2 is overweight, and above 1.2 is obese. The value tells you your proportional distance from the healthy ceiling: 1.15 means your BMI is 15 percent above 25. It simply rescales BMI to make that relationship immediately clear." },
+      { question: "How is BMI Prime better than plain BMI?", answer: "It is not more accurate; it presents the same information more intuitively. By centring on 1.0, BMI Prime lets you instantly see how far above or below the healthy limit you are as a percentage, which is easier to grasp and to compare across people than a raw BMI figure. It is particularly useful in research and public health for expressing degree of overweight proportionally. For an individual, though, it shares every limitation of ordinary BMI." },
+      { question: "What are the BMI Prime categories?", answer: "Using the standard WHO cutoffs rescaled to 25: underweight is below 0.74, healthy weight is 0.74 up to 1.00, overweight is 1.00 to 1.20, and obese is 1.20 and above, with obesity subclasses continuing higher. These mirror the familiar BMI thresholds of 18.5, 25, 30 and beyond, just divided by 25. So a BMI of 30, the obesity threshold, equals a BMI Prime of 1.2 exactly." },
+      { question: "Does BMI Prime work for athletes?", answer: "It has the same weakness as BMI: it cannot tell muscle from fat. A very muscular athlete may have a BMI Prime above 1.0 despite low body fat, because dense muscle is heavy. Likewise, older people who have lost muscle may appear healthy by BMI Prime while carrying excess fat. For muscular or older individuals, pair it with body-fat percentage, the tape method or waist measurements to avoid misclassification based on weight alone." },
+      { question: "Should I use BMI Prime instead of BMI?", answer: "Use whichever you find clearer; they carry identical information. BMI is more widely recognised and its numbers are what most health guidance and clinicians reference. BMI Prime is a neat alternative when you want to see your position as a simple ratio of the healthy limit, or compare degrees of overweight proportionally. Many people calculate both. Whichever you choose, remember it is a screening indicator, not a diagnosis, and best read alongside other health measures." },
+    ],
+    relatedCalculators: ["bmi-calculator", "ideal-weight-calculator", "body-fat-calculator"],
+    status: "active",
+    lastReviewed: "2026-08-30",
+    sensitivity: "health",
+    formulaSource: "World Health Organization BMI classification (healthy upper limit 25)",
+    sourceUrl: "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight",
+  },
+];

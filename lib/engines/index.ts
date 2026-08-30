@@ -17,6 +17,11 @@ import { logisticsWave3Engines } from "./logistics-wave3";
 import { financeMoreEngines } from "./finance-more-wave3";
 import { mathMoreEngines } from "./math-more-wave3";
 import { everydayMoreEngines } from "./everyday-more-wave3";
+import { financeR4Engines } from "./finance-r4-wave3";
+import { healthR4Engines } from "./health-r4-wave3";
+import { mathR4Engines } from "./math-r4-wave3";
+import { convertersR4Engines } from "./converters-r4-wave3";
+import { constructionR4Engines } from "./construction-r4-wave3";
 
 /* ------------------------------------------------------------------ *
  * Pure calculation engines. No formatting, no display concerns.
@@ -448,6 +453,11 @@ export const engines: Record<string, ComputeFn> = {
   ...logisticsWave3Engines,
   ...financeMoreEngines,
   ...everydayMoreEngines,
+  ...financeR4Engines,
+  ...healthR4Engines,
+  ...mathR4Engines,
+  ...convertersR4Engines,
+  ...constructionR4Engines,
 };
 
 export function getEngine(slug: string): ComputeFn | undefined {
