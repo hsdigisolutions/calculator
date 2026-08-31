@@ -57,6 +57,34 @@ export const datetimeR5Calculators: CalculatorDefinition[] = [
     },
     formulaExplanation:
       "The start date is converted to a single continuous count of days (via a UTC timestamp), the offset is added, and the total is converted back to a calendar date. Because a running day index has no notion of month length, every 30-day and 31-day month and every leap day is absorbed automatically. The weekday comes from the result's position in the seven-day cycle, and negative offsets simply subtract, so counting backwards needs no special case.",
+    slugEs: "calculadora-de-sumar-dias",
+    titleEs: "Calculadora de Sumar Días",
+    shortDescriptionEs: "Suma o resta días a una fecha.",
+    seoTitleEs: "Calculadora de Sumar Días — Sumar o Restar Días a una Fecha",
+    metaDescriptionEs:
+      "Calculadora gratuita para sumar días. Suma o resta cualquier número de días a una fecha inicial y obtén la fecha resultante y el día de la semana.",
+    primaryKeywordEs: "calculadora de sumar días",
+    secondaryKeywordsEs: [
+      "sumar días a una fecha",
+      "fecha más días",
+      "restar días a una fecha",
+    ],
+    formulaExplanationEs:
+      "La fecha inicial se convierte en un recuento continuo de días (mediante una marca de tiempo UTC), se suma el desplazamiento y el total se vuelve a convertir en una fecha del calendario. Como un índice de días corrido no tiene noción de la longitud de los meses, cada mes de 30 y 31 días y cada día bisiesto se absorbe de forma automática. El día de la semana surge de la posición del resultado en el ciclo de siete días, y los desplazamientos negativos simplemente restan, de modo que contar hacia atrás no requiere ningún caso especial.",
+    explanationEs:
+      "Una calculadora de sumar días toma una fecha de partida y un número de días y devuelve la fecha que cae ese número de días después, junto con el día de la semana en que ocurre. Si introduces un número negativo, cuenta hacia atrás, por lo que la misma herramienta responde tanto a «qué fecha será dentro de 45 días» como a «qué fecha fue hace 45 días». Funciona a partir de un recuento continuo de días en lugar de mover el campo del día del mes, así que salta con limpieza sobre los finales de mes y los límites de año sin que tengas que seguir cuántos días tiene cada mes.\n\nEsto importa siempre que un plazo se define como un desplazamiento. Condiciones de pago a 30 días, una ventana de devolución de 90 días, un derecho de cancelación de 14 días, un periodo de incubación o un hito de proyecto expresado como «inicio más 60 días» se reducen a sumar días a una fecha conocida. Hacerlo a mano a través de febrero o de un fin de año es justo donde aparecen los errores de un día y de mes equivocado, y un solo día mal contado puede anular una devolución o incumplir una presentación.\n\nEl resultado del día de la semana suele ser tan útil como la propia fecha, ya que un plazo que cae en sábado o domingo normalmente se traslada al siguiente día hábil. Administradores de contratos, planificadores logísticos, equipos de recursos humanos y cualquiera que cuente hacia un evento usan una calculadora de sumar días para convertir un desplazamiento en una fecha firme del calendario.",
+    exampleEs: {
+      inputs: { startDate: "2026-01-01", days: "10" },
+      explanation:
+        "Diez días después del 1 de enero de 2026 es el 11 de enero de 2026, que es domingo.",
+    },
+    faqsEs: [
+      { question: "¿Cómo resto días en lugar de sumarlos?", answer: "Introduce el número de días como un valor negativo. Al escribir -45 en el campo de días, se devuelve la fecha 45 días antes de la fecha inicial, junto con su día de la semana. La calculadora usa el mismo recuento continuo de días para ambas direcciones, así que restar a través del inicio de un mes o de un límite de año se maneja exactamente igual que sumar, sin ningún modo aparte que activar." },
+      { question: "¿Cuenta la fecha inicial como el día uno?", answer: "No. La fecha inicial es el día cero, así que sumar un día da la fecha del calendario siguiente, no la fecha inicial en sí. Si tu regla cuenta la fecha inicial de forma inclusiva, por ejemplo una garantía que corre desde el día de compra incluido, resta uno al número de días que introduces. Si conviene contar de forma inclusiva depende de la redacción de tu plazo o contrato." },
+      { question: "¿Es exacto el día de la semana en años bisiestos?", answer: "Sí. El resultado se deriva de un recuento continuo de días que ya incluye cualquier 29 de febrero del intervalo, así que el día de la semana refleja la posición real en el ciclo de siete días. No hay ningún ajuste de año bisiesto que aplicar. Un intervalo que cruce un día bisiesto desplazará el día de la semana un día de forma automática, lo cual es una razón por la que el conteo manual a menudo cae en el día equivocado." },
+      { question: "¿Omite fines de semana o festivos?", answer: "No. Esta calculadora suma días naturales, así que los fines de semana y los festivos se incluyen en el recuento y el resultado puede caer en cualquier día de la semana. Si necesitas sumar solo días hábiles, usa una herramienta de días laborables. El día de la semana ayuda aquí: si tu plazo cae en sábado o domingo, puedes adelantarlo tú mismo al siguiente día hábil." },
+      { question: "¿Por qué se calcula la fecha en UTC?", answer: "Trabajar en el calendario UTC mantiene el resultado estable sin importar la zona horaria o las reglas de horario de verano de quien use la calculadora. Como solo intervienen días naturales completos, no hay componente de hora que desplazar, así que la fecha que obtienes es la misma en todas partes. Ese determinismo es lo que permite que el mismo desplazamiento produzca la misma respuesta para todos los usuarios." },
+    ],
     faqs: [
       { question: "How do I subtract days instead of adding them?", answer: "Enter the number of days as a negative value. Typing -45 in the days field returns the date 45 days before the start date, along with its weekday. The calculator uses the same continuous day count for both directions, so subtracting across a month start or a year boundary is handled exactly the same way as adding, with no separate mode to switch on." },
       { question: "Does it count the start date as day one?", answer: "No. The start date is day zero, so adding one day gives the following calendar date, not the start date itself. If your rule counts the start date inclusively, for example a warranty that runs from and including the purchase day, subtract one from the number of days you enter. Whether to count inclusively depends on the wording of your deadline or contract." },
@@ -101,6 +129,34 @@ export const datetimeR5Calculators: CalculatorDefinition[] = [
     },
     formulaExplanation:
       "The date is shifted to the Thursday of its own Monday–Sunday week, because ISO ties each week to its Thursday. The number of whole weeks between that Thursday and the first Thursday of its year, plus one, is the ISO week number. Anchoring on Thursday is what makes 1–3 January sometimes fall in the previous year's week 52 or 53, and 29–31 December sometimes fall in week 1 of the next year. Day of the year is the date minus 1 January.",
+    slugEs: "calculadora-de-numero-de-semana",
+    titleEs: "Calculadora de Número de Semana",
+    shortDescriptionEs: "Encuentra el número de semana ISO de una fecha.",
+    seoTitleEs: "Calculadora de Número de Semana — Semana ISO-8601 del Año",
+    metaDescriptionEs:
+      "Calculadora gratuita de número de semana. Encuentra el número de semana ISO-8601 y el día del año de cualquier fecha.",
+    primaryKeywordEs: "calculadora de número de semana",
+    secondaryKeywordsEs: [
+      "número de semana iso",
+      "en qué semana estamos",
+      "calculadora del día del año",
+    ],
+    formulaExplanationEs:
+      "La fecha se desplaza al jueves de su propia semana de lunes a domingo, porque la norma ISO vincula cada semana a su jueves. El número de semanas completas entre ese jueves y el primer jueves de su año, más uno, es el número de semana ISO. Anclar en el jueves es lo que hace que del 1 al 3 de enero a veces caigan en la semana 52 o 53 del año anterior, y que del 29 al 31 de diciembre a veces caigan en la semana 1 del año siguiente. El día del año es la fecha menos el 1 de enero.",
+    explanationEs:
+      "Una calculadora de número de semana te indica en qué semana numerada del año cae una fecha según la norma ISO-8601, y también cuántos días del año han transcurrido hasta esa fecha. Las semanas ISO van de lunes a domingo, y la semana 1 se define como la semana que contiene el primer jueves del año, que es la misma que contiene el 4 de enero. Esa definición es lo que significan las empresas, los sistemas ERP y los calendarios cuando hablan de «semana 32» o «CW14».\n\nEsto importa porque los números de semana son una moneda común de planificación, sobre todo en Europa y en la industria, la logística y el comercio minorista. Los programas de producción, las ventanas de envío, los planes de sprint y los calendarios financieros se citan a menudo por número de semana en lugar de por fecha, y todos los implicados deben coincidir en la misma numeración. La regla ISO elimina la ambigüedad sobre a qué semana pertenece una fecha cercana a un límite de año, donde el conteo informal tiende a discrepar.\n\nLa cifra del día del año, de 1 a 365 o 366, es la fecha ordinal y resulta útil para registros, numeración de secuencias y estimaciones rápidas de intervalos. Como la definición ISO se ancla en los jueves, los primeros días de enero pueden pertenecer a la semana 52 o 53 del año anterior, y los últimos días de diciembre a la semana 1 del siguiente, algo que una calculadora de número de semana resuelve correctamente para que nunca etiquetes mal una semana que cruza el año.",
+    exampleEs: {
+      inputs: { date: "2026-06-15" },
+      explanation:
+        "El 15 de junio de 2026 es un lunes de la semana ISO 25, y es el día 166 de 2026.",
+    },
+    faqsEs: [
+      { question: "¿Cuál es la regla de numeración de semanas ISO-8601?", answer: "Según la norma ISO-8601, las semanas empiezan en lunes y la semana 1 es la que contiene el primer jueves del año, equivalentemente la que contiene el 4 de enero. Esto significa que los primeros días naturales del año pueden pertenecer a la última semana del año anterior, y un año tiene 52 o 53 semanas. La regla se usa en toda Europa y en la mayoría de sistemas empresariales y de software para referencias de semana sin ambigüedad." },
+      { question: "¿Por qué el 1 de enero puede estar en la semana 52 o 53?", answer: "Como la semana 1 ISO debe contener el primer jueves, los días de principios de enero que caen antes del lunes de ese jueves pertenecen a la última semana del año ISO anterior. Por ejemplo, si el 1 de enero es viernes, se sitúa en la última semana del año saliente. Esto es intencionado: mantiene cada semana ISO con siete días completos y vinculada a un único año dominante." },
+      { question: "¿Cuántas semanas tiene un año?", answer: "Un año ISO tiene 53 semanas cuando empieza en jueves, o cuando es bisiesto y empieza en miércoles; de lo contrario tiene 52. La mayoría de los años tienen 52 semanas. Los años de 53 semanas, como 2026, importan para nóminas y calendarios minoristas que presupuestan por semana, porque incluyen un periodo de pago o informe adicional en comparación con un año de 52 semanas." },
+      { question: "¿Para qué sirve el día del año?", answer: "El día del año, también llamado fecha ordinal, numera cada día desde el 1 el 1 de enero hasta el 365 o 366 el 31 de diciembre. Es útil en registros, nombres de archivo, numeración por lotes y astronomía, y para estimar rápidamente el intervalo entre dos fechas del mismo año restando un ordinal del otro. Complementa el número de semana cuando necesitas un único índice corrido." },
+      { question: "¿La calculadora usa domingo o lunes como primer día?", answer: "Usa el lunes, siguiendo la norma ISO-8601, así que una semana va de lunes a domingo. Esto difiere de la convención estadounidense, donde las semanas suelen mostrarse empezando en domingo y numeradas de otra forma. Si tu organización usa un inicio en domingo o una regla distinta para la semana 1, el número ISO aquí puede diferir en uno cerca de los bordes del año, así que confirma qué estándar esperan tus sistemas." },
+    ],
     faqs: [
       { question: "What is the ISO-8601 week numbering rule?", answer: "Under ISO-8601, weeks start on Monday and week 1 is the week that contains the year's first Thursday, equivalently the week containing 4 January. This means the year's first calendar days can belong to the last week of the previous year, and a year has either 52 or 53 weeks. The rule is used across Europe and by most business and software systems for unambiguous week references." },
       { question: "Why can 1 January be in week 52 or 53?", answer: "Because ISO week 1 must contain the first Thursday, any early-January days that fall before that Thursday's Monday belong to the final week of the previous ISO year. For example, if 1 January is a Friday, it sits in the last week of the outgoing year. This is intentional: it keeps every ISO week a full seven days and tied to a single dominant year." },
@@ -145,6 +201,34 @@ export const datetimeR5Calculators: CalculatorDefinition[] = [
     },
     formulaExplanation:
       "The date is converted to a continuous count of days on the proleptic Gregorian calendar, and the remainder of that count within a seven-day cycle gives the weekday. Because the day index already contains every leap day, no separate correction is needed, and the answer is exact for dates centuries in the past or future. The weekend flag simply checks whether the resulting weekday is Saturday or Sunday, the standard Western non-working days.",
+    slugEs: "calculadora-de-dia-de-la-semana",
+    titleEs: "Calculadora de Día de la Semana",
+    shortDescriptionEs: "Averigua en qué día de la semana cae una fecha.",
+    seoTitleEs: "Calculadora de Día de la Semana — Qué Día Fue una Fecha",
+    metaDescriptionEs:
+      "Calculadora gratuita de día de la semana. Averigua en qué día cae cualquier fecha pasada o futura y si es fin de semana.",
+    primaryKeywordEs: "calculadora de día de la semana",
+    secondaryKeywordsEs: [
+      "qué día nací",
+      "día de la semana de una fecha",
+      "buscador de día",
+    ],
+    formulaExplanationEs:
+      "La fecha se convierte en un recuento continuo de días en el calendario gregoriano proléptico, y el resto de ese recuento dentro de un ciclo de siete días da el día de la semana. Como el índice de días ya contiene cada día bisiesto, no se necesita ninguna corrección aparte, y la respuesta es exacta para fechas de siglos en el pasado o el futuro. La marca de fin de semana simplemente comprueba si el día resultante es sábado o domingo, los días no laborables occidentales estándar.",
+    explanationEs:
+      "Una calculadora de día de la semana nombra el día en que cae cualquier fecha, pasada o futura, y te dice si esa fecha es fin de semana. Le das una fecha y devuelve de lunes a domingo, así que puedes responder «qué día nací», «en qué día cae el plazo» o «ese aniversario cae en fin de semana» sin hojear un calendario. Funciona por completo a partir de la posición de la fecha en el ciclo repetido de siete días del calendario gregoriano.\n\nSaber el día de la semana cambia cómo se trata una fecha. Un pago o una presentación que vence en sábado normalmente se traslada al siguiente día hábil, un evento en viernes se lee muy distinto del mismo evento en martes, y la planificación de turnos y entregas depende de qué días son laborables. Calcular el día de la semana a mano implica contar desde una referencia conocida y ajustar por los años bisiestos, lo cual es engorroso y propenso a errores en intervalos largos.\n\nEl cálculo es exacto porque asigna la fecha a un recuento continuo de días y lee su resto dentro de la semana de siete días, así que los días bisiestos ya están contabilizados. La marca de fin de semana usa la convención estándar de sábado y domingo. Genealogistas que confirman un día de nacimiento, organizadores de eventos que eligen fechas y cualquiera que compruebe si un plazo cae en día hábil recurren a una calculadora de día de la semana para una respuesta instantánea y fiable.",
+    exampleEs: {
+      inputs: { date: "2026-07-04" },
+      explanation:
+        "El 4 de julio de 2026 cae en sábado, que la calculadora marca como fin de semana.",
+    },
+    faqsEs: [
+      { question: "¿En qué día de la semana nací?", answer: "Introduce tu fecha de nacimiento y la calculadora devuelve el día exacto de la semana, de lunes a domingo. Funciona para cualquier fecha del calendario gregoriano, incluidas fechas de hace más de un siglo, porque calcula a partir de un recuento continuo de días que incluye cada día bisiesto. Es el mismo método que usan los almanaques, así que la respuesta del día de nacimiento coincide con los registros históricos de la era gregoriana." },
+      { question: "¿Qué días cuentan como fin de semana?", answer: "La calculadora usa el sábado y el domingo como fin de semana, siguiendo la semana laboral occidental estándar. Algunas regiones, en particular en Oriente Medio y partes de Asia, tratan el viernes y el sábado o el viernes y el domingo como fin de semana. Si tu contexto usa otra convención, lee el día nombrado y aplica tu propia regla, ya que el nombre del día es universal aunque la definición de fin de semana difiera." },
+      { question: "¿Funciona para fechas futuras?", answer: "Sí. El ciclo de siete días y las reglas gregorianas de años bisiestos están totalmente definidos hacia el futuro, así que el día de la semana de cualquier fecha próxima es exacto, no una estimación. Esto lo hace fiable para planificar eventos, plazos y programas con años de antelación. La única salvedad es que los calendarios civiles podrían en principio reformarse, pero no se prevé ningún cambio así, por lo que los días futuros calculados de este modo son fiables." },
+      { question: "¿Es exacto para fechas muy antiguas?", answer: "Es exacto en el calendario gregoriano proléptico, que extiende las reglas actuales hacia atrás. Para fechas anteriores a la adopción del calendario gregoriano por un país en 1582 o después, los registros históricos pueden haber usado el calendario juliano, así que el día de la semana que la gente registró entonces podría diferir. Para fechas modernas en cualquier país que haya adoptado el sistema gregoriano, el resultado coincide con el calendario de uso cotidiano." },
+      { question: "¿Por qué importa el día de la semana para los plazos?", answer: "Muchas reglas trasladan una fecha de vencimiento que cae en fin de semana al siguiente día hábil, así que saber el día de la semana te dice si aplica un ajuste. Un pago de impuestos, una presentación judicial o una factura que vence en sábado suele vencer efectivamente el lunes siguiente. Comprobar primero el día de la semana te permite planificar en torno a estos traslados en lugar de que te sorprenda un plazo que se desplaza sin aviso." },
+    ],
     faqs: [
       { question: "What day of the week was I born on?", answer: "Enter your date of birth and the calculator returns the exact weekday, from Monday to Sunday. It works for any date on the Gregorian calendar, including dates well over a century ago, because it computes from a continuous day count that includes every leap day. This is the same method almanacs use, so the birth-day answer it gives matches historical records for the Gregorian era." },
       { question: "Which days count as the weekend?", answer: "The calculator uses Saturday and Sunday as the weekend, following the standard Western working week. Some regions, particularly in the Middle East and parts of Asia, treat Friday and Saturday or Friday and Sunday as the weekend. If your context uses a different convention, read the named weekday and apply your own rule, since the day name itself is universal even where the weekend definition differs." },
@@ -199,6 +283,34 @@ export const datetimeR5Calculators: CalculatorDefinition[] = [
     },
     formulaExplanation:
       "A year qualifies as a leap year when it is divisible by 4, with one exception: years divisible by 100 are not leap years unless they are also divisible by 400. That layered test makes the average calendar year 365.2425 days, matching the solar year to within half a minute. A leap year therefore has 366 days and a common year 365, and the next leap year is found by stepping forward until the same test passes.",
+    slugEs: "calculadora-de-ano-bisiesto",
+    titleEs: "Calculadora de Año Bisiesto",
+    shortDescriptionEs: "Comprueba si un año es bisiesto.",
+    seoTitleEs: "Calculadora de Año Bisiesto — ¿Es un Año Bisiesto?",
+    metaDescriptionEs:
+      "Calculadora gratuita de año bisiesto. Comprueba si un año es bisiesto, cuántos días tiene y cuál es el próximo año bisiesto.",
+    primaryKeywordEs: "calculadora de año bisiesto",
+    secondaryKeywordsEs: [
+      "es un año bisiesto",
+      "verificador de año bisiesto",
+      "días de un año",
+    ],
+    formulaExplanationEs:
+      "Un año es bisiesto cuando es divisible entre 4, con una excepción: los años divisibles entre 100 no son bisiestos a menos que también sean divisibles entre 400. Esa prueba en capas hace que el año medio del calendario sea de 365,2425 días, coincidiendo con el año solar con un margen de menos de medio minuto. Un año bisiesto tiene por tanto 366 días y uno común 365, y el próximo año bisiesto se halla avanzando hasta que se cumpla la misma prueba.",
+    explanationEs:
+      "Una calculadora de año bisiesto comprueba si un año dado tiene un día adicional, el 29 de febrero, te indica si ese año tiene 365 o 366 días y señala el próximo año bisiesto. Los años bisiestos existen para mantener el calendario alineado con la órbita de la Tierra, que dura unos 365,2422 días, de modo que un día extra aproximadamente cada cuatro años impide que las estaciones se desplacen respecto a las fechas con el tiempo.\n\nLa regla no es simplemente «cada cuatro años». Un año es bisiesto si es divisible entre cuatro, pero los años seculares son una excepción: solo son bisiestos cuando además son divisibles entre 400. Así, el año 2000 fue bisiesto mientras que 1700, 1800 y 1900 no lo fueron, y 2100 tampoco lo será. Esta corrección de 400 años ajusta con precisión el año medio del calendario a 365,2425 días, muy cercano al año solar real, y es exactamente la sutileza que la gente pasa por alto al contar a mano.\n\nSaber si un año es bisiesto importa a cualquiera que calcule duraciones, intereses diarios, programas de proyecto o cumpleaños del 29 de febrero. Una calculadora de año bisiesto resuelve la cuestión al instante y, al ofrecer también el recuento de días y el próximo año bisiesto, ayuda con la planificación que debe tener en cuenta el ocasional año de 366 días en lugar de suponer que todos los años tienen la misma duración.",
+    exampleEs: {
+      inputs: { year: "2026" },
+      explanation:
+        "2026 no es un año bisiesto, así que tiene 365 días; el próximo año bisiesto es 2028.",
+    },
+    faqsEs: [
+      { question: "¿Cómo sé si un año es bisiesto?", answer: "Comprueba tres condiciones en orden: si el año no es divisible entre 4 es común; si es divisible entre 4 pero no entre 100 es bisiesto; si es divisible entre 100 es bisiesto solo cuando además es divisible entre 400. Así, 2024 es bisiesto, 1900 no lo es y 2000 sí. La calculadora aplica esta prueba por ti y expresa el resultado con claridad." },
+      { question: "¿Por qué algunos años seculares no son bisiestos?", answer: "Una regla simple de cuatro años corregiría de más, haciendo el año del calendario algo demasiado largo y dejando que las estaciones se desplacen a lo largo de los siglos. Omitir el día bisiesto en los años seculares no divisibles entre 400 elimina tres días bisiestos cada 400 años, ajustando el año medio a 365,2425 días. Por eso 1700, 1800 y 1900 fueron años comunes mientras que 2000 conservó su 29 de febrero, y 2100 volverá a ser un año común." },
+      { question: "¿Cuántos días tiene un año bisiesto?", answer: "Un año bisiesto tiene 366 días, uno más que los 365 de un año común, con el día extra añadido como 29 de febrero. Esto afecta a todo lo medido en días a lo largo del año: el interés diario se acumula un día más, los salarios anuales se reparten en un día más, y un intervalo de un año completo entre dos fechas próximas al día bisiesto abarca 366 días. La calculadora informa del recuento exacto de días del año que introduces." },
+      { question: "¿Qué pasa con los cumpleaños del 29 de febrero?", answer: "Las personas nacidas el 29 de febrero, a veces llamadas «bisiestas», tienen un cumpleaños real solo en años bisiestos. En años comunes suelen celebrarlo el 28 de febrero o el 1 de marzo, y las leyes difieren sobre qué fecha cuenta a efectos legales como la mayoría de edad. La calculadora puede indicarte qué años próximos contienen un 29 de febrero para que sepas cuándo cae de nuevo tu verdadero cumpleaños." },
+      { question: "¿Cuándo es el próximo año bisiesto?", answer: "La calculadora devuelve el próximo año bisiesto después del que introduces, avanzando hasta que un año supere la prueba de año bisiesto. Los años bisiestos suelen ocurrir cada cuatro años, así que desde 2026 el siguiente es 2028, pero la regla secular puede crear un intervalo de ocho años, como entre 1896 y 1904, porque 1900 se omitió. El resultado tiene en cuenta esa excepción de forma automática." },
+    ],
     faqs: [
       { question: "How do I know if a year is a leap year?", answer: "Check three conditions in order: if the year is not divisible by 4 it is common; if it is divisible by 4 but not by 100 it is a leap year; if it is divisible by 100 it is a leap year only when also divisible by 400. So 2024 is leap, 1900 is not, and 2000 is. The calculator applies this test for you and states the result plainly." },
       { question: "Why are some century years not leap years?", answer: "A plain four-year rule would over-correct, making the calendar year slightly too long and letting the seasons drift over centuries. Skipping the leap day in century years not divisible by 400 removes three leap days every 400 years, tuning the average year to 365.2425 days. That is why 1700, 1800 and 1900 were common years while 2000 kept its 29 February, and 2100 will again be a common year." },
@@ -247,6 +359,34 @@ export const datetimeR5Calculators: CalculatorDefinition[] = [
     },
     formulaExplanation:
       "Both clock times are converted to minutes since midnight and subtracted. If the result is negative the shift crossed midnight, so 1,440 minutes — one full day — is added to make it positive. The unpaid break in minutes is then subtracted, and the remaining minutes are divided by sixty for decimal hours and split into whole hours and minutes for the H:MM view. Working in a single minute unit avoids mixing base-60 clock fields.",
+    slugEs: "calculadora-de-horas-trabajadas",
+    titleEs: "Calculadora de Tarjeta de Horas",
+    shortDescriptionEs: "Calcula las horas trabajadas de un turno.",
+    seoTitleEs: "Calculadora de Tarjeta de Horas — Horas Trabajadas por Fichaje",
+    metaDescriptionEs:
+      "Calculadora gratuita de tarjeta de horas. Introduce la entrada, la salida y el descanso para obtener las horas trabajadas en decimal y en H:MM.",
+    primaryKeywordEs: "calculadora de horas trabajadas",
+    secondaryKeywordsEs: [
+      "calculadora de horas de trabajo",
+      "calculadora de hoja de horas",
+      "horas trabajadas por turno",
+    ],
+    formulaExplanationEs:
+      "Ambas horas de reloj se convierten en minutos desde la medianoche y se restan. Si el resultado es negativo, el turno cruzó la medianoche, así que se suman 1440 minutos —un día completo— para hacerlo positivo. Luego se resta el descanso no pagado en minutos, y los minutos restantes se dividen entre sesenta para las horas decimales y se separan en horas y minutos enteros para la vista H:MM. Trabajar en una única unidad de minutos evita mezclar campos de reloj en base 60.",
+    explanationEs:
+      "Una calculadora de tarjeta de horas convierte la hora de entrada y de salida de un turno, menos cualquier descanso no pagado, en las horas trabajadas, mostradas tanto como una cifra decimal para nóminas como en horas y minutos para leerlas. Convierte cada hora en minutos desde la medianoche, halla la diferencia y, cuando la salida es anterior a la entrada, suma un día completo para que un turno nocturno se mida correctamente en lugar de mostrar un intervalo negativo.\n\nEsta es la aritmética cotidiana detrás de los salarios, y los pequeños errores se acumulan rápido. Leer mal un turno que pasa de la medianoche, u olvidar descontar un descanso para comer, se traduce directamente en pagos de más o de menos y en disputas. Como la hora de reloj es de base 60 y no decimal, restar valores HH:MM directamente da respuestas erróneas, así que convertir primero a una única unidad de minutos es lo que mantiene el resultado honesto.\n\nLa salida en horas decimales es deliberadamente la cifra principal porque los sistemas de nómina y facturación multiplican las horas decimales por una tarifa horaria: 8 horas 30 minutos son 8,5, no 8,30. La vista H:MM está ahí para una comprobación humana. Trabajadores por turnos que verifican una nómina, dueños de pequeños negocios que gestionan la nómina y autónomos que registran horas facturables usan una calculadora de tarjeta de horas para convertir los fichajes en las horas pagadas exactas, un turno a la vez, con los descansos no pagados descontados.",
+    exampleEs: {
+      inputs: { clockIn: "09:00", clockOut: "17:30", breakMinutes: "30" },
+      explanation:
+        "De 09:00 a 17:30 son 8,5 horas; un descanso no pagado de 30 minutos deja 8,00 horas (8:00).",
+    },
+    faqsEs: [
+      { question: "¿Cómo introduzco las horas?", answer: "Usa el formato de 24 horas como HH:MM, así que las 9 de la mañana son 09:00 y las cinco y media de la tarde son 17:30. Para horas PM, suma doce a la hora: la 1:15 PM son las 13:15 y las 11:45 PM son las 23:45, mientras que la medianoche es 00:00. Introducir las horas de este modo elimina la ambigüedad AM/PM y permite a la calculadora manejar bien los turnos nocturnos comparando los dos valores directamente." },
+      { question: "¿Maneja los turnos nocturnos?", answer: "Sí. Cuando la hora de salida es anterior a la de entrada, la calculadora asume que el turno pasó de la medianoche y suma 24 horas, así que un turno de 22:00 a 06:00 se lee como ocho horas en lugar de una cifra negativa. Esto lo hace fiable para turnos de noche y ventanas de guardia. Asume un solo turno de menos de 24 horas, lo que cubre prácticamente todos los patrones de trabajo reales." },
+      { question: "¿Qué son las horas decimales y por qué son las principales?", answer: "Las horas decimales expresan los minutos como una fracción de una hora, así que 8 horas 30 minutos son 8,5 y 15 minutos son 0,25. Los sistemas de nómina y facturación usan esta forma porque se multiplica directamente por una tarifa horaria, mientras que 8:30 no. Por eso la cifra decimal es el resultado principal y el valor H:MM se ofrece al lado solo como una comprobación fácil de leer." },
+      { question: "¿Cómo se trata el descanso no pagado?", answer: "El descanso, introducido en minutos, se resta del tiempo transcurrido del turno, porque los descansos no pagados para comer y descansar no cuentan como horas trabajadas. Un turno de 09:00 a 17:30 son 8,5 horas de tiempo transcurrido, pero un descanso no pagado de 30 minutos deja 8,00 horas pagadas. Si tu descanso es pagado, introduce cero para que se cuente todo el tiempo transcurrido. Dejar el campo en blanco trata el descanso como cero." },
+      { question: "¿Puedo sumar toda una semana con esto?", answer: "Calcula cada turno por separado y suma los resultados en horas decimales para obtener un total semanal, que es la forma que esperan la mayoría de los sistemas de nómina. Mantén los descansos descontados por turno antes de sumar. Si las horas semanales superan el umbral de horas extra, normalmente 40 en EE. UU., separa el exceso en horas extra y aplica la tarifa de recargo por separado, ya que esta calculadora informa de las horas trabajadas y no del pago." },
+    ],
     faqs: [
       { question: "How do I enter the times?", answer: "Use 24-hour format as HH:MM, so 9 in the morning is 09:00 and half past five in the afternoon is 17:30. For PM times, add twelve to the hour: 1:15 PM is 13:15 and 11:45 PM is 23:45, while midnight is 00:00. Entering times this way removes any AM/PM ambiguity and lets the calculator handle overnight shifts correctly by comparing the two values directly." },
       { question: "Does it handle overnight shifts?", answer: "Yes. When the clock-out time is earlier than the clock-in time, the calculator assumes the shift ran past midnight and adds 24 hours, so a shift from 22:00 to 06:00 reads as eight hours rather than a negative figure. This makes it reliable for night shifts and on-call windows. It assumes a single shift under 24 hours long, which covers essentially all real work patterns." },
@@ -300,6 +440,34 @@ export const datetimeR5Calculators: CalculatorDefinition[] = [
     },
     formulaExplanation:
       "The decimal hours are multiplied by sixty to get the total number of minutes, rounded to the nearest whole minute to avoid trailing fractions. That minute total is then split into whole hours by integer division and leftover minutes by the remainder, giving the H:MM form. Multiplying by sixty is the key step because each hour is sixty minutes, not a hundred, which is why 0.75 of an hour is 45 minutes rather than 75.",
+    slugEs: "conversor-de-horas-decimales-a-tiempo",
+    titleEs: "Conversor de Horas Decimales a Tiempo",
+    shortDescriptionEs: "Convierte horas decimales a horas y minutos.",
+    seoTitleEs: "Conversor de Horas Decimales a Tiempo — Decimal a H:MM",
+    metaDescriptionEs:
+      "Conversor gratuito de horas decimales a tiempo. Convierte horas decimales como 7,75 en horas y minutos (H:MM) y minutos totales.",
+    primaryKeywordEs: "conversor de horas decimales a tiempo",
+    secondaryKeywordsEs: [
+      "decimal a horas y minutos",
+      "convertir horas decimales",
+      "conversor de tiempo decimal",
+    ],
+    formulaExplanationEs:
+      "Las horas decimales se multiplican por sesenta para obtener el número total de minutos, redondeado al minuto entero más cercano para evitar fracciones sobrantes. Ese total de minutos se separa luego en horas enteras mediante división entera y en minutos restantes mediante el residuo, dando la forma H:MM. Multiplicar por sesenta es el paso clave, porque cada hora tiene sesenta minutos, no cien, razón por la que 0,75 de una hora son 45 minutos y no 75.",
+    explanationEs:
+      "Un conversor de horas decimales a tiempo transforma una cifra decimal como 7,75 horas en horas y minutos normales, aquí 7 horas 45 minutos, y también informa del total en minutos. Las hojas de horas, las exportaciones de nómina y las herramientas de programación suelen almacenar las duraciones como decimales porque se multiplican con limpieza por una tarifa horaria, pero las personas leen y registran el tiempo en horas y minutos, así que una conversión de ida y vuelta se necesita constantemente.\n\nLa conversión confunde a la gente porque la parte fraccionaria no son minutos directamente. Media hora es 0,5, no 0,30, y 0,75 son 45 minutos, no 75. Leer 7,75 como «7 horas 75 minutos» o como «7:75» es un error común que infla o reduce el tiempo registrado. El paso correcto es multiplicar la parte fraccionaria por sesenta, y esta calculadora hace justo eso, redondeando al minuto entero más cercano.\n\nAcertar importa allí donde el tiempo decimal se encuentra con el tiempo legible por humanos: conciliar las 38,5 horas de un sistema de nómina con una hoja de horas en papel, cotizar un trabajo reservado como 2,25 horas o registrar trabajo facturable. Autónomos, administrativos de nómina, jefes de proyecto y cualquiera que exporte datos de tiempo usan un conversor de horas decimales a tiempo para pasar de un formato a otro sin introducir errores de redondeo que distorsionen en silencio el pago o las facturas.",
+    exampleEs: {
+      inputs: { decimalHours: "7.75" },
+      explanation:
+        "7,75 horas decimales son 7 horas 45 minutos (7:45), o 465 minutos en total.",
+    },
+    faqsEs: [
+      { question: "¿Por qué 0,5 horas son 30 minutos y no 50?", answer: "Porque una hora tiene 60 minutos, una fracción decimal de una hora es esa fracción de 60, no de 100. Así, 0,5 hora es 0,5 × 60 = 30 minutos, y 0,25 hora son 15 minutos. Tratar los dígitos después del punto decimal como si fueran minutos es el error clásico: 7,5 horas son 7 horas 30 minutos, nunca 7 horas 50 minutos. La calculadora siempre multiplica la fracción por sesenta." },
+      { question: "¿Cómo convierto horas decimales a minutos y segundos?", answer: "Esta calculadora redondea al minuto entero más cercano, lo que basta para nómina y facturación. Si necesitas segundos, toma la fracción sobrante de un minuto y multiplícala por sesenta: por ejemplo, 0,01 hora es 0,6 minuto, que son 36 segundos. Para la mayoría de las hojas de horas los minutos enteros son lo estándar, así que la cifra de minutos totales mostrada es la salida práctica para cálculos posteriores." },
+      { question: "¿Cuánto son 7,75 horas en horas y minutos?", answer: "7,75 horas son 7 horas y 45 minutos, porque 0,75 × 60 = 45. Como total son 465 minutos. Es un valor de nómina común: un turno registrado como 7,75 son tres cuartos de hora pasadas las siete, no siete horas setenta y cinco. La calculadora devuelve tanto la forma 7:45 como el total de 465 minutos para que puedas usar cualquiera de los dos en tus registros." },
+      { question: "¿Redondea los minutos?", answer: "Sí. El resultado se redondea al minuto entero más cercano, así que un valor como 3,999 horas se muestra como 4:00 en lugar de 3 horas 59,94 minutos. Esto mantiene la salida limpia y coincide con cómo las hojas de horas registran el tiempo. Si encadenas varias conversiones, trabaja a partir de la cifra de minutos totales para evitar acumular diferencias de redondeo entre pasos." },
+      { question: "¿Por qué los sistemas de nómina usan horas decimales?", answer: "Las horas decimales se multiplican directamente por una tarifa horaria, así que 8,5 horas a 20 $ son simplemente 8,5 × 20 = 170 $, mientras que 8:30 no se puede multiplicar tal como está escrito. Almacenar el tiempo como decimal hace triviales los cálculos de salario y factura y facilita el uso en hojas de cálculo. La contrapartida es que las personas leen las horas y minutos con más naturalidad, que es justo por lo que un conversor entre las dos formas se necesita tan a menudo." },
+    ],
     faqs: [
       { question: "Why is 0.5 hours 30 minutes and not 50?", answer: "Because an hour has 60 minutes, a decimal fraction of an hour is that fraction of 60, not of 100. So 0.5 hour is 0.5 × 60 = 30 minutes, and 0.25 hour is 15 minutes. Treating the digits after the decimal point as if they were minutes is the classic error: 7.5 hours is 7 hours 30 minutes, never 7 hours 50 minutes. The calculator always multiplies the fraction by sixty." },
       { question: "How do I convert decimal hours to minutes and seconds?", answer: "This calculator rounds to the nearest whole minute, which is enough for payroll and billing. If you need seconds, take the leftover fraction of a minute and multiply by sixty: for example 0.01 hour is 0.6 minute, which is 36 seconds. For most timesheet purposes whole minutes are standard, so the total-minutes figure shown is the practical output for further calculation." },
@@ -353,6 +521,34 @@ export const datetimeR5Calculators: CalculatorDefinition[] = [
     },
     formulaExplanation:
       "The Unix epoch fixes second zero at midnight UTC on 1 January 1970. Adding the given number of seconds to that anchor point yields the target instant, which is then expressed on the UTC calendar as year, month, day, hour, minute and second. Because leap years and month lengths are built into the calendar conversion, and UTC ignores daylight-saving shifts, the result is exact and identical no matter where or when the conversion is run.",
+    slugEs: "conversor-de-marca-de-tiempo-unix",
+    titleEs: "Conversor de Marca de Tiempo Unix",
+    shortDescriptionEs: "Convierte una marca de tiempo Unix a fecha UTC.",
+    seoTitleEs: "Conversor de Marca de Tiempo Unix — Segundos Epoch a Fecha UTC",
+    metaDescriptionEs:
+      "Conversor gratuito de marca de tiempo Unix. Convierte segundos epoch en una fecha y hora UTC legible y el día de la semana.",
+    primaryKeywordEs: "conversor de marca de tiempo unix",
+    secondaryKeywordsEs: [
+      "epoch a fecha",
+      "conversor de tiempo unix",
+      "marca de tiempo a fecha",
+    ],
+    formulaExplanationEs:
+      "La época Unix fija el segundo cero en la medianoche UTC del 1 de enero de 1970. Sumar el número dado de segundos a ese punto de anclaje produce el instante objetivo, que luego se expresa en el calendario UTC como año, mes, día, hora, minuto y segundo. Como los años bisiestos y las longitudes de los meses están integrados en la conversión del calendario, y UTC ignora los cambios de horario de verano, el resultado es exacto e idéntico sin importar dónde ni cuándo se realice la conversión.",
+    explanationEs:
+      "Un conversor de marca de tiempo Unix transforma un recuento de segundos desde la época Unix —la medianoche UTC del 1 de enero de 1970— en una fecha y hora UTC legible para humanos, y nombra el día de la semana. El tiempo Unix, también llamado tiempo epoch o POSIX, es cómo la mayoría de ordenadores, bases de datos, APIs y archivos de registro almacenan un instante, porque un único número entero es compacto, inequívoco y fácil de comparar o restar.\n\nDesarrolladores y analistas se encuentran constantemente con marcas de tiempo en bruto como 1609459200 en registros, cargas JSON, filas de bases de datos y cookies, y necesitan saber qué momento representan. Convertir a mano es poco práctico, y hacerlo en la zona horaria equivocada es una fuente frecuente de errores de horas. Presentar el resultado explícitamente en UTC elimina esa ambigüedad: UTC es la referencia contra la que se define la época, así que la conversión es exacta e independiente de la ubicación.\n\nEl día de la semana es un extra útil para detectar patrones en los datos de eventos, como si los errores se agrupan los fines de semana o si un trabajo se ejecutó el día esperado. Este conversor toma segundos enteros, la forma más común, aunque algunos sistemas almacenan milisegundos; si un valor parece mil veces demasiado grande, divídelo entre 1000 primero. Ingenieros que depuran sistemas, analistas de datos que leen exportaciones y cualquiera que descodifique una respuesta de API usan un conversor de marca de tiempo Unix para traducir el tiempo de máquina a una fecha comprensible.",
+    exampleEs: {
+      inputs: { unixSeconds: "1609459200" },
+      explanation:
+        "1609459200 segundos son 2021-01-01 00:00:00 UTC, un viernes.",
+    },
+    faqsEs: [
+      { question: "¿Qué es una marca de tiempo Unix?", answer: "Una marca de tiempo Unix es el número de segundos transcurridos desde la época Unix, la medianoche UTC del 1 de enero de 1970, sin contar los segundos intercalares. Es la forma estándar en que los ordenadores representan un punto en el tiempo, porque almacenar un instante como un entero lo hace compacto y trivial de comparar o restar. Las marcas de tiempo aparecen en registros, bases de datos, APIs y metadatos de archivos, por lo que convertirlas en fechas es una tarea rutinaria." },
+      { question: "¿Por qué el resultado se muestra en UTC?", answer: "La época Unix se define en UTC, así que convertir a UTC es exacto y libre de ambigüedad de zona horaria u horario de verano. Mostrar una hora local exigiría suponer una zona horaria, lo que invita a errores de horas cuando la misma marca de tiempo se lee en distintas regiones. Si necesitas la hora local, toma el resultado UTC y aplica el desfase de tu zona, recordando que el desfase puede cambiar en los límites del horario de verano." },
+      { question: "Mi marca de tiempo tiene 13 dígitos, ¿qué hago?", answer: "Un valor de 13 dígitos casi con certeza está en milisegundos en lugar de segundos, que muchos sistemas de JavaScript y Java usan. Divídelo entre 1000 para obtener segundos antes de introducirlo aquí, descartando cualquier parte fraccionaria. Como regla práctica, una marca de tiempo en segundos para una fecha reciente tiene unos 10 dígitos; un número de 13 dígitos es mil veces mayor y, de lo contrario, se convertiría en una fecha muy lejana en el futuro." },
+      { question: "¿Qué fue la marca de tiempo cero?", answer: "La marca de tiempo 0 corresponde a 1970-01-01 00:00:00 UTC, el momento en que empieza la época Unix, que cayó en jueves. Las marcas de tiempo negativas, donde se admiten, representan momentos anteriores a 1970. Este origen fijo es lo que hace del tiempo Unix una referencia universal: cada sistema que cuenta desde el mismo instante puede intercambiar marcas de tiempo sin necesidad de acordar nada más sobre el calendario." },
+      { question: "¿Tiene en cuenta los segundos intercalares?", answer: "No, y por diseño. El tiempo Unix estándar ignora los segundos intercalares, tratando cada día como exactamente 86 400 segundos, razón por la que se convierte con limpieza en una fecha del calendario. Los segundos intercalares ocasionales insertados en UTC hacen que el tiempo Unix pueda quedar un segundo desfasado del tiempo astronómico en torno a esos eventos, pero para la conversión de fechas cotidiana esto no tiene efecto práctico y el resultado coincide con el calendario civil." },
+    ],
     faqs: [
       { question: "What is a Unix timestamp?", answer: "A Unix timestamp is the number of seconds that have elapsed since the Unix epoch, midnight UTC on 1 January 1970, not counting leap seconds. It is the standard way computers represent a point in time, because storing an instant as one integer makes it compact and trivial to compare or subtract. Timestamps appear throughout logs, databases, APIs and file metadata, which is why converting them to dates is a routine task." },
       { question: "Why is the result shown in UTC?", answer: "The Unix epoch is defined in UTC, so converting to UTC is exact and free of timezone or daylight-saving ambiguity. Showing a local time would require assuming a timezone, which invites off-by-hours errors when the same timestamp is read in different regions. If you need local time, take the UTC result and apply your own zone's offset, remembering that the offset can change across daylight-saving boundaries." },
@@ -399,6 +595,34 @@ export const datetimeR5Calculators: CalculatorDefinition[] = [
     },
     formulaExplanation:
       "Weekly hours are multiplied by the number of weeks worked to give the annual hour total, a direct scaling of the weekly pattern across the year. Dividing that total by eight expresses it as standard working days, since eight hours is the conventional full day. Choosing a realistic weeks-worked figure — reducing 52 by leave and holidays — is what makes the estimate reflect actual working time rather than a theoretical maximum.",
+    slugEs: "calculadora-de-horas-de-trabajo-anuales",
+    titleEs: "Calculadora de Horas de Trabajo Anuales",
+    shortDescriptionEs: "Estima el total de horas de trabajo en un año.",
+    seoTitleEs: "Calculadora de Horas de Trabajo Anuales — Horas de Trabajo por Año",
+    metaDescriptionEs:
+      "Calculadora gratuita de horas de trabajo anuales. Estima el total de horas de trabajo al año a partir de las horas semanales y las semanas trabajadas.",
+    primaryKeywordEs: "calculadora de horas de trabajo anuales",
+    secondaryKeywordsEs: [
+      "horas de trabajo por año",
+      "calculadora de horas anuales",
+      "días laborables por año",
+    ],
+    formulaExplanationEs:
+      "Las horas semanales se multiplican por el número de semanas trabajadas para dar el total de horas anuales, un escalado directo del patrón semanal a lo largo del año. Dividir ese total entre ocho lo expresa como días de trabajo estándar, ya que ocho horas es la jornada completa convencional. Elegir una cifra realista de semanas trabajadas —reduciendo 52 por vacaciones y festivos— es lo que hace que la estimación refleje el tiempo de trabajo real en lugar de un máximo teórico.",
+    explanationEs:
+      "Una calculadora de horas de trabajo anuales estima cuántas horas trabajas en un año multiplicando tus horas semanales habituales por el número de semanas que realmente trabajas, y expresa el resultado como un número equivalente de jornadas estándar de ocho horas. Es la forma rápida de convertir un horario semanal en una cifra anual para comparar salarios, planificar la capacidad y dimensionar contratos.\n\nEl número de semanas importa tanto como las horas. Un año natural tiene 52 semanas más un día o dos, pero pocas personas trabajan todas: resta las vacaciones anuales, los festivos y cualquier semana no pagada y la cifra efectiva suele caer a alrededor de 46 a 48. Usar un valor realista de semanas trabajadas da un total anual mucho más honesto que multiplicar a ciegas por 52, que sobrestima la capacidad por las semanas que realmente estás libre.\n\nLa salida en jornadas de ocho horas replantea el total como días de trabajo completos, algo intuitivo para comparar puestos, presupuestar el año de un contratista o comprobar la utilización frente a un objetivo. Empleadores que modelan plantillas, autónomos que ponen precio a un contrato anual y empleados que comparan una oferta a tiempo completo frente a trabajo a tiempo parcial o por contrato usan una calculadora de horas de trabajo anuales para convertir un patrón semanal en las cifras anuales de las que dependen esas decisiones.",
+    exampleEs: {
+      inputs: { hoursPerWeek: "40", weeksPerYear: "52" },
+      explanation:
+        "40 horas × 52 semanas = 2080 horas al año, equivalentes a 260 jornadas de ocho horas.",
+    },
+    faqsEs: [
+      { question: "¿Cuántas horas de trabajo tiene un año a tiempo completo?", answer: "Un valor de referencia común es 2080 horas, de 40 horas a la semana por 52 semanas, razón por la que muchos salarios se cotizan contra él. En la práctica, una vez descontadas de dos a cuatro semanas de vacaciones y festivos, las horas realmente trabajadas suelen rondar entre 1880 y 1960. Introduce tu cifra real de semanas trabajadas en lugar de 52 para obtener un total que refleje el tiempo que estás genuinamente trabajando." },
+      { question: "¿Cuántas semanas debo introducir?", answer: "Parte de 52 y resta las semanas que no trabajas: vacaciones anuales, festivos agrupados en equivalentes de semana y cualquier tiempo libre no pagado. Muchos empleados a tiempo completo se sitúan en torno a 46 a 48 semanas efectivas. Si quieres un máximo teórico en lugar de una cifra realista, déjalo en 52. El campo tiene 52 por defecto para que obtengas el valor de referencia estándar salvo que lo cambies." },
+      { question: "¿Qué significa la cifra de jornadas de ocho horas?", answer: "Convierte tus horas anuales en el número de jornadas estándar de ocho horas que representan, así que 2080 horas se convierten en 260 días. Es útil para comparar puestos, presupuestar la disponibilidad de un contratista o comprobar cómo se traduce un total en un calendario de trabajo. Es una conversión de unidades, no un recuento de fechas del calendario, así que no tiene en cuenta qué días concretos caen en fines de semana o festivos." },
+      { question: "¿Incluye esto las horas extra o los descansos?", answer: "Usa las horas semanales que introduzcas, así que incluye o excluye las horas extra y los descansos no pagados según lo que quieras medir. Para las horas contratadas, introduce tu semana programada; para el tiempo realmente trabajado, añade las horas extra típicas y quita primero los descansos no pagados. La calculadora simplemente escala la cifra semanal que le das, así que la exactitud del total anual depende de que el número semanal refleje tu patrón real." },
+      { question: "¿Cómo uso esto para trabajo a tiempo parcial o por contrato?", answer: "Introduce tus horas semanales reales a tiempo parcial y el número de semanas del encargo o del año. Una semana de 24 horas durante 48 semanas trabajadas son 1152 horas, o 144 jornadas de ocho horas, que puedes comparar directamente con un año a tiempo completo o usar para poner precio a un contrato anual. Para horarios irregulares, usa una cifra de horas semanales promedio para obtener una estimación anual representativa." },
+    ],
     faqs: [
       { question: "How many work hours are in a full-time year?", answer: "A common benchmark is 2,080 hours, from 40 hours a week times 52 weeks, which is why many salaries are quoted against it. In practice, once you deduct two to four weeks of leave and public holidays, actual worked hours are often nearer 1,880 to 1,960. Enter your real weeks-worked figure rather than 52 to get a total that reflects the time you are genuinely at work." },
       { question: "How many weeks should I enter?", answer: "Start from 52 and subtract the weeks you do not work: annual leave, public holidays grouped into week-equivalents, and any unpaid time off. Many full-time employees land around 46 to 48 effective weeks. If you want a theoretical maximum rather than a realistic figure, leave it at 52. The field defaults to 52 so you get the standard benchmark unless you change it." },
@@ -447,6 +671,34 @@ export const datetimeR5Calculators: CalculatorDefinition[] = [
     },
     formulaExplanation:
       "Age is built from the calendar fields of both dates. The birth year is subtracted from the as-of year for a first estimate of years, and the months are compared; if the as-of day of the month is earlier than the birth day, one month is borrowed, and if the month count then goes negative, one year is borrowed and twelve months added back. Total days lived is the plain difference between the two dates in whole days, which already includes every leap day.",
+    slugEs: "calculadora-de-edad-en-fecha",
+    titleEs: "Calculadora de Edad en Fecha",
+    shortDescriptionEs: "Halla la edad de alguien en una fecha concreta.",
+    seoTitleEs: "Calculadora de Edad en Fecha — Edad en una Fecha Concreta",
+    metaDescriptionEs:
+      "Calculadora gratuita de edad en fecha. Halla la edad exacta en años, meses y días totales en cualquier fecha elegida, no solo hoy.",
+    primaryKeywordEs: "calculadora de edad en fecha",
+    secondaryKeywordsEs: [
+      "edad en una fecha concreta",
+      "edad a una fecha",
+      "qué edad en una fecha",
+    ],
+    formulaExplanationEs:
+      "La edad se construye a partir de los campos de calendario de ambas fechas. El año de nacimiento se resta del año de referencia para una primera estimación de años, y se comparan los meses; si el día del mes de referencia es anterior al día de nacimiento, se toma prestado un mes, y si el conteo de meses queda entonces negativo, se toma prestado un año y se suman doce meses. Los días totales vividos son la diferencia simple entre las dos fechas en días enteros, que ya incluye cada día bisiesto.",
+    explanationEs:
+      "Una calculadora de edad en fecha averigua qué edad tiene alguien en una fecha concreta elegida en lugar de solo hoy, dando el resultado como años completos, los meses enteros restantes y el número total de días vividos. Le indicas una fecha de nacimiento y una fecha de referencia, y calcula la edad de calendario exactamente como la expresaría una persona —por ejemplo, 36 años y 2 meses— en ese día de referencia.\n\nPoder elegir la fecha de referencia es lo que distingue esto de una calculadora de edad ordinaria. Las reglas de elegibilidad, los cortes escolares, los tramos de seguros, los derechos de pensión y las categorías por edad en el deporte se definen todas como una edad alcanzada en una fecha concreta, no la edad de hoy. Comprobar si un niño tiene edad suficiente el primer día del curso escolar, o qué edad tendrá alguien en la renovación de una póliza, requiere evaluar la edad en ese día exacto.\n\nEl cálculo sigue cómo funciona realmente la edad de calendario: cuenta primero los años completos, luego los meses enteros sobrantes, tomando prestado correctamente cuando el día del mes de referencia es anterior al día de nacimiento. La cifra de días totales da un recuento preciso de los días transcurridos que ya incluye cada día bisiesto. Padres que comprueban la matriculación, personal de recursos humanos y prestaciones que aplica tramos de edad y organizadores de eventos que verifican categorías por edad usan una calculadora de edad en fecha para determinar la edad en la fecha que importa.",
+    exampleEs: {
+      inputs: { birthDate: "1990-06-15", asOfDate: "2026-08-30" },
+      explanation:
+        "Alguien nacido el 15 de junio de 1990 tiene 36 años y 2 meses el 30 de agosto de 2026.",
+    },
+    faqsEs: [
+      { question: "¿En qué se diferencia esto de una calculadora de edad normal?", answer: "Una calculadora de edad estándar usa la fecha de hoy como referencia, mientras que esta te permite fijar cualquier fecha de referencia. Eso importa cuando una regla depende de la edad alcanzada en un día concreto en lugar de la edad actual, como un corte de admisión escolar, la renovación de un seguro o la fecha de la categoría por edad de una competición. Al elegir la fecha de referencia obtienes la edad que a la regla realmente le importa, que puede diferir de la edad actual." },
+      { question: "¿Cómo se calculan los años y los meses?", answer: "La calculadora cuenta los años completos desde la fecha de nacimiento hasta la fecha de referencia, luego los meses enteros restantes, tomando prestado cuando el día del mes de referencia es anterior al día de nacimiento. Así, del 15 de junio al 30 de agosto son dos meses completos porque el 30 es posterior al 15, pero del 15 de junio al 10 de agosto sería un mes, ya que el 10 aún no ha llegado al 15. Esto refleja cómo la gente expresa la edad de forma natural." },
+      { question: "¿Qué incluye el total de días vividos?", answer: "Es el número exacto de días naturales entre la fecha de nacimiento y la fecha de referencia, contando cada día incluidos todos los días bisiestos que caen en el intervalo. Como se calcula a partir de un recuento continuo de días en lugar de multiplicando meses, es preciso sin importar cuántos 29 de febrero contenga el periodo. Resulta práctico para días de hito, como celebrar los 10 000 días vividos." },
+      { question: "¿Puedo usar una fecha de referencia futura?", answer: "Sí. Fija la fecha de referencia en cualquier día futuro para averiguar qué edad tendrá alguien entonces, algo útil para planificar en torno a fechas de elegibilidad, cumpleaños de hito o renovaciones de pólizas. El cálculo funciona de forma idéntica para fechas de referencia futuras y pasadas, ya que simplemente mide la distancia de calendario desde la fecha de nacimiento. Solo se rechaza una fecha de referencia anterior a la de nacimiento, pues una edad negativa no está definida." },
+      { question: "¿Y si la fecha de referencia es anterior a la de nacimiento?", answer: "La calculadora lo trata como no válido y no devuelve ninguna edad, porque una persona no tiene edad antes de nacer. Asegúrate de que la fecha de nacimiento sea la más temprana de las dos y de que la fecha de referencia sea el día en que quieres evaluar la edad. Si querías medir un intervalo en la otra dirección, intercambia las fechas para que la más temprana se introduzca como fecha de nacimiento." },
+    ],
     faqs: [
       { question: "How is this different from a normal age calculator?", answer: "A standard age calculator uses today's date as the reference, whereas this one lets you set any as-of date. That matters when a rule depends on age reached on a specific day rather than the age right now, such as a school entry cut-off, an insurance renewal, or a competition's age-group date. By choosing the reference date you get the age that the rule actually cares about, which may differ from the current age." },
       { question: "How are years and months worked out?", answer: "The calculator counts complete years from the birth date to the as-of date, then the remaining whole months, borrowing when the as-of day of the month is before the birth day. So from 15 June to 30 August is two full months because the 30th is past the 15th, but from 15 June to 10 August would be one month, since the 10th has not yet reached the 15th. This mirrors how people naturally state age." },
@@ -495,6 +747,34 @@ export const datetimeR5Calculators: CalculatorDefinition[] = [
     },
     formulaExplanation:
       "The start time is converted to minutes past midnight, and the added hours and minutes are turned into minutes and summed. The total is divided by 1,440 — the minutes in a day — with the whole-number quotient giving how many days rolled over and the remainder giving minutes past midnight for the end time. Using a floor division means the remainder is always a valid 0–1,439 time even if the inputs are large, and the result is then formatted back to HH:MM.",
+    slugEs: "calculadora-de-sumar-tiempo",
+    titleEs: "Calculadora de Sumar Tiempo",
+    shortDescriptionEs: "Suma horas y minutos a una hora.",
+    seoTitleEs: "Calculadora de Sumar Tiempo — Sumar Horas y Minutos a una Hora",
+    metaDescriptionEs:
+      "Calculadora gratuita para sumar tiempo. Suma horas y minutos a una hora inicial y obtén la hora final y cualquier cambio de día.",
+    primaryKeywordEs: "calculadora de sumar tiempo",
+    secondaryKeywordsEs: [
+      "sumar horas a una hora",
+      "calculadora de suma de tiempo",
+      "qué hora será",
+    ],
+    formulaExplanationEs:
+      "La hora inicial se convierte en minutos desde la medianoche, y las horas y minutos añadidos se transforman en minutos y se suman. El total se divide entre 1440 —los minutos de un día— y el cociente entero da cuántos días se acumularon y el residuo da los minutos desde la medianoche para la hora final. Usar la división entera hace que el residuo sea siempre una hora válida de 0 a 1439 aunque las entradas sean grandes, y el resultado se formatea luego de vuelta a HH:MM.",
+    explanationEs:
+      "Una calculadora de sumar tiempo toma una hora inicial y una duración en horas y minutos y te dice la hora de reloj a la que llegas, junto con cuántos días se acumula el resultado. Responde preguntas cotidianas como «si empiezo un proceso de 5 horas 30 minutos a las 09:00, ¿cuándo termina?» y maneja con limpieza el paso de la medianoche en lugar de producir una hora imposible como 26:30.\n\nLa aritmética de reloj es fácil de equivocar a mano porque el tiempo es de base 60 para los minutos y se reinicia a las 24 horas, no a las 10 o a las 100. Sumar 45 minutos a las 09:30 no son las 09:75, y sumar varias horas puede empujarte en silencio al día siguiente. La calculadora evita ambas trampas convirtiendo todo a minutos, sumando y luego reajustando el total a un reloj de 24 horas mientras cuenta los días completos que se acumularon.\n\nLa cifra de días acumulados es lo que la hace fiable para la programación: una tarea que empieza a las 22:00 y dura cinco horas termina a las 03:00 del día siguiente, y saber que es +1 día evita reservarla en la fecha equivocada. Cocineros que cronometran un asado largo, planificadores de turnos que proyectan una hora de fin y cualquiera que estime una hora de llegada o de finalización usan una calculadora de sumar tiempo para añadir una duración a una hora de reloj sin tropezar con la medianoche.",
+    exampleEs: {
+      inputs: { startTime: "09:00", addHours: "5", addMinutes: "30" },
+      explanation:
+        "09:00 más 5 horas 30 minutos son las 14:30 del mismo día (0 días acumulados).",
+    },
+    faqsEs: [
+      { question: "¿Cómo introduzco la hora inicial?", answer: "Usa el formato de 24 horas como HH:MM, así que las 9 de la mañana son las 09:00 y las 2 de la tarde son las 14:00. Para horas PM, suma doce a la hora: las 3:30 PM son las 15:30 y la medianoche es 00:00. Usar la entrada de 24 horas elimina la ambigüedad AM/PM y permite a la calculadora reajustar correctamente al pasar la medianoche. Las horas y minutos que sumar se introducen por separado como números simples en sus propios campos." },
+      { question: "¿Qué significa la cifra de días acumulados?", answer: "Cuenta cuántos días completos avanzó la hora final más allá del día inicial. Sumar seis horas a las 22:00 da las 04:00 con una acumulación de 1, es decir, el día siguiente, mientras que sumar 30 horas acumularía un día y también caería a las 04:00 del día siguiente, pero informado contra el conteo de días correcto. Esto te dice no solo la hora de reloj sino en qué día cae, algo que importa para la programación." },
+      { question: "¿Maneja duraciones de más de un día?", answer: "Sí. Si las horas que sumas superan 24, la calculadora sigue reajustando el reloj correctamente e informa del número total de días acumulados. Sumar 50 horas a las 08:00, por ejemplo, avanza dos días y cae a las 10:00, mostrado como una acumulación de dos días. La hora de reloj es siempre el residuo tras quitar los días completos, así que se mantiene como una hora válida entre las 00:00 y las 23:59." },
+      { question: "¿Puedo sumar tiempo cruzando la medianoche?", answer: "Sí, eso es lo principal que maneja. Cuando la duración añadida empuja la hora más allá de las 24:00, el resultado se reajusta a las primeras horas del día siguiente y el contador de acumulación aumenta, en lugar de mostrar una hora inválida como las 25:00. Un proceso que empieza a las 23:15 y dura dos horas termina correctamente a la 01:15 del día siguiente, marcado como un día acumulado." },
+      { question: "¿Puedo restar tiempo introduciendo negativos?", answer: "Puedes introducir horas o minutos negativos para retroceder, y la calculadora maneja el reajuste también en esa dirección, informando de un desfase de días negativo cuando el resultado cae en un día anterior. Para mayor claridad, sin embargo, sumar es el uso previsto. Si sobre todo necesitas retroceder, introducir la hora posterior como inicio y una duración negativa te llevará a la hora de reloj anterior correcta." },
+    ],
     faqs: [
       { question: "How do I enter the start time?", answer: "Use 24-hour format as HH:MM, so 9 in the morning is 09:00 and 2 in the afternoon is 14:00. For PM times, add twelve to the hour: 3:30 PM is 15:30 and midnight is 00:00. Using 24-hour input removes AM/PM ambiguity and lets the calculator wrap correctly past midnight. The hours and minutes to add are entered separately as plain numbers in their own fields." },
       { question: "What does the days-rolled-over figure mean?", answer: "It counts how many whole days the end time moved past the start day. Adding six hours to 22:00 gives 04:00 with a rollover of 1, meaning the next day, while adding 30 hours would roll over one day and land at 04:00 the following day too, but reported against the correct day count. This tells you not just the clock time but which day it falls on, which matters for scheduling." },

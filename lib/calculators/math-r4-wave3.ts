@@ -13,6 +13,44 @@ export const mathR4Calculators: CalculatorDefinition[] = [
       "Free quadratic formula calculator. Enter the coefficients a, b, and c to find both roots of a quadratic equation, the discriminant, and the nature of the solutions.",
     primaryKeyword: "quadratic formula calculator",
     secondaryKeywords: ["quadratic equation solver", "discriminant calculator", "solve for x calculator"],
+    slugEs: "calculadora-de-formula-cuadratica",
+    titleEs: "Calculadora de Fórmula Cuadrática",
+    shortDescriptionEs: "Resuelve ax² + bx + c = 0 para ambas raíces.",
+    seoTitleEs: "Calculadora de Fórmula Cuadrática — Resuelve ax² + bx + c = 0",
+    metaDescriptionEs:
+      "Calculadora de fórmula cuadrática gratis. Introduce los coeficientes a, b y c para hallar ambas raíces de una ecuación cuadrática, el discriminante y la naturaleza de las soluciones.",
+    primaryKeywordEs: "calculadora de formula cuadratica",
+    secondaryKeywordsEs: ["solucionador de ecuaciones cuadraticas", "calculadora de discriminante", "calculadora resolver x"],
+    formulaExplanationEs:
+      "La fórmula cuadrática resuelve cualquier ecuación de la forma ax² + bx + c = 0 completando el cuadrado en el caso general, lo que despeja x en función de los tres coeficientes. La cantidad bajo la raíz cuadrada, b² − 4ac, se llama discriminante, y su signo lo decide todo: un discriminante positivo da dos raíces reales distintas, un discriminante igual a cero da una raíz repetida, y un discriminante negativo significa que las raíces son complejas, sin solución real. El signo más-menos genera ambas raíces a la vez.",
+    explanationEs:
+      "La fórmula cuadrática es el método universal para resolver cualquier ecuación cuadrática, una ecuación de la forma ax² + bx + c = 0 donde a no es cero. Aunque algunas cuadráticas se factorizan con facilidad a mano, muchas no lo hacen, y la fórmula cuadrática funciona siempre sin importar lo complicados que sean los coeficientes. Esta calculadora de fórmula cuadrática toma los tres coeficientes a, b y c y devuelve ambas raíces, el discriminante y una descripción del tipo de soluciones que tiene la ecuación. El corazón del método es el discriminante, el valor b² − 4ac situado bajo la raíz cuadrada. Cuando es positivo, la parábola cruza el eje x en dos puntos, dando dos raíces reales; cuando es exactamente cero, la parábola solo toca el eje, dando una raíz repetida; y cuando es negativo, la parábola nunca alcanza el eje, por lo que las soluciones son números complejos en lugar de reales. Para la ecuación x² − 5x + 6 = 0, los coeficientes son 1, −5 y 6, el discriminante es 1, y las dos raíces son 3 y 2, que puedes verificar factorizando en (x − 3)(x − 2). Estudiantes, ingenieros y físicos recurren a la fórmula cuadrática cuando factorizar no es evidente. Exigir que a sea distinto de cero importa, porque si a fuera cero la ecuación sería lineal y la fórmula dividiría entre cero.",
+    exampleEs: {
+      inputs: { a: 1, b: -5, c: 6 },
+      explanation: "Discriminante = (−5)² − 4×1×6 = 1; x = (5 ± 1) ÷ 2 = 3 o 2.",
+    },
+    faqsEs: [
+      {
+        question: "¿Qué es el discriminante?",
+        answer: "El discriminante es la expresión b² − 4ac que se encuentra bajo la raíz cuadrada en la fórmula cuadrática. Su valor revela la naturaleza de las raíces antes de terminar de resolver. Un discriminante positivo significa dos raíces reales distintas, un discriminante igual a cero significa una raíz real repetida, y un discriminante negativo significa que las dos raíces son complejas conjugadas sin valor real. Comprobar el discriminante primero te indica qué tipo de respuesta esperar.",
+      },
+      {
+        question: "¿Por qué el coeficiente a no puede ser cero?",
+        answer: "Si a es igual a cero, el término x² desaparece y la ecuación se convierte en bx + c = 0, que es lineal en lugar de cuadrática. La fórmula cuadrática dividiría entonces entre 2a, lo que es una división entre cero y queda indefinido. Una verdadera cuadrática siempre tiene un coeficiente principal distinto de cero. Esta calculadora no devuelve resultado cuando a es cero, ya que una ecuación lineal se resuelve simplemente con x igual a menos c dividido entre b.",
+      },
+      {
+        question: "¿Qué significa que no haya raíces reales?",
+        answer: "Cuando el discriminante es negativo, la raíz cuadrada de un número negativo no es un valor real, por lo que la ecuación no tiene soluciones reales. Gráficamente, la parábola nunca cruza el eje x. Las raíces siguen existiendo como números complejos que involucran la unidad imaginaria i, que aparecen en campos como la ingeniería eléctrica y el procesamiento de señales. Para problemas con números reales, un discriminante negativo simplemente indica que ningún x real satisface la ecuación.",
+      },
+      {
+        question: "¿Puedo usar la fórmula cuadrática en lugar de factorizar?",
+        answer: "Sí, la fórmula cuadrática resuelve toda ecuación cuadrática, se factorice bien o no. Factorizar es más rápido cuando las raíces son enteros sencillos que puedes detectar, pero muchas ecuaciones tienen raíces irracionales o complicadas que resisten la factorización por completo. La fórmula nunca falla y da resultados exactos, así que es el recurso fiable. Muchas personas usan el discriminante para comprobar si una factorización limpia es siquiera posible antes de intentarlo.",
+      },
+      {
+        question: "¿Cómo compruebo mis respuestas?",
+        answer: "Sustituye cada raíz de nuevo en la ecuación original ax² + bx + c y confirma que el resultado es cero. También puedes usar el hecho de que, para ax² + bx + c = 0, las dos raíces suman menos b entre a y se multiplican para dar c entre a. Para x² − 5x + 6, las raíces 3 y 2 suman 5 y se multiplican para dar 6, coincidiendo con los coeficientes, lo que confirma que la solución es correcta.",
+      },
+    ],
     fields: [
       { id: "a", label: "Coefficient a", type: "number", placeholder: "1", required: true, span: 1, step: 0.0001 },
       { id: "b", label: "Coefficient b", type: "number", placeholder: "-5", required: true, span: 1, step: 0.0001 },
@@ -72,6 +110,44 @@ export const mathR4Calculators: CalculatorDefinition[] = [
       "Free Pythagorean theorem calculator. Enter the two legs of a right triangle to find the hypotenuse using a² + b² = c², the classic right-triangle relationship.",
     primaryKeyword: "pythagorean theorem calculator",
     secondaryKeywords: ["hypotenuse calculator", "right triangle calculator", "a2 + b2 = c2 calculator"],
+    slugEs: "calculadora-del-teorema-de-pitagoras",
+    titleEs: "Calculadora del Teorema de Pitágoras",
+    shortDescriptionEs: "Halla la hipotenusa de un triángulo rectángulo.",
+    seoTitleEs: "Calculadora del Teorema de Pitágoras — Halla la Hipotenusa",
+    metaDescriptionEs:
+      "Calculadora del teorema de Pitágoras gratis. Introduce los dos catetos de un triángulo rectángulo para hallar la hipotenusa usando a² + b² = c², la relación clásica del triángulo rectángulo.",
+    primaryKeywordEs: "calculadora del teorema de pitagoras",
+    secondaryKeywordsEs: ["calculadora de hipotenusa", "calculadora de triangulo rectangulo", "calculadora a2 + b2 = c2"],
+    formulaExplanationEs:
+      "El teorema de Pitágoras afirma que en todo triángulo rectángulo el cuadrado de la hipotenusa es igual a la suma de los cuadrados de los dos catetos. Reordenando para despejar la hipotenusa, elevas al cuadrado cada cateto, sumas esas áreas y tomas la raíz cuadrada del total. El teorema solo se cumple para triángulos rectángulos porque el ángulo de noventa grados es exactamente lo que hace que las longitudes al cuadrado se relacionen así, un hecho demostrado geométricamente reorganizando las áreas de los cuadrados construidos sobre cada lado.",
+    explanationEs:
+      "El teorema de Pitágoras es uno de los resultados más famosos de toda la matemática y describe la relación entre los tres lados de un triángulo rectángulo. Afirma que el cuadrado de la hipotenusa, el lado opuesto al ángulo recto, es igual a la suma de los cuadrados de los otros dos lados, los catetos. Esta calculadora del teorema de Pitágoras toma las longitudes de los dos catetos y devuelve la longitud de la hipotenusa usando la fórmula c igual a la raíz cuadrada de a al cuadrado más b al cuadrado. El teorema solo se aplica a triángulos rectángulos, aquellos con un ángulo de noventa grados, pero dentro de esa familia es exacto y universal. El ejemplo clásico es el triángulo 3-4-5: con catetos de 3 y 4, la hipotenusa es la raíz cuadrada de 9 más 16, que es la raíz cuadrada de 25, o exactamente 5. Otros conjuntos de números enteros conocidos, llamados ternas pitagóricas, incluyen 5-12-13 y 8-15-17. Esta relación es la base de la fórmula de la distancia en geometría de coordenadas, y aparece constantemente en construcción, navegación y diseño siempre que hay que hallar una longitud diagonal a partir de medidas horizontales y verticales. Como una longitud no puede ser negativa, esta calculadora exige que ambos catetos sean cero o positivos.",
+    exampleEs: {
+      inputs: { sideA: 3, sideB: 4 },
+      explanation: "c = √(3² + 4²) = √(9 + 16) = √25 = 5, el clásico triángulo 3-4-5.",
+    },
+    faqsEs: [
+      {
+        question: "¿Qué es el teorema de Pitágoras?",
+        answer: "El teorema de Pitágoras relaciona los tres lados de un triángulo rectángulo, afirmando que el cuadrado de la hipotenusa es igual a la suma de los cuadrados de los dos catetos. Escrito como ecuación de símbolos es a al cuadrado más b al cuadrado igual a c al cuadrado, donde c es la hipotenusa. Permite hallar cualquier lado cuando conoces los otros dos, y sustenta gran parte de la geometría, la trigonometría y los cálculos de distancia.",
+      },
+      {
+        question: "¿Cuál lado es la hipotenusa?",
+        answer: "La hipotenusa es el lado más largo de un triángulo rectángulo, siempre el que está directamente opuesto al ángulo recto. Los otros dos lados, que se encuentran en la esquina de noventa grados, se llaman catetos. Como la hipotenusa está opuesta al ángulo mayor, es necesariamente el lado más largo. Esta calculadora calcula la hipotenusa a partir de los dos catetos, por lo que la respuesta siempre será mayor que cualquier cateto que introduzcas.",
+      },
+      {
+        question: "¿Funciona para cualquier triángulo?",
+        answer: "No, el teorema de Pitágoras se aplica solo a triángulos rectángulos, aquellos que contienen exactamente un ángulo de noventa grados. Para triángulos sin ángulo recto necesitas la ley de los cosenos, una relación más general que se reduce al teorema de Pitágoras cuando el ángulo resulta ser de noventa grados. Si tu triángulo no es rectángulo, esta calculadora no dará un resultado significativo para un lado faltante.",
+      },
+      {
+        question: "¿Qué es una terna pitagórica?",
+        answer: "Una terna pitagórica es un conjunto de tres números enteros que satisfacen el teorema exactamente, de modo que los dos menores al cuadrado y sumados son iguales al mayor al cuadrado. La más conocida es 3, 4, 5, seguida de 5, 12, 13 y 8, 15, 17. Cualquier múltiplo de una terna, como 6, 8, 10, también es una terna. Estas soluciones enteras se valoran porque dan triángulos rectángulos limpios sin decimales.",
+      },
+      {
+        question: "¿Cómo hallo un cateto en lugar de la hipotenusa?",
+        answer: "Reordena el teorema para despejar el cateto desconocido: resta el cuadrado del cateto conocido del cuadrado de la hipotenusa, luego toma la raíz cuadrada. En símbolos, a es igual a la raíz cuadrada de c al cuadrado menos b al cuadrado. Esto funciona siempre que conozcas la hipotenusa y un cateto. Solo asegúrate de que la hipotenusa sea el valor mayor, ya que restar un cuadrado mayor de uno menor dejaría un número negativo bajo la raíz.",
+      },
+    ],
     fields: [
       { id: "sideA", label: "Side a (leg)", type: "number", placeholder: "3", required: true, span: 1, min: 0, step: 0.0001 },
       { id: "sideB", label: "Side b (leg)", type: "number", placeholder: "4", required: true, span: 1, min: 0, step: 0.0001 },
@@ -127,6 +203,44 @@ export const mathR4Calculators: CalculatorDefinition[] = [
       "Free circle calculator. Enter the radius to find a circle's area, circumference, and diameter using πr², 2πr, and 2r, the standard circle formulas.",
     primaryKeyword: "circle calculator",
     secondaryKeywords: ["area of a circle calculator", "circumference calculator", "circle area and circumference"],
+    slugEs: "calculadora-de-circulo",
+    titleEs: "Calculadora de Círculo",
+    shortDescriptionEs: "Halla área, circunferencia y diámetro a partir del radio.",
+    seoTitleEs: "Calculadora de Círculo — Área, Circunferencia y Diámetro",
+    metaDescriptionEs:
+      "Calculadora de círculo gratis. Introduce el radio para hallar el área, la circunferencia y el diámetro de un círculo usando πr², 2πr y 2r, las fórmulas estándar del círculo.",
+    primaryKeywordEs: "calculadora de circulo",
+    secondaryKeywordsEs: ["calculadora de area de un circulo", "calculadora de circunferencia", "area y circunferencia de un circulo"],
+    formulaExplanationEs:
+      "Toda medida de un círculo surge de su radio, la distancia del centro al borde. El área es pi por el radio al cuadrado, porque pi es precisamente la constante que vincula el radio de un círculo con el espacio que encierra. La circunferencia, la distancia alrededor del círculo, es pi por el diámetro, o equivalentemente dos pi por el radio, que es la definición misma de pi como la razón entre circunferencia y diámetro. El diámetro es simplemente el doble del radio, abarcando todo el ancho a través del centro.",
+    explanationEs:
+      "Un círculo queda definido por completo por una sola medida, su radio, la distancia del centro a cualquier punto del borde. A partir de ese único valor se deducen todas las demás propiedades. Esta calculadora de círculo toma el radio y devuelve las tres cantidades más útiles: el área encerrada por el círculo, la circunferencia alrededor de su borde y el diámetro a través de su punto más ancho. El área se halla con pi por el radio al cuadrado, lo que da la cantidad de espacio plano dentro del círculo. La circunferencia, el perímetro del círculo, es dos por pi por el radio, y representa cuánto recorrerías al caminar alrededor de todo el círculo. El diámetro es el más sencillo de todos, simplemente el doble del radio, midiendo en línea recta a través del círculo por su centro. La constante pi, aproximadamente 3,14159, es la razón invariable que une estas fórmulas y aparece en todo cálculo circular. Para un círculo con radio de 2, el área es pi por 4, unas 12,57 unidades cuadradas, la circunferencia es 4 pi, también unas 12,57 unidades, y el diámetro es exactamente 4. Los círculos están en todas partes en el diseño, la ingeniería y la vida diaria, desde ruedas y tuberías hasta platos y relojes, así que poder convertir un radio en área, circunferencia y diámetro rápidamente es realmente útil. Como el radio es una longitud, esta calculadora exige que sea cero o positivo.",
+    exampleEs: {
+      inputs: { radius: 2 },
+      explanation: "área = π×2² ≈ 12,57; circunferencia = 2π×2 ≈ 12,57; diámetro = 2×2 = 4.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cuál es la fórmula del área de un círculo?",
+        answer: "El área de un círculo es pi por el radio al cuadrado, escrito como A igual a pi r al cuadrado. Primero elevas el radio al cuadrado y luego multiplicas por pi, que es aproximadamente 3,14159. El resultado es la cantidad de espacio plano encerrado dentro del círculo, medido en unidades cuadradas. Como el radio se eleva al cuadrado, duplicar el radio cuadruplica el área, por lo que los círculos más grandes encierran desproporcionadamente más espacio del que su radio sugiere.",
+      },
+      {
+        question: "¿En qué se diferencia la circunferencia del área?",
+        answer: "La circunferencia mide la distancia alrededor del exterior de un círculo, una longitud en unidades ordinarias, mientras que el área mide el espacio plano encerrado dentro, en unidades cuadradas. Responden preguntas distintas: la circunferencia te dice cuánto borde o cerca necesitas, el área te dice cuánta superficie cubres. La circunferencia usa dos pi r, y el área usa pi r al cuadrado, así que las dos crecen a ritmos diferentes al aumentar el radio.",
+      },
+      {
+        question: "¿Cuál es el valor de pi?",
+        answer: "Pi es una constante matemática igual a la razón entre la circunferencia de cualquier círculo y su diámetro, aproximadamente 3,14159. Es un número irracional, lo que significa que su expansión decimal nunca termina ni se repite, por lo que solo puede aproximarse. Pi aparece en toda fórmula de círculo y en incontables otras áreas de la matemática y la física. Para la mayoría del trabajo práctico, usar 3,14159 o el botón pi de una calculadora da precisión más que suficiente.",
+      },
+      {
+        question: "¿Cómo hallo el radio a partir del diámetro?",
+        answer: "El radio es exactamente la mitad del diámetro, así que divide el diámetro entre dos. A la inversa, el diámetro es el doble del radio. Si te dan el diámetro de un círculo en lugar de su radio, simplemente divídelo a la mitad antes de usar las fórmulas de área o circunferencia, o introduce el radio resultante directamente en esta calculadora. Esta relación es la más simple de todas las medidas del círculo y nunca involucra pi.",
+      },
+      {
+        question: "¿Puedo hallar el radio a partir del área?",
+        answer: "Sí. Como el área es igual a pi por el radio al cuadrado, puedes invertirlo: divide el área entre pi, luego toma la raíz cuadrada del resultado para recuperar el radio. Por ejemplo, un área de unos 12,57 dividida entre pi da 4, y la raíz cuadrada de 4 es 2, el radio original. Este cálculo inverso es útil cuando conoces cuánto espacio cubre un círculo pero no su radio.",
+      },
+    ],
     fields: [
       { id: "radius", label: "Radius (r)", type: "number", placeholder: "2", required: true, span: 2, min: 0, step: 0.0001 },
     ],
@@ -183,6 +297,44 @@ export const mathR4Calculators: CalculatorDefinition[] = [
       "Free triangle area calculator. Enter the base and height to find the area of any triangle using the formula one-half base times height.",
     primaryKeyword: "triangle area calculator",
     secondaryKeywords: ["area of a triangle calculator", "base times height calculator", "triangle area formula"],
+    slugEs: "calculadora-de-area-de-triangulo",
+    titleEs: "Calculadora de Área de Triángulo",
+    shortDescriptionEs: "Halla el área de un triángulo a partir de la base y la altura.",
+    seoTitleEs: "Calculadora de Área de Triángulo — Área a partir de Base y Altura",
+    metaDescriptionEs:
+      "Calculadora de área de triángulo gratis. Introduce la base y la altura para hallar el área de cualquier triángulo usando la fórmula un medio por base por altura.",
+    primaryKeywordEs: "calculadora de area de triangulo",
+    secondaryKeywordsEs: ["calculadora de area de un triangulo", "calculadora base por altura", "formula de area de triangulo"],
+    formulaExplanationEs:
+      "El área de un triángulo es la mitad de la base por la altura porque todo triángulo es exactamente la mitad de un rectángulo o paralelogramo construido sobre la misma base y altura. La base es cualquier lado elegido, y la altura es la distancia perpendicular desde esa base hasta el vértice opuesto, medida en ángulo recto y no a lo largo de un lado inclinado. Multiplicar base por altura daría el área del paralelogramo circundante, así que dividir a la mitad aísla la parte del triángulo.",
+    explanationEs:
+      "El área de un triángulo es la cantidad de espacio plano encerrado por sus tres lados, y la forma más sencilla de hallarla es con la base y la altura. Esta calculadora de área de triángulo toma esas dos medidas y devuelve el área usando la fórmula un medio por base por altura. La base puede ser cualquiera de los tres lados que elijas, y la altura es la distancia perpendicular desde esa base directamente hasta la esquina opuesta, el vértice. Es importante que la altura se mida en ángulo recto respecto a la base, no a lo largo de un borde inclinado, porque la altura perpendicular es lo que realmente determina cuánta área cubre el triángulo. La razón del factor un medio es elegante: todo triángulo es exactamente la mitad de un paralelogramo con la misma base y altura, así que tomar la mitad de base por altura da el área del triángulo. Para un triángulo con una base de 10 y una altura de 4, el área es un medio por 10 por 4, que son 20 unidades cuadradas. Este método funciona para todo triángulo, sea rectángulo, acutángulo u obtusángulo, siempre que uses la altura perpendicular. Estudiantes que aprenden geometría, constructores que estiman material y diseñadores que trazan formas triangulares dependen de este cálculo rápido. Como tanto la base como la altura son longitudes, esta calculadora exige que sean cero o positivas.",
+    exampleEs: {
+      inputs: { base: 10, height: 4 },
+      explanation: "área = ½ × 10 × 4 = 20 unidades cuadradas.",
+    },
+    faqsEs: [
+      {
+        question: "¿Qué son la base y la altura de un triángulo?",
+        answer: "La base es cualquiera de los tres lados que elijas para medir, y la altura es la distancia perpendicular desde esa base hasta el vértice opuesto. La altura debe formar un ángulo recto con la base, así que es la distancia recta hacia arriba, no la longitud de un lado inclinado. Puedes elegir cualquier lado como base, siempre que lo emparejes con la altura perpendicular correspondiente a ese lado.",
+      },
+      {
+        question: "¿Por qué el área es la mitad de base por altura?",
+        answer: "Todo triángulo cabe exactamente dentro de un paralelogramo que tiene la misma base y la misma altura, y ocupa precisamente la mitad del área de ese paralelogramo. Como el área de un paralelogramo es base por altura, el área del triángulo es la mitad de eso. Puedes verlo duplicando el triángulo, rotando la copia y uniendo las dos para formar el paralelogramo completo, lo que confirma el factor un medio.",
+      },
+      {
+        question: "¿Funciona esto para todos los tipos de triángulos?",
+        answer: "Sí, la fórmula un medio por base por altura funciona para todo triángulo, sea rectángulo, acutángulo u obtusángulo. El único requisito es que uses la altura perpendicular correspondiente a tu base elegida. Para triángulos obtusángulos la altura puede caer fuera del triángulo, pero la fórmula sigue siendo válida. Si no conoces la altura, otros métodos como la fórmula de Herón usan las tres longitudes de los lados en su lugar.",
+      },
+      {
+        question: "¿Qué pasa si solo conozco las tres longitudes de los lados?",
+        answer: "Si conoces los tres lados pero no la altura, puedes usar la fórmula de Herón, que halla el área solo a partir de las longitudes de los lados. Primero calcula el semiperímetro, la mitad de la suma de los lados, luego toma la raíz cuadrada de ese valor por su diferencia con cada lado. Esta calculadora usa el método de base y altura en su lugar, así que necesitarías determinar la altura primero para usarla.",
+      },
+      {
+        question: "¿En qué unidades está el área?",
+        answer: "El área resulta en unidades cuadradas que corresponden a las unidades que usaste para la base y la altura. Si mediste en centímetros, el área está en centímetros cuadrados; si en metros, está en metros cuadrados. Mantén siempre la base y la altura en la misma unidad antes de calcular, porque mezclar unidades, como una en metros y otra en centímetros, daría un resultado sin sentido. Convierte a una unidad común primero.",
+      },
+    ],
     fields: [
       { id: "base", label: "Base", type: "number", placeholder: "10", required: true, span: 1, min: 0, step: 0.0001 },
       { id: "height", label: "Height", type: "number", placeholder: "4", required: true, span: 1, min: 0, step: 0.0001 },
@@ -238,6 +390,44 @@ export const mathR4Calculators: CalculatorDefinition[] = [
       "Free permutations calculator. Enter n and r to find the number of ordered arrangements (nPr) using the formula n! ÷ (n − r)!, the count of ways to arrange r items from n.",
     primaryKeyword: "permutations calculator",
     secondaryKeywords: ["nPr calculator", "permutation formula calculator", "ordered arrangements calculator"],
+    slugEs: "calculadora-de-permutaciones",
+    titleEs: "Calculadora de Permutaciones",
+    shortDescriptionEs: "Cuenta arreglos ordenados con nPr.",
+    seoTitleEs: "Calculadora de Permutaciones — Arreglos Ordenados nPr",
+    metaDescriptionEs:
+      "Calculadora de permutaciones gratis. Introduce n y r para hallar el número de arreglos ordenados (nPr) usando la fórmula n! ÷ (n − r)!, el conteo de formas de ordenar r elementos entre n.",
+    primaryKeywordEs: "calculadora de permutaciones",
+    secondaryKeywordsEs: ["calculadora nPr", "calculadora de formula de permutacion", "calculadora de arreglos ordenados"],
+    formulaExplanationEs:
+      "Una permutación cuenta de cuántas formas puedes ordenar r elementos elegidos entre n elementos distintos cuando el orden importa. La fórmula n factorial dividido entre n menos r factorial funciona porque hay n opciones para la primera posición, n menos uno para la segunda, y así sucesivamente hasta n menos r más uno para la última, y multiplicar esas cifras es exactamente lo que calcula la razón de factoriales. Dividir entre n menos r factorial cancela los arreglos de los elementos que no seleccionaste.",
+    explanationEs:
+      "Una permutación es un arreglo ordenado de elementos, y la calculadora de permutaciones te dice cuántos arreglos ordenados distintos son posibles cuando seleccionas r elementos de un conjunto de n elementos distintos. El orden importa en las permutaciones, que es lo que las separa de las combinaciones: el arreglo AB se cuenta como diferente de BA. Esta calculadora usa la fórmula nPr igual a n factorial dividido entre el factorial de n menos r, y devuelve el conteo total. La intuición es sencilla. Al llenar la primera posición tienes n opciones, para la segunda posición quedan n menos una opciones, para la tercera n menos dos, y así sucesivamente hasta haber llenado las r posiciones. Multiplicar esas cifras decrecientes da el número de arreglos ordenados, que la fórmula factorial captura de forma compacta. Por ejemplo, elegir y ordenar 2 elementos entre 5 da 5 por 4, que son 20 permutaciones. Las permutaciones aparecen siempre que la secuencia o el ranking importan: el número de formas de otorgar medallas de oro, plata y bronce, los posibles órdenes de una contraseña, o las disposiciones de asientos alrededor de una mesa. Esta calculadora exige que n y r sean números enteros de cero o más, y r no puede superar a n, ya que no puedes ordenar más elementos de los que tienes. Estudiantes de probabilidad y combinatoria, junto con cualquiera que cuente arreglos u órdenes, usan una calculadora de permutaciones para evitar multiplicaciones tediosas.",
+    exampleEs: {
+      inputs: { n: 5, r: 2 },
+      explanation: "5P2 = 5! ÷ 3! = 120 ÷ 6 = 20, equivalentemente 5 × 4 = 20 arreglos ordenados.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cuál es la diferencia entre permutaciones y combinaciones?",
+        answer: "Las permutaciones cuentan arreglos donde el orden importa, así que AB y BA son resultados diferentes. Las combinaciones cuentan selecciones donde el orden no importa, tratando AB y BA como el mismo grupo. Por eso siempre hay al menos tantas permutaciones como combinaciones para los mismos n y r. Usa permutaciones para situaciones ordenadas como rankings o secuencias, y combinaciones para las no ordenadas como elegir un comité.",
+      },
+      {
+        question: "¿Qué significa el signo de exclamación?",
+        answer: "El signo de exclamación denota un factorial, el producto de todos los números enteros positivos hasta e incluyendo ese número. Así, 5 factorial, escrito 5!, es igual a 5 por 4 por 3 por 2 por 1, que son 120. Los factoriales cuentan el número de formas de ordenar un conjunto completo de elementos distintos. Por convención, cero factorial es igual a uno, lo que mantiene la fórmula de permutación coherente incluso cuando n es igual a r.",
+      },
+      {
+        question: "¿Por qué r no puede ser mayor que n?",
+        answer: "El valor r es cuántos elementos seleccionas y ordenas de un conjunto de n elementos, así que no tiene sentido elegir más elementos de los que realmente existen. Si r fuera mayor que n, el término n menos r sería negativo, y los factoriales de números negativos son indefinidos. Físicamente no hay forma de ordenar, digamos, cinco elementos tomados de un conjunto de solo tres. La calculadora no devuelve resultado en ese caso.",
+      },
+      {
+        question: "¿Cuál es un ejemplo real de permutaciones?",
+        answer: "Otorgar medallas en una carrera es una permutación clásica. Si ocho corredores compiten por oro, plata y bronce, el número de posibles resultados en el podio es ocho por siete por seis, porque el orden determina quién recibe cada medalla. Otros ejemplos incluyen el número de formas de ajustar un candado de combinación, ordenar libros en un estante, u ordenar a los finalistas en cualquier competición clasificada donde la posición importa.",
+      },
+      {
+        question: "¿Qué pasa cuando r es igual a n?",
+        answer: "Cuando r es igual a n, estás ordenando todo el conjunto, y la fórmula se reduce a n factorial dividido entre cero factorial. Como cero factorial es igual a uno, la respuesta es simplemente n factorial, el número total de formas de ordenar todos los elementos. Por ejemplo, ordenar los 4 elementos de un conjunto de 4 da 4 factorial, que son 24. Este es el mayor conteo de permutaciones posible para un n dado.",
+      },
+    ],
     fields: [
       { id: "n", label: "Total items (n)", type: "number", placeholder: "5", required: true, span: 1, min: 0, step: 1 },
       { id: "r", label: "Items chosen (r)", type: "number", placeholder: "2", required: true, span: 1, min: 0, step: 1 },
@@ -293,6 +483,44 @@ export const mathR4Calculators: CalculatorDefinition[] = [
       "Free prime factorization calculator. Enter a whole number to break it into its prime factors, shown as a product, along with the total count of prime factors.",
     primaryKeyword: "prime factorization calculator",
     secondaryKeywords: ["prime factors calculator", "factor tree calculator", "factorize number calculator"],
+    slugEs: "calculadora-de-factorizacion-en-primos",
+    titleEs: "Calculadora de Factorización en Primos",
+    shortDescriptionEs: "Descompone un número en sus factores primos.",
+    seoTitleEs: "Calculadora de Factorización en Primos — Descomponer en Primos",
+    metaDescriptionEs:
+      "Calculadora de factorización en primos gratis. Introduce un número entero para descomponerlo en sus factores primos, mostrados como producto, junto con el conteo total de factores primos.",
+    primaryKeywordEs: "calculadora de factorizacion en primos",
+    secondaryKeywordsEs: ["calculadora de factores primos", "calculadora de arbol de factores", "calculadora factorizar numero"],
+    formulaExplanationEs:
+      "La factorización en primos expresa un número entero como un producto de números primos, aquellos mayores que uno que no tienen más divisores que uno y ellos mismos. La calculadora divide repetidamente el número entre el primo más pequeño que quepa exactamente, empezando en dos y subiendo, registrando cada divisor hasta que el número se reduce a uno. El teorema fundamental de la aritmética garantiza que todo entero mayor que uno tiene exactamente una factorización en primos, salvo el orden de los factores, así que el resultado siempre es único.",
+    explanationEs:
+      "La factorización en primos descompone un número entero en los números primos que se multiplican para producirlo. Un número primo es un número entero mayor que uno cuyos únicos divisores son uno y él mismo, como 2, 3, 5, 7 y 11. Esta calculadora de factorización en primos toma cualquier número entero de dos o más y devuelve su conjunto único de factores primos escrito como producto, junto con un conteo de cuántos factores primos tiene. El método es simple y sistemático: divide el número entre el primo más pequeño que quepa, que a menudo es 2, luego sigue dividiendo el resultado entre el primo más pequeño posible hasta quedarte con 1. Cada divisor que uses es un factor primo. Por ejemplo, 60 se divide entre 2 para dar 30, de nuevo entre 2 para dar 15, luego entre 3 para dar 5, y 5 es primo en sí mismo, así que 60 es igual a 2 por 2 por 3 por 5. El teorema fundamental de la aritmética garantiza que esta descomposición es única para cada número: hay exactamente un conjunto de factores primos, sin importar en qué orden los encuentres. La factorización en primos es la base de muchas tareas matemáticas, incluyendo hallar el máximo común divisor, simplificar fracciones e identificar mínimos comunes múltiplos. También sustenta la criptografía moderna, donde la dificultad de factorizar números muy grandes mantiene los datos seguros. Esta calculadora exige un número entero de al menos 2, ya que 1 y 0 no tienen factorización en primos.",
+    exampleEs: {
+      inputs: { number: 60 },
+      explanation: "60 = 2 × 30 = 2 × 2 × 15 = 2 × 2 × 3 × 5, así que tiene cuatro factores primos.",
+    },
+    faqsEs: [
+      {
+        question: "¿Qué es un número primo?",
+        answer: "Un número primo es un número entero mayor que uno que tiene exactamente dos divisores: uno y él mismo. Los primeros primos son 2, 3, 5, 7, 11 y 13. Los números con más de dos divisores, como 4 o 9, se llaman compuestos. El número 1 no es ni primo ni compuesto por definición. Los primos son los bloques de construcción de todos los números enteros, ya que todo entero mayor que uno es un producto de primos.",
+      },
+      {
+        question: "¿Qué es el teorema fundamental de la aritmética?",
+        answer: "El teorema fundamental de la aritmética afirma que todo número entero mayor que uno es primo o puede escribirse como un producto de primos de exactamente una forma, salvo el orden de los factores. Esto garantiza que la factorización en primos es única. Por eso la factorización que devuelve la calculadora es definitiva: ningún otro conjunto de primos se multiplica para dar el mismo número, lo que la convierte en una huella fiable para ese valor.",
+      },
+      {
+        question: "¿Cómo hago la factorización en primos a mano?",
+        answer: "Empieza dividiendo tu número entre el primo más pequeño que quepa exactamente, normalmente 2, luego repite con el cociente, subiendo a 3, 5, 7, y así según haga falta. Sigue dividiendo hasta llegar a 1, registrando cada divisor primo. Un árbol de factores es una versión visual del mismo proceso. Los primos que usaste, multiplicados juntos, reproducen el número original y forman su factorización en primos.",
+      },
+      {
+        question: "¿Para qué se usa la factorización en primos?",
+        answer: "La factorización en primos se usa para simplificar fracciones, hallar el máximo común divisor y el mínimo común múltiplo de números, y reducir radicales. Es esencial en la teoría de números y aparece en la criptografía, donde la seguridad de métodos como RSA descansa en lo difícil que es factorizar números muy grandes. En la matemática cotidiana ayuda a sumar fracciones e identificar si dos números comparten factores comunes.",
+      },
+      {
+        question: "¿Por qué no puedo factorizar 1 o 0?",
+        answer: "El número 1 no tiene factores primos porque no es el producto de ningún primo; es simplemente el elemento neutro de la multiplicación. El cero tampoco puede factorizarse en primos, ya que ningún producto de primos es igual a cero. La factorización en primos se define solo para números enteros de 2 o más, por lo que esta calculadora exige una entrada de al menos 2 y no devuelve factorización por debajo de eso.",
+      },
+    ],
     fields: [
       { id: "number", label: "Number", type: "number", placeholder: "60", required: true, span: 2, min: 2, step: 1 },
     ],
@@ -348,6 +576,44 @@ export const mathR4Calculators: CalculatorDefinition[] = [
       "Free cube root calculator. Enter any number, positive or negative, to find its cube root, the value that when multiplied by itself three times gives the original.",
     primaryKeyword: "cube root calculator",
     secondaryKeywords: ["cubed root calculator", "third root calculator", "find cube root"],
+    slugEs: "calculadora-de-raiz-cubica",
+    titleEs: "Calculadora de Raíz Cúbica",
+    shortDescriptionEs: "Halla la raíz cúbica de cualquier número.",
+    seoTitleEs: "Calculadora de Raíz Cúbica — Halla la Raíz Cúbica de un Número",
+    metaDescriptionEs:
+      "Calculadora de raíz cúbica gratis. Introduce cualquier número, positivo o negativo, para hallar su raíz cúbica, el valor que multiplicado por sí mismo tres veces da el original.",
+    primaryKeywordEs: "calculadora de raiz cubica",
+    secondaryKeywordsEs: ["calculadora de raiz al cubo", "calculadora de tercera raiz", "hallar raiz cubica"],
+    formulaExplanationEs:
+      "La raíz cúbica de un número es el valor que, multiplicado por sí mismo tres veces, produce el número original. Es la inversa de elevar al cubo, así que elevar un número a la potencia un tercio deshace elevarlo a la tercera potencia. A diferencia de las raíces cuadradas, las raíces cúbicas también están definidas para números negativos, porque multiplicar tres factores negativos da un resultado negativo, así que todo número real, positivo, negativo o cero, tiene exactamente una raíz cúbica real.",
+    explanationEs:
+      "La raíz cúbica de un número es el valor que, al elevarse al cubo, es decir multiplicado por sí mismo tres veces, devuelve el número original. Esta calculadora de raíz cúbica toma cualquier número, positivo o negativo, y devuelve su raíz cúbica real. Las raíces cúbicas son la operación inversa de elevar al cubo, igual que las raíces cuadradas invierten elevar al cuadrado. Si elevas 3 al cubo obtienes 27, así que la raíz cúbica de 27 es 3. Lo que distingue a las raíces cúbicas de las cuadradas es que funcionan perfectamente para números negativos. Como multiplicar tres negativos da un resultado negativo, la raíz cúbica de un número negativo es negativa: la raíz cúbica de menos 8 es menos 2, ya que menos 2 por menos 2 por menos 2 es igual a menos 8. Todo número real, sea positivo, negativo o cero, tiene exactamente una raíz cúbica real, a diferencia de las raíces cuadradas donde los negativos no tienen respuesta real y los positivos tienen dos. Las raíces cúbicas surgen siempre que trabajas con volumen, ya que el volumen de un cubo es la longitud del lado al cubo, así que recuperar el lado a partir de un volumen conocido significa tomar una raíz cúbica. También aparecen en problemas de escala, física e ingeniería. Los cubos perfectos como 8, 27, 64 y 125 dan raíces enteras, mientras que otras entradas dan decimales irracionales que la calculadora aproxima. Introduce cualquier valor y esta calculadora de raíz cúbica devuelve la raíz cúbica real precisa al instante.",
+    exampleEs: {
+      inputs: { number: 27 },
+      explanation: "La raíz cúbica de 27 es 3, porque 3 × 3 × 3 = 27.",
+    },
+    faqsEs: [
+      {
+        question: "¿Qué es una raíz cúbica?",
+        answer: "Una raíz cúbica de un número es el valor que, multiplicado por sí mismo tres veces, produce ese número. Es la inversa de elevar al cubo. Por ejemplo, la raíz cúbica de 64 es 4 porque 4 por 4 por 4 es igual a 64. El símbolo de una raíz cúbica es un signo radical con un pequeño 3, y también puede escribirse como elevar el número a la potencia de un tercio.",
+      },
+      {
+        question: "¿Se puede tomar la raíz cúbica de un número negativo?",
+        answer: "Sí, a diferencia de las raíces cuadradas, las raíces cúbicas de números negativos son reales y están bien definidas. Como un negativo por un negativo por un negativo da un negativo, la raíz cúbica de un número negativo es negativa. Por ejemplo, la raíz cúbica de menos 27 es menos 3. Esta es una diferencia clave frente a las raíces cuadradas, que no tienen valor real para entradas negativas, así que las raíces cúbicas siempre devuelven una respuesta real.",
+      },
+      {
+        question: "¿En qué se diferencia una raíz cúbica de una raíz cuadrada?",
+        answer: "Una raíz cuadrada invierte elevar al cuadrado y halla un valor multiplicado por sí mismo dos veces, mientras que una raíz cúbica invierte elevar al cubo y halla un valor multiplicado por sí mismo tres veces. Las raíces cuadradas de negativos no son reales, y los números positivos tienen dos raíces cuadradas. Las raíces cúbicas son más simples en un aspecto: todo número real tiene exactamente una raíz cúbica real, positiva, negativa o cero, sin ambigüedad ni restricción de signo.",
+      },
+      {
+        question: "¿Qué son los cubos perfectos?",
+        answer: "Los cubos perfectos son números que resultan de elevar al cubo un número entero, así que sus raíces cúbicas son números enteros sin decimales. Los primeros son 1, 8, 27, 64, 125 y 216, provenientes de 1, 2, 3, 4, 5 y 6 elevados al cubo. Reconocer los cubos perfectos te ayuda a estimar y simplificar raíces cúbicas a mano, ya que las raíces de números cercanos estarán próximas a esos valores enteros.",
+      },
+      {
+        question: "¿Dónde se usan las raíces cúbicas?",
+        answer: "Las raíces cúbicas aparecen siempre que una cantidad depende del cubo de una longitud, más comúnmente en cálculos de volumen. Si conoces el volumen de un cubo, la longitud de su lado es la raíz cúbica de ese volumen. También surgen en leyes de escala, donde duplicar una dimensión lineal multiplica el volumen por ocho, y en fórmulas de física e ingeniería que involucran crecimiento tridimensional, densidad o el comportamiento de ciertas ecuaciones.",
+      },
+    ],
     fields: [
       { id: "number", label: "Number", type: "number", placeholder: "27", required: true, span: 2, step: 0.0001 },
     ],
@@ -402,6 +668,44 @@ export const mathR4Calculators: CalculatorDefinition[] = [
       "Free proportion calculator. Enter three values of a proportion a/b = c/x to solve for the missing fourth value using cross multiplication.",
     primaryKeyword: "proportion calculator",
     secondaryKeywords: ["ratio proportion calculator", "cross multiplication calculator", "solve proportion calculator"],
+    slugEs: "calculadora-de-proporciones",
+    titleEs: "Calculadora de Proporciones",
+    shortDescriptionEs: "Resuelve a/b = c/x para el valor faltante.",
+    seoTitleEs: "Calculadora de Proporciones — Resuelve a/b = c/x",
+    metaDescriptionEs:
+      "Calculadora de proporciones gratis. Introduce tres valores de una proporción a/b = c/x para resolver el cuarto valor faltante mediante multiplicación cruzada.",
+    primaryKeywordEs: "calculadora de proporciones",
+    secondaryKeywordsEs: ["calculadora de razon y proporcion", "calculadora de multiplicacion cruzada", "calculadora resolver proporcion"],
+    formulaExplanationEs:
+      "Una proporción afirma que dos razones son iguales, así que a dividido entre b es igual a c dividido entre x. Multiplicando en cruz ambos lados, es decir multiplicando cada numerador por el denominador opuesto, da a por x igual a b por c. Resolviendo eso para la incógnita x se divide ambos lados entre a, produciendo x igual a b por c dividido entre a. La multiplicación cruzada funciona porque multiplicar ambos lados de una ecuación por las mismas cantidades distintas de cero preserva la igualdad mientras elimina las fracciones.",
+    explanationEs:
+      "Una proporción es una afirmación de que dos razones son iguales, y resolver una proporción significa hallar un valor faltante que haga coincidir ambas razones. Esta calculadora de proporciones trabaja con la proporción a sobre b igual a c sobre x, tomando los tres valores conocidos a, b y c y resolviendo para la incógnita x. La técnica detrás de ella es la multiplicación cruzada: cuando dos fracciones son iguales, el producto del numerador de una y el denominador de la otra es igual al producto del otro par. Aplicando eso a a sobre b igual a c sobre x da a por x igual a b por c, y dividiendo ambos lados entre a se aísla x como b por c dividido entre a. Por ejemplo, en la proporción 2 sobre 4 igual a 3 sobre x, multiplicar en cruz da 2x igual a 12, así que x es igual a 6. Las proporciones están en todas partes en la matemática práctica. Impulsan conversiones de unidades, el escalado de recetas, la lectura de mapas y cualquier situación donde las cantidades mantienen una razón constante. Si una receta para cuatro necesita dos tazas de harina y quieres servir a seis, una proporción te dice cuánta harina usar. Los triángulos semejantes en geometría, el cambio de divisas y las razones de mezcla se apoyan en la misma idea. Esta calculadora exige que el valor a sea distinto de cero, porque dividir entre cero es indefinido, lo que ocurre cuando el primer término de la proporción es cero. Estudiantes, cocineros, artesanos y diseñadores usan proporciones para escalar cantidades manteniendo intactas las relaciones.",
+    exampleEs: {
+      inputs: { a: 2, b: 4, c: 3 },
+      explanation: "2/4 = 3/x, así que multiplicar en cruz da 2x = 12, y x = 6.",
+    },
+    faqsEs: [
+      {
+        question: "¿Qué es una proporción?",
+        answer: "Una proporción es una ecuación que afirma que dos razones son iguales, como a sobre b igual a c sobre d. Expresa que dos pares de cantidades comparten la misma relación o escala. Las proporciones se usan para comparar cantidades y hallar un valor desconocido cuando se conocen tres de los cuatro términos. Resolverlas es una de las aplicaciones cotidianas más útiles del álgebra, desde cocinar hasta convertir medidas.",
+      },
+      {
+        question: "¿Qué es la multiplicación cruzada?",
+        answer: "La multiplicación cruzada es el método usado para resolver una proporción. Cuando dos fracciones se igualan, multiplicas el numerador de cada una por el denominador de la otra, produciendo una ecuación sin fracciones. Para a sobre b igual a c sobre x, multiplicar en cruz da a por x igual a b por c. Esto funciona porque multiplicar ambos lados de la ecuación por los denominadores preserva la igualdad mientras elimina las fracciones, haciendo fácil aislar la incógnita.",
+      },
+      {
+        question: "¿Dónde se usan las proporciones en la vida real?",
+        answer: "Las proporciones aparecen constantemente en la vida diaria. Escalan recetas hacia arriba o hacia abajo, convierten entre unidades y divisas, leen distancias en mapas, mezclan pintura o sustancias químicas en las razones correctas, y calculan figuras semejantes en geometría. Cada vez que dos cantidades deben mantener una relación fija a medida que crecen o encogen, una proporción describe ese vínculo. Están entre las herramientas más prácticas de la matemática cotidiana.",
+      },
+      {
+        question: "¿Por qué el valor a no puede ser cero?",
+        answer: "Resolver la proporción para x requiere dividir entre a, y la división entre cero es indefinida en matemáticas. Si a fuera cero, la razón a sobre b sería cero, y no habría un valor consistente de x que equilibrara una razón distinta de cero al otro lado. Por tanto la calculadora no devuelve resultado cuando a es cero. Reordena la proporción para que la incógnita no quede emparejada con un término cero.",
+      },
+      {
+        question: "¿En qué se diferencia una proporción de una razón?",
+        answer: "Una razón compara dos cantidades, como 2 a 4, mostrando sus tamaños relativos. Una proporción va un paso más allá al igualar dos razones entre sí, formando una ecuación como 2 sobre 4 igual a 3 sobre 6. En resumen, una razón es una sola comparación, mientras que una proporción afirma que dos de esas comparaciones son equivalentes. Las proporciones te permiten resolver una cantidad desconocida que mantiene la razón constante.",
+      },
+    ],
     fields: [
       { id: "a", label: "a", type: "number", placeholder: "2", required: true, span: 1, step: 0.0001 },
       { id: "b", label: "b", type: "number", placeholder: "4", required: true, span: 1, step: 0.0001 },
@@ -458,6 +762,44 @@ export const mathR4Calculators: CalculatorDefinition[] = [
       "Free rounding calculator. Enter a number and the number of decimal places to round it to the nearest value, and see it rounded up and rounded down too.",
     primaryKeyword: "rounding calculator",
     secondaryKeywords: ["round to decimal places calculator", "round numbers calculator", "round up or down calculator"],
+    slugEs: "calculadora-de-redondeo",
+    titleEs: "Calculadora de Redondeo",
+    shortDescriptionEs: "Redondea un número a cualquier posición decimal.",
+    seoTitleEs: "Calculadora de Redondeo — Redondear a Posiciones Decimales",
+    metaDescriptionEs:
+      "Calculadora de redondeo gratis. Introduce un número y la cantidad de posiciones decimales para redondearlo al valor más cercano, y velo redondeado hacia arriba y hacia abajo también.",
+    primaryKeywordEs: "calculadora de redondeo",
+    secondaryKeywordsEs: ["calculadora redondear a decimales", "calculadora de redondear numeros", "calculadora redondear hacia arriba o abajo"],
+    formulaExplanationEs:
+      "Redondear a una cantidad elegida de posiciones decimales funciona desplazando el punto decimal, redondeando a un número entero y desplazándolo de vuelta. Multiplicar por diez elevado al número de posiciones mueve el dígito que quieres conservar a la posición de las unidades, así que se aplica el redondeo ordinario de números enteros, el techo o el piso. Dividir después entre la misma potencia de diez restaura la escala original. Redondear al más cercano salta al valor más próximo, el techo siempre sube y el piso siempre baja.",
+    explanationEs:
+      "El redondeo reemplaza un número por un valor cercano más simple que tiene menos posiciones decimales, haciéndolo más fácil de leer, reportar o manejar. Esta calculadora de redondeo toma un número y la cantidad de posiciones decimales que quieras, luego devuelve tres resultados: el número redondeado al valor más cercano, redondeado hacia arriba y redondeado hacia abajo. Redondear al más cercano es el valor predeterminado cotidiano: miras el dígito justo después de la posición que conservas, y si es 5 o más redondeas hacia arriba, de lo contrario redondeas hacia abajo. Redondear hacia arriba, también llamado techo, siempre pasa al valor mayor sin importar el dígito siguiente, mientras que redondear hacia abajo, el piso, siempre pasa al valor menor. La cantidad de posiciones decimales controla la precisión: redondear 3,14159 a dos posiciones decimales da 3,14 al más cercano, 3,15 hacia arriba y 3,14 hacia abajo. Si dejas las posiciones decimales en blanco, se ajusta a cero por defecto, redondeando a un número entero. El redondeo importa porque los cálculos crudos a menudo producen más dígitos de los que son significativos o útiles, y reportar cada dígito puede implicar una precisión falsa. El dinero se redondea a dos decimales, las medidas a la precisión del instrumento y las estadísticas a un número sensato de cifras significativas. Ver los valores más cercano, hacia arriba y hacia abajo juntos es útil cuando necesitas conocer el rango en que podría caer una cifra redondeada. Esta calculadora exige que las posiciones decimales sean un número entero de cero o más.",
+    exampleEs: {
+      inputs: { number: 3.14159, decimalPlaces: 2 },
+      explanation: "A 2 posiciones: más cercano = 3,14, arriba = 3,15, abajo = 3,14.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cómo funciona redondear al más cercano?",
+        answer: "Redondear al más cercano mira el primer dígito más allá de la posición que conservas. Si ese dígito es 5 o mayor, redondeas el dígito conservado un lugar hacia arriba; si es 4 o menor, dejas el dígito conservado como está y descartas el resto. Así, 3,14159 a dos posiciones se convierte en 3,14, porque el tercer decimal es 1, que está por debajo de 5. Esta es la regla estándar de redondeo cotidiano.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre redondear hacia arriba y hacia abajo?",
+        answer: "Redondear hacia arriba, llamado techo, siempre pasa al siguiente valor mayor en la precisión elegida, sin importar los dígitos siguientes. Redondear hacia abajo, llamado piso, siempre pasa al siguiente valor menor. A diferencia de redondear al más cercano, estos ignoran si el dígito siguiente está por encima o por debajo de 5. Redondear hacia arriba se usa para cosas como precios o capacidad, mientras que redondear hacia abajo conviene para límites que no debes superar.",
+      },
+      {
+        question: "¿Qué significan las posiciones decimales?",
+        answer: "Las posiciones decimales son la cantidad de dígitos conservados después del punto decimal. Redondear a dos posiciones decimales conserva dos dígitos después del punto, como el dinero en euros y céntimos. Redondear a cero posiciones decimales da un número entero. Cuantas más posiciones decimales conserves, más preciso pero menos simplificado será el resultado. Esta calculadora te permite elegir cualquier número de posiciones, con cero por defecto para el redondeo a número entero.",
+      },
+      {
+        question: "¿Qué es la regla de 'redondear la mitad hacia arriba'?",
+        answer: "La regla de redondear la mitad hacia arriba dice que cuando el dígito que se descarta es exactamente 5, redondeas el dígito conservado hacia arriba. Esta es la convención más familiar enseñada en las escuelas y usada por el resultado más cercano de esta calculadora. Una alternativa, llamada redondeo bancario o redondeo de la mitad al par, redondea un 5 final al dígito par más cercano para reducir el sesgo acumulado en grandes conjuntos de datos, pero redondear la mitad hacia arriba es el valor predeterminado común.",
+      },
+      {
+        question: "¿Por qué importa el redondeo?",
+        answer: "El redondeo mantiene los números legibles y evita implicar más precisión de la que una medida o cálculo realmente tiene. Reportar una longitud como 2,4 metros es más claro y honesto que 2,41732 metros si tu regla solo mide a la décima más cercana. El redondeo también importa para el dinero, que se limita a dos decimales, y para las estadísticas, donde un redondeo sensato evita el desorden. Elegir el número correcto de posiciones equilibra precisión y simplicidad.",
+      },
+    ],
     fields: [
       { id: "number", label: "Number", type: "number", placeholder: "3.14159", required: true, span: 1, step: 0.00001 },
       { id: "decimalPlaces", label: "Decimal places", type: "number", placeholder: "2", required: false, span: 1, min: 0, step: 1, defaultValue: 0 },
@@ -515,6 +857,44 @@ export const mathR4Calculators: CalculatorDefinition[] = [
       "Free linear interpolation calculator. Enter two known points and a target x to estimate the corresponding y value along the straight line between them.",
     primaryKeyword: "linear interpolation calculator",
     secondaryKeywords: ["interpolation calculator", "lerp calculator", "estimate value between points"],
+    slugEs: "calculadora-de-interpolacion-lineal",
+    titleEs: "Calculadora de Interpolación Lineal",
+    shortDescriptionEs: "Estima un valor entre dos puntos conocidos.",
+    seoTitleEs: "Calculadora de Interpolación Lineal — Estimar Entre Puntos",
+    metaDescriptionEs:
+      "Calculadora de interpolación lineal gratis. Introduce dos puntos conocidos y un x objetivo para estimar el valor y correspondiente a lo largo de la línea recta entre ellos.",
+    primaryKeywordEs: "calculadora de interpolacion lineal",
+    secondaryKeywordsEs: ["calculadora de interpolacion", "calculadora lerp", "estimar valor entre puntos"],
+    formulaExplanationEs:
+      "La interpolación lineal supone que el valor cambia a un ritmo constante entre dos puntos conocidos, así que sigue la línea recta que los une. La pendiente de esa línea es el cambio en y dividido entre el cambio en x. Partiendo del valor y del primer punto, sumas la pendiente multiplicada por cuánto se aleja el x objetivo de x₁. Esto da el valor y sobre la línea en ese x. Requiere que x₂ y x₁ difieran, de lo contrario la línea es vertical y la pendiente queda indefinida.",
+    explanationEs:
+      "La interpolación lineal estima un valor desconocido que cae entre dos puntos de datos conocidos suponiendo que la cantidad cambia a un ritmo constante en línea recta entre ellos. Esta calculadora de interpolación lineal toma dos puntos conocidos, dados como x₁, y₁ y x₂, y₂, junto con un valor x objetivo, y devuelve el valor y interpolado sobre la línea recta que conecta los dos puntos. El método es un pilar de la ciencia, la ingeniería y el análisis de datos porque las mediciones reales a menudo se toman solo en ciertos puntos, y sin embargo con frecuencia necesitas un valor intermedio. El cálculo parte del primer punto conocido y suma una fracción del ascenso total, escalada por cuán lejos a lo largo del intervalo se sitúa el x objetivo. En términos de fórmula, calcula la pendiente entre los dos puntos, el cambio en y sobre el cambio en x, y aplica esa pendiente sobre la distancia desde x₁ hasta el x objetivo. Por ejemplo, con los puntos (0, 0) y (10, 100), interpolar en x igual a 5 da y igual a 50, exactamente a la mitad porque 5 está a la mitad del intervalo. La interpolación lineal lee valores de tablas, rellena huecos en conjuntos de datos, impulsa animaciones suaves entre fotogramas clave y estima lecturas entre puntos de calibración de un instrumento. Supone que la relación es aproximadamente lineal en el intervalo, lo que es una buena aproximación cuando los dos puntos están cerca. Esta calculadora exige que x₂ y x₁ difieran, porque dos puntos con el mismo x forman una línea vertical sin un único valor y que devolver.",
+    exampleEs: {
+      inputs: { x1: 0, y1: 0, x2: 10, y2: 100, x: 5 },
+      explanation: "y = 0 + (5 − 0) × (100 − 0) ÷ (10 − 0) = 50, a la mitad entre los puntos.",
+    },
+    faqsEs: [
+      {
+        question: "¿Qué es la interpolación lineal?",
+        answer: "La interpolación lineal es un método para estimar un valor desconocido que se encuentra entre dos puntos de datos conocidos, suponiendo que el valor cambia en línea recta entre ellos. Trazas una línea imaginaria que conecta los dos puntos y lees el valor en tu posición objetivo a lo largo de ella. Es la forma más simple de interpolación y se usa ampliamente cuando tienes mediciones en algunos puntos pero necesitas una estimación para un punto intermedio.",
+      },
+      {
+        question: "¿Cuándo es precisa la interpolación lineal?",
+        answer: "La interpolación lineal es más precisa cuando los dos puntos conocidos están cerca y la relación subyacente es casi recta en ese intervalo. Si la relación verdadera se curva bruscamente entre los puntos, la estimación en línea recta puede desviarse de la realidad. Para cantidades que varían suavemente muestreadas a intervalos finos, suele ser muy fiable. Cuando se necesita mayor precisión sobre datos curvos, se usan métodos como la interpolación polinómica o por splines.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre interpolación y extrapolación?",
+        answer: "La interpolación estima un valor que cae entre puntos de datos conocidos, mientras que la extrapolación estima un valor más allá del rango de los puntos conocidos. La interpolación es generalmente más segura porque trabajas dentro de la región que cubren tus datos. La extrapolación es más arriesgada, ya que la tendencia puede no continuar más allá del rango medido. Esta calculadora está diseñada para interpolación, aunque la misma fórmula extenderá una línea más allá de los puntos si introduces un x fuera del intervalo.",
+      },
+      {
+        question: "¿Por qué x₁ y x₂ deben ser diferentes?",
+        answer: "La fórmula divide entre la diferencia entre x₂ y x₁ para hallar la pendiente de la línea que los conecta. Si esos dos valores x fueran iguales, esa diferencia sería cero, dejando la pendiente indefinida por división entre cero. Dos puntos con el mismo x también forman una línea vertical, que no tiene un único valor y para un x dado. Por tanto la calculadora exige que las dos coordenadas x difieran.",
+      },
+      {
+        question: "¿Dónde se usa la interpolación lineal?",
+        answer: "La interpolación lineal se usa para leer valores de tablas, como tramos de impuestos o gráficas de ingeniería, para rellenar entradas faltantes en conjuntos de datos y para convertir entre puntos de calibración de instrumentos. En gráficos por computadora y animación mezcla suavemente entre posiciones de fotogramas clave, una técnica a menudo llamada lerp. Los científicos la usan para estimar lecturas entre mediciones, y las finanzas para aproximar tasas entre valores cotizados. Es una herramienta fundamental de estimación cotidiana.",
+      },
+    ],
     fields: [
       { id: "x1", label: "x₁", type: "number", placeholder: "0", required: true, span: 1, step: 0.0001 },
       { id: "y1", label: "y₁", type: "number", placeholder: "0", required: true, span: 1, step: 0.0001 },
