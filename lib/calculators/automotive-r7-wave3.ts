@@ -48,6 +48,38 @@ export const automotiveR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard fuel economy unit conversion",
+    slugEs: "conversor-de-mpg-a-l100km",
+    titleEs: "Conversor de MPG a L/100km",
+    shortDescriptionEs: "Convierte millas por galón en litros por 100 km.",
+    seoTitleEs: "Conversor de MPG a L/100km — Conversión de Consumo",
+    metaDescriptionEs: "Conversor gratuito de MPG a L/100km. Introduce las millas por galón estadounidenses para ver al instante los litros por 100 kilómetros equivalentes usados por el consumo europeo y métrico.",
+    primaryKeywordEs: "conversor de mpg a l/100km",
+    secondaryKeywordsEs: ["mpg a l100km", "conversor de consumo de combustible", "millas por galón a litros por 100km"],
+    formulaExplanationEs: "Las millas por galón y los litros por 100 kilómetros describen lo mismo desde extremos opuestos: uno cuenta la distancia por unidad de combustible, el otro cuenta el combustible por distancia fija. Como son recíprocos y no una escala directa, la conversión requiere el factor fijo 235.214583, que agrupa las conversiones de galón a litro y de milla a kilómetro en una sola constante. Dividir esa constante entre tus MPG devuelve la cifra métrica, y un MPG más alto siempre produce un L/100km más bajo.",
+    explanationEs: "Comparar un coche calificado en millas por galón estadounidenses con otro calificado en litros por 100 kilómetros europeos resulta confuso porque las dos medidas avanzan en direcciones opuestas, y este conversor de MPG a L/100km elimina las conjeturas. Introduce una cifra de consumo en millas por galón y devuelve el equivalente métrico exacto, permitiéndote alinear especificaciones de distintos mercados en una sola escala.\n\nLa conversión importa siempre que compras entre fronteras, lees una reseña importada o intentas entender el folleto global de un fabricante. Un coche anunciado a 6 L/100km y otro anunciado a 39 MPG suenan diferentes, pero describen una eficiencia casi idéntica. Sin una conversión fiable es fácil juzgar mal qué vehículo consume menos combustible, y pequeñas diferencias de eficiencia se acumulan en dinero real a lo largo de años de conducción.\n\nLa idea clave es que MPG y L/100km son cantidades recíprocas unidas por una constante fija. Las millas por galón premian los números altos, ya que más distancia por galón es mejor, mientras que los litros por 100 kilómetros premian los números bajos, ya que menos combustible para la misma distancia es mejor. Como la relación no es lineal, saltar de 20 a 25 MPG ahorra mucho más combustible que saltar de 45 a 50 MPG, y ver la misma eficiencia en términos métricos hace visible esa no linealidad y más fácil de razonar al sopesar tus opciones.",
+    exampleEs: { inputs: { mpg: 30 }, explanation: "235.214583 ÷ 30 ≈ 7.84 L/100km, así que un coche de 30 MPG usa unos 7.84 litros para recorrer 100 kilómetros." },
+    faqsEs: [
+      {
+        question: "¿Por qué el factor de conversión es 235.214583?",
+        answer: "La constante combina dos conversiones de unidades en un solo número. Considera los 3.785 litros de un galón estadounidense y los 1.609 kilómetros de una milla, dispuestos para que dividirla entre las millas por galón dé litros por 100 kilómetros directamente. Como MPG y L/100km son medidas recíprocas y no proporcionales, una simple multiplicación no funciona, pero este divisor fijo maneja ambos pasos a la vez con precisión.",
+      },
+      {
+        question: "¿Usa galones estadounidenses o imperiales?",
+        answer: "Este conversor usa el galón estadounidense, que es el estándar para las calificaciones de consumo en Estados Unidos. El galón imperial usado en el Reino Unido es alrededor de un 20 por ciento más grande, así que una cifra de MPG imperial se convertiría con una constante distinta cercana a 282.5. Si tu cifra de MPG viene de una fuente británica, ten en cuenta que puede ser imperial, lo que sobreestimaría la eficiencia frente a la medida estadounidense.",
+      },
+      {
+        question: "¿Por qué una pequeña ganancia de MPG vale más con MPG bajo?",
+        answer: "Como el consumo es el recíproco del MPG, la relación no es lineal. Pasar de 15 a 20 MPG reduce el consumo mucho más que pasar de 40 a 45 MPG, aunque ambas son ganancias de cinco MPG. Ver los números en L/100km lo hace evidente, ya que la cifra de litros por distancia cae abruptamente con MPG bajo y solo suavemente con MPG alto, por lo que los coches eficientes muestran rendimientos decrecientes.",
+      },
+      {
+        question: "¿Cuál es un valor típico de L/100km para un coche eficiente?",
+        answer: "Un híbrido moderno frugal suele situarse alrededor de 4 a 5 L/100km, un sedán de gasolina típico alrededor de 7 a 9 L/100km, y un SUV o camioneta grande puede superar los 12 L/100km. Los números más bajos son mejores en esta métrica. Como condiciones como el tráfico urbano, el clima frío y la conducción agresiva elevan el consumo, las cifras reales suelen ser algo más altas que la calificación oficial que conviertes aquí.",
+      },
+      {
+        question: "¿Puedo convertir L/100km de nuevo a MPG?",
+        answer: "Sí, la relación es simétrica porque ambas medidas son recíprocas unidas por la misma constante. Para ir en sentido inverso, divide 235.214583 entre el valor de L/100km y recuperas la cifra de millas por galón. Esto significa que la conversión nunca pierde información: cualquier eficiencia expresada en una unidad se corresponde con exactamente un valor en la otra, así que puedes moverte entre calificaciones estadounidenses y métricas libremente y de forma consistente.",
+      },
+    ],
   },
   {
     id: "car-lease-payment",
@@ -100,6 +132,38 @@ export const automotiveR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard lease payment formula (depreciation + finance charge)",
+    slugEs: "calculadora-de-pago-de-leasing-de-auto",
+    titleEs: "Calculadora de Pago de Leasing de Auto",
+    shortDescriptionEs: "Estima el pago mensual de un leasing de auto.",
+    seoTitleEs: "Calculadora de Pago de Leasing de Auto — Costo Mensual",
+    metaDescriptionEs: "Calculadora gratuita de pago de leasing de auto. Introduce el precio del vehículo, valor residual, entrada, plazo y factor de dinero para estimar tu pago mensual antes de firmar.",
+    primaryKeywordEs: "calculadora de pago de leasing de auto",
+    secondaryKeywordsEs: ["calculadora de pago de leasing", "calculadora de arrendamiento de auto", "costo mensual de leasing"],
+    formulaExplanationEs: "Un pago de leasing tiene dos partes. La porción de depreciación reparte el valor que el coche pierde durante el leasing a lo largo del plazo: es el precio menos tu entrada menos el valor residual que se espera que el coche conserve, dividido entre el número de meses. El cargo financiero es la renta sobre el dinero comprometido, calculado multiplicando la suma de los saldos inicial y residual por el factor de dinero. Sumar los dos da el pago mensual.",
+    explanationEs: "El leasing te permite pagar por la porción de un coche que usas en lugar del vehículo entero, y esta calculadora de pago de leasing de auto muestra cuál será esa cifra mensual antes de sentarte en el concesionario. Introduce el precio del vehículo, el valor residual como porcentaje, cualquier entrada, el plazo del leasing en meses y el factor de dinero, y devuelve el pago mensual estimado.\n\nEntender cómo se construye un pago de leasing te protege de sorpresas. A diferencia de un préstamo, donde financias el precio completo, un leasing te cobra principalmente por la depreciación, el valor que el coche pierde mientras conduces. Un valor residual alto significa que el coche conserva su valor, dejando menos por pagar, por lo que algunos modelos se arriendan mucho más barato que otros a pesar de un precio de etiqueta similar. El factor de dinero, mientras tanto, es simplemente la tasa de interés del leasing vestida con ropa desconocida.\n\nVer el pago desglosado en sus causas te permite comprar de forma más inteligente. Puedes probar cómo una entrada mayor reduce la cifra mensual, cómo un residual más alto hace un leasing más atractivo, o cómo un factor de dinero más pronunciado añade costo silenciosamente. Como las porciones de depreciación y financiación responden de forma distinta a cada dato, ajustarlas una a una revela qué palanca realmente mueve tu pago, ayudándote a negociar los términos que importan y a reconocer un buen trato de leasing de uno que solo parece barato.",
+    exampleEs: { inputs: { carPrice: 35000, residualPercent: 55, downPayment: 3000, leaseMonths: 36, moneyFactor: 0.0025 }, explanation: "Residual = $19,250; depreciación = (35000−3000−19250)/36 ≈ $354.17; financiación = (35000−3000+19250)×0.0025 ≈ $128.13; pago ≈ $482.29/mes." },
+    faqsEs: [
+      {
+        question: "¿Qué es un valor residual?",
+        answer: "El valor residual es lo que la compañía de leasing espera que el coche valga al final del contrato, generalmente expresado como porcentaje del precio original. Lo fija el arrendador, no se negocia. Un residual más alto significa que el coche se deprecia menos durante tu leasing, así que pagas por una caída de valor menor y tu pago mensual es más bajo, por lo que los coches que conservan bien su valor suelen arrendarse baratos.",
+      },
+      {
+        question: "¿Qué es un factor de dinero y cómo se relaciona con la TAE?",
+        answer: "El factor de dinero es el equivalente de la tasa de interés en un leasing, escrito como un decimal pequeño como 0.0025. Para aproximar la tasa anual equivalente, multiplica el factor de dinero por 2400. Así, 0.0025 corresponde a aproximadamente una TAE del 6 por ciento. Un factor de dinero más bajo significa financiación más barata en el leasing, así que vale la pena pedir al concesionario la cifra exacta que usan en tu cotización.",
+      },
+      {
+        question: "¿Una entrada mayor siempre ayuda?",
+        answer: "Una entrada mayor, a veces llamada reducción del costo capitalizado, reduce tu pago mensual al disminuir tanto la porción de depreciación como la de financiación. Sin embargo, si el coche es robado o declarado pérdida total al inicio del leasing, ese dinero adelantado generalmente no se reembolsa, así que arriesgas perderlo. Muchos asesores sugieren mantener la entrada modesta y priorizar un precio y un factor de dinero más bajos para el mejor valor global.",
+      },
+      {
+        question: "¿Qué omite esta estimación?",
+        answer: "Esta calculadora se centra en el pago mensual base de depreciación y cargos financieros. Las cotizaciones reales de leasing también añaden impuesto sobre ventas, que varía por estado, más comisiones de adquisición, matriculación, gastos de documentación y cualquier extra del concesionario. También puede haber límites de kilometraje con penalizaciones por milla al excederlos y cargos por desgaste excesivo al devolver. Considera la cifra de aquí como el pago central antes de sumar impuestos y comisiones.",
+      },
+      {
+        question: "¿Cómo puedo reducir mi pago de leasing?",
+        answer: "Enfócate en los datos que impulsan el pago: negocia un precio de vehículo más bajo, elige un modelo con un valor residual alto y consigue un factor de dinero bajo con buen crédito o comparando ofertas. Una entrada mayor reduce la cifra mensual pero conlleva riesgo si el coche se pierde. Los plazos más largos bajan el pago pero te mantienen responsable más tiempo, así que equilibra el costo mensual con el compromiso total.",
+      },
+    ],
   },
   {
     id: "car-cost-per-mile",
@@ -149,6 +213,38 @@ export const automotiveR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard cost-per-mile method",
+    slugEs: "calculadora-de-costo-por-milla-de-auto",
+    titleEs: "Calculadora de Costo por Milla de Auto",
+    shortDescriptionEs: "Descubre el costo real de cada milla que conduces.",
+    seoTitleEs: "Calculadora de Costo por Milla — Costo Real de Conducir",
+    metaDescriptionEs: "Calculadora gratuita de costo por milla de auto. Divide tus costos anuales totales del vehículo entre las millas conducidas para ver el costo real de cada milla para presupuesto, reembolso o comparación.",
+    primaryKeywordEs: "calculadora de costo por milla de auto",
+    secondaryKeywordsEs: ["calculadora de costo por milla", "costo de conducir por milla", "costo por milla del vehículo"],
+    formulaExplanationEs: "El costo por milla convierte un montón de gasto anual en una sola tarifa dividiendo cada dólar que pones en el coche a lo largo de un año entre el número de millas que te llevó. Como combina costos fijos como el seguro y la depreciación con costos variables como el combustible y los neumáticos, el resultado refleja toda la carga de la propiedad repartida entre la distancia. Conducir más millas reduce la cifra por milla, ya que los costos fijos se comparten sobre una base mayor.",
+    explanationEs: "La gente rara vez sabe lo que conducir realmente les cuesta por milla, y esta calculadora de costo por milla de auto responde esa pregunta combinando cada gasto de propiedad en una tarifa honesta. Introduce tus costos anuales totales del vehículo y las millas que conduces en un año, y devuelve el costo de cada milla, un número que revela el precio real de los viajes que das por sentados.\n\nLa cifra es más reveladora que el costo del combustible solo porque tener un coche implica mucho más que gasolina. El seguro, la matriculación, el mantenimiento, los neumáticos, las reparaciones y especialmente la depreciación cuestan dinero conduzcas o no, y el costo por milla los reparte entre la distancia que recorres. Por eso un conductor de bajo kilometraje a menudo paga una cantidad sorprendentemente alta por milla: los costos fijos se comparten entre menos millas, así que cada una carga una porción mayor.\n\nConocer tu verdadero costo por milla ayuda de formas concretas. Te permite juzgar si un viaje largo vale la pena, fijar una tarifa justa al reembolsarte a ti o a otros, comparar mantener un coche frente al transporte compartido, y decidir si un segundo vehículo se gana su lugar. Como el cálculo simplemente divide los costos totales entre las millas, puedes introducir distintos escenarios de kilometraje o costo y ver de inmediato cómo conducir más adelgaza la carga fija, o cómo recortar una categoría de gasto reduce la tarifa por cada milla que conduces.",
+    exampleEs: { inputs: { annualCosts: 9000, annualMiles: 12000 }, explanation: "$9,000 en costos anuales ÷ 12,000 millas = $0.75 por milla, cubriendo combustible, seguro, mantenimiento y depreciación combinados." },
+    faqsEs: [
+      {
+        question: "¿Qué costos debo incluir en el total?",
+        answer: "Incluye todo lo que el coche te cuesta en un año: combustible o carga, seguro, matriculación e impuestos, mantenimiento rutinario, neumáticos, reparaciones y depreciación, que es el valor que el coche pierde. Si financias, añade los intereses del préstamo. Cuanto más completo sea tu total, más preciso será el costo por milla. Omitir la depreciación es un error común que hace que conducir parezca mucho más barato de lo que realmente es con el tiempo.",
+      },
+      {
+        question: "¿Por qué es tan importante la depreciación aquí?",
+        answer: "La depreciación suele ser el mayor costo de tener un coche nuevo, aunque es invisible porque no llega ninguna factura por ella. Un coche pierde valor de forma constante ya sea que esté parado o conduzca, y ese valor perdido es un costo real que pagas cuando finalmente vendes o cambias. Incluir una estimación anual de depreciación en tu total es esencial para un costo por milla honesto, especialmente para vehículos nuevos.",
+      },
+      {
+        question: "¿Por qué conducir menos aumenta mi costo por milla?",
+        answer: "Muchos costos del coche son fijos: el seguro, la matriculación y la depreciación ocurren sin importar la distancia. Cuando divides esos costos fijos entre menos millas, cada milla absorbe una porción mayor, así que la tarifa por milla sube. Por el contrario, conducir más reparte los mismos costos fijos entre más millas, bajando la tarifa. Por eso los conductores ocasionales a veces encuentran que alternativas como el transporte compartido pueden competir con el verdadero costo de propiedad.",
+      },
+      {
+        question: "¿Cómo puedo usar el costo por milla para reembolso?",
+        answer: "Si conduces por trabajo o prestas tu coche, el costo por milla da una tarifa defendible que cobrar. Multiplica tu tarifa por las millas conducidas para un reembolso justo que cubra el desgaste, el combustible y la depreciación en lugar de solo la gasolina. Ten en cuenta que las autoridades fiscales publican tarifas estándar por milla que pueden diferir de tu costo personal, así que consulta la cifra oficial cuando el reembolso tenga implicaciones fiscales para ti.",
+      },
+      {
+        question: "¿Cómo se compara esto con la tarifa estándar por milla?",
+        answer: "Las tarifas gubernamentales estándar por milla son promedios pensados para aproximar el costo de operar un vehículo típico, usados principalmente para deducciones fiscales. Tu costo personal por milla puede ser mayor o menor según el precio de tu coche, el consumo de combustible, el seguro y cuántas millas conduces. Esta calculadora da tu cifra real, más útil para decisiones de presupuesto reales, mientras que la tarifa estándar se reserva mejor para fines fiscales.",
+      },
+    ],
   },
   {
     id: "tire-diameter",
@@ -199,6 +295,38 @@ export const automotiveR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard P-metric tire sizing",
+    slugEs: "calculadora-de-diametro-de-neumatico",
+    titleEs: "Calculadora de Diámetro de Neumático",
+    shortDescriptionEs: "Encuentra el diámetro total de un neumático en pulgadas.",
+    seoTitleEs: "Calculadora de Diámetro de Neumático — Diámetro Total en Pulgadas",
+    metaDescriptionEs: "Calculadora gratuita de diámetro de neumático. Introduce el ancho de sección, la relación de aspecto y el diámetro de la llanta para hallar el diámetro total del neumático en pulgadas para ajuste y velocímetro.",
+    primaryKeywordEs: "calculadora de diámetro de neumático",
+    secondaryKeywordsEs: ["diámetro total del neumático", "calculadora de altura de neumático", "diámetro de tamaño de neumático"],
+    formulaExplanationEs: "El diámetro total de un neumático es la llanta que envuelve más un flanco arriba y otro abajo. La altura del flanco en milímetros es el ancho de sección multiplicado por el porcentaje de relación de aspecto, porque la relación de aspecto se define como el flanco expresado como proporción del ancho. Dividir esa altura entre 25.4 convierte milímetros a pulgadas, y duplicarla considera ambos flancos antes de sumar el propio diámetro de la llanta, que ya viene dado en pulgadas.",
+    explanationEs: "El diámetro total de un neumático decide si encaja en tu coche y si tu velocímetro se mantiene preciso, y esta calculadora de diámetro de neumático lo calcula directamente desde los números del flanco. Introduce el ancho de sección en milímetros, la relación de aspecto como porcentaje y el diámetro de la llanta en pulgadas, y devuelve el diámetro total del neumático en pulgadas, la única dimensión que más importa al comparar tamaños.\n\nEsa cifra pesa mucho. El diámetro total fija la altura del neumático, lo que afecta la distancia al suelo, el hueco del guardabarros y la relación de transmisión efectiva que determina cuánto esfuerzo hace tu motor a una velocidad dada. También impulsa la precisión del velocímetro y el odómetro, porque esos instrumentos asumen una distancia de rodadura específica por revolución. Monta un neumático de diámetro distinto y toda velocidad y distancia reportadas se desplazan, sutil pero consistentemente.\n\nEl cálculo sigue la convención estándar P-metric que todo tamaño de neumático codifica. El primer número es el ancho, el número intermedio es la relación de aspecto que describe la altura del flanco como porcentaje de ese ancho, y el último número es el diámetro de la llanta. Multiplicar el ancho por la relación de aspecto da el flanco, y sumar uno arriba y uno abajo de la llanta da el diámetro total. Ya sea que agrandes las llantas, montes un neumático todoterreno más alto o simplemente verifiques que un reemplazo coincide con los originales, ver el diámetro te permite conservar el manejo y la precisión de los instrumentos en lugar de descubrir un desajuste tras montar los neumáticos.",
+    exampleEs: { inputs: { widthMm: 225, aspectRatio: 45, wheelDiameterIn: 17 }, explanation: "Flanco = 225 × 45 ÷ 100 = 101.25 mm; diámetro = 17 + 2 × 101.25 ÷ 25.4 ≈ 24.97 in." },
+    faqsEs: [
+      {
+        question: "¿Cómo leo los números de un tamaño de neumático?",
+        answer: "En un tamaño como 225/45R17, el 225 es el ancho de sección en milímetros, el 45 es la relación de aspecto que significa que el flanco es el 45 por ciento del ancho, la R marca la construcción radial, y el 17 es el diámetro de la llanta en pulgadas. Introduce el ancho, la relación de aspecto y el diámetro de la llanta en esta calculadora y devuelve el diámetro total del neumático, la cifra que realmente necesitas para el ajuste.",
+      },
+      {
+        question: "¿Por qué importa el diámetro total para mi velocímetro?",
+        answer: "Tu velocímetro y odómetro están calibrados según la distancia de rodadura del neumático original, que depende de su diámetro. Un diámetro mayor recorre más distancia por revolución, haciendo que el velocímetro lea bajo y el odómetro cuente de menos, mientras que un diámetro menor hace lo contrario. Mantener el nuevo diámetro dentro de un pequeño porcentaje del original preserva la precisión y evita confundir los sistemas electrónicos que dependen de la velocidad de las ruedas.",
+      },
+      {
+        question: "¿Cuánto puede cambiar el diámetro total de forma segura?",
+        answer: "Una guía común es mantener el diámetro total dentro de aproximadamente un tres por ciento del original para que el error del velocímetro sea pequeño y se preserve el espacio libre. Saltos mayores pueden causar roce contra el guardabarros o la suspensión, alterar la transmisión notablemente y desviar las lecturas de velocidad. Al agrandar, la gente empareja deliberadamente un neumático más ancho con una relación de aspecto menor y una llanta más grande para mantener el diámetro total cerca del original.",
+      },
+      {
+        question: "¿Una relación de aspecto menor siempre significa un diámetro menor?",
+        answer: "No necesariamente, porque el diámetro depende del ancho, la relación de aspecto y el tamaño de la llanta juntos. Una relación de aspecto menor acorta el flanco, pero si se empareja con una llanta más grande o un neumático más ancho, el diámetro total puede quedar igual o incluso crecer. Así funciona exactamente el agrandamiento: una llanta mayor con un flanco más corto mantiene constante el diámetro total mientras cambia el aspecto y la sensación de manejo.",
+      },
+      {
+        question: "¿Por qué convertir el flanco de milímetros a pulgadas?",
+        answer: "Los anchos de neumático y las alturas de flanco se especifican en milímetros, pero los diámetros de llanta y los diámetros totales de neumático se cotizan convencionalmente en pulgadas en muchos mercados. Para sumar el flanco a la llanta, ambos deben compartir unidad, así que la altura del flanco se divide entre 25.4, el número de milímetros en una pulgada. Esta convención mixta hace que el cálculo parezca algo torpe, pero produce un diámetro en las pulgadas que usan las tablas de ajuste.",
+      },
+    ],
   },
   {
     id: "speedometer-error",
@@ -250,6 +378,38 @@ export const automotiveR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard tire circumference and speedometer relationship",
+    slugEs: "calculadora-de-error-de-velocimetro",
+    titleEs: "Calculadora de Error de Velocímetro",
+    shortDescriptionEs: "Ve la velocidad real tras cambiar el tamaño de neumático.",
+    seoTitleEs: "Calculadora de Error de Velocímetro — Velocidad Real Tras Cambiar Neumáticos",
+    metaDescriptionEs: "Calculadora gratuita de error de velocímetro. Introduce los diámetros original y nuevo del neumático y tu velocidad indicada para hallar tu velocidad real y el porcentaje de error del velocímetro.",
+    primaryKeywordEs: "calculadora de error de velocímetro",
+    secondaryKeywordsEs: ["calculadora de calibración de velocímetro", "error de velocidad por tamaño de neumático", "calculadora de velocidad real"],
+    formulaExplanationEs: "Un velocímetro cuenta las revoluciones de la rueda y asume que cada giro cubre la distancia de rodadura del neumático original. Monta un neumático de diámetro distinto y cada revolución cubre una distancia diferente, así que la velocidad real se escala por la relación entre el nuevo diámetro y el original. Multiplicar la velocidad indicada por esa relación da la velocidad real, y comparar ambas como porcentaje de la lectura indicada da el error del velocímetro introducido por el cambio.",
+    explanationEs: "Cuando montas neumáticos de un tamaño distinto, tu velocímetro sigue contando revoluciones como si nada hubiera cambiado, y el resultado es una lectura que ya no coincide con la realidad, algo que esta calculadora de error de velocímetro cuantifica. Introduce tu diámetro de neumático original, el nuevo diámetro y la velocidad que muestra tu tablero, y devuelve tu velocidad real junto con el porcentaje de error que introdujo el cambio.\n\nLa razón por la que aparece el error es mecánica e inevitable. Un velocímetro mide qué tan rápido giran las ruedas y multiplica por la distancia de rodadura de una revolución, una distancia fijada para el neumático de fábrica. Un neumático más grande cubre más terreno por giro, así que en realidad vas más rápido de lo que muestra el tablero, mientras que uno más pequeño cubre menos, así que vas más lento de lo indicado. El instrumento nunca se entera del cambio por sí solo.\n\nEsto importa por más que curiosidad. Conducir más rápido de lo que sugiere tu velocímetro puede ganarte multas por exceso de velocidad silenciosamente, mientras que un odómetro que cuenta de menos distorsiona las cifras de consumo, los intervalos de servicio y el kilometraje de reventa. Montar neumáticos todoterreno más altos o agrandar las llantas son los culpables habituales. Al mostrar tanto la velocidad real como el porcentaje de error, la calculadora te dice exactamente cuánto te desvías y si el cambio es lo bastante pequeño para vivir con él o lo bastante grande para justificar recalibrar el velocímetro con un programador o el concesionario.",
+    exampleEs: { inputs: { originalDiameterIn: 25, newDiameterIn: 26, indicatedSpeed: 60 }, explanation: "60 × 26 ÷ 25 = 62.4 mph de velocidad real, un error del 4%, así que el tablero marca 60 mientras realmente vas a 62.4." },
+    faqsEs: [
+      {
+        question: "¿Por qué un neumático más grande hace que mi velocímetro lea bajo?",
+        answer: "Un neumático más grande tiene una circunferencia mayor, así que cubre más distancia con cada revolución. Tu velocímetro cuenta revoluciones y asume la circunferencia menor del neumático original, por lo que subestima cuánto viajas por giro y muestra una velocidad menor que la real. Cuanto mayor sea el aumento de diámetro, mayor será la diferencia, por lo que las camionetas elevadas con neumáticos altos suelen leer varias millas por hora de menos.",
+      },
+      {
+        question: "¿Dónde encuentro el diámetro real de mi neumático?",
+        answer: "Puedes medirlo directamente con una cinta desde el suelo hasta la parte superior del neumático, o calcularlo desde el tamaño del flanco usando ancho, relación de aspecto y diámetro de llanta. Una calculadora de diámetro de neumático hace esto desde el tamaño impreso. Usar los diámetros reales medidos o calculados para el neumático original y el nuevo da el error de velocímetro más preciso, ya que los tamaños publicados son aproximaciones nominales.",
+      },
+      {
+        question: "¿Es un problema un pequeño error de velocímetro?",
+        answer: "Los fabricantes suelen incorporar un ligero sesgo para que el velocímetro lea un poco alto, manteniendo a los conductores dentro de la ley, y errores pequeños de uno o dos por ciento son generalmente inofensivos. Los errores mayores importan más: leer bajo puede llevar a exceso de velocidad no intencionado, y cualquier error desvía tu odómetro, afectando el kilometraje registrado, los límites de garantía y los cálculos de consumo. Si el error supera un pequeño porcentaje, considera recalibrar.",
+      },
+      {
+        question: "¿El error de velocímetro afecta también a mi odómetro?",
+        answer: "Sí. El odómetro depende del mismo conteo de revoluciones que el velocímetro, así que cualquier cambio de diámetro distorsiona la distancia registrada en la misma proporción. Los neumáticos más grandes hacen que el odómetro cuente de menos las millas, lo que puede hacer parecer que un vehículo condujo menos de lo real, mientras que los más pequeños cuentan de más. Esto afecta intervalos de servicio, cálculos de consumo, garantías por kilometraje y el kilometraje mostrado en la reventa.",
+      },
+      {
+        question: "¿Puedo corregir un error grande de velocímetro?",
+        answer: "Sí. En muchos vehículos modernos el velocímetro puede recalibrarse electrónicamente con un programador, sintonizador o servicio del concesionario que le indica al ordenador el nuevo tamaño de neumático. Algunos módulos de posventa hacen lo mismo para sistemas antiguos. Recalibrar restaura lecturas precisas de velocidad y distancia tras un cambio de neumático significativo. Si recalibrar no es práctico, al menos conoce tu porcentaje de error para ajustar mentalmente la lectura mientras conduces.",
+      },
+    ],
   },
   {
     id: "trip-fuel",
@@ -300,6 +460,38 @@ export const automotiveR7Calculators: CalculatorDefinition[] = [
     lastReviewed: "2026-08-30",
     formulaSource: "U.S. EPA fuel economy",
     sourceUrl: "https://www.fueleconomy.gov/",
+    slugEs: "calculadora-de-combustible-de-viaje",
+    titleEs: "Calculadora de Combustible de Viaje",
+    shortDescriptionEs: "Estima los galones que necesitará un viaje.",
+    seoTitleEs: "Calculadora de Combustible de Viaje — Galones Necesarios",
+    metaDescriptionEs: "Calculadora gratuita de combustible de viaje. Introduce la distancia del viaje y el MPG de tu vehículo para hallar cuántos galones de combustible necesita el trayecto, para planificar paradas y presupuestar.",
+    primaryKeywordEs: "calculadora de combustible de viaje",
+    secondaryKeywordsEs: ["calculadora de combustible necesario", "galones para un viaje", "calculadora de combustible para viaje por carretera"],
+    formulaExplanationEs: "Las millas por galón indican exactamente cuánto viaja tu vehículo con un galón de combustible, así que dividir la distancia del viaje entre esa cifra invierte la relación y devuelve el número de galones necesarios para cubrir la distancia. Cuanto mayor sea tu MPG, menos galones exige un viaje dado, y cuanto mayor sea la distancia, más combustible necesita. El cálculo asume un consumo real estable a lo largo de todo el trayecto.",
+    explanationEs: "Antes de un viaje largo ayuda saber cuánto combustible tragará realmente el trayecto, y esta calculadora de combustible de viaje da esa cifra a partir de dos números que ya conoces. Introduce la distancia que planeas recorrer y el consumo de tu vehículo en millas por galón, y devuelve los galones que necesita el trayecto, para que puedas planificar paradas de combustible y presupuestar con confianza.\n\nConocer los galones por adelantado es prácticamente útil de varias formas. Te dice si un solo tanque cubrirá la ruta o si necesitas planificar paradas de repostaje, lo que importa en tramos remotos donde las estaciones escasean. También te permite multiplicar por el precio local del combustible para estimar el costo del viaje, y te ayuda a formar expectativas correctas de cuántas veces te detendrás en un viaje por carretera con niños o con un horario que cumplir.\n\nLa matemática es deliberadamente simple: distancia dividida entre millas por galón equivale a galones. Como el MPG es la distancia que un galón te lleva, dividir tu distancia total entre él cuenta cuántos galones consume esa distancia. Para la estimación más realista, usa el consumo que realmente observas en lugar de la cifra optimista de la etiqueta, ya que las calificaciones de carretera asumen condiciones ideales. Cofres de techo cargados, pendientes de montaña, vientos en contra y tráfico pesado elevan el consumo, así que si tu ruta es exigente, baja un poco el MPG y la calculadora reflejará el combustible extra que probablemente quemarás.",
+    exampleEs: { inputs: { distanceMiles: 450, mpg: 30 }, explanation: "450 millas ÷ 30 MPG = 15 galones necesarios para el viaje, antes de cualquier margen por terreno o tráfico." },
+    faqsEs: [
+      {
+        question: "¿Qué cifra de MPG debo usar?",
+        answer: "Usa el consumo que realmente logras en lugar de la calificación del fabricante, ya que la conducción real rara vez coincide con la prueba de laboratorio. Si la mayor parte del viaje es por carretera, una calificación de carretera es razonable; si implica tráfico urbano, colinas o cargas pesadas, usa una cifra menor. Registrar tu MPG durante unos tanques da el número más fiable, y usarlo aquí produce una estimación de combustible en la que puedes confiar para planificar.",
+      },
+      {
+        question: "¿Debo añadir un margen de seguridad a los galones?",
+        answer: "Es prudente hacerlo. El cálculo asume un consumo estable durante todo el viaje, pero las condiciones reales varían, y agotar un tanque es arriesgado. Muchos conductores planean repostar con un cuarto de tanque restante. Añadir aproximadamente entre un diez y un quince por ciento a los galones estimados crea un colchón para desvíos, tráfico, terreno y la diferencia entre el consumo calificado y el real, así que es poco probable que te quedes corto.",
+      },
+      {
+        question: "¿Cómo convierto los galones en un costo de viaje?",
+        answer: "Multiplica los galones necesarios por el precio por galón que esperas pagar. Por ejemplo, 15 galones a cuatro dólares el galón cuestan sesenta dólares. Si los precios varían a lo largo de tu ruta, usa un promedio o el precio más alto probable para ir sobre seguro. Una calculadora de costo de combustible dedicada puede hacer esto en un paso, combinando distancia, consumo y precio en un total por ti.",
+      },
+      {
+        question: "¿Mi uso real de combustible coincidirá con esta estimación?",
+        answer: "Estará cerca si tu cifra de MPG es realista, pero espera cierta variación. El terreno, el clima, el tráfico, el aire acondicionado, el peso de la carga y el estilo de conducción cambian el consumo, a veces notablemente. Las subidas largas y los vientos en contra aumentan el uso de combustible, mientras que el crucero estable por carretera lo reduce. La estimación es una base sólida de planificación; para un viaje largo o remoto, inclínate por llevar más combustible del que sugiere el cálculo básico.",
+      },
+      {
+        question: "¿Funciona esto para vehículos eléctricos?",
+        answer: "Esta calculadora está hecha para combustible medido en galones, así que no aplica directamente a coches eléctricos, que miden la energía en kilovatios-hora. Para estimar las necesidades de un eléctrico, divide la distancia del viaje entre la eficiencia del coche en millas por kilovatio-hora para obtener la energía requerida. Una calculadora de autonomía de eléctrico se adapta mejor a esa tarea, ya que considera la capacidad de la batería y la eficiencia en lugar de galones de combustible.",
+      },
+    ],
   },
   {
     id: "oil-change-cost",
@@ -351,6 +543,38 @@ export const automotiveR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard vehicle maintenance interval math",
+    slugEs: "calculadora-de-costo-de-cambio-de-aceite",
+    titleEs: "Calculadora de Costo de Cambio de Aceite",
+    shortDescriptionEs: "Estima tu gasto anual en cambios de aceite.",
+    seoTitleEs: "Calculadora de Costo de Cambio de Aceite — Gasto Anual",
+    metaDescriptionEs: "Calculadora gratuita de costo de cambio de aceite. Introduce el kilometraje anual, el intervalo de cambio y el costo por cambio para ver cuántos cambios necesitas al año y el costo anual total.",
+    primaryKeywordEs: "calculadora de costo de cambio de aceite",
+    secondaryKeywordsEs: ["costo anual de cambio de aceite", "calculadora de intervalo de cambio de aceite", "calculadora de costo de mantenimiento de auto"],
+    formulaExplanationEs: "El número de cambios de aceite que necesitas en un año es simplemente cuántas veces tu kilometraje anual llena el intervalo entre cambios, hallado dividiendo las millas anuales entre el intervalo en millas. Multiplicar ese conteo por el costo de un solo cambio da el gasto anual en cambios de aceite. Un intervalo más largo significa menos cambios y menor costo, mientras que más millas conducidas empuja hacia arriba tanto el conteo de cambios como la factura anual.",
+    explanationEs: "Los cambios de aceite son un pequeño costo recurrente que se acumula silenciosamente, y esta calculadora de costo de cambio de aceite muestra el total anual para que deje de ser una sorpresa en tu presupuesto de mantenimiento. Introduce las millas que conduces en un año, cuántas millas recorres entre cambios y el costo de un solo cambio, y devuelve tanto cuántos cambios necesitas al año como cuánto cuestan en total.\n\nVer el número desglosado ayuda de varias formas. Te permite presupuestar el mantenimiento de forma realista en lugar de tratar cada visita como algo aislado, y hace visibles los compromisos. Un intervalo más corto significa cambios más frecuentes y una factura anual mayor, mientras que un intervalo más largo, a menudo posible con aceite sintético, reduce el número de cambios aunque cada uno cueste más. La calculadora te permite sopesar un aceite convencional más barato cambiado con frecuencia frente a un sintético más caro cambiado rara vez.\n\nEl cálculo es directo: las millas anuales divididas entre el intervalo dan el número de cambios, y multiplicar por el costo de cada uno da el total anual. Usa el intervalo que recomienda tu fabricante o el que soporta tu tipo de aceite, ya que los intervalos varían ampliamente entre aceites convencionales y totalmente sintéticos. Ya sea que compares hacerlo tú mismo frente a un taller rápido, decidas si una mejora a sintético compensa, o simplemente planifiques tus gastos anuales del coche, tener la cifra anual hace la decisión concreta en lugar de una conjetura.",
+    exampleEs: { inputs: { annualMiles: 15000, intervalMiles: 5000, costPerChange: 60 }, explanation: "15,000 ÷ 5,000 = 3 cambios al año; 3 × $60 = $180 gastados anualmente en cambios de aceite." },
+    faqsEs: [
+      {
+        question: "¿Con qué frecuencia debo cambiar mi aceite?",
+        answer: "Depende de tu vehículo y tipo de aceite. La guía antigua de cada 3,000 millas aplica principalmente al aceite convencional, mientras que muchos motores modernos con sintético completo pueden recorrer 7,500 a 10,000 millas o más entre cambios. Sigue siempre tu manual del propietario, que fija el intervalo para tu motor específico. Condiciones severas como trayectos cortos frecuentes, remolque o temperaturas extremas pueden requerir cambios más frecuentes que el intervalo estándar.",
+      },
+      {
+        question: "¿El aceite sintético ahorra dinero en general?",
+        answer: "Puede hacerlo, a pesar de costar más por cambio. El aceite sintético suele permitir intervalos mucho más largos, así que aunque cada cambio sea más caro, necesitas menos al año. Introduce tu intervalo y costo de sintético aquí y compara el total anual frente al aceite convencional cambiado con más frecuencia. El sintético también ofrece mejor protección en temperaturas extremas, algo que muchos propietarios valoran más allá de la comparación de costo, sobre todo en motores nuevos o turboalimentados.",
+      },
+      {
+        question: "¿Debo contar el filtro y la mano de obra en el costo?",
+        answer: "Sí. Introduce el precio completo que realmente pagas por un cambio, incluyendo el filtro de aceite, la mano de obra si lo hace un taller, y cualquier tarifa de taller o impuestos. Si cambias tu propio aceite, incluye el costo del aceite y un filtro más la eliminación. Usar el costo completo por cambio asegura que el total anual refleje lo que realmente gastas en lugar de solo el precio del aceite en sí.",
+      },
+      {
+        question: "¿Por qué el intervalo está fijado en 5,000 millas por defecto?",
+        answer: "Cinco mil millas es un intervalo intermedio común que se adapta a muchos vehículos modernos que usan mezclas semisintéticas o sintéticas, así que sirve como un valor razonable por defecto. Sin embargo, es solo un punto de partida. Tu intervalo real debe provenir de tu manual del propietario o de la guía del fabricante del aceite, que puede ser más corto para convencional o más largo para sintético completo. Ajusta el campo del intervalo para que coincida con tu programa real.",
+      },
+      {
+        question: "¿Cómo afecta el kilometraje a mi costo anual de cambio de aceite?",
+        answer: "Cuantas más millas conduces, más a menudo alcanzas el intervalo, así que el número de cambios y el costo anual suben en proporción directa. Un conductor de alto kilometraje que recorre 20,000 millas al año necesita muchos más cambios que alguien que conduce 6,000. Por eso los cambios de aceite, aunque individualmente baratos, se convierten en una partida significativa para quienes viajan mucho al trabajo y conductores de transporte que acumulan distancia rápidamente.",
+      },
+    ],
   },
   {
     id: "car-payment-affordability",
@@ -400,6 +624,38 @@ export const automotiveR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard budgeting guideline (percent of income)",
+    slugEs: "calculadora-de-asequibilidad-de-pago-de-auto",
+    titleEs: "Calculadora de Asequibilidad de Pago de Auto",
+    shortDescriptionEs: "Ve cuánto pago de auto puedes permitirte.",
+    seoTitleEs: "Calculadora de Asequibilidad de Pago de Auto — Pago Mensual Máximo",
+    metaDescriptionEs: "Calculadora gratuita de asequibilidad de pago de auto. Introduce tu ingreso mensual y un porcentaje objetivo para hallar el pago máximo de auto que se ajusta cómodamente a tu presupuesto.",
+    primaryKeywordEs: "calculadora de asequibilidad de pago de auto",
+    secondaryKeywordsEs: ["cuánto pago de auto puedo permitirme", "calculadora de asequibilidad de auto", "calculadora de pago máximo de auto"],
+    formulaExplanationEs: "El pago asequible es una porción elegida de tu ingreso mensual, así que multiplicar tu ingreso por el porcentaje objetivo y dividir entre 100 convierte ese porcentaje en un tope en dólares. La idea se apoya en una regla general de presupuesto según la cual los pagos de auto deben mantenerse dentro de una modesta parte del ingreso para dejar espacio a combustible, seguro y todo lo demás. Un porcentaje menor produce un tope de pago más conservador y seguro.",
+    explanationEs: "Es fácil enamorarse de un coche cuyo pago tensa silenciosamente tu presupuesto, y esta calculadora de asequibilidad de pago de auto protege contra eso traduciendo una regla sensata de presupuesto en un tope firme en dólares. Introduce tu ingreso mensual y la porción que estás dispuesto a dedicar a un pago de auto, y devuelve el pago mensual máximo que puedes cargar cómodamente.\n\nEl enfoque refleja una guía muy usada según la cual tu pago de auto debe ocupar solo una parte modesta de tu ingreso, a menudo citada alrededor del diez al quince por ciento del salario neto. Mantenerte dentro de esa banda deja espacio para los otros costos de conducir, seguro, combustible, mantenimiento y matriculación, que el pago en sí no cubre, así como el resto de tus gastos de vida. Comprar por el precio de etiqueta o por el pago que ofrece un concesionario, en lugar de por lo que tu ingreso soporta, es como la gente termina sobreendeudada.\n\nLa matemática es simple: tu ingreso multiplicado por el porcentaje elegido da el tope. Fijar el porcentaje más bajo produce un límite más cauteloso, lo cual es prudente si cargas otras deudas o quieres un colchón de ahorro mayor. Una vez que conoces el pago máximo, puedes trabajar hacia atrás con una calculadora de préstamo para ver qué precio de vehículo soporta a una tasa y plazo dados. Partir de lo que puedes permitirte, en lugar del coche que quieres, mantiene toda la compra anclada en tu realidad financiera y reduce el riesgo de un pago que aprieta cada mes.",
+    exampleEs: { inputs: { monthlyIncome: 5000, percentOfIncome: 15 }, explanation: "$5,000 × 15 ÷ 100 = $750, el pago mensual máximo de auto que sugiere esta regla de presupuesto." },
+    faqsEs: [
+      {
+        question: "¿Qué porcentaje del ingreso debe ir a un pago de auto?",
+        answer: "Una guía común sugiere mantener el pago de auto en o por debajo del diez al quince por ciento de tu salario mensual neto. Un consejo más conservador limita los costos totales del auto, incluyendo seguro y combustible, a alrededor del veinte por ciento. La cifra correcta depende de tus otras obligaciones y metas. Si cargas deuda significativa o quieres ahorrar agresivamente, elige aquí un porcentaje menor para mantener el tope de pago cómodamente a tu alcance.",
+      },
+      {
+        question: "¿Debo usar el ingreso bruto o el neto?",
+        answer: "Usar el salario neto, la cantidad que realmente llega a tu cuenta tras impuestos y deducciones, da una imagen más realista de lo que puedes gastar, ya que ese es el dinero disponible para las facturas. Algunas guías se refieren al ingreso bruto, pero esas tienden a permitir pagos mayores. Sea cual sea el que elijas, sé consistente y recuerda que la guía porcentual asume que el pago convive con todos tus demás costos de vida.",
+      },
+      {
+        question: "¿Esto incluye seguro y combustible?",
+        answer: "No, esta calculadora estima solo el pago del préstamo o leasing en sí. Tener un coche también cuesta seguro, combustible, mantenimiento, matriculación e impuestos, que juntos pueden rivalizar o superar el pago. Por eso importa mantener el pago en una porción modesta del ingreso: deja margen para esos extras. Presupuesta el costo completo de propiedad, no solo el pago mensual, antes de comprometerte con un vehículo.",
+      },
+      {
+        question: "¿Cómo convierto un pago máximo en un precio de auto?",
+        answer: "Una vez que conoces tu pago mensual máximo, usa una calculadora de préstamo de auto para trabajar hacia atrás. Introduce el pago, una tasa de interés y un plazo, y revela el monto del préstamo que ese pago soporta. Suma tu entrada y el valor de intercambio a ese préstamo para obtener el precio total del coche a tu alcance. Esto conecta tu presupuesto basado en ingresos con un rango de precio real dentro del cual comprar con confianza.",
+      },
+      {
+        question: "¿Un plazo de préstamo más largo es una buena forma de permitir más coche?",
+        answer: "Alargar el plazo baja el pago mensual, lo que puede traer un coche más caro dentro de tu límite porcentual, pero tiene un costo. Los préstamos más largos acumulan más interés total y te mantienen debiendo dinero durante años, a veces más de lo que conservas el coche. También aumenta el riesgo de deber más de lo que vale el coche. Prefiere ajustar el coche a tu presupuesto antes que estirar el plazo para ajustar el coche.",
+      },
+    ],
   },
   {
     id: "ev-range",
@@ -449,6 +705,38 @@ export const automotiveR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard EV range estimation (capacity × efficiency)",
+    slugEs: "calculadora-de-autonomia-de-auto-electrico",
+    titleEs: "Calculadora de Autonomía de Auto Eléctrico",
+    shortDescriptionEs: "Estima la autonomía de conducción de un coche eléctrico.",
+    seoTitleEs: "Calculadora de Autonomía de Eléctrico — Alcance según la Batería",
+    metaDescriptionEs: "Calculadora gratuita de autonomía de auto eléctrico. Introduce la capacidad de la batería en kWh y la eficiencia en millas por kWh para estimar cuánto puede viajar un coche eléctrico con una carga completa.",
+    primaryKeywordEs: "calculadora de autonomía de auto eléctrico",
+    secondaryKeywordsEs: ["calculadora de autonomía de coche eléctrico", "autonomía de batería de eléctrico", "calculadora de alcance de vehículo eléctrico"],
+    formulaExplanationEs: "La autonomía de un coche eléctrico es hasta dónde puede llevarlo su energía almacenada, así que multiplicar la capacidad útil de la batería en kilovatios-hora por la eficiencia en millas por kilovatio-hora da la distancia con una carga completa. La eficiencia indica cuántas millas entrega cada kilovatio-hora, y la capacidad de la batería indica cuántos kilovatios-hora hay a bordo, así que su producto es el total de millas. Una batería más grande o una mayor eficiencia extienden la autonomía de esta forma.",
+    explanationEs: "La ansiedad por la autonomía suele ser solo incertidumbre, y esta calculadora de autonomía de auto eléctrico la reemplaza con una estimación concreta a partir de dos números que definen el alcance de un coche eléctrico. Introduce la capacidad de la batería en kilovatios-hora y la eficiencia en millas por kilovatio-hora, y devuelve cuánto puede viajar el coche con una carga completa, para que juzgues si un modelo dado se adapta a tu conducción.\n\nLa estimación es útil ya sea que compres un eléctrico o planifiques un trayecto en uno que posees. La capacidad de la batería es como el tamaño del tanque de combustible, mientras que la eficiencia es el equivalente eléctrico de las millas por galón, diciéndote hasta dónde te lleva cada unidad de energía. Multiplicar ambas da la autonomía, y verla desglosada te permite comparar una batería grande con eficiencia modesta frente a una batería más pequeña en un coche muy eficiente, que pueden terminar codo a codo.\n\nLa autonomía real depende mucho de las condiciones, y la eficiencia es donde se manifiestan. El clima frío, las velocidades altas, el terreno con pendientes, usar la calefacción o el aire acondicionado y las cargas pesadas reducen las millas por kilovatio-hora, a veces drásticamente en invierno. Para una cifra realista, usa un número de eficiencia que refleje tu clima y conducción en lugar de la calificación del mejor caso de una prueba suave. Al bajar el dato de eficiencia para ajustarse a condiciones duras, puedes ver una autonomía conservadora con la que realmente puedes contar, mucho más útil para planificar que un número optimista de titular.",
+    exampleEs: { inputs: { batteryKwh: 75, efficiencyMilesPerKwh: 3.5 }, explanation: "75 kWh × 3.5 mi/kWh = 262.5 millas de autonomía estimada con una carga completa en condiciones promedio." },
+    faqsEs: [
+      {
+        question: "¿Cuál es una eficiencia típica de un eléctrico en millas por kWh?",
+        answer: "La mayoría de los coches eléctricos logran aproximadamente 3 a 4 millas por kilovatio-hora en conducción mixta, con modelos eficientes que superan 4 y vehículos más grandes y pesados por debajo de 3. La eficiencia cae en clima frío, a velocidades de carretera y con cargas pesadas o climatización en marcha. Consulta la pantalla de tu coche o la calificación EPA para una base, y redúcela algo si conduces a menudo en condiciones exigentes para una estimación de autonomía realista.",
+      },
+      {
+        question: "¿Debo usar la capacidad total o útil de la batería?",
+        answer: "Usa la capacidad útil si la conoces, ya que los fabricantes reservan un margen del total de la batería para proteger su longevidad, y solo la porción útil realmente impulsa el coche. Las cifras de autonomía publicadas se basan en la capacidad útil. Si solo aparece la capacidad total, tu estimación de autonomía será algo optimista. Donde sea posible, introduce los kilovatios-hora útiles para el resultado más preciso que coincida con la conducción real.",
+      },
+      {
+        question: "¿Por qué el clima frío reduce tanto la autonomía de un eléctrico?",
+        answer: "Las temperaturas frías ralentizan la química de la batería, reduciendo la energía que puede entregar, y calentar la cabina consume energía significativa directamente de la batería en lugar del calor residual del motor como en un coche de gasolina. Juntos pueden recortar la autonomía invernal entre un veinte y un cuarenta por ciento. Preacondicionar el coche mientras está enchufado y usar calefacción de asientos en vez de la de cabina ayuda, pero aun así debes planificar autonomía reducida en meses fríos.",
+      },
+      {
+        question: "¿Conducir rápido reduce mi autonomía?",
+        answer: "Sí, considerablemente. La resistencia aerodinámica aumenta bruscamente con la velocidad, así que la conducción sostenida por carretera a alta velocidad consume mucha más energía por milla que la ciudad o el crucero moderado. Esto es lo opuesto a un coche de gasolina, que suele ser más eficiente en carretera. Para maximizar la autonomía de un eléctrico en un viaje largo, moderar tu velocidad marca una diferencia notable, a veces sumando muchas millas frente a conducir al ritmo legal más rápido.",
+      },
+      {
+        question: "¿Cómo se relaciona esto con el tiempo y el costo de carga?",
+        answer: "La autonomía te dice hasta dónde llega una carga completa, pero el tiempo de carga depende de la potencia del cargador y el tamaño de la batería, mientras que el costo de carga depende de tu tarifa eléctrica y la eficiencia del coche. Para estimar el costo por milla, divide tu tarifa eléctrica entre la eficiencia en millas por kilovatio-hora. Autonomía, velocidad de carga y costo son tres preguntas separadas, y esta calculadora responde la primera: cuánto puedes recorrer con una carga.",
+      },
+    ],
   },
   {
     id: "horsepower-to-torque",
@@ -498,5 +786,37 @@ export const automotiveR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard power-torque relationship (5252 constant)",
+    slugEs: "calculadora-de-caballos-de-fuerza-a-torque",
+    titleEs: "Calculadora de Caballos de Fuerza a Torque",
+    shortDescriptionEs: "Convierte caballos de fuerza a torque a una RPM dada.",
+    seoTitleEs: "Calculadora de Caballos de Fuerza a Torque — HP a Lb-Ft en RPM",
+    metaDescriptionEs: "Calculadora gratuita de caballos de fuerza a torque. Introduce los caballos de fuerza y las RPM del motor para hallar el torque en libras-pie usando la constante estándar 5252 que relaciona potencia y rotación.",
+    primaryKeywordEs: "calculadora de caballos de fuerza a torque",
+    secondaryKeywordsEs: ["calculadora de hp a torque", "torque a partir de caballos de fuerza", "convertir caballos de fuerza a torque"],
+    formulaExplanationEs: "Los caballos de fuerza miden la tasa de realizar trabajo, que combina cuánta fuerza de torsión produce un motor, el torque, con qué tan rápido gira, las RPM. Reordenar la relación para el torque significa multiplicar los caballos de fuerza por la constante 5252 y dividir entre la velocidad del motor. El número 5252 surge de la definición de un caballo de fuerza como 33,000 libras-pie por minuto dividido entre dos pi, convirtiendo la velocidad rotacional en RPM en las unidades que hacen que el torque salga en libras-pie.",
+    explanationEs: "Los caballos de fuerza y el torque describen la salida de un motor de dos formas ligadas, y esta calculadora de caballos de fuerza a torque convierte entre ellos a cualquier velocidad del motor usando la constante que los une. Introduce los caballos de fuerza y las RPM a las que se producen, y devuelve el torque en libras-pie, permitiéndote recuperar la fuerza de torsión detrás de una cifra de potencia.\n\nLas dos medidas responden preguntas diferentes. El torque es la fuerza rotacional que el motor aplica ahora mismo, el empuje que sientes al acelerar, mientras que los caballos de fuerza son la tasa a la que esa fuerza realiza trabajo, mezclando el torque con qué tan rápido gira el motor. Como se relacionan a través de las RPM, un solo número de caballos de fuerza está incompleto sin conocer la velocidad a la que ocurre, que es exactamente lo que esta conversión hace explícito.\n\nLa constante fija 5252 proviene de la definición de caballo de fuerza y aparece dondequiera que se conviertan las dos. Una consecuencia famosa es que en cualquier gráfico de dinamómetro las curvas de caballos de fuerza y torque siempre se cruzan a 5252 RPM, porque esa es la velocidad a la que los dos valores son numéricamente iguales. Entender la relación ayuda al comparar motores, ya que un motor de altas revoluciones puede producir grandes caballos de fuerza a partir de un torque modesto, mientras que un diésel de bajas revoluciones produce fuerte torque pero menos potencia máxima. Al introducir una calificación de potencia y las RPM a las que se cita, puedes ver el torque que la produce y entender mejor el carácter real de un motor.",
+    exampleEs: { inputs: { horsepower: 300, rpm: 5252 }, explanation: "300 × 5252 ÷ 5252 = 300 lb-ft, ilustrando que los caballos de fuerza y el torque son iguales exactamente a 5252 RPM." },
+    faqsEs: [
+      {
+        question: "¿De dónde viene el número 5252?",
+        answer: "Viene de la definición de caballo de fuerza como 33,000 libras-pie de trabajo por minuto, combinada con la geometría de la rotación. Convertir la velocidad rotacional en revoluciones por minuto en los términos lineales de la definición de caballo de fuerza introduce un factor de dos pi, y 33,000 dividido entre dos pi es aproximadamente 5252. Esta constante enlaza el torque en libras-pie, la velocidad del motor en RPM y los caballos de fuerza en una sola ecuación consistente usada en toda la ingeniería automotriz.",
+      },
+      {
+        question: "¿Por qué las curvas de caballos de fuerza y torque se cruzan a 5252 RPM?",
+        answer: "Como los caballos de fuerza equivalen al torque por RPM dividido entre 5252, los dos valores son numéricamente iguales precisamente cuando las RPM equivalen a 5252. Por debajo de esa velocidad el torque es el número mayor, y por encima los caballos de fuerza toman la delantera. Esto no es coincidencia sino un resultado directo de la fórmula, por lo que cada gráfico de dinamómetro trazado en libras-pie y caballos de fuerza muestra las dos líneas cruzándose exactamente a 5252 RPM, sin importar el motor.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre torque y caballos de fuerza?",
+        answer: "El torque es la fuerza de torsión instantánea que produce el motor, sentida como el empuje durante la aceleración. Los caballos de fuerza son la tasa a la que esa fuerza realiza trabajo con el tiempo, así que considera qué tan rápido gira el motor además de qué tan fuerte empuja. Un motor puede producir los mismos caballos de fuerza con alto torque a bajas RPM o bajo torque a altas RPM, lo que da forma a cómo se siente conducir el vehículo.",
+      },
+      {
+        question: "¿Qué importa más para conducir, el torque o los caballos de fuerza?",
+        answer: "Ambos importan, pero de formas distintas. El torque, especialmente a bajas RPM, gobierna qué tan fuerte tira el coche desde parado y para remolcar o cargar. Los caballos de fuerza, que alcanzan su pico más alto en el rango de revoluciones, gobiernan la velocidad máxima y el rendimiento sostenido a alta velocidad. Una camioneta prioriza el torque de baja gama, mientras que un deportivo persigue los caballos de fuerza de altas RPM. El mejor motor para ti depende de si valoras un empuje sin esfuerzo o la capacidad a alta velocidad.",
+      },
+      {
+        question: "¿Puedo convertir el torque de nuevo a caballos de fuerza?",
+        answer: "Sí, la relación funciona en ambas direcciones. Para hallar los caballos de fuerza a partir del torque, multiplica el torque en libras-pie por las RPM y divide entre 5252. Esto es simplemente la misma ecuación reordenada. Como la constante es fija, conocer dos cualesquiera de las tres cantidades, torque, caballos de fuerza y RPM, te permite despejar la tercera, por lo que el software de dinamómetro puede mostrar curvas de torque y caballos de fuerza a partir de los mismos datos medidos.",
+      },
+    ],
   },
 ];
