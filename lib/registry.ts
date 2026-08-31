@@ -1,4 +1,5 @@
 import type { CalculatorDefinition } from "./types";
+import { getCategory } from "./categories";
 import { mathCalculators } from "./calculators/math";
 import { financeCalculators } from "./calculators/finance";
 import { healthCalculators } from "./calculators/health";
@@ -151,6 +152,23 @@ const BY_SLUG = new Map(ALL_CALCULATORS.map((c) => [c.slug, c]));
 
 export function getCalculatorBySlug(slug: string): CalculatorDefinition | undefined {
   return BY_SLUG.get(slug);
+}
+
+/**
+ * Resolve an active calculator from its localized category + calculator slugs.
+ * For es, matches against slugEs (falling back to the English slug when absent).
+ */
+export function getCalculatorByLocalizedSlug(
+  locale: "es" | "en",
+  categorySlug: string,
+  calcSlug: string
+): CalculatorDefinition | undefined {
+  return getActiveCalculators().find((c) => {
+    const cat = getCategory(c.categorySlug);
+    const catSlug = locale === "en" ? c.categorySlug : cat?.slugEs ?? c.categorySlug;
+    const cSlug = locale === "en" ? c.slug : c.slugEs ?? c.slug;
+    return catSlug === categorySlug && cSlug === calcSlug;
+  });
 }
 
 export function getCalculatorsByCategory(categorySlug: string): CalculatorDefinition[] {

@@ -3,9 +3,17 @@
 import { useState } from "react";
 import { Icon } from "@/components/Icon";
 import { cn } from "@/lib/utils";
+import { type Locale, t } from "@/lib/i18n";
 
-export function ShareBar({ title }: { title: string }) {
+export function ShareBar({
+  title,
+  locale = "en",
+}: {
+  title: string;
+  locale?: Locale;
+}) {
   const [copied, setCopied] = useState(false);
+  const s = t(locale);
 
   const copyLink = async () => {
     try {
@@ -34,22 +42,22 @@ export function ShareBar({ title }: { title: string }) {
 
   return (
     <div className="flex flex-wrap gap-2 print:hidden">
-      <button type="button" onClick={share} className={btn} aria-label="Share">
+      <button type="button" onClick={share} className={btn} aria-label={s.share}>
         <Icon name="Share" size={15} />
-        Share
+        {s.share}
       </button>
-      <button type="button" onClick={copyLink} className={cn(btn)} aria-label="Copy link">
+      <button type="button" onClick={copyLink} className={cn(btn)} aria-label={s.copyLink}>
         <Icon name={copied ? "Check" : "Copy"} size={15} />
-        {copied ? "Copied" : "Copy link"}
+        {copied ? s.copied : s.copyLink}
       </button>
       <button
         type="button"
         onClick={() => window.print()}
         className={btn}
-        aria-label="Print"
+        aria-label={s.print}
       >
         <Icon name="Printer" size={15} />
-        Print
+        {s.print}
       </button>
     </div>
   );

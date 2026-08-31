@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Icon } from "@/components/Icon";
 import { cn } from "@/lib/utils";
+import { type Locale, t } from "@/lib/i18n";
 
 export interface TabCalc {
   title: string;
@@ -14,19 +15,31 @@ export interface CategoryTab {
   slug: string;
   name: string;
   icon: string;
+  href: string;
   calcs: TabCalc[];
 }
 
-export function CategoryTabs({ tabs }: { tabs: CategoryTab[] }) {
+export function CategoryTabs({
+  tabs,
+  locale = "en",
+}: {
+  tabs: CategoryTab[];
+  locale?: Locale;
+}) {
+  const s = t(locale);
   const [active, setActive] = useState(0);
   const current = tabs[active];
+  const allLabel =
+    locale === "es"
+      ? `Todas las calculadoras de ${current.name}`
+      : `All ${current.name} calculators`;
 
   return (
     <div>
       {/* Tab strip */}
       <div
         role="tablist"
-        aria-label="Browse calculators by category"
+        aria-label={locale === "es" ? "Explorar calculadoras por categoría" : "Browse calculators by category"}
         className="scroll-row -mx-4 flex gap-1 overflow-x-auto px-4 pb-1 sm:mx-0 sm:px-0"
       >
         {tabs.map((t, i) => {
@@ -79,16 +92,16 @@ export function CategoryTabs({ tabs }: { tabs: CategoryTab[] }) {
               {c.shortDescription}
             </span>
             <span className="mt-1 inline-flex items-center gap-1 text-sm font-medium text-brand opacity-0 group-hover:opacity-100 transition-opacity">
-              Open
+              {s.open}
               <Icon name="ArrowRight" size={14} />
             </span>
           </Link>
         ))}
         <Link
-          href={`/${current.slug}`}
+          href={current.href}
           className="flex items-center justify-center gap-2 rounded-2xl border border-dashed border-line-strong p-5 text-sm font-medium text-text-secondary hover:text-brand hover:border-brand/50 transition-colors"
         >
-          All {current.name} calculators
+          {allLabel}
           <Icon name="ArrowRight" size={15} />
         </Link>
       </div>

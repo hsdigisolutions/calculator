@@ -87,6 +87,28 @@ export interface CalculatorDefinition {
   sensitivity?: Sensitivity;
   formulaSource?: string; // e.g. "WHO", "IRS", "standard amortization formula"
   sourceUrl?: string; // authoritative citation link
+
+  // ---- Spanish (es) localization ----
+  // Optional so the site builds before translations land; helpers fall back to
+  // the English field when the Es counterpart is absent. AI-generated — flag for
+  // native review before relying on it for production ranking.
+  /** Spanish URL slug (keyword-localized, e.g. "calculadora-de-porcentaje"). */
+  slugEs?: string;
+  titleEs?: string;
+  shortDescriptionEs?: string;
+  seoTitleEs?: string;
+  metaDescriptionEs?: string;
+  primaryKeywordEs?: string;
+  secondaryKeywordsEs?: string[];
+  formulaEs?: string;
+  formulaExplanationEs?: string;
+  explanationEs?: string;
+  exampleEs?: CalculatorExample;
+  faqsEs?: FAQ[];
+  /** Localized field label overrides keyed by field id (optional). */
+  fieldLabelsEs?: Record<string, string>;
+  /** Localized result label overrides keyed by result id (optional). */
+  resultLabelsEs?: Record<string, string>;
 }
 
 /** Raw string inputs keyed by field id, as collected from the form. */
@@ -110,4 +132,14 @@ export interface Category {
   about?: string;
   /** Category-level FAQs for the hub page. */
   faqs?: FAQ[];
+
+  // ---- Spanish (es) localization ----
+  /** Spanish URL slug for the category (e.g. "finanzas", "matematicas"). */
+  slugEs?: string;
+  nameEs?: string;
+  taglineEs?: string;
+  descriptionEs?: string;
+  seoIntroEs?: string;
+  aboutEs?: string;
+  faqsEs?: FAQ[];
 }

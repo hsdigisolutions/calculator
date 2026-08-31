@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { Icon } from "@/components/Icon";
+import type { Locale } from "@/lib/i18n";
 
 export interface SearchItem {
   title: string;
@@ -11,7 +12,16 @@ export interface SearchItem {
   keywords: string;
 }
 
-export function SearchBar({ items }: { items: SearchItem[] }) {
+export function SearchBar({
+  items,
+  locale = "en",
+}: {
+  items: SearchItem[];
+  locale?: Locale;
+}) {
+  const placeholder =
+    locale === "es" ? "Busca entre 500+ calculadoras…" : "Search 500+ calculators…";
+  const ariaLabel = locale === "es" ? "Buscar calculadoras" : "Search calculators";
   const [q, setQ] = useState("");
   const [focused, setFocused] = useState(false);
 
@@ -43,8 +53,8 @@ export function SearchBar({ items }: { items: SearchItem[] }) {
           onChange={(e) => setQ(e.target.value)}
           onFocus={() => setFocused(true)}
           onBlur={() => setTimeout(() => setFocused(false), 150)}
-          placeholder="Search 500+ calculators…"
-          aria-label="Search calculators"
+          placeholder={placeholder}
+          aria-label={ariaLabel}
           className="w-full h-16 rounded-full bg-[var(--glass-bg)] backdrop-blur-glass border border-line-strong pl-14 pr-5 text-base text-text-primary placeholder:text-text-tertiary shadow-lg outline-none focus-visible:shadow-[var(--focus-ring)] transition-shadow"
         />
       </div>

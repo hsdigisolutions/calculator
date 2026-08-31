@@ -1,14 +1,25 @@
 import type { CalculatorDefinition } from "@/lib/types";
 import { Icon } from "@/components/Icon";
+import { type Locale, t, calcExample, fieldLabel } from "@/lib/i18n";
 
-export function ExamplePanel({ definition }: { definition: CalculatorDefinition }) {
-  const { example, fields } = definition;
-  const labelOf = (id: string) => fields.find((f) => f.id === id)?.label ?? id;
+export function ExamplePanel({
+  definition,
+  locale = "en",
+}: {
+  definition: CalculatorDefinition;
+  locale?: Locale;
+}) {
+  const { fields } = definition;
+  const example = calcExample(definition, locale);
+  const labelOf = (id: string) => {
+    const base = fields.find((f) => f.id === id)?.label ?? id;
+    return fieldLabel(definition, id, base, locale);
+  };
 
   return (
     <section className="mt-10" aria-labelledby="example">
       <h2 id="example" className="text-2xl font-semibold text-text-primary">
-        Worked example
+        {t(locale).workedExample}
       </h2>
       <div className="mt-4 rounded-2xl bg-surface p-5 sm:p-6 border border-line shadow-sm">
         <div className="flex flex-wrap gap-2">

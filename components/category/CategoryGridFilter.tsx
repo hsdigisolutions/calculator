@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { Icon } from "@/components/Icon";
+import type { Locale } from "@/lib/i18n";
 
 export interface CategoryGridItem {
   title: string;
@@ -11,13 +12,29 @@ export interface CategoryGridItem {
   keywords: string;
 }
 
+const GRID_STRINGS = {
+  es: {
+    placeholder: "Filtrar estas calculadoras…",
+    aria: "Filtrar calculadoras de esta categoría",
+    noMatch: "No hay calculadoras que coincidan con",
+  },
+  en: {
+    placeholder: "Filter these calculators…",
+    aria: "Filter calculators in this category",
+    noMatch: "No calculators match",
+  },
+} as const;
+
 export function CategoryGridFilter({
   items,
   icon,
+  locale = "en",
 }: {
   items: CategoryGridItem[];
   icon: string;
+  locale?: Locale;
 }) {
+  const str = GRID_STRINGS[locale];
   const [q, setQ] = useState("");
 
   const filtered = useMemo(() => {
@@ -43,8 +60,8 @@ export function CategoryGridFilter({
             type="search"
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="Filter these calculators…"
-            aria-label="Filter calculators in this category"
+            placeholder={str.placeholder}
+            aria-label={str.aria}
             className="w-full rounded-full border border-line-strong bg-surface-3 py-2.5 pl-10 pr-4 text-sm text-text-primary placeholder:text-text-tertiary outline-none focus:border-brand focus-visible:shadow-[var(--focus-ring)] transition-all"
           />
         </div>
@@ -74,7 +91,7 @@ export function CategoryGridFilter({
         </div>
       ) : (
         <p className="mt-8 text-text-secondary">
-          No calculators match &ldquo;{q}&rdquo;.
+          {str.noMatch} &ldquo;{q}&rdquo;.
         </p>
       )}
     </div>

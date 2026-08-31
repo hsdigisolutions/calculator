@@ -7,16 +7,48 @@ import Link from "next/link";
 import { Icon } from "@/components/Icon";
 import { SITE_NAME } from "@/lib/site";
 import { cn } from "@/lib/utils";
+import { type Locale, homePath } from "@/lib/i18n";
 
 export interface NavCategory {
   slug: string;
   name: string;
   icon: string;
   count: number;
+  href: string;
   tools: { label: string; href: string }[];
 }
 
-export function FullscreenNav({ menu }: { menu: NavCategory[] }) {
+const NAV_STRINGS = {
+  es: {
+    searchPlaceholder: "Buscar calculadoras...",
+    seeAll: "Ver todas",
+    noMatch: "No hay calculadoras que coincidan con",
+    close: "Cerrar",
+    tools: "Herramientas",
+    closeNav: "Cerrar navegación",
+    siteNav: "Navegación del sitio",
+    searchAria: "Buscar calculadoras",
+  },
+  en: {
+    searchPlaceholder: "Search calculators...",
+    seeAll: "See all",
+    noMatch: "No calculators match",
+    close: "Close",
+    tools: "Tools",
+    closeNav: "Close navigation",
+    siteNav: "Site navigation",
+    searchAria: "Search calculators",
+  },
+} as const;
+
+export function FullscreenNav({
+  menu,
+  locale = "en",
+}: {
+  menu: NavCategory[];
+  locale?: Locale;
+}) {
+  const str = NAV_STRINGS[locale];
   const [mounted, setMounted] = useState(false);
   const [visible, setVisible] = useState(false);
   const [canPortal, setCanPortal] = useState(false);
@@ -89,7 +121,7 @@ export function FullscreenNav({ menu }: { menu: NavCategory[] }) {
     <div
       role="dialog"
       aria-modal="true"
-      aria-label="Site navigation"
+      aria-label={str.siteNav}
       className={cn(
         "fixed inset-0 z-[100] overflow-hidden bg-[rgba(0,0,0,0.96)] backdrop-blur-xl",
         "transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]",
@@ -104,7 +136,7 @@ export function FullscreenNav({ menu }: { menu: NavCategory[] }) {
         <div className="mx-auto max-w-[1200px] px-6 py-12 sm:px-10 sm:py-14 lg:px-20">
           {/* Top row */}
           <div className="flex items-center justify-between">
-            <Link href="/" onClick={close} className="flex items-center gap-2 text-white">
+            <Link href={homePath(locale)} onClick={close} className="flex items-center gap-2 text-white">
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[linear-gradient(135deg,var(--brand),var(--brand-600))]">
                 <Icon name="Calculator" size={19} />
               </span>
@@ -113,7 +145,7 @@ export function FullscreenNav({ menu }: { menu: NavCategory[] }) {
             <button
               type="button"
               onClick={close}
-              aria-label="Close navigation"
+              aria-label={str.closeNav}
               className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
             >
               <Icon name="X" size={20} />
@@ -133,8 +165,8 @@ export function FullscreenNav({ menu }: { menu: NavCategory[] }) {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && goFirst()}
-              placeholder="Search calculators..."
-              aria-label="Search calculators"
+              placeholder={str.searchPlaceholder}
+              aria-label={str.searchAria}
               className="h-12 w-full rounded-full border border-white/15 bg-white/[0.06] pl-11 pr-4 text-sm text-white placeholder:text-white/40 outline-none transition-colors focus:border-brand focus:bg-white/[0.09]"
             />
           </div>
@@ -145,7 +177,7 @@ export function FullscreenNav({ menu }: { menu: NavCategory[] }) {
               {filtered.map((cat) => (
                 <div key={cat.slug} className="border-t border-white/[0.08] pt-6">
                   <Link
-                    href={`/${cat.slug}`}
+                    href={cat.href}
                     onClick={close}
                     className="flex items-center gap-2.5 text-white"
                   >
@@ -169,11 +201,11 @@ export function FullscreenNav({ menu }: { menu: NavCategory[] }) {
                   </ul>
                   {!cat.searching && cat.count > cat.shown.length && (
                     <Link
-                      href={`/${cat.slug}`}
+                      href={cat.href}
                       onClick={close}
                       className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-brand hover:underline"
                     >
-                      See all {cat.count} →
+                      {str.seeAll} {cat.count} →
                     </Link>
                   )}
                 </div>
@@ -181,7 +213,7 @@ export function FullscreenNav({ menu }: { menu: NavCategory[] }) {
             </div>
           ) : (
             <p className="mt-16 text-center text-sm text-white/50">
-              No calculators match &ldquo;{query}&rdquo;.
+              {str.noMatch} &ldquo;{query}&rdquo;.
             </p>
           )}
         </div>
@@ -203,7 +235,7 @@ export function FullscreenNav({ menu }: { menu: NavCategory[] }) {
             : "text-text-secondary hover:bg-surface-2 hover:text-text-primary"
         )}
       >
-        {mounted ? "Close" : "Tools"}
+        {mounted ? str.close : str.tools}
         <Icon name={mounted ? "X" : "ChevronDown"} size={mounted ? 14 : 15} />
       </button>
       {canPortal && mounted && createPortal(overlay, document.body)}

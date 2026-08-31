@@ -1,19 +1,52 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { SITE_NAME } from "@/lib/site";
+import { LOCALES, isLocale, type Locale, t, homePath } from "@/lib/i18n";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: `How ${SITE_NAME} handles data: calculations run in your browser and your inputs are never stored.`,
-  alternates: { canonical: "/privacy" },
-};
+export const dynamicParams = false;
+export function generateStaticParams() {
+  return LOCALES.map((lang) => ({ lang }));
+}
 
-export default function PrivacyPage() {
+const paths = (l: Locale) => (l === "en" ? "/en/privacy" : "/privacy");
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLocale(lang)) return {};
+  const l = lang as Locale;
+  return {
+    title: l === "es" ? "Política de privacidad" : "Privacy Policy",
+    description: `How ${SITE_NAME} handles data: calculations run in your browser and your inputs are never stored.`,
+    alternates: {
+      canonical: paths(l),
+      languages: { es: paths("es"), en: paths("en"), "x-default": paths("es") },
+    },
+  };
+}
+
+export default async function PrivacyPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+  const l = lang as Locale;
   return (
     <div className="mx-auto max-w-2xl px-4 sm:px-6 py-8 sm:py-10">
-      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Privacy", href: "/privacy" }]} />
+      <Breadcrumb
+        items={[
+          { label: t(l).home, href: homePath(l) },
+          { label: l === "es" ? "Privacidad" : "Privacy", href: paths(l) },
+        ]}
+      />
       <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-text-primary">
-        Privacy Policy
+        {l === "es" ? "Política de privacidad" : "Privacy Policy"}
       </h1>
       <div className="mt-6 space-y-4 text-text-secondary leading-relaxed">
         <p>

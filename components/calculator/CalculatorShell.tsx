@@ -9,12 +9,37 @@ import type {
 } from "@/lib/types";
 import { getEngine } from "@/lib/engines";
 import { trackCalculatorUsed } from "@/lib/analytics";
+import { type Locale, fieldLabel, resultLabel } from "@/lib/i18n";
 import {
   cn,
   formatResult,
   num,
   splitResultDisplay,
 } from "@/lib/utils";
+
+const SHELL_STRINGS = {
+  es: {
+    updatesAsYouType: "Los resultados se actualizan al escribir.",
+    reset: "Restablecer",
+    optional: "(opcional)",
+    copyResult: "Copiar resultado",
+  },
+  en: {
+    updatesAsYouType: "Results update as you type.",
+    reset: "Reset",
+    optional: "(optional)",
+    copyResult: "Copy result",
+  },
+} as const;
+
+const DISCLAIMERS_ES: Record<string, string> = {
+  health:
+    "Esta calculadora ofrece estimaciones basadas en investigación poblacional. Los resultados no son consejo médico. Consulta a un profesional de la salud antes de tomar decisiones sobre salud o nutrición.",
+  finance:
+    "Esta calculadora es solo con fines ilustrativos. Las tasas, comisiones y condiciones reales varían según el prestamista. Consulta a un asesor financiero cualificado antes de tomar decisiones de préstamo.",
+  tax:
+    "Esta calculadora es solo una guía general y no constituye asesoramiento fiscal. Las reglas varían según la jurisdicción y el año; confírmalo con un profesional cualificado.",
+};
 import { Card } from "@/components/ui/Card";
 import { Icon } from "@/components/Icon";
 import { useCountUp } from "./useCountUp";
@@ -41,9 +66,12 @@ const DISCLAIMERS: Record<string, string> = {
 
 export function CalculatorShell({
   definition,
+  locale = "en",
 }: {
   definition: CalculatorDefinition;
+  locale?: Locale;
 }) {
+  const s = SHELL_STRINGS[locale];
   const [values, setValues] = useState<ComputeInputs>(() =>
     initialValues(definition)
   );
@@ -110,7 +138,7 @@ export function CalculatorShell({
 
   const disclaimer =
     definition.sensitivity && definition.sensitivity !== "none"
-      ? DISCLAIMERS[definition.sensitivity]
+      ? (locale === "es" ? DISCLAIMERS_ES : DISCLAIMERS)[definition.sensitivity]
       : null;
 
   return (
@@ -121,6 +149,8 @@ export function CalculatorShell({
           <Field
             key={field.id}
             field={field}
+            label={fieldLabel(definition, field.id, field.label, locale)}
+            optionalText={s.optional}
             value={values[field.id]}
             invalid={
               field.required &&
@@ -138,7 +168,7 @@ export function CalculatorShell({
       {/* Controls */}
       <div className="mt-5 flex items-center justify-between gap-3">
         <p className="text-xs text-text-tertiary">
-          Results update as you type.
+          {s.updatesAsYouType}
         </p>
         <button
           type="button"
@@ -146,7 +176,7 @@ export function CalculatorShell({
           className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-text-primary transition-colors"
         >
           <Icon name="RotateCcw" size={15} />
-          Reset
+          {s.reset}
         </button>
       </div>
 
@@ -157,13 +187,16 @@ export function CalculatorShell({
       <div role="status" aria-live="polite" className="min-h-[132px]">
         <ResultDisplay
           primary={primary}
+          primaryLabel={resultLabel(definition, primary.id, primary.label, locale)}
           primaryRaw={primaryRaw}
           primaryIsNumber={primaryIsNumber}
           hasResult={hasResult}
           secondary={secondary}
+          secondaryLabel={(r) => resultLabel(definition, r.id, r.label, locale)}
           outputs={outputs}
           onCopy={copyResult}
           copied={copied}
+          copyLabel={s.copyResult}
         />
       </div>
 
@@ -181,22 +214,28 @@ export function CalculatorShell({
 
 function ResultDisplay({
   primary,
+  primaryLabel,
   primaryRaw,
   primaryIsNumber,
   hasResult,
   secondary,
+  secondaryLabel,
   outputs,
   onCopy,
   copied,
+  copyLabel,
 }: {
   primary: CalculatorResult;
+  primaryLabel: string;
   primaryRaw: number | string | undefined;
   primaryIsNumber: boolean;
   hasResult: boolean;
   secondary: CalculatorResult[];
+  secondaryLabel: (r: CalculatorResult) => string;
   outputs: Record<string, number | string>;
   onCopy: () => void;
   copied: boolean;
+  copyLabel: string;
 }) {
   const animated = useCountUp(
     primaryIsNumber ? (primaryRaw as number) : 0,
@@ -221,7 +260,7 @@ function ResultDisplay({
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0">
           <div className="text-xs font-medium uppercase tracking-widest text-text-secondary">
-            {primary.label}
+            {primaryLabel}
           </div>
           <div
             className={cn(
@@ -248,7 +287,7 @@ function ResultDisplay({
           <button
             type="button"
             onClick={onCopy}
-            aria-label="Copy result"
+            aria-label={copyLabel}
             className="shrink-0 inline-flex h-10 w-10 items-center justify-center rounded-full bg-surface-2 text-text-secondary hover:text-text-primary hover:bg-surface-3 transition-colors"
           >
             <Icon name={copied ? "Check" : "Copy"} size={17} />
@@ -270,7 +309,7 @@ function ResultDisplay({
                 key={r.id}
                 className="flex items-center justify-between gap-3 py-3 border-b border-line last:border-0"
               >
-                <span className="text-sm text-text-secondary">{r.label}</span>
+                <span className="text-sm text-text-secondary">{secondaryLabel(r)}</span>
                 <span className="font-mono text-sm font-medium tabular text-text-primary">
                   {show ? formatResult(raw as number, r) : "—"}
                 </span>
@@ -293,12 +332,16 @@ function isFilled(field: CalculatorField, value: string): boolean {
 
 function Field({
   field,
+  label,
+  optionalText,
   value,
   invalid,
   onChange,
   onBlur,
 }: {
   field: CalculatorField;
+  label: string;
+  optionalText: string;
   value: string;
   invalid?: boolean;
   onChange: (v: string) => void;
@@ -321,10 +364,10 @@ function Field({
         htmlFor={field.id}
         className="text-sm font-medium text-text-secondary px-1"
       >
-        {field.label}
+        {label}
         {!field.required && (
           <span className="ml-1.5 text-text-tertiary font-normal">
-            (optional)
+            {optionalText}
           </span>
         )}
       </label>

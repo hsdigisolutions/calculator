@@ -1,11 +1,10 @@
 import Link from "next/link";
-import { CATEGORIES } from "@/lib/categories";
+import { CATEGORIES, getCategory } from "@/lib/categories";
 import {
   getActiveCalculators,
   getCalculatorsByCategory,
   categoryCount,
 } from "@/lib/registry";
-import { SITE_TAGLINE } from "@/lib/site";
 import { Icon } from "@/components/Icon";
 import { CalculatorCard } from "@/components/CalculatorCard";
 import { SearchBar, type SearchItem } from "@/components/homepage/SearchBar";
@@ -14,18 +13,83 @@ import { ScrollReveal } from "@/components/animations/ScrollReveal";
 import { TiltCard } from "@/components/animations/TiltCard";
 import { LiveDemo } from "@/components/homepage/LiveDemo";
 import { CategoryTabs, type CategoryTab } from "@/components/homepage/CategoryTabs";
+import {
+  type Locale,
+  categoryPath,
+  calcPath,
+  allCalculatorsPath,
+  calcTitle,
+  calcShortDescription,
+  calcPrimaryKeyword,
+  calcSecondaryKeywords,
+  categoryName,
+} from "@/lib/i18n";
 
-// Full-bleed section: background spans the viewport, content stays centered.
 const INNER = "mx-auto w-full max-w-content px-4 sm:px-6";
 
-export default function HomePage() {
+const HOME_STRINGS = {
+  es: {
+    andGrowing: "calculadoras y sumando",
+    tagline: "Calcula lo que sea",
+    heroSub: "Calculadoras elegantes, rápidas y fiables para finanzas, salud, matemáticas y la vida cotidiana. Gratis y sin registro.",
+    figureOut: "¿Qué estás intentando averiguar?",
+    browseByCategory: "Explora por categoría",
+    popular: "Calculadoras populares",
+    viewAll: "Ver todas",
+    exploreEvery: "Explora todas las categorías",
+    exploreSub: "Cambia de categoría para ver las herramientas dentro, sin recargar la página.",
+    tool: "herramienta",
+    tools: "herramientas",
+    intents: [
+      { icon: "Landmark", title: "Planifica tu dinero", slug: "finance", blurb: "Hipotecas, préstamos e interés" },
+      { icon: "HeartPulse", title: "Cuida tu salud", slug: "health", blurb: "IMC, calorías y métricas corporales" },
+      { icon: "Sigma", title: "Haz cálculos", slug: "math", blurb: "Porcentajes, fracciones y más" },
+      { icon: "ArrowLeftRight", title: "Convierte unidades", slug: "converters", blurb: "Longitud, peso y temperatura" },
+    ],
+    trust: [
+      { icon: "Zap", title: "Resultados instantáneos", body: "Cada calculadora se ejecuta en tu navegador y se actualiza en cuanto escribes." },
+      { icon: "ShieldCheck", title: "Fórmulas fiables", body: "Las herramientas de salud y finanzas citan sus fuentes y muestran la fórmula exacta." },
+      { icon: "Gauge", title: "Rápido y privado", body: "Sin registro y sin rastrear tus datos. Diseñado para ser veloz en cualquier dispositivo." },
+    ],
+  },
+  en: {
+    andGrowing: "calculators and growing",
+    tagline: "Calculate Anything.",
+    heroSub: "Beautiful, fast and trusted calculators for finance, health, math and everyday life. Free, with no sign-up.",
+    figureOut: "What are you trying to figure out?",
+    browseByCategory: "Browse by category",
+    popular: "Popular calculators",
+    viewAll: "View all",
+    exploreEvery: "Explore every category",
+    exploreSub: "Switch categories to browse the tools inside — no page load.",
+    tool: "tool",
+    tools: "tools",
+    intents: [
+      { icon: "Landmark", title: "Plan your money", slug: "finance", blurb: "Mortgages, loans & interest" },
+      { icon: "HeartPulse", title: "Stay healthy", slug: "health", blurb: "BMI, calories & body metrics" },
+      { icon: "Sigma", title: "Crunch numbers", slug: "math", blurb: "Percentages, fractions & more" },
+      { icon: "ArrowLeftRight", title: "Convert units", slug: "converters", blurb: "Length, weight & temperature" },
+    ],
+    trust: [
+      { icon: "Zap", title: "Instant results", body: "Every calculator runs in your browser and updates the moment you type." },
+      { icon: "ShieldCheck", title: "Trusted formulas", body: "Health and finance tools cite their sources and show the exact formula used." },
+      { icon: "Gauge", title: "Fast & private", body: "No sign-up, no tracking of your inputs. Built for speed on any device." },
+    ],
+  },
+} as const;
+
+export function HomeView({ locale }: { locale: Locale }) {
+  const s = HOME_STRINGS[locale];
   const all = getActiveCalculators();
-  const searchItems: SearchItem[] = all.map((c) => ({
-    title: c.title,
-    href: `/${c.categorySlug}/${c.slug}`,
-    category: c.category,
-    keywords: [c.primaryKeyword, ...c.secondaryKeywords].join(" "),
-  }));
+  const searchItems: SearchItem[] = all.map((c) => {
+    const cat = getCategory(c.categorySlug);
+    return {
+      title: calcTitle(c, locale),
+      href: calcPath(c, cat, locale),
+      category: cat ? categoryName(cat, locale) : c.category,
+      keywords: [calcPrimaryKeyword(c, locale), ...calcSecondaryKeywords(c, locale)].join(" "),
+    };
+  });
 
   const popular = all.slice(0, 6);
 
@@ -33,69 +97,65 @@ export default function HomePage() {
     (c) => getCalculatorsByCategory(c.slug).length > 0
   ).map((c) => ({
     slug: c.slug,
-    name: c.name,
+    name: categoryName(c, locale),
     icon: c.icon,
+    href: categoryPath(c, locale),
     calcs: getCalculatorsByCategory(c.slug).map((k) => ({
-      title: k.title,
-      href: `/${k.categorySlug}/${k.slug}`,
-      shortDescription: k.shortDescription,
+      title: calcTitle(k, locale),
+      href: calcPath(k, c, locale),
+      shortDescription: calcShortDescription(k, locale),
     })),
   }));
 
   return (
     <div className="w-full">
-      {/* Hero — full-bleed mesh background, centered content */}
+      {/* Hero */}
       <section className="relative w-full overflow-hidden border-b border-line">
         <MeshGradient />
         <div className={`${INNER} pt-16 sm:pt-24 pb-16 text-center`}>
           <div className="inline-flex items-center gap-2 rounded-full bg-surface-2 px-4 py-1.5 text-sm text-text-secondary">
             <Icon name="Sparkles" size={15} className="text-brand" />
-            {all.length} calculators and growing
+            {all.length} {s.andGrowing}
           </div>
           <h1 className="mt-6 text-5xl sm:text-7xl font-extrabold tracking-tight text-text-primary">
-            {SITE_TAGLINE}
+            {s.tagline}
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-lg text-text-secondary">
-            Beautiful, fast and trusted calculators for finance, health, math
-            and everyday life. Free, with no sign-up.
+            {s.heroSub}
           </p>
 
           <div className="mt-9">
-            <SearchBar items={searchItems} />
+            <SearchBar items={searchItems} locale={locale} />
           </div>
 
           <div className="mt-6 flex flex-wrap justify-center gap-2">
             {CATEGORIES.slice(0, 6).map((c) => (
               <Link
                 key={c.slug}
-                href={`/${c.slug}`}
+                href={categoryPath(c, locale)}
                 className="rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-text-secondary hover:text-text-primary hover:border-line-strong transition-colors"
               >
-                {c.name}
+                {categoryName(c, locale)}
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Intent navigation — "what are you trying to figure out?" */}
+      {/* Intent navigation */}
       <section className="w-full border-t border-line bg-surface/30">
         <div className={`${INNER} py-14 sm:py-16`}>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
-            What are you trying to figure out?
+            {s.figureOut}
           </h2>
           <div className="mt-6 grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { icon: "Landmark", title: "Plan your money", slug: "finance", blurb: "Mortgages, loans & interest" },
-              { icon: "HeartPulse", title: "Stay healthy", slug: "health", blurb: "BMI, calories & body metrics" },
-              { icon: "Sigma", title: "Crunch numbers", slug: "math", blurb: "Percentages, fractions & more" },
-              { icon: "ArrowLeftRight", title: "Convert units", slug: "converters", blurb: "Length, weight & temperature" },
-            ].map((it) => {
+            {s.intents.map((it) => {
+              const cat = getCategory(it.slug);
               const n = categoryCount(it.slug);
               return (
                 <Link
                   key={it.slug}
-                  href={`/${it.slug}`}
+                  href={cat ? categoryPath(cat, locale) : "#"}
                   className="group flex flex-col gap-3 rounded-2xl border border-line bg-surface p-5 shadow-sm hover:shadow-lg hover:-translate-y-0.5 hover:border-line-strong transition-all duration-300 ease-spring"
                 >
                   <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand/10 text-brand">
@@ -107,7 +167,7 @@ export default function HomePage() {
                   </div>
                   {n > 0 && (
                     <span className="mt-auto text-xs font-medium text-text-tertiary">
-                      {n} {n === 1 ? "tool" : "tools"} →
+                      {n} {n === 1 ? s.tool : s.tools} →
                     </span>
                   )}
                 </Link>
@@ -121,7 +181,7 @@ export default function HomePage() {
       <section className="w-full">
         <div className={`${INNER} py-16 sm:py-20`}>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
-            Browse by category
+            {s.browseByCategory}
           </h2>
           <ScrollReveal
             variant="stagger"
@@ -133,7 +193,7 @@ export default function HomePage() {
               return (
                 <TiltCard key={c.slug}>
                   <Link
-                    href={`/${c.slug}`}
+                    href={categoryPath(c, locale)}
                     className="group flex h-full flex-col gap-4 rounded-2xl bg-surface p-6 border border-line shadow-sm hover:shadow-lg hover:border-line-strong transition-all duration-300 ease-spring"
                   >
                     <div className="flex items-center justify-between">
@@ -142,27 +202,30 @@ export default function HomePage() {
                       </span>
                       {count > 0 && (
                         <span className="text-xs font-medium text-text-tertiary">
-                          {count} {count === 1 ? "tool" : "tools"}
+                          {count} {count === 1 ? s.tool : s.tools}
                         </span>
                       )}
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-text-primary">
-                        {c.name}
+                        {categoryName(c, locale)}
                       </h3>
                       <p className="mt-1 text-sm text-text-secondary">
-                        {c.tagline}
+                        {c.taglineEs && locale === "es" ? c.taglineEs : c.tagline}
                       </p>
                     </div>
                     {samples.length > 0 && (
                       <ul className="mt-auto space-y-1">
-                        {samples.map((s) => (
+                        {samples.map((sample) => (
                           <li
-                            key={s.slug}
+                            key={sample.slug}
                             className="flex items-center gap-1.5 text-sm text-text-tertiary"
                           >
                             <Icon name="ChevronRight" size={13} />
-                            {s.title.replace(" Calculator", "")}
+                            {calcTitle(sample, locale).replace(
+                              / Calculator| Calculadora| Converter| Conversor/i,
+                              ""
+                            )}
                           </li>
                         ))}
                       </ul>
@@ -180,13 +243,13 @@ export default function HomePage() {
         <div className={`${INNER} py-16 sm:py-20`}>
           <div className="flex items-end justify-between">
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
-              Popular calculators
+              {s.popular}
             </h2>
             <Link
-              href="/calculators"
+              href={allCalculatorsPath(locale)}
               className="inline-flex items-center gap-1 text-sm font-medium text-brand hover:underline"
             >
-              View all
+              {s.viewAll}
               <Icon name="ArrowRight" size={15} />
             </Link>
           </div>
@@ -195,26 +258,24 @@ export default function HomePage() {
             className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
           >
             {popular.map((c) => (
-              <CalculatorCard key={c.slug} calc={c} />
+              <CalculatorCard key={c.slug} calc={c} locale={locale} />
             ))}
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Live demo — a real working calculator on the homepage */}
-      <LiveDemo />
+      {/* Live demo */}
+      <LiveDemo locale={locale} />
 
       {/* Tabbed category deep-dive */}
       <section className="w-full border-t border-line">
         <div className={`${INNER} py-16 sm:py-20`}>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
-            Explore every category
+            {s.exploreEvery}
           </h2>
-          <p className="mt-2 text-text-secondary">
-            Switch categories to browse the tools inside — no page load.
-          </p>
+          <p className="mt-2 text-text-secondary">{s.exploreSub}</p>
           <div className="mt-8">
-            <CategoryTabs tabs={tabs} />
+            <CategoryTabs tabs={tabs} locale={locale} />
           </div>
         </div>
       </section>
@@ -223,33 +284,12 @@ export default function HomePage() {
       <section className="w-full border-t border-line">
         <div className={`${INNER} py-16 sm:py-20`}>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {[
-              {
-                icon: "Zap",
-                title: "Instant results",
-                body: "Every calculator runs in your browser and updates the moment you type.",
-              },
-              {
-                icon: "ShieldCheck",
-                title: "Trusted formulas",
-                body: "Health and finance tools cite their sources and show the exact formula used.",
-              },
-              {
-                icon: "Gauge",
-                title: "Fast & private",
-                body: "No sign-up, no tracking of your inputs. Built for speed on any device.",
-              },
-            ].map((f) => (
-              <div
-                key={f.title}
-                className="rounded-2xl bg-surface p-6 border border-line"
-              >
+            {s.trust.map((f) => (
+              <div key={f.title} className="rounded-2xl bg-surface p-6 border border-line">
                 <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand/10 text-brand">
                   <Icon name={f.icon} size={22} />
                 </span>
-                <h3 className="mt-4 font-semibold text-text-primary">
-                  {f.title}
-                </h3>
+                <h3 className="mt-4 font-semibold text-text-primary">{f.title}</h3>
                 <p className="mt-1.5 text-sm text-text-secondary leading-relaxed">
                   {f.body}
                 </p>

@@ -568,10 +568,55 @@ export const CATEGORIES: Category[] = [
   },
 ];
 
+/**
+ * Spanish localization for categories. Short fields (slugEs/nameEs/tagline/
+ * description) are set here so routing and navigation work immediately; the long
+ * hub copy (seoIntroEs, aboutEs, faqsEs) is populated by the translation pass and
+ * falls back to English until then. AI-generated — flag for native review.
+ */
+const CATEGORY_ES: Record<string, Partial<Category>> = {
+  math: { slugEs: "matematicas", nameEs: "Matemáticas", taglineEs: "Porcentajes, fracciones, raíces y más", descriptionEs: "Matemáticas cotidianas y avanzadas al instante." },
+  finance: { slugEs: "finanzas", nameEs: "Finanzas", taglineEs: "Hipotecas, préstamos, interés y ROI", descriptionEs: "Planifica pagos, crecimiento y rendimientos con confianza." },
+  health: { slugEs: "salud", nameEs: "Salud", taglineEs: "IMC, TMB, calorías y métricas corporales", descriptionEs: "Entiende tu cuerpo con fórmulas confiables." },
+  "date-time": { slugEs: "fecha-hora", nameEs: "Fecha y Hora", taglineEs: "Edad, duraciones y días hábiles", descriptionEs: "Cuenta días, duraciones y fechas con precisión." },
+  converters: { slugEs: "conversores", nameEs: "Conversores", taglineEs: "Longitud, peso, temperatura y datos", descriptionEs: "Convierte entre unidades al instante." },
+  business: { slugEs: "negocios", nameEs: "Negocios", taglineEs: "Tarifas, ingresos y flujo de caja", descriptionEs: "Pon precio a tu trabajo y planifica tus números." },
+  construction: { slugEs: "construccion", nameEs: "Construcción", taglineEs: "Hormigón, pintura y azulejos", descriptionEs: "Estima materiales antes de comprar." },
+  education: { slugEs: "educacion", nameEs: "Educación", taglineEs: "Notas y promedio (GPA)", descriptionEs: "Sigue tus notas y tu progreso académico." },
+  ecommerce: { slugEs: "comercio-electronico", nameEs: "Comercio Electrónico", taglineEs: "Ganancia y comisiones de marketplace", descriptionEs: "Conoce tu margen real por venta." },
+  everyday: { slugEs: "vida-cotidiana", nameEs: "Vida Cotidiana", taglineEs: "Propinas, descuentos, impuestos y divisiones", descriptionEs: "Cálculos cotidianos para gastar mejor." },
+  marketing: { slugEs: "marketing", nameEs: "Marketing", taglineEs: "ROAS y rendimiento publicitario", descriptionEs: "Mide el retorno de tu inversión publicitaria." },
+  science: { slugEs: "ciencia", nameEs: "Ciencia", taglineEs: "Física, química y movimiento", descriptionEs: "Resuelve fórmulas de física y química al instante." },
+  "real-estate": { slugEs: "bienes-raices", nameEs: "Bienes Raíces", taglineEs: "Propiedades, hipotecas y alquileres", descriptionEs: "Analiza operaciones inmobiliarias e hipotecas." },
+  automotive: { slugEs: "automovil", nameEs: "Automóvil", taglineEs: "Combustible, préstamos y neumáticos", descriptionEs: "Calcula los costes de tu coche." },
+  cooking: { slugEs: "cocina", nameEs: "Cocina", taglineEs: "Recetas, conversiones y tiempos", descriptionEs: "Escala recetas y convierte unidades de cocina." },
+  engineering: { slugEs: "ingenieria", nameEs: "Ingeniería", taglineEs: "Fórmulas mecánicas y eléctricas", descriptionEs: "Resuelve fórmulas de ingeniería rápido." },
+  sports: { slugEs: "deportes", nameEs: "Deportes", taglineEs: "Entrenamiento, ritmo y rendimiento", descriptionEs: "Entrena con inteligencia usando los números." },
+  technology: { slugEs: "tecnologia", nameEs: "Tecnología", taglineEs: "Datos, redes y pantallas", descriptionEs: "Matemáticas prácticas de tecnología y redes." },
+  environment: { slugEs: "medio-ambiente", nameEs: "Medio Ambiente", taglineEs: "Energía, carbono y sostenibilidad", descriptionEs: "Mide tu impacto ambiental." },
+  logistics: { slugEs: "logistica", nameEs: "Logística", taglineEs: "Envíos, carga y almacenaje", descriptionEs: "Planifica envíos y costes de flete." },
+};
+
+// Merge Spanish fields onto the category objects in place.
+for (const c of CATEGORIES) {
+  const es = CATEGORY_ES[c.slug];
+  if (es) Object.assign(c, es);
+}
+
 export const CATEGORY_MAP: Record<string, Category> = Object.fromEntries(
   CATEGORIES.map((c) => [c.slug, c])
 );
 
+/** Look up by the canonical (English) slug. */
 export function getCategory(slug: string): Category | undefined {
   return CATEGORY_MAP[slug];
+}
+
+/** Look up a category by its slug in a given locale (es uses slugEs). */
+export function getCategoryByLocalizedSlug(
+  locale: "es" | "en",
+  slug: string
+): Category | undefined {
+  if (locale === "en") return CATEGORY_MAP[slug];
+  return CATEGORIES.find((c) => (c.slugEs ?? c.slug) === slug);
 }
