@@ -50,6 +50,38 @@ export const scienceMoreCalculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard physics (wave equation)",
+    slugEs: "calculadora-de-longitud-de-onda",
+    titleEs: "Calculadora de Longitud de Onda",
+    shortDescriptionEs: "Halla la longitud de onda y el periodo a partir de la velocidad de la onda y la frecuencia.",
+    seoTitleEs: "Calculadora de Longitud de Onda — Velocidad de Onda y Frecuencia a Longitud de Onda",
+    metaDescriptionEs: "Calculadora gratuita de longitud de onda. Introduce la velocidad de la onda y la frecuencia para hallar la longitud de onda en metros y el periodo en segundos al instante. Ideal para sonido, luz y radio.",
+    primaryKeywordEs: "calculadora de longitud de onda",
+    secondaryKeywordsEs: ["velocidad de onda frecuencia longitud de onda", "calculadora de fórmula de longitud de onda", "frecuencia a longitud de onda"],
+    formulaExplanationEs: "La longitud de onda es igual a la velocidad de la onda dividida entre la frecuencia, porque una onda avanza exactamente una longitud de onda durante cada ciclo completo, así que encajar más ciclos por segundo a la misma velocidad las junta más. La frecuencia y la longitud de onda son por tanto inversamente proporcionales para una velocidad fija. El periodo, el tiempo de un ciclo, es simplemente uno dividido entre la frecuencia, ya que la frecuencia cuenta cuántos ciclos ocurren cada segundo.",
+    explanationEs: "Una longitud de onda es la distancia física entre dos puntos equivalentes de una onda —cresta a cresta, o valle a valle—, y esta calculadora de longitud de onda la halla a partir de la velocidad de la onda y la frecuencia que introduzcas. También informa el periodo, el tiempo que tarda cada ciclo completo. Toda onda, ya sea sonido propagándose por el aire, luz cruzando el espacio o una ondulación en el agua, obedece la misma relación: cuanto más rápido viaja o menos ciclos completa por segundo, más se estira cada onda.\n\nConocer la longitud de onda importa en la física y la ingeniería. Los ingenieros de radio dimensionan antenas a una fracción de la longitud de onda de una señal, músicos y acústicos vinculan el tono a la longitud de columnas vibrantes, y los diseñadores ópticos ajustan lentes a los colores de luz que deben desviar. Como las tres magnitudes están unidas, fijar dos cualesquiera determina la longitud de onda, así que la herramienta elimina la división y el manejo de unidades.\n\nLa relación se cumple porque la velocidad es igual a la longitud de onda por la frecuencia, consecuencia directa de que una onda avanza una longitud de onda completa durante cada ciclo. Estudiantes que revisan tareas, radioaficionados que ajustan equipos e investigadores del sonido o la luz recurren a una calculadora de longitud de onda para pasar de una velocidad y una frecuencia medidas a una respuesta exacta.",
+    exampleEs: { inputs: { waveSpeed: 340, frequency: 170 }, explanation: "340 m/s ÷ 170 Hz = 2 m, y el periodo es 1 ÷ 170 ≈ 0,0059 s." },
+    faqsEs: [
+      {
+        question: "¿Qué unidades debo usar para la velocidad de la onda y la frecuencia?",
+        answer: "Introduce la velocidad de la onda en metros por segundo y la frecuencia en hercios, que cuenta ciclos por segundo, y la longitud de onda sale en metros. El periodo se devuelve en segundos. Si tu frecuencia está en kilohercios o megahercios, multiplica por mil o un millón primero, porque mantener cada entrada en unidades SI base garantiza que la longitud de onda y el periodo salgan correctos sin escalado adicional.",
+      },
+      {
+        question: "¿Cómo se relacionan la longitud de onda y la frecuencia?",
+        answer: "Para una onda que viaja a velocidad fija, la longitud de onda y la frecuencia son inversamente proporcionales: cuando una sube, la otra baja. Duplica la frecuencia y cada onda se vuelve la mitad de larga, porque la misma velocidad ahora debe encajar el doble de ciclos por segundo. Este intercambio explica por qué los sonidos agudos y las señales de radio de alta frecuencia tienen longitudes de onda cortas mientras los tonos graves se estiran mucho más.",
+      },
+      {
+        question: "¿Qué es el periodo de una onda?",
+        answer: "El periodo es el tiempo que tarda una onda en completar un ciclo entero, medido en segundos, y es simplemente el recíproco de la frecuencia. Una onda a dos hercios se repite dos veces por segundo, así que su periodo es medio segundo. El periodo y la longitud de onda describen la misma onda desde ángulos distintos: uno en el tiempo, la otra en el espacio, y ambos surgen de la frecuencia que introduces.",
+      },
+      {
+        question: "¿Funciona esto tanto para el sonido como para la luz?",
+        answer: "Sí. La ecuación de onda se aplica a todo tipo de onda, así que solo necesitas la velocidad correcta de tu medio. El sonido viaja a unos 340 metros por segundo en el aire, mientras que la luz y otras ondas electromagnéticas se mueven a unos 300 millones de metros por segundo en el vacío. Introduce la velocidad apropiada para tu situación y la calculadora devuelve la longitud de onda y el periodo correspondientes al sonido, la luz o el agua.",
+      },
+      {
+        question: "¿Por qué una velocidad de 340 y una frecuencia de 170 dan 2 metros?",
+        answer: "Dividir la velocidad de la onda entre la frecuencia da la longitud de onda, así que 340 metros por segundo divididos entre 170 hercios son exactamente 2 metros. Es un ejemplo típico de onda sonora, ya que 340 metros por segundo se acerca a la velocidad del sonido en el aire. El periodo resulta uno dividido entre 170, unos 0,0059 segundos, el tiempo que tarda en pasar cada ciclo de esa onda.",
+      },
+    ],
   },
   {
     id: "electric-power",
@@ -100,6 +132,38 @@ export const scienceMoreCalculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard physics (electrical power)",
+    slugEs: "calculadora-de-potencia-electrica",
+    titleEs: "Calculadora de Potencia Eléctrica",
+    shortDescriptionEs: "Halla la potencia eléctrica y la resistencia a partir del voltaje y la corriente.",
+    seoTitleEs: "Calculadora de Potencia Eléctrica — Voltaje y Corriente a Vatios",
+    metaDescriptionEs: "Calculadora gratuita de potencia eléctrica. Introduce voltaje y corriente para hallar la potencia en vatios y la resistencia en ohmios al instante. Ideal para circuitos, dispositivos y consumo.",
+    primaryKeywordEs: "calculadora de potencia eléctrica",
+    secondaryKeywordsEs: ["calculadora de vatios", "calculadora de voltaje corriente potencia", "fórmula de potencia eléctrica"],
+    formulaExplanationEs: "La potencia es igual al voltaje multiplicado por la corriente porque el voltaje es la energía que transporta cada unidad de carga y la corriente es la carga que fluye por segundo, así que multiplicarlos da la energía entregada por segundo, que es la potencia en vatios. La resistencia se obtiene de la ley de Ohm como voltaje dividido entre corriente, revelando con qué fuerza el componente se opone al flujo. Juntos, estos dos resultados describen tanto el consumo de energía como el carácter eléctrico del componente.",
+    explanationEs: "La potencia eléctrica es la velocidad a la que un circuito convierte energía en calor, luz o movimiento, y esta calculadora de potencia eléctrica la halla directamente a partir del voltaje que hay en un componente y la corriente que lo atraviesa. También devuelve la resistencia implicada por esos dos valores, dando una imagen más completa de cómo se comporta el componente. La potencia es lo que mide tu contador de electricidad, lo que determina si un cable se mantiene frío o caliente, y lo que describe la etiqueta de un dispositivo.\n\nComprender la potencia importa siempre que dimensionas una fuente, eliges un fusible o estimas costes de funcionamiento. Un cargador de móvil, una tetera y un motor eléctrico difieren sobre todo en cuánta potencia consumen, y equivocarse en esa cifra puede significar un circuito sobrecargado o un componente que se sobrecalienta. Como la potencia es simplemente voltaje por corriente, la calculadora elimina la aritmética y te permite comparar dispositivos de un vistazo.\n\nLa relación se cumple porque cada culombio de carga transporta una cantidad de energía fijada por el voltaje, y la corriente cuenta cuántos culombios pasan cada segundo, así que su producto es energía por segundo: potencia en vatios. Electricistas, aficionados y estudiantes usan una calculadora de potencia eléctrica para comprobar valores nominales, planificar cableado y entender cuánta energía consumen sus circuitos.",
+    exampleEs: { inputs: { voltage: 12, current: 2 }, explanation: "12 V × 2 A = 24 W, y la resistencia es 12 ÷ 2 = 6 Ω." },
+    faqsEs: [
+      {
+        question: "¿Qué unidades usa esta calculadora?",
+        answer: "Introduce el voltaje en voltios y la corriente en amperios, y la potencia sale en vatios, la unidad SI de potencia. La resistencia se devuelve en ohmios. Si tu corriente está en miliamperios, divide entre mil para convertirla en amperios primero. Mantener el voltaje en voltios y la corriente en amperios garantiza que la potencia se lea correctamente en vatios sin ningún escalado adicional por tu parte.",
+      },
+      {
+        question: "¿En qué se diferencia la potencia eléctrica de la energía?",
+        answer: "La potencia es la velocidad a la que se usa la energía, medida en vatios, mientras que la energía es la cantidad total consumida a lo largo del tiempo, medida en julios o kilovatios-hora. Una bombilla de 100 vatios consume energía a un ritmo constante, y encenderla más tiempo usa más energía sin cambiar su potencia. Tu factura cobra por energía, así que multiplica la potencia de cada dispositivo por las horas de uso.",
+      },
+      {
+        question: "¿Por qué la calculadora también muestra la resistencia?",
+        answer: "La resistencia está muy ligada a la potencia en un circuito, así que mostrarla da una imagen más completa con las mismas dos entradas. Usando la ley de Ohm, la resistencia es igual al voltaje dividido entre la corriente, revelando con qué fuerza el componente limita el flujo de carga. Conocer la resistencia junto a la potencia ayuda a comprobar si un valor parece razonable y a contrastar resultados con la etiqueta de una resistencia o una hoja de datos.",
+      },
+      {
+        question: "¿Puedo calcular la potencia sin conocer la corriente?",
+        answer: "Esta calculadora necesita voltaje y corriente, pero si conoces voltaje y resistencia en su lugar, puedes hallar la potencia con la fórmula equivalente voltaje al cuadrado dividido entre resistencia. Del mismo modo, corriente al cuadrado por resistencia da la potencia cuando conoces corriente y resistencia. Estas formas provienen de combinar la ecuación de potencia con la ley de Ohm, así que dos cualesquiera de voltaje, corriente y resistencia bastan para determinar la potencia.",
+      },
+      {
+        question: "¿Qué ocurre si la corriente es cero?",
+        answer: "Si la corriente es cero, no fluye carga, así que la potencia es cero sin importar el voltaje presente: un interruptor abierto no entrega energía. La resistencia en ese caso queda indefinida, porque dividir el voltaje entre una corriente cero no tiene valor finito, así que la calculadora devuelve un guion para la resistencia. Una lectura de corriente cero significa simplemente que el circuito está abierto o el componente no conduce.",
+      },
+    ],
   },
   {
     id: "gravitational-force",
@@ -150,6 +214,38 @@ export const scienceMoreCalculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard physics (Newton's law of gravitation)",
+    slugEs: "calculadora-de-fuerza-gravitacional",
+    titleEs: "Calculadora de Fuerza Gravitacional",
+    shortDescriptionEs: "Halla la atracción gravitacional entre dos masas.",
+    seoTitleEs: "Calculadora de Fuerza Gravitacional — Ley de Gravitación de Newton",
+    metaDescriptionEs: "Calculadora gratuita de fuerza gravitacional. Introduce dos masas y su distancia para hallar la atracción gravitacional en newtons con la ley de gravitación de Newton. Rápida y precisa.",
+    primaryKeywordEs: "calculadora de fuerza gravitacional",
+    secondaryKeywordsEs: ["calculadora de ley de gravitación de newton", "calculadora de fuerza de gravedad", "fuerza entre dos masas"],
+    formulaExplanationEs: "La ley de gravitación de Newton multiplica las dos masas entre sí, divide entre el cuadrado de la distancia entre sus centros y escala el resultado por la constante gravitacional G, de unas 6,674 por diez elevado a menos once. Las masas se multiplican porque cada una atrae a la otra, y la distancia se eleva al cuadrado porque la gravedad se debilita sobre la superficie creciente de una esfera a medida que se extiende hacia fuera desde una masa hacia el espacio.",
+    explanationEs: "La fuerza gravitacional es la atracción universal que empuja a dos masas cualesquiera una hacia la otra, y esta calculadora de fuerza gravitacional la halla a partir de las dos masas y la distancia que separa sus centros. Desde la caída de una manzana hasta las órbitas de los planetas, la misma ley las gobierna todas: todo objeto con masa tira de todos los demás, con una fuerza que crece con las masas y se debilita bruscamente al alejarse.\n\nEste cálculo importa mucho más allá del aula. Explica por qué la Luna orbita la Tierra, por qué pesas un poco menos en la cima de una montaña y cómo se dirigen las naves espaciales usando la atracción de mundos lejanos. Como la fuerza depende del producto de las masas y del cuadrado de la distancia, pequeños cambios en la separación tienen un gran efecto, que la calculadora facilita explorar sin lidiar a mano con la diminuta constante gravitacional.\n\nLa ley funciona porque la gravedad se extiende sobre la superficie de una esfera que crece, así que su fuerza cae con el cuadrado de la distancia, mientras que duplicar cualquiera de las masas simplemente duplica la atracción. Estudiantes de física, aficionados a la astronomía e ingenieros que planifican órbitas recurren a una calculadora de fuerza gravitacional para convertir masas y una distancia en una fuerza precisa en newtons usando la famosa ecuación de Newton.",
+    exampleEs: { inputs: { mass1: 70, mass2: 5.972e24, distance: 6371000 }, explanation: "Una persona de 70 kg y la Tierra (5,972×10²⁴ kg) a su radio de 6.371.000 m se atraen con unos 686,9 N, el peso de la persona." },
+    faqsEs: [
+      {
+        question: "¿Qué unidades debo introducir?",
+        answer: "Usa kilogramos para ambas masas y metros para la distancia entre sus centros, y la fuerza sale en newtons. La constante gravitacional incorporada en la calculadora supone estas unidades SI, así que mezclar gramos o kilómetros desviaría el resultado por grandes factores. Convierte primero cualquier unidad no estándar: una tonelada son mil kilogramos, y un kilómetro son mil metros, manteniendo cada cifra coherente.",
+      },
+      {
+        question: "¿Por qué la fuerza gravitacional suele ser tan pequeña?",
+        answer: "La gravedad es con diferencia la más débil de las fuerzas fundamentales, y la constante gravitacional es extremadamente diminuta, en torno a 6,674 por diez elevado a menos once. En consecuencia, los objetos cotidianos se atraen con fuerzas demasiado pequeñas para sentirse. La gravedad solo se nota cuando al menos una masa es enorme, como un planeta o una estrella, por lo que percibimos la atracción de la Tierra pero no la de un edificio cercano.",
+      },
+      {
+        question: "¿Cómo afecta la distancia a la fuerza?",
+        answer: "La fuerza sigue una ley del inverso del cuadrado, así que se debilita con el cuadrado de la distancia entre las masas. Duplica la separación y la fuerza cae a una cuarta parte; triplícala y la fuerza cae a una novena parte. Este rápido descenso explica por qué la gravedad, aunque de alcance infinito, se vuelve insignificante en grandes distancias, y por qué la proximidad importa tanto al comparar la atracción entre cuerpos en órbita.",
+      },
+      {
+        question: "¿Esto mide la distancia entre superficies o entre centros?",
+        answer: "La ley de Newton usa la distancia entre los centros de masa de los dos objetos, no el hueco entre sus superficies. Para cuerpos esféricos como los planetas, toda la masa actúa como si estuviera concentrada en el centro, así que mides de centro a centro. Al hallar tu peso en la Tierra, por ejemplo, la distancia es el radio del planeta, no tu altura sobre el suelo.",
+      },
+      {
+        question: "¿Puedo usar esto para hallar mi peso?",
+        answer: "Sí. Introduce tu masa, la masa de la Tierra de unos 5,97 por diez elevado a veinticuatro kilogramos, y el radio terrestre de aproximadamente 6.371.000 metros, y la fuerza devuelta es tu peso en newtons. El resultado coincide con multiplicar tu masa por 9,81, la conocida aceleración gravitatoria, porque esa aceleración se deriva de esta misma ley aplicada en la superficie de la Tierra.",
+      },
+    ],
   },
   {
     id: "thermal-expansion",
@@ -201,6 +297,38 @@ export const scienceMoreCalculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard physics (thermal expansion)",
+    slugEs: "calculadora-de-expansion-termica",
+    titleEs: "Calculadora de Expansión Térmica",
+    shortDescriptionEs: "Halla cuánto se expande un material al calentarse.",
+    seoTitleEs: "Calculadora de Expansión Térmica — Cambio de Longitud por Calor",
+    metaDescriptionEs: "Calculadora gratuita de expansión térmica. Introduce la longitud original, el coeficiente de expansión y el cambio de temperatura para hallar el cambio de longitud y la nueva longitud en metros. Ideal para ingeniería.",
+    primaryKeywordEs: "calculadora de expansión térmica",
+    secondaryKeywordsEs: ["calculadora de expansión lineal", "coeficiente de expansión térmica", "cambio de longitud por temperatura"],
+    formulaExplanationEs: "La expansión térmica lineal multiplica el coeficiente de expansión por la longitud original y por el cambio de temperatura, porque cada grado estira el material en una fracción fija de su longitud fijada por ese coeficiente. Los objetos más largos se mueven por tanto más, y los cambios de temperatura mayores los desplazan más lejos. Sumar este cambio a la longitud original da la nueva longitud. La relación se mantiene precisa mientras el cambio de temperatura sea moderado y el material se comporte de forma uniforme.",
+    explanationEs: "La mayoría de los materiales crecen al calentarse y se encogen al enfriarse, y esta calculadora de expansión térmica halla exactamente cuánto cambia de longitud un sólido a partir de su longitud original, su coeficiente de expansión y el cambio de temperatura. Informa tanto el cambio de longitud como la nueva longitud resultante, para que veas el efecto de una variación de temperatura de un vistazo. Este sutil estiramiento es la razón por la que los puentes tienen juntas de dilatación, por la que las vías del tren pueden pandearse en una ola de calor y por la que una tapa metálica atascada se afloja con agua caliente.\n\nTener en cuenta la expansión importa en casi toda rama de la ingeniería. Tuberías, líneas eléctricas y grandes vanos deben diseñarse con espacio para moverse, y los instrumentos de precisión deben compensar para que una tarde cálida no altere sus lecturas. Como el cambio depende del material, la herramienta usa un coeficiente específico de cada sustancia, permitiéndote comparar cómo responden el acero, el aluminio o el vidrio al mismo calentamiento.\n\nLa fórmula funciona porque cada grado de cambio de temperatura estira el material en una fracción fija de su longitud, fijada por el coeficiente, así que los objetos más largos y los cambios de temperatura mayores producen movimientos proporcionalmente más grandes. Ingenieros, maquinistas y estudiantes de física recurren a una calculadora de expansión térmica para predecir holguras, evitar tensiones dañinas y entender cómo afrontan las estructuras cotidianas el cambio de las estaciones.",
+    exampleEs: { inputs: { originalLength: 10, coefficient: 0.000012, tempChange: 50 }, explanation: "0,000012 × 10 × 50 = 0,006 m de expansión, así que la nueva longitud es 10,006 m." },
+    faqsEs: [
+      {
+        question: "¿Qué unidades debo usar?",
+        answer: "Introduce la longitud original en metros, el cambio de temperatura en grados Celsius o kelvin, y el coeficiente en unidades de por grado Celsius, que es como se tabulan normalmente los coeficientes de expansión. El cambio de longitud y la nueva longitud salen entonces en metros. Como un grado Celsius y un kelvin tienen el mismo tamaño, puedes usar cualquiera de las dos escalas para el cambio de temperatura sin afectar el resultado.",
+      },
+      {
+        question: "¿Dónde encuentro el coeficiente de expansión?",
+        answer: "Los coeficientes de expansión térmica lineal se publican en manuales de ingeniería y hojas de datos de materiales para cada sustancia común. Los valores típicos rondan 0,000012 por grado Celsius para el acero, 0,000023 para el aluminio y 0,000009 para el vidrio. Busca la cifra de tu material específico e introdúcela directamente. Usar un coeficiente exacto y específico del material es esencial, ya que incluso diferencias pequeñas cambian notablemente la expansión prevista en longitudes largas.",
+      },
+      {
+        question: "¿Por qué se expanden los materiales al calentarse?",
+        answer: "Calentar un material hace que sus átomos vibren con más fuerza, así que en promedio se separan un poco más y todo el objeto crece. Enfriar invierte esto, acercando los átomos y encogiendo el material. El coeficiente de expansión capta con qué fuerza responde una sustancia concreta, ya que la fuerza de sus enlaces atómicos fija cuánto se mueven los átomos por cada grado de cambio de temperatura aplicado.",
+      },
+      {
+        question: "¿Maneja esto la contracción al enfriarse?",
+        answer: "Sí. Introduce un cambio de temperatura negativo para modelar el enfriamiento, y la calculadora devuelve una expansión negativa, lo que significa que el material se contrae, junto con una nueva longitud menor que la original. La misma fórmula cubre ambas direcciones, porque calentar y enfriar son simplemente cambios de temperatura positivos y negativos. Esto hace la herramienta útil para predecir cómo se encogen los componentes en frío además de cómo crecen con el calor.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre expansión lineal y volumétrica?",
+        answer: "Esta calculadora maneja la expansión lineal, el cambio en una sola longitud o dimensión. La expansión volumétrica describe cómo crece todo el volumen de un objeto, y para un sólido su coeficiente es aproximadamente tres veces el lineal, ya que la expansión ocurre en las tres dimensiones a la vez. Usa la expansión lineal para barras, tuberías y raíles, y la volumétrica cuando te importe el espacio total que ocupa un cuerpo calentado.",
+      },
+    ],
   },
   {
     id: "pressure-volume",
@@ -251,5 +379,37 @@ export const scienceMoreCalculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard physics (Boyle's law)",
+    slugEs: "calculadora-de-presion-volumen",
+    titleEs: "Calculadora de Presión Volumen",
+    shortDescriptionEs: "Halla el nuevo volumen de un gas con la ley de Boyle.",
+    seoTitleEs: "Calculadora de Presión Volumen — Ley de Boyle (P₁V₁ = P₂V₂)",
+    metaDescriptionEs: "Calculadora gratuita de presión volumen con la ley de Boyle. Introduce la presión inicial, el volumen inicial y la presión final para hallar el nuevo volumen del gas al instante. Ideal para química y buceo.",
+    primaryKeywordEs: "calculadora de presión volumen",
+    secondaryKeywordsEs: ["calculadora de ley de boyle", "calculadora p1v1 p2v2", "calculadora de volumen de gas"],
+    formulaExplanationEs: "La ley de Boyle afirma que la presión por el volumen se mantiene constante para una cantidad fija de gas a temperatura constante, así que la presión inicial por el volumen inicial es igual a la presión final por el volumen final. Reordenar da el nuevo volumen como la presión inicial por el volumen inicial, dividido entre la presión final. La presión y el volumen son inversamente proporcionales, porque comprimir un gas en menos espacio hace que sus moléculas choquen con las paredes más a menudo.",
+    explanationEs: "La ley de Boyle describe cómo responde el volumen de una cantidad fija de gas a un cambio de presión a temperatura constante, y esta calculadora de presión volumen la aplica para hallar el nuevo volumen a partir de una presión inicial, un volumen inicial y una presión final. Aprieta un gas con más fuerza y se encoge; alivia la presión y se expande, siempre de modo que la presión y el volumen se compensan en proporción exacta. Es el principio detrás de una jeringa, una bomba de bicicleta y la forma en que tus pulmones aspiran aire.\n\nEsta relación importa en química, medicina, buceo e ingeniería por igual. Los anestesistas siguen los volúmenes de gas al cambiar las presiones, los buceadores deben entender cómo se comporta el aire de sus pulmones y equipos a profundidad, y los ingenieros que diseñan sistemas neumáticos dependen de ella constantemente. Como la presión y el volumen están ligados inversamente, la calculadora te permite predecir uno a partir del otro sin reordenar repetidamente la ecuación a mano.\n\nLa ley funciona porque, a temperatura fija, comprimir un gas en un espacio menor hace que sus moléculas golpeen las paredes más a menudo, elevando la presión en proporción inversa exacta al volumen. Estudiantes, buceadores y técnicos de laboratorio usan una calculadora de presión volumen para modelar cómo se comportan los gases bajo presión cambiante y resolver problemas de la ley de Boyle con rapidez y fiabilidad.",
+    exampleEs: { inputs: { pressure1: 2, volume1: 3, pressure2: 6 }, explanation: "2 × 3 = 6, así que el nuevo volumen es 6 ÷ 6 = 1 L: triplicar la presión reduce el volumen a un tercio." },
+    faqsEs: [
+      {
+        question: "¿Qué unidades debo usar para la presión y el volumen?",
+        answer: "Puedes usar las unidades que quieras para la presión y el volumen, siempre que seas coherente, porque la ley de Boyle depende solo de razones. Si las dos presiones están en atmósferas y el volumen inicial en litros, el nuevo volumen sale en litros. Opciones comunes son atmósferas, pascales o bar para la presión y litros o metros cúbicos para el volumen; solo mantén ambas presiones en la misma unidad.",
+      },
+      {
+        question: "¿Debe mantenerse constante la temperatura?",
+        answer: "Sí. La ley de Boyle solo se cumple cuando la temperatura y la cantidad de gas permanecen fijas. Si la temperatura también cambia, necesitas la ley combinada de los gases o la ley de los gases ideales, que tienen en cuenta la temperatura y los moles. En la práctica, mantén el proceso suficientemente lento para que el calor se equilibre, o asegúrate de que el gas vuelva a la misma temperatura, de modo que la presión y el volumen se compensen limpiamente.",
+      },
+      {
+        question: "¿Por qué la presión y el volumen están relacionados inversamente?",
+        answer: "A temperatura constante, las moléculas del gas se mueven a la misma velocidad media sin importar el tamaño del recipiente. Comprimir el gas en un volumen menor agrupa las moléculas más cerca, así que golpean las paredes con más frecuencia y la presión sube. Expandir el gas hace lo contrario. Este intercambio mantiene constante el producto de presión y volumen, que es exactamente lo que expresa la ley de Boyle en una sola ecuación.",
+      },
+      {
+        question: "¿Qué muestra el ejemplo con 2, 3 y 6?",
+        answer: "Partiendo de una presión de 2 y un volumen de 3, el producto es 6. Elevar la presión final a 6 fuerza el volumen a bajar a 1, porque 6 por 1 también es igual a 6, manteniendo constante el producto presión-volumen. Triplicar la presión ha reducido el volumen a un tercio, una clara ilustración de la relación inversa en el corazón de la ley de Boyle.",
+      },
+      {
+        question: "¿Dónde se aplica la ley de Boyle en la vida real?",
+        answer: "La ley de Boyle aparece dondequiera que los gases se compriman o expandan a temperatura estable. Explica cómo una jeringa aspira fluido, cómo una bomba de bicicleta fuerza aire en un neumático y cómo los buceadores deben exhalar al ascender para que el aire pulmonar en expansión no los lesione. Globos meteorológicos, herramientas neumáticas y motores de combustión interna dependen del mismo intercambio predecible entre presión y volumen.",
+      },
+    ],
   },
 ];

@@ -63,6 +63,41 @@ export const convertersWave2Calculators: CalculatorDefinition[] = [
     metaDescription: "Convert area between any units: square meters, square feet, acres, hectares, square miles, and more. Free online area unit converter.",
     primaryKeyword: "area converter",
     secondaryKeywords: ["square meters to square feet", "acres to hectares", "area unit converter", "sq ft to sq m"],
+    slugEs: "conversor-de-area",
+    titleEs: "Conversor de Área",
+    shortDescriptionEs: "Convierte área entre metros cuadrados, pies cuadrados, acres, hectáreas y más.",
+    seoTitleEs: "Conversor de Área — Metros, Pies Cuadrados, Acres, Hectáreas",
+    metaDescriptionEs: "Convierte área entre cualquier unidad: metros cuadrados, pies cuadrados, acres, hectáreas, millas cuadradas y más. Conversor de unidades de área en línea gratuito.",
+    primaryKeywordEs: "conversor de área",
+    secondaryKeywordsEs: ["metros cuadrados a pies cuadrados", "acres a hectáreas", "conversor de unidades de área"],
+    formulaExplanationEs: "La conversión de área funciona porque cada unidad de área se define como un múltiplo fijo del metro cuadrado, la unidad base del SI para el área. Como estas proporciones nunca cambian, el conversor multiplica el valor de entrada por su factor para llegar a metros cuadrados y luego divide por el factor de la unidad de destino. Proporciones clave: 1 ft² = 0.092903 m², 1 acre = 4,046.86 m², 1 hectárea = 10,000 m² y 1 milla cuadrada = 2,589,988 m².",
+    explanationEs: "El área mide el tamaño bidimensional de una superficie, y las unidades utilizadas varían enormemente entre países, industrias y situaciones cotidianas. El mundo métrico trabaja en metros cuadrados, kilómetros cuadrados y hectáreas, mientras que Estados Unidos depende de pies cuadrados, yardas cuadradas, acres y millas cuadradas. Un conversor de área elimina la fricción de moverse entre estos sistemas, de modo que una parcela indicada en hectáreas puede compararse al instante con una expresada en acres.\n\nLos pies cuadrados dominan el sector inmobiliario residencial de EE. UU.: una vivienda se describe como de 2,000 ft² en lugar de 186 metros cuadrados. Los acres miden parcelas de terreno, donde un acre equivale a 43,560 pies cuadrados, aproximadamente la superficie de juego de un campo de fútbol americano. Las hectáreas son el estándar agrícola internacional con 10,000 metros cuadrados, y los kilómetros o millas cuadradas manejan grandes regiones geográficas.\n\nComo cada unidad tiene una proporción fija y exacta respecto al metro cuadrado, este conversor de área normaliza cualquier entrada primero a metros cuadrados y luego la escala a la salida elegida, manteniendo resultados precisos sin importar lo inusual del emparejamiento. Agentes inmobiliarios, agricultores, topógrafos, arquitectos y estudiantes usan un conversor de área para traducir medidas con confianza entre el sistema métrico y el estadounidense.",
+    exampleEs: {
+      inputs: { value: "1", from: "acre", to: "sqm" },
+      explanation: "1 acre = 4,046.86 metros cuadrados. Un acre es aproximadamente el área de un campo de fútbol americano estándar (sin incluir las zonas de anotación).",
+    },
+    faqsEs: [
+      {
+        question: "¿Cuántos pies cuadrados hay en un acre?",
+        answer: "Un acre equivale exactamente a 43,560 pies cuadrados. Este es un valor definido legalmente en EE. UU. Un acre mide aproximadamente 209 pies × 209 pies (más o menos un cuadrado de unos 63.6 metros de lado). Una milla cuadrada contiene exactamente 640 acres. Estas proporciones fijas permiten a los profesionales inmobiliarios convertir mentalmente entre acres y pies cuadrados: 5 acres = 5 × 43,560 = 217,800 pies cuadrados.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre una hectárea y un acre?",
+        answer: "Una hectárea (ha) es una unidad métrica igual a 10,000 metros cuadrados, mientras que un acre es una unidad estadounidense/imperial igual a 4,046.86 metros cuadrados. Una hectárea equivale a unos 2.471 acres. Las hectáreas se usan internacionalmente y en contextos científicos; los acres son comunes en EE. UU. y el Reino Unido para medir terrenos. Un campo de fútbol mide alrededor de 0.6 a 0.7 hectáreas o 1.5 a 1.75 acres.",
+      },
+      {
+        question: "¿Cómo convierto pies cuadrados a metros cuadrados?",
+        answer: "Multiplica los pies cuadrados por 0.092903 para obtener metros cuadrados. Como alternativa, divide los pies cuadrados entre 10.764, ya que 1 m² = 10.764 ft². Para un cálculo mental: 1,000 ft² ÷ 10 ≈ 100 m² (en realidad 92.9 m², así que es una aproximación). Para trabajo preciso, usa siempre el factor exacto de 0.092903. Una vivienda de 2,000 ft² equivale a unos 185.8 metros cuadrados.",
+      },
+      {
+        question: "¿Cuánto es una milla cuadrada en acres?",
+        answer: "Una milla cuadrada equivale exactamente a 640 acres. Esta es una relación fundamental en el sistema estadounidense de medición de terrenos, derivada del sistema de topografía por municipios y rangos usado en gran parte de EE. UU. Un municipio mide 6 millas × 6 millas = 36 millas cuadradas = 23,040 acres, dividido en 36 secciones de 640 acres cada una. Por eso muchas carreteras rurales están separadas exactamente por una milla.",
+      },
+      {
+        question: "¿Qué tan grande es un metro cuadrado comparado con objetos comunes?",
+        answer: "Un metro cuadrado (m²) es un cuadrado con lados de 1 metro (unos 3.28 pies o 39.4 pulgadas). Para visualizarlo: una mesa de comedor típica ocupa unos 0.9 m², una cama king mide unos 2.6 m², una plaza de aparcamiento ronda los 14 a 16 m² y un dormitorio medio en EE. UU. mide de 14 a 18 m². Una pista de tenis completa tiene 260.75 m² y una cancha de baloncesto 436.6 m².",
+      },
+    ],
     fields: [
       {
         id: "value",
@@ -137,6 +172,41 @@ export const convertersWave2Calculators: CalculatorDefinition[] = [
     metaDescription: "Convert volume between any units: liters, gallons, cups, fluid ounces, milliliters, cubic meters, and more. Free online volume converter.",
     primaryKeyword: "volume converter",
     secondaryKeywords: ["liters to gallons", "ml to cups", "fluid ounce converter", "cubic feet to liters"],
+    slugEs: "conversor-de-volumen",
+    titleEs: "Conversor de Volumen",
+    shortDescriptionEs: "Convierte volumen entre litros, galones, tazas, onzas líquidas, metros cúbicos y más.",
+    seoTitleEs: "Conversor de Volumen — Litros, Galones, Tazas, Onzas Líquidas",
+    metaDescriptionEs: "Convierte volumen entre cualquier unidad: litros, galones, tazas, onzas líquidas, mililitros, metros cúbicos y más. Conversor de volumen en línea gratuito.",
+    primaryKeywordEs: "conversor de volumen",
+    secondaryKeywordsEs: ["litros a galones", "ml a tazas", "conversor de onzas líquidas"],
+    formulaExplanationEs: "La conversión de volumen es exacta porque cada unidad es un múltiplo fijo del litro, que se vincula directamente con el metro cúbico del SI (1 m³ = 1000 L). El conversor escala la entrada hasta litros usando su proporción y luego la reduce a la unidad solicitada, sin perder precisión en todo el rango. Proporciones clave: 1 galón estadounidense = 3.78541 L, 1 taza = 0.236588 L, 1 fl oz = 0.0295735 L y 1 metro cúbico = 1000 L.",
+    explanationEs: "El volumen mide el espacio tridimensional que ocupa una sustancia, y aparece constantemente en cocina, química, construcción, combustible y transporte. La dificultad es que las unidades de volumen difieren mucho entre EE. UU. y el resto del mundo, e incluso dentro de EE. UU. las definiciones de taza, pinta, galón y onza líquida se apartan de las versiones imperiales (del Reino Unido). Un conversor de volumen resuelve esto traduciendo cualquier cifra a una referencia común antes de producir la respuesta que necesitas.\n\nLo esencial que conviene recordar: un galón estadounidense es de 3.785 litros, mientras que un galón imperial del Reino Unido es de 4.546 litros, una diferencia del 20 por ciento que importa al comparar el consumo de combustible a nivel internacional. Una taza estadounidense mide unos 240 mL, mientras que una taza métrica usada en Australia y Canadá es de 250 mL, y las onzas líquidas estadounidenses y británicas también difieren ligeramente.\n\nComo cada unidad mantiene una proporción fija respecto al litro, este conversor de volumen normaliza cada entrada primero a litros y luego la escala al destino, de modo que incluso emparejamientos complicados como pies cúbicos a galones imperiales siguen siendo exactos. Cocineros, ingenieros, técnicos de laboratorio y conductores que repostan en el extranjero se apoyan en un conversor de volumen para evitar los errores costosos que surgen al mezclar sistemas de unidades incompatibles.",
+    exampleEs: {
+      inputs: { value: "1", from: "gallon", to: "liter" },
+      explanation: "1 galón estadounidense = 3.78541 litros. Por eso el consumo de combustible en EE. UU. (millas por galón) difiere numéricamente de los países que usan litros por 100 km.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cuántas tazas hay en un galón?",
+        answer: "En el sistema estadounidense: 1 galón = 4 cuartos = 8 pintas = 16 tazas = 128 onzas líquidas. Por lo tanto, hay exactamente 16 tazas estadounidenses en 1 galón estadounidense. Una regla útil: galón, cuartos, pintas, tazas, donde cada paso duplica la cuenta: 1, 4, 8, 16. Esta relación es exacta por definición en el sistema usual estadounidense.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre un galón estadounidense y uno imperial (del Reino Unido)?",
+        answer: "Un galón estadounidense es de 3.78541 litros, mientras que un galón imperial del Reino Unido es de 4.54609 litros, aproximadamente un 20 % mayor. Por eso los autos del Reino Unido parecen rendir más en millas por galón que los estadounidenses. Al comparar la eficiencia de combustible internacional, aclara siempre qué galón se usa. Las onzas líquidas también difieren: 1 fl oz estadounidense = 29.5735 mL; 1 fl oz británica = 28.4131 mL.",
+      },
+      {
+        question: "¿Cuántos mililitros hay en una taza?",
+        answer: "Una taza legal estadounidense (usada en el etiquetado nutricional) equivale a 240 mL exactos. Una taza usual estadounidense mide 236.588 mL, basada en la definición del galón. Una taza métrica australiana o canadiense es de 250 mL. Para la mayoría de la cocina, 240 mL por taza es el estándar práctico. Si sigues una receta de otro país, saber qué definición de taza usan puede importar en la repostería de precisión.",
+      },
+      {
+        question: "¿Cómo convierto litros a galones?",
+        answer: "Para convertir litros a galones estadounidenses, divide entre 3.78541 o multiplica por 0.264172. Para un cálculo mental rápido: 4 litros ≈ 1 galón (en realidad 4 L = 1.057 galones, con un error del 5.7 %). Con más precisión: 10 litros ≈ 2.64 galones, 20 litros ≈ 5.28 galones. Al repostar un auto en el extranjero, un depósito de 50 litros contiene unos 13.2 galones estadounidenses.",
+      },
+      {
+        question: "¿Cuál es el volumen de un pie cúbico en litros?",
+        answer: "Un pie cúbico equivale a 28.3168 litros (unos 28.3 litros). Un metro cúbico equivale a 1,000 litros = 264.172 galones estadounidenses. Estas conversiones son importantes en construcción (volumen de hormigón, dimensionamiento de tanques de agua), climatización (caudal de aire en pies cúbicos por minuto) y fontanería. Una bañera típica contiene entre 1.5 y 2.5 pies cúbicos (42 a 71 litros) de agua cuando está llena.",
+      },
+    ],
     fields: [
       {
         id: "value",
@@ -211,6 +281,41 @@ export const convertersWave2Calculators: CalculatorDefinition[] = [
     metaDescription: "Convert pressure between any units: psi, bar, pascal, kilopascal, atmospheres, mmHg, and more. Free online pressure unit converter.",
     primaryKeyword: "pressure converter",
     secondaryKeywords: ["psi to bar", "psi to kpa", "atmospheres to psi", "mmHg to kpa", "pressure unit converter"],
+    slugEs: "conversor-de-presion",
+    titleEs: "Conversor de Presión",
+    shortDescriptionEs: "Convierte presión entre pascales, psi, bar, atmósferas, mmHg y más.",
+    seoTitleEs: "Conversor de Presión — PSI, Bar, Pascal, Atmósferas",
+    metaDescriptionEs: "Convierte presión entre cualquier unidad: psi, bar, pascal, kilopascal, atmósferas, mmHg y más. Conversor de unidades de presión en línea gratuito.",
+    primaryKeywordEs: "conversor de presión",
+    secondaryKeywordsEs: ["psi a bar", "psi a kpa", "atmósferas a psi"],
+    formulaExplanationEs: "La conversión de presión se cumple porque cada unidad de presión equivale a un número fijo de pascales, la unidad del SI para la presión (un newton por metro cuadrado). El conversor multiplica la entrada por su proporción en pascales para llegar a la base común y luego divide por la proporción de la unidad de destino, manteniendo resultados exactos. Proporciones clave: 1 psi = 6,894.76 Pa, 1 bar = 100,000 Pa, 1 atm = 101,325 Pa y 1 mmHg = 133.322 Pa.",
+    explanationEs: "La presión es una fuerza distribuida sobre un área, y casi todos los campos que la miden han adoptado su propia unidad preferida. El inflado de neumáticos se expresa en PSI en EE. UU. y en bar en Europa, la presión arterial se lee en milímetros de mercurio, los partes meteorológicos usan hectopascales o milibares, y la industria pesada suele trabajar en bar o megapascales. Un conversor de presión te permite moverte entre todas estas sin memorizar decenas de relaciones separadas.\n\nLa unidad del SI es el pascal (Pa), definido como un newton por metro cuadrado. Una atmósfera estándar equivale a 101,325 Pa, la presión media del aire a nivel del mar, mientras que un bar son 100,000 Pa, ligeramente por debajo de una atmósfera. El PSI sigue arraigado en EE. UU. para neumáticos, sistemas hidráulicos y aire comprimido; un neumático de auto típico está entre 32 y 35 PSI, o 2.2 a 2.4 bar.\n\nComo cada unidad tiene una proporción fija respecto al pascal, este conversor de presión normaliza la entrada primero a pascales y luego la escala a la salida elegida, manteniendo exactas conversiones como PSI a bar o mmHg a kilopascales. Ingenieros, buzos, personal médico, meteorólogos y mecánicos se apoyan en un conversor de presión para comunicarse con seguridad entre sistemas de medición.",
+    exampleEs: {
+      inputs: { value: "32", from: "psi", to: "bar" },
+      explanation: "32 PSI (presión típica de neumáticos) = 2.206 bar. En los países europeos, la presión de los neumáticos se indica en bar, por lo que un neumático inflado a 32 PSI en EE. UU. debe inflarse a 2.2 bar en Europa.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cuál es la diferencia entre psi y bar?",
+        answer: "El PSI (libras por pulgada cuadrada) y el bar son unidades comunes de presión. 1 bar = 14.5038 psi y 1 psi = 0.0689476 bar. El bar se usa mucho en Europa y a nivel internacional; el PSI domina en EE. UU. Para neumáticos: los autos estadounidenses muestran 30 a 35 PSI; los europeos, 2.0 a 2.4 bar. Para buceo: un tanque lleno tiene de 200 a 300 bar. Para máquinas de espresso: la presión de extracción estándar es de 9 bar.",
+      },
+      {
+        question: "¿En qué se mide la presión arterial en mmHg?",
+        answer: "La presión arterial se mide en milímetros de mercurio (mmHg), una unidad histórica de cuando los esfigmomanómetros usaban columnas de mercurio reales. La presión arterial normal está por debajo de 120/80 mmHg. En unidades del SI, 1 mmHg = 133.322 pascales. Los dos números son la sistólica (presión máxima cuando el corazón se contrae, normal < 120 mmHg) y la diastólica (presión en reposo entre latidos, normal < 80 mmHg).",
+      },
+      {
+        question: "¿Cómo afecta la altitud a la presión atmosférica?",
+        answer: "La presión atmosférica disminuye con la altitud porque hay menos masa de aire por encima. A nivel del mar: ~101,325 Pa (1 atm, 14.7 psi). En Denver, Colorado (1,609 m): ~83,000 Pa. En la cima del Everest (8,849 m): ~33,700 Pa. Esta menor presión hace que el agua hierva a temperaturas más bajas (unos 90 °C a 3,000 m frente a 100 °C a nivel del mar) y requiere oxígeno suplementario por encima de los 8,000 m.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre presión absoluta y manométrica?",
+        answer: "La presión absoluta se mide respecto a un vacío perfecto (presión cero). La presión manométrica se mide respecto a la presión atmosférica actual. La mayoría de las mediciones cotidianas (neumáticos, presión arterial, aire comprimido) son presión manométrica: indican cuánto por encima de la atmosférica está algo. Un neumático a 35 PSI manométricos son en realidad 35 + 14.7 = 49.7 PSI absolutos. En contextos científicos e industriales se usa la presión absoluta para evitar ambigüedades.",
+      },
+      {
+        question: "¿Por qué los meteorólogos usan hectopascales (hPa)?",
+        answer: "Los pronósticos meteorológicos usan hectopascales (hPa), donde 1 hPa = 100 Pa. Esto es numéricamente idéntico al milibar (mbar), la unidad que los meteorólogos usaron durante décadas, por lo que cambiar a hPa conservó los valores familiares (la presión atmosférica estándar sigue siendo ~1,013 hPa). Los mapas muestran isobaras en hPa; los sistemas de alta presión rondan los 1020 a 1030 hPa e indican buen tiempo, mientras que los de baja presión por debajo de 1000 hPa suelen traer tormentas.",
+      },
+    ],
     fields: [
       {
         id: "value",
@@ -285,6 +390,41 @@ export const convertersWave2Calculators: CalculatorDefinition[] = [
     metaDescription: "Convert energy between joules, kilocalories, kilowatt-hours, BTU, foot-pounds, and more. Free online energy unit converter.",
     primaryKeyword: "energy converter",
     secondaryKeywords: ["joules to calories", "kWh to BTU", "energy unit converter", "calories to joules converter"],
+    slugEs: "conversor-de-energia",
+    titleEs: "Conversor de Energía",
+    shortDescriptionEs: "Convierte energía entre julios, calorías, kilovatios-hora, BTU y más.",
+    seoTitleEs: "Conversor de Energía — Julios, Calorías, kWh, BTU",
+    metaDescriptionEs: "Convierte energía entre julios, kilocalorías, kilovatios-hora, BTU, pies-libra y más. Conversor de unidades de energía en línea gratuito.",
+    primaryKeywordEs: "conversor de energía",
+    secondaryKeywordsEs: ["julios a calorías", "kWh a BTU", "conversor de unidades de energía"],
+    formulaExplanationEs: "La conversión de energía es exacta porque cada unidad representa una cantidad fija de julios, la unidad del SI de energía. El conversor multiplica la entrada por su proporción en julios para llegar a la base compartida y luego divide por la proporción de la unidad de destino, sin perder precisión entre escalas. Proporciones clave: 1 kcal = 4,184 J, 1 kWh = 3,600,000 J, 1 BTU = 1,055.06 J y 1 cal = 4.184 J.",
+    explanationEs: "La energía es una magnitud física fundamental, pero la unidad utilizada para describirla depende por completo del contexto. La física prefiere los julios, las etiquetas nutricionales usan kilocalorías, las facturas de electricidad se calculan en kilovatios-hora, los equipos de calefacción y refrigeración se clasifican en BTU y la química suele trabajar en calorías. Un conversor de energía une estos mundos para que una cifra de un ámbito pueda entenderse en otro.\n\nUna fuente frecuente de confusión es la caloría frente a la Caloría. Cuando una etiqueta de alimentos indica 200 calorías, significa 200 kilocalorías, mil veces mayores que la caloría física de 4.184 julios. Un kilovatio-hora es la energía que consume un aparato de 1,000 vatios en una hora, igual a 3.6 millones de julios, y un hogar estadounidense típico consume unos 900 kWh al mes. Un BTU es el calor necesario para calentar una libra de agua un grado Fahrenheit, lo que lo hace cómodo para calderas y aires acondicionados.\n\nComo cada unidad tiene una proporción fija respecto al julio, este conversor de energía normaliza la entrada primero a julios y luego la escala al destino, de modo que emparejamientos desde electronvoltios hasta kilovatios-hora siguen siendo precisos. Físicos, dietistas, técnicos de climatización y analistas de servicios públicos dependen de un conversor de energía para comparar cantidades que de otro modo serían imposibles de alinear.",
+    exampleEs: {
+      inputs: { value: "2000", from: "kilocalorie", to: "joule" },
+      explanation: "Una dieta diaria de 2,000 Calorías (kcal) equivale a 8,368,000 julios (8.37 megajulios) de energía. Es suficiente energía para elevar un auto de 1 tonelada unos 853 metros en línea recta.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cuál es la diferencia entre una caloría y una Caloría (kcal)?",
+        answer: "Una 'caloría' (en minúscula, también llamada caloría pequeña o caloría gramo) es la energía necesaria para elevar 1 gramo de agua 1 °C, igual a 4.184 julios. Una 'Caloría' (en mayúscula, también llamada kilocaloría o kcal) es 1,000 veces mayor: la energía para elevar 1 kilogramo de agua 1 °C. Las etiquetas de alimentos usan Calorías (kcal): cuando una barra dice '250 Calorías', significa 250 kcal = 250,000 calorías pequeñas = 1,046,000 julios.",
+      },
+      {
+        question: "¿Cómo se relaciona la energía con la potencia?",
+        answer: "La potencia es la tasa de uso de energía: Potencia = Energía / Tiempo. Un vatio es 1 julio por segundo. Un kilovatio-hora (kWh) es la energía usada por un dispositivo de 1 kilovatio durante 1 hora: 1 kW × 1 hora = 1 kWh = 3,600,000 julios. Tu factura de electricidad cobra por kWh. Una bombilla de 100 vatios encendida 10 horas usa 1 kWh; encenderla 100 horas cuesta unos 0.12 USD a la tarifa media estadounidense.",
+      },
+      {
+        question: "¿Qué es un BTU y cuándo se usa?",
+        answer: "Un BTU (Unidad Térmica Británica) es la energía necesaria para calentar una libra de agua un grado Fahrenheit, igual a 1,055.06 julios. Los BTU se usan mucho en climatización para clasificar la salida de calderas y la capacidad de aires acondicionados. Un aire acondicionado de 12,000 BTU/hora (1 tonelada de refrigeración) puede extraer 12,000 BTU de calor por hora. Las calderas domésticas se clasifican en miles de BTU/hora, y EE. UU. también usa BTU para la facturación del gas natural.",
+      },
+      {
+        question: "¿Cuánta energía hay en un galón de gasolina?",
+        answer: "Un galón de gasolina normal contiene unos 132,000 BTU o 139,000 kJ (139 megajulios) de energía química. Sin embargo, los motores de combustión interna convierten solo del 20 al 40 % en movimiento; el resto se vuelve calor. Así que un galón entrega efectivamente de 26,000 a 53,000 BTU de energía mecánica. Un vehículo eléctrico usa unos 25 a 35 kWh por cada 100 millas, lo que a 0.12 USD/kWh cuesta de 3 a 4.20 USD.",
+      },
+      {
+        question: "¿Qué es un electronvoltio (eV) y cuándo se usa?",
+        answer: "Un electronvoltio es la energía cinética que gana un electrón acelerado a través de 1 voltio de potencial eléctrico: 1 eV = 1.602 × 10⁻¹⁹ julios. Es una unidad extremadamente pequeña usada en física atómica y de partículas, donde los julios resultan demasiado grandes. Los fotones de luz visible tienen energías de 1.8 a 3.1 eV. Las energías de enlace químico suelen ser de 1 a 10 eV. Los fotones de rayos X alcanzan miles de eV (keV) y las reacciones nucleares, millones (MeV).",
+      },
+    ],
     fields: [
       {
         id: "value",
@@ -359,6 +499,41 @@ export const convertersWave2Calculators: CalculatorDefinition[] = [
     metaDescription: "Convert cooking measurements: cups to ml, tablespoons to teaspoons, pints to cups, and more. Free online kitchen unit converter for recipes.",
     primaryKeyword: "cooking measurement converter",
     secondaryKeywords: ["cups to ml", "tablespoon to teaspoon", "cooking unit converter", "recipe converter", "measurement converter"],
+    slugEs: "conversor-de-medidas-de-cocina",
+    titleEs: "Conversor de Medidas de Cocina",
+    shortDescriptionEs: "Convierte entre tazas, cucharadas, cucharaditas, mililitros y otras medidas de cocina.",
+    seoTitleEs: "Conversor de Medidas de Cocina — Tazas, Cda, Cdta, mL",
+    metaDescriptionEs: "Convierte medidas de cocina: tazas a ml, cucharadas a cucharaditas, pintas a tazas y más. Conversor de unidades de cocina en línea gratuito para recetas.",
+    primaryKeywordEs: "conversor de medidas de cocina",
+    secondaryKeywordsEs: ["tazas a ml", "cucharada a cucharadita", "conversor de recetas"],
+    formulaExplanationEs: "La conversión de cocina funciona porque cada unidad de cocina se define como un múltiplo fijo del mililitro, de modo que el conversor normaliza cualquier cantidad a mL y luego la escala al destino. La cadena usual estadounidense es exacta: 1 taza = 16 cda = 48 cdta = 8 fl oz = 240 mL, 3 cdta = 1 cda, y 1 barra de mantequilla = 8 cda = 1/2 taza = 120 mL (unos 113 g).",
+    explanationEs: "Un conversor de medidas de cocina es indispensable cuando sigues recetas de otros países, ajustas un plato a más o menos porciones o te falta una herramienta de medición concreta. El sistema usual estadounidense de tazas, cucharadas y cucharaditas difiere de las medidas métricas usadas en la mayor parte del mundo, y un conversor de medidas de cocina fiable elimina las conjeturas.\n\nLas relaciones básicas estadounidenses vale la pena memorizarlas: 3 cucharaditas forman 1 cucharada, 16 cucharadas forman 1 taza, 2 tazas forman 1 pinta, 2 pintas forman 1 cuarto y 4 cuartos forman 1 galón. Una taza equivale a 240 mL según la definición de la etiqueta nutricional, o a 236.588 mL según el galón estadounidense preciso.\n\nLas recetas estadounidenses suelen indicar la mantequilla en barras, donde una barra equivale a 1/2 taza, 8 cucharadas o 113 gramos, mientras que las recetas europeas venden la mantequilla por peso y especifican gramos. Para ingredientes secos, pesar en gramos es más preciso que medir por volumen, porque la densidad cambia con la compactación: una taza de azúcar moreno bien compactada pesa mucho más que una taza de harina tamizada. Cocineros, reposteros y cualquiera que adapte recetas internacionales confían en un conversor de medidas de cocina para obtener resultados consistentes y repetibles.",
+    exampleEs: {
+      inputs: { value: "1", from: "cup", to: "ml" },
+      explanation: "1 taza estadounidense = 240 mL. Si una receta estadounidense pide 2 tazas de harina y tus tazas medidoras muestran mL, necesitas 480 mL en total.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cuántas cucharadas hay en una taza?",
+        answer: "Hay exactamente 16 cucharadas en 1 taza estadounidense. El desglose completo: 1 taza = 16 cucharadas = 48 cucharaditas = 8 onzas líquidas = 240 mL. Para medias medidas rápidas: 1/2 taza = 8 cucharadas; 1/4 taza = 4 cucharadas; 1/8 taza = 2 cucharadas. Cuando una receta pide una fracción impar como 1/3 de taza, eso equivale a 5 cucharadas más 1 cucharadita (5.33 cucharadas en total).",
+      },
+      {
+        question: "¿Cómo convierto tazas a mililitros?",
+        answer: "1 taza estadounidense = 240 mL (el estándar usado en las etiquetas nutricionales y en la mayoría de las recetas). Así que 2 tazas = 480 mL, 1/2 taza = 120 mL, 1/4 taza = 60 mL. Ten en cuenta que las tazas métricas australianas y canadienses son de 250 mL, no de 240 mL. Para repostería precisa a partir de recetas internacionales, comprueba el origen de la receta para usar el tamaño de taza correcto.",
+      },
+      {
+        question: "¿Cuántas barras de mantequilla es 1 taza?",
+        answer: "Dos barras de mantequilla equivalen a 1 taza. Una barra = 1/2 taza = 8 cucharadas = 113 gramos ≈ 4 oz. En EE. UU., la mantequilla se vende en paquetes de 4 barras (1 libra en total = 2 tazas). La mantequilla europea se vende por peso; 1 barra estadounidense = 113 gramos. Si una receta pide 1 taza de mantequilla, necesitas 2 barras; 1/4 de taza = media barra = 4 cucharadas = 56.5 gramos.",
+      },
+      {
+        question: "¿Por qué las medidas de ingredientes secos son menos precisas en tazas?",
+        answer: "Las medidas de volumen para ingredientes secos son intrínsecamente imprecisas porque la densidad varía con la compactación. Una taza de harina tamizada pesa unos 120 g, mientras que una taza de harina compactada puede pesar hasta 160 g, una diferencia del 33 % que afecta a la repostería. Los reposteros profesionales pesan los ingredientes secos en gramos u onzas para lograr consistencia. Para líquidos, la medida por volumen es adecuada porque tienen densidad constante.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre las tazas estadounidenses y las métricas/australianas?",
+        answer: "Una taza estadounidense es de 240 mL (basada en el galón estadounidense: 1 galón / 16 = 236.588 mL, redondeado a 240 para nutrición). Una taza métrica australiana es de 250 mL. Para la mayoría de las recetas, la diferencia de 10 mL (4 %) es insignificante. Sin embargo, para repostería muy precisa o recetas a gran escala, usa tazas del mismo sistema que la receta. Tres tazas australianas dan 750 mL frente a 720 mL con tazas estadounidenses.",
+      },
+    ],
     fields: [
       {
         id: "value",

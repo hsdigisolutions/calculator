@@ -12,6 +12,41 @@ export const everydayWave2Calculators: CalculatorDefinition[] = [
     metaDescription: "Calculate tip amount, total bill, and per-person share for any service. Supports custom tip percentages and splitting among multiple people.",
     primaryKeyword: "tip calculator",
     secondaryKeywords: ["how much to tip", "restaurant tip calculator", "gratuity calculator", "bill tip calculator"],
+    slugEs: "calculadora-de-propinas",
+    titleEs: "Calculadora de Propinas",
+    shortDescriptionEs: "Calcula el importe de la propina y el total de la cuenta para cualquier servicio. También divide el gasto entre varias personas.",
+    seoTitleEs: "Calculadora de Propinas — Calcula la Propina y Divide la Cuenta",
+    metaDescriptionEs: "Calcula el importe de la propina, el total de la cuenta y la parte por persona para cualquier servicio. Admite porcentajes personalizados y división entre varias personas.",
+    primaryKeywordEs: "calculadora de propinas",
+    secondaryKeywordsEs: ["cuánto dejar de propina", "calculadora de propina de restaurante", "calculadora de gratificación"],
+    formulaExplanationEs: "Multiplicar la cuenta por el porcentaje de propina dividido entre 100 convierte una tasa en una cifra en dólares, de modo que la gratificación siempre escala con el tamaño de la cuenta: un porcentaje fijo se siente justo tanto si la cuenta es pequeña como grande. Sumar esa propina a la cuenta original da el importe realmente adeudado, y dividir ese total entre el número de comensales reparte de forma equitativa tanto la comida como la propina entre todo el grupo.",
+    explanationEs: "Una calculadora de propinas elimina la incertidumbre de la gratificación al calcular al instante el importe de la propina, el nuevo total y la parte de cada persona en cuanto introduces una cuenta y un porcentaje. La propina importa porque en Estados Unidos las gratificaciones forman una gran parte de los ingresos de los trabajadores del servicio, y sin embargo el cálculo mental es fácil de equivocar al final de una comida cuando todos están listos para marcharse. Hacerlo bien significa una paga justa por un buen servicio y evitar dejar una propina insuficiente por accidente.\n\nEl método es aritmética de porcentajes sencilla: la propina es una parte de la cuenta, que se añade encima para producir el total, y luego se divide equitativamente entre los comensales. Esta calculadora aplica las normas habituales de EE. UU. como punto de partida: aproximadamente del 15 al 20 por ciento en restaurantes con servicio de mesa, más por un servicio excepcional y menos donde hay servicio de mostrador. Como por convención se calcula sobre el importe antes de impuestos, aunque calcular sobre el total con impuestos también se acepta ampliamente, mantienes coherencia siempre.\n\nComensales, grupos que dividen una cuenta, clientes de reparto a domicilio y viajeros que consultan la costumbre local recurren a una calculadora de propinas para saldar cuentas de forma rápida y justa.",
+    exampleEs: {
+      inputs: { billAmount: "80", tipPercent: "20", numPeople: "4" },
+      explanation: "Cuenta: 80 $. Propina (20%): 16 $. Total: 96 $. Dividido entre 4: 24 $ por persona.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cuánto debo dejar de propina en un restaurante?",
+        answer: "La propina habitual en restaurantes de EE. UU. es del 15 al 20% de la cuenta antes de impuestos en establecimientos con servicio de mesa. El quince por ciento se considera aceptable para un servicio adecuado; del 18 al 20% es lo normal para un buen servicio; el 25% o más muestra aprecio por un servicio excelente. Ante un mal servicio, habla con un encargado en lugar de no dejar nada, pues el camarero puede no ser responsable de las demoras de cocina. En muchos otros países la propina es mínima o no es costumbre.",
+      },
+      {
+        question: "¿Debo calcular la propina antes o después de impuestos?",
+        answer: "Tradicionalmente, las propinas se calculan sobre el importe de la cuenta antes de impuestos. En la práctica, la mayoría usa el total de la cuenta por comodidad, y la diferencia suele ser pequeña. En una cuenta de 100 $ antes de impuestos con un 8% de impuesto sobre ventas (108 $ en total), una propina del 20% es 20 $ sobre el importe previo o 21,60 $ sobre el total con impuestos: una diferencia de 1,60 $. Ambos enfoques son socialmente aceptables y algunos recibos ya sugieren importes calculados sobre el total.",
+      },
+      {
+        question: "¿Es de mala educación usar una calculadora de propinas?",
+        answer: "En absoluto: usar una calculadora de propinas es totalmente apropiado y demuestra interés por calcular de forma justa. Los teléfonos y las calculadoras de los recibos se utilizan habitualmente. Es mucho mejor usar una calculadora y dejar la propina correcta que estimarla mal. En un grupo, usar una calculadora ayuda a asegurar que la propina y la división de la cuenta sean exactas, evitando dejar de menos o calcular de más. Los camareros agradecen que los clientes calculen bien en lugar de redondear hacia abajo.",
+      },
+      {
+        question: "¿Cuándo debo dejar propina en servicios que no son restaurantes?",
+        answer: "Guía general de propinas en EE. UU.: peluquería y manicura: del 15 al 20%. Limpieza del hotel: de 2 a 5 $ por noche, dejados a diario. Botones: de 1 a 2 $ por maleta. Taxi o transporte compartido: del 15 al 20%. Reparto de comida: del 10 al 15% o un mínimo de 3 a 5 $. Mudanzas: de 20 a 50 $ por operario en media jornada. Tatuadores: del 15 al 20%. En el servicio de mostrador, como cafés, es opcional: de 0,50 a 1 $ se agradece pero no se espera.",
+      },
+      {
+        question: "¿Cuál es el método rápido para calcular la propina?",
+        answer: "Para una propina del 20%: mueve el decimal un lugar a la izquierda (dividir entre 10 para el 10%) y luego duplícalo. 45 $ × 10% = 4,50 $ × 2 = 9,00 $ de propina para el 20%. Para el 15%: calcula el 10% moviendo el decimal y añade la mitad. 45 $ × 10% = 4,50 $ + 2,25 $ = 6,75 $ para el 15%. Para el 18%: resta al 20% un 10% de esa propina. También puedes duplicar el impuesto sobre ventas si ronda el 8 o 9% para una estimación rápida.",
+      },
+    ],
     fields: [
       {
         id: "billAmount",
@@ -91,6 +126,41 @@ export const everydayWave2Calculators: CalculatorDefinition[] = [
     metaDescription: "Split any bill evenly between any number of people including tip. Calculate per person cost instantly. Free online bill splitting calculator.",
     primaryKeyword: "split bill calculator",
     secondaryKeywords: ["how to split a bill", "bill splitting calculator", "divide bill calculator", "group dinner calculator"],
+    slugEs: "calculadora-para-dividir-la-cuenta",
+    titleEs: "Calculadora para Dividir la Cuenta",
+    shortDescriptionEs: "Divide equitativamente la cuenta de un restaurante o cualquier gasto compartido entre cualquier número de personas, incluida la propina.",
+    seoTitleEs: "Calculadora para Dividir la Cuenta — Reparte Cuenta y Propina",
+    metaDescriptionEs: "Divide cualquier cuenta equitativamente entre cualquier número de personas, incluida la propina. Calcula el coste por persona al instante. Calculadora gratuita para dividir cuentas.",
+    primaryKeywordEs: "calculadora para dividir la cuenta",
+    secondaryKeywordsEs: ["cómo dividir una cuenta", "calculadora para repartir la cuenta", "calculadora de cena en grupo"],
+    formulaExplanationEs: "Multiplicar la cuenta por uno más la tasa de propina agrupa el coste de la comida y la gratificación en un único gran total, de modo que nadie se olvida de aportar para la propina. Dividir ese total entre el número de comensales funciona porque una división equitativa asume que cada persona compartió la experiencia por igual, repartiendo cada dólar de la misma forma. Cuando el resultado no cae en un céntimo exacto, una persona absorbe el pequeño resto para que los pagos sumen exactamente.",
+    explanationEs: "Una calculadora para dividir la cuenta reparte una cuenta compartida —más la propina— equitativamente entre cualquier número de personas, dando la contribución exacta de cada una en un solo paso. Dividir la cuenta de un restaurante es una de las tareas de cálculo más comunes del día a día, y sorprendentemente fácil de equivocar una vez que se añade la propina y el total ya no se reparte en cantidades limpias. Una calculadora dedicada elimina esa fricción para que nadie pague de menos y el organizador no acabe cubriendo la diferencia.\n\nEl enfoque es cuidadoso con el orden de las operaciones: primero suma la propina a la cuenta y luego divide el gran total entre el número de comensales, lo que garantiza que todos contribuyan de forma proporcional tanto a la comida como a la gratificación. Dividir a partes iguales es lo más justo cuando la gente pidió cosas parecidas; para pedidos muy desiguales, una división por artículos o proporcional es más apropiada, y muchos restaurantes grandes ya añaden una propina automática para grupos de seis o más, así que revisa el recibo antes de sumar otra.\n\nAmigos que saldan una cena de grupo, compañeros de piso que reparten gastos del hogar y colegas que cubren un almuerzo de equipo usan una calculadora para dividir la cuenta y llegar a una respuesta justa y exacta al céntimo en segundos en lugar de discutir sobre recibos.",
+    exampleEs: {
+      inputs: { totalBill: "120", numPeople: "4", tipPercent: "20" },
+      explanation: "Cuenta: 120 $. Propina (20%): 24 $. Total: 144 $. Dividido entre 4: 36 $ por persona, de los cuales 6 $ son propina y 30 $ son comida y bebidas.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cómo divido una cuenta cuando cada uno pidió cantidades distintas?",
+        answer: "Para que la división a partes iguales sea justa, todos deberían haber pedido cantidades similares. Cuando hay diferencias importantes, las opciones incluyen: división por artículos, donde cada persona paga exactamente lo que pidió más su parte de lo compartido y el mismo porcentaje de propina; división proporcional, donde cada uno paga un porcentaje del total según su subtotal; o negociar dentro del grupo, donde quien más pidió puede ofrecerse a pagar más. Aplicaciones como Splitwise o Venmo facilitan registrar los pedidos.",
+      },
+      {
+        question: "¿La propina se incluye antes o después de dividir?",
+        answer: "Calcula siempre la propina primero y luego divide. Calcula: Total = Cuenta + (Cuenta × Propina%). Después: Por Persona = Total ÷ Número de Personas. Así todos contribuyen a la propina de forma proporcional. El error que se debe evitar es dividir primero la cuenta sin propina y que cada uno calcule su propia propina, lo que suele llevar a subestimarla. Nuestra calculadora gestiona el orden correcto automáticamente: la propina se suma al total antes de dividir entre el número de personas.",
+      },
+      {
+        question: "¿Qué pasa si el importe por persona no se divide exactamente?",
+        answer: "Cuando el total no se divide en céntimos exactos, el redondeo causa una discrepancia (por ejemplo, 144,37 $ ÷ 4 = 36,0925 $, de modo que tres personas pagan 36,09 $ y una paga 36,10 $). El enfoque habitual: todos pagan el importe redondeado hacia abajo, y quien tenga el mayor resto, o quien se ofrezca, paga un céntimo más. Para pagos en efectivo, que cada uno ponga su parte y quien organice se encargue del pequeño resto. La mayoría de las apps de pago gestionan importes exactos con céntimos.",
+      },
+      {
+        question: "¿Cómo trato a alguien que no bebe alcohol?",
+        answer: "Quienes no beben suelen sentirse incómodos con la división equitativa cuando el alcohol infla la cuenta de forma significativa. Enfoques justos: calcular la comida y las bebidas por separado, dividiendo la comida por igual y pagando las bebidas quienes las pidieron. Como alternativa, quienes no beben pagan su parte proporcional según su subtotal personal, mientras los demás reparten el resto. Muchos grupos lo acuerdan antes de pedir para evitar incomodidad. El organizador puede facilitarlo diciendo por adelantado cómo se repartirá.",
+      },
+      {
+        question: "¿Qué aplicaciones facilitan dividir cuentas?",
+        answer: "Varias aplicaciones se especializan en dividir cuentas y gastos compartidos: Splitwise (la más popular para gastos de grupo continuos y seguimiento de deudas), Tab (fotografía y divide un recibo por artículo), Venmo y Cash App (pago fácil, aunque aún debes calcular las divisiones), PayPal (reparte solicitudes entre varias personas) y las transferencias bancarias. Para dividir en persona, muchos restaurantes aceptan el pago en varias tarjetas: solo pide dividir la cuenta al pagar. Usar nuestra calculadora primero te da el importe exacto por persona que solicitar.",
+      },
+    ],
     fields: [
       {
         id: "totalBill",
@@ -170,6 +240,41 @@ export const everydayWave2Calculators: CalculatorDefinition[] = [
     metaDescription: "Calculate the final price after a percentage or dollar discount. See how much you save instantly. Free online discount and sale price calculator.",
     primaryKeyword: "discount calculator",
     secondaryKeywords: ["sale price calculator", "percent off calculator", "how much is 20% off", "discount percentage calculator"],
+    slugEs: "calculadora-de-descuentos",
+    titleEs: "Calculadora de Descuentos",
+    shortDescriptionEs: "Calcula el precio de venta tras un descuento porcentual o fijo. Consulta tu ahorro al instante.",
+    seoTitleEs: "Calculadora de Descuentos — Precio de Venta tras el Descuento",
+    metaDescriptionEs: "Calcula el precio final tras un descuento porcentual o en dólares. Consulta cuánto ahorras al instante. Calculadora gratuita de descuento y precio de venta.",
+    primaryKeywordEs: "calculadora de descuentos",
+    secondaryKeywordsEs: ["calculadora de precio rebajado", "calculadora de porcentaje de descuento", "cuánto es un 20% de descuento"],
+    formulaExplanationEs: "Restar la tasa de descuento a uno deja la fracción del precio que aún pagas, así que multiplicar el precio original por esa fracción llega directamente al precio de venta sin un paso de resta aparte. Un descuento fijo en dólares es aún más simple —se resta directamente del precio—, pero representa una parte distinta en un artículo barato que en uno caro, por lo que el método porcentual se aplica primero cuando se indican ambos.",
+    explanationEs: "Las calculadoras de descuentos son esenciales para comprar de forma inteligente. Tanto si miras una oferta de '30% de descuento', un 'cupón de 20 $ de descuento' o intentas averiguar si una oferta lo es realmente, esta calculadora te muestra el precio final exacto y cuánto ahorras.\n\nLos minoristas usan descuentos porcentuales con más frecuencia porque escalan con el precio original y parecen mayores. Una oferta de '30% de descuento' en un artículo de 300 $ ahorra 90 $, pero en uno de 30 $ solo son 9 $. Los descuentos fijos en dólares (20 $ de descuento) funcionan distinto: son una mejor oferta en artículos baratos (el 20% de descuento en un artículo de 100 $ son 20 $) y una oferta menor en artículos caros (el 4% de descuento en uno de 500 $ son 20 $).\n\nAl comparar ofertas, calcula el precio final, no solo el importe del descuento. Un artículo con '50% de descuento' sobre un precio original inflado puede no ser más barato que otro con '10% de descuento' sobre un precio justo. Compara siempre precios finales, no porcentajes de descuento.",
+    exampleEs: {
+      inputs: { originalPrice: "79.99", discountPercent: "25", discountAmount: "0" },
+      explanation: "25% de descuento sobre 79,99 $: Ahorro = 79,99 $ × 0,25 = 20,00 $. Precio final = 79,99 $ − 20,00 $ = 59,99 $. El precio de venta se redondea a 59,99 $.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cómo calculo un porcentaje de descuento mentalmente?",
+        answer: "Para un 10% de descuento: mueve el punto decimal un lugar a la izquierda. 85 $ × 10% = 8,50 $ de descuento. Para un 20%: duplica el importe del 10%. 8,50 $ × 2 = 17 $, así que 85 $ − 17 $ = 68 $. Para un 25%: divide entre 4. 80 $ ÷ 4 = 20 $, así que 60 $ de precio final. Para un 50%: divide entre 2. Para un 30%: 3 × 10%. Para un 15%: 10% más la mitad del 10%. Combinar estos bloques permite calcular la mayoría de descuentos comunes.",
+      },
+      {
+        question: "¿Cómo hallo el precio original si conozco el precio de venta y el descuento?",
+        answer: "Reordena la fórmula del descuento: Original = Precio de Venta ÷ (1 − Descuento%/100). Por ejemplo, un artículo de 70 $ ya está marcado con un 30% de descuento. Precio original = 70 $ ÷ (1 − 0,30) = 70 $ ÷ 0,70 = 100 $. Este cálculo es útil cuando se muestra un precio rebajado sin el original, o cuando quieres verificar que el 'precio original' que muestra un minorista era legítimo y no estaba inflado solo para que el descuento pareciera mayor.",
+      },
+      {
+        question: "¿Cómo funcionan los descuentos acumulados?",
+        answer: "Los descuentos acumulados (varios descuentos aplicados de forma sucesiva) NO se suman sin más. Un 20% de descuento seguido de un 10% adicional NO es un 30%. Es: primero reduce un 20%, luego reduce el resultado un 10%. Ejemplo: 100 $ → 20% de descuento = 80 $ → 10% de descuento = 72 $. El descuento efectivo combinado es del 28%, no del 30%. Fórmula para dos descuentos acumulados: Efectivo% = 1 − (1 − d1)(1 − d2). Por eso una oferta de '20% más un 10% extra' vale algo menos que un 30% directo.",
+      },
+      {
+        question: "¿Los precios rebajados son siempre un ahorro real?",
+        answer: "No siempre. Los minoristas a veces inflan el 'precio original' para que el descuento parezca mayor, una práctica llamada anclaje de precios. Señales de alerta: el artículo lleva meses al precio 'rebajado'; el precio 'original' está muy por encima de lo que cobra cualquier minorista; el artículo aparece al mismo precio 'rebajado' en varias tiendas. Extensiones de navegador y herramientas de historial de precios rastrean si un precio de oferta es realmente inferior a la media histórica. Las rebajas de temporada suelen ofrecer descuentos reales.",
+      },
+      {
+        question: "¿Cómo calculo el porcentaje de descuento si conozco el precio original y el de venta?",
+        answer: "Descuento% = (Original − Precio de Venta) ÷ Original × 100. Por ejemplo, un artículo originalmente de 120 $, en oferta a 84 $: Descuento% = (120 $ − 84 $) ÷ 120 $ × 100 = 36 $ ÷ 120 $ × 100 = 30% de descuento. Es útil cuando una etiqueta muestra ambos precios pero no el porcentaje, o al comparar descuentos entre artículos distintos. El ahorro absoluto (36 $) y el porcentaje (30%) cuentan historias diferentes: 36 $ sobre 120 $ frente a 36 $ sobre 1.200 $ representan niveles muy distintos.",
+      },
+    ],
     fields: [
       {
         id: "originalPrice",
@@ -250,6 +355,41 @@ export const everydayWave2Calculators: CalculatorDefinition[] = [
     metaDescription: "Calculate sales tax and total price with tax for any purchase. Works for any tax rate. Free online sales tax calculator with instant results.",
     primaryKeyword: "sales tax calculator",
     secondaryKeywords: ["tax calculator", "how to calculate sales tax", "price plus tax", "total price with tax"],
+    slugEs: "calculadora-de-impuesto-sobre-ventas",
+    titleEs: "Calculadora de Impuesto sobre Ventas",
+    shortDescriptionEs: "Calcula el importe del impuesto sobre ventas y el precio total con impuestos para cualquier compra.",
+    seoTitleEs: "Calculadora de Impuesto sobre Ventas — Precio con Impuestos",
+    metaDescriptionEs: "Calcula el impuesto sobre ventas y el precio total con impuestos para cualquier compra. Funciona con cualquier tasa. Calculadora gratuita con resultados al instante.",
+    primaryKeywordEs: "calculadora de impuesto sobre ventas",
+    secondaryKeywordsEs: ["calculadora de impuestos", "cómo calcular el impuesto sobre ventas", "precio con impuestos incluidos"],
+    formulaExplanationEs: "Multiplicar el precio por la tasa de impuesto entre 100 convierte el porcentaje del gobierno en los dólares que se añaden en la caja, y sumar ese importe al precio da el total que entregas. La fórmula inversa divide el total con impuestos incluidos entre uno más la tasa, porque el total ya contiene tanto el precio base como su impuesto; restar un porcentaje plano del total se pasaría de largo y subestimaría el verdadero importe antes de impuestos.",
+    explanationEs: "Una calculadora de impuesto sobre ventas añade el impuesto al consumo correcto a una compra, mostrando tanto el importe del impuesto como el precio final que pagarás realmente en la caja. El impuesto sobre ventas importa porque, a diferencia del impuesto anual sobre la renta, se aplica transacción a transacción, y la tasa que debes depende por completo de dónde te encuentres: las tasas combinadas estatales y locales en Estados Unidos van del cero a bastante más del diez por ciento. Conocer la cifra exacta ayuda con el presupuesto, el reporte de gastos y comprobar que un recibo se cobró correctamente.\n\nEsta calculadora funciona en dos direcciones. Hacia adelante, convierte un precio antes de impuestos en un total con impuestos incluidos multiplicando el precio por la tasa y añadiéndolo. A la inversa, recupera el precio antes de impuestos a partir de un total con impuestos incluidos dividiendo en lugar de restar, que es la única forma de obtener un importe base exacto para la contabilidad.\n\nCompradores que comparan precios de otros estados, autónomos que registran gastos deducibles y pequeños empresarios que cotizan precios con impuestos incluidos confían en una calculadora de impuesto sobre ventas para evitar los errores de redondeo que surgen al hacer cálculos de porcentajes de cabeza.",
+    exampleEs: {
+      inputs: { price: "100", taxRate: "8.5" },
+      explanation: "Compra de 100 $ al 8,5% de impuesto sobre ventas: Impuesto = 100 $ × 0,085 = 8,50 $. Total = 108,50 $. A la inversa: si gastaste 108,50 $ en total al 8,5%, el precio antes de impuestos era 108,50 $ ÷ 1,085 = 100,00 $.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cuál es la tasa de impuesto sobre ventas en mi estado?",
+        answer: "Las tasas varían según el estado y la localidad. Estados sin impuesto estatal sobre ventas: Oregón, Montana, Nueva Hampshire, Delaware y Alaska. Otras tasas destacadas (solo estatales, los impuestos locales pueden añadir más): California 7,25%, Tennessee 7%, Texas 6,25%, Washington 6,5%, Nueva York 4% (la ciudad de Nueva York suma un 4,5% para un 8,875% combinado), Colorado 2,9%. Las tasas combinadas pueden alcanzar del 9 al 11% en algunas ciudades. Para la tasa exacta de tu dirección, consulta el Departamento de Ingresos de tu estado.",
+      },
+      {
+        question: "¿Qué artículos están exentos del impuesto sobre ventas?",
+        answer: "Las exenciones varían según el estado, pero las comunes incluyen: alimentos (exentos por completo en muchos estados, parcialmente en otros; la comida preparada suele gravarse pero los básicos no), medicamentos con receta (exentos en la mayoría de estados), medicamentos sin receta (variable), ropa (exenta en algunos estados como Pensilvania y Minnesota, y durante los periodos sin impuestos de vuelta al cole), equipos e insumos de fabricación, suministros agrícolas y compras de organizaciones sin ánimo de lucro y entidades gubernamentales. Algunos estados tienen 'vacaciones fiscales' periódicas para artículos concretos.",
+      },
+      {
+        question: "¿Cómo calculo el impuesto sobre ventas a la inversa (hallar el precio antes de impuestos)?",
+        answer: "Para hallar el precio antes de impuestos cuando conoces el precio total con impuestos: Precio antes de impuestos = Precio Total ÷ (1 + Tasa/100). Por ejemplo, si pagaste 54,00 $ y la tasa era del 8%: Antes de impuestos = 54 $ ÷ 1,08 = 50 $. Esto difiere de simplemente restar el 8% del total (54 $ × 0,08 = 4,32 $; 54 $ − 4,32 $ = 49,68 $, incorrecto). El método de división da el importe correcto antes de impuestos. Nuestra calculadora muestra este cálculo inverso.",
+      },
+      {
+        question: "¿Pago impuesto sobre ventas en las compras por internet?",
+        answer: "Sí, en la mayoría de los casos. Desde el fallo del Tribunal Supremo de 2018 en South Dakota v. Wayfair, los minoristas en línea deben recaudar el impuesto sobre ventas en los estados donde tienen 'nexo económico' (normalmente 100.000 $ en ventas anuales o más de 200 transacciones). La mayoría de grandes minoristas en línea recaudan ahora el impuesto en todos los estados que lo tienen. Debes 'impuesto de uso' en compras donde el vendedor no lo recaudó, a la misma tasa y autodeclarado en tu declaración estatal.",
+      },
+      {
+        question: "¿El impuesto sobre ventas se calcula antes o después de los descuentos?",
+        answer: "El impuesto sobre ventas suele calcularse sobre el precio de venta final después de aplicar los descuentos. Si un artículo cuesta 100 $ con un cupón de 20 $, pagas el impuesto sobre 80 $ (el precio con descuento), no sobre 100 $. Sin embargo, esta regla tiene matices: los reembolsos del fabricante pagados tras la venta pueden no reducir el importe gravable en algunos estados, y los paquetes de productos pueden tener un tratamiento fiscal complejo. Para la mayoría de compras minoristas con descuentos estándar, pagas impuesto solo sobre lo que realmente abonas antes de impuestos.",
+      },
+    ],
     sensitivity: "tax",
     fields: [
       {
@@ -320,6 +460,41 @@ export const everydayWave2Calculators: CalculatorDefinition[] = [
     metaDescription: "Compare cost per unit between two products to find the better value. Works for any unit: per oz, per count, per liter. Free online unit price comparison.",
     primaryKeyword: "unit price calculator",
     secondaryKeywords: ["price per unit calculator", "cost per unit", "which is cheaper per unit", "value comparison calculator"],
+    slugEs: "calculadora-de-precio-por-unidad",
+    titleEs: "Calculadora de Precio por Unidad",
+    shortDescriptionEs: "Compara el coste por unidad de dos productos para encontrar la mejor oferta.",
+    seoTitleEs: "Calculadora de Precio por Unidad — Compara el Coste por Unidad",
+    metaDescriptionEs: "Compara el coste por unidad entre dos productos para hallar el mejor valor. Funciona con cualquier unidad: por onza, por unidad, por litro. Comparación gratuita.",
+    primaryKeywordEs: "calculadora de precio por unidad",
+    secondaryKeywordsEs: ["calculadora de coste por unidad", "cuál es más barato por unidad", "calculadora de comparación de valor"],
+    formulaExplanationEs: "Dividir el precio total de un envase entre la cantidad que contiene reduce cada opción al mismo denominador —el coste de una sola onza, unidad o litro—, de modo que envases de distinto tamaño pasan a ser directamente comparables. Como la unidad es idéntica en ambos lados, el producto con la cifra menor es genuinamente más barato por unidad y no solo más barato en total, por lo que comparar precios por unidad, y no de etiqueta, revela el mejor valor.",
+    explanationEs: "Comparar el precio por unidad es una de las herramientas más potentes para comprar de forma más inteligente en el supermercado y el comercio. En muchas jurisdicciones las tiendas están obligadas por ley a mostrar el precio por unidad en las etiquetas de estantería, pero compararlo entre distintos tamaños y marcas puede seguir siendo confuso.\n\nLa calculadora de precio por unidad elimina la complejidad: introduce el precio y la cantidad de dos productos y te dice al instante cuál ofrece mejor valor por unidad (por onza, por unidad, por litro, etc.).\n\nLos tamaños más grandes suelen ser (aunque no siempre) más baratos por unidad; esa es la lógica de 'comprar a granel'. Sin embargo, no siempre es cierto. La marca de la tienda frente a la marca conocida al mismo tamaño, o un producto en oferta en un tamaño pero no en otro, pueden hacer que el tamaño pequeño sea más barato por unidad. Verifícalo siempre con la calculadora.\n\nMatiz importante: el precio por unidad solo mide la eficiencia de coste. Considera si realmente usarás la cantidad mayor antes de que caduque, y si la calidad de la opción más barata cumple tus estándares.",
+    exampleEs: {
+      inputs: { price1: "3.99", quantity1: "16", price2: "5.49", quantity2: "24" },
+      explanation: "Producto A: 3,99 $ ÷ 16 oz = 0,249 $/oz. Producto B: 5,49 $ ÷ 24 oz = 0,229 $/oz. El Producto B es más barato por onza: pese a costar más en total, ofrece un 8% más de valor por unidad.",
+    },
+    faqsEs: [
+      {
+        question: "¿Qué significa precio por unidad?",
+        answer: "El precio por unidad es el coste de una unidad estándar de un producto: por onza, por litro, por artículo, por libra, etc. Permite comparar el coste de envases de distinto tamaño de forma equivalente. El precio por unidad es obligatorio por ley en muchos estados y países; busca el número pequeño en las etiquetas de estantería, a menudo impreso bajo el precio de venta mayor. La ley federal no lo exige a nivel nacional, pero muchos minoristas lo ofrecen de forma voluntaria. La unidad debe ser la misma al comparar.",
+      },
+      {
+        question: "¿El tamaño más grande siempre es más barato por unidad?",
+        answer: "No, y esto sorprende a muchos compradores. Aunque comprar a granel suele ahorrar dinero por unidad, las excepciones son comunes. Las ofertas en tamaños pequeños pueden abaratarlos por unidad. Las marcas de tienda en tamaños pequeños a veces superan a las marcas conocidas en tamaños grandes. El precio por unidad en algunos productos, sobre todo en clubes de almacén, puede ser mayor que en supermercados en oferta. Promociones de temporada, cupones y ofertas de dos por uno pueden invertir la economía. Comprueba siempre con una calculadora.",
+      },
+      {
+        question: "¿Qué pasa con productos que no son de la misma calidad?",
+        answer: "El precio por unidad solo mide el coste por unidad de cantidad; no tiene en cuenta las diferencias de calidad. Una marca de tienda más barata puede tener un precio por unidad menor pero ingredientes, sabor o eficacia distintos. Para productos exactamente equivalentes (misma marca, mismo producto, distinto tamaño), el precio por unidad es definitivo. Para marcas o niveles de calidad diferentes, es un dato en tu decisión, no la respuesta final. En medicamentos, alimentos y herramientas, las diferencias de calidad importan especialmente.",
+      },
+      {
+        question: "¿Cómo comparo productos medidos en unidades distintas?",
+        answer: "Primero, convierte a una unidad común. Por ejemplo, comparar una botella de 1 litro con una de 33,8 onzas líquidas (ambas son 1 litro, pues 33,8 oz ≈ 1 L, así que son equivalentes). Para peso frente a volumen líquido, la conversión puede no ser directamente comparable (una libra de cereal no se compara directamente con un litro). Conversiones comunes: 1 libra = 16 onzas; 1 kilogramo = 1.000 gramos; 1 litro = 33,814 onzas líquidas; 1 galón = 128 onzas líquidas. Con todo en la misma unidad, compara los precios por unidad.",
+      },
+      {
+        question: "¿Comprar a granel es siempre la opción financiera inteligente?",
+        answer: "No necesariamente. Comprar a granel es inteligente cuando: usarás el producto antes de que caduque; tienes espacio de almacenamiento; el ahorro por unidad es significativo; tu presupuesto absorbe el coste inicial. Es contraproducente cuando: la comida se estropea antes de usarla (anulando el ahorro y generando desperdicio); compras por impulso grandes cantidades que no sueles necesitar; el dinero inmovilizado tiene un coste de oportunidad; pagas una cuota de club de almacén que cuesta más de lo que ahorras. El coste ambiental también importa a muchos. Calcula el precio por unidad y luego considera tu consumo real.",
+      },
+    ],
     fields: [
       {
         id: "price1",

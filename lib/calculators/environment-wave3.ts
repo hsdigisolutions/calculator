@@ -53,6 +53,38 @@ export const environmentWave3Calculators: CalculatorDefinition[] = [
     lastReviewed: "2026-08-20",
     formulaSource: "U.S. EPA greenhouse gas equivalencies",
     sourceUrl: "https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator",
+    slugEs: "calculadora-de-huella-de-carbono",
+    titleEs: "Calculadora de Huella de Carbono",
+    shortDescriptionEs: "Estima el CO₂ anual de conducir y la electricidad del hogar.",
+    seoTitleEs: "Calculadora de Huella de Carbono — CO₂ de Conducir y Energía del Hogar",
+    metaDescriptionEs: "Calculadora de huella de carbono gratuita. Introduce tus millas anuales, economía de combustible y consumo eléctrico mensual para estimar las emisiones anuales de CO₂ en toneladas métricas por conducir y por la energía del hogar.",
+    primaryKeywordEs: "calculadora de huella de carbono",
+    secondaryKeywordsEs: ["calculadora de emisiones de co2", "calculadora de carbono del hogar", "huella de carbono personal"],
+    formulaExplanationEs: "Cada galón de gasolina quemado libera unos 8,887 kilogramos de dióxido de carbono, así que dividir tus millas anuales entre la economía de combustible da los galones, que multiplicados por ese factor dan las emisiones de conducir. La electricidad del hogar usa un factor de red de aproximadamente 0,417 kilogramos de CO₂ por kilovatio-hora, aplicado a doce meses de consumo. Sumar ambos y dividir entre 1.000 convierte los kilogramos en las toneladas métricas que se citan habitualmente.",
+    explanationEs: "Una huella de carbono mide los gases de efecto invernadero que liberan tus actividades, expresados como un peso equivalente de dióxido de carbono. Esta calculadora de huella de carbono se centra en dos de las mayores fuentes domésticas — el coche que conduces y la electricidad que consume tu hogar — y presenta tus emisiones anuales en toneladas métricas de CO₂, separadas para que veas qué fuente domina.\n\nLas emisiones de conducir provienen de quemar combustible: cuantas menos millas recorras y más eficiente sea tu vehículo, menos carbono produces. Las emisiones del hogar dependen de cuánta electricidad de la red uses y de lo limpia que sea esa red. Como ambas se escalan con factores de emisión publicados, el resultado es una estimación realista en lugar de una conjetura, dándote una base sobre la que actuar.\n\nConocer tu huella importa porque convierte una preocupación climática abstracta en cifras concretas que puedes influir. Cambiar a un coche más eficiente, conducir menos, mejorar el aislamiento del hogar o pasar a electricidad renovable desplaza la cifra de forma medible. Personas que siguen objetivos de sostenibilidad, familias que comparan cambios de estilo de vida y estudiantes que aprenden sobre emisiones usan una calculadora de huella de carbono para entender el impacto y priorizar los cambios que más carbono reducen con el menor esfuerzo en la vida diaria.",
+    exampleEs: { inputs: { annualMiles: 12000, mpg: 25, monthlyKwh: 900 }, explanation: "12.000 ÷ 25 × 8,887 ÷ 1000 ≈ 4,27 t por conducir, más 900 × 12 × 0,417 ÷ 1000 ≈ 4,50 t de la energía del hogar, para unas 8,77 t de CO₂ al año." },
+    faqsEs: [
+      {
+        question: "¿Qué factores de emisión usa esta calculadora?",
+        answer: "Usa factores de equivalencia de la EPA de EE. UU.: unos 8,887 kilogramos de CO₂ por galón de gasolina quemado y aproximadamente 0,417 kilogramos de CO₂ por kilovatio-hora de electricidad de la red. Son promedios nacionales, así que tus cifras reales varían según el tipo de combustible y lo limpia que sea tu red local. Las regiones con mucha generación renovable o nuclear emiten mucho menos por kilovatio-hora que las redes dependientes del carbón, así que trata el resultado como una estimación sólida.",
+      },
+      {
+        question: "¿Por qué se divide mi resultado en conducir y energía del hogar?",
+        answer: "Separar las dos fuentes te muestra de dónde provienen realmente tus emisiones, que es el primer paso para reducirlas. Si conducir domina, compartir coche, un vehículo más eficiente o menos viajes ayudarán más. Si la energía del hogar es mayor, el aislamiento, los electrodomésticos eficientes o la electricidad renovable marcan la mayor diferencia. Ver ambas cifras lado a lado te permite priorizar el cambio que reduce más carbono según tu esfuerzo.",
+      },
+      {
+        question: "¿Incluye esto toda mi huella de carbono?",
+        answer: "No. Esta calculadora cubre la conducción personal y la electricidad del hogar, dos grandes fuentes domésticas, pero una huella completa también incluye vuelos, calefacción de gas natural, alimentos, bienes y servicios públicos. Para capturar más, añade una estimación de emisiones de vuelos y contabiliza cualquier gas o petróleo que quemes directamente. Usa esta cifra como una estimación central sólida y añade otras categorías encima para una imagen más completa de tu impacto total.",
+      },
+      {
+        question: "¿Cómo puedo reducir el número que muestra?",
+        answer: "La parte de conducir baja cuando recorres menos millas o cambias a un vehículo con mayor economía de combustible o eléctrico cargado con energía limpia. La parte del hogar baja cuando reduces el consumo eléctrico mediante iluminación y electrodomésticos eficientes, mejor aislamiento o electricidad renovable. Incluso cambios modestos, como recortar unos miles de millas al año, mueven el tonelaje hacia abajo de una forma que puedes medir aquí.",
+      },
+      {
+        question: "¿Se cuentan los vehículos eléctricos como cero emisiones?",
+        answer: "No exactamente. Un vehículo eléctrico no produce emisiones por el tubo de escape, así que su cifra de conducción aquí sería casi cero si lo introduces como tal, pero la electricidad que usa aún aparece en tu total de energía del hogar si cargas en casa. La limpieza de tu red determina entonces su huella real. En una red con mucha renovable un eléctrico es muy bajo en carbono; en una red de carbón es más limpio que la gasolina pero no cero.",
+      },
+    ],
   },
   {
     id: "solar-savings",
@@ -105,6 +137,38 @@ export const environmentWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard energy calculation",
+    slugEs: "calculadora-de-ahorro-solar",
+    titleEs: "Calculadora de Ahorro Solar",
+    shortDescriptionEs: "Estima el ahorro anual y de por vida de los paneles solares.",
+    seoTitleEs: "Calculadora de Ahorro Solar — Ahorro Anual y a 25 Años de Paneles",
+    metaDescriptionEs: "Calculadora de ahorro solar gratuita. Introduce el tamaño de tu sistema, las horas de sol diarias y tu tarifa eléctrica para estimar la producción anual de energía, el ahorro anual en la factura y el ahorro a 25 años.",
+    primaryKeywordEs: "calculadora de ahorro solar",
+    secondaryKeywordsEs: ["calculadora de ahorro de paneles solares", "ahorro de energia solar", "calculadora de amortizacion solar"],
+    formulaExplanationEs: "La producción de una instalación solar equivale a su tamaño nominal en kilovatios multiplicado por el número de horas de sol pico que recibe cada día, ya que las horas de sol pico ya incorporan la intensidad. Multiplicar por 365 escala esa energía diaria a un año completo de kilovatios-hora. Cada uno de esos kilovatios-hora desplaza electricidad de la red que de otro modo comprarías, así que multiplicar la producción anual por tu tarifa eléctrica da el ahorro anual en dólares, y 25 años reflejan la vida típica de garantía de un panel.",
+    explanationEs: "Los paneles solares ahorran dinero generando electricidad que de otro modo comprarías a la red, y esta calculadora de ahorro solar convierte tres entradas sencillas en una estimación de cuánto podrías conservar. Introduce el tamaño previsto del sistema, las horas de sol pico que tu ubicación promedia y tu tarifa eléctrica, y devuelve la producción anual de energía, el ahorro anual en la factura y un total de por vida a 25 años.\n\nLa lógica es directa: una instalación mayor en un lugar más soleado produce más kilovatios-hora, y cada kilovatio-hora que generas compensa uno que ya no compras. Cuanto más alta sea tu tarifa eléctrica, más vale cada unidad generada, por lo que la energía solar se amortiza más rápido donde la electricidad es cara y el sol abundante.\n\nVer una cifra a 25 años importa porque la energía solar es una inversión a largo plazo; los paneles suelen llevar garantías de esa duración, así que el ahorro de por vida te dice si el coste inicial merece la pena. Propietarios que valoran una instalación, inquilinos que exploran la energía solar comunitaria y estudiantes que estudian la economía renovable usan una calculadora de ahorro solar para estimar el retorno antes de comprometerse. Recuerda que la estimación asume tarifas y producción estables; el ahorro real varía con la inflación de tarifas, la degradación de los paneles y las sombras, pero esto da una base clara y defendible para planificar.",
+    exampleEs: { inputs: { systemSizeKw: 5, sunHours: 5, electricityRate: 0.15 }, explanation: "5 kW × 5 h × 365 = 9.125 kWh al año; a $0,15/kWh eso ahorra $1.368,75 anuales y unos $34.218,75 en 25 años." },
+    faqsEs: [
+      {
+        question: "¿Qué son las horas de sol pico y cómo encuentro las mías?",
+        answer: "Las horas de sol pico son el número equivalente de horas al día en que la luz solar alcanza la fuerza plena de 1.000 vatios por metro cuadrado, agrupando toda la luz variable de un día en una sola cifra. La mayor parte de Estados Unidos promedia entre cuatro y seis, mientras que las regiones más soleadas alcanzan más. Los mapas de irradiancia solar y las herramientas de los instaladores listan valores locales, así que introduce el promedio anual de tu zona para una estimación de producción realista.",
+      },
+      {
+        question: "¿Tiene en cuenta esta calculadora la degradación de los paneles?",
+        answer: "No, esta estimación asume una producción constante durante los 25 años por simplicidad. En realidad los paneles pierden alrededor de medio por ciento de capacidad al año, así que la producción de los últimos años es algo menor que la del primero. También asume que tu tarifa eléctrica se mantiene fija, mientras que las tarifas suelen subir con el tiempo, lo que empuja el ahorro hacia arriba. Estos dos efectos se cancelan en parte, así que la estimación plana sigue siendo una cifra intermedia razonable para planificar.",
+      },
+      {
+        question: "¿Por qué una tarifa eléctrica más alta aumenta el ahorro?",
+        answer: "El ahorro solar proviene de evitar compras a la red, así que cada kilovatio-hora que generas vale exactamente lo que habrías pagado por él. Cuando tu tarifa es alta, cada unidad autogenerada desplaza una compra más cara, haciendo que la misma instalación ahorre más dinero. Por eso la economía solar luce más fuerte en regiones con electricidad costosa, y por eso el aumento de los precios de servicios mejora de forma constante el retorno de una instalación existente durante su vida.",
+      },
+      {
+        question: "¿Incluye esto el coste de instalación o el tiempo de amortización?",
+        answer: "No. Esta herramienta estima solo el lado del ahorro — cuánto valor de electricidad producen tus paneles — no el precio inicial de compra e instalación. Para hallar el tiempo de amortización, divide el coste neto de tu sistema tras cualquier incentivo entre el ahorro anual mostrado aquí. Si un sistema cuesta $12.000 neto y ahorra unos $1.369 al año, la amortización ronda los nueve años, tras los cuales el ahorro restante es esencialmente energía gratis.",
+      },
+      {
+        question: "¿Produciré realmente esta cantidad exacta de energía?",
+        answer: "La producción real varía con las sombras, la orientación de los paneles, la inclinación del tejado, la temperatura, el polvo y la eficiencia del inversor, así que trata esto como una estimación bien fundada en lugar de una garantía. Las instalaciones orientadas al sur y sin sombra en tus horas de sol declaradas se acercan más. La nieve, las nubes y la suciedad reducen la producción en días concretos, mientras que el clima soleado y fresco puede elevarla. Para una cifra firme, una evaluación específica del sitio por un instalador ajusta estas entradas a tu tejado exacto.",
+      },
+    ],
   },
   {
     id: "flight-emissions",
@@ -156,6 +220,38 @@ export const environmentWave3Calculators: CalculatorDefinition[] = [
     lastReviewed: "2026-08-20",
     formulaSource: "U.S. EPA greenhouse gas equivalencies",
     sourceUrl: "https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator",
+    slugEs: "calculadora-de-emisiones-de-vuelos",
+    titleEs: "Calculadora de Emisiones de Vuelos",
+    shortDescriptionEs: "Estima el CO₂ de un vuelo por distancia y pasajeros.",
+    seoTitleEs: "Calculadora de Emisiones de Vuelos — Huella de CO₂ del Viaje Aéreo",
+    metaDescriptionEs: "Calculadora de emisiones de vuelos gratuita. Introduce la distancia del vuelo en kilómetros y el número de pasajeros para estimar el dióxido de carbono producido por el viaje aéreo en kilogramos y toneladas métricas.",
+    primaryKeywordEs: "calculadora de emisiones de vuelos",
+    secondaryKeywordsEs: ["calculadora de carbono de vuelos", "calculadora de co2 de viaje aereo", "calculadora de emisiones de avion"],
+    formulaExplanationEs: "Los aviones queman combustible aproximadamente en proporción a la distancia volada, y promediado entre clases de asiento y factores de ocupación un pasajero representa unos 0,115 kilogramos de CO₂ por cada kilómetro recorrido. Multiplicar la distancia del vuelo por ese factor da las emisiones de un viajero, y multiplicar de nuevo por el número de pasajeros lo escala a todo el grupo. Dividir la cifra en kilogramos entre 1.000 la convierte en las toneladas métricas usadas para los presupuestos de carbono anuales.",
+    explanationEs: "El viaje aéreo es una de las cosas más intensivas en carbono que una persona puede hacer por hora, y esta calculadora de emisiones de vuelos estima el dióxido de carbono que produce un trayecto a partir de solo dos entradas: la distancia del vuelo en kilómetros y cuántos pasajeros viajan. Presenta el resultado en kilogramos para un solo viaje y en toneladas métricas para que puedas encajarlo en un presupuesto de carbono anual.\n\nLa estimación usa un factor de emisión por pasajero-kilómetro que promedia el combustible quemado entre aviones y ocupaciones típicas. Como las emisiones escalan directamente con la distancia, los vuelos de largo recorrido dominan la huella de un viajero, mientras que los trayectos cortos suman menos. Multiplicar por el número de pasajeros permite a una familia o grupo ver su impacto combinado en una sola cifra en lugar de por asiento.\n\nEntender las emisiones de vuelos importa a medida que más personas rastrean y compensan sus viajes. Ver que un solo vuelo de ida y vuelta de largo recorrido puede rivalizar con un año entero de conducción replantea lo significativo que es volar, ayudando a los viajeros a decidir si volar menos, elegir rutas directas que queman menos combustible o comprar compensaciones creíbles. Viajeros ecológicos, organizadores de eventos que sopesan ubicaciones de sedes y estudiantes que estudian las emisiones del transporte usan una calculadora de emisiones de vuelos para cuantificar un coste de otro modo invisible.",
+    exampleEs: { inputs: { distanceKm: 1000, passengers: 2 }, explanation: "1.000 km × 0,115 × 2 pasajeros = 230 kg de CO₂, que son 0,230 toneladas métricas." },
+    faqsEs: [
+      {
+        question: "¿Qué factor de emisión usa esta calculadora?",
+        answer: "Aplica unos 0,115 kilogramos de CO₂ por pasajero-kilómetro, un promedio común extraído de cifras de agencias medioambientales para vuelos comerciales típicos. Esto mezcla diferentes aviones, clases de asiento y factores de ocupación en un número representativo. Los asientos de clase ejecutiva y primera ocupan más espacio y por tanto cargan una parte mayor del combustible, así que el viaje premium supera este promedio, mientras que una cabina económica llena en un avión eficiente puede quedar ligeramente por debajo.",
+      },
+      {
+        question: "¿Afecta la distancia a las emisiones por kilómetro?",
+        answer: "Sí, en la práctica. El despegue y el ascenso queman desproporcionadamente más combustible, así que los vuelos muy cortos emiten más por kilómetro que los cruceros largos donde el avión pasa la mayor parte del tiempo en vuelo nivelado eficiente. Esta calculadora usa un único factor promedio por simplicidad, así que subestima ligeramente los trayectos cortos y sobreestima algo algunos tramos de largo recorrido. Para una planificación aproximada el promedio funciona bien, pero las herramientas dedicadas que modelan las fases de vuelo dan un detalle más fino.",
+      },
+      {
+        question: "¿Debo contar cada tramo de un viaje de ida y vuelta?",
+        answer: "Sí. Introduce la distancia total que realmente vuelas, que para un viaje de ida y vuelta es aproximadamente el doble de la distancia de ida, más cualquier tramo de conexión. Un viajero que vuela de ida y de vuelta cubre ambas direcciones, así que ambas deben incluirse para reflejar la huella real. Si haces varias conexiones, suma la distancia de cada segmento, ya que cada uno quema combustible de forma independiente sin importar lo breve que sea la parada entre ellos.",
+      },
+      {
+        question: "¿Incluye esto el calentamiento adicional de las emisiones a gran altitud?",
+        answer: "No. Esta estimación cuenta solo el dióxido de carbono de quemar combustible de aviación. Los aviones también crean estelas de condensación y emiten otros gases a gran altura que añaden más calentamiento, un efecto a menudo capturado por un multiplicador de forzamiento radiativo de aproximadamente dos a tres. Si quieres un impacto climático más completo, multiplica la cifra de CO₂ de aquí en consecuencia, teniendo en cuenta que el multiplicador es un área de refinamiento científico activo.",
+      },
+      {
+        question: "¿Cómo se compara volar con conducir la misma distancia?",
+        answer: "Para un viajero solo, un vuelo largo y un viaje en coche de longitud similar pueden producir un CO₂ ampliamente comparable, pero los vuelos cubren distancias mucho mayores en un día, así que las emisiones totales del viaje suelen ser mucho más altas. Un solo vuelo intercontinental de ida y vuelta puede igualar o superar todo un año de emisiones de un coche promedio. Compartir un coche reparte su huella entre pasajeros, mientras que cada pasajero aéreo ya carga su parte asignada.",
+      },
+    ],
   },
   {
     id: "home-energy-cost",
@@ -208,6 +304,38 @@ export const environmentWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard energy calculation",
+    slugEs: "calculadora-de-costo-de-energia-del-hogar",
+    titleEs: "Calculadora de Costo de Energía del Hogar",
+    shortDescriptionEs: "Halla lo que cuesta hacer funcionar un electrodoméstico al mes y al año.",
+    seoTitleEs: "Calculadora de Costo de Energía del Hogar — Costo de Funcionamiento de Electrodomésticos",
+    metaDescriptionEs: "Calculadora de costo de energía del hogar gratuita. Introduce la potencia de un electrodoméstico, las horas de uso diario y tu tarifa eléctrica para hallar sus kilovatios-hora mensuales, su costo mensual y su costo anual de funcionamiento.",
+    primaryKeywordEs: "calculadora de costo de energia del hogar",
+    secondaryKeywordsEs: ["calculadora de costo electrico de electrodomesticos", "calculadora de uso de electricidad", "calculadora de vatios a costo"],
+    formulaExplanationEs: "La electricidad se factura por kilovatio-hora, así que la energía mensual de un electrodoméstico equivale a su potencia en vatios multiplicada por las horas de funcionamiento diarias y por treinta días, luego dividida entre 1.000 para convertir los vatios-hora en kilovatios-hora. Multiplicar esa energía por tu tarifa por kilovatio-hora da el costo mensual, y multiplicar el costo mensual por doce produce la cifra anual, mostrando el gasto de todo un año de dejar un dispositivo funcionando.",
+    explanationEs: "Cada electrodoméstico se suma silenciosamente a tu factura eléctrica, y esta calculadora de costo de energía del hogar muestra exactamente cuánto cuesta hacer funcionar cualquier dispositivo. Introduce su consumo de potencia en vatios, cuántas horas al día lo usas y tu tarifa eléctrica, y devuelve los kilovatios-hora consumidos al mes, el costo mensual y el total anual.\n\nEl cálculo se basa en cómo te factura la compañía: no por vatios sino por kilovatios-hora, la energía usada cuando un dispositivo de 1.000 vatios funciona durante una hora. Un electrodoméstico de alta potencia usado brevemente puede costar menos que uno modesto dejado encendido todo el día, por lo que tanto la potencia como las horas importan. Convertir a una cifra mensual y anual hace tangible el costo de funcionamiento en lugar de abstracto.\n\nEsta claridad ayuda a detectar los hábitos costosos que vale la pena cambiar. Un refrigerador viejo, un calefactor o un PC de juegos dejado inactivo pueden consumir silenciosamente más de lo esperado, mientras que las bombillas LED eficientes cuestan céntimos. Hogares que presupuestan servicios, inquilinos que comparan electrodomésticos y cualquiera que busque facturas más bajas usan una calculadora de costo de energía del hogar para decidir qué desenchufar, reemplazar o usar menos. Combina las cifras con la etiqueta de eficiencia de un aparato y podrás priorizar mejoras que se amortizan mediante la electricidad que ahorran cada año.",
+    exampleEs: { inputs: { watts: 100, hoursPerDay: 5, rate: 0.15 }, explanation: "100 W × 5 h × 30 ÷ 1000 = 15 kWh al mes; a $0,15/kWh eso es $2,25 mensuales y $27,00 al año." },
+    faqsEs: [
+      {
+        question: "¿Dónde encuentro la potencia de un electrodoméstico?",
+        answer: "La mayoría de los electrodomésticos indican su consumo de potencia en una etiqueta cerca del enchufe, en la parte trasera o inferior de la unidad, o en el manual, normalmente marcada en vatios o como voltios y amperios que multiplicados dan vatios. Las guías de energía y las fichas técnicas del fabricante también lo listan. Para dispositivos que se encienden y apagan por ciclos, como los refrigeradores, usa la potencia media de funcionamiento en lugar de la cifra pico de arranque para una estimación realista.",
+      },
+      {
+        question: "¿Tiene en cuenta los electrodomésticos que se encienden y apagan por ciclos?",
+        answer: "No automáticamente. La calculadora asume que el dispositivo consume su potencia declarada durante las horas que introduces. Para algo como un frigorífico o un aire acondicionado que funciona de forma intermitente, estima en su lugar las horas equivalentes a plena potencia — un frigorífico de 150 vatios podría hacer funcionar su compresor solo ocho horas al día aunque esté enchufado continuamente. Introducir ese tiempo de funcionamiento efectivo da un costo mensual mucho más preciso.",
+      },
+      {
+        question: "¿Por qué mi factura es mayor que la suma de los electrodomésticos individuales?",
+        answer: "Esta herramienta calcula el costo de un electrodoméstico a la vez, pero tu factura combina cada dispositivo más calefacción, refrigeración, consumo en espera y posibles tarifas escalonadas o por horas. Muchos aparatos consumen energía fantasma incluso apagados, y los precios de horas pico pueden superar la tarifa plana que introdujiste. Suma varios electrodomésticos aquí y compara con tu factura para encontrar la diferencia, que a menudo revela cargas siempre encendidas que habías pasado por alto.",
+      },
+      {
+        question: "¿Cómo puedo usar esto para reducir mis costos de electricidad?",
+        answer: "Calcula los números para tus dispositivos más grandes o de funcionamiento más largo primero, ya que dominan la factura. Compara el costo anual de un electrodoméstico viejo con un reemplazo eficiente para ver la amortización de una mejora. Reducir las horas diarias, cambiar a iluminación LED y eliminar el consumo en espera reducen todas las cifras mostradas aquí. Apuntar a los pocos artículos de alto costo suele ahorrar mucho más que preocuparse por gadgets menores de baja potencia.",
+      },
+      {
+        question: "¿Afecta a la precisión un mes de 30 días?",
+        answer: "La calculadora usa un mes plano de 30 días por coherencia, así que los meses con 28 o 31 días difieren ligeramente, y la cifra anual es el costo mensual multiplicado por doce en lugar de una suma precisa de 365 días. Estas pequeñas decisiones de redondeo mantienen simple la matemática y la diferencia es insignificante para presupuestar. Si necesitas cifras exactas del período de facturación, escala el costo diario — vatios por horas por tarifa dividido entre 1.000 — por el número real de días.",
+      },
+    ],
   },
   {
     id: "ev-charging-cost",
@@ -259,6 +387,38 @@ export const environmentWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard energy calculation",
+    slugEs: "calculadora-de-costo-de-carga-de-vehiculo-electrico",
+    titleEs: "Calculadora de Costo de Carga de Vehículo Eléctrico",
+    shortDescriptionEs: "Estima el costo de cargar un vehículo eléctrico.",
+    seoTitleEs: "Calculadora de Costo de Carga de Vehículo Eléctrico — Precio de Carga del Coche Eléctrico",
+    metaDescriptionEs: "Calculadora de costo de carga de vehículo eléctrico gratuita. Introduce la capacidad de tu batería, el porcentaje de carga objetivo y tu tarifa eléctrica para estimar la energía usada y el costo de cargar tu vehículo eléctrico.",
+    primaryKeywordEs: "calculadora de costo de carga de vehiculo electrico",
+    secondaryKeywordsEs: ["costo de carga de coche electrico", "calculadora de costo de carga ev", "costo de cargar vehiculo electrico"],
+    formulaExplanationEs: "La energía necesaria para cargar equivale a la capacidad de la batería multiplicada por la fracción de ella que estás llenando, así que una carga del 80 por ciento consume cuatro quintos de los kilovatios-hora nominales del paquete. Multiplicar esa energía por tu tarifa eléctrica por kilovatio-hora da el costo. El cálculo ignora las pérdidas de carga, así que la energía real extraída de la toma en el mundo real es algo mayor que la cifra del lado de la batería mostrada aquí.",
+    explanationEs: "Cargar un vehículo eléctrico suele ser mucho más barato que llenar un depósito de combustible, y esta calculadora de costo de carga de vehículo eléctrico muestra exactamente lo que cuesta una carga en casa. Introduce la capacidad de tu batería en kilovatios-hora, el porcentaje de carga que quieres añadir y tu tarifa eléctrica, y devuelve la energía extraída y el costo resultante.\n\nLa idea es sencilla: la capacidad de una batería te dice cuánta energía contiene una carga completa, así que llenar una parte de ella extrae esa fracción del total. Multiplicar la energía por tu tarifa da el precio. Como la electricidad doméstica suele costar una fracción de la gasolina por milla conducida, ver la cifra a menudo tranquiliza a los nuevos propietarios de eléctricos de que la carga diaria es barata.\n\nEsto importa para presupuestar y para comparar opciones de carga. Una recarga en casa con una tarifa de horas valle puede costar una fracción de un cargador rápido público, y conocer el precio por carga te ayuda a decidir cuándo y dónde enchufar. Propietarios de eléctricos que planifican costos mensuales, compradores potenciales que comparan gastos de funcionamiento frente a un coche de gasolina y gestores de flotas que estiman presupuestos de carga confían en una calculadora de costo de carga de vehículo eléctrico. Recuerda que la energía real de la toma es algo mayor que la cifra de la batería porque la carga no es perfectamente eficiente, así que trata el resultado como un límite inferior cercano al costo real.",
+    exampleEs: { inputs: { batteryKwh: 60, chargePercent: 80, electricityRate: 0.15 }, explanation: "60 kWh × 80% = 48 kWh añadidos; a $0,15/kWh esa carga cuesta $7,20." },
+    faqsEs: [
+      {
+        question: "¿Incluye esto las pérdidas de carga?",
+        answer: "No. La calculadora mide la energía entregada a la batería, pero la carga no es perfectamente eficiente — parte de la energía se pierde como calor en el cargador, los cables y la batería, típicamente alrededor del 10 al 15 por ciento. Eso significa que la electricidad realmente extraída de la toma, y facturada por tu compañía, es algo mayor que la cifra mostrada. Para aproximar el costo real, añade aproximadamente un 10 a 15 por ciento al resultado para un cargador doméstico de nivel 2.",
+      },
+      {
+        question: "¿Cómo encuentro la capacidad de la batería de mi coche?",
+        answer: "La capacidad de la batería aparece en las especificaciones de tu vehículo, normalmente como una cifra total o utilizable en kilovatios-hora. Las webs del fabricante, el manual del propietario y la pantalla de información del coche la indican. Ten en cuenta que la capacidad utilizable es algo menor que el tamaño nominal del paquete porque los fabricantes reservan un margen para proteger la salud de la batería, así que usa el número utilizable si se da para la estimación de costo de carga más precisa.",
+      },
+      {
+        question: "¿Por qué cargar al 80 por ciento en lugar del 100?",
+        answer: "Muchos fabricantes de eléctricos recomiendan la carga rutinaria hasta cerca del 80 por ciento porque el tramo final hasta lleno carga más lentamente y, con el tiempo, añade estrés que envejece la batería más rápido. Cargar al 80 por ciento a diario y reservar el 100 por ciento para viajes largos preserva la salud de la batería y reduce el tiempo de carga. Por eso la calculadora te deja introducir un porcentaje objetivo en lugar de asumir una carga completa en cada sesión.",
+      },
+      {
+        question: "¿Cómo se compara la carga en casa con la carga rápida pública?",
+        answer: "Las tarifas eléctricas domésticas suelen ser mucho más bajas que los precios de los cargadores rápidos públicos, que incluyen primas por comodidad y velocidad. Una carga que cuesta unos pocos dólares en casa puede costar varias veces más en un cargador rápido. Introduce cada tarifa en esta calculadora para comparar directamente. Para la mayoría de los propietarios, cargar por la noche en casa con una tarifa estándar o de horas valle es con diferencia la forma más barata de mantener el coche cargado.",
+      },
+      {
+        question: "¿Puedo estimar el costo por milla a partir de esto?",
+        answer: "Sí. Divide el costo de carga entre las millas que esa carga añade. Si 48 kilovatios-hora cuestan $7,20 y te llevan unas 180 millas, eso es aproximadamente cuatro céntimos por milla, típicamente muy por debajo del costo de combustible de un coche de gasolina comparable. Conocer la eficiencia de tu vehículo en millas por kilovatio-hora te permite convertir cualquier carga de aquí en un costo de funcionamiento por milla para presupuestar y comparar.",
+      },
+    ],
   },
   {
     id: "water-footprint",
@@ -311,5 +471,37 @@ export const environmentWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard energy calculation",
+    slugEs: "calculadora-de-huella-hidrica",
+    titleEs: "Calculadora de Huella Hídrica",
+    shortDescriptionEs: "Estima el agua que usas en la ducha por semana y por año.",
+    seoTitleEs: "Calculadora de Huella Hídrica — Uso de Agua en la Ducha",
+    metaDescriptionEs: "Calculadora de huella hídrica gratuita. Introduce la duración de tu ducha, las duchas por semana y el caudal del cabezal para estimar el agua que usas semanal y anualmente en litros y galones.",
+    primaryKeywordEs: "calculadora de huella hidrica",
+    secondaryKeywordsEs: ["calculadora de uso de agua en la ducha", "calculadora de uso de agua", "calculadora de consumo de agua"],
+    formulaExplanationEs: "El uso de agua de una ducha equivale al tiempo que corre multiplicado por el caudal del cabezal en litros por minuto, dando litros por ducha. Multiplicar por cuántas duchas tomas cada semana da el consumo semanal, y multiplicar eso por 52 semanas lo escala a un año. Dividir los litros anuales entre 3,785 convierte la cifra en galones estadounidenses para lectores que miden el agua de esa forma.",
+    explanationEs: "Las duchas son uno de los mayores usos interiores de agua del hogar, y esta calculadora de huella hídrica convierte tres hábitos en una imagen clara de cuánto usas. Introduce la duración típica de tu ducha, cuántas duchas tomas cada semana y el caudal de tu cabezal, y presenta tu uso de agua semanal y anual tanto en litros como en galones.\n\nLa matemática es directa: el caudal por los minutos da el agua por ducha, y repetir eso a lo largo de tu rutina semanal y luego de un año completo revela un total que la mayoría de la gente subestima. Una ducha larga diaria con un cabezal de alto caudal puede consumir decenas de miles de litros al año, mientras que una ducha más corta con un cabezal eficiente usa una fracción de eso.\n\nVer la cifra anual hace concreta la conservación. Recortar unos minutos, ducharse algo menos a menudo o instalar un cabezal de bajo caudal reduce cada uno el total de forma medible, ahorrando tanto agua como la energía usada para calentarla. Hogares que enfrentan restricciones de agua, personas con suministro medido que quieren facturas más bajas y cualquiera que reduzca su impacto ambiental usan una calculadora de huella hídrica para identificar ahorros fáciles. Como el agua caliente de la ducha también conlleva un costo de energía y carbono, los litros que ahorras aquí repercuten en facturas más bajas y una huella global menor a lo largo del año.",
+    exampleEs: { inputs: { showerMinutes: 8, showersPerWeek: 7, flowRate: 9 }, explanation: "8 min × 7 duchas × 9 L/min = 504 L a la semana, unos 26.208 L (aproximadamente 6.925 galones) al año." },
+    faqsEs: [
+      {
+        question: "¿Cuál es un caudal típico de un cabezal de ducha?",
+        answer: "Los cabezales estándar tienen un caudal de alrededor de 9 a 12 litros por minuto, mientras que los modelos eficientes o de bajo caudal entregan unos 6 a 8 litros por minuto. En Estados Unidos, las normas federales limitan los cabezales nuevos a 2,5 galones, o aproximadamente 9,5 litros, por minuto. Comprueba el embalaje o el valor grabado de tu cabezal, o mídelo cronometrando cuánto tarda en llenar un recipiente de volumen conocido para una cifra precisa.",
+      },
+      {
+        question: "¿Cuánta agua puede ahorrar una ducha más corta?",
+        answer: "Como el uso escala directamente con el tiempo, cada minuto que recortas ahorra tu caudal en litros por ducha. A 9 litros por minuto, reducir una ducha diaria de ocho minutos a cinco ahorra 27 litros al día, casi 10.000 litros al año. Reducir la duración suele ser la palanca más fácil porque no necesita equipo nuevo, y el ahorro se acumula en cada ducha que tomas a lo largo del año.",
+      },
+      {
+        question: "¿Incluye esto el agua usada en otras partes del hogar?",
+        answer: "No. Esta calculadora cubre solo las duchas, que son un uso interior de agua importante pero no el único. Los inodoros, los grifos, la lavandería, el lavavajillas y cualquier uso de jardín o exterior añaden bastante más. Para estimar la huella completa de tu hogar, contabiliza esos por separado y súmalos a la cifra de la ducha de aquí. Las duchas son un punto de partida sensato porque son frecuentes, fáciles de medir y rápidas de recortar.",
+      },
+      {
+        question: "¿Por qué la calculadora muestra tanto litros como galones?",
+        answer: "Diferentes países miden el agua de forma distinta: la mayor parte del mundo usa litros, mientras que Estados Unidos comúnmente usa galones. Mostrar ambos te permite comparar tu uso con las pautas locales, las facturas de servicios o los objetivos de conservación sin importar qué unidad usen. La conversión aplicada es de 3,785 litros por galón estadounidense, así que la cifra en galones es simplemente los litros anuales divididos entre ese factor para una comparación directa.",
+      },
+      {
+        question: "¿El uso de agua de la ducha también afecta a la energía y al costo?",
+        answer: "Sí. La mayor parte del agua de la ducha se calienta, así que reducir el agua de la ducha también reduce el gas o la electricidad usados para calentarla, bajando tanto las facturas de agua como de energía. Calentar agua es uno de los mayores usos de energía en un hogar típico, lo que significa que los litros ahorrados aquí se traducen en dinero real y emisiones de carbono reducidas. Por eso ducharse de forma eficiente es uno de los pasos de conservación doméstica más rentables disponibles.",
+      },
+    ],
   },
 ];

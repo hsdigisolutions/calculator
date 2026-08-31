@@ -12,6 +12,38 @@ export const logisticsWave3Calculators: CalculatorDefinition[] = [
     metaDescription: "Free dimensional weight calculator. Enter package length, width, height, and a DIM divisor to find volumetric weight and the billable weight carriers charge.",
     primaryKeyword: "dimensional weight calculator",
     secondaryKeywords: ["dim weight calculator", "volumetric weight calculator", "billable weight calculator"],
+    slugEs: "calculadora-de-peso-volumetrico",
+    titleEs: "Calculadora de Peso Volumétrico",
+    shortDescriptionEs: "Calcula el peso volumétrico y facturable de envíos.",
+    seoTitleEs: "Calculadora de Peso Volumétrico — Peso DIM y Facturable",
+    metaDescriptionEs: "Calculadora de peso volumétrico gratuita. Introduce el largo, ancho y alto del paquete y un divisor DIM para hallar el peso volumétrico y el peso facturable que cobran los transportistas.",
+    primaryKeywordEs: "calculadora de peso volumetrico",
+    secondaryKeywordsEs: ["calculadora de peso dim", "peso volumetrico envios", "calculadora de peso facturable"],
+    formulaExplanationEs: "El peso volumétrico cobra el espacio que ocupa un paquete en lugar de su masa, por eso multiplicar las tres dimensiones da el volumen en pulgadas cúbicas y dividir por el divisor DIM del transportista convierte ese volumen en un peso equivalente. La fórmula funciona porque un camión o un avión llena su cubicaje mucho antes de alcanzar su límite de peso, así que los transportistas facturan el mayor entre el peso real y el volumétrico para recuperar el valor del espacio que consume una caja ligera y voluminosa.",
+    explanationEs: "El peso volumétrico, a menudo llamado peso DIM, es la forma en que los transportistas modernos cobran por el espacio que ocupa un paquete en lugar de solo por lo que pesa. Esta calculadora de peso volumétrico multiplica el largo, el ancho y el alto, divide por el divisor DIM del transportista y devuelve el peso volumétrico junto con el peso facturable que realmente pagarás. Como los camiones y los aviones se quedan sin espacio antes que sin capacidad de carga, una caja grande pero ligera puede costar mucho más de enviar de lo que sugiere su peso en la báscula.\n\nEntender el peso DIM es importante para cualquiera que envíe productos, desde vendedores de comercio electrónico que fijan precios de cumplimiento hasta equipos de almacén que negocian contratos con transportistas. Introduce tus dimensiones en pulgadas y el divisor que usa tu transportista, y la herramienta muestra si el paquete se factura por peso real o volumétrico, que siempre es el mayor de los dos.\n\nEl cálculo funciona porque el divisor DIM codifica una densidad supuesta: un divisor de 139 trata cada 139 pulgadas cúbicas como una libra. Añade tu peso real y la calculadora elige la cifra facturable automáticamente, para que puedas ajustar el tamaño de las cajas, reducir el relleno y prever los costes de flete antes de que se imprima una etiqueta.",
+    exampleEs: { inputs: { length: 12, width: 12, height: 12, divisor: 139 }, explanation: "12 × 12 × 12 = 1.728 in³; 1.728 ÷ 139 ≈ 12,43 lb de peso volumétrico." },
+    faqsEs: [
+      {
+        question: "¿Qué es un divisor DIM y cuál debo usar?",
+        answer: "Un divisor DIM convierte el tamaño cúbico en un peso asumiendo una densidad estándar. Los divisores nacionales comunes son 139 para pulgadas y libras, aunque los transportistas usan 138, 166 o equivalentes métricos según el servicio y el contrato. Confirma siempre el divisor exacto en tu acuerdo, porque un divisor más pequeño produce un peso volumétrico mayor y un cargo de envío más alto para la misma caja.",
+      },
+      {
+        question: "¿Cómo se decide el peso facturable?",
+        answer: "El peso facturable es simplemente el mayor entre el peso real en báscula de un paquete y su peso volumétrico. Los transportistas comparan los dos y cobran el que sea más alto, así que una caja pesada y compacta se factura por peso real mientras que una caja ligera y voluminosa se factura por peso volumétrico. Introducir tu peso real permite que esta calculadora señale qué cifra aplica y evita sorpresas en la factura.",
+      },
+      {
+        question: "¿Por qué cobran los transportistas por peso volumétrico?",
+        answer: "Los vehículos de reparto y los aviones llenan su espacio cúbico disponible mucho antes de alcanzar su carga máxima. Si los transportistas facturaran solo por masa, un remolque lleno de cajas ligeras y sobredimensionadas ganaría mucho menos de lo que vale su capacidad. El peso volumétrico recupera el valor de ese espacio ocupado y anima a los expedidores a usar embalajes del tamaño adecuado y reducir el volumen desperdiciado en toda la red.",
+      },
+      {
+        question: "¿Puedo reducir mi peso volumétrico?",
+        answer: "Sí. Como el peso volumétrico depende solo del tamaño de la caja, reducir cualquier dimensión lo baja. Usa embalajes que se ajusten bien al producto, elimina el relleno excesivo y evita cajas sobredimensionadas para artículos pequeños. Incluso recortar un par de pulgadas del lado más largo puede bajar un paquete a un tramo de facturación inferior, así que probar cajas más ajustadas es una de las formas más rápidas de reducir el gasto de envío.",
+      },
+      {
+        question: "¿El peso volumétrico también aplica a la carga y los palés?",
+        answer: "Los transportistas de paquetería dependen sobre todo del peso volumétrico, pero el flete de carga fraccionada usa un concepto relacionado llamado densidad para asignar la clase de flete. Los palés y los envíos grandes se tarifan por peso, dimensiones y la eficiencia con la que llenan el espacio. El principio es el mismo: el espacio cuesta dinero. Para envíos en palé, combinar esta herramienta con una calculadora de densidad de flete da una imagen más completa.",
+      },
+    ],
     fields: [
       { id: "length", label: "Length", type: "number", unit: "in", required: true, span: 1, min: 0 },
       { id: "width", label: "Width", type: "number", unit: "in", required: true, span: 1, min: 0 },
@@ -65,6 +97,38 @@ export const logisticsWave3Calculators: CalculatorDefinition[] = [
     metaDescription: "Free CBM calculator. Enter carton length, width, height, and quantity in centimetres to find total cubic metres and the volumetric weight used for sea and air freight.",
     primaryKeyword: "cbm calculator",
     secondaryKeywords: ["cubic meter calculator", "volumetric weight calculator", "shipping volume calculator"],
+    slugEs: "calculadora-de-cbm",
+    titleEs: "Calculadora de CBM",
+    shortDescriptionEs: "Calcula metros cúbicos y peso volumétrico.",
+    seoTitleEs: "Calculadora de CBM — Metros Cúbicos y Peso Volumétrico",
+    metaDescriptionEs: "Calculadora de CBM gratuita. Introduce el largo, ancho, alto y cantidad de cartones en centímetros para hallar los metros cúbicos totales y el peso volumétrico usado en flete marítimo y aéreo.",
+    primaryKeywordEs: "calculadora de cbm",
+    secondaryKeywordsEs: ["calculadora de metros cubicos", "calculadora de peso volumetrico", "calculadora de volumen de envio"],
+    formulaExplanationEs: "El CBM mide los metros cúbicos que ocupa un envío, así que multiplicar el largo, el ancho y el alto en centímetros da centímetros cúbicos, y dividir por un millón los convierte en metros cúbicos. Multiplicar por la cantidad suma todos los cartones idénticos. La fórmula funciona porque un metro cúbico equivale a un millón de centímetros cúbicos y el flete se tarifa según el espacio consumido. El peso volumétrico aplica el factor estándar de flete aéreo de 167 kilogramos por metro cúbico.",
+    explanationEs: "El CBM, abreviatura de metro cúbico, es la unidad estándar para medir cuánto espacio ocupa un envío, y determina el precio del flete marítimo, el flete aéreo y el almacenamiento por igual. Esta calculadora de CBM toma el largo, ancho y alto del cartón en centímetros, los multiplica, divide por un millón para convertir a metros cúbicos y multiplica por el número de cartones idénticos para dar el volumen total de tu envío.\n\nConocer el CBM es importante porque las navieras y los transitarios a menudo facturan por volumen en lugar de por peso, sobre todo para mercancías ligeras pero voluminosas. Una vez que conoces tus metros cúbicos totales, puedes comparar cotizaciones, decidir entre carga fraccionada de contenedor y contenedor completo, y estimar cuántas cajas caben dentro de un contenedor. La herramienta también devuelve el peso volumétrico, aplicando el factor de flete aéreo ampliamente usado de 167 kilogramos por metro cúbico.\n\nLa fórmula funciona porque un metro cúbico es exactamente un millón de centímetros cúbicos, así que la división simplemente reescala tus medidas a la unidad que cotizan los transportistas. Importadores, exportadores y planificadores de almacén confían en cifras de CBM precisas para reservar la cantidad correcta de espacio, negociar tarifas justas y evitar pagar por aire vacío o descubrir demasiado tarde que su carga no cabe en el contenedor reservado.",
+    exampleEs: { inputs: { length: 100, width: 100, height: 100, quantity: 1 }, explanation: "100 × 100 × 100 = 1.000.000 cm³; ÷ 1.000.000 × 1 = 1 CBM." },
+    faqsEs: [
+      {
+        question: "¿Qué unidades debo introducir para un cálculo de CBM?",
+        answer: "Introduce el largo, ancho y alto en centímetros y la calculadora convierte el resultado a metros cúbicos dividiendo por un millón. Si tus dimensiones están en metros, multiplícalas por 100 primero, o si están en pulgadas, multiplícalas por 2,54 para obtener centímetros. Mantener cada medida en la misma unidad es esencial, porque mezclar centímetros y metros desviará el volumen en órdenes de magnitud.",
+      },
+      {
+        question: "¿Qué es el peso volumétrico y por qué aparece?",
+        answer: "El peso volumétrico expresa cuánto pesaría el tamaño de un envío a una densidad estándar, permitiendo que los transportistas cobren de forma justa la carga voluminosa y ligera. Para el flete aéreo el factor común es 167 kilogramos por metro cúbico, así que esta calculadora multiplica tu CBM por 167. Los transportistas facturan entonces el mayor entre el peso volumétrico y el real, por eso un envío grande pero ligero puede costar más de lo que sugiere su peso.",
+      },
+      {
+        question: "¿Cómo uso el CBM para elegir entre LCL y FCL?",
+        answer: "El envío de carga fraccionada de contenedor se tarifa por metro cúbico y conviene para volúmenes pequeños, mientras que un contenedor completo es una tarifa plana por toda la caja. A medida que tu CBM total se acerca a la capacidad utilizable de un contenedor, un contenedor completo suele resultar más barato por unidad. Calcular tu CBM exacto primero te permite comparar el coste por metro cúbico del LCL con la tarifa del contenedor completo.",
+      },
+      {
+        question: "¿Cuántos CBM caben en un contenedor de envío?",
+        answer: "Un contenedor estándar de 20 pies alberga aproximadamente 33 metros cúbicos de espacio utilizable, uno de 40 pies unos 67, y uno de 40 pies high-cube unos 76. La capacidad real es menor porque las cajas rara vez se apilan sin huecos, así que los planificadores suelen cargar entre el 80 y el 90 por ciento de la cifra teórica. Conocer el CBM de tu envío te permite estimar cuántos contenedores necesitas antes de reservar.",
+      },
+      {
+        question: "¿Debo incluir los palés en mi medición de CBM?",
+        answer: "Sí, cuando la mercancía está paletizada debes medir el palé cargado completo, incluida la altura del propio palé y cualquier saliente, porque ese es el espacio que el envío ocupa realmente. Medir solo los cartones subestima el volumen y puede llevar a reservar poco espacio de contenedor. Para cartones sueltos, mide cada cartón y multiplica por la cantidad, que es exactamente lo que hace esta calculadora con su campo de cantidad.",
+      },
+    ],
     fields: [
       { id: "length", label: "Length", type: "number", unit: "cm", required: true, span: 1, min: 0 },
       { id: "width", label: "Width", type: "number", unit: "cm", required: true, span: 1, min: 0 },
@@ -117,6 +181,38 @@ export const logisticsWave3Calculators: CalculatorDefinition[] = [
     metaDescription: "Free pallet count calculator. Enter total units, units per layer, and layers per pallet to find how many pallets your shipment needs and the units each pallet holds.",
     primaryKeyword: "pallet count calculator",
     secondaryKeywords: ["pallets needed calculator", "units per pallet calculator", "shipping pallet calculator"],
+    slugEs: "calculadora-de-cantidad-de-palets",
+    titleEs: "Calculadora de Cantidad de Palets",
+    shortDescriptionEs: "Calcula cuántos palets necesita un pedido.",
+    seoTitleEs: "Calculadora de Cantidad de Palets — Palets Necesarios",
+    metaDescriptionEs: "Calculadora de cantidad de palets gratuita. Introduce las unidades totales, unidades por capa y capas por palet para hallar cuántos palets necesita tu envío y las unidades que lleva cada uno.",
+    primaryKeywordEs: "calculadora de cantidad de palets",
+    secondaryKeywordsEs: ["calculadora de palets necesarios", "unidades por palet", "calculadora de palets de envio"],
+    formulaExplanationEs: "Cada palet lleva las unidades por capa multiplicadas por las capas por palet, así que ese producto es la capacidad de un palet completo. Dividir las unidades totales por esa capacidad da el número de palets, y redondear hacia arriba con la función techo tiene en cuenta cualquier palet parcial, ya que un sobrante de incluso una sola unidad todavía requiere un palet entero. La fórmula funciona porque los palets no se pueden enviar en fracciones.",
+    explanationEs: "Saber exactamente cuántos palets requiere un pedido es esencial para reservar transporte, cotizar flete y planificar el espacio de almacén. Esta calculadora de cantidad de palets multiplica las unidades por capa por el número de capas para hallar cuántas unidades caben en un palet, luego divide el total de unidades por esa cifra y redondea hacia arriba para dar el número de palets que necesitas.\n\nEl redondeo importa: como no puedes enviar una fracción de palet, cualquier resto empuja el total al siguiente palet completo. Un envío de 500 cajas que llena palets de 50 necesita exactamente 10 palets, pero 501 cajas necesitarían 11, con el último palet casi vacío. Verlo con claridad te ayuda a ajustar las cantidades de pedido para llenar palets de forma eficiente y evitar pagar por mover palets casi vacíos.\n\nEl cálculo funciona porque la capacidad de un palet es simplemente su huella multiplicada por su altura apilada en cajas, y la función techo refleja la realidad física de que los palets parciales todavía ocupan una posición completa de palet en un camión. Los gerentes de almacén, expedidores y compradores usan los recuentos de palets para reservar el número correcto de plazas de camión, estimar el tiempo de carga y confirmar que un envío de camión completo o fraccionado cabrá físicamente antes de despacharlo.",
+    exampleEs: { inputs: { totalUnits: 500, unitsPerLayer: 10, layersPerPallet: 5 }, explanation: "10 × 5 = 50 unidades por palet; 500 ÷ 50 = 10 palets." },
+    faqsEs: [
+      {
+        question: "¿Cómo hallo las unidades por capa y las capas por palet?",
+        answer: "Las unidades por capa son cuántas cajas o cartones caben uno al lado del otro en un solo nivel del palet, determinado por la huella de la caja y el tamaño del palet. Las capas por palet son cuántos de esos niveles puedes apilar con seguridad hasta tu altura máxima de carga. Las especificaciones de tu caja o un diagrama de patrón de paletización suelen listar ambas cifras, y el personal de almacén puede confirmarlas.",
+      },
+      {
+        question: "¿Por qué la calculadora redondea hacia arriba a un palet entero?",
+        answer: "Porque los palets se envían como unidades completas, no fracciones. Si tus unidades totales no se dividen de forma exacta en palets completos, el sobrante todavía ocupa una posición entera de palet en el camión. La calculadora aplica una función techo para que un resto de incluso una caja añada otro palet. Esto refleja cómo cobran los transportistas y cómo funciona la carga, dándote un recuento preciso para reservar transporte.",
+      },
+      {
+        question: "¿Qué es un palet parcial y cuesta más?",
+        answer: "Un palet parcial lleva menos unidades que uno completo pero aún ocupa un espacio entero de palet en un remolque y a menudo genera el mismo cargo de manipulación. Enviar muchos palets parciales desperdicia dinero y capacidad de camión. Si tu pedido deja un palet casi vacío, considera aumentar la cantidad hasta un palet completo o consolidar con otro envío para mejorar la eficiencia y reducir el coste de flete por unidad.",
+      },
+      {
+        question: "¿Cuántos palets caben en un camión?",
+        answer: "Un remolque seco estándar de 53 pies suele llevar 26 palets estándar cargados en el suelo en una sola capa, o hasta 52 si se pueden apilar en dos alturas. Los camiones y contenedores más pequeños llevan menos. Una vez que esta calculadora te dice cuántos palets necesita tu pedido, puedes compararlo con la capacidad de un camión para decidir entre un camión completo y un envío fraccionado.",
+      },
+      {
+        question: "¿El peso del palet afecta al recuento?",
+        answer: "Esta calculadora cuenta palets por capacidad de unidades, pero el peso puede prevalecer en la práctica. Si apilar hasta el número completo de capas superara el límite de peso seguro de un palet o los límites de eje de un camión, debes reducir capas, lo que aumenta el recuento de palets. Comprueba siempre tanto el recuento por volumen aquí como el peso por palet, y usa el que produzca más palets para mantenerte dentro de límites seguros y legales.",
+      },
+    ],
     fields: [
       { id: "totalUnits", label: "Total units", type: "number", unit: "units", required: true, span: 2, min: 0 },
       { id: "unitsPerLayer", label: "Units per layer", type: "number", unit: "units", required: true, span: 1, min: 0 },
@@ -168,6 +264,38 @@ export const logisticsWave3Calculators: CalculatorDefinition[] = [
     metaDescription: "Free freight density calculator. Enter weight and dimensions in inches to find density in pounds per cubic foot, the figure used to assign LTL freight class.",
     primaryKeyword: "freight density calculator",
     secondaryKeywords: ["freight class calculator", "pounds per cubic foot calculator", "ltl density calculator"],
+    slugEs: "calculadora-de-densidad-de-flete",
+    titleEs: "Calculadora de Densidad de Flete",
+    shortDescriptionEs: "Calcula la densidad de flete en libras por pie cúbico.",
+    seoTitleEs: "Calculadora de Densidad de Flete — Libras por Pie Cúbico",
+    metaDescriptionEs: "Calculadora de densidad de flete gratuita. Introduce el peso y las dimensiones en pulgadas para hallar la densidad en libras por pie cúbico, la cifra usada para asignar la clase de flete LTL.",
+    primaryKeywordEs: "calculadora de densidad de flete",
+    secondaryKeywordsEs: ["calculadora de clase de flete", "libras por pie cubico", "calculadora de densidad ltl"],
+    formulaExplanationEs: "La densidad de flete es el peso dividido por el volumen en pies cúbicos. Multiplicar las tres dimensiones en pulgadas da pulgadas cúbicas, y dividir por 1.728 convierte a pies cúbicos porque un pie cúbico contiene doce pulgadas al cubo. Dividir el peso por ese volumen produce libras por pie cúbico. La fórmula funciona porque la densidad describe cuánta masa llena un espacio dado, y los transportistas de carga fraccionada la usan para asignar la clase de flete que fija tu tarifa.",
+    explanationEs: "La densidad de flete mide cuánto pesa tu envío en relación con el espacio que ocupa, y es el número más importante en el mundo de la carga fraccionada porque determina en gran medida tu clase de flete y, por tanto, tu tarifa. Esta calculadora de densidad de flete multiplica el largo, ancho y alto de tu envío en pulgadas, lo convierte a pies cúbicos y divide el peso por el volumen para dar la densidad en libras por pie cúbico.\n\nLa densidad importa porque los transportistas LTL clasifican el flete desde la clase 50 para mercancías densas y fáciles de manipular hasta la clase 500 para artículos ligeros y voluminosos. Una densidad alta significa más peso en menos espacio, lo que suele dar una clase más baja y económica, mientras que una densidad baja indica una carga voluminosa que cuesta más mover. Acertar con la cifra te ayuda a cotizar con precisión y evitar cargos costosos por reclasificación tras la recogida.\n\nEl cálculo funciona porque dividir el peso por el volumen da la densidad sobre la que se construyen las tablas de clasificación, y dividir las pulgadas cúbicas por 1.728 simplemente convierte a los pies cúbicos que usan esas tablas. Expedidores, agentes de flete y equipos de almacén calculan la densidad antes de reservar para predecir la clase de flete, comparar cotizaciones de forma justa y embalar la mercancía para alcanzar una clase más favorable cuando sea posible.",
+    exampleEs: { inputs: { weight: 30, length: 12, width: 12, height: 12 }, explanation: "12 × 12 × 12 ÷ 1.728 = 1 ft³; 30 ÷ 1 = 30 lb/ft³." },
+    faqsEs: [
+      {
+        question: "¿Por qué se mide la densidad de flete en libras por pie cúbico?",
+        answer: "Las libras por pie cúbico son la unidad estándar que usan las tablas de clasificación LTL para mapear un envío a una clase de flete. Captura el compromiso que importa a los transportistas: mercancía más pesada en menos espacio es eficiente de transportar, mientras que el flete ligero y voluminoso desperdicia capacidad del remolque. Expresar la densidad así permite aplicar una escala consistente a cada mercancía, de modo que tu cifra calculada se traduce directamente en una clase esperada.",
+      },
+      {
+        question: "¿Cómo afecta la densidad a la clase de flete y al coste?",
+        answer: "La clase de flete va de 50 a 500, y la densidad es el principal factor para muchas mercancías. Una densidad más alta suele significar un número de clase más bajo y una tarifa menor, porque el flete denso usa el espacio del remolque de forma eficiente. Una densidad más baja empuja el número de clase y el coste hacia arriba. Calcular la densidad antes de enviar te permite anticipar la clase, presupuestar con precisión y detectar oportunidades de reembalaje.",
+      },
+      {
+        question: "¿Debo medir el embalaje o el producto desnudo?",
+        answer: "Mide siempre el envío exactamente como viajará, incluidos palés, embalaje y cualquier saliente. Los transportistas tarifan el espacio que el flete ocupa realmente, así que el embalaje cuenta. Mide hasta los puntos extremos de largo, ancho y alto, y pesa la carga embalada completa. Usar las dimensiones del producto desnudo subestimaría el volumen, inflaría la densidad y arriesgaría una reclasificación y un cargo ajustado cuando el transportista vuelva a medir.",
+      },
+      {
+        question: "¿Y si mi envío tiene varias piezas?",
+        answer: "Para un envío formado por varias piezas, suma los volúmenes individuales para obtener los pies cúbicos totales y suma los pesos individuales para obtener el peso total, luego divide el peso total por el volumen total. Esto da la densidad global que los transportistas usan para un envío de varias piezas. Calcular cada pieza por separado y promediar las densidades daría la respuesta equivocada, así que trabaja siempre desde los totales combinados.",
+      },
+      {
+        question: "¿Cómo convierto las dimensiones a pies cúbicos?",
+        answer: "Multiplica el largo, ancho y alto en pulgadas para obtener pulgadas cúbicas, luego divide por 1.728, ya que un pie cúbico equivale a doce pulgadas al cubo. Esta calculadora hace la conversión por ti y también muestra el resultado en pies cúbicos. Si tus medidas ya están en pies, simplemente multiplícalas directamente. Mantener las unidades consistentes es crítico, porque un error de unidades distorsionará la densidad y la clase de flete resultante.",
+      },
+    ],
     fields: [
       { id: "weight", label: "Weight", type: "number", unit: "lb", required: true, span: 2, min: 0 },
       { id: "length", label: "Length", type: "number", unit: "in", required: true, span: 1, min: 0 },
@@ -220,6 +348,38 @@ export const logisticsWave3Calculators: CalculatorDefinition[] = [
     metaDescription: "Free landed cost calculator. Add product cost, freight, duty percentage, and insurance to find the true total landed cost of imported goods before you price them.",
     primaryKeyword: "landed cost calculator",
     secondaryKeywords: ["total landed cost calculator", "import cost calculator", "duty and freight calculator"],
+    slugEs: "calculadora-de-costo-total-de-importacion",
+    titleEs: "Calculadora de Costo Total de Importación",
+    shortDescriptionEs: "Suma el costo real de la mercancía importada.",
+    seoTitleEs: "Calculadora de Costo Total de Importación — Producto, Flete, Aranceles y Seguro",
+    metaDescriptionEs: "Calculadora de costo total de importación gratuita. Suma el costo del producto, el flete, el porcentaje de arancel y el seguro para hallar el costo total real de la mercancía importada antes de fijar su precio.",
+    primaryKeywordEs: "calculadora de costo total de importacion",
+    secondaryKeywordsEs: ["calculadora de costo en destino", "calculadora de costo de importacion", "calculadora de aranceles y flete"],
+    formulaExplanationEs: "El costo total de importación suma cada gasto de llevar la mercancía hasta tu puerta: el producto en sí, el flete para moverlo, el arancel adeudado sobre su valor y el seguro contra pérdidas. El arancel es el costo del producto multiplicado por el porcentaje de la tasa arancelaria. La fórmula funciona porque cada componente es una salida de efectivo real y separada, y sumarlos revela el verdadero costo unitario que debes cubrir antes de cualquier margen, en lugar del precio de etiqueta engañosamente bajo de la mercancía sola.",
+    explanationEs: "El costo total de importación es el precio real y completo de llevar la mercancía importada desde un proveedor hasta tu almacén, y casi siempre es más alto que el precio del producto solo. Esta calculadora de costo total de importación suma el costo del producto, el flete, el arancel aplicable y el seguro para revelar el costo real por envío, para que puedas fijar el precio de tu mercancía con un beneficio genuino en lugar de un margen que se evapora silenciosamente cuando llegan las tasas de importación.\n\nPor qué importa: muchos importadores fijan precios de venta frente a la cotización de fábrica y se sorprenden cuando el flete, el arancel aduanero y el seguro erosionan su beneficio esperado. Al calcular el costo total de importación por adelantado, ves el panorama completo antes de comprometerte con un pedido, puedes comparar proveedores por costo total en lugar de precio de titular, y puedes decidir si un envío merece la pena importar.\n\nEl cálculo funciona porque cada elemento es un costo distinto e inevitable de la importación, y el arancel en particular se cobra como un porcentaje del valor de la mercancía, que la calculadora aplica por ti. Los gerentes de abastecimiento, vendedores de comercio electrónico y pequeños importadores confían en el costo total de importación para negociar con proveedores, elegir métodos de envío y fijar precios que sobrevivan al contacto con los costos reales del comercio internacional.",
+    exampleEs: { inputs: { productCost: 1000, freight: 200, dutyPercent: 5, insurance: 50 }, explanation: "Arancel = 1.000 × 5% = 50; total = 1.000 + 200 + 50 + 50 = 1.300 $." },
+    faqsEs: [
+      {
+        question: "¿Qué costos componen el costo total de importación?",
+        answer: "El costo total de importación combina el precio de compra del producto, el flete para transportarlo, el arancel aduanero adeudado sobre su valor y el seguro que cubre la mercancía en tránsito. Esta calculadora suma los cuatro en un total. Según tus términos comerciales también puedes enfrentar tasas de corretaje, cargos portuarios e impuestos; si aplican, inclúyelos en los campos de flete o seguro para que el total refleje cada costo real.",
+      },
+      {
+        question: "¿Cómo se calcula el importe del arancel?",
+        answer: "El arancel se cobra como un porcentaje del valor declarado de la mercancía, así que la calculadora multiplica el costo de tu producto por la tasa arancelaria que introduces. Por ejemplo, un arancel del 5 por ciento sobre 1.000 dólares de mercancía son 50 dólares. La tasa correcta depende de la clasificación arancelaria del producto y su país de origen, que puedes consultar en el arancel de tu país o confirmar con un agente de aduanas.",
+      },
+      {
+        question: "¿Por qué debo calcular el costo total de importación antes de fijar precios?",
+        answer: "El precio de fábrica es solo una parte de lo que pagas. El flete, el arancel y el seguro pueden añadir un porcentaje significativo encima, y fijar el precio solo frente al costo del producto puede convertir un beneficio aparente en una pérdida. Calcular el costo total de importación primero te da el verdadero costo por unidad, para que puedas fijar un precio de venta que cubra cada gasto y aún entregue el margen que tu negocio realmente necesita.",
+      },
+      {
+        question: "¿El costo total de importación incluye el envío al cliente?",
+        answer: "Normalmente no. El costo total de importación cubre llevar la mercancía desde el proveedor hasta tu almacén o puerto de entrada, incluyendo el flete de entrada, el arancel y el seguro. El costo de enviar un pedido después a tu cliente final es un gasto de salida separado que contabilizas en la etapa de venta. Mantener separados el costo de importación de entrada y el cumplimiento de salida da una visión más clara de ambos.",
+      },
+      {
+        question: "¿Cómo puedo reducir mi costo total de importación?",
+        answer: "Puedes reducir el costo total de importación negociando mejores tarifas de producto o flete, consolidando envíos para repartir el flete fijo entre más unidades, eligiendo modos de envío más lentos pero baratos, o abasteciéndote de países con tasas arancelarias más bajas o acuerdos comerciales. Clasificar correctamente la mercancía para reclamar el arancel legal más bajo también ayuda. Modela cada opción en esta calculadora para ver cuál ahorra más antes de comprometerte.",
+      },
+    ],
     fields: [
       { id: "productCost", label: "Product cost", type: "number", unit: "$", required: true, span: 1, min: 0 },
       { id: "freight", label: "Freight cost", type: "number", unit: "$", required: false, span: 1, min: 0 },
@@ -272,6 +432,38 @@ export const logisticsWave3Calculators: CalculatorDefinition[] = [
     metaDescription: "Free container loading calculator. Enter your cargo volume in CBM and pick a container type to find how many containers you need and how full each one will be.",
     primaryKeyword: "container loading calculator",
     secondaryKeywords: ["container capacity calculator", "how many containers calculator", "cbm to container calculator"],
+    slugEs: "calculadora-de-carga-de-contenedores",
+    titleEs: "Calculadora de Carga de Contenedores",
+    shortDescriptionEs: "Halla cuántos contenedores necesita tu carga.",
+    seoTitleEs: "Calculadora de Carga de Contenedores — Contenedores Necesarios y Utilización",
+    metaDescriptionEs: "Calculadora de carga de contenedores gratuita. Introduce el volumen de tu carga en CBM y elige un tipo de contenedor para hallar cuántos contenedores necesitas y cuán lleno estará cada uno.",
+    primaryKeywordEs: "calculadora de carga de contenedores",
+    secondaryKeywordsEs: ["calculadora de capacidad de contenedor", "cuantos contenedores necesito", "calculadora de cbm a contenedor"],
+    formulaExplanationEs: "Cada tipo de contenedor tiene una capacidad utilizable en metros cúbicos: unos 33 para uno de 20 pies, 67 para uno de 40 pies y 76 para uno de 40 pies high-cube. Dividir el volumen de tu carga por esa capacidad y redondear hacia arriba da el número de contenedores, ya que una fracción de contenedor todavía necesita uno entero. La utilización es el volumen de la carga dividido por la capacidad total reservada, mostrando con qué eficiencia llenas el espacio que pagas.",
+    explanationEs: "Reservar el número correcto de contenedores de envío es un equilibrio entre no pagar por espacio vacío y no dejar carga atrás. Esta calculadora de carga de contenedores toma el volumen total de tu carga en metros cúbicos, lo compara con la capacidad utilizable del tipo de contenedor que selecciones, y devuelve cuántos contenedores necesitas junto con cuán llenos estarán en promedio.\n\nEsto importa porque los contenedores se reservan como unidades completas a una tarifa plana, así que incluso un pequeño exceso obliga a un segundo contenedor que puede quedar casi vacío. Ver el porcentaje de utilización te ayuda a decidir si recortar tu pedido, consolidar envíos o subir a un tipo de contenedor más grande como un high-cube para meter todo en menos cajas y reducir tu costo por unidad enviada.\n\nEl cálculo funciona porque cada contenedor tiene un volumen utilizable bien establecido, y dividir el CBM de la carga por esa capacidad y luego redondear hacia arriba refleja la realidad física de que los contenedores parciales todavía cuentan como uno. Ten en cuenta que estas cifras suponen que el volumen es el factor limitante; la carga densa puede alcanzar antes el límite de peso de un contenedor. Importadores, exportadores y transitarios usan las estimaciones de carga de contenedores para reservar capacidad con precisión, comparar opciones de envío y confirmar que un envío cabrá antes de comprometerse con una tarifa.",
+    exampleEs: { inputs: { cargoCbm: 100, containerType: "40ft" }, explanation: "100 ÷ 67 = 1,49, redondeado a 2 contenedores; 100 ÷ 134 ≈ 74,6% de utilización." },
+    faqsEs: [
+      {
+        question: "¿Cuánta carga cabe en cada tipo de contenedor?",
+        answer: "Esta calculadora usa capacidades utilizables de unos 33 metros cúbicos para un contenedor estándar de 20 pies, 67 para uno estándar de 40 pies y 76 para uno de 40 pies high-cube. Estas son cifras prácticas de carga en lugar del volumen interno máximo, ya que las cajas nunca se apilan a la perfección. Elegir el tipo correcto para el volumen de tu carga ayuda a minimizar el número de contenedores y el espacio vacío que acabas pagando.",
+      },
+      {
+        question: "¿Por qué redondear a un contenedor entero?",
+        answer: "Los contenedores se reservan y tarifan como unidades completas, así que cualquier carga que exceda la capacidad de un contenedor requiere un segundo, aunque solo lo llene a medias. La calculadora redondea hacia arriba para reflejar esto, dando el número real que debes reservar. La cifra de utilización muestra entonces cuán llenos están esos contenedores, que es tu señal para considerar consolidar o cambiar de tamaño y evitar enviar una caja casi vacía.",
+      },
+      {
+        question: "¿Qué me dice el porcentaje de utilización?",
+        answer: "La utilización es el volumen de tu carga dividido por la capacidad total de los contenedores que reservas, mostrado como porcentaje. Una cifra alta significa que usas el espacio de forma eficiente, mientras que una cifra baja advierte que pagas por mucho espacio vacío. Si la utilización es baja, podrías reducir tu pedido, añadir más mercancía o elegir un tipo de contenedor que empaquete tu carga en menos cajas más llenas.",
+      },
+      {
+        question: "¿Esto tiene en cuenta cómo se empaquetan realmente los artículos?",
+        answer: "La calculadora estima según el volumen total, que supone que la carga llena el contenedor de forma eficiente. En realidad, las formas de las cajas, las reglas de apilamiento y los artículos irregulares dejan huecos, así que la capacidad real suele ser del 80 al 90 por ciento de la cifra teórica. Trata el resultado como una estimación de planificación e incluye un margen, sobre todo para mercancías de forma extraña que no se apilan bien.",
+      },
+      {
+        question: "¿Y si mi carga es pesada en lugar de voluminosa?",
+        answer: "Esta herramienta supone que el volumen limita tu carga, pero la carga densa puede alcanzar la carga útil máxima de un contenedor antes de llenar el espacio. Cada contenedor tiene un límite de peso, a menudo alrededor de 28 toneladas para uno de 20 pies y algo más para uno de 40 pies. Si tu mercancía es pesada, comprueba también el peso total frente a ese límite, y usa la restricción que requiera más contenedores para mantenerte legal y seguro.",
+      },
+    ],
     fields: [
       { id: "cargoCbm", label: "Cargo volume", type: "number", unit: "m³", required: true, span: 1, min: 0 },
       {

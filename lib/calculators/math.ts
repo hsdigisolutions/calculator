@@ -40,6 +40,29 @@ export const mathCalculators: CalculatorDefinition[] = [
     relatedCalculators: ["percentage-increase-calculator", "percentage-difference-calculator", "average-calculator"],
     status: "active",
     lastReviewed: "2026-08-20",
+    slugEs: "calculadora-de-porcentaje",
+    titleEs: "Calculadora de Porcentaje",
+    shortDescriptionEs: "Encuentra al instante cuánto es el X% de un número.",
+    seoTitleEs: "Calculadora de Porcentaje — Calcular Porcentajes en Línea Gratis",
+    metaDescriptionEs:
+      "Calculadora de porcentaje gratuita. Encuentra rápidamente cuánto es el X% de cualquier número, con la fórmula y un ejemplo resuelto. Rápida, precisa y compatible con móviles.",
+    primaryKeywordEs: "calculadora de porcentaje",
+    secondaryKeywordsEs: ["calculadora de porcentajes", "cuánto es x por ciento de y", "calcular porcentaje"],
+    formulaExplanationEs:
+      "Dividir el porcentaje entre 100 restaura su verdadero significado como fracción de cien, convirtiendo el 20% en el decimal 0,2. Multiplicar ese decimal por el valor toma exactamente esa fracción del total, de modo que 0,2 por 150 da 30. Las dos operaciones reflejan directamente la definición de un porcentaje: expresar la parte por cien y luego aplicarla a la cantidad base real que estás midiendo.",
+    explanationEs:
+      "Un porcentaje expresa una cantidad como una porción de cien, razón por la cual la palabra significa literalmente 'por ciento'. Cuando encuentras un porcentaje de un número, estás escalando ese número hacia abajo o hacia arriba a la parte que representa el porcentaje. La calculadora de porcentaje hace esto en dos pasos limpios: convierte el porcentaje indicado en su equivalente decimal dividiendo entre 100 y luego multiplica ese decimal por el valor con el que lo comparas. Al trabajar el 20% de 150, por ejemplo, convierte 20 en 0,2 y devuelve 0,2 por 150, que es 30. Los porcentajes importan porque permiten comparar cantidades en una escala común sin importar los totales subyacentes, de modo que una participación del 20% significa la misma cantidad relativa ya sea que la base sea 150 o 15.000. Esta escala compartida es lo que hace que el método de convertir a decimal y multiplicar sea el enfoque estándar. Los compradores usan una calculadora de porcentaje para descuentos e impuestos, los estudiantes la aplican a calificaciones, y los profesionales de finanzas y comercio la utilizan para márgenes, propinas, comisiones e intereses.",
+    exampleEs: {
+      inputs: { percent: 20, value: 150 },
+      explanation: "El 20% de 150 = (20 ÷ 100) × 150 = 0,2 × 150 = 30.",
+    },
+    faqsEs: [
+      { question: "¿Qué es un porcentaje?", answer: "Un porcentaje es una forma de escribir un número como una fracción de cien, señalada con el signo de porcentaje. Decir 20% es idéntico a decir 20 de cada 100, o el decimal 0,2. Como cada porcentaje comparte la misma base de cien, los porcentajes permiten comparar porciones extraídas de totales de cualquier tamaño en una sola escala coherente, lo que explica su uso tan extendido." },
+      { question: "¿Cómo calculo un porcentaje de un número?", answer: "Convierte el porcentaje en decimal dividiéndolo entre 100 y luego multiplica ese decimal por el número que estás midiendo. Para el 20% de 150, divide 20 entre 100 para obtener 0,2 y multiplica por 150 hasta llegar a 30. El orden nunca cambia la respuesta, y realizar ambos pasos mantiene la cifra exacta en lugar de redondeada a partir de una estimación mental." },
+      { question: "¿Cómo convierto un porcentaje en decimal?", answer: "Divide el porcentaje entre 100, lo que desplaza el punto decimal dos lugares hacia la izquierda. Eso convierte el 20% en 0,2 y el 5% en 0,05. Invertir el proceso multiplicando un decimal por 100 lo devuelve a porcentaje, de modo que 0,2 vuelve a ser 20%. Esta conversión es el primer paso de casi todo cálculo de porcentaje y mantiene la aritmética alineada con la definición." },
+      { question: "¿Puedo usar esto para calcular un descuento?", answer: "Sí. Primero encuentra el porcentaje del precio original y luego réstalo. En un artículo de 150 con un 20% de descuento, toma el 20% de 150, que es 30, y resta para llegar a un precio de venta de 120. Para hacer lo contrario y añadir impuestos o una propina, calcula el porcentaje del mismo modo y súmalo a la cantidad base en lugar de restarlo." },
+      { question: "¿Por qué dividir entre 100 en lugar de usar directamente el número del porcentaje?", answer: "El signo de porcentaje ya significa dividido entre cien, así que 20% no es el número 20; es 20/100, es decir 0,2. Multiplicar un valor por el 20 en bruto lo escalaría veinte veces en lugar de tomar una quinta parte. Dividir primero entre 100 restaura la proporción prevista, por lo que el 20% de 150 da correctamente 30 y no 3.000." },
+    ],
   },
   {
     id: "percentage-increase",
@@ -81,6 +104,29 @@ export const mathCalculators: CalculatorDefinition[] = [
     relatedCalculators: ["percentage-calculator", "percentage-difference-calculator", "average-calculator"],
     status: "active",
     lastReviewed: "2026-08-20",
+    slugEs: "calculadora-de-aumento-porcentual",
+    titleEs: "Calculadora de Aumento Porcentual",
+    shortDescriptionEs: "Calcula el cambio porcentual entre dos valores.",
+    seoTitleEs: "Calculadora de Aumento Porcentual — Cambio Porcentual",
+    metaDescriptionEs:
+      "Calculadora de aumento y disminución porcentual gratuita. Encuentra el cambio porcentual entre un valor original y uno nuevo, con la fórmula y un ejemplo resuelto.",
+    primaryKeywordEs: "calculadora de aumento porcentual",
+    secondaryKeywordsEs: ["calculadora de cambio porcentual", "calculadora de disminución porcentual", "aumento en porcentaje"],
+    formulaExplanationEs:
+      "Restar el valor original del nuevo aísla la cantidad bruta de cambio, aquí 250 menos 200, una diferencia de 50. Dividir esa diferencia entre el original la expresa como una fracción del punto de partida, y multiplicar por 100 la enuncia como porcentaje. Usar el original como denominador es deliberado: el crecimiento se mide respecto de dónde empezó, así que 50 sobre 200 se convierte en un aumento del 25%.",
+    explanationEs:
+      "El cambio porcentual capta cuánto ha crecido o disminuido un valor en comparación con su punto de partida, expresado como proporción de esa cantidad original. Como es relativo y no absoluto, una subida de 50 significa cosas muy distintas frente a una base de 200 que frente a una base de 5.000, y el porcentaje te dice cuál. La calculadora de aumento porcentual lo mide restando el valor original del nuevo valor, dividiendo esa diferencia entre el original y multiplicando por 100. Pasar de 200 a 250 produce una diferencia de 50 sobre una base de 200, que es un aumento del 25%; un resultado negativo señala una disminución. Anclar el cambio al valor inicial es lo que hace que el método sea significativo, porque el crecimiento casi siempre se juzga respecto del punto del que partió. Por eso la misma herramienta sirve también como calculadora de disminución porcentual: la aritmética es idéntica y solo cambia el signo. Los analistas la usan para el crecimiento de ingresos y precios, los científicos para el cambio medido entre lecturas y los usuarios cotidianos para aumentos de sueldo, subidas de alquiler y variaciones de cartera.",
+    exampleEs: {
+      inputs: { original: 200, updated: 250 },
+      explanation: "De 200 a 250: ((250 − 200) ÷ 200) × 100 = (50 ÷ 200) × 100 = 25% de aumento.",
+    },
+    faqsEs: [
+      { question: "¿Qué es el cambio porcentual?", answer: "El cambio porcentual es el tamaño de un aumento o una disminución escrito como porcentaje del valor original. Responde cuánto creció o cayó algo respecto de su punto de partida en lugar de en unidades brutas. Informar un movimiento de 200 a 250 como un aumento del 25% es más informativo que decir que subió 50, porque el porcentaje ya tiene en cuenta la base contra la que se mide el cambio." },
+      { question: "¿Cómo calculo el aumento porcentual?", answer: "Resta el valor original del nuevo valor, divide el resultado entre el original y luego multiplica por 100. Pasar de 200 a 250 da una diferencia de 50; dividir 50 entre 200 da 0,25, y multiplicar por 100 da un aumento del 25%. Los mismos tres pasos manejan una disminución automáticamente, ya que un nuevo valor menor hace la diferencia negativa y el porcentaje cae por debajo de cero." },
+      { question: "¿Qué significa un resultado negativo?", answer: "Un porcentaje negativo significa que el valor bajó en lugar de subir, así que la calculadora informa una disminución. La magnitud funciona igual, medida contra la cantidad original. Como la fórmula resta el original del nuevo valor, cualquier nuevo valor menor que el original produce un numerador negativo y, por tanto, un porcentaje negativo, que es la señal de que la cantidad se redujo." },
+      { question: "¿Es el aumento porcentual lo mismo que la diferencia porcentual?", answer: "No. El aumento porcentual se mide respecto del valor original y lleva una dirección, de modo que invertir los dos números cambia la respuesta. La diferencia porcentual divide entre el promedio de los dos valores e ignora la dirección, dando el mismo resultado sin importar cómo los ingreses. Usa el aumento porcentual cuando un número sea claramente un punto de partida y el otro un resultado; usa la diferencia porcentual cuando ninguno vaya primero." },
+      { question: "¿Puedo usarla para calcular una disminución porcentual?", answer: "Sí. La fórmula es idéntica para las disminuciones: ingresa primero el valor original y luego el nuevo valor menor, y el resultado sale negativo para mostrar la caída. Bajar de 250 a 200 da una diferencia de menos 50 sobre una base de 250, que es una disminución del 20%. Ten en cuenta que una subida y la caída correspondiente no son porcentajes iguales, porque cada una se mide contra un punto de partida distinto." },
+    ],
   },
   {
     id: "percentage-difference",
@@ -122,6 +168,29 @@ export const mathCalculators: CalculatorDefinition[] = [
     relatedCalculators: ["percentage-calculator", "percentage-increase-calculator", "average-calculator"],
     status: "active",
     lastReviewed: "2026-08-20",
+    slugEs: "calculadora-de-diferencia-porcentual",
+    titleEs: "Calculadora de Diferencia Porcentual",
+    shortDescriptionEs: "Compara dos valores como diferencia porcentual.",
+    seoTitleEs: "Calculadora de Diferencia Porcentual — Herramienta en Línea Gratis",
+    metaDescriptionEs:
+      "Calculadora de diferencia porcentual gratuita. Compara dos números como porcentaje de su promedio, con la fórmula y un ejemplo resuelto claro.",
+    primaryKeywordEs: "calculadora de diferencia porcentual",
+    secondaryKeywordsEs: ["diferencia porcentual", "diferencia entre dos números en porcentaje"],
+    formulaExplanationEs:
+      "Tomar la diferencia absoluta mide cuán separados están los dos valores descartando cuál es mayor, de modo que el resultado permanece positivo. Dividir entre su promedio, y no entre uno de los valores, es lo que mantiene la comparación simétrica, porque el promedio trata a ambos números por igual. Multiplicar por 100 enuncia la diferencia como porcentaje. Para 40 y 60, una diferencia de 20 sobre un promedio de 50 da 40%.",
+    explanationEs:
+      "La diferencia porcentual mide cuán separados están dos valores respecto de su tamaño típico, sin etiquetar a ninguno como el punto de referencia. En lugar de preguntar cuánto creció A hasta convertirse en B, trata a ambos números de forma equilibrada: toma la diferencia absoluta entre ellos y la compara con su promedio. Esa simetría es el rasgo definitorio, por lo que la calculadora de diferencia porcentual devuelve la misma respuesta ya sea que ingreses 40 y luego 60 o 60 y luego 40, porque intercambiarlos no altera ni la diferencia ni el promedio. El método importa cuando no hay un antes o un después natural. Al comparar dos mediciones de laboratorio, los precios de dos proveedores o dos lecturas de sensores, rara vez quieres que una cuente como la base; dividir entre el promedio en lugar de entre uno de los valores mantiene la comparación neutral. Para 40 y 60 la diferencia es 20, el promedio es 50, y 20 sobre 50 es una diferencia del 40%. Ingenieros, científicos, contadores y analistas de calidad recurren a esta calculadora cuando necesitan una comparación imparcial de dos cantidades de igual rango en lugar de un cambio direccional desde un origen fijo.",
+    exampleEs: {
+      inputs: { a: 40, b: 60 },
+      explanation: "|40 − 60| = 20, promedio = 50, así que (20 ÷ 50) × 100 = 40%.",
+    },
+    faqsEs: [
+      { question: "¿Qué es la diferencia porcentual?", answer: "La diferencia porcentual es la separación entre dos valores expresada como porcentaje de su promedio. Compara dos números que están en igualdad de condiciones, sin tratar a ninguno como el original o la referencia. Como divide entre el promedio del par, es simétrica: los valores 40 y 60 difieren en un 40% sin importar cuál listes primero, y la respuesta siempre es cero o positiva." },
+      { question: "¿En qué se diferencia la diferencia porcentual del cambio porcentual?", answer: "El cambio porcentual divide entre el valor original y tiene una dirección, así que te dice cuánto creció o se redujo un número hasta convertirse en otro. La diferencia porcentual divide entre el promedio de los dos valores y no tiene dirección, así que simplemente mide cuán separados están. El cambio conviene para comparaciones de antes y después; la diferencia, para dos lecturas donde ninguna es el punto de partida." },
+      { question: "¿Cuándo debo usar la diferencia porcentual?", answer: "Úsala siempre que los dos valores que comparas no tengan un orden natural: dos mediciones independientes, dos presupuestos que compiten, dos instrumentos leyendo lo mismo. En esos casos, elegir uno como la base sesgaría el resultado, así que dividir entre el promedio mantiene la comparación justa. Si un número es claramente un antes y el otro un después, el cambio porcentual encaja mejor." },
+      { question: "¿Puede la diferencia porcentual ser negativa?", answer: "No. La fórmula usa el valor absoluto de la separación entre los dos números, lo que elimina cualquier signo, así que el resultado siempre es cero o positivo. Una diferencia de cero significa que los valores son idénticos. Esta es una consecuencia deliberada de que el método sea simétrico: como ninguno de los valores se trata como la base, no hay dirección hacia la que apunte la cifra, y por tanto no hay resultado negativo." },
+      { question: "¿Cómo encuentro la diferencia porcentual entre dos números?", answer: "Resta el valor menor del mayor para obtener la separación absoluta, suma los dos números y divídelos entre dos para obtener el promedio, luego divide la separación entre el promedio y multiplica por 100. Para 40 y 60, la separación es 20 y el promedio es 50, así que 20 dividido entre 50 por 100 es una diferencia del 40%. El orden en que ingreses los dos números nunca afecta el resultado." },
+    ],
   },
   {
     id: "average",
@@ -166,6 +235,29 @@ export const mathCalculators: CalculatorDefinition[] = [
     relatedCalculators: ["percentage-calculator", "square-root-calculator", "grade-calculator"],
     status: "active",
     lastReviewed: "2026-08-20",
+    slugEs: "calculadora-de-promedio",
+    titleEs: "Calculadora de Promedio",
+    shortDescriptionEs: "Encuentra la media, mediana, mínimo y máximo de una lista.",
+    seoTitleEs: "Calculadora de Promedio — Media, Mediana, Mínimo y Máximo",
+    metaDescriptionEs:
+      "Calculadora de promedio gratuita. Ingresa una lista de números para obtener al instante la media, la mediana, la suma, el conteo, el mínimo y el máximo.",
+    primaryKeywordEs: "calculadora de promedio",
+    secondaryKeywordsEs: ["calculadora de media", "calculadora de mediana", "cómo calcular el promedio"],
+    formulaExplanationEs:
+      "Sumar todos los valores produce el total que representa el grupo, y dividir entre el conteo reparte ese total de manera uniforme entre todas las entradas, dando la cantidad que cada una tendría si fueran iguales. Cada número, por tanto, atrae la media hacia sí mismo en proporción a su tamaño. Para 12, 18, 24 y 30, una suma de 84 repartida entre cuatro valores da una media de 21, el punto de equilibrio de la lista.",
+    explanationEs:
+      "Un promedio, o media aritmética, condensa toda una lista de números en un único valor representativo: suma cada entrada y divide entre cuántas hay. Responde cuánto sería cada elemento si el total se repartiera por igual, razón por la cual es el resumen más común de un conjunto de datos. La calculadora de promedio calcula esto junto con los estadísticos complementarios que le dan contexto: la mediana, la suma, el conteo, el mínimo y el máximo. Para la lista 12, 18, 24 y 30, la suma es 84 entre cuatro valores, así que la media es 84 dividido entre 4, que es 21. La media se usa porque tiene en cuenta cada valor y se combina de forma natural con los totales, pero puede desviarse por entradas extremas, por lo que una calculadora de promedio informa la mediana junto a ella. La mediana es el valor central una vez ordenados los números, también 21 para esta lista, y resiste la distorsión que causaría un solo valor atípico. Los estudiantes promedian calificaciones, los profesores promedian puntajes de clase, y los analistas, científicos y equipos de finanzas promedian precios, tiempos y mediciones.",
+    exampleEs: {
+      inputs: { numbers: "12, 18, 24, 30" },
+      explanation: "Suma = 84, conteo = 4, así que media = 84 ÷ 4 = 21. Mediana = (18 + 24) ÷ 2 = 21.",
+    },
+    faqsEs: [
+      { question: "¿Cuál es la diferencia entre media y mediana?", answer: "La media es la suma de todos los valores dividida entre cuántos hay, así que cada número influye en ella. La mediana es el valor central una vez ordenada la lista, así que solo importa la posición central. Cuando los datos están repartidos de forma uniforme, ambas coinciden, ya que las dos son 21 para 12, 18, 24 y 30, pero cuando hay unos pocos valores extremos, la mediana se mantiene más cerca de la entrada típica." },
+      { question: "¿Cómo calculo el promedio de una lista de números?", answer: "Suma todos los números para obtener su total, cuenta cuántos hay y luego divide la suma entre el conteo. Para 12, 18, 24 y 30 la suma es 84 y el conteo es 4, así que el promedio es 84 dividido entre 4, que equivale a 21. La calculadora lo hace al instante y también ordena los valores para informar la mediana, el mínimo y el máximo al mismo tiempo." },
+      { question: "¿Cuándo debo usar la mediana en lugar de la media?", answer: "Usa la mediana cuando tus datos contengan valores atípicos o estén muy sesgados, como ingresos, precios de vivienda o tiempos de respuesta, donde unos pocos valores muy grandes arrastrarían la media hacia arriba y tergiversarían el caso típico. La mediana ignora cuán lejos están los extremos e informa solo el valor central, así que a menudo describe una entrada normal con más fidelidad que la media para datos desequilibrados." },
+      { question: "¿Cuántos números puedo ingresar?", answer: "No hay límite fijo; ingresa tantos valores como necesites, separados por comas, espacios o saltos de línea. La calculadora los lee todos, los suma para el total, divide entre el conteo para la media y los ordena para hallar la mediana, el mínimo y el máximo. Mezclar separadores está bien, así que pegar una columna de cifras o una fila separada por comas funciona sin ningún reformateo." },
+      { question: "¿Importa el orden de los números?", answer: "No. La suma y la media no dependen del orden, y la calculadora ordena la lista internamente antes de hallar la mediana, el mínimo y el máximo, así que cualquier disposición da los mismos resultados. Ya sea que ingreses 12, 18, 24, 30 o los mismos valores mezclados, la media sigue siendo 21 y la mediana sigue siendo 21. Puedes pegar los números en el orden en que aparezcan." },
+    ],
   },
   {
     id: "square-root",
@@ -206,5 +298,28 @@ export const mathCalculators: CalculatorDefinition[] = [
     relatedCalculators: ["percentage-calculator", "average-calculator", "percentage-difference-calculator"],
     status: "active",
     lastReviewed: "2026-08-20",
+    slugEs: "calculadora-de-raiz-cuadrada",
+    titleEs: "Calculadora de Raíz Cuadrada",
+    shortDescriptionEs: "Encuentra la raíz cuadrada de cualquier número.",
+    seoTitleEs: "Calculadora de Raíz Cuadrada — Herramienta √ en Línea Gratis",
+    metaDescriptionEs:
+      "Calculadora de raíz cuadrada gratuita. Encuentra al instante la raíz cuadrada de cualquier número positivo, con la fórmula y un ejemplo resuelto.",
+    primaryKeywordEs: "calculadora de raíz cuadrada",
+    secondaryKeywordsEs: ["calculadora de sqrt", "calculadora de raíces", "cómo hallar la raíz cuadrada"],
+    formulaExplanationEs:
+      "La raíz cuadrada plantea lo inverso de elevar al cuadrado: en lugar de multiplicar un número por sí mismo, busca el valor cuyo producto por sí mismo iguala tu entrada. Al llamarlo x, la definición de que x por x es igual a n significa que x es la longitud del lado que produce un área de n. Por eso la raíz de 144 es 12, ya que doce es precisamente el número que, al elevarse al cuadrado, reconstruye 144.",
+    explanationEs:
+      "La raíz cuadrada de un número es el valor que, multiplicado por sí mismo, reproduce ese número, así que la raíz cuadrada de 144 es 12, porque 12 por 12 es 144. Invierte la elevación al cuadrado, deshaciendo un área hasta la longitud de un lado, que es exactamente como surge la operación en geometría, física y estadística. La calculadora de raíz cuadrada encuentra este valor para cualquier número desde cero hacia arriba y lo devuelve con varios decimales para mayor precisión. Todo número positivo tiene dos raíces que lo producen al elevarse al cuadrado, una positiva y una negativa, pero la calculadora informa la raíz principal, la no negativa, porque ese es el valor que se busca en casi todos los contextos prácticos. El cero tiene una única raíz de cero, y los números negativos no tienen raíz cuadrada real, ya que ningún valor real elevado al cuadrado es negativo, razón por la cual una calculadora de raíz cuadrada restringe su entrada a cero o más. Las raíces aparecen constantemente más allá del aula: escalan distancias mediante el teorema de Pitágoras, definen la desviación estándar en estadística y fijan el tamaño de cuadrados y círculos en diseño e ingeniería.",
+    exampleEs: {
+      inputs: { number: 144 },
+      explanation: "√144 = 12, porque 12 × 12 = 144.",
+    },
+    faqsEs: [
+      { question: "¿Qué es una raíz cuadrada?", answer: "Una raíz cuadrada de un número es un valor que da ese número al multiplicarse por sí mismo. Como 12 por 12 es 144, doce es una raíz cuadrada de 144. La operación deshace la elevación al cuadrado, así que convierte un área de nuevo en la longitud del lado que la produjo. Esta relación inversa es por lo que las raíces aparecen donde una cantidad al cuadrado, como una distancia, una varianza o un área, debe revertirse." },
+      { question: "¿Puedo sacar la raíz cuadrada de un número negativo?", answer: "No dentro de los números reales. Ningún valor real multiplicado por sí mismo da un resultado negativo, porque un positivo por un positivo y un negativo por un negativo son ambos positivos. La raíz cuadrada de un número negativo se llama por tanto imaginaria y queda fuera de la aritmética ordinaria, razón por la cual esta calculadora acepta solo entradas de cero o más y deja las entradas negativas sin una respuesta real." },
+      { question: "¿Qué es una raíz cuadrada principal?", answer: "La raíz cuadrada principal es la no negativa. Todo número positivo técnicamente tiene dos raíces, una positiva y una negativa, que ambas lo producen al elevarse al cuadrado, ya que 12 y menos 12 dan 144. Para mantener los resultados sin ambigüedad, la calculadora devuelve solo el valor principal, positivo, que es la raíz prevista en casi todo cálculo práctico con longitudes, distancias y cantidades medidas." },
+      { question: "¿Es una raíz cuadrada siempre un número entero?", answer: "No. Solo los cuadrados perfectos como 144 tienen raíces enteras; la mayoría de los números tienen raíces irracionales que continúan indefinidamente sin repetirse. La raíz cuadrada de 2, por ejemplo, es aproximadamente 1,414214 y nunca puede escribirse exactamente como una fracción o un decimal finito. La calculadora maneja ambos casos, devolviendo un entero exacto donde exista y un decimal redondeado en caso contrario." },
+      { question: "¿Cómo calculo una raíz cuadrada a mano?", answer: "Para cuadrados perfectos, pregunta qué número multiplicado por sí mismo da tu valor: doce funciona para 144 porque 12 por 12 es 144. Para otros números, estima entre los dos cuadrados perfectos más cercanos y refina, así que un valor entre 121 y 144 tiene una raíz entre 11 y 12. Este método de tanteo es tedioso, razón por la cual una calculadora es más rápida y mucho más precisa para cuadrados no perfectos." },
+    ],
   },
 ];
