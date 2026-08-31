@@ -62,6 +62,38 @@ export const technologyR8Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Typical streaming bitrates (industry averages)",
+    slugEs: "calculadora-de-uso-de-datos",
+    titleEs: "Calculadora de Uso de Datos",
+    shortDescriptionEs: "Estima el uso de datos mensual y anual segun tus horas de streaming.",
+    seoTitleEs: "Calculadora de Uso de Datos — Datos de Streaming al Mes",
+    metaDescriptionEs: "Calculadora de uso de datos gratuita. Introduce tus horas de streaming al dia y la calidad de video para estimar cuantos gigabytes usas cada mes y ano. Planifica tu plan de datos.",
+    primaryKeywordEs: "calculadora de uso de datos",
+    secondaryKeywordsEs: ["calculadora de datos de streaming", "uso de datos mensual", "cuantos datos consume el streaming"],
+    formulaExplanationEs: "El streaming consume una cantidad de datos aproximadamente fija por cada hora vista, determinada por la calidad del video: la definicion estandar usa alrededor de un gigabyte por hora, la alta definicion unos tres y el 4K cerca de siete. Multiplicar las horas que ves cada dia por esa tasa por hora da el uso diario, y multiplicar por treinta aproxima un mes. La cifra anual multiplica el total mensual por doce, mostrando el consumo a largo plazo frente a un limite de datos.",
+    explanationEs: "Una calculadora de uso de datos estima cuantos gigabytes consumen tus habitos de streaming cada mes y ano, a partir de dos datos sencillos: cuantas horas al dia ves y la calidad de video con la que reproduces. El video en streaming es, con diferencia, la mayor fuente de consumo de datos en la mayoria de los hogares, por lo que traducir las horas de visualizacion en gigabytes es clave para elegir un plan de datos, evitar cargos por exceso o mantenerte dentro de un limite movil.\n\nLa estimacion importa porque las asignaciones de datos y la calidad del streaming varian mucho, y la diferencia entre resoluciones es enorme. Ver en 4K consume aproximadamente siete veces los datos de la definicion estandar, asi que un hogar que reproduce varias horas de video en ultra alta definicion al dia puede gastar cientos de gigabytes al mes, mientras que las mismas horas en SD siguen siendo modestas. Ver los totales mensuales y anuales ayuda a decidir si limitar la calidad, mejorar el plan o depender del Wi-Fi en lugar de los datos moviles.\n\nEl calculo funciona porque el consumo de datos del streaming es casi lineal tanto en el tiempo como en la calidad: cada hora a una resolucion dada transfiere una cantidad bastante estable de gigabytes. Multiplicar las horas diarias por la tasa por hora y por treinta aproxima el uso mensual, y por doce da el ano. El uso real varia segun el servicio, el codec y si hay solo audio o descargas, asi que tomalo como una estimacion de planificacion. Hogares, viajeros y cualquiera con una conexion medida usan una calculadora de uso de datos.",
+    exampleEs: { inputs: { hoursPerDay: 4, gbPerHour: 3 }, explanation: "4 horas/dia × 3 GB/hora × 30 = 360 GB al mes, y unos 4.320 GB al ano." },
+    faqsEs: [
+      {
+        question: "Cuantos datos consume realmente el streaming?",
+        answer: "Depende mucho de la resolucion. La definicion estandar usa aproximadamente un gigabyte por hora, la alta definicion unos tres gigabytes y el 4K en ultra alta definicion cerca de siete gigabytes por hora. El streaming de musica consume mucho menos, a menudo por debajo de 150 megabytes por hora. Estos son promedios tipicos; la cifra exacta varia segun el servicio y el codec de video usado.",
+      },
+      {
+        question: "Por que la calidad de video cambia tanto el consumo de datos?",
+        answer: "Las resoluciones mas altas contienen mucho mas detalle en cada fotograma, lo que significa muchos mas pixeles y por tanto mas datos que transmitir cada segundo. Pasar de SD a HD aproximadamente triplica la tasa de datos, y el 4K la duplica de nuevo respecto al HD. Los codecs mas nuevos recuperan parte con mejor compresion, pero la regla general se mantiene: cuanto mas nitida la imagen, mas gigabytes consume cada hora.",
+      },
+      {
+        question: "Como puedo reducir mi consumo de datos de streaming?",
+        answer: "Baja la calidad de reproduccion en los ajustes de cada aplicacion, ya que la mayoria usa por defecto la mas alta que permita tu conexion. Descarga contenidos por Wi-Fi para verlos despues en lugar de reproducirlos con datos moviles. Desactiva la reproduccion automatica para que los videos no sigan cargando sin verse. Reproduce musica en lugar de videos musicales cuando solo quieras audio. Estos pasos juntos pueden reducir a la mitad los datos de un gran consumidor.",
+      },
+      {
+        question: "Son 30 dias un mes preciso para esta estimacion?",
+        answer: "Usar 30 dias da una cifra mensual coherente y ligeramente conservadora que sirve para planificar frente a un limite de datos. Los meses reales van de 28 a 31 dias, asi que un mes de 31 dias usa un poco mas y febrero un poco menos. La pequena diferencia rara vez importa al presupuestar frente a una asignacion, donde dejar margen para semanas cargadas es sensato de todos modos. La cifra anual multiplica por doce, suavizando estas variaciones.",
+      },
+      {
+        question: "Incluye esto las descargas y otras aplicaciones?",
+        answer: "No, esta estimacion cubre el video en streaming a la calidad que selecciones. No suma descargas, transferencias de archivos grandes, videollamadas, actualizaciones de juegos ni datos en segundo plano, que pueden ser significativos cada uno. Si tu hogar hace mucho de eso, suma sus datos por separado al comparar con un limite. Para la mayoria de los hogares, sin embargo, el video en streaming domina el uso total, asi que esta cifra es un buen punto de partida.",
+      },
+    ],
   },
   {
     id: "video-file-size",
@@ -112,6 +144,38 @@ export const technologyR8Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard digital media (bitrate × duration)",
+    slugEs: "calculadora-de-tamano-de-video",
+    titleEs: "Calculadora de Tamano de Archivo de Video",
+    shortDescriptionEs: "Estima el tamano de un video a partir de su bitrate y duracion.",
+    seoTitleEs: "Calculadora de Tamano de Video — Bitrate y Duracion a Tamano",
+    metaDescriptionEs: "Calculadora de tamano de archivo de video gratuita. Introduce la duracion en minutos y el bitrate en Mbps para estimar el tamano en gigabytes y megabytes. Planifica almacenamiento y subidas.",
+    primaryKeywordEs: "calculadora de tamano de video",
+    secondaryKeywordsEs: ["calculadora de tamano de archivo de video", "bitrate a tamano de archivo", "cuanto pesa un video"],
+    formulaExplanationEs: "El tamano de un video lo determina cuantos bits usa cada segundo, el bitrate, multiplicado por cuantos segundos dura. Multiplicar el bitrate en megabits por segundo por la duracion en segundos da el total de megabits; dividir entre ocho convierte megabits a megabytes, ya que un byte son ocho bits. Dividir los megabytes entre 1.024 da gigabytes. El metodo funciona porque, con un bitrate constante, el tamano del archivo es simplemente la tasa de datos por el tiempo de reproduccion.",
+    explanationEs: "Una calculadora de tamano de archivo de video estima cuan grande sera un archivo de video a partir de su bitrate y duracion. El bitrate, medido en megabits por segundo, es la cantidad de datos que usa el video cada segundo, y es el factor mas importante tanto para el tamano como para la calidad visual. Conocer el tamano resultante de antemano ayuda a planificar el almacenamiento, calcular los tiempos de subida y confirmar que un archivo cabra dentro de los limites de una plataforma antes de exportarlo o transferirlo.\n\nEsta estimacion es valiosa en todo trabajo de video. Un editor que elige los ajustes de exportacion quiere saber si un proyecto cabra en un disco o bajo el limite de un adjunto de correo. Un creador que sube a una plataforma con limite de tamano necesita confirmar que el archivo cumple. Cualquiera que archive metraje puede proyectar cuanto almacenamiento necesitara una biblioteca. Como el bitrate determina tanto la calidad como el tamano, ver el equilibrio en gigabytes lo hace concreto al decidir cuanto comprimir.\n\nEl calculo funciona porque el tamano de un video de bitrate constante equivale a su tasa de datos multiplicada por su duracion. Multiplicar el bitrate en megabits por segundo por la duracion en segundos da el total de megabits, dividir entre ocho convierte a megabytes, y dividir entre 1.024 da gigabytes. La codificacion de bitrate variable hace que los archivos reales fluctuen alrededor de esta cifra, y el contenedor anade algo, asi que tomalo como una estimacion cercana. Editores, videografos y cualquiera que gestione video usan una calculadora de tamano de archivo para planificar con confianza.",
+    exampleEs: { inputs: { durationMinutes: 60, bitrateMbps: 8 }, explanation: "8 Mbps × 60 min × 60 ÷ 8 = 3.600 MB, que son unos 3,52 GB." },
+    faqsEs: [
+      {
+        question: "Que es el bitrate y donde lo encuentro?",
+        answer: "El bitrate es la cantidad de datos que un video usa por segundo, medida en megabits por segundo (Mbps). Lo configuras en los ajustes de exportacion y grabacion de tu editor o camara, donde puede llamarse bitrate objetivo o tasa de datos. Los servicios de streaming y las camaras publican valores tipicos: 1080p suele usar de 8 a 12 Mbps, mientras que el 4K puede usar de 35 a 60 Mbps. Mas bitrate significa mejor calidad y un archivo mayor.",
+      },
+      {
+        question: "Por que se divide entre 8 en la formula?",
+        answer: "El bitrate se expresa en megabits por segundo, pero los tamanos de archivo se miden en megabytes, y un byte equivale a ocho bits. Dividir el total de megabits entre ocho convierte la cifra en megabytes. Esta distincion entre bits y bytes confunde a muchos: una conexion de 80 megabits por segundo transfiere solo unos 10 megabytes por segundo. Mantener las unidades claras es esencial para obtener un tamano de archivo preciso.",
+      },
+      {
+        question: "Mas bitrate significa siempre mejor calidad?",
+        answer: "Hasta cierto punto. Un bitrate mayor conserva mas detalle y reduce los artefactos de compresion, mejorando la calidad, pero hay rendimientos decrecientes una vez que el bitrate supera lo que el contenido necesita. Mas alla de eso, anades tamano sin beneficio visible. El bitrate ideal depende de la resolucion, la tasa de fotogramas y cuanto movimiento tenga el metraje. El video con mucho movimiento o detalle necesita mas bitrate que un plano estatico para verse igual de limpio.",
+      },
+      {
+        question: "Por que mi archivo real tiene un tamano algo distinto?",
+        answer: "La mayoria de los codificadores modernos usan bitrate variable, que sube la tasa en escenas complejas y la baja en las simples, asi que el promedio real difiere de tu objetivo. El formato contenedor tambien anade una pequena sobrecarga por audio, metadatos y estructura. Esta calculadora asume un bitrate constante para una estimacion limpia, asi que espera que los archivos reales queden cerca pero no exactamente en el tamano previsto.",
+      },
+      {
+        question: "Como hago mas pequeno un archivo de video?",
+        answer: "Baja el bitrate, lo que reduce directamente el archivo, aunque demasiado bajo introduce artefactos visibles. Reduce la resolucion o la tasa de fotogramas si la plataforma lo permite. Usa un codec mas eficiente como H.265 o AV1, que logran la misma calidad con menos bitrate que el antiguo H.264. Recortar metraje innecesario tambien ayuda. Equilibra esto con una calidad aceptable, usando esta calculadora para comprobar el tamano que produce cada eleccion de bitrate.",
+      },
+    ],
   },
   {
     id: "ssd-lifespan",
@@ -161,6 +225,38 @@ export const technologyR8Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Manufacturer TBW endurance model",
+    slugEs: "calculadora-de-vida-util-de-ssd",
+    titleEs: "Calculadora de Vida Util de SSD",
+    shortDescriptionEs: "Estima los anos de vida de un SSD a partir de su resistencia.",
+    seoTitleEs: "Calculadora de Vida Util de SSD — Anos Segun la Resistencia TBW",
+    metaDescriptionEs: "Calculadora de vida util de SSD gratuita. Introduce la resistencia TBW de tu unidad y tus escrituras diarias para estimar cuantos anos durara el SSD antes de desgastarse.",
+    primaryKeywordEs: "calculadora de vida util de ssd",
+    secondaryKeywordsEs: ["calculadora de duracion de ssd", "calculadora tbw", "calculadora de resistencia de ssd"],
+    formulaExplanationEs: "Un SSD esta clasificado para un numero total de terabytes que se le pueden escribir, su resistencia TBW, antes de que sus celdas de memoria se desgasten. Convertir esa clasificacion a gigabytes (multiplicando por 1.000) da el total de escrituras que la unidad puede absorber. Dividir entre los gigabytes que escribes cada dia da el numero de dias que dura, y dividir entre 365 lo convierte a anos. El metodo asume una carga de escritura diaria estable durante toda la vida de la unidad.",
+    explanationEs: "Una calculadora de vida util de SSD estima cuantos anos durara una unidad de estado solido antes de que su memoria flash se desgaste, en funcion de su clasificacion de resistencia y de cuantos datos le escribes cada dia. Los SSD se desgastan por las escrituras y no por el tiempo: cada celda de memoria tolera un numero limitado de ciclos de escritura, y los fabricantes expresan ese limite como TBW, el total de terabytes que se pueden escribir a lo largo de la vida garantizada de la unidad.\n\nLa estimacion tranquiliza a los usuarios e informa la planificacion. Muchas personas temen que los SSD fallen rapido, pero la aritmetica suele mostrar lo contrario: para cargas de trabajo tipicas, una unidad moderna dura mucho mas que el ordenador donde vive. Conocer tu vida util proyectada ayuda a decidir si basta una unidad de consumo o si una tarea intensiva en escrituras, como editar video, trabajo con bases de datos o registro continuo, justifica un modelo de mayor resistencia. Tambien enmarca el valor del periodo de garantia del fabricante.\n\nEl calculo trata el TBW como un presupuesto de escrituras. Convertir la clasificacion en terabytes a gigabytes y dividir entre tu volumen de escritura diario da el numero de dias que la unidad puede sostener esa tasa, que dividido entre 365 da anos. La resistencia real se ve afectada por la amplificacion de escritura, cuan llena se mantiene la unidad y la temperatura, asi que toma la cifra como una guia de planificacion y no como una garantia. Entusiastas, profesionales de TI y cualquiera que dimensione almacenamiento usan una calculadora de vida util de SSD.",
+    exampleEs: { inputs: { tbwRating: 600, dailyWriteGb: 50 }, explanation: "600 TBW × 1.000 ÷ (50 GB × 365) ≈ 32,9 anos escribiendo 50 GB al dia." },
+    faqsEs: [
+      {
+        question: "Que es TBW y donde lo encuentro?",
+        answer: "TBW significa terabytes escritos, la cantidad total de datos que un fabricante garantiza que puedes escribir en un SSD durante su vida garantizada antes de que las celdas flash se desgasten. Aparece en la hoja de especificaciones o pagina del producto, a menudo junto al periodo de garantia. Una unidad de consumo tipica de 1 TB puede estar clasificada entre 300 y 600 TBW, mientras que las empresariales son mucho mayores. Introduce ese numero para estimar la vida util.",
+      },
+      {
+        question: "Cuantos datos escribo al dia?",
+        answer: "Para la mayoria de usuarios domesticos y de oficina, las escrituras diarias son sorprendentemente bajas, a menudo de 10 a 50 gigabytes, cubriendo documentos, caches de navegacion, actualizaciones de aplicaciones y alguna descarga. Los jugadores que instalan titulos grandes y los editores de video con metraje en bruto escriben mucho mas. Las herramientas de monitoreo y los datos SMART de la unidad reportan tus bytes escritos totales, que divididos entre los dias de uso dan tu promedio diario real.",
+      },
+      {
+        question: "Durara mi SSD realmente tanto tiempo?",
+        answer: "Para cargas de trabajo tipicas, la vida util calculada suele superar la vida util del ordenador completo, lo cual es tranquilizador. Sin embargo, la cifra asume escrituras estables e ignora factores como la amplificacion de escritura, donde la unidad escribe fisicamente mas datos de los que envias, y el efecto de mantener una unidad casi llena. Toma el resultado como una estimacion optimista. La mayoria de las unidades se reemplazan por capacidad o velocidad mucho antes de agotar su resistencia.",
+      },
+      {
+        question: "Que pasa cuando un SSD alcanza su TBW?",
+        answer: "Superar la clasificacion TBW no significa un fallo instantaneo; significa que la unidad ha pasado la resistencia que el fabricante garantiza, y el riesgo de celdas desgastadas aumenta. Muchas unidades siguen funcionando bien mas alla de su clasificacion, mientras que otras entran en modo de solo lectura para proteger los datos existentes cuando el desgaste es severo. Como el comportamiento varia, haz copias de seguridad y considera el reemplazo al acercarse o superar la resistencia clasificada.",
+      },
+      {
+        question: "Como puedo prolongar la vida util de mi SSD?",
+        answer: "Deja algo de espacio libre, ya que una unidad mas llena fuerza mas reescritura interna y aumenta el desgaste. Evita cargas de escritura pesadas innecesarias, como archivos temporales grandes constantes, y activa TRIM para que la unidad gestione los bloques no usados de forma eficiente. Manten el firmware actualizado, ya que los fabricantes mejoran el nivelado de desgaste con el tiempo. Los SSD modernos gestionan esto automaticamente en su mayor parte, asi que para uso diario la unidad superara comodamente su utilidad practica.",
+      },
+    ],
   },
   {
     id: "color-contrast",
@@ -212,6 +308,38 @@ export const technologyR8Calculators: CalculatorDefinition[] = [
     lastReviewed: "2026-08-30",
     formulaSource: "WCAG 2.1 relative luminance (W3C)",
     sourceUrl: "https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio",
+    slugEs: "calculadora-de-relacion-de-contraste-de-color",
+    titleEs: "Calculadora de Relacion de Contraste de Color",
+    shortDescriptionEs: "Comprueba el contraste WCAG entre dos colores hex para accesibilidad.",
+    seoTitleEs: "Calculadora de Contraste de Color — Comprobacion WCAG de Accesibilidad",
+    metaDescriptionEs: "Calculadora de relacion de contraste de color gratuita. Introduce un color de texto y de fondo en hex para obtener la relacion de contraste WCAG y ver si pasa el nivel AA para texto accesible.",
+    primaryKeywordEs: "calculadora de contraste de color",
+    secondaryKeywordsEs: ["comprobador de contraste wcag", "calculadora de relacion de contraste", "comprobador de color de accesibilidad"],
+    formulaExplanationEs: "La luminancia relativa de cada color se halla convirtiendo sus canales sRGB a una escala lineal (dividiendo entre 255 y aplicando la curva gamma sRGB) y ponderandolos con 0,2126 el rojo, 0,7152 el verde y 0,0722 el azul, segun como percibe el brillo el ojo. La relacion de contraste divide entonces la luminancia mas clara mas 0,05 entre la mas oscura mas 0,05. El desplazamiento de 0,05 modela el reflejo ambiental de la pantalla, y la relacion va de 1:1 para colores identicos a 21:1 para negro sobre blanco.",
+    explanationEs: "Una calculadora de relacion de contraste de color mide cuan legible es un texto sobre su fondo comparando dos colores segun el estandar de accesibilidad WCAG. Devuelve la relacion de contraste, un numero de 1:1 a 21:1, e indica si esa relacion cumple el umbral de nivel AA de las Pautas de Accesibilidad para el Contenido Web para texto normal. Un contraste suficiente es esencial para que las personas con baja vision o deficiencias de color, y cualquiera bajo luz solar intensa, puedan leer el contenido comodamente.\n\nEsta comprobacion importa a disenadores, desarrolladores y creadores de contenido que construyen interfaces accesibles y conformes. La legislacion de accesibilidad y las directrices de plataformas en muchas regiones hacen referencia a WCAG, asi que fallar el contraste puede ser tanto una exclusion de usuarios reales como un riesgo legal. Mas alla del cumplimiento, un buen contraste simplemente hace los productos mas faciles de usar para todos. Probar un par de texto y fondo antes de publicar detecta problemas faciles de corregir en el diseno pero costosos de reparar despues.\n\nEl calculo sigue la formula WCAG con precision. Cada color se convierte de su codigo hex a luminancia relativa linealizando los canales rojo, verde y azul mediante la curva gamma sRGB y ponderandolos segun la sensibilidad de la vision humana a cada uno. La relacion divide la luminancia mas clara mas un pequeno desplazamiento por reflejo entre la mas oscura mas el mismo desplazamiento. WCAG AA requiere al menos 4,5:1 para texto normal y 3:1 para texto grande. Disenadores y desarrolladores usan una calculadora de contraste para garantizar que sus elecciones de color sean legibles y accesibles.",
+    exampleEs: { inputs: { foregroundHex: "#767676", backgroundHex: "#FFFFFF" }, explanation: "El gris #767676 sobre blanco da una relacion de aproximadamente 4,54:1, que apenas pasa WCAG AA para texto normal." },
+    faqsEs: [
+      {
+        question: "Que relacion de contraste necesito para pasar WCAG?",
+        answer: "El nivel AA de WCAG requiere una relacion de contraste de al menos 4,5:1 para texto de tamano normal y 3:1 para texto grande, definido como 18 puntos o 14 puntos en negrita y superior. El nivel AAA, mas estricto, pide 7:1 normal y 4,5:1 grande. Esta calculadora comprueba el umbral AA de texto normal de 4,5:1. Cumplir o superar estas relaciones asegura que el texto siga siendo legible para usuarios con perdida de vision moderada.",
+      },
+      {
+        question: "Como se calcula realmente la relacion de contraste?",
+        answer: "Cada color se convierte a un valor de luminancia relativa que refleja el brillo percibido, linealizando sus canales rojo, verde y azul y ponderando el verde con mas peso porque el ojo es mas sensible a el. La relacion divide entonces la luminancia del color mas claro mas 0,05 entre la del mas oscuro mas 0,05. Ese pequeno desplazamiento tiene en cuenta el reflejo de pantalla. El resultado va de 1:1 para colores identicos hasta 21:1 para negro puro sobre blanco puro.",
+      },
+      {
+        question: "Por que el verde cuenta mas que el rojo y el azul?",
+        answer: "Los pesos de luminancia, 0,2126 para el rojo, 0,7152 para el verde y 0,0722 para el azul, reflejan la sensibilidad de la vision humana. Nuestros ojos perciben la luz verde como mucho mas brillante que la misma intensidad de rojo o azul, asi que el verde contribuye mas al brillo aparente de un color. Ponderar los canales de esta forma hace que la relacion de contraste coincida con la legibilidad percibida en lugar de los valores numericos brutos, que es lo que exige la accesibilidad.",
+      },
+      {
+        question: "Se aplica el contraste de forma distinta al texto grande?",
+        answer: "Si. Como el texto grande es mas facil de leer, WCAG relaja su requisito de contraste a 3:1 en el nivel AA, frente a 4,5:1 para texto normal. Grande se define como al menos 18 puntos, o 14 puntos en negrita. Esta calculadora reporta el resultado AA de texto normal, asi que un par que falla aqui a 4,5:1 podria pasar para titulares y texto grande. Prueba siempre al tamano en que aparecera el texto.",
+      },
+      {
+        question: "Que pasa si introduzco un codigo hex invalido?",
+        answer: "La calculadora necesita codigos de color hexadecimales validos de tres o seis digitos, opcionalmente con un simbolo de almohadilla, como #1A2B3C o #abc. Si algun campo contiene caracteres fuera del rango 0 a 9 y A a F, o un numero incorrecto de digitos, el resultado no puede calcularse y muestra un guion. Corrige el codigo a un valor hex adecuado y la relacion y el veredicto de aprobado o fallo apareceran de inmediato.",
+      },
+    ],
   },
   {
     id: "number-base",
@@ -286,6 +414,38 @@ export const technologyR8Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Positional numeral systems (mathematics)",
+    slugEs: "conversor-de-binario-a-decimal",
+    titleEs: "Conversor de Binario a Decimal",
+    shortDescriptionEs: "Convierte numeros entre binario, decimal y hexadecimal.",
+    seoTitleEs: "Conversor de Binario a Decimal — Binario, Decimal, Hex",
+    metaDescriptionEs: "Conversor de binario a decimal gratuito. Convierte numeros enteros entre binario, decimal y hexadecimal en cualquier direccion. Introduce un valor, elige las bases y obten el resultado.",
+    primaryKeywordEs: "conversor de binario a decimal",
+    secondaryKeywordsEs: ["conversor de base numerica", "conversor de decimal a binario", "conversor hexadecimal"],
+    formulaExplanationEs: "Todo sistema numerico posicional representa un valor como una suma de digitos multiplicados por potencias de su base: el binario usa potencias de dos, el decimal potencias de diez y el hexadecimal potencias de dieciseis. La conversion lee primero los digitos de entrada en su base de origen para recuperar el valor entero subyacente, y luego reescribe ese mismo valor usando los digitos de la base de destino. El numero en si nunca cambia; solo cambia su representacion escrita, por eso cualquier base convierte sin perdida a cualquier otra para numeros enteros.",
+    explanationEs: "Un conversor de binario a decimal traduce numeros enteros entre los tres sistemas numericos que dominan la informatica: binario (base 2), decimal (base 10) y hexadecimal (base 16). Los ordenadores almacenan todo en binario, los programadores a menudo leen memoria y colores en hexadecimal, y los humanos pensamos en decimal, asi que moverse con fluidez entre estas bases es una necesidad constante en el trabajo de software, electronica y redes.\n\nLa conversion es util siempre que los numeros cruzan entre como las maquinas representan los datos y como los leen las personas. Un desarrollador que depura una mascara de bits lee binario, un disenador lee un color hex y un estudiante que aprende informatica practica convirtiendo a mano. El hexadecimal es especialmente comodo porque cada digito hex se corresponde limpiamente con cuatro bits binarios, siendo una abreviatura compacta para cadenas binarias largas. Ver un valor en todas estas formas crea intuicion sobre como se almacenan realmente los datos.\n\nLa conversion funciona segun un principio simple: cualquier base posicional expresa un numero como una suma de digitos por potencias de esa base. El conversor lee los digitos de entrada en su base de origen para recuperar el entero subyacente, y luego reescribe ese entero en la base de destino, usando las letras A a F para los digitos hex del diez al quince. El valor es identico en cada base; solo cambia su notacion. Programadores, estudiantes e ingenieros usan un conversor de base numerica para moverse entre binario, decimal y hexadecimal sin errores.",
+    exampleEs: { inputs: { value: "1010", from: "binary", to: "decimal" }, explanation: "El binario 1010 = 8 + 0 + 2 + 0 = 10 en decimal." },
+    faqsEs: [
+      {
+        question: "Como convierto binario a decimal a mano?",
+        answer: "Escribe los digitos binarios y asigna a cada uno una potencia de dos segun su posicion, empezando en 2 elevado a 0 a la derecha y duplicando hacia la izquierda. Suma las potencias de dos alli donde haya un 1. Para 1010, las posiciones con 1 son la de los ochos y la de los doses, asi que 8 mas 2 es igual a 10. Esta calculadora hace la misma suma al instante y tambien maneja el sentido inverso y el hexadecimal.",
+      },
+      {
+        question: "Por que se usa tanto el hexadecimal en informatica?",
+        answer: "El hexadecimal es una forma compacta de escribir binario porque cada digito hex representa exactamente cuatro bits binarios. Un byte, ocho bits, se convierte en solo dos digitos hex, mucho mas facil de leer y menos propenso a errores que una larga cadena de unos y ceros. Por eso las direcciones de memoria, los codigos de color y los valores de maquina se muestran comunmente en hex. Une la legibilidad humana con el binario que la maquina realmente usa.",
+      },
+      {
+        question: "Que significan las letras A a F en hex?",
+        answer: "El hexadecimal tiene dieciseis digitos, pero nuestro sistema decimal solo aporta diez simbolos, del cero al nueve. Para representar los valores del diez al quince como digitos unicos, el hex toma prestadas las letras A, B, C, D, E y F. Asi A es diez, B es once, hasta F que es quince. Esto permite que cada digito hex cubra las dieciseis combinaciones posibles de cuatro bits con un solo caracter.",
+      },
+      {
+        question: "Puede convertir numeros con decimales?",
+        answer: "No, este conversor maneja solo numeros enteros. Los valores fraccionarios en distintas bases implican potencias negativas de la base y se comportan de forma diferente, y muchas fracciones exactas en una base se repiten infinitamente en otra, lo que complica la conversion. Para trabajo con enteros como mascaras de bits, direcciones, valores de color y tareas tipicas de programacion, la conversion de numeros enteros es lo que se necesita. Introduce solo digitos validos para tu base de origen.",
+      },
+      {
+        question: "Por que un valor invalido muestra un guion?",
+        answer: "Cada base solo permite ciertos digitos: el binario admite solo 0 y 1, el decimal admite del 0 al 9, y el hexadecimal admite del 0 al 9 mas A a F. Si tu entrada contiene un caracter que no es valido para la base de origen que seleccionaste, como un 2 en un numero binario, la conversion no puede continuar y el resultado muestra un guion. Corrige el valor a digitos validos y se convierte de inmediato.",
+      },
+    ],
   },
   {
     id: "subnet-hosts",
@@ -335,6 +495,38 @@ export const technologyR8Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "CIDR / IPv4 addressing (RFC 4632)",
+    slugEs: "calculadora-de-hosts-de-subred",
+    titleEs: "Calculadora de Hosts de Subred",
+    shortDescriptionEs: "Encuentra las direcciones IP usables y totales de un prefijo CIDR.",
+    seoTitleEs: "Calculadora de Hosts de Subred — IPs Usables Segun el Prefijo CIDR",
+    metaDescriptionEs: "Calculadora de hosts de subred gratuita. Introduce la longitud del prefijo CIDR para hallar el numero total de direcciones y cuantas son usables para hosts en una subred IPv4.",
+    primaryKeywordEs: "calculadora de hosts de subred",
+    secondaryKeywordsEs: ["calculadora cidr", "calculadora de hosts usables", "calculadora de numero de direcciones ip"],
+    formulaExplanationEs: "Una direccion IPv4 tiene 32 bits de longitud. Un prefijo CIDR fija los bits mas a la izquierda como la parte de red, dejando 32 menos el prefijo bits libres para numerar hosts. Como cada bit libre duplica el conteo, las direcciones totales equivalen a dos elevado a esa cantidad de bits. Dos de esas direcciones se reservan en una subred estandar: la direccion de red de todos ceros y la de difusion de todos unos, asi que el conteo de hosts usables es el total menos dos.",
+    explanationEs: "Una calculadora de hosts de subred te dice cuantas direcciones IP contiene una subred y cuantas pueden asignarse a dispositivos reales, a partir de un solo dato: la longitud del prefijo CIDR. En las redes modernas, las subredes se escriben en notacion CIDR como una direccion seguida de una barra y un prefijo, como /24, donde el prefijo indica cuantos bits iniciales identifican la red. Los bits restantes quedan disponibles para numerar hosts.\n\nEsto importa siempre que planificas o solucionas problemas de una red. Elegir el tamano de subred correcto significa asignar suficientes direcciones para los dispositivos actuales mas el crecimiento, sin dividir el espacio de direcciones en bloques mucho mayores de lo necesario. Un /24 da 254 direcciones usables, comodo para una LAN de oficina tipica, mientras que un /30 da solo dos, ideal para un enlace punto a punto entre routers. Acertar el tamano mantiene el direccionamiento eficiente y el enrutamiento ordenado.\n\nEl calculo se basa en la aritmetica binaria. Una direccion IPv4 tiene 32 bits; el prefijo fija los bits de red, y los 32 menos el prefijo bits de host duplican cada uno el numero de direcciones, asi que el total es dos elevado a esa potencia. Una subred estandar reserva dos direcciones, el identificador de red y la direccion de difusion, asi que los hosts usables equivalen al total menos dos. Prefijos muy pequenos como /31 y /32 son casos especiales usados para enlaces y hosts unicos. Ingenieros de redes, administradores y estudiantes usan una calculadora de hosts de subred para dimensionar subredes IPv4 correctamente.",
+    exampleEs: { inputs: { cidrPrefix: 24 }, explanation: "Un /24 deja 8 bits de host, asi que 2^8 = 256 direcciones totales y 256 − 2 = 254 hosts usables." },
+    faqsEs: [
+      {
+        question: "Por que se restan dos direcciones del total?",
+        answer: "En una subred IPv4 estandar, dos direcciones se reservan y no pueden asignarse a dispositivos. La primera, con todos los bits de host en cero, es la direccion de red que identifica la subred en si. La ultima, con todos los bits de host en uno, es la direccion de difusion usada para alcanzar todos los dispositivos a la vez. Como estas dos no son usables para hosts individuales, el conteo usable es siempre el total menos dos.",
+      },
+      {
+        question: "Que significa el numero del prefijo CIDR?",
+        answer: "El prefijo, el numero tras la barra, cuenta cuantos de los 32 bits de una direccion IPv4 estan fijados como la parte de red. Un prefijo mayor significa mas bits de red y menos bits de host, asi que una subred mas pequena. Un /24 fija 24 bits y deja 8 para hosts, mientras que un /28 fija 28 y deja solo 4. Cada bit adicional de prefijo reduce a la mitad el numero de direcciones de la subred.",
+      },
+      {
+        question: "Como elijo el tamano de subred correcto?",
+        answer: "Cuenta los dispositivos que necesitas direccionar ahora y deja margen para el crecimiento, luego elige el prefijo mas pequeno que ofrezca suficientes hosts usables. Para un enlace punto a punto entre routers, basta un /30 con dos direcciones usables. Una oficina pequena podria usar un /24 para 254 hosts. Sobredimensionar desperdicia espacio de direcciones y complica el enrutamiento, mientras que subdimensionar obliga a renumerar despues, asi que ajusta el bloque a la necesidad real mas un margen.",
+      },
+      {
+        question: "Para que se usan las subredes /31 y /32?",
+        answer: "Son casos especiales. Un /32 identifica una unica direccion de host, usada a menudo para loopbacks o rutas de host. Un /31, definido por RFC 3021, provee exactamente dos direcciones sin reserva separada de red o difusion, siendo eficiente para enlaces punto a punto entre dos routers. Como rompen la regla habitual del menos dos, tratalos como excepciones a proposito. Esta calculadora aplica la reserva estandar, asi que verifica los casos especiales con tu equipo.",
+      },
+      {
+        question: "Se aplica esto tambien a IPv6?",
+        answer: "No, esta calculadora es para IPv4, que usa direcciones de 32 bits. IPv6 usa direcciones de 128 bits y subredes mucho mayores, tipicamente un /64 para una sola red, que contiene un numero astronomicamente grande de direcciones. IPv6 tampoco reserva una direccion de difusion de la misma forma, asi que la regla del menos dos no aplica. Para planificar IPv6, usa una herramienta de subred IPv6 dedicada en lugar de esta calculadora basada en IPv4.",
+      },
+    ],
   },
   {
     id: "webpage-load-time",
@@ -384,6 +576,38 @@ export const technologyR8Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard data transfer arithmetic",
+    slugEs: "calculadora-de-tiempo-de-carga-de-pagina-web",
+    titleEs: "Calculadora de Tiempo de Carga de Pagina Web",
+    shortDescriptionEs: "Estima cuanto tarda una pagina en cargar a una velocidad dada.",
+    seoTitleEs: "Calculadora de Tiempo de Carga Web — Tamano de Pagina y Velocidad",
+    metaDescriptionEs: "Calculadora de tiempo de carga de pagina web gratuita. Introduce el tamano de una pagina en megabytes y una velocidad de conexion en Mbps para estimar cuantos segundos tarda en descargarse la pagina.",
+    primaryKeywordEs: "calculadora de tiempo de carga de pagina web",
+    secondaryKeywordsEs: ["calculadora de tiempo de carga de pagina", "calculadora de velocidad de sitio web", "calculadora de tiempo de descarga"],
+    formulaExplanationEs: "El tamano de la pagina se mide en megabytes pero la velocidad de conexion en megabits por segundo, y un byte son ocho bits, asi que el tamano de la pagina se multiplica por ocho para convertirlo a megabits. Dividir esos megabits entre la velocidad de conexion en megabits por segundo da el tiempo de transferencia en segundos. La estimacion captura el tiempo de descarga bruto que determinan la cantidad de datos y el ancho de banda disponible, que es el factor dominante para el peso total de una pagina.",
+    explanationEs: "Una calculadora de tiempo de carga de pagina web estima cuanto tarda en descargarse una pagina a partir de su tamano total y la velocidad de conexion del visitante. El peso de la pagina, el tamano combinado del HTML, imagenes, scripts, estilos y fuentes que incorpora, ha crecido de forma constante, y en conexiones lentas o moviles ese peso se traduce directamente en tiempo de espera. Estimarlo ayuda a los desarrolladores a entender la experiencia real de usuarios con conexiones mucho mas lentas que una red de oficina.\n\nEsta estimacion importa porque el tiempo de carga moldea tanto la satisfaccion del usuario como los resultados de negocio. Los visitantes abandonan las paginas lentas, y los buscadores tienen en cuenta la velocidad en los rankings, asi que saber como se comporta el peso de una pagina en distintas velocidades guia decisiones sobre optimizar imagenes, aplazar scripts o recortar codigo sin usar. Probar una pagina pesada frente a una velocidad movil tipica suele revelar que un diseno que parece instantaneo en banda ancha rapida es dolorosamente lento para gran parte de la audiencia.\n\nEl calculo convierte unidades y divide. El tamano de la pagina en megabytes se multiplica por ocho para pasar a megabits, coincidiendo con la unidad de megabits por segundo de la velocidad de conexion, y luego se divide entre esa velocidad para dar segundos. Esto modela el tiempo de transferencia bruto, que domina en paginas grandes. El tiempo real tambien incluye la resolucion DNS, la respuesta del servidor, el establecimiento de la conexion y el tiempo de renderizar y ejecutar scripts, asi que la experiencia real es algo mayor. Desarrolladores web, ingenieros de rendimiento y propietarios de sitios usan una calculadora de tiempo de carga.",
+    exampleEs: { inputs: { pageSizeMb: 5, connectionMbps: 20 }, explanation: "5 MB × 8 = 40 megabits, y 40 ÷ 20 Mbps = 2 segundos para descargar." },
+    faqsEs: [
+      {
+        question: "Por que se multiplica el tamano de la pagina por 8?",
+        answer: "El tamano de la pagina se mide en megabytes, pero la velocidad de conexion se expresa en megabits por segundo, y hay ocho bits en un byte. Para dividir unidades compatibles, conviertes los megabytes a megabits multiplicando por ocho. Omitir este paso subestima el tiempo de carga unas ocho veces. Esta distincion entre bits y bytes es el error mas comun en los calculos de ancho de banda, asi que mantener las unidades alineadas es esencial.",
+      },
+      {
+        question: "Incluye esto el tiempo de servidor y renderizado?",
+        answer: "No, esta calculadora estima solo el tiempo de descarga bruto de los datos de la pagina. El tiempo real de carga tambien incluye la resolucion DNS, el servidor generando y enviando el primer byte, el establecimiento de la conexion segura y el tiempo del navegador para analizar HTML, ejecutar JavaScript y pintar la pagina. Esos pasos pueden anadir un retraso notable, sobre todo en sitios con muchos scripts. Toma esta cifra como la parte de transferencia de red.",
+      },
+      {
+        question: "Que tamano de pagina conviene buscar?",
+        answer: "Cuanto mas ligera, mejor, pero una guia comun es mantener el peso total por debajo de unos pocos megabytes, e idealmente en torno a un megabyte o menos para un rendimiento movil rapido. Muchas paginas superan esto por imagenes grandes y scripts pesados. Prueba el peso de tu pagina frente a una velocidad movil realista aqui: si el tiempo de descarga se siente largo, optimizar imagenes, comprimir recursos y eliminar codigo sin usar suelen ser las correcciones de mayor impacto.",
+      },
+      {
+        question: "Por que la misma pagina carga mas lento en el movil?",
+        answer: "Las conexiones moviles suelen ofrecer un ancho de banda menor y mas variable que la banda ancha domestica o de oficina, y mayor latencia, asi que la misma pagina tarda mas en transferirse. La intensidad de la senal, la congestion de la red y el desplazamiento entre celdas reducen la velocidad efectiva. Una pagina que se descarga en un segundo en banda ancha rapida podria tardar muchos segundos con una senal movil debil. Probar frente a velocidades lentas revela la experiencia real de muchos visitantes.",
+      },
+      {
+        question: "Como puedo hacer que mis paginas carguen mas rapido?",
+        answer: "Reduce primero el peso de la pagina: comprime y dimensiona bien las imagenes, usa formatos modernos como WebP o AVIF, y elimina CSS y JavaScript sin usar. Activa la compresion del servidor como gzip o Brotli, y almacena en cache los recursos para que los visitantes recurrentes descarguen menos. Usa una red de entrega de contenidos para servir archivos desde ubicaciones cercanas a los usuarios, reduciendo la latencia. Aplaza los scripts no esenciales para que la pagina sea usable antes.",
+      },
+    ],
   },
   {
     id: "email-storage",
@@ -434,6 +658,38 @@ export const technologyR8Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard storage accumulation model",
+    slugEs: "calculadora-de-almacenamiento-de-correo",
+    titleEs: "Calculadora de Almacenamiento de Correo",
+    shortDescriptionEs: "Proyecta cuanto almacenamiento usara tu correo a lo largo de los anos.",
+    seoTitleEs: "Calculadora de Almacenamiento de Correo — Tamano del Buzon con el Tiempo",
+    metaDescriptionEs: "Calculadora de almacenamiento de correo gratuita. Introduce los correos recibidos por dia, el tamano medio del mensaje y los anos para proyectar cuantos gigabytes acumulara tu buzon con el tiempo.",
+    primaryKeywordEs: "calculadora de almacenamiento de correo",
+    secondaryKeywordsEs: ["calculadora de tamano de buzon", "estimacion de almacenamiento de correo", "calculadora de almacenamiento de bandeja de entrada"],
+    formulaExplanationEs: "El numero de correos que recibes cada dia multiplicado por el tamano medio de cada uno da los megabytes acumulados a diario. Multiplicar por 365 lo extiende a un ano, y por el numero de anos al periodo completo. Dividir entre 1.024 convierte los megabytes a gigabytes. El modelo asume una tasa de llegada estable y que el correo se conserva en lugar de eliminarse, dando el espacio total que ocuparia un buzon si nunca se borrara nada durante el periodo.",
+    explanationEs: "Una calculadora de almacenamiento de correo proyecta cuanto espacio en disco o en la nube acumulara un buzon con el tiempo, a partir de cuantos correos recibes cada dia, su tamano medio y cuantos anos los conservas. El correo se convierte silenciosamente en uno de los mayores almacenes de datos personales y organizativos, y las cuotas de buzon son una fuente comun de frustracion cuando se llenan de forma inesperada, asi que proyectar el crecimiento ayuda a planificar la capacidad antes de alcanzar un limite.\n\nEsta estimacion es util tanto para individuos como para administradores. Un usuario que decide si una cuota de buzon gratuita durara, un equipo de TI que dimensiona el almacenamiento para cientos de empleados, o una empresa que establece politicas de retencion, todos necesitan saber con que rapidez se acumula el correo. Como los adjuntos dominan el tamano, la cifra del mensaje medio importa tanto como el conteo. Ver anos de crecimiento proyectado hace concreta la necesidad de archivar, limpiar o contratar un plan mayor.\n\nEl calculo multiplica el conteo diario de correos por el tamano medio para obtener megabytes por dia, lo escala por 365 dias y el numero de anos, y luego divide entre 1.024 para expresar el total en gigabytes. Asume una tasa de llegada estable y que nada se elimina, dando una acumulacion en el peor de los casos. Los buzones reales se depuran, y los tamanos medios cambian con los habitos de adjuntos, asi que toma el resultado como un techo de planificacion. Individuos, administradores y cualquiera que gestione buzones usan una calculadora de almacenamiento de correo para prever el crecimiento.",
+    exampleEs: { inputs: { emailsPerDay: 50, avgSizeMb: 0.5, years: 5 }, explanation: "50 × 0,5 MB × 365 × 5 = 45.625 MB, que son unos 44,56 GB en cinco anos." },
+    faqsEs: [
+      {
+        question: "Cual es un tamano medio tipico de correo?",
+        answer: "Un correo de texto plano son solo unos pocos kilobytes, pero la mayoria de los mensajes llevan formato, imagenes y firmas, y muchos incluyen adjuntos. Como resultado, los tamanos medios suelen situarse entre 0,1 y 2 megabytes una vez mezclados los adjuntos. Los buzones de empresa con frecuentes adjuntos de documentos e imagenes tienden a ser mayores. Consulta el informe de almacenamiento de tu cliente de correo para hallar tu media real, que impulsa la proyeccion mucho mas que el conteo bruto.",
+      },
+      {
+        question: "Dominan los adjuntos el tamano del buzon?",
+        answer: "Si, casi siempre. El texto de un correo es diminuto comparado con una foto, un PDF, una hoja de calculo o una presentacion adjunta. Un solo adjunto grande puede pesar mas que miles de mensajes de texto. Por eso el tamano medio del mensaje es una palanca tan poderosa en la proyeccion: un buzon que recibe con regularidad adjuntos grandes crece mucho mas rapido que uno que lleva sobre todo texto. Reducir o descargar los adjuntos es la forma mas eficaz de controlar el crecimiento.",
+      },
+      {
+        question: "Como puedo reducir mi uso de almacenamiento de correo?",
+        answer: "Elimina los adjuntos grandes que ya no necesites, o guardalos en otro sitio y quitalos del buzon. Vacia con regularidad las carpetas de spam, papelera y enviados, que se acumulan en silencio. Usa herramientas de busqueda que ordenen por tamano para encontrar los mayores consumidores de espacio. Configura el archivado para mover el correo antiguo fuera de la cuota principal. Para organizaciones, las politicas de retencion que expiran el correo antiguo mantienen el almacenamiento predecible.",
+      },
+      {
+        question: "Asume esto que nunca elimino correo?",
+        answer: "Si, la proyeccion asume una tasa de llegada estable sin que se elimine nada, asi que representa una acumulacion en el peor de los casos si conservaras cada mensaje. En la practica la mayoria de la gente elimina spam, boletines y adjuntos grandes con el tiempo, asi que el tamano real del buzon crece mas despacio. Usa la cifra como un techo de planificacion para decisiones de cuota y almacenamiento, luego ajustala a la baja segun la proporcion de correo que esperes eliminar o archivar.",
+      },
+      {
+        question: "Por que dividir entre 1.024 para obtener gigabytes?",
+        answer: "El calculo trabaja en megabytes, y en la convencion binaria usada por la mayoria de los sistemas operativos, un gigabyte equivale a 1.024 megabytes. Dividir el total de megabytes entre 1.024 lo convierte a gigabytes en esa base. Algunos proveedores usan en cambio 1.000 megabytes por gigabyte, lo que da una cifra de gigabytes algo mayor para los mismos datos. La diferencia es menor para planificar, pero explica pequenas discrepancias entre herramientas y pantallas de cuota.",
+      },
+    ],
   },
   {
     id: "device-battery-life",
@@ -483,6 +739,38 @@ export const technologyR8Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Battery capacity and current relationship (electronics)",
+    slugEs: "calculadora-de-duracion-de-bateria-de-dispositivo",
+    titleEs: "Calculadora de Duracion de Bateria de Dispositivo",
+    shortDescriptionEs: "Estima la autonomia de una bateria segun su capacidad y consumo.",
+    seoTitleEs: "Calculadora de Duracion de Bateria — Autonomia Segun mAh y Consumo",
+    metaDescriptionEs: "Calculadora de duracion de bateria de dispositivo gratuita. Introduce la capacidad de una bateria en mAh y el consumo del dispositivo en mA para estimar cuantas horas funcionara con una carga.",
+    primaryKeywordEs: "calculadora de duracion de bateria",
+    secondaryKeywordsEs: ["calculadora de autonomia de bateria", "calculadora de mah a horas", "calculadora de bateria de dispositivo"],
+    formulaExplanationEs: "La capacidad de la bateria en miliamperios-hora indica cuanta carga contiene la celda: un miliamperio-hora es la carga que entrega un miliamperio fluyendo durante una hora. Dividir la capacidad entre la corriente que consume el dispositivo en miliamperios da el numero de horas que esa corriente puede fluir antes de agotar la carga. Las unidades se cancelan limpiamente porque miliamperios-hora divididos entre miliamperios dejan horas, lo que hace de esta una estimacion directa de la autonomia a un consumo estable.",
+    explanationEs: "Una calculadora de duracion de bateria de dispositivo estima cuanto tiempo alimentara una bateria a un dispositivo a partir de dos cifras: la capacidad de la bateria en miliamperios-hora (mAh) y el consumo medio de corriente del dispositivo en miliamperios (mA). Esta sencilla proporcion sustenta las estimaciones de autonomia de telefonos, tabletas, wearables, drones, linternas e innumerables proyectos de electronica, dando una idea rapida de cuanto deberia durar una carga bajo una carga dada.\n\nLa estimacion es util tanto para consumidores que comparan dispositivos como para creadores que disenan los suyos. Quien elige una bateria externa quiere saber cuantas cargas de telefono entrega; un aficionado que construye un proyecto con Arduino o Raspberry Pi necesita dimensionar una bateria para una autonomia objetivo; un piloto de drones estima el tiempo de vuelo antes de que el paquete se agote. Como la autonomia escala directamente con la capacidad e inversamente con el consumo, la calculadora deja claro de inmediato el equilibrio entre una bateria mayor y un dispositivo mas exigente.\n\nEl calculo funciona porque los miliamperios-hora miden la carga almacenada y los miliamperios miden la tasa a la que se consume la carga, asi que dividir la capacidad entre el consumo deja un resultado en horas. Las baterias reales no alcanzan este ideal: las perdidas de eficiencia en la conversion de voltaje, la capacidad que decae con la edad y el frio, y el consumo que varia con la actividad reducen la autonomia real, tipicamente al 70 a 90 por ciento de la cifra teorica. Toma el resultado como un limite superior optimista. Consumidores, aficionados e ingenieros usan una calculadora de duracion de bateria para estimar y comparar autonomias.",
+    exampleEs: { inputs: { batteryMah: 4000, deviceDrawMa: 500 }, explanation: "4000 mAh ÷ 500 mA = 8 horas de autonomia a un consumo estable de 500 mA." },
+    faqsEs: [
+      {
+        question: "Que significa mAh en una bateria?",
+        answer: "mAh significa miliamperios-hora, una medida de cuanta carga electrica almacena una bateria. Un miliamperio-hora es la carga que entrega una corriente de un miliamperio fluyendo durante una hora. Una bateria de 4.000 mAh puede, en teoria, suministrar 4.000 miliamperios durante una hora, o 500 miliamperios durante ocho horas. Un valor mAh mayor significa mas energia almacenada a un voltaje dado, y por tanto mayor autonomia para el mismo dispositivo.",
+      },
+      {
+        question: "Por que la autonomia real es menor que la calculada?",
+        answer: "Varias perdidas reducen la autonomia real por debajo de la cifra teorica. Los reguladores y convertidores de voltaje desperdician algo de energia como calor. El consumo de corriente de un dispositivo varia con la actividad, superando a menudo la media que introduces durante los picos. Las baterias pierden capacidad al envejecer y en frio, y los fabricantes clasifican la capacidad de forma optimista. Juntos hacen que la autonomia real sea normalmente del 70 al 90 por ciento del valor calculado.",
+      },
+      {
+        question: "Como encuentro el consumo de corriente de mi dispositivo?",
+        answer: "Consulta las especificaciones o la hoja de datos del dispositivo, que a menudo listan el consumo de corriente tipico y maximo. Para proyectos de electronica, un multimetro o un medidor de potencia USB colocado en el circuito mide el consumo real directamente, que es el metodo mas preciso. El consumo varia con lo que hace el dispositivo, asi que usa una media que refleje tu uso real. Si solo se da la potencia en vatios, divide entre el voltaje de la bateria para estimar la corriente.",
+      },
+      {
+        question: "Importa el voltaje en este calculo?",
+        answer: "Esta formula simple asume que la bateria y el consumo nominal del dispositivo comparten el mismo voltaje, lo que se cumple al comparar un dispositivo con su propia bateria. Si los voltajes difieren, o conviertes entre ellos, deberias trabajar en terminos de energia usando vatios-hora, que se obtienen multiplicando la capacidad en amperios-hora por el voltaje. Para estimaciones de voltaje coincidente, dividir mAh entre mA da horas directamente, lo que cubre la mayoria de las comparaciones cotidianas.",
+      },
+      {
+        question: "Como puedo prolongar la duracion de la bateria de mi dispositivo?",
+        answer: "Reduce el consumo de corriente, ya que la autonomia es inversamente proporcional a el. Baja el brillo de la pantalla, desactiva radios sin usar como Bluetooth y GPS, cierra aplicaciones en segundo plano y activa los modos de ahorro de energia. Para proyectos, pon los microcontroladores en reposo entre tareas, lo que reduce drasticamente el consumo medio. Mantener la bateria a temperaturas moderadas conserva la capacidad. Una bateria de mayor capacidad tambien ayuda, pero recortar la carga suele ser lo mas eficaz.",
+      },
+    ],
   },
   {
     id: "print-size",
@@ -534,5 +822,37 @@ export const technologyR8Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard print resolution (pixels ÷ DPI)",
+    slugEs: "calculadora-de-tamano-de-impresion",
+    titleEs: "Calculadora de Tamano de Impresion",
+    shortDescriptionEs: "Halla las dimensiones de impresion de una imagen a un DPI dado.",
+    seoTitleEs: "Calculadora de Tamano de Impresion — Pixeles y DPI a Pulgadas",
+    metaDescriptionEs: "Calculadora de tamano de impresion gratuita. Introduce el ancho y alto en pixeles de una imagen y un DPI para hallar cuan grande se imprime en pulgadas. Comprueba la resolucion antes de imprimir fotos.",
+    primaryKeywordEs: "calculadora de tamano de impresion",
+    secondaryKeywordsEs: ["calculadora de dpi", "calculadora de pixeles a pulgadas", "calculadora de tamano de impresion de imagen"],
+    formulaExplanationEs: "El DPI, puntos por pulgada, indica cuantos pixeles se empaquetan en cada pulgada de una impresion. Dividir el ancho en pixeles de una imagen entre el DPI da cuantas pulgadas de ancho se imprime, y dividir el alto en pixeles entre el DPI da la altura impresa. Un DPI mayor comprime los mismos pixeles en un area menor, produciendo una impresion mas nitida pero mas pequena, mientras que un DPI menor los reparte por mas pulgadas, dando un resultado mayor pero mas tosco.",
+    explanationEs: "Una calculadora de tamano de impresion te dice cuan grande se imprimira una imagen, en pulgadas, a partir de sus dimensiones en pixeles y la resolucion de impresion en puntos por pulgada (DPI). El mismo archivo puede imprimirse en muchos tamanos segun cuan densamente se empaqueten sus pixeles, asi que conocer la relacion entre pixeles y DPI es esencial para producir impresiones nitidas y evitar resultados borrosos y pixelados por estirar una imagen demasiado.\n\nEsto importa a fotografos, disenadores y cualquiera que encargue impresiones. Los laboratorios y las imprentas recomiendan unos 300 DPI para resultados nitidos a distancia de visualizacion normal, asi que una imagen dada tiene un tamano maximo al que sigue viendose nitida. Comprobar esto antes de imprimir evita la decepcion de una impresion grande que revela detalle suave y bloqueado. Tambien funciona a la inversa: para un poster visto de lejos, un DPI menor es aceptable, permitiendo que el mismo archivo se imprima mucho mas grande.\n\nEl calculo es una division sencilla. El DPI define cuantos pixeles ocupan cada pulgada impresa, asi que dividir el ancho en pixeles entre el DPI da el ancho de impresion en pulgadas, y lo mismo para el alto. Reducir el DPI a la mitad duplica el tamano de impresion pero reparte los pixeles mas finos, reduciendo la nitidez. Como la aritmetica es exacta, la calculadora deja claro de un vistazo el equilibrio entre tamano de impresion y calidad. Fotografos, disenadores y compradores de impresiones usan una calculadora de tamano de impresion para ajustar la resolucion de imagen al tamano que desean imprimir.",
+    exampleEs: { inputs: { pixelsWide: 3000, pixelsTall: 2400, dpi: 300 }, explanation: "3000 ÷ 300 = 10 pulgadas de ancho y 2400 ÷ 300 = 8 pulgadas de alto, una impresion nitida de 10×8." },
+    faqsEs: [
+      {
+        question: "Que DPI debo usar para imprimir?",
+        answer: "Para impresiones fotograficas y material detallado visto de cerca, 300 DPI es el estandar para resultados nitidos y profesionales. El arte fino y el trabajo de alta gama a veces usan mas. Las impresiones de gran formato como posters y pancartas, vistas a distancia, se ven bien a 150 DPI o incluso menos, porque el ojo no puede distinguir los puntos individuales de lejos. Ajusta el DPI a la distancia de visualizacion: ver de cerca exige mas DPI, ver de lejos tolera menos.",
+      },
+      {
+        question: "Cual es la diferencia entre DPI y PPI?",
+        answer: "PPI, pixeles por pulgada, describe la densidad de pixeles de una imagen digital o pantalla, mientras que DPI, puntos por pulgada, se refiere tecnicamente a los puntos de tinta que deposita una impresora. En el uso cotidiano los terminos se emplean a menudo indistintamente para los pixeles por pulgada de una impresion, que es como esta calculadora trata el DPI. La idea clave es la misma: cuantos pixeles de imagen se asignan a cada pulgada de la impresion final.",
+      },
+      {
+        question: "Puedo imprimir una imagen mayor que su tamano nativo?",
+        answer: "Puedes, pero la calidad sufre. Imprimir a un DPI menor reparte los pixeles existentes por mas pulgadas, y pasado cierto punto los pixeles individuales se vuelven visibles como suavidad o bloques. El software de escalado puede anadir pixeles por interpolacion, lo que ayuda algo pero no puede inventar detalle real que nunca se capturo. Para el resultado mas nitido, manten el tamano de impresion dentro de lo que soporta el conteo de pixeles a tu DPI elegido, idealmente en torno a 300.",
+      },
+      {
+        question: "Cuantos megapixeles necesito para una impresion dada?",
+        answer: "Multiplica el ancho en pixeles deseado por el alto y divide entre un millon para obtener megapixeles. Una impresion nitida de 10 por 8 pulgadas a 300 DPI necesita 3000 por 2400 pixeles, unos 7,2 megapixeles. Una impresion de 4 por 6 necesita solo unos 2 megapixeles. Las impresiones mayores necesitan proporcionalmente mas, aunque el DPI puede relajarse para impresiones grandes vistas de lejos. Esta calculadora ayuda a comprobar si tu archivo tiene suficientes pixeles.",
+      },
+      {
+        question: "Debe coincidir la relacion de aspecto con el papel?",
+        answer: "Para que la imagen llene el papel estandar sin recorte, su relacion de ancho a alto debe coincidir con la del papel. Una foto 3:2 encaja exactamente en una impresion de 6 por 4, pero imprimirla en papel de 5 por 4 requiere recorte o deja bordes. Esta calculadora da el tamano de impresion a la relacion propia de tu imagen; si difiere de tu papel objetivo, planea recortar, anadir bordes o elegir un tamano de papel que coincida con la relacion.",
+      },
+    ],
   },
 ];

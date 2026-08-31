@@ -49,6 +49,38 @@ export const scienceR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard chemistry (molar concentration)",
+    slugEs: "calculadora-de-molaridad",
+    titleEs: "Calculadora de Molaridad",
+    shortDescriptionEs: "Halla la concentración de una disolución a partir de los moles y el volumen.",
+    seoTitleEs: "Calculadora de Molaridad — Concentración en Moles por Litro",
+    metaDescriptionEs: "Calculadora de molaridad gratuita. Introduce los moles de soluto y el volumen de la disolución en litros para obtener al instante la concentración molar en mol/L. Ideal para el laboratorio de química y las tareas escolares.",
+    primaryKeywordEs: "calculadora de molaridad",
+    secondaryKeywordsEs: ["calculadora de concentración molar", "calculadora de moles por litro", "calculadora de concentración de disolución"],
+    formulaExplanationEs: "La molaridad expresa la concentración como el número de moles de soluto disueltos en cada litro de disolución, de modo que dividir los moles totales entre el volumen total indica la cantidad de sustancia contenida en una unidad de líquido. La fórmula funciona porque los moles cuentan el número real de partículas presentes mientras que los litros miden el espacio que ocupan, y su cociente permanece fijo en una disolución homogénea bien mezclada. Ese cociente constante es lo que permite a los químicos escalar una receta hacia arriba o hacia abajo manteniendo la misma reactividad.",
+    explanationEs: "La molaridad es la unidad de concentración fundamental de la química, y esta calculadora de molaridad la devuelve al instante a partir de los moles de soluto y el volumen de disolución que introduces. Expresada en moles por litro, la molaridad indica exactamente cuántas partículas de una sustancia disuelta hay en cada litro de líquido, que es la cifra que exigen la mayoría de las reacciones, valoraciones y problemas de dilución.\n\nEntender la molaridad importa porque la estequiometría de una reacción se cuenta en partículas, no en gramos. Dos disoluciones de igual molaridad contienen el mismo número de unidades reactivas por litro aunque sus masas difieran mucho, así que un químico que usa una calculadora de molaridad puede predecir cuánto de un reactivo neutralizará o se combinará con otro. Esto sustenta todo, desde preparar un tampón hasta dosificar un reactivo en la industria.\n\nLa fórmula funciona porque la molaridad es simplemente moles divididos entre litros, un cociente intensivo que permanece constante sin importar cuánta disolución tomes. Estudiantes, técnicos de laboratorio, farmacéuticos e investigadores confían en una calculadora de molaridad para preparar disoluciones estándar con precisión, evitar errores aritméticos y moverse con rapidez entre concentración, volumen y cantidad de sustancia al planificar un experimento.",
+    exampleEs: { inputs: { moles: 2, volumeLiters: 4 }, explanation: "2 mol ÷ 4 L = 0,5 mol/L, una disolución 0,5 M." },
+    faqsEs: [
+      {
+        question: "¿Qué unidades debo introducir para los moles y el volumen?",
+        answer: "Introduce la cantidad de soluto en moles y el volumen total de la disolución en litros, y el resultado sale directamente en moles por litro, la unidad estándar de molaridad. Si tu volumen está en mililitros, divídelo primero entre 1.000, porque 1.000 mL equivalen a un litro. Mantenerte en moles y litros garantiza que la concentración coincida con los valores impresos en los frascos de reactivos y las tablas de los libros de texto.",
+      },
+      {
+        question: "¿Cómo convierto gramos de soluto en moles?",
+        answer: "Divide la masa en gramos entre la masa molar de la sustancia en gramos por mol, que se obtiene de la tabla periódica sumando las masas atómicas de la fórmula. Por ejemplo, el cloruro de sodio tiene una masa molar cercana a 58,44 g/mol, así que 58,44 g equivalen a un mol. Una vez que tengas los moles, introduce esa cifra aquí junto con el volumen para obtener la molaridad.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre molaridad y molalidad?",
+        answer: "La molaridad divide los moles de soluto entre los litros de disolución, mientras que la molalidad divide los moles de soluto entre los kilogramos de disolvente. La molaridad es más fácil de medir con material volumétrico pero varía ligeramente con la temperatura porque los líquidos se dilatan. La molalidad ignora por completo la temperatura ya que la masa no cambia. Para la mayoría de la química de laboratorio y las valoraciones, la molaridad es la opción práctica que ofrece esta calculadora.",
+      },
+      {
+        question: "¿Por qué cambia la molaridad cuando añado más agua?",
+        answer: "Añadir agua aumenta el volumen de la disolución mientras que el número de moles de soluto permanece igual, así que el cociente entre moles y litros disminuye y la disolución se vuelve más diluida. Esta es la base de la ecuación de dilución M1V1 = M2V2. Si quieres una molaridad objetivo concreta, calcula el volumen final necesario y completa con cuidado hasta esa marca.",
+      },
+      {
+        question: "¿Puede la molaridad ser mayor que uno?",
+        answer: "Sí. Una molaridad por encima de uno simplemente significa que hay más de un mol de soluto disuelto por litro de disolución, algo común en ácidos concentrados y reactivos madre. El ácido clorhídrico concentrado, por ejemplo, ronda los 12 M. El límite superior lo fija la solubilidad de la sustancia, el punto en el que no se disuelve más soluto y cualquier exceso se deposita como sólido.",
+      },
+    ],
   },
   {
     id: "half-life",
@@ -100,6 +132,38 @@ export const scienceR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard physics (exponential radioactive decay law)",
+    slugEs: "calculadora-de-vida-media",
+    titleEs: "Calculadora de Vida Media",
+    shortDescriptionEs: "Halla la cantidad restante tras la desintegración radiactiva.",
+    seoTitleEs: "Calculadora de Vida Media — Cantidad Restante por Desintegración Radiactiva",
+    metaDescriptionEs: "Calculadora de vida media gratuita. Introduce la cantidad inicial, la vida media y el tiempo transcurrido para saber cuánta sustancia queda y el porcentaje restante tras la desintegración.",
+    primaryKeywordEs: "calculadora de vida media",
+    secondaryKeywordsEs: ["calculadora de desintegración radiactiva", "fórmula de vida media", "calculadora de cantidad restante"],
+    formulaExplanationEs: "La desintegración radiactiva es un proceso de primer orden, lo que significa que una fracción fija de los átomos restantes se desintegra en cada intervalo igual, y no un número fijo. La vida media es el intervalo en el que se desintegra exactamente la mitad de lo presente, así que tras cada vida media la cantidad se multiplica de nuevo por un medio. Elevar 0,5 a la potencia del número de vidas medias transcurridas, t dividido entre t½, capta este medio-decaimiento repetido de forma continua, por lo que la cantidad restante cae a lo largo de una curva exponencial suave en lugar de bajar en escalones.",
+    explanationEs: "La vida media describe con qué rapidez se desintegra una sustancia inestable, y esta calculadora de vida media te dice exactamente cuánto queda tras un tiempo dado. Introduce la cantidad inicial, la vida media del isótopo y el tiempo transcurrido en la misma unidad de tiempo, y devuelve tanto la cantidad restante como el porcentaje del original que sobrevive.\n\nLa vida media importa mucho más allá de la física nuclear. Marca el plazo para datar por carbono objetos antiguos, dicta cuánto tiempo permanece activo un trazador médico en el cuerpo, rige el almacenamiento de residuos radiactivos e incluso modela cómo cae la concentración de un fármaco entre dosis. Como la desintegración es exponencial y no lineal, la intuición suele engañar a la gente, así que una calculadora de vida media mantiene las cuentas honestas.\n\nLa fórmula funciona porque cada vida media multiplica la cantidad restante por un medio, y el tiempo transcurrido dividido entre la vida media cuenta cuántos de esos medio-decaimientos han ocurrido. Tras una vida media queda la mitad; tras dos, un cuarto; tras tres, un octavo, y así a lo largo de una curva exponencial suave. Estudiantes, químicos, radiólogos y arqueólogos usan una calculadora de vida media para convertir la constante de desintegración de un isótopo en una respuesta concreta y útil.",
+    exampleEs: { inputs: { initialAmount: 100, halfLifeValue: 5, elapsedTime: 15 }, explanation: "Tras 3 vidas medias (15 ÷ 5), 100 × 0,5³ = 12,5 unidades restantes, es decir un 12,5%." },
+    faqsEs: [
+      {
+        question: "¿La vida media y el tiempo transcurrido deben usar las mismas unidades?",
+        answer: "Sí, y este es el error más común. Tanto la vida media como el tiempo transcurrido deben expresarse en la misma unidad de tiempo, ya sean segundos, días o años, porque la fórmula solo usa su cociente. Si la vida media es de 8 días, introduce también el tiempo transcurrido en días. Mezclar unidades, como una vida media en años con un tiempo en días, produce un resultado enormemente equivocado.",
+      },
+      {
+        question: "¿En qué unidad se expresa la cantidad restante?",
+        answer: "La cantidad restante conserva la unidad que hayas usado para la cantidad inicial, porque la fórmula multiplica por una fracción pura. Introduce gramos y obtienes gramos; introduce número de átomos o becquerelios de actividad y la respuesta queda en esas unidades. La salida de porcentaje aparte no tiene unidades y simplemente indica qué fracción de la cantidad original sigue sobreviviendo tras el tiempo transcurrido.",
+      },
+      {
+        question: "¿Por qué la sustancia nunca desaparece del todo?",
+        answer: "La desintegración exponencial reduce a la mitad la cantidad restante en cada vida media pero nunca llega exactamente a cero, porque la mitad de cualquier cantidad positiva sigue siendo positiva. En teoría siempre queda un rastro. En la práctica, tras unas diez vidas medias queda menos del 0,1%, lo que suele considerarse prácticamente nulo. Por eso la guía de almacenamiento seguro de residuos radiactivos se cita a menudo como unas diez vidas medias.",
+      },
+      {
+        question: "¿Puedo usar esta calculadora para dosificar fármacos o medicina?",
+        answer: "El mismo modelo exponencial describe cómo se eliminan muchos fármacos del torrente sanguíneo, así que la vida media biológica predice cómo cae una concentración entre dosis. Sin embargo, la farmacología real implica absorción, distribución y un metabolismo individual que esta calculadora sencilla no modela. Úsala para entender el concepto, pero sigue siempre las instrucciones de dosificación de un profesional y nunca ajustes la medicación basándote en una estimación general de desintegración.",
+      },
+      {
+        question: "¿Cómo se relaciona la vida media con la constante de desintegración?",
+        answer: "La vida media y la constante de desintegración λ son dos formas de describir la misma velocidad. Están ligadas por t½ = ln(2) ÷ λ, donde ln(2) vale unos 0,693. Una constante de desintegración mayor implica una desintegración más rápida y una vida media más corta. Esta calculadora trabaja directamente a partir de la vida media, que suele ser el valor citado en las tablas de referencia, así que no necesitas la constante de desintegración.",
+      },
+    ],
   },
   {
     id: "potential-energy",
@@ -150,6 +214,38 @@ export const scienceR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard physics (gravitational potential energy)",
+    slugEs: "calculadora-de-energia-potencial",
+    titleEs: "Calculadora de Energía Potencial",
+    shortDescriptionEs: "Energía potencial gravitatoria a partir de la masa y la altura.",
+    seoTitleEs: "Calculadora de Energía Potencial — Energía Potencial Gravitatoria (mgh)",
+    metaDescriptionEs: "Calculadora gratuita de energía potencial gravitatoria. Introduce masa, altura y gravedad para hallar la energía potencial en julios con PE = mgh. Ideal para tareas de física.",
+    primaryKeywordEs: "calculadora de energía potencial",
+    secondaryKeywordsEs: ["calculadora de energía potencial gravitatoria", "calculadora mgh", "calculadora de la fórmula de energía potencial"],
+    formulaExplanationEs: "La energía potencial gravitatoria es el trabajo realizado contra la gravedad para elevar un objeto, y el trabajo es igual a la fuerza por la distancia. La fuerza gravitatoria hacia abajo sobre una masa es m por g, así que elevarla una altura h almacena exactamente m·g·h julios de energía. La fórmula funciona porque el campo gravitatorio cerca de la superficie de la Tierra es prácticamente uniforme, lo que mantiene la fuerza constante durante la elevación, de modo que la energía almacenada crece en proporción directa tanto a la masa elevada como a la altura a la que se eleva.",
+    explanationEs: "La energía potencial es la energía que un objeto almacena por su posición en un campo gravitatorio, y esta calculadora de energía potencial la halla a partir de la masa, la altura y la intensidad de la gravedad. Usa la clásica relación PE = mgh y expresa el resultado en julios, la unidad del SI de energía.\n\nLa energía potencial gravitatoria importa porque se convierte directamente en otras formas. Un peso elevado en un reloj de pesas, el agua retenida tras una presa hidroeléctrica y un vagón de montaña rusa en lo alto de una colina almacenan energía potencial que se transforma en energía cinética al descender. Estimar esa energía almacenada es esencial para los ingenieros que dimensionan una presa, para los estudiantes de física que resuelven problemas de conservación de la energía y para cualquiera que analice cuánto trabajo cuesta levantar una carga.\n\nLa fórmula funciona porque elevar un objeto contra la gravedad realiza un trabajo igual a la fuerza gravitatoria constante, m por g, multiplicada por la altura ascendida. Duplicar la masa o la altura duplica la energía almacenada. Al permitirte cambiar el valor de la gravedad, esta calculadora de energía potencial también sirve para la Luna, Marte o cualquier otro cuerpo, de modo que puedes comparar cuánta energía almacena la misma elevación en distintos entornos gravitatorios.",
+    exampleEs: { inputs: { mass: 2, height: 10, gravity: 9.81 }, explanation: "2 kg × 9,81 m/s² × 10 m = 196,2 J de energía almacenada." },
+    faqsEs: [
+      {
+        question: "¿Qué valor de gravedad debo usar?",
+        answer: "Para problemas cotidianos en la Tierra, usa 9,81 m/s², la gravedad media estándar en la superficie, que ya es el valor por defecto. En la Luna usa unos 1,62 m/s², en Marte unos 3,71 m/s² y en Júpiter aproximadamente 24,79 m/s². Cambiar este campo hace que la misma masa y altura den distinta energía almacenada, por lo que la energía potencial depende del entorno gravitatorio, no solo del objeto.",
+      },
+      {
+        question: "¿Desde dónde se mide la altura?",
+        answer: "La altura se mide desde el nivel de referencia que elijas llamar cero, normalmente el suelo, una mesa o el punto más bajo del movimiento. La energía potencial siempre es relativa a esa referencia, así que solo las diferencias de altura tienen sentido físico. Mientras seas coherente sobre dónde sitúas el cero, el cambio de energía potencial entre dos posiciones sale correctamente.",
+      },
+      {
+        question: "¿Por qué la energía potencial se mide en julios?",
+        answer: "El julio es la unidad del SI de energía, definida como un newton de fuerza actuando sobre un metro. Como PE = mgh multiplica una masa en kilogramos por una aceleración en metros por segundo al cuadrado y una altura en metros, las unidades se combinan en kilogramos-metro-cuadrado por segundo-cuadrado, que es exactamente un julio. Por tanto, mantener tus datos en kilogramos y metros devuelve la energía directamente en julios.",
+      },
+      {
+        question: "¿Cómo se relaciona la energía potencial con la energía cinética?",
+        answer: "Cuando un objeto cae, su energía potencial se convierte en energía cinética mientras la energía mecánica total permanece constante, ignorando la resistencia del aire. En lo alto de una caída la energía es toda potencial; abajo es toda cinética. Este es el principio de conservación de la energía, y permite hallar la velocidad al final igualando mgh con un medio de m por v al cuadrado.",
+      },
+      {
+        question: "¿Funciona la fórmula mgh para alturas muy grandes?",
+        answer: "La fórmula mgh supone que la gravedad es constante, lo que se cumple bien cerca de la superficie de un planeta pero deja de valer a alturas muy grandes, como las órbitas de satélites, donde la gravedad se debilita con la distancia. Para esos casos los físicos usan la fórmula más general de energía potencial gravitatoria, que depende del inverso de la distancia. Para edificios, colinas y elevaciones cotidianas, mgh es precisa y esta calculadora es apropiada.",
+      },
+    ],
   },
   {
     id: "momentum",
@@ -199,6 +295,38 @@ export const scienceR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard physics (linear momentum)",
+    slugEs: "calculadora-de-momento-lineal",
+    titleEs: "Calculadora de Momento Lineal",
+    shortDescriptionEs: "Calcula el momento lineal a partir de la masa y la velocidad.",
+    seoTitleEs: "Calculadora de Momento Lineal — Cantidad de Movimiento (p = mv)",
+    metaDescriptionEs: "Calculadora de momento lineal gratuita. Introduce la masa y la velocidad para hallar el momento lineal en kilogramos-metro por segundo con p = mv. Ideal para física y colisiones.",
+    primaryKeywordEs: "calculadora de momento lineal",
+    secondaryKeywordsEs: ["calculadora de cantidad de movimiento", "calculadora p=mv", "momento de masa y velocidad"],
+    formulaExplanationEs: "El momento lineal es la cantidad de movimiento que lleva un objeto, definida como su masa multiplicada por su velocidad, de modo que un objeto más pesado o más rápido tiene más. La fórmula funciona porque el momento mide cuánto esfuerzo se necesita para detener el objeto, y ese esfuerzo aumenta tanto con la cantidad de materia en movimiento como con su rapidez. Como la velocidad es un vector, el momento también tiene dirección, por lo que un signo o dirección acompaña al número y por lo que el momento se conserva en las colisiones.",
+    explanationEs: "El momento lineal capta cuánto movimiento lleva un objeto, y esta calculadora de momento lineal lo halla multiplicando la masa por la velocidad. El resultado, expresado en kilogramos-metro por segundo, indica lo difícil que sería detener el objeto y cuánta fuerza aporta en una colisión.\n\nEl momento importa porque se conserva: en cualquier colisión o explosión sin fuerzas externas, el momento total antes es igual al momento total después. Ese único principio permite a físicos e ingenieros predecir el resultado de choques de coches, lanzamientos de cohetes, colisiones de bolas de billar y el retroceso de armas de fuego sin seguir cada fuerza interna. Una calculadora de momento lineal convierte cifras crudas de masa y velocidad en la magnitud conservada que hace posibles esas predicciones.\n\nLa fórmula funciona porque el momento es el producto de cuánta materia se mueve y con qué rapidez, así que duplicar la masa o la velocidad duplica el momento. La velocidad es un vector, por lo que el momento tiene dirección además de tamaño; introducir aquí una velocidad negativa representa el movimiento en sentido contrario, algo esencial al sumar los momentos de objetos que se acercan entre sí. Estudiantes, analistas de accidentes y científicos del deporte recurren a una calculadora de momento lineal para cuantificar el movimiento con precisión.",
+    exampleEs: { inputs: { mass: 3, velocity: 4 }, explanation: "3 kg × 4 m/s = 12 kg·m/s de momento lineal." },
+    faqsEs: [
+      {
+        question: "¿Qué unidades usa el resultado del momento?",
+        answer: "Con la masa en kilogramos y la velocidad en metros por segundo, el momento sale en kilogramos-metro por segundo, la unidad del SI. No hay una unidad con nombre propio para el momento como sí la hay para la fuerza o la energía. Si tu velocidad está en kilómetros por hora, conviértela primero a metros por segundo dividiendo entre 3,6, para que el momento quede expresado en la combinación estándar del SI.",
+      },
+      {
+        question: "¿Por qué pueden ser negativos la velocidad y el momento?",
+        answer: "La velocidad es un vector, es decir, tiene dirección, y el momento hereda esa dirección. Un valor negativo simplemente indica movimiento opuesto a lo que hayas elegido como sentido positivo. Este signo es crucial en los problemas de colisión: dos objetos que se acercan llevan momentos de signo opuesto, y sumarlos respetando los signos da el momento total correcto del sistema antes del impacto.",
+      },
+      {
+        question: "¿En qué se diferencia el momento de la energía cinética?",
+        answer: "Ambos describen el movimiento pero de forma distinta. El momento es masa por velocidad y es un vector que se conserva en toda colisión. La energía cinética es un medio de la masa por la velocidad al cuadrado, es un escalar y solo se conserva en colisiones perfectamente elásticas. Como la energía cinética depende de la velocidad al cuadrado, duplicar la rapidez cuadruplica la energía pero solo duplica el momento, así que ambas magnitudes responden de forma diferente a los cambios de rapidez.",
+      },
+      {
+        question: "¿Qué significa la conservación del momento?",
+        answer: "La conservación del momento establece que, cuando ninguna fuerza externa actúa sobre un sistema, su momento total permanece constante pase lo que pase en su interior. En una colisión, el momento combinado de todos los objetos antes del impacto es igual al momento combinado después. Esto permite despejar una velocidad final desconocida y explica la propulsión de cohetes, el retroceso y la forma en que las bolas de billar transfieren movimiento al chocar.",
+      },
+      {
+        question: "¿Tiene momento un objeto en reposo?",
+        answer: "No. Si la velocidad es cero, entonces masa por velocidad es cero, así que un objeto en reposo no tiene momento por muy pesado que sea. El momento solo existe mientras algo se mueve. Por eso un camión aparcado no ejerce ninguna fuerza de impacto por su movimiento, mientras que el mismo camión a velocidad de autopista lleva un momento enorme que exige una gran fuerza actuando durante un tiempo para detenerse.",
+      },
+    ],
   },
   {
     id: "acceleration",
@@ -249,6 +377,38 @@ export const scienceR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard physics (kinematics, average acceleration)",
+    slugEs: "calculadora-de-aceleracion",
+    titleEs: "Calculadora de Aceleración",
+    shortDescriptionEs: "Halla la aceleración a partir del cambio de velocidad en el tiempo.",
+    seoTitleEs: "Calculadora de Aceleración — Cambio de Velocidad en el Tiempo",
+    metaDescriptionEs: "Calculadora de aceleración gratuita. Introduce la velocidad inicial, la velocidad final y el tiempo para hallar la aceleración en metros por segundo al cuadrado. Ideal para tareas de física.",
+    primaryKeywordEs: "calculadora de aceleración",
+    secondaryKeywordsEs: ["calculadora de aceleración media", "aceleración por velocidad y tiempo", "calculadora de cambio de velocidad"],
+    formulaExplanationEs: "La aceleración es la rapidez con que cambia la velocidad, así que es igual al cambio de velocidad dividido entre el tiempo que tarda ese cambio. Restar la velocidad inicial de la velocidad final da cuánto cambió la rapidez, y dividir entre el tiempo transcurrido reparte ese cambio de manera uniforme a lo largo del intervalo para dar la aceleración media. La fórmula funciona porque la aceleración se define como la pendiente de la gráfica velocidad-tiempo, y en cualquier intervalo esa pendiente es simplemente el aumento de velocidad entre el transcurso de tiempo.",
+    explanationEs: "La aceleración mide con qué rapidez cambia la velocidad de un objeto, y esta calculadora de aceleración la halla a partir de la velocidad inicial, la velocidad final y el tiempo que tardó el cambio. La respuesta, en metros por segundo al cuadrado, indica cuántos metros por segundo gana o pierde el objeto cada segundo.\n\nLa aceleración es central en casi todos los problemas de movimiento. Vincula la fuerza con el movimiento a través de la segunda ley de Newton, F = ma, así que conocer la aceleración de un objeto permite hallar la fuerza que actúa sobre él o predecir cómo evoluciona su rapidez. Los fabricantes de coches anuncian tiempos de cero a cien, que son cifras de aceleración; los ingenieros diseñan frenos en torno a la deceleración; y los estudiantes de física usan la aceleración para conectar las ecuaciones del movimiento. Una calculadora de aceleración rápida elimina la aritmética y los errores de signo.\n\nLa fórmula funciona porque la aceleración se define como el cambio de velocidad dividido entre el tiempo en que ocurre. Un resultado positivo significa que el objeto se acelera en el sentido del movimiento, mientras que un resultado negativo indica deceleración o aceleración en sentido contrario. Como las velocidades pueden ser negativas, esta calculadora de aceleración también sirve para objetos que invierten su dirección, lo que la convierte en una herramienta fiable tanto para tareas y prácticas de laboratorio como para el análisis de movimiento en el mundo real.",
+    exampleEs: { inputs: { initialVelocity: 0, finalVelocity: 20, time: 4 }, explanation: "(20 − 0) ÷ 4 = 5 m/s²; el objeto gana 5 m/s de rapidez cada segundo." },
+    faqsEs: [
+      {
+        question: "¿Qué significa una aceleración negativa?",
+        answer: "Una aceleración negativa significa que la velocidad disminuye en el sentido que hayas definido como positivo, lo que se llama comúnmente deceleración o frenado. También puede significar que el objeto se acelera en sentido contrario. El signo siempre depende del sentido positivo que elijas, así que un coche que reduce su marcha avanzando muestra aceleración negativa, igual que uno que gana rapidez yendo hacia atrás. El contexto indica cuál situación aplica.",
+      },
+      {
+        question: "¿Por qué la aceleración se mide en metros por segundo al cuadrado?",
+        answer: "La aceleración es un cambio de velocidad, medida en metros por segundo, dividido entre el tiempo, medido en segundos. Dividir metros por segundo entre segundos da metros por segundo por segundo, escrito metros por segundo al cuadrado. Esta unidad indica cuántos metros por segundo de rapidez gana el objeto durante cada segundo. La gravedad de la Tierra, como referencia, produce una aceleración de unos 9,81 m/s² sobre los objetos en caída.",
+      },
+      {
+        question: "¿Es esta aceleración media o instantánea?",
+        answer: "Esta calculadora da la aceleración media a lo largo de todo el intervalo de tiempo, porque usa el cambio total de velocidad dividido entre el tiempo total. Si la aceleración fue constante durante todo el intervalo, la media es igual al valor instantáneo en cada momento. Si la aceleración varió, el resultado es el único valor constante que habría producido el mismo cambio global de velocidad en ese intervalo.",
+      },
+      {
+        question: "¿Cómo hallo la fuerza a partir de la aceleración?",
+        answer: "Usa la segunda ley de Newton, F = m × a, multiplicando la masa del objeto en kilogramos por la aceleración que has calculado aquí. El resultado es la fuerza neta en newtons necesaria para producir esa aceleración. Este es uno de los vínculos más útiles de la mecánica, ya que conecta la cinemática del movimiento con la dinámica de las fuerzas que lo causan, y funciona en cualquier conjunto de unidades coherente.",
+      },
+      {
+        question: "¿Qué ocurre si el tiempo introducido es cero?",
+        answer: "Si el tiempo es cero, el cálculo queda indefinido, porque no se puede dividir un cambio de velocidad entre un tiempo cero; la calculadora devuelve un guion para señalarlo. Físicamente, un cambio instantáneo de velocidad exigiría una aceleración y una fuerza infinitas, lo cual es imposible. Introduce la duración real no nula durante la que cambió la velocidad para obtener un valor de aceleración media con sentido.",
+      },
+    ],
   },
   {
     id: "ideal-gas",
@@ -299,6 +459,38 @@ export const scienceR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard chemistry (ideal gas law, PV = nRT)",
+    slugEs: "calculadora-de-ley-de-gases-ideales",
+    titleEs: "Calculadora de la Ley de los Gases Ideales",
+    shortDescriptionEs: "Halla los moles de gas a partir de la presión, el volumen y la temperatura.",
+    seoTitleEs: "Calculadora de la Ley de los Gases Ideales — Moles con PV = nRT",
+    metaDescriptionEs: "Calculadora gratuita de la ley de los gases ideales. Introduce la presión en atm, el volumen en litros y la temperatura en kelvin para hallar los moles de gas con PV = nRT. Estupenda para química.",
+    primaryKeywordEs: "calculadora de la ley de los gases ideales",
+    secondaryKeywordsEs: ["calculadora pv=nrt", "calculadora de moles de gas", "calculadora de leyes de los gases"],
+    formulaExplanationEs: "La ley de los gases ideales, PV = nRT, relaciona la presión, el volumen, la temperatura y la cantidad de un gas a través de la constante universal de los gases R. Reordenarla como n = PV ÷ RT aísla el número de moles, porque el producto de presión y volumen mide la energía total que el gas ejerce sobre su entorno, mientras que RT mide la energía por mol a esa temperatura. Dividir uno entre otro cuenta cuántos moles hay presentes. La ley funciona porque un gas ideal se modela como muchísimas partículas diminutas que no interaccionan y se mueven al azar de forma constante.",
+    explanationEs: "La ley de los gases ideales es la ecuación maestra del comportamiento de los gases, y esta calculadora de la ley de los gases ideales la usa para hallar cuántos moles de gas llenan un recipiente a partir de la presión, el volumen y la temperatura que midas. Aplica la constante R igual a 0,082057 litros-atmósfera por mol-kelvin, así que con la presión en atmósferas, el volumen en litros y la temperatura en kelvin, la respuesta sale en moles.\n\nLa ley de los gases ideales importa porque vincula cuatro magnitudes que de otro modo son difíciles de relacionar. Dadas tres cualesquiera, puedes hallar la cuarta, por lo que los químicos la usan para calcular rendimientos de reacción, los ingenieros para dimensionar recipientes a presión y los meteorólogos para modelar la atmósfera. Reordenada como n = PV dividido entre RT, convierte propiedades globales fáciles de medir en la cantidad de sustancia presente, una cifra que no se lee directamente en un manómetro.\n\nLa ley funciona porque un gas ideal se trata como innumerables partículas diminutas que ni se atraen ni se repelen y ocupan un volumen despreciable. En condiciones cotidianas de presión moderada y temperatura muy por encima del punto de ebullición, los gases reales la siguen fielmente. Por eso una buena calculadora de la ley de los gases ideales da resultados precisos para problemas de clase y muchas situaciones prácticas, y solo pierde exactitud a presiones muy altas o temperaturas muy bajas donde los gases empiezan a condensarse.",
+    exampleEs: { inputs: { pressure: 1, volume: 22.414, temperature: 273.15 }, explanation: "En condiciones estándar de temperatura y presión, (1 × 22,414) ÷ (0,082057 × 273,15) ≈ 1 mol." },
+    faqsEs: [
+      {
+        question: "¿Por qué la temperatura debe estar en kelvin?",
+        answer: "La ley de los gases ideales exige la temperatura absoluta, medida desde el cero absoluto, porque la presión y el volumen son proporcionales a la verdadera energía térmica de las partículas. Las escalas Celsius y Fahrenheit tienen puntos cero arbitrarios que romperían esa proporcionalidad e incluso permitirían valores negativos. Convierte Celsius a kelvin sumando 273,15. Usar kelvin garantiza que duplicar la temperatura realmente duplique la presión o el volumen asociados.",
+      },
+      {
+        question: "¿Qué valor de la constante de los gases usa esto?",
+        answer: "Esta calculadora usa R igual a 0,082057 litros-atmósfera por mol-kelvin, que corresponde a datos dados en atmósferas, litros y kelvin. La constante de los gases toma valores numéricos distintos en otros sistemas de unidades, como 8,314 julios por mol-kelvin al usar pascales y metros cúbicos. Ceñirse a la combinación de atmósferas, litros y kelvin que espera esta herramienta garantiza que el resultado en moles sea correcto.",
+      },
+      {
+        question: "¿Cómo convierto otras unidades de presión a atmósferas?",
+        answer: "Una atmósfera equivale a 101,325 kilopascales, 760 milímetros de mercurio o 14,696 libras por pulgada cuadrada. Para convertir, divide tu presión entre el factor apropiado: kilopascales entre 101,325, o milímetros de mercurio entre 760, da atmósferas. Introducir la presión en atmósferas la mantiene coherente con la constante de los gases que usa esta calculadora, así que la cifra de moles sale con precisión.",
+      },
+      {
+        question: "¿Cuándo deja de valer la ley de los gases ideales?",
+        answer: "La ley de los gases ideales supone que las partículas no tienen volumen y no interaccionan, lo que se cumple bien a baja presión y alta temperatura. Se vuelve inexacta a presiones muy altas, donde el volumen de las partículas importa, y a bajas temperaturas cercanas a la condensación, donde dominan las fuerzas atractivas. Para esas condiciones los científicos usan ecuaciones de gas real como la de van der Waals. Para la mayoría de la química cotidiana, la aproximación ideal es excelente.",
+      },
+      {
+        question: "¿Puedo reordenar esto para hallar la presión o el volumen?",
+        answer: "Sí, la misma ley se reordena para despejar cualquier variable. Esta calculadora despeja los moles, pero PV = nRT puede reescribirse como P = nRT ÷ V o V = nRT ÷ P cuando conoces las demás magnitudes. Las relaciones que hay tras las leyes de los gases, como las de Boyle y Charles, son todas casos particulares de esta única ecuación con una variable mantenida constante.",
+      },
+    ],
   },
   {
     id: "projectile-motion",
@@ -351,6 +543,38 @@ export const scienceR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard physics (projectile kinematics, no air resistance)",
+    slugEs: "calculadora-de-movimiento-de-proyectiles",
+    titleEs: "Calculadora de Movimiento de Proyectiles",
+    shortDescriptionEs: "Alcance, altura y tiempo de vuelo de un proyectil.",
+    seoTitleEs: "Calculadora de Movimiento de Proyectiles — Alcance, Altura y Tiempo de Vuelo",
+    metaDescriptionEs: "Calculadora gratuita de movimiento de proyectiles. Introduce la velocidad y el ángulo de lanzamiento para hallar el alcance, la altura máxima y el tiempo de vuelo. Ideal para tareas de física.",
+    primaryKeywordEs: "calculadora de movimiento de proyectiles",
+    secondaryKeywordsEs: ["calculadora de alcance de proyectil", "calculadora de ángulo de lanzamiento", "calculadora de trayectoria"],
+    formulaExplanationEs: "Un proyectil lanzado sobre terreno plano sigue una parábola porque la gravedad lo acelera hacia abajo mientras su rapidez horizontal permanece constante. Descomponer la velocidad de lanzamiento en componentes horizontal y vertical con el seno y el coseno permite tratar cada dirección por separado. El movimiento vertical fija cuánto tiempo permanece el proyectil en el aire y cuánto asciende, mientras que la componente horizontal constante mantenida durante ese tiempo fija el alcance. Combinar ambas produce las fórmulas compactas de arriba, por lo que el alcance máximo se da con un ángulo de lanzamiento de cuarenta y cinco grados.",
+    explanationEs: "El movimiento de proyectiles describe la trayectoria curva de todo lo que se lanza, dispara o arroja cerca de la superficie de la Tierra, y esta calculadora de movimiento de proyectiles halla sus tres medidas clave: cuánto avanza, cuánto asciende y cuánto tiempo permanece en el aire. Introduce la velocidad y el ángulo de lanzamiento, y la herramienta descompone el movimiento en partes horizontal y vertical para resolver cada una.\n\nEl movimiento de proyectiles importa en el deporte, la ingeniería y la defensa. Rige el arco de un balón de baloncesto, el alcance de una fuente de agua, el vuelo de una pelota de golf y la trayectoria de un cohete lanzado en su fase inicial. Como los movimientos horizontal y vertical son independientes, un único conjunto de fórmulas los cubre todos, y una calculadora de movimiento de proyectiles aplica esas fórmulas al instante sin trigonometría tediosa.\n\nLa calculadora supone terreno plano e ignora la resistencia del aire, la idealización estándar que se enseña en la física introductoria. En esas condiciones la trayectoria es una parábola perfecta, y el alcance máximo para una velocidad dada se da con un ángulo de lanzamiento de cuarenta y cinco grados. La componente vertical de la velocidad determina el tiempo en el aire y la altura máxima, mientras que la componente horizontal constante mantenida durante ese tiempo fija el alcance. Estudiantes, entrenadores e ingenieros usan una calculadora de movimiento de proyectiles para predecir trayectorias, comparar ángulos de lanzamiento y entender por qué los tiros más empinados o más rasantes se comportan como lo hacen.",
+    exampleEs: { inputs: { initialVelocity: 20, angleDegrees: 45, gravity: 9.81 }, explanation: "A 20 m/s y 45°, el alcance es de unos 40,77 m, la altura máxima unos 10,19 m y el tiempo de vuelo unos 2,88 s." },
+    faqsEs: [
+      {
+        question: "¿Por qué 45 grados es el ángulo de alcance máximo?",
+        answer: "El alcance depende de sen(2θ), que alcanza su mayor valor de uno cuando 2θ vale 90 grados, es decir cuando θ es 45 grados. En ese ángulo la velocidad de lanzamiento se reparte del modo más eficaz entre ascender lo suficiente para permanecer en el aire y avanzar con rapidez. Ángulos más empinados ganan altura pero sacrifican alcance horizontal, mientras que ángulos más rasantes avanzan rápido pero caen al suelo demasiado pronto.",
+      },
+      {
+        question: "¿Tiene en cuenta esta calculadora la resistencia del aire?",
+        answer: "No. Esta calculadora usa el modelo idealizado que se enseña en la física introductoria, que supone ausencia de resistencia del aire y terreno plano, produciendo una trayectoria parabólica perfectamente simétrica. Los proyectiles reales sufren un arrastre que acorta el alcance, reduce el punto más alto y deforma la trayectoria, sobre todo en objetos ligeros o rápidos. Los resultados de aquí son precisos para proyectiles densos y lentos y para entender los principios, pero trátalos como estimaciones máximas.",
+      },
+      {
+        question: "¿Qué ocurre con un ángulo de lanzamiento de 90 grados?",
+        answer: "A 90 grados el proyectil se dispara recto hacia arriba, así que sen(2θ) se vuelve cero y el alcance horizontal es cero; sube y vuelve a bajar en vertical. Mientras tanto, la altura máxima y el tiempo de vuelo alcanzan sus mayores valores porque toda la velocidad de lanzamiento se destina al movimiento vertical. Esta es una comprobación útil de las fórmulas y coincide con la intuición de lanzar una pelota directamente hacia arriba.",
+      },
+      {
+        question: "¿Es casualidad que los ángulos complementarios den el mismo alcance?",
+        answer: "No, se deduce directamente de las matemáticas. Como sen(2θ) es igual a sen(180 − 2θ), dos ángulos de lanzamiento que suman 90 grados, como 30 y 60 grados, producen alcances idénticos a la misma velocidad. El ángulo mayor simplemente cambia un vuelo más largo y alto por la misma distancia horizontal. Esta propiedad de los ángulos complementarios es un resultado clásico de la fórmula del alcance de un proyectil.",
+      },
+      {
+        question: "¿Cómo cambio la calculadora para la Luna o Marte?",
+        answer: "Edita el campo de gravedad. El valor por defecto de la Tierra es 9,81 m/s², pero la gravedad superficial de la Luna es de unos 1,62 m/s² y la de Marte de unos 3,71 m/s². Una gravedad más débil mantiene un proyectil en el aire mucho más tiempo y le permite viajar mucho más lejos para la misma velocidad de lanzamiento, por lo que los astronautas pudieron golpear pelotas de golf distancias enormes en la Luna. Introduce el valor apropiado para modelar cualquier mundo.",
+      },
+    ],
   },
   {
     id: "specific-heat",
@@ -401,6 +625,38 @@ export const scienceR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard chemistry (calorimetry, Q = mcΔT)",
+    slugEs: "calculadora-de-calor-especifico",
+    titleEs: "Calculadora de Calor Específico",
+    shortDescriptionEs: "Energía calorífica a partir de la masa, el calor específico y el cambio de temperatura.",
+    seoTitleEs: "Calculadora de Calor Específico — Energía Calorífica (Q = mcΔT)",
+    metaDescriptionEs: "Calculadora de calor específico gratuita. Introduce la masa, la capacidad calorífica específica y el cambio de temperatura para hallar la energía calorífica en julios con Q = mcΔT. Ideal para química.",
+    primaryKeywordEs: "calculadora de calor específico",
+    secondaryKeywordsEs: ["calculadora de energía calorífica", "calculadora q=mcΔt", "calculadora de capacidad calorífica específica"],
+    formulaExplanationEs: "El calor necesario para cambiar la temperatura de una sustancia es el producto de cuánta hay, cuánto se resiste al cambio de temperatura y cómo de grande es el cambio. La capacidad calorífica específica c es la energía necesaria para elevar un gramo un grado, así que multiplicarla por la masa da la energía por grado de toda la muestra, y multiplicar de nuevo por el cambio de temperatura ΔT da la energía total transferida. La fórmula funciona porque, lejos de los cambios de fase, el calor absorbido es directamente proporcional tanto a la masa como al aumento de temperatura.",
+    explanationEs: "La capacidad calorífica específica mide cuánta energía necesita un material para calentarse, y esta calculadora de calor específico la usa para hallar la energía calorífica implicada cuando una sustancia cambia de temperatura. Introduce la masa, la capacidad calorífica específica y el cambio de temperatura, y devuelve la energía en julios usando la ecuación Q = mcΔT.\n\nEste cálculo importa porque los distintos materiales almacenan el calor de forma muy diferente. El agua tiene un calor específico inusualmente alto, de unos 4,18 julios por gramo por grado Celsius, lo que explica por qué los océanos moderan el clima y por qué hervir una olla lleva tanto tiempo. Los metales, en cambio, se calientan y enfrían con rapidez. Los ingenieros que dimensionan sistemas de calefacción, los químicos que realizan experimentos de calorimetría y los cocineros que entienden cómo se comportan las sartenes dependen de la relación que una calculadora de calor específico hace concreta.\n\nLa fórmula funciona porque el calor absorbido o liberado es directamente proporcional a la masa, a la capacidad calorífica específica del material y al tamaño del cambio de temperatura. Un cambio de temperatura positivo significa que la sustancia se está calentando y absorbe energía; un cambio negativo significa que se está enfriando y libera energía, lo que esta calculadora muestra como un resultado negativo. Estudiantes y profesionales usan una calculadora de calor específico para equilibrar la energía en problemas de termodinámica, diseñar sistemas térmicos eficientes e interpretar experimentos con precisión.",
+    exampleEs: { inputs: { mass: 100, specificHeat: 4.18, tempChange: 20 }, explanation: "100 g × 4,18 J/g°C × 20 °C = 8.360 J para calentar esa agua 20 grados." },
+    faqsEs: [
+      {
+        question: "¿Qué unidades debo usar en cada dato?",
+        answer: "Introduce la masa en gramos, la capacidad calorífica específica en julios por gramo por grado Celsius y el cambio de temperatura en grados Celsius, y la energía calorífica sale en julios. Como un cambio de un grado Celsius equivale a un cambio de un kelvin, puedes usar cualquiera de las dos escalas para la diferencia de temperatura. Mantener la masa en gramos coincide con los valores tabulados habituales de calor específico y da la energía directamente en julios.",
+      },
+      {
+        question: "¿Dónde encuentro la capacidad calorífica específica de un material?",
+        answer: "Las capacidades caloríficas específicas están tabuladas en las referencias de física y química. Valores comunes incluyen unos 4,18 J/g°C para el agua, 0,90 para el aluminio, 0,39 para el cobre y 0,45 para el hierro. El valor excepcionalmente alto del agua explica su papel en la refrigeración y el clima. Busca el valor de tu material e introdúcelo aquí; usar el calor específico correcto es esencial para un resultado preciso de energía calorífica.",
+      },
+      {
+        question: "¿Por qué mi energía calorífica es negativa?",
+        answer: "Aparece un resultado negativo cuando el cambio de temperatura es negativo, es decir, cuando la sustancia se enfrió y la temperatura final es menor que la inicial. El signo negativo indica que el material liberó calor a su entorno en lugar de absorberlo. La magnitud sigue indicando cuánta energía se implicó; solo cambia la dirección del flujo de energía. Calentar da un valor positivo y enfriar uno negativo.",
+      },
+      {
+        question: "¿Funciona esta fórmula durante la ebullición o la fusión?",
+        answer: "No. La fórmula Q = mcΔT solo se aplica mientras una sustancia permanece en una fase y su temperatura cambia realmente. Durante la fusión o la ebullición la temperatura se mantiene constante mientras la energía se destina a romper enlaces, lo que exige un cálculo aparte con el calor latente, Q = mL. Usa esta calculadora de calor específico para calentar o enfriar dentro de una sola fase, y cambia al calor latente para las transiciones de fase.",
+      },
+      {
+        question: "¿En qué se diferencia el calor específico de la capacidad calorífica?",
+        answer: "La capacidad calorífica específica es la energía necesaria para elevar un gramo, o un kilogramo, de una sustancia un grado, una propiedad intensiva que depende solo del material. La capacidad calorífica, sin la palabra específica, se refiere a un objeto concreto y es igual a su masa multiplicada por su calor específico, así que depende de cuánta sustancia tengas. Esta calculadora usa el calor específico y lo multiplica por tu masa.",
+      },
+    ],
   },
   {
     id: "coulombs-law",
@@ -451,6 +707,38 @@ export const scienceR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard physics (Coulomb's law)",
+    slugEs: "calculadora-de-ley-de-coulomb",
+    titleEs: "Calculadora de la Ley de Coulomb",
+    shortDescriptionEs: "Fuerza electrostática entre dos cargas puntuales.",
+    seoTitleEs: "Calculadora de la Ley de Coulomb — Fuerza Entre Dos Cargas",
+    metaDescriptionEs: "Calculadora gratuita de la ley de Coulomb. Introduce dos cargas en culombios y su separación en metros para hallar la fuerza electrostática entre ellas en newtons. Estupenda para física.",
+    primaryKeywordEs: "calculadora de la ley de coulomb",
+    secondaryKeywordsEs: ["calculadora de fuerza electrostática", "calculadora de fuerza entre cargas", "calculadora de fuerza de coulomb"],
+    formulaExplanationEs: "La ley de Coulomb dice que la fuerza eléctrica entre dos cargas puntuales es proporcional al producto de las cargas e inversamente proporcional al cuadrado de la distancia que las separa. El producto de las cargas aparece porque el campo de cada carga actúa sobre la otra, y la dependencia inversa del cuadrado surge porque el campo se reparte sobre la superficie de una esfera cuya área crece con el cuadrado del radio. La constante k fija la intensidad de la interacción electrostática en el vacío. Un resultado positivo indica repulsión y uno negativo, atracción.",
+    explanationEs: "La ley de Coulomb rige la fuerza entre cargas eléctricas, y esta calculadora de la ley de Coulomb halla esa fuerza a partir de los dos valores de carga y la distancia que los separa. Usando la constante electrostática k de unos 8.9875 mil millones de newtons-metro-cuadrado por culombio-cuadrado, devuelve la fuerza en newtons para cargas en culombios y separación en metros.\n\nEsta fuerza es una de las interacciones fundamentales de la naturaleza y da forma al mundo a toda escala por debajo de la astronómica. Mantiene los electrones unidos a los núcleos, une los átomos en moléculas y explica el efecto de estática, los rayos y el comportamiento de los condensadores. Tanto los ingenieros que diseñan electrónica como los físicos que modelan la materia necesitan cuantificarla, y una calculadora de la ley de Coulomb lo hace al instante sin lidiar con la enorme constante y las incómodas potencias de diez propias de los valores de carga.\n\nLa ley funciona porque cada carga crea un campo eléctrico que empuja o atrae a la otra, con una intensidad que decae con el cuadrado de la distancia, igual que la gravedad. Cargas del mismo signo producen una fuerza positiva y repulsiva, mientras que cargas opuestas dan un resultado negativo que señala atracción. Como las cargas reales suelen medirse en microculombios o nanoculombios, esta calculadora de la ley de Coulomb admite notación científica, lo que permite a estudiantes e ingenieros explorar cuán drásticamente crece la fuerza al acercar las cargas.",
+    exampleEs: { inputs: { charge1: "1e-6", charge2: "1e-6", distance: 0.1 }, explanation: "Dos cargas de 1 µC separadas 0,1 m: 8,9875e9 × 1e-6 × 1e-6 ÷ 0,01 ≈ 0,899 N de repulsión." },
+    faqsEs: [
+      {
+        question: "¿Cómo introduzco cargas muy pequeñas como microculombios?",
+        answer: "Usa notación científica. Un microculombio es 1e-6 culombios, un nanoculombio es 1e-9 y un picoculombio es 1e-12. Escribe el valor en esta forma exponencial directamente en los campos de carga. Las cargas del mundo real casi siempre son fracciones diminutas de un culombio, ya que un culombio es una cantidad enorme de carga, así que la notación científica mantiene los números manejables y el resultado de la fuerza preciso.",
+      },
+      {
+        question: "¿Qué significa un resultado de fuerza negativo?",
+        answer: "El signo de la fuerza sigue el producto de las dos cargas. Si ambas cargas tienen el mismo signo, el producto es positivo y la fuerza es repulsiva, empujándolas a separarse. Si las cargas tienen signos opuestos, el producto es negativo y la fuerza es atractiva, tirando de ellas para juntarlas. Así que un resultado negativo señala atracción entre cargas opuestas, mientras que uno positivo señala repulsión entre cargas iguales.",
+      },
+      {
+        question: "¿Por qué la fuerza decae con el cuadrado de la distancia?",
+        answer: "La ley de Coulomb es una ley del inverso del cuadrado porque el campo eléctrico que irradia de una carga puntual se reparte sobre la superficie de una esfera en expansión, cuya área crece con el cuadrado del radio. Duplicar la separación reparte por tanto la influencia sobre cuatro veces el área, reduciendo la fuerza a un cuarto. Esta misma geometría del inverso del cuadrado rige la gravedad y la intensidad de la luz de una fuente puntual.",
+      },
+      {
+        question: "¿En qué se parece la ley de Coulomb a la gravedad?",
+        answer: "Ambas son leyes del inverso del cuadrado con la misma forma matemática: una constante por el producto de las dos magnitudes fuente dividido entre la distancia al cuadrado. La gravedad usa masas y es siempre atractiva, mientras que la ley de Coulomb usa cargas y puede atraer o repeler. La fuerza electrostática es enormemente más intensa que la gravedad entre partículas fundamentales, por lo que la química y la electrónica están dominadas por fuerzas eléctricas y no gravitatorias.",
+      },
+      {
+        question: "¿Funciona esta calculadora dentro de materiales o solo en el vacío?",
+        answer: "Usa la constante k del vacío, que también es muy cercana al valor en el aire. Dentro de otros materiales, el medio circundante reduce la fuerza por un factor llamado permitividad relativa o constante dieléctrica. El agua, por ejemplo, debilita mucho las fuerzas electrostáticas. Para la fuerza entre cargas en un dieléctrico, divide el resultado en el vacío entre la constante dieléctrica de ese material para obtener el valor reducido.",
+      },
+    ],
   },
   {
     id: "mass-energy",
@@ -500,5 +788,37 @@ export const scienceR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Special relativity (Einstein's mass-energy equivalence)",
+    slugEs: "calculadora-de-equivalencia-masa-energia",
+    titleEs: "Calculadora de Equivalencia Masa-Energía",
+    shortDescriptionEs: "Convierte masa en energía con E = mc².",
+    seoTitleEs: "Calculadora de Equivalencia Masa-Energía — E = mc²",
+    metaDescriptionEs: "Calculadora gratuita de E = mc². Introduce una masa en kilogramos para hallar la energía equivalente en julios y megajulios con la equivalencia masa-energía de Einstein. Estupenda para física.",
+    primaryKeywordEs: "calculadora e=mc2",
+    secondaryKeywordsEs: ["calculadora de equivalencia masa-energía", "calculadora de energía de einstein", "calculadora de masa a energía"],
+    formulaExplanationEs: "La equivalencia masa-energía de Einstein afirma que la masa y la energía son dos formas de la misma cosa, relacionadas por el cuadrado de la velocidad de la luz. Multiplicar una masa por c al cuadrado la convierte en su energía equivalente, y como la velocidad de la luz es tan enorme, unos trescientos millones de metros por segundo, elevarla al cuadrado produce un factor colosal. Por eso incluso una masa minúscula corresponde a una cantidad vasta de energía. La fórmula funciona porque la velocidad de la luz es la tasa de conversión fundamental entre las unidades de masa y las de energía en la relatividad.",
+    explanationEs: "La equivalencia masa-energía es el resultado más famoso de Einstein, y esta calculadora de E = mc² convierte una masa en la asombrosa cantidad de energía encerrada en ella. Introduce una masa en kilogramos y la herramienta la multiplica por la velocidad de la luz al cuadrado, devolviendo la energía equivalente en julios y, por comodidad, en megajulios.\n\nEsta relación importa porque revela que la masa es una forma muy concentrada de energía. Explica de dónde procede la energía del Sol, ya que la fusión convierte una fracción diminuta de la masa del hidrógeno en energía radiante, y subyace a los reactores y las armas nucleares, donde pequeñas diferencias de masa liberan una energía enorme. Incluso las reacciones químicas convierten masa en energía, aunque en una cantidad demasiado pequeña para notarse. Una calculadora de E = mc² hace tangible la escala de esta conversión.\n\nLa fórmula funciona porque la velocidad de la luz, unos 299.792.458 metros por segundo, es la tasa de cambio entre masa y energía. Elevar al cuadrado un número tan enorme da un factor de aproximadamente 9 × 10¹⁶, así que un solo gramo de materia, convertido por completo, liberaría unos 90 billones de julios, comparable a una gran explosión. Esta calculadora permite a estudiantes, aficionados a la física y docentes explorar esa idea convirtiendo cualquier masa en su energía equivalente y apreciar por qué los procesos nucleares son mucho más potentes que los químicos.",
+    exampleEs: { inputs: { mass: 1 }, explanation: "1 kg × (299.792.458 m/s)² ≈ 8,99 × 10¹⁶ J, unos 90 petajulios de energía." },
+    faqsEs: [
+      {
+        question: "¿Por qué la energía de una masa diminuta es tan enorme?",
+        answer: "Porque la velocidad de la luz aparece al cuadrado en la fórmula. La velocidad de la luz es de unos 300 millones de metros por segundo, y elevarla al cuadrado da un factor cercano a 9 × 10¹⁶. Multiplicar incluso un gramo de masa por ese número colosal produce una energía astronómica. Por eso las reacciones nucleares, que convierten una fracción medible de masa, liberan millones de veces más energía que las reacciones químicas.",
+      },
+      {
+        question: "¿Significa E = mc² que cualquier masa puede convertirse en energía?",
+        answer: "En principio, cada kilogramo de masa corresponde a esa cantidad de energía, pero convertir la masa por completo en energía es extremadamente difícil. Solo ocurre del todo cuando la materia se encuentra con la antimateria y se aniquila. La fisión y la fusión nuclear convierten solo un pequeño porcentaje de la masa implicada, y las reacciones químicas ordinarias convierten una fracción ínfima. La fórmula da la energía máxima teórica disponible si se lograra la conversión total.",
+      },
+      {
+        question: "¿Qué unidades usa esta calculadora?",
+        answer: "Introduce la masa en kilogramos y la energía equivalente se devuelve en julios, la unidad del SI de energía, y también en megajulios para mayor legibilidad, donde un megajulio equivale a un millón de julios. Como los números son tan grandes, los resultados se leen mejor en notación científica. Para introducir masas más pequeñas, usa notación científica como 1e-3 kilogramos para un gramo o 1e-6 para un miligramo.",
+      },
+      {
+        question: "¿Cómo se relaciona esto con la energía nuclear?",
+        answer: "En un reactor nuclear o en una estrella, los productos de la fisión o la fusión tienen algo menos de masa que los reactivos. Esa masa que falta, llamada defecto de masa, se convierte en energía exactamente como predice E = mc². Aunque la diferencia de masa es una pequeña fracción del total, multiplicarla por la velocidad de la luz al cuadrado libera la inmensa energía que alimenta por igual a los reactores y al Sol.",
+      },
+      {
+        question: "¿Es esta la ecuación de energía completa de la relatividad?",
+        answer: "E = mc² da la energía en reposo de un objeto, la energía que tiene únicamente en virtud de su masa mientras está quieto. La ecuación relativista de energía completa incluye además un término para el momento, E² = (mc²)² + (pc)², que importa para objetos que se mueven cerca de la velocidad de la luz o para partículas sin masa como los fotones. Para un objeto en reposo, ese término de momento se anula y la ecuación se reduce a la familiar E = mc².",
+      },
+    ],
   },
 ];

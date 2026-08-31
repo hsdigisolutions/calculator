@@ -56,6 +56,44 @@ export const mathR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Euclidean geometry",
+    slugEs: "calculadora-de-area-de-rectangulo",
+    titleEs: "Calculadora de Área de Rectángulo",
+    shortDescriptionEs: "Calcula el área y el perímetro de un rectángulo.",
+    seoTitleEs: "Calculadora de Área de Rectángulo — Área y Perímetro",
+    metaDescriptionEs:
+      "Calculadora de área de rectángulo gratuita. Introduce el largo y el ancho para hallar el área y el perímetro de un rectángulo al instante, con las fórmulas explicadas.",
+    primaryKeywordEs: "calculadora de área de rectángulo",
+    secondaryKeywordsEs: ["área de un rectángulo", "calculadora de perímetro de rectángulo", "largo por ancho"],
+    formulaExplanationEs:
+      "El área de un rectángulo es el largo multiplicado por el ancho, porque un rectángulo se puede cubrir con filas y columnas de cuadrados unitarios, y el número de esos cuadrados es exactamente el producto de las dos longitudes de los lados. El perímetro es la distancia total alrededor del exterior, así que sumas los dos largos y los dos anchos, lo que se simplifica al doble de la suma de un largo y un ancho porque los lados opuestos son iguales.",
+    explanationEs:
+      "Un rectángulo es una figura de cuatro lados con cuatro ángulos rectos, donde los lados opuestos tienen la misma longitud. Es una de las figuras más comunes de la vida diaria, desde habitaciones y pantallas hasta hojas de papel y terrenos, lo que convierte el cálculo de su área y perímetro en una tarea frecuente y práctica. Esta calculadora de área de rectángulo toma el largo y el ancho y devuelve tanto el área, la cantidad de superficie que cubre el rectángulo, como el perímetro, la distancia alrededor de su borde. El área se halla multiplicando el largo por el ancho, y se mide en unidades cuadradas como metros cuadrados o pies cuadrados. El perímetro se halla sumando los cuatro lados, que al ser iguales los lados opuestos es simplemente el doble de la suma del largo y el ancho, medido en unidades lineales ordinarias. Para un rectángulo de 5 unidades de largo y 3 de ancho, el área es 15 unidades cuadradas y el perímetro es 16 unidades. Propietarios que estiman pisos o pintura, jardineros que planifican canteros, diseñadores que ajustan diseños y estudiantes que aprenden geometría usan una calculadora de área de rectángulo para obtener ambas medidas a la vez sin arriesgarse a confundir las dos fórmulas.",
+    exampleEs: {
+      inputs: { length: 5, width: 3 },
+      explanation: "Área = 5 × 3 = 15 unidades cuadradas; perímetro = 2 × (5 + 3) = 16 unidades.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cómo hallo el área de un rectángulo?",
+        answer: "Multiplica el largo por el ancho. Ambas medidas deben estar en la misma unidad, y el resultado queda en unidades cuadradas de esa medida, como metros cuadrados o pies cuadrados. Para un rectángulo de 5 metros de largo y 3 metros de ancho, el área es 5 por 3, que da 15 metros cuadrados. La calculadora hace esta multiplicación por ti y además devuelve el perímetro junto a ella.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre área y perímetro?",
+        answer: "El área mide el espacio plano que cubre un rectángulo y se da en unidades cuadradas, mientras que el perímetro mide la longitud total de su contorno y se da en unidades lineales ordinarias. El área responde cuánta superficie hay que pintar o alfombrar, y el perímetro responde cuánta cerca o moldura necesitas alrededor del borde. Se calculan de forma diferente y describen dos propiedades realmente distintas de la misma figura.",
+      },
+      {
+        question: "¿El largo y el ancho necesitan las mismas unidades?",
+        answer: "Sí. Ambos lados deben expresarse en la misma unidad antes de multiplicarlos o sumarlos, o el resultado no tendrá sentido. Si un lado está en metros y el otro en centímetros, convierte uno primero para que coincidan. Una vez que las unidades concuerdan, el área sale en esa unidad al cuadrado y el perímetro en esa unidad, y la calculadora asume unidades coherentes en todo momento.",
+      },
+      {
+        question: "¿Cómo se relaciona el área de un cuadrado?",
+        answer: "Un cuadrado es un rectángulo especial cuyo largo y ancho son iguales, así que su área es simplemente un lado multiplicado por sí mismo, o el lado al cuadrado. Puedes usar esta calculadora de rectángulos para un cuadrado introduciendo el mismo valor tanto en el largo como en el ancho. El perímetro de un cuadrado resulta entonces cuatro veces la longitud del lado, ya que los cuatro lados son idénticos.",
+      },
+      {
+        question: "¿Puedo usar decimales para el largo y el ancho?",
+        answer: "Por supuesto. Las medidas reales rara vez caen en números enteros, así que la calculadora acepta valores decimales tanto para el largo como para el ancho. Introducir 5,5 por 3,25, por ejemplo, devuelve un área y un perímetro precisos sin redondear tus datos. Esto es útil para dimensiones de habitaciones, tela y cualquier medida tomada con una cinta o regla donde las unidades fraccionarias son la norma.",
+      },
+    ],
   },
   {
     id: "sphere-volume",
@@ -111,6 +149,44 @@ export const mathR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Euclidean geometry",
+    slugEs: "calculadora-de-volumen-de-esfera",
+    titleEs: "Calculadora de Volumen de Esfera",
+    shortDescriptionEs: "Calcula el volumen y el área superficial de una esfera.",
+    seoTitleEs: "Calculadora de Volumen de Esfera — Volumen y Área Superficial",
+    metaDescriptionEs:
+      "Calculadora de volumen de esfera gratuita. Introduce el radio para hallar el volumen y el área superficial de una esfera usando las fórmulas estándar de geometría.",
+    primaryKeywordEs: "calculadora de volumen de esfera",
+    secondaryKeywordsEs: ["volumen de una esfera", "calculadora de área superficial de esfera", "volumen de una bola"],
+    formulaExplanationEs:
+      "El volumen de una esfera es cuatro tercios de pi por el radio al cubo, un resultado obtenido mediante cálculo integral al sumar infinitas rebanadas circulares delgadas apiladas de polo a polo. El área superficial es cuatro por pi por el radio al cuadrado, que es exactamente el área de cuatro círculos máximos de la esfera. Ambas fórmulas dependen solo del radio, así que elevarlo al cubo impulsa el volumen y elevarlo al cuadrado impulsa el área superficial a medida que la bola crece.",
+    explanationEs:
+      "Una esfera es un objeto tridimensional perfectamente redondo donde cada punto de su superficie está a la misma distancia, el radio, de su centro. Las pelotas, los planetas, las burbujas y las gotas son todos aproximadamente esféricos, así que hallar el volumen y el área superficial de una esfera aparece en física, ingeniería, fabricación y estimaciones cotidianas. Esta calculadora de volumen de esfera toma un único dato, el radio, y devuelve tanto el volumen, la cantidad de espacio que encierra la esfera, como el área superficial, el área total de su piel exterior curva. El volumen sigue la fórmula cuatro tercios por pi por el radio al cubo, que crece muy rápido al aumentar el radio porque este está elevado a la tercera potencia. El área superficial es cuatro por pi por el radio al cuadrado, igual al área combinada de cuatro círculos planos del tamaño de la sección transversal más ancha de la esfera. Para una esfera con radio de 3 unidades, el volumen es unas 113,1 unidades cúbicas y, en este caso concreto, el área superficial también es unas 113,1 unidades cuadradas. Ingenieros que dimensionan tanques, científicos que modelan células o planetas y estudiantes que estudian geometría de sólidos confían en una calculadora de volumen de esfera para aplicar estas dos fórmulas con precisión solo a partir del radio.",
+    exampleEs: {
+      inputs: { radius: 3 },
+      explanation: "Volumen = 4⁄3 × π × 3³ ≈ 113,10 unidades cúbicas; área superficial = 4 × π × 3² ≈ 113,10 unidades cuadradas.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cuál es la fórmula del volumen de una esfera?",
+        answer: "El volumen de una esfera es igual a cuatro tercios multiplicado por pi multiplicado por el radio al cubo. En símbolos es cuatro sobre tres por pi por r elevado a la tercera potencia. Como el radio está al cubo, el volumen aumenta drásticamente al crecer la esfera: duplicar el radio multiplica el volumen por ocho. La calculadora aplica esta fórmula directamente usando el valor preciso de pi incorporado en el cálculo.",
+      },
+      {
+        question: "¿Cómo hallo el área superficial de una esfera?",
+        answer: "El área superficial de una esfera es cuatro por pi por el radio al cuadrado. Esto equivale al área de cuatro círculos máximos, los círculos más grandes que puedes dibujar sobre la esfera. Como el radio está al cuadrado en lugar de al cubo, el área superficial crece más despacio que el volumen al agrandarse la esfera. Introduce el radio y la calculadora devuelve el área superficial junto al volumen en un solo paso.",
+      },
+      {
+        question: "¿Qué hago si solo conozco el diámetro?",
+        answer: "El diámetro es el doble del radio, así que simplemente divide el diámetro entre dos para obtener el radio antes de introducirlo. Si una bola mide 6 unidades de lado a lado, su radio es 3 unidades, que es el valor que hay que escribir en la calculadora. Tanto el volumen como el área superficial se expresan en función del radio, así que convertir el diámetro primero asegura resultados correctos.",
+      },
+      {
+        question: "¿Por qué el volumen crece mucho más rápido que el área superficial?",
+        answer: "El volumen depende del radio al cubo mientras que el área superficial depende del radio al cuadrado, así que al aumentar el radio el volumen sube con la tercera potencia y el área superficial solo con la segunda. Por eso las esferas grandes encierran mucho más espacio en relación con su piel que las pequeñas, algo que importa en biología para el tamaño celular y en ingeniería para tanques de almacenamiento y recipientes a presión.",
+      },
+      {
+        question: "¿Qué unidades usa la respuesta?",
+        answer: "El volumen se expresa en unidades cúbicas de la unidad que hayas usado para el radio, como centímetros cúbicos o metros cúbicos, mientras que el área superficial va en unidades cuadradas de la misma medida. Si introduces el radio en centímetros, el volumen queda en centímetros cúbicos y el área superficial en centímetros cuadrados. Mantener el radio en una sola unidad coherente asegura que ambos resultados sean significativos.",
+      },
+    ],
   },
   {
     id: "cylinder-volume",
@@ -167,6 +243,44 @@ export const mathR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Euclidean geometry",
+    slugEs: "calculadora-de-volumen-de-cilindro",
+    titleEs: "Calculadora de Volumen de Cilindro",
+    shortDescriptionEs: "Calcula el volumen y el área superficial de un cilindro.",
+    seoTitleEs: "Calculadora de Volumen de Cilindro — Volumen y Área Superficial",
+    metaDescriptionEs:
+      "Calculadora de volumen de cilindro gratuita. Introduce el radio y la altura para hallar el volumen y el área superficial total de un cilindro con las fórmulas estándar de geometría.",
+    primaryKeywordEs: "calculadora de volumen de cilindro",
+    secondaryKeywordsEs: ["volumen de un cilindro", "calculadora de área superficial de cilindro", "volumen de un tanque"],
+    formulaExplanationEs:
+      "El volumen de un cilindro es el área de su base circular, pi por el radio al cuadrado, multiplicada por la altura, porque la figura es un apilamiento de secciones circulares idénticas. El área superficial total combina las dos tapas circulares, cada una pi por el radio al cuadrado, con el lado curvo, que al desenrollarse forma un rectángulo cuyo ancho es la circunferencia de la base y cuya altura es la del cilindro. Al factorizar se obtiene dos pi r por la cantidad r más h.",
+    explanationEs:
+      "Un cilindro es una figura tridimensional con dos extremos circulares paralelos unidos por una superficie curva, como una lata, una tubería o un tanque de almacenamiento. Calcular su volumen y su área superficial es una tarea habitual en ingeniería, fabricación, cocina y construcción, dondequiera que aparezcan recipientes redondos. Esta calculadora de volumen de cilindro toma dos datos, el radio de la base circular y la altura, y devuelve el volumen, el espacio que contiene el cilindro, y el área superficial total, el área combinada de ambos extremos más el lado curvo. El volumen es el área de la base circular, pi por el radio al cuadrado, multiplicada por la altura, porque un cilindro es en efecto un apilamiento de círculos idénticos. El área superficial total suma las dos tapas circulares a la superficie lateral curva, que al desenrollarse es un rectángulo. Para un cilindro con radio de 2 unidades y altura de 5 unidades, el volumen es unas 62,83 unidades cúbicas y el área superficial total es unas 87,96 unidades cuadradas. Ingenieros que dimensionan tanques y tuberías, cocineros que escalan moldes y estudiantes que abordan la geometría de sólidos usan una calculadora de volumen de cilindro para obtener ambas cifras de forma fiable solo a partir del radio y la altura.",
+    exampleEs: {
+      inputs: { radius: 2, height: 5 },
+      explanation: "Volumen = π × 2² × 5 ≈ 62,83 unidades cúbicas; área superficial = 2 × π × 2 × (2 + 5) ≈ 87,96 unidades cuadradas.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cómo calculo el volumen de un cilindro?",
+        answer: "Multiplica el área de la base circular por la altura. El área de la base es pi por el radio al cuadrado, así que el volumen completo es pi por el radio al cuadrado por la altura. Para un cilindro con radio de 2 y altura de 5, eso es pi por 4 por 5, unas 62,83 unidades cúbicas. La calculadora lo realiza usando el valor preciso de pi de forma automática.",
+      },
+      {
+        question: "¿Qué incluye el área superficial?",
+        answer: "El área superficial total de un cilindro cerrado incluye tres partes: el círculo superior, el círculo inferior y el lado curvo que los envuelve. Los dos círculos juntos aportan dos veces pi por el radio al cuadrado, y el lado curvo aporta dos pi por el radio por la altura. La fórmula dos pi r por r más h combina las tres partes en una sola expresión, que la calculadora evalúa por ti.",
+      },
+      {
+        question: "¿Cómo se relaciona el volumen de un cilindro con el de un prisma?",
+        answer: "Un cilindro es esencialmente un prisma con base circular en lugar de poligonal. Para cualquier prisma, el volumen es el área de la base por la altura, y un cilindro sigue la misma regla con la base siendo un círculo. Por eso la fórmula del volumen es simplemente el área del círculo, pi por el radio al cuadrado, multiplicada por lo alto que sea el cilindro, igual que con una caja rectangular.",
+      },
+      {
+        question: "¿Qué hago si solo tengo el diámetro?",
+        answer: "Divide el diámetro entre dos para obtener el radio antes de introducirlo, ya que ambas fórmulas se expresan en función del radio. Una tubería que mide 4 unidades de lado a lado tiene un radio de 2 unidades. Usar el diámetro directamente en lugar del radio cuadruplicaría el volumen, así que convierte siempre primero. Una vez que tienes el radio y la altura, la calculadora devuelve ambos resultados correctamente.",
+      },
+      {
+        question: "¿Puede hallar la capacidad de un tanque?",
+        answer: "Sí. El volumen de un cilindro es su capacidad, así que introducir el radio interno y la altura interna de un tanque cilíndrico da cuánto puede contener en unidades cúbicas. Para convertir a litros, recuerda que un decímetro cúbico equivale a un litro, o usa que un metro cúbico equivale a mil litros. Mantén el radio y la altura en unidades coherentes para una cifra de capacidad precisa.",
+      },
+    ],
   },
   {
     id: "cone-volume",
@@ -222,6 +336,44 @@ export const mathR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Euclidean geometry",
+    slugEs: "calculadora-de-volumen-de-cono",
+    titleEs: "Calculadora de Volumen de Cono",
+    shortDescriptionEs: "Calcula el volumen de un cono a partir de su radio y altura.",
+    seoTitleEs: "Calculadora de Volumen de Cono — Volumen de un Cono",
+    metaDescriptionEs:
+      "Calculadora de volumen de cono gratuita. Introduce el radio de la base y la altura para hallar el volumen de un cono con la fórmula estándar de un tercio de base por altura.",
+    primaryKeywordEs: "calculadora de volumen de cono",
+    secondaryKeywordsEs: ["volumen de un cono", "fórmula del volumen de un cono", "volumen de un cono de helado"],
+    formulaExplanationEs:
+      "El volumen de un cono es un tercio de pi por el radio al cuadrado por la altura. El factor de un tercio aparece porque un cono ocupa exactamente un tercio del cilindro que comparte su radio de base y su altura, un hecho demostrado por integración o por el experimento clásico de verter agua de un cono a un cilindro que coincide tres veces para llenarlo. El área de la base, pi por el radio al cuadrado, se multiplica por la altura y luego se divide entre tres.",
+    explanationEs:
+      "Un cono es una figura tridimensional con una base circular que se estrecha suavemente hasta un único punto llamado ápice. Los conos de helado, los embudos, los gorros de fiesta y los montones de arena o grava toman esta forma, así que hallar el volumen de un cono es útil en cocina, fabricación y construcción, además de en el aula. Esta calculadora de volumen de cono toma dos datos, el radio de la base circular y la altura perpendicular desde la base hasta el ápice, y devuelve el volumen, la cantidad de espacio que encierra el cono. La fórmula es un tercio de pi por el radio al cuadrado por la altura, y el detalle crucial es ese factor de un tercio: un cono contiene exactamente un tercio de lo que contiene un cilindro con la misma base y altura. Este es un resultado que puedes demostrar llenando un cono de agua y vertiéndolo en un cilindro que coincide, lo que requiere tres conos para llenarlo. Para un cono con radio de base de 3 unidades y altura de 4 unidades, el volumen es unas 37,70 unidades cúbicas. Estudiantes que estudian geometría de sólidos, ingenieros que diseñan tolvas y cualquiera que estime el contenido de un montón cónico usan una calculadora de volumen de cono para aplicar la fórmula rápida y correctamente.",
+    exampleEs: {
+      inputs: { radius: 3, height: 4 },
+      explanation: "Volumen = 1⁄3 × π × 3² × 4 ≈ 37,70 unidades cúbicas.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cuál es la fórmula del volumen de un cono?",
+        answer: "El volumen de un cono es un tercio por pi por el radio de la base al cuadrado por la altura. En símbolos es uno sobre tres por pi por r al cuadrado por h. La altura debe ser la distancia perpendicular desde la base hasta el ápice, no el lado inclinado. La calculadora usa esta fórmula con el valor preciso de pi incorporado para devolver un volumen exacto a partir de tus dos datos.",
+      },
+      {
+        question: "¿Por qué hay un un tercio en la fórmula?",
+        answer: "El un tercio refleja que un cono contiene exactamente un tercio del volumen de un cilindro que comparte el mismo radio de base y altura. Puedes verlo vertiendo agua: se necesitan tres conos llenos para llenar el cilindro que coincide. Matemáticamente el factor proviene de integrar las secciones circulares que se encogen desde la base ancha hasta el único punto del ápice, lo que promedia un tercio del cilindro completo.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre altura y altura inclinada?",
+        answer: "La altura en esta fórmula es la distancia vertical recta hacia arriba desde el centro de la base hasta el ápice. La altura inclinada es la distancia medida a lo largo de la superficie exterior inclinada desde el borde de la base hasta el ápice, que siempre es mayor. Usa aquí la altura perpendicular. Si solo conoces la altura inclinada y el radio, halla primero la altura con el teorema de Pitágoras.",
+      },
+      {
+        question: "¿Cómo se compara un cono con un cilindro y una esfera?",
+        answer: "Para el mismo radio y altura, un cono contiene un tercio del volumen del cilindro que coincide. Una semiesfera, un cilindro y un cono con radios y alturas iguales se relacionan en una proporción elegante que los estudiantes suelen aprender juntos. El factor común de pi por el radio al cuadrado aparece en cada uno, con el cono escalado por un tercio, lo que hace del trío un conjunto memorable de resultados de geometría de sólidos.",
+      },
+      {
+        question: "¿Puedo usar esto para un montón cónico de material?",
+        answer: "Sí. Un montón de arena, grava o grano se asienta en un cono aproximado, así que medir el radio de su base circular y su altura máxima te permite estimar el volumen con esta calculadora. La estimación asume una forma de cono razonablemente regular. Para montones irregulares el resultado es una aproximación, pero suele ser suficientemente cercano para pedir materiales o estimar cantidades en obra.",
+      },
+    ],
   },
   {
     id: "trapezoid-area",
@@ -278,6 +430,44 @@ export const mathR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Euclidean geometry",
+    slugEs: "calculadora-de-area-de-trapecio",
+    titleEs: "Calculadora de Área de Trapecio",
+    shortDescriptionEs: "Calcula el área de un trapecio a partir de sus bases y altura.",
+    seoTitleEs: "Calculadora de Área de Trapecio — Área de un Trapecio",
+    metaDescriptionEs:
+      "Calculadora de área de trapecio gratuita. Introduce las dos bases paralelas y la altura para hallar el área de un trapecio con la fórmula del promedio de las bases.",
+    primaryKeywordEs: "calculadora de área de trapecio",
+    secondaryKeywordsEs: ["área de un trapecio", "calculadora de área de trapezoide", "fórmula del trapecio"],
+    formulaExplanationEs:
+      "El área de un trapecio es el promedio de los dos lados paralelos multiplicado por la distancia entre ellos. Promediar las bases funciona porque la figura se ensancha o estrecha de forma uniforme de un lado paralelo al otro, así que la media de las dos longitudes representa su ancho típico. Multiplicar ese ancho promedio por la altura perpendicular da el área encerrada, igual que multiplicar ancho por alto da el área del rectángulo equivalente.",
+    explanationEs:
+      "Un trapecio, llamado trapezoide en algunas variantes, es una figura de cuatro lados con exactamente un par de lados paralelos, conocidos como las bases. Las secciones de tejado, las mesas, los soportes de puente y muchos terrenos toman esta forma, así que calcular el área de un trapecio es una necesidad práctica común. Esta calculadora de área de trapecio toma tres datos, las longitudes de las dos bases paralelas y la altura perpendicular entre ellas, y devuelve el área, el espacio plano que cubre la figura. La fórmula promedia las dos bases y multiplica por la altura: sumas los dos lados paralelos, divides entre dos para obtener su ancho promedio y luego multiplicas por la distancia que los separa. Esto es lo mismo que hallar el área de un rectángulo cuyo ancho sea el promedio de las dos bases. Para un trapecio con bases de 4 y 6 unidades y una altura de 3 unidades, la base promedio es 5 unidades, así que el área es 5 por 3, que da 15 unidades cuadradas. Estudiantes que aprenden geometría, constructores que estiman tejados o tarimas y topógrafos que miden terrenos irregulares confían en una calculadora de área de trapecio para manejar el paso del promedio limpiamente y evitar usar los lados inclinados por error.",
+    exampleEs: {
+      inputs: { base1: 4, base2: 6, height: 3 },
+      explanation: "Área = (4 + 6) ÷ 2 × 3 = 5 × 3 = 15 unidades cuadradas.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cuál es la fórmula del área de un trapecio?",
+        answer: "El área de un trapecio es la suma de las dos bases paralelas dividida entre dos, multiplicada por la altura. Escrito, es un medio por base uno más base dos, por la altura. La altura debe ser la distancia perpendicular entre los lados paralelos. Para bases de 4 y 6 con una altura de 3, el área es un medio por 10 por 3, que da 15 unidades cuadradas.",
+      },
+      {
+        question: "¿Cuáles son las bases?",
+        answer: "Las bases son los dos lados que son paralelos entre sí. Un trapecio tiene exactamente un par de lados paralelos, y esos dos son las bases usadas en la fórmula. Los otros dos lados, llamados los catetos o lados oblicuos, pueden estar inclinados y tener cualquier longitud, y no se usan para calcular el área. Identificar correctamente el par paralelo es el paso clave antes de aplicar la fórmula.",
+      },
+      {
+        question: "¿Qué altura debo usar?",
+        answer: "Usa la altura perpendicular, la distancia en línea recta más corta entre las dos bases paralelas, medida en ángulo recto con ellas. No uses la longitud de los lados inclinados, que es mayor y sobreestimaría el área. Si un trapecio se dibuja inclinado, la altura sigue midiéndose en línea recta entre los lados paralelos, no a lo largo del borde oblicuo. La calculadora asume que introduces esta altura perpendicular.",
+      },
+      {
+        question: "¿Por qué funciona promediar las bases?",
+        answer: "Porque un trapecio cambia de ancho de forma uniforme de una base a la otra, el promedio de las dos longitudes de base representa su ancho efectivo por el medio. Multiplicar ese ancho promedio por la altura da la misma área que un rectángulo de igual altura y de ese ancho promedio. También puedes imaginar dos copias del trapecio unidas para formar un paralelogramo, cuya área es la suma de bases por altura, y luego dividida entre dos.",
+      },
+      {
+        question: "¿Importa el orden de las dos bases?",
+        answer: "No. Como la fórmula suma las dos bases antes de dividir, no importa cuál etiquetes como base uno y cuál como base dos. La suma da el mismo total de cualquier manera, así que el área sale idéntica sin importar el orden en que las introduzcas. Solo asegúrate de que ambos valores sean los lados paralelos y de que la altura sea la distancia perpendicular entre ellos.",
+      },
+    ],
   },
   {
     id: "harmonic-mean",
@@ -334,6 +524,44 @@ export const mathR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard statistics",
+    slugEs: "calculadora-de-media-armonica",
+    titleEs: "Calculadora de Media Armónica",
+    shortDescriptionEs: "Calcula la media armónica de tres números.",
+    seoTitleEs: "Calculadora de Media Armónica — Promedio de Tasas",
+    metaDescriptionEs:
+      "Calculadora de media armónica gratuita. Introduce tres números para hallar su media armónica, el promedio más adecuado para tasas, velocidades y razones.",
+    primaryKeywordEs: "calculadora de media armónica",
+    secondaryKeywordsEs: ["calculadora de promedio armónico", "promedio de tasas", "fórmula de la media armónica"],
+    formulaExplanationEs:
+      "La media armónica es la cantidad de valores dividida entre la suma de sus recíprocos. Es el recíproco de la media aritmética de los recíprocos, por lo que da más peso a los valores pequeños y menos a los grandes. Esto la convierte en el promedio correcto para cantidades definidas como tasas, como la velocidad o el precio por unidad, porque promediar los recíprocos tiene en cuenta correctamente cómo se combinan esas tasas sobre una distancia o cantidad fija.",
+    explanationEs:
+      "La media armónica es un tipo de promedio especialmente adecuado para tasas, velocidades y razones, donde la media aritmética ordinaria daría una respuesta engañosa. Se define como la cantidad de valores dividida entre la suma de sus recíprocos, lo que la hace siempre menor o igual que la media aritmética de los mismos números. Esta calculadora de media armónica toma tres números positivos o negativos distintos de cero y devuelve su media armónica. El uso clásico es promediar velocidades sobre distancias iguales: si conduces un tramo a 30 y otro a 60, tu velocidad media para el viaje de ida y vuelta es la media armónica, no el promedio simple, porque pasas más tiempo a la velocidad más lenta. La media armónica también aparece en finanzas para promediar razones precio-beneficio, en física para resistencias en paralelo y en estadística como parte de la puntuación F. Para los números 1, 2 y 4, la media armónica es 3 dividido entre la suma de 1, un medio y un cuarto, lo que da unos 1,714. Como dividir entre cero es indefinido, ninguno de los valores puede ser cero. Analistas, científicos y estudiantes usan una calculadora de media armónica siempre que necesitan el tipo correcto de promedio para datos basados en tasas.",
+    exampleEs: {
+      inputs: { number1: 1, number2: 2, number3: 4 },
+      explanation: "3 ÷ (1⁄1 + 1⁄2 + 1⁄4) = 3 ÷ 1,75 ≈ 1,714.",
+    },
+    faqsEs: [
+      {
+        question: "¿Para qué se usa la media armónica?",
+        answer: "La media armónica es el promedio correcto para tasas y razones medidas sobre una cantidad fija, como la velocidad media en distancias iguales, las razones precio-beneficio promedio o las tasas combinadas de trabajo. Da más peso a los valores pequeños, lo que refleja cómo se combinan realmente las tasas. Usar una media aritmética en estas situaciones sobreestima el promedio verdadero, así que la media armónica da el resultado apropiado.",
+      },
+      {
+        question: "¿En qué se diferencia de la media aritmética?",
+        answer: "La media aritmética suma los valores y divide entre cuántos hay, tratando cada uno por igual. La media armónica en cambio promedia los recíprocos e invierte el resultado, lo que da a los números pequeños más influencia. Para cualquier conjunto de números positivos que no sean todos idénticos, la media armónica es siempre menor que la aritmética. Las dos coinciden solo cuando cada valor del conjunto es exactamente el mismo.",
+      },
+      {
+        question: "¿Por qué ningún valor puede ser cero?",
+        answer: "La fórmula depende de tomar el recíproco de cada número, y el recíproco de cero es indefinido porque no puedes dividir uno entre cero. Si algún dato fuera cero, su recíproco sería infinito y la media armónica se derrumbaría. Por esta razón la calculadora no devuelve resultado cuando alguno de los tres valores es cero. Todos los datos deben ser distintos de cero para que la media armónica esté definida.",
+      },
+      {
+        question: "¿Puedo usarla para la velocidad media?",
+        answer: "Sí, y esta es su aplicación más famosa. Cuando recorres distancias iguales a distintas velocidades, tu velocidad media total es la media armónica de esas velocidades, no la media aritmética. Esto se debe a que pasas más tiempo cubriendo la distancia a la velocidad más lenta, así que debe contar más. Introduce las velocidades individuales y la calculadora devuelve la velocidad media real para tramos de igual distancia.",
+      },
+      {
+        question: "¿La media armónica es siempre menor que el promedio?",
+        answer: "Para un conjunto de números positivos, la media armónica es siempre menor o igual que la media geométrica, que a su vez es menor o igual que la media aritmética. La igualdad ocurre solo cuando todos los números son idénticos. Este orden, conocido como la desigualdad de las medias, significa que la media armónica se sitúa en el extremo bajo y es atraída con fuerza hacia los valores más pequeños del conjunto.",
+      },
+    ],
   },
   {
     id: "exponential-growth",
@@ -391,6 +619,44 @@ export const mathR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard mathematics",
+    slugEs: "calculadora-de-crecimiento-exponencial",
+    titleEs: "Calculadora de Crecimiento Exponencial",
+    shortDescriptionEs: "Proyecta un valor que crece a una tasa porcentual fija.",
+    seoTitleEs: "Calculadora de Crecimiento Exponencial — Crecimiento Compuesto",
+    metaDescriptionEs:
+      "Calculadora de crecimiento exponencial gratuita. Introduce un valor inicial, una tasa de crecimiento y un número de periodos para proyectar el valor final y el crecimiento total.",
+    primaryKeywordEs: "calculadora de crecimiento exponencial",
+    secondaryKeywordsEs: ["calculadora de crecimiento compuesto", "calculadora de tasa de crecimiento", "aumento exponencial"],
+    formulaExplanationEs:
+      "El crecimiento exponencial multiplica el valor actual por el mismo factor de crecimiento en cada periodo, así que tras muchos periodos el valor inicial queda multiplicado por ese factor elevado al número de periodos. Convertir la tasa porcentual a decimal y sumarle uno da el factor por periodo, y elevarlo a la potencia del número de periodos compone el crecimiento. Restar el valor original del valor final aísla la cantidad total ganada a lo largo de todos los periodos combinados.",
+    explanationEs:
+      "El crecimiento exponencial describe cualquier cantidad que aumenta el mismo porcentaje en cada periodo, de modo que la cantidad añadida crece con el tiempo al aplicarse sobre una base cada vez mayor. Modela el interés compuesto, el crecimiento de poblaciones, la propagación viral y muchos procesos naturales y financieros. Esta calculadora de crecimiento exponencial toma un valor inicial, una tasa de crecimiento expresada como porcentaje por periodo y el número de periodos, y luego devuelve el valor final y el crecimiento total acumulado. El mecanismo central es la composición: cada periodo el valor se multiplica por uno más la tasa, así que a lo largo de varios periodos la cifra inicial se multiplica por ese factor elevado al número de periodos. Esto produce la característica curva acelerada, donde el crecimiento es lento al principio y luego rápido, porque cada aumento se calcula sobre una cantidad mayor que el anterior. Para un valor inicial de 1000 que crece al 5 por ciento durante 3 periodos, el valor final es unos 1157,63 y el crecimiento total es unos 157,63. Inversores que proyectan rendimientos, biólogos que modelan poblaciones y analistas que pronostican tendencias usan una calculadora de crecimiento exponencial para ver dónde termina una cantidad que se compone de forma constante tras un número dado de periodos.",
+    exampleEs: {
+      inputs: { initialValue: 1000, growthRatePercent: 5, periods: 3 },
+      explanation: "1000 × (1 + 0,05)³ ≈ 1157,63, un crecimiento total de unos 157,63.",
+    },
+    faqsEs: [
+      {
+        question: "¿Qué es el crecimiento exponencial?",
+        answer: "El crecimiento exponencial es un aumento de un porcentaje constante en cada periodo, en lugar de una cantidad fija. Como el porcentaje se aplica sobre una base que sigue creciendo, el aumento real crece cada periodo, produciendo una curva acelerada. El interés compuesto, el crecimiento poblacional sin freno y la propagación viral siguen este patrón. Contrasta con el crecimiento lineal, donde se añade la misma cantidad fija cada periodo sin importar el tamaño actual.",
+      },
+      {
+        question: "¿En qué se diferencia del crecimiento lineal simple?",
+        answer: "El crecimiento lineal añade la misma cantidad fija cada periodo, así que su gráfica es una línea recta. El crecimiento exponencial añade un porcentaje fijo, que se traduce en una cantidad absoluta cada vez mayor al crecer la base, curvándose hacia arriba de forma cada vez más pronunciada. En unos pocos periodos ambos pueden parecer similares, pero en muchos periodos el crecimiento exponencial supera con creces al lineal, que es el poder de la composición.",
+      },
+      {
+        question: "¿Qué cuenta como un periodo?",
+        answer: "Un periodo es la unidad de tiempo a la que se refiere tu tasa de crecimiento: un año, un mes, un día o cualquier intervalo. La tasa y el número de periodos deben usar la misma unidad. Si tu tasa es del 5 por ciento anual, entonces el número de periodos es un recuento de años. Hacer coincidir el marco temporal de la tasa con el recuento de periodos es esencial para que la proyección sea precisa.",
+      },
+      {
+        question: "¿La tasa de crecimiento puede ser negativa?",
+        answer: "Sí. Una tasa de crecimiento negativa representa el decaimiento exponencial, donde el valor se reduce un porcentaje fijo cada periodo en lugar de crecer. Introducir una tasa de menos diez por ciento, por ejemplo, modela algo que pierde una décima de su valor cada periodo, como la depreciación o el decaimiento radiactivo. La misma fórmula se aplica, y la calculadora devuelve un valor final por debajo del inicial con un crecimiento total negativo.",
+      },
+      {
+        question: "¿Es lo mismo que el interés compuesto?",
+        answer: "La matemática subyacente es idéntica. El interés compuesto es una aplicación específica del crecimiento exponencial donde el dinero crece a una tasa de interés fija cada periodo. Esta calculadora usa la misma fórmula de composición, así que puedes aplicarla a ahorros o inversiones introduciendo el capital como valor inicial, la tasa de interés como tasa de crecimiento y el número de periodos de composición. Para trabajo financiero detallado, una herramienta específica puede añadir más opciones.",
+      },
+    ],
   },
   {
     id: "percentage-of-total",
@@ -446,6 +712,44 @@ export const mathR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard mathematics",
+    slugEs: "calculadora-de-porcentaje-del-total",
+    titleEs: "Calculadora de Porcentaje del Total",
+    shortDescriptionEs: "Calcula qué porcentaje es un número de otro.",
+    seoTitleEs: "Calculadora de Porcentaje del Total — Parte del Todo",
+    metaDescriptionEs:
+      "Calculadora de porcentaje del total gratuita. Introduce una parte y un todo para hallar qué porcentaje representa la parte del total, mostrado al instante.",
+    primaryKeywordEs: "calculadora de porcentaje del total",
+    secondaryKeywordsEs: ["parte del todo en porcentaje", "qué porcentaje es", "calculadora de porcentaje sobre el total"],
+    formulaExplanationEs:
+      "Para expresar una parte como porcentaje de un todo, divides la parte entre el todo para obtener su fracción del total, y luego multiplicas por cien para convertir esa fracción en un porcentaje. Dividir establece qué proporción representa la parte como un decimal entre cero y uno, y multiplicar por cien lo reescala en la conocida escala de cero a cien, donde el todo mismo siempre corresponde a exactamente el cien por cien.",
+    explanationEs:
+      "Hallar qué porcentaje es un número de otro es uno de los cálculos cotidianos más comunes, usado para calificaciones de exámenes, descuentos, presupuestos, resultados de encuestas y seguimiento de progreso. Un porcentaje expresa una parte como proporción de un todo en una escala donde el todo equivale a cien. Esta calculadora de porcentaje del total toma dos números, la parte y el todo, y devuelve qué porcentaje representa la parte de ese total. El método es sencillo: divides la parte entre el todo para hallar su fracción del total, y luego multiplicas por cien para convertir esa fracción en porcentaje. Por ejemplo, si 25 estudiantes de una clase de 200 eligieron una opción concreta, entonces 25 dividido entre 200 es 0,125, y multiplicando por cien da 12,5 por ciento. El mismo enfoque te dice qué porcentaje de un presupuesto consume un gasto, qué parte de una meta has alcanzado o qué proporción de un total tiene una categoría. Como dividir entre cero es indefinido, el todo no puede ser cero. Estudiantes, compradores, analistas y cualquiera que compare una pieza con un total usan una calculadora de porcentaje del total para convertir cifras crudas de parte y todo en un porcentaje fácil de entender sin aritmética manual.",
+    exampleEs: {
+      inputs: { part: 25, whole: 200 },
+      explanation: "25 ÷ 200 × 100 = 12,5%.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cómo hallo qué porcentaje es un número de otro?",
+        answer: "Divide la parte entre el todo, y luego multiplica el resultado por cien. La parte es la cantidad menor que estás examinando y el todo es el total al que pertenece. Por ejemplo, 25 de 200 es 25 dividido entre 200, que es 0,125, y multiplicando por cien da 12,5 por ciento. La calculadora realiza ambos pasos por ti a partir de los dos números que introduces.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre la parte y el todo?",
+        answer: "El todo es el total completo o cantidad de referencia, que representa el cien por cien, mientras que la parte es la porción de ese total que quieres expresar como porcentaje. En una clase de 200 estudiantes, la clase es el todo y cualquier subgrupo, como 25 estudiantes, es la parte. Identificar correctamente cuál cifra es el total es esencial, porque intercambiarlas da una respuesta muy diferente.",
+      },
+      {
+        question: "¿El porcentaje puede ser mayor que 100?",
+        answer: "Sí. Si la parte es mayor que el todo, el porcentaje supera el cien, lo cual es perfectamente válido. Esto ocurre al comparar una cifra actual con una base menor, como las ventas de este año frente a un total inferior del año pasado. Un valor del 150 por ciento significa que la parte es una vez y media el todo. La calculadora maneja partes mayores que el todo sin problema alguno.",
+      },
+      {
+        question: "¿Por qué el todo no puede ser cero?",
+        answer: "El cálculo divide la parte entre el todo, y la división entre cero es matemáticamente indefinida, así que un total de cero no tiene porcentaje significativo. Conceptualmente, si el todo es cero no hay nada de lo que la parte pueda ser una proporción. Por esta razón la calculadora no devuelve resultado cuando el todo es cero. Asegúrate de que tu total sea un número distinto de cero antes de calcular.",
+      },
+      {
+        question: "¿Cómo se usa esto en la vida real?",
+        answer: "Este cálculo aparece en todas partes: obtener una calificación de examen como porcentaje de la puntuación máxima, ver qué parte de un presupuesto se lleva una factura, seguir el progreso hacia una meta de ahorro o leer resultados de encuestas. Cada vez que tienes una pieza y un total y quieres conocer la proporción de la pieza, este es el cálculo que hay que usar. Convierte recuentos crudos en porcentajes comparables fáciles de interpretar.",
+      },
+    ],
   },
   {
     id: "consecutive-integer-sum",
@@ -502,6 +806,44 @@ export const mathR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard mathematics",
+    slugEs: "calculadora-de-suma-de-enteros-consecutivos",
+    titleEs: "Calculadora de Suma de Enteros Consecutivos",
+    shortDescriptionEs: "Suma todos los números enteros desde un inicio hasta un fin.",
+    seoTitleEs: "Calculadora de Suma de Enteros Consecutivos — Suma de un Rango",
+    metaDescriptionEs:
+      "Calculadora de suma de enteros consecutivos gratuita. Introduce un número inicial y uno final para sumar cada entero del rango y contar cuántos hay.",
+    primaryKeywordEs: "calculadora de suma de enteros consecutivos",
+    secondaryKeywordsEs: ["calculadora de suma de enteros", "suma de un rango", "sumar números consecutivos"],
+    formulaExplanationEs:
+      "La suma de todos los enteros desde uno hasta cualquier número n es igual a n por n más uno dividido entre dos, una fórmula atribuida a Gauss. Para sumar un rango que empieza más arriba de uno, tomas el total acumulado hasta el valor final y restas el total acumulado hasta justo antes del valor inicial. La diferencia deja exactamente los enteros dentro del rango, y el conteo es simplemente el fin menos el inicio más uno.",
+    explanationEs:
+      "Sumar una serie de números enteros consecutivos, como cada entero del 1 al 100, es una tarea aritmética clásica con un atajo famosamente elegante. En lugar de sumar cada número uno por uno, puedes usar una fórmula cerrada que da el total al instante. Esta calculadora de suma de enteros consecutivos toma un número inicial y un número final, ambos enteros, y devuelve la suma de cada entero de ese rango inclusivo junto con cuántos números hay. Funciona usando el conocido resultado de que la suma de todos los enteros del 1 a cualquier valor n es n por n más uno, dividido entre dos. Para sumar un rango que no empieza en 1, la calculadora computa el total hasta el valor final y resta el total hasta justo antes del inicio, dejando exactamente los números intermedios. Para el rango 1 a 10, la suma es 55 y el conteo es 10. La famosa anécdota atribuye este truco al joven matemático Gauss, que sumó del 1 al 100 en segundos emparejando números desde ambos extremos. Estudiantes, programadores y aficionados a los acertijos usan una calculadora de suma de enteros consecutivos para totalizar cualquier rango de números enteros sin sumas tediosas, siempre que el inicio no sea mayor que el fin.",
+    exampleEs: {
+      inputs: { startNumber: 1, endNumber: 10 },
+      explanation: "Suma = [10 × 11 ÷ 2] − [0 × 1 ÷ 2] = 55 − 0 = 55, a lo largo de 10 enteros.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cómo se suman enteros consecutivos rápidamente?",
+        answer: "Usa el atajo del emparejamiento: la suma de los enteros del 1 a n es n por n más uno, todo dividido entre dos. Para un rango que empieza por encima de 1, halla el total hasta el fin y resta el total hasta justo antes del inicio. Esto evita sumar cada número por separado. Para 1 a 10, la suma es 10 por 11 dividido entre 2, que es 55, calculado al instante.",
+      },
+      {
+        question: "¿Por qué el inicio y el fin deben ser enteros?",
+        answer: "Esta calculadora suma números enteros, así que tanto el inicio como el fin deben ser enteros para que el rango esté bien definido. La fórmula cuenta y suma cada número entero del inicio al fin inclusive, lo que solo tiene sentido para enteros. Si introduces un decimal, la calculadora no devuelve resultado. Para sumar una secuencia de decimales con un paso fijo, una calculadora de serie aritmética es la herramienta adecuada.",
+      },
+      {
+        question: "¿Qué me dice el conteo?",
+        answer: "El conteo es cuántos enteros hay en el rango del inicio al fin, incluidos ambos extremos. Es igual al fin menos el inicio más uno. Para el rango 1 a 10 el conteo es 10, y para 5 a 8 es cuatro. El más uno importa porque tanto el primer número como el último están incluidos, así que una simple resta contaría uno de menos.",
+      },
+      {
+        question: "¿Los números pueden ser negativos?",
+        answer: "Sí. La fórmula funciona también para enteros negativos, siempre que el inicio no sea mayor que el fin. Por ejemplo, la suma de menos 3 a 3 es cero, porque los términos negativos y positivos se cancelan, y el conteo es siete. La calculadora maneja rangos que cruzan el cero o que están enteramente por debajo de él, usando la misma resta de totales acumulados para obtener la suma correcta.",
+      },
+      {
+        question: "¿Qué pasa si el inicio es mayor que el fin?",
+        answer: "El rango estaría vacío o iría hacia atrás, algo que la fórmula no define aquí, así que la calculadora no devuelve resultado cuando el inicio supera al fin. Para sumar una lista descendente, simplemente introduce el número menor como inicio y el mayor como fin, ya que la suma da el mismo total sin importar la dirección. Mantener el inicio menor o igual que el fin asegura una respuesta válida.",
+      },
+    ],
   },
   {
     id: "golden-ratio",
@@ -557,5 +899,43 @@ export const mathR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Euclidean geometry",
+    slugEs: "calculadora-de-proporcion-aurea",
+    titleEs: "Calculadora de Proporción Áurea",
+    shortDescriptionEs: "Divide una longitud en las proporciones de la proporción áurea.",
+    seoTitleEs: "Calculadora de Proporción Áurea — Dividir entre Phi",
+    metaDescriptionEs:
+      "Calculadora de proporción áurea gratuita. Introduce una longitud total para dividirla en los segmentos áureos mayor y menor usando phi, unos 1,618.",
+    primaryKeywordEs: "calculadora de proporción áurea",
+    secondaryKeywordsEs: ["calculadora de phi", "calculadora de sección áurea", "calculadora de proporción divina"],
+    formulaExplanationEs:
+      "La proporción áurea, phi, es aproximadamente 1,618, definida de modo que la longitud total dividida entre la parte mayor es igual a la parte mayor dividida entre la parte menor. Para dividir un total en esta proporción, divides el total entre phi para hallar el segmento mayor, y el resto es el segmento menor. Esta proporción única es la única división donde la relación entre el todo y su pieza mayor refleja exactamente la que hay entre la pieza mayor y la menor.",
+    explanationEs:
+      "La proporción áurea, denotada por la letra griega phi y aproximadamente igual a 1,618, es una proporción especial que ha fascinado a matemáticos, artistas y arquitectos durante más de dos mil años. Una línea se divide en la proporción áurea cuando la longitud total se relaciona con la parte mayor exactamente igual que la parte mayor se relaciona con la parte menor. Esta calculadora de proporción áurea toma una longitud total y la divide en los segmentos mayor y menor que satisfacen esta proporción. Para ello divide el total entre phi para hallar el segmento mayor, y el resto se convierte en el segmento menor. La proporción aparece por toda la naturaleza, en la espiral de las conchas, la disposición de hojas y semillas y las proporciones del cuerpo humano, y se ha usado deliberadamente en arte, diseño y arquitectura desde el Partenón hasta los logotipos modernos porque muchas personas encuentran agradables sus proporciones. Para una longitud total de 100 unidades, el segmento mayor es unos 61,80 unidades y el menor unos 38,20 unidades. Diseñadores que maquetan páginas, fotógrafos que encuadran tomas y estudiantes que exploran matemáticas usan una calculadora de proporción áurea para dividir una longitud en estas célebres proporciones al instante, sin necesidad de recordar el valor exacto de phi.",
+    exampleEs: {
+      inputs: { totalLength: 100 },
+      explanation: "Mayor = 100 ÷ 1,618 ≈ 61,80; menor = 100 − 61,80 ≈ 38,20.",
+    },
+    faqsEs: [
+      {
+        question: "¿Qué es la proporción áurea?",
+        answer: "La proporción áurea, escrita como la letra griega phi, es aproximadamente 1,618. Es la proporción única en la que la razón del todo a la parte mayor es igual a la razón de la parte mayor a la parte menor. Esta relación autosemejante la hace matemáticamente especial, y aparece repetidamente en geometría, la sucesión de Fibonacci y patrones de todo el mundo natural, por lo que se estudia desde la antigüedad.",
+      },
+      {
+        question: "¿Cómo divido una longitud en la proporción áurea?",
+        answer: "Divide la longitud total entre phi, unos 1,618, para hallar el mayor de los dos segmentos. Resta ese valor del total para obtener el segmento menor. Las dos piezas quedan entonces en la proporción áurea entre sí y con el todo. Para una longitud de 100, la parte mayor es unos 61,8 y la menor unos 38,2. La calculadora realiza esta división y resta por ti.",
+      },
+      {
+        question: "¿Dónde aparece la proporción áurea en la naturaleza?",
+        answer: "La proporción áurea y la estrechamente relacionada sucesión de Fibonacci aparecen en la disposición en espiral de las semillas de girasol, las piñas y las conchas de nautilo, y en la ramificación de plantas y hojas. Estos patrones suelen surgir porque empaquetan elementos de forma eficiente o permiten un crecimiento constante. Aunque algunas afirmaciones sobre su prevalencia son exageradas, ejemplos genuinos en la filotaxis la hacen una de las proporciones más reconocibles.",
+      },
+      {
+        question: "¿Por qué se usa en diseño y arte?",
+        answer: "Muchos artistas y diseñadores usan la proporción áurea para dividir el espacio, dimensionar elementos y componer diseños porque sus proporciones se consideran ampliamente equilibradas y agradables. Guía la colocación de puntos focales, el tamaño de columnas y el encuadre de imágenes. Desde la arquitectura clásica hasta la marca moderna, dividir un lienzo o una página según phi es una técnica popular para lograr una composición que se sienta armoniosa.",
+      },
+      {
+        question: "¿La proporción áurea es lo mismo que la regla de los tercios?",
+        answer: "Son ideas relacionadas pero no idénticas. La regla de los tercios divide un encuadre en tercios iguales, colocando los sujetos a lo largo de esas líneas, y es una aproximación más simple usada en fotografía. La proporción áurea divide una longitud en torno al 61,8 por ciento en lugar de exactamente dos tercios, dando una proporción algo distinta y más precisa. Ambas buscan crear composiciones equilibradas, y la regla de los tercios suele enseñarse como sustituto sencillo.",
+      },
+    ],
   },
 ];

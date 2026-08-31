@@ -49,6 +49,38 @@ export const sportsR8Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard sports science (distance-based running energy)",
+    slugEs: "calculadora-de-calorias-al-correr",
+    titleEs: "Calculadora de Calorías al Correr",
+    shortDescriptionEs: "Estima las calorías quemadas en una carrera según tu peso y distancia.",
+    seoTitleEs: "Calculadora de Calorías al Correr — Calorías Quemadas Corriendo",
+    metaDescriptionEs: "Calculadora gratuita de calorías al correr. Introduce tu peso corporal y la distancia recorrida para estimar cuántas calorías quemaste, usando el método estándar basado en la distancia.",
+    primaryKeywordEs: "calculadora de calorías al correr",
+    secondaryKeywordsEs: ["calorías quemadas corriendo", "calculadora de calorías de carrera", "calculadora de energía al correr"],
+    formulaExplanationEs: "El coste de correr está dominado por el trabajo de desplazar tu peso corporal hacia adelante, por lo que la energía que quemas depende tanto de lo pesado que eres como de la distancia que recorres. La constante 1,036 representa aproximadamente una kilocaloría por kilogramo transportado en cada kilómetro, una cifra que se mantiene en un amplio rango de ritmos porque la energía por kilómetro permanece casi constante. Multiplicar peso por distancia por este factor da una estimación rápida e independiente del ritmo de la energía total gastada.",
+    explanationEs: "Esta calculadora de calorías al correr estima cuánta energía quemaste en una carrera a partir de solo dos números: tu peso corporal en kilogramos y la distancia que recorriste en kilómetros. A diferencia de las calculadoras que necesitan tu ritmo y tu tiempo, este método usa la observación bien establecida de que el coste calórico de correr depende principalmente de cuánto desplazas tu cuerpo, no de la velocidad, lo que la hace rápida y tolerante de usar.\n\nConocer tu gasto calórico al correr importa a cualquiera que controle su peso, planifique su nutrición o alimente su entrenamiento. Como correr es una de las formas de ejercicio cotidiano con mayor densidad energética, una estimación precisa te ayuda a fijar un déficit calórico sensato para perder grasa o, al contrario, a reponer la energía que gastaste para recuperarte bien y mantener la constancia. Comparar el gasto de distintas distancias también muestra cuánto cuesta realmente el kilometraje extra.\n\nEl cálculo funciona porque la energía necesaria para correr un kilómetro es una proporción casi fija de tu peso corporal, así que escalar el peso por la distancia por la constante 1,036 da una aproximación fiable. Es una estimación y no una medición de laboratorio, ya que las cuestas, el viento y la economía de carrera modifican la cifra real, pero es una guía genuinamente útil para planificar comidas y seguir tu actividad.",
+    exampleEs: { inputs: { weightKg: 70, distanceKm: 10 }, explanation: "70 × 10 × 1,036 = 725,2, así que unas 725 kcal quemadas en una carrera de 10 km." },
+    faqsEs: [
+      {
+        question: "¿Por qué no aparece el ritmo en esta calculadora?",
+        answer: "El coste energético de correr proviene sobre todo de desplazar tu peso corporal una distancia dada, y la investigación muestra que las calorías por kilómetro permanecen casi constantes en un amplio rango de ritmos. Correr más rápido te lleva antes, pero quema un total similar, porque pasas menos tiempo esforzándote más. Por eso este método basado en la distancia solo necesita tu peso y tu distancia y aun así produce una estimación realista.",
+      },
+      {
+        question: "¿Cómo cambia el resultado el peso corporal?",
+        answer: "Un corredor más pesado tiene que mover más masa en cada zancada, así que quema más calorías al cubrir la misma distancia que uno más ligero. La fórmula multiplica directamente por tu peso en kilogramos, por lo que introducir una cifra precisa importa. Dos personas que corren la misma ruta obtendrán resultados distintos, y la más pesada gastará más energía, así que usa siempre tu peso real y actual.",
+      },
+      {
+        question: "¿Caminar la misma distancia quema lo mismo?",
+        answer: "No del todo. Caminar un kilómetro quema algo menos de calorías que correrlo, porque correr implica una fase aérea de rebote que cuesta energía extra que tus músculos deben generar. Esta calculadora está ajustada para correr, así que aplicarla a una caminata sobreestimaría ligeramente el gasto. Para sesiones mixtas, trata por separado las partes corridas y caminadas, o usa una estimación específica para caminar.",
+      },
+      {
+        question: "¿Qué precisión tiene la estimación?",
+        answer: "Da una buena aproximación en lugar de un recuento exacto. El uso real de energía varía con la economía de carrera, el terreno, la pendiente, el viento, la temperatura y el metabolismo individual, nada de lo cual capta una fórmula simple de peso y distancia. Trata el número como una guía de planificación, y si tu objetivo es un déficit fiable, evita comer de vuelta cada caloría estimada, ya que estas cifras tienden a ser algo optimistas.",
+      },
+      {
+        question: "¿Las cuestas aumentan las calorías quemadas?",
+        answer: "Sí. Correr cuesta arriba exige trabajo extra para elevar tu peso contra la gravedad, así que una ruta con desnivel quema más que una llana de la misma distancia, mientras que los descensos recuperan solo una pequeña parte de ese coste. Esta calculadora asume un terreno mayormente llano, así que en una carrera con cuestas subestimará el gasto real. Añade un margen aproximado por el desnivel significativo o usa un GPS que tenga en cuenta la elevación.",
+      },
+    ],
   },
   {
     id: "marathon-time-predictor",
@@ -99,6 +131,38 @@ export const sportsR8Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Riegel model (race prediction)",
+    slugEs: "predictor-de-tiempo-de-maraton",
+    titleEs: "Predictor de Tiempo de Maratón",
+    shortDescriptionEs: "Predice tu tiempo de maratón a partir de un resultado de carrera reciente.",
+    seoTitleEs: "Predictor de Tiempo de Maratón — Estimación con la Fórmula de Riegel",
+    metaDescriptionEs: "Predictor gratuito de tiempo de maratón usando la fórmula de Riegel. Introduce una distancia y tiempo recientes junto con tu distancia objetivo para estimar tu tiempo de meta en el maratón.",
+    primaryKeywordEs: "predictor de tiempo de maratón",
+    secondaryKeywordsEs: ["calculadora predictora de maratón", "calculadora de riegel maratón", "predicción de tiempo de carrera"],
+    formulaExplanationEs: "El modelo de Riegel proyecta un tiempo de meta escalando una carrera conocida a una nueva distancia y elevando la razón de distancias a la potencia 1,06. Ese exponente, algo mayor que uno, codifica el hecho de que el ritmo decae a medida que crece la distancia, ya que nadie puede mantener la velocidad de una carrera corta durante un maratón. Multiplicar tu tiempo reciente por este factor lo estira en proporción a cuánto más larga es la carrera objetivo, dando una predicción realista en lugar de una simple extrapolación lineal.",
+    explanationEs: "Este predictor de tiempo de maratón estima cuánto podría llevarte un maratón, o cualquier distancia objetivo, basándose en una carrera que hayas completado recientemente. Aplica la fórmula de Riegel: introduce la distancia y el tiempo de un resultado reciente y la distancia a la que apuntas, y proyecta un tiempo de meta. Los tiempos se manejan en minutos para que los números sean fáciles de leer e introducir.\n\nPredecir un tiempo de maratón importa porque ritmar bien una carrera de 42,195 kilómetros es difícil, y salir demasiado rápido es el error clásico que lleva a chocar contra el muro. Una predicción fundamentada a partir de una media maratón o un 10K reciente te da un ritmo objetivo que ensayar en los entrenamientos y mantener el día de la carrera. Los entrenadores la usan para fijar ritmos objetivo, y los corredores para elegir una ambición de tiempo realista en lugar de un número redondo arbitrario.\n\nLa fórmula funciona porque el ritmo de carrera se ralentiza de forma predecible al aumentar la distancia, y el exponente 1,06 capta ese desvanecimiento con precisión en las distancias habituales. La predicción supone que has entrenado adecuadamente para la prueba más larga, así que es más fiable cuando tu carrera reciente está razonablemente cerca en distancia y tu base de resistencia respalda el maratón. Trata el resultado como un objetivo hacia el que entrenar, no como una garantía, ya que la alimentación, el calor y el perfil del recorrido moldean el resultado real.",
+    exampleEs: { inputs: { recentDistanceKm: 21.0975, recentTimeMinutes: 100, targetDistanceKm: 42.195 }, explanation: "100 × (42,195 ÷ 21,0975)^1,06 = 100 × 2,085 ≈ 208,5 minutos, unas 3 horas y 28 minutos." },
+    faqsEs: [
+      {
+        question: "¿Qué es la fórmula de Riegel?",
+        answer: "La fórmula de Riegel, publicada por Peter Riegel, predice tiempos de carrera entre distancias multiplicando un tiempo conocido por la razón de distancias elevada a la potencia 1,06. El exponente refleja que los corredores se ralentizan ligeramente al alargarse las carreras. Es fiable porque es simple y coincide bien con los resultados reales desde unos 1.500 metros hasta el maratón, siendo una herramienta estándar para fijar ritmos objetivo realistas.",
+      },
+      {
+        question: "¿Qué carrera reciente debo usar como entrada?",
+        answer: "Usa una carrera reciente y bien ritmada a una distancia no demasiado lejana de tu objetivo para la predicción más fiable. Una media maratón es una base excelente para estimar un maratón porque las exigencias de resistencia se solapan mucho. Un 5K corto también sirve, pero tiende a producir un tiempo de maratón optimista, ya que asume una resistencia que quizá aún no tengas. Elige un resultado que refleje tu forma actual.",
+      },
+      {
+        question: "¿Por qué introducir el tiempo en minutos?",
+        answer: "La calculadora trabaja en minutos para mantener la entrada y la salida simples y coherentes. Convierte primero tu tiempo de meta multiplicando las horas por sesenta y sumando los minutos restantes y cualquier fracción de segundo. Una media maratón de una hora y cuarenta minutos se convierte en 100 minutos. El tiempo previsto también se devuelve en minutos, que puedes reconvertir a horas y minutos para planificar un ritmo objetivo familiar.",
+      },
+      {
+        question: "¿Qué precisión tiene una predicción de maratón?",
+        answer: "Las predicciones son más precisas cuando tu carrera de entrada está cerca en distancia y has completado un entrenamiento de resistencia específico para el maratón. Saltar de un 5K directamente a una estimación de maratón asume una resistencia que quizá te falte, por lo que la proyección puede resultar demasiado rápida. El maratón también está expuesto de forma única a la alimentación y al muro, que ninguna fórmula modela. Úsala como objetivo hacia el que entrenar.",
+      },
+      {
+        question: "¿Puedo predecir también carreras más cortas?",
+        answer: "Sí. La fórmula funciona en ambos sentidos, así que puedes proyectar hacia abajo desde un maratón a una media maratón o un 10K, además de hacia arriba. Predecir una carrera más corta y rápida a partir de un resultado más largo suele dar un objetivo algo conservador, porque tu velocidad en distancias cortas puede superar lo que asume una fórmula basada en la resistencia. En cualquier caso, basa la predicción en una carrera reciente.",
+      },
+    ],
   },
   {
     id: "race-finish-time",
@@ -149,6 +213,38 @@ export const sportsR8Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard sports science (pace–distance–time)",
+    slugEs: "calculadora-de-tiempo-de-meta-carrera",
+    titleEs: "Calculadora de Tiempo de Meta",
+    shortDescriptionEs: "Calcula tu tiempo de meta a partir de la distancia y el ritmo objetivo.",
+    seoTitleEs: "Calculadora de Tiempo de Meta — Tiempo de Meta según el Ritmo",
+    metaDescriptionEs: "Calculadora gratuita de tiempo de meta. Introduce la distancia de la carrera y tu ritmo objetivo por kilómetro para hallar tu tiempo de meta en minutos y como duración.",
+    primaryKeywordEs: "calculadora de tiempo de meta",
+    secondaryKeywordsEs: ["calculadora de tiempo de llegada", "tiempo de carrera según el ritmo", "tiempo de meta corriendo"],
+    formulaExplanationEs: "El tiempo de meta es simplemente la distancia que recorres multiplicada por cuánto tarda cada unidad de esa distancia. Si mantienes un ritmo de cierto número de minutos por kilómetro, entonces cada kilómetro añade exactamente esos minutos a tu total, así que multiplicar el ritmo por el número de kilómetros da el tiempo de toda la carrera. El mismo resultado se muestra como un número decimal de minutos y con formato de duración en horas, minutos y segundos para tu comodidad.",
+    explanationEs: "Esta calculadora de tiempo de meta te dice cuánto tardará una carrera si mantienes un ritmo elegido. Introduce la distancia de la carrera en kilómetros y tu ritmo objetivo en minutos por kilómetro, y devuelve tu tiempo de meta previsto tanto como número de minutos como en la familiar duración de horas, minutos y segundos. Es la herramienta esencial para convertir un objetivo de ritmo en un tiempo de llegada.\n\nCalcular tu tiempo de meta por adelantado importa para planificar la carrera y mantener la disciplina de ritmo. Una vez que sabes que un ritmo dado produce un tiempo concreto, puedes decidir si ese ritmo es realista, configurar tu reloj para no desviarte e informar a tu equipo de apoyo de cuándo esperarte. Los corredores que persiguen un objetivo de tiempo concreto trabajan hacia atrás desde él para hallar el ritmo exacto que deben sostener, y esta calculadora hace explícito ese vínculo.\n\nEl cálculo es sencillo pero potente: el tiempo es igual a la distancia multiplicada por el ritmo, porque el ritmo es tiempo por unidad de distancia. Mantener cinco minutos por kilómetro durante diez kilómetros lleva cincuenta minutos, independientemente de cómo se sienta el esfuerzo por el camino. Al mostrar el resultado como una duración limpia además de un recuento bruto de minutos, la herramienta te permite compararlo al instante con tu objetivo, resultados anteriores y los estándares de clasificación o cortes que imponen muchas carreras.",
+    exampleEs: { inputs: { distanceKm: 10, paceMinPerKm: 5.5 }, explanation: "10 × 5,5 = 55 minutos, mostrado como una duración de 55:00 para un 10 km a 5:30 por km." },
+    faqsEs: [
+      {
+        question: "¿Cómo convierto un ritmo como 5:30 en un número?",
+        answer: "Los ritmos suelen escribirse en minutos y segundos, como 5:30 por kilómetro, pero esta calculadora espera un decimal. Convierte la parte de los segundos dividiéndola entre sesenta y sumándola a los minutos: 5:30 se convierte en 5,5, y 4:45 en 4,75. Introducir 5:30 como 5,3 sería incorrecto, ya que treinta segundos son medio minuto, no tres décimas. Convierte siempre los segundos a fracción de minuto antes de introducir tu ritmo.",
+      },
+      {
+        question: "¿El tiempo de meta asume un ritmo constante?",
+        answer: "Sí. El cálculo asume que mantienes el ritmo introducido de forma constante durante toda la distancia, así que da el tiempo de un esfuerzo perfectamente uniforme. Las carreras reales rara vez salen exactamente según lo previsto, con kilómetros más rápidos y más lentos que se compensan o se desvían. Un ritmo constante suele ser la forma más eficiente de competir, así que la estimación sirve también como objetivo a alcanzar.",
+      },
+      {
+        question: "¿Puedo usar esto para cualquier distancia?",
+        answer: "Sí. Introduce cualquier distancia de carrera en kilómetros, desde un 5K corto hasta un ultramaratón, junto con el ritmo que pretendes mantener. La fórmula no cambia con la distancia. Ten en cuenta que mantener un ritmo dado se vuelve más difícil cuanto más corres, así que elige un ritmo que puedas sostener de forma realista durante toda la prueba y no tu velocidad en un esfuerzo corto y fresco.",
+      },
+      {
+        question: "¿En qué se diferencia la duración de los minutos?",
+        answer: "Los dos resultados muestran el mismo tiempo de meta en formatos distintos. La cifra en minutos es un número decimal, útil para cálculos posteriores, mientras que la duración da formato a ese mismo valor en horas, minutos y segundos, que es como se leen y comunican normalmente los tiempos de carrera. Una meta de 95,5 minutos aparece como una duración de 1:35:30. Usa la representación que más te convenga.",
+      },
+      {
+        question: "¿Cómo hallo el ritmo que necesito para un tiempo objetivo?",
+        answer: "Para trabajar hacia atrás desde un tiempo de meta objetivo, divide ese tiempo en minutos entre la distancia de la carrera en kilómetros, y el resultado es el ritmo que debes mantener. Para un 10K por debajo de cincuenta minutos, cincuenta entre diez da cinco minutos por kilómetro. También puedes introducir ritmos de prueba aquí y ajustarlos hasta que el tiempo de meta coincida con tu objetivo, una forma rápida de precisar el ritmo requerido.",
+      },
+    ],
   },
   {
     id: "power-to-weight-ratio",
@@ -198,6 +294,38 @@ export const sportsR8Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard cycling science (power-to-weight ratio)",
+    slugEs: "calculadora-de-relacion-potencia-peso",
+    titleEs: "Calculadora de Relación Potencia-Peso",
+    shortDescriptionEs: "Calcula la relación potencia-peso en ciclismo en vatios por kilogramo.",
+    seoTitleEs: "Calculadora de Relación Potencia-Peso — Vatios por Kilo",
+    metaDescriptionEs: "Calculadora gratuita de relación potencia-peso para ciclistas. Introduce tu potencia en vatios y tu peso corporal para hallar tus vatios por kilogramo, la métrica clave para escalar.",
+    primaryKeywordEs: "calculadora de relación potencia-peso",
+    secondaryKeywordsEs: ["calculadora de vatios por kilo", "potencia-peso en ciclismo", "calculadora w/kg"],
+    formulaExplanationEs: "La relación potencia-peso divide la potencia que produces entre la masa que debes mover, dando vatios por kilogramo. Importa porque escalar y acelerar son luchas contra tu propio peso, así que lo que cuenta no es la potencia bruta por sí sola, sino la potencia relativa a lo pesado que eres. Dividir vatios entre kilogramos normaliza el rendimiento entre ciclistas de distintos tamaños, permitiendo que un ciclista ligero con potencia modesta iguale a uno más pesado y potente en una pendiente empinada.",
+    explanationEs: "La relación potencia-peso es la métrica de rendimiento más importante del ciclismo, sobre todo para escalar, y esta calculadora la obtiene a partir de tu potencia en vatios y tu peso corporal en kilogramos. El resultado, expresado en vatios por kilogramo, te dice cuánta potencia generas por cada kilogramo que tienes que arrastrar carretera arriba, que es lo que realmente determina lo rápido que subes.\n\nLa métrica importa porque en cualquier subida o aceleración trabajas contra la gravedad y la inercia que actúan sobre tu masa total. Un ciclista que produce 300 vatios a 60 kilogramos escalará más rápido que uno que produce los mismos 300 vatios a 80 kilogramos, porque el ciclista ligero reparte esa potencia sobre menos peso. Por eso los escaladores profesionales son famosamente delgados, y por eso comparar el vataje bruto entre ciclistas de distintos tamaños es engañoso sin normalizar por el peso.\n\nEl cálculo es una simple división, pero sus implicaciones son profundas para el entrenamiento y la competición. Los ciclistas siguen sus vatios por kilogramo en el umbral para medir su forma, juzgar si centrarse en ganar potencia o perder peso, y compararse con los estándares de categoría, donde los ciclistas recreativos rondan los dos o tres vatios por kilogramo y los profesionales de élite superan los seis en el umbral. Tanto si persigues una marca personal en una subida local como si planificas un bloque de entrenamiento, conocer tu relación potencia-peso convierte números abstractos en una medida clara de tu capacidad para escalar.",
+    exampleEs: { inputs: { powerWatts: 300, weightKg: 75 }, explanation: "300 ÷ 75 = 4,00 W/kg, una cifra fuerte típica de un aficionado en forma en el umbral." },
+    faqsEs: [
+      {
+        question: "¿Por qué son más útiles los vatios por kilo que los vatios brutos?",
+        answer: "Los vatios brutos miden la potencia que produces, pero escalar y acelerar son luchas contra tu peso corporal, así que lo que importa es la potencia relativa a la masa. Un ciclista más pesado necesita más vatios para escalar a la misma velocidad que uno más ligero. Expresar la potencia por kilogramo permite comparar ciclistas de distintos tamaños de forma justa y predice el rendimiento en subida mucho mejor que la potencia bruta sola.",
+      },
+      {
+        question: "¿Qué cifra de potencia debo introducir?",
+        answer: "Para una referencia significativa, introduce tu potencia umbral funcional, la mayor potencia media que puedes sostener durante aproximadamente una hora, en lugar de un pico de sprint breve. Los vatios por kilo en el umbral son el estándar para comparar ciclistas y clasificar la forma. También puedes introducir la potencia de un esfuerzo concreto, como una subida de veinte minutos, siempre que interpretes el resultado en ese contexto y compares situaciones equivalentes.",
+      },
+      {
+        question: "¿Qué es una buena relación potencia-peso?",
+        answer: "Depende mucho de la duración y de tu nivel. En el umbral, los ciclistas sin entrenar rondan los dos vatios por kilogramo, los aficionados entusiastas de tres a cuatro, los buenos corredores de club de cuatro a cinco, y los profesionales de élite por encima de seis. Los esfuerzos cortos de sprint producen cifras mucho más altas. En lugar de obsesionarte con las tablas, sigue tus propios vatios por kilo a lo largo del tiempo.",
+      },
+      {
+        question: "¿Debo ganar potencia o perder peso para mejorarla?",
+        answer: "Ambas cosas elevan la relación, pero la elección correcta depende de tu situación. Si cargas peso de más, perderlo puede elevar rápidamente los vatios por kilo sin tocar tu potencia, aunque nunca a costa de la salud o de la energía para entrenar. Si ya estás delgado, construir potencia mediante un entrenamiento estructurado es el camino sostenible. Muchos ciclistas logran las mayores ganancias mejorando la potencia mientras mantienen un peso saludable.",
+      },
+      {
+        question: "¿Importa la potencia-peso en terreno llano?",
+        answer: "Importa mucho menos en llano, donde domina la resistencia aerodinámica y la potencia bruta y la posición cuentan más que el peso. Un ciclista pesado y potente suele destacar en las contrarrelojes llanas y en los sprints. La relación potencia-peso brilla en las subidas y las aceleraciones empinadas, donde la gravedad hace de la masa el factor limitante. Así que juzga tus fortalezas por el terreno: vatios por kilo para las cuestas, vatios brutos y aerodinámica para el llano.",
+      },
+    ],
   },
   {
     id: "target-pace",
@@ -248,6 +376,38 @@ export const sportsR8Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard sports science (pace–distance–time)",
+    slugEs: "calculadora-de-ritmo-objetivo",
+    titleEs: "Calculadora de Ritmo Objetivo",
+    shortDescriptionEs: "Halla el ritmo que necesitas para lograr un tiempo objetivo.",
+    seoTitleEs: "Calculadora de Ritmo Objetivo — Ritmo Necesario para un Tiempo Objetivo",
+    metaDescriptionEs: "Calculadora gratuita de ritmo objetivo. Introduce tu distancia y tu tiempo objetivo para hallar el ritmo por kilómetro y la velocidad que necesitas mantener para llegar a meta a tiempo.",
+    primaryKeywordEs: "calculadora de ritmo objetivo",
+    secondaryKeywordsEs: ["calculadora de ritmo meta", "calculadora de ritmo necesario", "ritmo objetivo corriendo"],
+    formulaExplanationEs: "El ritmo objetivo es el tiempo objetivo dividido entre la distancia objetivo, dando los minutos que puedes permitirte en cada kilómetro y aun así llegar a tiempo. Como el ritmo es tiempo por unidad de distancia, repartir el tiempo total uniformemente por la distancia da el ritmo constante requerido. La velocidad es la misma relación invertida, distancia sobre tiempo, convertida a kilómetros por hora dividiendo primero el tiempo en minutos entre sesenta.",
+    explanationEs: "Esta calculadora de ritmo objetivo responde a la pregunta más práctica del corredor: ¿a qué ritmo debo correr para lograr mi tiempo objetivo? Introduce la distancia de tu carrera y el tiempo de meta que persigues, y devuelve el ritmo requerido en minutos por kilómetro junto con la velocidad constante equivalente en kilómetros por hora. Convierte una ambición de tiempo de llegada en un número concreto que mantener en la carretera.\n\nCompetir por un objetivo de tiempo es en realidad un ejercicio de ritmo, y conocer tu ritmo objetivo antes de empezar es lo que evita que salgas demasiado rápido y te desvanezcas, o que vayas demasiado lento para recuperar después. Con el ritmo exacto en mano, puedes configurar tu reloj, ensayar la cadencia en el entrenamiento y controlarte en cada marca de kilómetro. También te permite juzgar honestamente si un objetivo es realista según cómo se siente ese ritmo en la práctica.\n\nEl cálculo divide tu tiempo objetivo uniformemente por la distancia, porque mantener un ritmo constante es a la vez la forma más sencilla y normalmente la más eficiente de competir. La cifra de velocidad da la misma información para quien piensa en kilómetros por hora o programa una cinta de correr. Tanto si persigues una media maratón por debajo de dos horas como una marca personal en 5K, una calculadora de ritmo objetivo traduce el sueño en la disciplina de un único ritmo repetible.",
+    exampleEs: { inputs: { goalDistanceKm: 10, goalTimeMinutes: 50 }, explanation: "50 ÷ 10 = 5,00 min/km, y una velocidad de 12,00 km/h, para bajar de cincuenta minutos en 10 km." },
+    faqsEs: [
+      {
+        question: "¿Cómo leo el ritmo en minutos y segundos?",
+        answer: "El ritmo se muestra como un número decimal de minutos por kilómetro, así que convierte la parte fraccionaria en segundos multiplicándola por sesenta. Un ritmo de 5,5 significa cinco minutos y treinta segundos por kilómetro, y 4,75 significa cuatro minutos y cuarenta y cinco segundos. No leas 5,5 como cinco minutos cincuenta segundos. Una vez convertido, puedes fijar el ritmo en minutos y segundos en tu reloj para mantenerte en el objetivo.",
+      },
+      {
+        question: "¿De verdad es mejor mantener un ritmo constante?",
+        answer: "Para la mayoría de los corredores y distancias, un ritmo constante es la forma más eficiente de competir y la más fácil de ejecutar. Salir demasiado rápido quema energía que no puedes recuperar y suele llevar a una ralentización dolorosa, mientras que salir demasiado lento desperdicia tiempo que no puedes recuperar. Esta calculadora da el ritmo constante que cumple exactamente tu objetivo, así que apuntar a correr cada kilómetro a ese ritmo es una estrategia sólida y probada.",
+      },
+      {
+        question: "¿Debo ajustar el ritmo para las cuestas?",
+        answer: "La calculadora da el ritmo medio necesario en toda la distancia, asumiendo terreno llano. En un recorrido con cuestas naturalmente correrás más lento en las subidas y más rápido en las bajadas, así que apunta a promediar el ritmo objetivo en conjunto en lugar de forzarlo en cada pendiente. El esfuerzo, no el ritmo, debe mantenerse aproximadamente constante en las cuestas. Gana algo de tiempo en las secciones llanas y de bajada para compensar las subidas más lentas.",
+      },
+      {
+        question: "¿Qué aporta la cifra de velocidad?",
+        answer: "El resultado de velocidad expresa el mismo objetivo en kilómetros por hora en lugar de minutos por kilómetro, lo que algunos corredores encuentran más intuitivo y coincide con cómo se configuran las cintas de correr. Si entrenas en cinta, puedes ajustar la velocidad directamente para ensayar tu ritmo objetivo. También es útil para comparar el esfuerzo de correr con el ciclismo u otros deportes que informan velocidad en lugar de ritmo, dándote un marco de referencia común.",
+      },
+      {
+        question: "¿Cómo sé si mi tiempo objetivo es realista?",
+        answer: "Introduce tu objetivo y observa el ritmo requerido, luego compáralo honestamente con los ritmos que ya sostienes en el entrenamiento y en carreras recientes. Si el ritmo objetivo es mucho más rápido que cualquier cosa que hayas mantenido en una distancia similar, el objetivo puede ser demasiado ambicioso por ahora. Un buen objetivo te exige un margen modesto. También puedes usar un predictor de tiempo a partir de un resultado reciente para verificar la ambición.",
+      },
+    ],
   },
   {
     id: "swim-pace-per-100",
@@ -297,6 +457,38 @@ export const sportsR8Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard sports science (swim pace)",
+    slugEs: "calculadora-de-ritmo-de-natacion-por-100",
+    titleEs: "Calculadora de Ritmo de Natación por 100",
+    shortDescriptionEs: "Halla tu ritmo de natación por 100 metros a partir de un nado.",
+    seoTitleEs: "Calculadora de Ritmo de Natación por 100 — Ritmo por 100 m",
+    metaDescriptionEs: "Calculadora gratuita de ritmo de natación por 100. Introduce los metros totales que nadaste y los minutos totales que tardaste para hallar tu ritmo por 100 metros, la referencia estándar.",
+    primaryKeywordEs: "calculadora de ritmo de natación por 100",
+    secondaryKeywordsEs: ["calculadora de ritmo por 100m", "calculadora de ritmo de natación", "ritmo de natación por 100"],
+    formulaExplanationEs: "El ritmo por cien metros normaliza un nado de cualquier longitud a una referencia estándar para que los esfuerzos se comparen con justicia. Dividir tu tiempo total entre la distancia total da los minutos empleados en cada metro, y multiplicar por cien lo escala al tiempo que tardaría un tramo completo de cien metros al mismo ritmo. Como las piscinas y las series de natación se construyen en múltiplos de cien metros, esta unidad se traduce directamente en parciales de entrenamiento y tiempos de salida prácticos.",
+    explanationEs: "El ritmo por 100 metros es el lenguaje universal de la natación, y esta calculadora convierte cualquier nado en esa referencia. Introduce la distancia total que cubriste en metros y el tiempo total que te llevó en minutos, y devuelve tu ritmo por cien metros, permitiéndote comparar una serie corta con un nado continuo largo en términos exactamente iguales.\n\nLa métrica importa porque las distancias de natación son casi siempre múltiplos de un largo de piscina, y los entrenadores escriben las series y los tiempos de salida en segundos o minutos por cien metros. Expresar cada nado de la misma manera te permite seguir tu condición física entre sesiones, fijar objetivos de intervalo realistas y ritmar un nado largo de forma uniforme en lugar de desvanecerte. Los triatletas en particular confían en él para juzgar si su ritmo de natación de competición es sostenible antes de comprometerse con él en aguas abiertas.\n\nEl cálculo reparte tu tiempo total por tu distancia total y lo reescala a una referencia de cien metros, por lo que funciona para cualquier longitud de nado que introduzcas. Un ritmo por cien metros descendente con el mismo esfuerzo es prueba clara de que tu natación está mejorando, lo que convierte esto en una de las formas más limpias de medir el progreso en el agua. Tanto si nadas en piscina como en aguas abiertas, conocer tu ritmo por cien convierte una distancia y una lectura de cronómetro en una cifra significativa y comparable en torno a la cual construir el entrenamiento.",
+    exampleEs: { inputs: { totalMeters: 1500, totalMinutes: 30 }, explanation: "30 ÷ 1500 × 100 = 2,00 minutos por 100 m, un ritmo constante de 2:00/100 m en 1.500 m." },
+    faqsEs: [
+      {
+        question: "¿Cómo leo el ritmo en minutos y segundos?",
+        answer: "El resultado es un número decimal de minutos por cien metros, así que convierte la parte fraccionaria a segundos multiplicando por sesenta. Un ritmo de 1,5 significa un minuto y treinta segundos por cien metros, y 1,75 significa un minuto y cuarenta y cinco segundos. No leas 1,5 como un minuto cincuenta segundos. Los nadadores suelen hablar en minutos y segundos por cien, así que esta conversión te permite comparar directamente con tus parciales de entrenamiento habituales.",
+      },
+      {
+        question: "¿Por qué son 100 metros la referencia estándar?",
+        answer: "Las series y carreras de natación se construyen a partir de largos de piscina, y cien metros es una unidad natural de la que la mayoría de las distancias de entrenamiento y competición son múltiplos. Expresar el ritmo por cien permite comparar un sprint de cincuenta metros con un nado de mil quinientos metros en igualdad de condiciones, y coincide con cómo los entrenadores prescriben los tiempos de salida. Esa referencia compartida es la razón por la que los nadadores describen su velocidad en segundos o minutos por cien.",
+      },
+      {
+        question: "¿Funciona para una piscina de 25 metros?",
+        answer: "Sí. Introduce la distancia total real que nadaste en metros, sea cual sea el largo de la piscina, y el tiempo total. Si nadaste sesenta largos de una piscina de veinticinco metros, eso son 1.500 metros. La fórmula del ritmo por cien depende solo de la distancia total y el tiempo total, no de cuántos largos compusieron el nado, así que se aplica igual a piscina corta, piscina larga y aguas abiertas una vez que conoces la distancia verdadera.",
+      },
+      {
+        question: "¿Qué es un buen ritmo por 100 metros?",
+        answer: "Depende de tu nivel y de la longitud del nado. Muchos nadadores recreativos mantienen alrededor de dos minutos por cien metros, los nadadores de club competentes cerca de noventa segundos, y los nadadores de élite bastante por debajo de un minuto en distancias más cortas. En lugar de perseguir un objetivo universal, sigue tu propio ritmo por cien a lo largo del tiempo. Una cifra menor con el mismo esfuerzo percibido es prueba clara de que tu forma y técnica están mejorando.",
+      },
+      {
+        question: "¿Debo incluir el descanso en el tiempo total?",
+        answer: "Eso depende de qué quieras medir. Para un nado continuo sin paradas, el tiempo total es simplemente tu tiempo de nado y el ritmo refleja tu velocidad real de natación. Si tu sesión incluyó descanso entre intervalos, decide si contarlo: incluirlo da un promedio general de toda la sesión, mientras que excluirlo aísla tu ritmo de natación. Para comparar la forma física, usa el tiempo de nado continuo sin descanso.",
+      },
+    ],
   },
   {
     id: "wilks-score",
@@ -347,6 +539,38 @@ export const sportsR8Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Wilks coefficient (powerlifting)",
+    slugEs: "calculadora-de-puntuacion-wilks",
+    titleEs: "Calculadora de Puntuación Wilks",
+    shortDescriptionEs: "Compara la fuerza en powerlifting entre distintos pesos corporales.",
+    seoTitleEs: "Calculadora de Puntuación Wilks — Puntuación de Fuerza en Powerlifting",
+    metaDescriptionEs: "Calculadora gratuita de puntuación Wilks para powerlifters. Introduce tu peso corporal, el total levantado y el sexo para calcular tu puntuación con el coeficiente Wilks y comparar la fuerza con justicia.",
+    primaryKeywordEs: "calculadora de puntuación wilks",
+    secondaryKeywordsEs: ["calculadora wilks", "calculadora de puntuación de powerlifting", "calculadora de coeficiente wilks"],
+    formulaExplanationEs: "La puntuación Wilks multiplica el peso levantado por un coeficiente que depende del peso corporal del atleta a través de un polinomio de quinto orden, con constantes distintas para hombres y mujeres. El polinomio del denominador modela cómo la fuerza bruta aumenta con el peso corporal pero a un ritmo decreciente, así que los levantadores más ligeros obtienen un coeficiente mayor para igualar el terreno. Multiplicar el total por quinientos sobre ese polinomio produce un único número que permite clasificar con justicia a levantadores de cualquier tamaño.",
+    explanationEs: "La puntuación Wilks es la respuesta del powerlifting a una pregunta difícil: ¿cómo comparas la fuerza de un levantador de 60 kilogramos con la de uno de 120 kilogramos cuando el atleta más pesado casi siempre levantará más en términos absolutos? Esta calculadora la obtiene a partir de tu peso corporal, el total que levantaste y tu sexo, devolviendo una única cifra de puntos que permite una comparación justa en cada categoría de peso.\n\nLas personas más pesadas generalmente pueden levantar más, pero no en proporción directa a su masa extra, así que los totales brutos favorecen a los atletas más grandes. La fórmula Wilks corrige esto escalando tu levantamiento con un coeficiente derivado de un polinomio de quinto orden ajustado a datos de rendimiento de élite, con constantes distintas para hombres y mujeres. Un levantador más ligero obtiene un coeficiente mayor, así que un total absoluto modesto de un atleta pequeño puede superar a un total mayor de uno pesado, reflejando la fuerza relativa.\n\nEl resultado se usa ampliamente para decidir los premios al mejor levantador en las competiciones, clasificar atletas entre categorías y permitir que los individuos sigan su propio progreso mientras su peso corporal fluctúa. Una puntuación en torno a 300 marca un levantador intermedio sólido, 400 es avanzado y los competidores de élite superan los 500. Como aísla la fuerza relativa al tamaño, la puntuación Wilks es una referencia más justa de la capacidad libra por libra que cualquier total bruto, y esta calculadora la pone disponible al instante para los registros de entrenamiento y la planificación de competición.",
+    exampleEs: { inputs: { bodyWeightKg: 90, liftedKg: 200, sex: "male" }, explanation: "A 90 kg el coeficiente masculino es de unos 0,639, así que 200 × 0,639 ≈ 127,7 puntos Wilks." },
+    faqsEs: [
+      {
+        question: "¿Qué mide realmente la puntuación Wilks?",
+        answer: "La puntuación Wilks mide la fuerza relativa al peso corporal, permitiendo comparar con justicia a levantadores de distintos tamaños. Como los atletas más pesados levantan naturalmente más en términos absolutos, un total bruto premia el tamaño tanto como la fuerza. El coeficiente Wilks escala cada levantamiento por un factor basado en el peso corporal, así que el número refleja la capacidad libra por libra. Una puntuación Wilks mayor significa que eres más fuerte para tu tamaño.",
+      },
+      {
+        question: "¿Por qué son distintos los coeficientes para hombres y mujeres?",
+        answer: "Hombres y mujeres difieren en masa muscular media y fuerza relativa al peso corporal, así que una única fórmula no compararía con justicia. El sistema Wilks usa conjuntos separados de constantes polinómicas, cada uno ajustado a datos de rendimiento de élite para ese sexo, así que las puntuaciones se calibran dentro de cada grupo. Esto permite comparar de forma significativa la puntuación de una levantadora con la de un levantador, ya que ambos se miden contra el estándar adecuado para su sexo.",
+      },
+      {
+        question: "¿Debo introducir un solo levantamiento o mi total completo?",
+        answer: "Puedes introducir cualquiera de los dos, siempre que interpretes el resultado de forma coherente. En competición la puntuación Wilks se aplica normalmente al total de powerlifting, la suma de los mejores levantamientos de sentadilla, press de banca y peso muerto. Si introduces un solo levantamiento, la puntuación refleja la fuerza de ese levantamiento para tu peso corporal en lugar de tu posición global. Para comparar con las referencias publicadas, usa tu total de tres levantamientos.",
+      },
+      {
+        question: "¿Qué se considera una buena puntuación Wilks?",
+        answer: "Las guías aproximadas sitúan a un novato en torno a 200, a un intermedio sólido cerca de 300, a un levantador avanzado alrededor de 400, y a los competidores de élite por encima de 500, con totales de clase mundial mucho más allá. Estas bandas varían por sexo y federación, así que trátalas como aproximadas. La comparación más útil es contra tus propias puntuaciones pasadas: un Wilks creciente es prueba clara de que tu fuerza relativa mejora.",
+      },
+      {
+        question: "¿Es Wilks el único sistema de puntuación en powerlifting?",
+        answer: "No. Existen varios sistemas, incluyendo la antigua fórmula Wilks usada aquí, una revisión Wilks actualizada, y los puntos IPF GL que ahora usan algunas federaciones. Cada uno emplea coeficientes distintos y puede clasificar los casos límite de forma ligeramente diferente. La puntuación Wilks clásica sigue siendo ampliamente reconocida y es excelente para seguir el progreso personal. Comprueba qué sistema usa tu federación si necesitas una puntuación oficial de competición.",
+      },
+    ],
   },
   {
     id: "race-split",
@@ -397,6 +621,38 @@ export const sportsR8Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard sports science (even-pace splits)",
+    slugEs: "calculadora-de-parciales-de-carrera",
+    titleEs: "Calculadora de Parciales de Carrera",
+    shortDescriptionEs: "Halla el tiempo parcial de una parte de la carrera a ritmo constante.",
+    seoTitleEs: "Calculadora de Parciales de Carrera — Tiempos Parciales a Ritmo Constante",
+    metaDescriptionEs: "Calculadora gratuita de parciales de carrera. Introduce tu distancia total, tiempo total y una distancia parcial para hallar el tiempo en que deberías alcanzar ese punto a ritmo constante.",
+    primaryKeywordEs: "calculadora de parciales de carrera",
+    secondaryKeywordsEs: ["calculadora de tiempo parcial", "calculadora de parciales a ritmo constante", "tiempos parciales de carrera"],
+    formulaExplanationEs: "A ritmo constante, el tiempo para alcanzar cualquier punto de una carrera es proporcional a lo adentrado que esté ese punto en la carrera. Dividir el tiempo total entre la distancia total da el ritmo, el tiempo empleado por unidad de distancia, y multiplicar ese ritmo por la distancia parcial da el tiempo en que deberías pasar por esa marca. Este escalado lineal asume un esfuerzo constante, así que cada parcial cae exactamente según lo previsto para el tiempo de meta objetivo.",
+    explanationEs: "Esta calculadora de parciales de carrera te dice a qué tiempo deberías alcanzar cualquier punto de una carrera si la corres a ritmo constante hasta tu tiempo de meta objetivo. Introduce la distancia total, tu tiempo total objetivo y la distancia parcial que te interesa, y devuelve el tiempo en que deberías alcanzar esa marca. Es la herramienta para construir un plan de ritmo que puedas comprobar contra tu reloj el día de la carrera.\n\nLos tiempos parciales importan porque competir por un objetivo es en realidad cuestión de disciplina de ritmo, y la forma más segura de arruinar un objetivo de tiempo es salir demasiado rápido. Al saber por adelantado qué debería marcar tu reloj en los 5, 10 o 21 kilómetros, puedes frenarte pronto y detectar cualquier desviación antes de que te cueste la meta. Muchos corredores escriben estos parciales en una pulsera o los programan en un reloj para saber siempre si van según lo previsto.\n\nEl cálculo asume un ritmo constante, dividiendo tu tiempo objetivo proporcionalmente por la distancia, porque un esfuerzo uniforme suele ser la forma más eficiente de competir y el plan más fácil de seguir. Puedes generar todo un conjunto de puntos de control ejecutando la calculadora para cada distancia parcial que quieras. Tanto si apuntas a un tiempo de maratón como si ritmas un 10K, una calculadora de parciales convierte un único objetivo de meta en un horario claro y comprobable para cada etapa de la carrera.",
+    exampleEs: { inputs: { totalDistanceKm: 42.195, totalTimeMinutes: 240, splitDistanceKm: 21.0975 }, explanation: "240 ÷ 42,195 × 21,0975 = 120 minutos, el parcial de la mitad para un maratón de 4 horas." },
+    faqsEs: [
+      {
+        question: "¿Esto asume que corro a ritmo constante?",
+        answer: "Sí. El tiempo parcial se calcula repartiendo tu tiempo objetivo uniformemente por la distancia total, así que cada parcial refleja un ritmo constante durante toda la carrera. El ritmo constante es generalmente la estrategia de carrera más eficiente y la más sencilla de seguir, por lo que es el predeterminado aquí. Si planeas un parcial negativo deliberado, corriendo la segunda mitad más rápido, trata estos parciales constantes como un límite superior para los primeros puntos de control.",
+      },
+      {
+        question: "¿Cómo construyo un horario de ritmo completo?",
+        answer: "Ejecuta la calculadora una vez por cada punto de control que quieras, manteniendo la misma distancia total y tiempo total pero cambiando la distancia parcial. Introduce 5, 10, 15 y 20 kilómetros por turno para obtener el tiempo objetivo en cada uno, y anótalos. Escribir estos parciales en una pulsera de ritmo o cargarlos en tu reloj de correr te da una lista de comprobación para confirmar que vas según lo previsto en cada etapa.",
+      },
+      {
+        question: "¿Puedo usar esto para un plan de parcial negativo?",
+        answer: "La calculadora produce parciales a ritmo constante, pero puedes adaptarlos para un parcial negativo, donde corres la segunda mitad más rápido. Apunta a ir ligeramente por detrás del tiempo constante en la mitad, y por delante en la meta. Usa los parciales constantes como puntos de referencia y añade deliberadamente unos segundos a los primeros, reservando frescura para gastar después. Este enfoque reduce el riesgo de desvanecerte y a menudo produce un final más fuerte.",
+      },
+      {
+        question: "¿Por qué se muestra el tiempo parcial en minutos?",
+        answer: "El resultado es un número decimal de minutos para mantener sencilla la entrada y el cálculo posterior. Convierte la parte fraccionaria a segundos multiplicando por sesenta: un parcial de 62,5 minutos es una hora, dos minutos y treinta segundos. Para el día de la carrera normalmente querrás el parcial como un tiempo de reloj, así que conviértelo a horas, minutos y segundos para que coincida con lo que muestren tu reloj o los relojes del recorrido.",
+      },
+      {
+        question: "¿La distancia parcial tiene que ser la mitad?",
+        answer: "No. Puedes introducir cualquier distancia parcial hasta el total, no solo el punto medio. Las opciones habituales son cada 5 kilómetros, cada marca de 10 kilómetros, o puntos de referencia concretos del recorrido. La fórmula escala el tiempo proporcionalmente a cualquier distancia parcial que introduzcas, así que puedes planificar puntos de control donde sean útiles, ya sea que coincidan con las alfombras de cronometraje oficiales o simplemente con los puntos donde planeas comprobar tu progreso.",
+      },
+    ],
   },
   {
     id: "cycling-calories",
@@ -447,6 +703,38 @@ export const sportsR8Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Compendium of Physical Activities (MET method)",
+    slugEs: "calculadora-de-calorias-al-pedalear",
+    titleEs: "Calculadora de Calorías al Pedalear",
+    shortDescriptionEs: "Estima las calorías quemadas en bici usando valores MET.",
+    seoTitleEs: "Calculadora de Calorías al Pedalear — Calorías Quemadas en Bici (MET)",
+    metaDescriptionEs: "Calculadora gratuita de calorías al pedalear usando valores MET. Introduce tu peso, la duración del recorrido y la intensidad para estimar las calorías que quemaste en la bici.",
+    primaryKeywordEs: "calculadora de calorías al pedalear",
+    secondaryKeywordsEs: ["calorías quemadas en bici", "calculadora de calorías en bicicleta", "calculadora met de ciclismo"],
+    formulaExplanationEs: "Esta es la ecuación MET estándar del gasto energético. El valor MET indica cuántas veces más oxígeno usa una actividad que el reposo, y multiplicarlo por 3,5 da mililitros de oxígeno por kilogramo por minuto. Escalar por el peso corporal lo convierte en uso total de oxígeno, y dividir entre 200 transforma los litros de oxígeno en kilocalorías, ya que se liberan aproximadamente cinco kilocalorías por litro de oxígeno. Multiplicar por los minutos del recorrido da las calorías totales quemadas.",
+    explanationEs: "Esta calculadora de calorías al pedalear estima cuánta energía quemaste en un recorrido a partir de tu peso corporal, el tiempo que pasaste pedaleando y la intensidad expresada como un valor MET. Usa la ecuación metabólica estándar que sustenta la mayoría de las estimaciones de calorías del ejercicio, dándote una aproximación fiable para planificar la nutrición, controlar el peso o simplemente entender lo que te costó un recorrido.\n\nMET, abreviatura de equivalente metabólico de la tarea, evalúa lo dura que es una actividad comparada con estar sentado tranquilamente. El ciclismo suave ronda los cuatro MET, un recorrido moderado y constante unos ocho, y el pedaleo duro y rápido diez o más. Como la ecuación también escala con el peso corporal, un ciclista más pesado quema más que uno ligero en el mismo recorrido, razón por la que la calculadora pide tu peso y te deja elegir una intensidad que coincida con lo duro que pedaleaste realmente.\n\nLa fórmula funciona porque el uso de energía está estrechamente ligado al consumo de oxígeno, y el valor MET, el peso corporal y la duración juntos estiman el oxígeno que quemaste, que se convierte en kilocalorías a un ritmo conocido. Los ciclistas usan esto para planificar un déficit energético para perder grasa, reponer combustible tras recorridos largos para recuperarse bien y comparar el coste de las salidas suaves con los esfuerzos duros. Recuerda que es una estimación: el gasto real cambia con el viento, el terreno y la eficiencia, así que trata el número como una guía bien fundamentada en lugar de una medición precisa.",
+    exampleEs: { inputs: { weightKg: 80, durationMinutes: 60, metValue: 8 }, explanation: "8 × 3,5 × 80 ÷ 200 × 60 = 672 kcal por una hora de ciclismo moderado a 80 kg." },
+    faqsEs: [
+      {
+        question: "¿Qué valor MET debo usar para mi recorrido?",
+        answer: "Elige el MET que coincida con lo duro que pedaleaste. El ciclismo ligero y tranquilo por debajo de unos 16 km/h es de aproximadamente cuatro MET, un esfuerzo moderado en torno a 19 a 22 km/h se acerca a ocho, y el pedaleo vigoroso por encima de 22 km/h va de diez hacia arriba, con la competición aún más alta. El ciclismo de montaña y los vientos de cara fuertes elevan la cifra. Elige la coincidencia más cercana a tu esfuerzo medio.",
+      },
+      {
+        question: "¿Por qué la fórmula divide entre 200?",
+        answer: "La ecuación MET estima primero el oxígeno que consumió tu cuerpo, en mililitros por minuto, a partir del valor MET, la constante 3,5 y tu peso corporal. Dividir entre 200 convierte ese uso de oxígeno en kilocalorías, porque quemar un litro de oxígeno libera unas cinco kilocalorías y la aritmética de las unidades resulta en una división entre doscientos. Es simplemente el factor de conversión que transforma el consumo de oxígeno en la cifra de energía que buscas.",
+      },
+      {
+        question: "¿Qué precisión tiene el método MET para el ciclismo?",
+        answer: "Da una buena estimación pero no una medición precisa. El uso real de energía en la bici varía con el viento, la pendiente, la superficie de la carretera, la posición y la eficiencia mecánica, nada de lo cual capta un único valor MET. Dos ciclistas del mismo peso a la misma velocidad media pueden quemar cantidades distintas. Trata el resultado como una guía de planificación, y si quieres más precisión, un potenciómetro que mida tu trabajo real es el patrón de referencia.",
+      },
+      {
+        question: "¿De verdad afecta el peso corporal a las calorías del ciclismo?",
+        answer: "Sí, aunque su efecto es menor en llano que al correr, porque la bici soporta tu peso. Aun así, un ciclista más pesado quema más energía en general, sobre todo al escalar o acelerar, razón por la que la ecuación escala con el peso corporal. Introducir tu peso preciso mantiene realista la estimación. En las subidas largas la diferencia crece, ya que elevar masa extra contra la gravedad es donde el peso más aumenta la energía que exige un recorrido.",
+      },
+      {
+        question: "¿Es una caloría quemada lo mismo que una caloría de los alimentos?",
+        answer: "Sí. Las calorías que reporta esta herramienta son kilocalorías, la misma unidad que aparece en las etiquetas de los alimentos, aunque el lenguaje cotidiano las llame simplemente calorías. Así que un resultado de 672 significa 672 kilocalorías, directamente comparables con la energía indicada en tus envases de comida. Esto te permite sopesar lo que quemaste frente a lo que comes sin ninguna conversión, justo lo que necesitas al planificar un déficit o reponer tras un recorrido duro.",
+      },
+    ],
   },
   {
     id: "stride-length",
@@ -497,5 +785,37 @@ export const sportsR8Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard sports science (height–stride ratio)",
+    slugEs: "calculadora-de-longitud-de-zancada",
+    titleEs: "Calculadora de Longitud de Zancada",
+    shortDescriptionEs: "Estima tu longitud de zancada y tus pasos por kilómetro.",
+    seoTitleEs: "Calculadora de Longitud de Zancada — Zancada según la Altura",
+    metaDescriptionEs: "Calculadora gratuita de longitud de zancada. Introduce tu altura y sexo para estimar tu longitud de zancada al caminar en centímetros y cuántos pasos das por kilómetro.",
+    primaryKeywordEs: "calculadora de longitud de zancada",
+    secondaryKeywordsEs: ["longitud de zancada según la altura", "calculadora de pasos por km", "calculadora de longitud de paso"],
+    formulaExplanationEs: "La longitud de zancada escala estrechamente con la altura, así que multiplicar tu altura por un factor fijo da una estimación personal fiable del terreno cubierto por paso. El factor difiere ligeramente según el sexo, 0,415 para hombres y 0,413 para mujeres, reflejando pequeñas diferencias medias en la proporción de las piernas y la marcha. Los pasos por kilómetro se obtienen después dividiendo cien mil centímetros, la longitud de un kilómetro, entre tu longitud de zancada en centímetros.",
+    explanationEs: "Esta calculadora de longitud de zancada estima cuánto avanzas con cada paso, y cuántos pasos te lleva cubrir un kilómetro, a partir solo de tu altura y tu sexo. La longitud de zancada es la distancia de una pisada a la siguiente en el uso cotidiano aquí, y conocerla convierte un recuento de pasos abstracto en distancia real y te ayuda a entender tu propia marcha.\n\nLa longitud de zancada importa a cualquiera que use un podómetro o un rastreador de actividad, ya que convertir pasos en distancia depende enteramente de ella. También es útil para calibrar cintas de correr, para corredores que analizan su técnica y para fijar objetivos diarios de pasos realistas. Como la longitud de zancada varía con el tamaño corporal, una estimación personal basada en tu altura es mucho más precisa que un promedio único para todos, razón por la que esta herramienta pide tu altura y aplica un pequeño ajuste según el sexo.\n\nEl cálculo se apoya en el hallazgo bien establecido de que la longitud de zancada al caminar es una fracción casi constante de la altura, unos 0,415 para hombres y 0,413 para mujeres. Multiplicar tu altura por ese factor da tu zancada en centímetros, y dividir los cien mil centímetros de un kilómetro entre tu zancada te dice cuántos pasos lleva un kilómetro. Sigue siendo una estimación, ya que el ritmo, el terreno y correr frente a caminar cambian tu zancada real, pero es una forma rápida y personalizada de dar sentido a los números que reporta tu rastreador.",
+    exampleEs: { inputs: { heightCm: 180, sex: "male" }, explanation: "180 × 0,415 = 74,7 cm de zancada, así que 100.000 ÷ 74,7 ≈ 1.339 pasos por kilómetro." },
+    faqsEs: [
+      {
+        question: "¿Cómo se estima la longitud de zancada a partir de la altura?",
+        answer: "La calculadora multiplica tu altura por un factor extraído de la investigación que muestra que la longitud de zancada es aproximadamente una fracción constante de la altura al caminar, unos 0,415 para hombres y 0,413 para mujeres. Un hombre de 180 centímetros tiene una zancada estimada cercana a 74,7 centímetros. Esto da una cifra personalizada sin medir tu zancada directamente, aunque tu zancada real varía un poco con el ritmo, el calzado y si caminas o corres.",
+      },
+      {
+        question: "¿Por qué difiere el factor entre hombres y mujeres?",
+        answer: "Hombres y mujeres difieren ligeramente en la longitud media de las piernas relativa a la altura total y en la marcha típica, así que un pequeño ajuste del multiplicador mejora la precisión. Los factores comúnmente usados son 0,415 para hombres y 0,413 para mujeres, una diferencia modesta que no obstante refina la estimación. Elegir la opción correcta ajusta el resultado a tu marcha un poco más de cerca, aunque tu zancada individual aún puede diferir de la media de tu sexo.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre longitud de paso y de zancada?",
+        answer: "Un paso es un pie que avanza, medido de un contacto de talón al siguiente del pie opuesto, mientras que una zancada es un ciclo completo de un contacto de talón al siguiente del mismo pie, aproximadamente dos pasos. Las definiciones varían entre fuentes, así que comprueba siempre cuál usa una herramienta. Aquí el valor representa la distancia avanzada por paso en el recuento de pasos por kilómetro, manteniendo coherente la conversión de pasos a distancia.",
+      },
+      {
+        question: "¿Cómo puedo medir mi longitud de zancada con más precisión?",
+        answer: "Para una medición directa, camina una distancia conocida como veinte metros a tu ritmo normal y cuenta tus pasos, luego divide la distancia entre el número de pasos para obtener tu longitud media de paso. Repetirlo unas cuantas veces y promediar mejora la fiabilidad. Medir sobre la superficie y al ritmo que sueles caminar da una cifra adaptada a ti, que puede reemplazar la estimación basada en la altura para un seguimiento de distancia más preciso.",
+      },
+      {
+        question: "¿Correr cambia mi longitud de zancada?",
+        answer: "Sí, considerablemente. Correr suele alargar tu zancada comparada con caminar, y cuanto más rápido corres más tiende a alargarse, así que los factores basados en caminar aquí subestiman la distancia en las carreras. Esta calculadora está ajustada para caminar, así que para correr mide directamente tu zancada de carrera o confía en un GPS que registre la distancia por satélite. Usar una zancada de caminar para convertir pasos de carrera subestimaría cuánto avanzaste realmente.",
+      },
+    ],
   },
 ];

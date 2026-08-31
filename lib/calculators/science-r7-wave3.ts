@@ -49,6 +49,38 @@ export const scienceR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard physics (work-energy principle)",
+    slugEs: "calculadora-de-trabajo-fisica",
+    titleEs: "Calculadora de Trabajo (Física)",
+    shortDescriptionEs: "Calcula el trabajo mecánico a partir de la fuerza y la distancia.",
+    seoTitleEs: "Calculadora de Trabajo — Fuerza × Distancia en Julios",
+    metaDescriptionEs: "Calculadora de trabajo gratis. Introduce la fuerza en newtons y la distancia en metros para hallar el trabajo mecánico en julios al instante. Ideal para tareas de física y problemas de energía.",
+    primaryKeywordEs: "calculadora de trabajo",
+    secondaryKeywordsEs: ["calculadora de la fórmula del trabajo", "calculadora de fuerza por distancia", "trabajo mecánico en julios"],
+    formulaExplanationEs: "El trabajo en física es la energía transferida cuando una fuerza desplaza un objeto a lo largo de una distancia, por lo que multiplicar la fuerza por la distancia recorrida en su dirección da los julios de energía entregada. La fórmula funciona porque una fuerza constante aplicada sobre un camino más largo realiza proporcionalmente más trabajo, y una fuerza mayor sobre el mismo camino también realiza más. Cuando la fuerza y el movimiento están alineados, su producto simple capta exactamente cuánta energía mecánica cambió de manos, razón por la cual el trabajo se mide en julios, la misma unidad que la energía.",
+    explanationEs: "El trabajo realizado es una de las ideas más fundamentales de la mecánica y describe la energía transferida a un objeto o desde él cuando una fuerza lo empuja a lo largo de una distancia. Esta calculadora de trabajo multiplica la fuerza que aplicas, en newtons, por la distancia que se mueve el objeto, en metros, para devolver el resultado en julios. Si nada se mueve, no se realiza trabajo por más fuerte que empujes, razón por la cual sostener una caja pesada sin moverla no transfiere trabajo mecánico aunque resulte agotador.\n\nEsta magnitud importa porque el trabajo es el puente entre la fuerza y la energía: indica cuánta energía entrega una máquina, una persona o un motor para lograr una tarea. Levantar una carga, arrastrar un cajón o comprimir un resorte implican trabajo, y calcularlo permite a los ingenieros dimensionar motores, estimar el combustible necesario y verificar balances energéticos. Una calculadora de trabajo elimina la aritmética para que te concentres en la física.\n\nLa fórmula funciona porque la transferencia de energía crece tanto con la magnitud de la fuerza como con la longitud del camino sobre el que actúa. Estudiantes, docentes e ingenieros confían en una calculadora de trabajo para resolver problemas, comprobar diseños y desarrollar intuición sobre cómo la fuerza y el desplazamiento mueven la energía de un lugar a otro.",
+    exampleEs: { inputs: { force: 100, distance: 5 }, explanation: "100 N × 5 m = 500 J de trabajo realizado." },
+    faqsEs: [
+      {
+        question: "¿Qué unidades debo usar para la fuerza y la distancia?",
+        answer: "Introduce la fuerza en newtons y la distancia en metros, y la calculadora devuelve el trabajo en julios, la unidad del SI para la energía. Un julio es el trabajo que realiza una fuerza de un newton actuando sobre un metro. Si tu fuerza está en kilonewtons o tu distancia en centímetros, conviértelas primero a unidades base para que el resultado salga correcto, ya que mezclar unidades escalaría mal la cifra en julios.",
+      },
+      {
+        question: "¿Por qué no se realiza trabajo cuando nada se mueve?",
+        answer: "El trabajo requiere desplazamiento, así que si la distancia es cero, el producto de la fuerza por la distancia es cero sin importar cuán grande sea la fuerza. Sostener un peso inmóvil implica mucho esfuerzo muscular pero no transfiere trabajo mecánico al objeto porque este no se mueve. En física, el trabajo mide específicamente la energía entregada mediante el movimiento, no el esfuerzo biológico o la tensión que una persona percibe.",
+      },
+      {
+        question: "¿Puede ser negativo el trabajo realizado?",
+        answer: "Sí. El trabajo es negativo cuando la fuerza actúa en sentido opuesto al movimiento, es decir, cuando retira energía del objeto en lugar de añadirla. La fricción y el frenado son ejemplos clásicos: se oponen al desplazamiento y realizan trabajo negativo, frenando las cosas. Introducir una distancia negativa o una fuerza opuesta en la calculadora produce un resultado negativo, indicando correctamente que se está retirando energía en vez de aportarla.",
+      },
+      {
+        question: "¿Cómo se relaciona el trabajo con la energía?",
+        answer: "El trabajo y la energía comparten la misma unidad, el julio, porque el trabajo es literalmente la transferencia de energía mediante una fuerza. El teorema del trabajo y la energía establece que el trabajo neto realizado sobre un objeto es igual a su variación de energía cinética. Así, calcular el trabajo te dice cuánto ha cambiado la energía de un objeto, ya sea que acelere, frene o gane energía potencial al elevarse contra la gravedad.",
+      },
+      {
+        question: "¿Esta fórmula supone que la fuerza y el movimiento están alineados?",
+        answer: "Sí. Esta versión sencilla supone que la fuerza actúa en la misma dirección que el desplazamiento. Cuando una fuerza se aplica en ángulo, solo la componente a lo largo de la dirección del movimiento realiza trabajo, por lo que la fórmula completa multiplica por el coseno del ángulo entre ambos. Para empujones y tirones rectos alineados con el movimiento, ese coseno vale uno y se aplica directamente el producto de fuerza por distancia.",
+      },
+    ],
   },
   {
     id: "efficiency",
@@ -98,6 +130,38 @@ export const scienceR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard physics (conservation of energy)",
+    slugEs: "calculadora-de-eficiencia",
+    titleEs: "Calculadora de Eficiencia",
+    shortDescriptionEs: "Halla la eficiencia energética como porcentaje.",
+    seoTitleEs: "Calculadora de Eficiencia — Salida Útil ÷ Entrada en Porcentaje",
+    metaDescriptionEs: "Calculadora de eficiencia gratis. Introduce la energía útil de salida y la energía total de entrada para hallar la eficiencia como porcentaje al instante. Perfecta para problemas de física e ingeniería.",
+    primaryKeywordEs: "calculadora de eficiencia",
+    secondaryKeywordsEs: ["calculadora de eficiencia energética", "fórmula de eficiencia mecánica", "calculadora de rendimiento"],
+    formulaExplanationEs: "La eficiencia mide qué fracción de la energía que introduces en un dispositivo regresa como trabajo útil, por lo que dividir la salida útil entre la entrada total y multiplicar por 100 expresa esa fracción como porcentaje. La fórmula funciona porque la energía se conserva: cada julio suministrado realiza trabajo útil o se pierde, normalmente en forma de calor, sonido o fricción. La proporción muestra así cuánta parte de la entrada cumplió realmente su propósito, y nunca puede superar el 100 por ciento porque una máquina no produce más energía útil de la que consume.",
+    explanationEs: "La eficiencia indica qué tan bien una máquina o proceso convierte la energía que consume en salida útil, y esta calculadora de eficiencia expresa ese valor como un porcentaje limpio a partir de las energías de salida y entrada que introduzcas. Un dispositivo perfectamente eficiente convertiría cada julio de entrada en trabajo útil, alcanzando el 100 por ciento, pero en el mundo real siempre se escapa algo de energía como calor, fricción, sonido o vibración, de modo que las eficiencias prácticas siempre son menores.\n\nEsta cifra importa porque determina el coste, el rendimiento y la sostenibilidad. Un motor más eficiente quema menos combustible para la misma salida, una mejor fuente de alimentación desperdicia menos electricidad y un electrodoméstico eficiente ahorra dinero y reduce emisiones a lo largo de su vida útil. Comparar eficiencias permite a ingenieros, compradores y estudiantes juzgar diseños rivales de forma objetiva en lugar de por conjeturas, y una calculadora de eficiencia hace esa comparación instantánea.\n\nLa fórmula funciona porque la energía se conserva, así que la salida útil dividida entre la entrada total revela exactamente la parte de energía que cumplió su función. El resto es la pérdida. Ya sea que analices un motor, un panel solar, una bombilla o una máquina simple como una polea, una calculadora de eficiencia convierte cifras de energía en un porcentaje intuitivo que puedes comparar entre sistemas.",
+    exampleEs: { inputs: { outputEnergy: 750, inputEnergy: 1000 }, explanation: "(750 ÷ 1000) × 100 = 75 % de eficiencia; se perdieron 250 J." },
+    faqsEs: [
+      {
+        question: "¿Puede la eficiencia superar el 100 por ciento?",
+        answer: "No. Como la energía se conserva, un dispositivo nunca puede entregar más energía útil de salida que la energía total que se le suministra, por lo que la eficiencia siempre es igual o inferior al 100 por ciento. Un resultado superior significaría que se creó energía de la nada, algo imposible. Si tu cálculo supera el 100 por ciento, revisa las cifras: probablemente confundiste la entrada con la salida o pasaste por alto una fuente de energía oculta.",
+      },
+      {
+        question: "¿Qué cuenta como salida útil frente a entrada?",
+        answer: "La entrada es la energía total que suministras al dispositivo, como la electricidad, el combustible o la energía mecánica que ingresa. La salida útil es solo la porción que realiza la tarea prevista, como la luz de una bombilla o el movimiento de un motor. La energía perdida como calor residual, sonido o fricción no cuenta como salida útil, y precisamente por eso las eficiencias reales caen por debajo del cien por ciento.",
+      },
+      {
+        question: "¿Por qué la calculadora devuelve NaN con entrada cero?",
+        answer: "La eficiencia divide la salida útil entre la entrada total, y dividir entre cero es matemáticamente indefinido, por lo que la calculadora devuelve un resultado no numérico para señalar que el cálculo no puede realizarse. Un dispositivo con energía de entrada cero no tiene una eficiencia con sentido porque no está consumiendo nada para convertir. Introduce un valor de entrada positivo que represente la energía real suministrada para obtener un porcentaje de eficiencia válido.",
+      },
+      {
+        question: "¿Cuál es una eficiencia típica de las máquinas comunes?",
+        answer: "La eficiencia varía mucho según la tecnología. Los motores eléctricos suelen alcanzar entre el 85 y el 95 por ciento, mientras que los motores de gasolina convierten solo alrededor del 20 al 35 por ciento de la energía del combustible en movimiento y desperdician el resto como calor. Las bombillas incandescentes son famosamente ineficientes, cerca del 5 por ciento, mientras que los LED superan el 40 por ciento. Comparar estas cifras muestra por qué unas tecnologías reemplazan a otras.",
+      },
+      {
+        question: "¿Funciona esto para la potencia además de la energía?",
+        answer: "Sí. La eficiencia es una proporción, así que puedes dividir la potencia útil de salida entre la potencia total de entrada y multiplicar por 100 para obtener el mismo porcentaje, siempre que ambas magnitudes usen la misma unidad y base temporal. Ya midas en julios de energía o en vatios de potencia, la proporción es adimensional y arroja una cifra de eficiencia idéntica para un dispositivo que opera de forma estable y continua.",
+      },
+    ],
   },
   {
     id: "hydrostatic-pressure",
@@ -148,6 +212,38 @@ export const scienceR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard physics (Pascal's principle)",
+    slugEs: "calculadora-de-presion-hidrostatica",
+    titleEs: "Calculadora de Presión Hidrostática",
+    shortDescriptionEs: "Halla la presión de un fluido a una profundidad dada.",
+    seoTitleEs: "Calculadora de Presión Hidrostática — Presión del Fluido a Profundidad",
+    metaDescriptionEs: "Calculadora de presión hidrostática gratis. Introduce la densidad del fluido, la profundidad y la gravedad para hallar la presión en pascales al instante. Ideal para física, buceo e ingeniería.",
+    primaryKeywordEs: "calculadora de presión hidrostática",
+    secondaryKeywordsEs: ["calculadora de presión de fluidos", "presión del agua a profundidad", "fórmula de presión y profundidad"],
+    formulaExplanationEs: "La presión hidrostática es el peso de la columna de fluido que presiona sobre un punto, por lo que multiplicar la densidad del fluido por la aceleración de la gravedad y por la profundidad da la fuerza por unidad de área a esa profundidad. La fórmula funciona porque una columna de fluido más alta contiene más masa por encima del punto, y un fluido más denso concentra más masa en la misma altura, lo que aumenta la fuerza hacia abajo. La gravedad convierte esa masa apilada en peso, y el uso de la densidad ya incorpora la división por el área, dando la presión directamente en pascales.",
+    explanationEs: "La presión hidrostática es la presión que ejerce un fluido en reposo debido al peso del fluido situado por encima de un punto dado, y esta calculadora de presión hidrostática la obtiene a partir de la densidad del fluido, la profundidad y la gravedad. Cuanto más profundo bajas, más fluido queda por encima, así que la presión aumenta de forma constante con la profundidad. Por eso te destapan los oídos en el fondo de una piscina y por eso los submarinos deben construirse para soportar cargas aplastantes muy por debajo de la superficie.\n\nEste cálculo importa en la ingeniería, el buceo y las ciencias de la Tierra. Los muros de las presas son más gruesos en la base porque la presión es mayor allí, los buceadores controlan la presión para gestionar su aire y evitar lesiones, y los diseñadores de tanques la usan para dimensionar paredes que no se rompan. Una calculadora de presión hidrostática hace estas estimaciones rápidas y te permite comparar fluidos y profundidades sin resolver la fórmula a mano cada vez.\n\nLa fórmula funciona porque la presión a una profundidad equivale al peso de la columna de fluido que presiona sobre cada unidad de área, que crece con la densidad, la gravedad y la profundidad. Ten en cuenta que esto da la presión debida solo al fluido; para hallar la presión absoluta debes sumar la presión atmosférica en la superficie. Estudiantes, ingenieros y buceadores confían en esta herramienta para predecir cómo empujan los fluidos sobre las estructuras y los cuerpos sumergidos.",
+    exampleEs: { inputs: { fluidDensity: 1000, depth: 10, gravity: 9.81 }, explanation: "1000 kg/m³ × 9,81 m/s² × 10 m = 98.100 Pa (aproximadamente una atmósfera adicional)." },
+    faqsEs: [
+      {
+        question: "¿Incluye esto la presión atmosférica?",
+        answer: "No. Esta calculadora devuelve la presión manométrica causada solo por la columna de fluido, no la presión absoluta. Para hallar la presión absoluta a esa profundidad, suma la presión atmosférica que actúa sobre la superficie del fluido, alrededor de 101.325 pascales al nivel del mar. La presión manométrica es la que usan la mayoría de los cálculos de ingeniería y buceo porque representa la presión por encima de la atmósfera circundante, que es la carga real que experimenta una estructura sumergida.",
+      },
+      {
+        question: "¿Qué densidad debo usar para el agua?",
+        answer: "El agua dulce tiene una densidad de unos 1.000 kilogramos por metro cúbico, mientras que el agua de mar es más densa, cerca de 1.025 kilogramos por metro cúbico, debido a las sales disueltas. Usar el valor correcto importa para la precisión, ya que un fluido más denso produce mayor presión a la misma profundidad. Para otros líquidos, busca su densidad: el mercurio, por ejemplo, ronda los 13.600 kilogramos por metro cúbico y genera una presión mucho mayor.",
+      },
+      {
+        question: "¿Por qué la presión no depende de la forma del recipiente?",
+        answer: "La presión hidrostática depende solo de la profundidad, la densidad y la gravedad, no del ancho o la forma del recipiente. Esto se conoce como la paradoja hidrostática: un tubo estrecho y un tanque ancho llenos a la misma profundidad ejercen la misma presión en el fondo. La presión resulta de la altura de la columna de fluido sobre un punto, así que solo importa la profundidad vertical, no cuánto fluido total lo rodea.",
+      },
+      {
+        question: "¿Cuánto aumenta la presión por metro de agua?",
+        answer: "En agua dulce, la presión sube unos 9.810 pascales por cada metro de profundidad, cerca de una décima de atmósfera por metro. Esto significa que a diez metros de profundidad, el fluido añade aproximadamente una atmósfera completa de presión sobre la presión del aire en la superficie. Los buceadores usan esta regla práctica constantemente para estimar las cargas que enfrentan su cuerpo y su equipo bajo el agua.",
+      },
+      {
+        question: "¿Puedo usar esto para gases o solo para líquidos?",
+        answer: "La fórmula supone una densidad constante, lo que funciona bien para los líquidos porque apenas se comprimen. Los gases se comprimen de forma significativa bajo su propio peso, así que su densidad cambia con la altura y esta fórmula sencilla se vuelve imprecisa en grandes distancias verticales. Para capas delgadas de gas o pequeños cambios de profundidad da una aproximación razonable, pero la presión atmosférica a lo largo de kilómetros requiere un modelo más complejo que tenga en cuenta la densidad variable.",
+      },
+    ],
   },
   {
     id: "heat-index",
@@ -198,6 +294,38 @@ export const scienceR7Calculators: CalculatorDefinition[] = [
     lastReviewed: "2026-08-30",
     formulaSource: "NWS Rothfusz heat index regression",
     sourceUrl: "https://www.weather.gov/ama/heatindex",
+    slugEs: "calculadora-de-indice-de-calor",
+    titleEs: "Calculadora del Índice de Calor",
+    shortDescriptionEs: "Halla la temperatura de 'sensación térmica' según el calor y la humedad.",
+    seoTitleEs: "Calculadora del Índice de Calor — Sensación Térmica (Fórmula NWS)",
+    metaDescriptionEs: "Calculadora del índice de calor gratis que usa la regresión de Rothfusz del NWS. Introduce la temperatura y la humedad para hallar la temperatura aparente de 'sensación térmica' en Fahrenheit al instante.",
+    primaryKeywordEs: "calculadora del índice de calor",
+    secondaryKeywordsEs: ["calculadora de sensación térmica", "calculadora de temperatura aparente", "índice de calor y humedad"],
+    formulaExplanationEs: "El índice de calor combina la temperatura del aire y la humedad relativa en una sola temperatura aparente porque el aire húmedo ralentiza la evaporación del sudor, el principal mecanismo de enfriamiento del cuerpo, haciendo que los días calurosos se sientan más calientes de lo que indica el termómetro. La regresión de Rothfusz del Servicio Meteorológico Nacional (NWS) es un polinomio de varios términos ajustado a estudios detallados del balance térmico humano, de modo que cada término capta cómo interactúan la temperatura y la humedad. La fórmula solo es válida a 80 °F o más; por debajo, la evaporación del sudor es lo bastante eficiente como para que la temperatura percibida iguale a la del aire.",
+    explanationEs: "El índice de calor, a menudo llamado temperatura de 'sensación térmica', combina la temperatura del aire y la humedad relativa para estimar cuán caluroso se sienten realmente las condiciones para el cuerpo humano. Esta calculadora del índice de calor usa la regresión oficial de Rothfusz del Servicio Meteorológico Nacional, la misma ecuación detrás de los avisos que ves en los días calurosos de verano. Cuando la humedad es alta, el sudor se evapora lentamente, así que tu cuerpo tiene dificultades para disipar el calor y el aire se siente mucho más caliente de lo que marca el termómetro.\n\nEsto importa para la salud y la seguridad. Los valores altos del índice de calor señalan un peligro real de agotamiento por calor e insolación, especialmente para trabajadores al aire libre, deportistas, niños y personas mayores. Organizadores de eventos, entrenadores y empleadores usan el índice de calor para decidir cuándo programar descansos, cancelar actividades o emitir advertencias. Conocer la temperatura aparente en lugar del valor bruto ayuda a tomar la humedad en serio como un peligro, no como una simple molestia.\n\nLa fórmula funciona porque se ajustó a investigaciones sobre la termorregulación humana, ponderando la temperatura y la humedad tal como las experimenta el cuerpo. Se aplica a 80 °F o más, donde la humedad dificulta de forma significativa el enfriamiento; por debajo de ese umbral esta calculadora devuelve la propia temperatura del aire, ya que la evaporación sigue el ritmo. Meteorólogos, planificadores y cualquiera que enfrente un pronóstico caluroso y húmedo confían en una calculadora del índice de calor para juzgar el riesgo real.",
+    exampleEs: { inputs: { temperatureF: 90, humidityPercent: 70 }, explanation: "A 90 °F y 70 % de humedad el aire se siente como unos 106 °F, bien dentro del rango de precaución." },
+    faqsEs: [
+      {
+        question: "¿Por qué la humedad hace que se sienta más calor?",
+        answer: "Tu cuerpo se enfría principalmente sudando, y el sudor se lleva el calor al evaporarse de la piel. Cuando el aire ya está saturado de humedad, la evaporación se ralentiza drásticamente, así que sale menos calor de tu cuerpo y te sientes más caliente que la temperatura real. Por eso un día húmedo de 90 grados se siente mucho más opresivo que uno seco, y por eso el índice de calor integra la humedad en una única temperatura percibida.",
+      },
+      {
+        question: "¿Por qué la calculadora devuelve la temperatura del aire por debajo de 80 °F?",
+        answer: "La regresión de Rothfusz del Servicio Meteorológico Nacional se desarrolló y validó solo para temperaturas de 80 grados Fahrenheit o superiores, donde la humedad dificulta de forma significativa el enfriamiento del cuerpo. Por debajo de ese umbral el sudor se evapora eficientemente sin importar la humedad, así que la temperatura aparente es esencialmente igual a la del aire medida. Para mantener la precisión, esta calculadora devuelve directamente la temperatura del aire cuando introduces un valor inferior a 80 grados.",
+      },
+      {
+        question: "¿Qué valores del índice de calor son peligrosos?",
+        answer: "El Servicio Meteorológico Nacional marca precaución entre unos 80 y 90 grados, precaución extrema de 90 a 103, peligro de 103 a 124 y peligro extremo por encima de 124 grados Fahrenheit. A medida que sube el índice, aumentan los riesgos de calambres por calor, agotamiento por calor e insolación potencialmente mortal, sobre todo con exposición prolongada o actividad física. Usa estas bandas para decidir cuándo descansar, hidratarte, buscar sombra o detener el trabajo al aire libre.",
+      },
+      {
+        question: "¿Tiene en cuenta el índice de calor el sol y el viento?",
+        answer: "No. El índice de calor estándar supone condiciones de sombra y viento ligero, así que la luz solar directa puede añadir hasta 15 grados Fahrenheit a la temperatura percibida. El viento puede reducirla ligeramente al favorecer la evaporación, aunque el viento caliente también puede aumentar el estrés térmico. Como ignora estos factores, trata el índice de calor como una base y extrema la precaución cuando estés expuesto a sol fuerte o a aire quieto y estancado.",
+      },
+      {
+        question: "¿Qué unidades usa esta calculadora?",
+        answer: "Esta calculadora usa Fahrenheit para la temperatura y un porcentaje de 0 a 100 para la humedad relativa, acorde con la fórmula del Servicio Meteorológico Nacional en la que se basa. Si tu temperatura está en Celsius, conviértela primero multiplicando por 1,8 y sumando 32. El índice de calor resultante también se expresa en Fahrenheit, la unidad estándar para los avisos de calor emitidos en Estados Unidos.",
+      },
+    ],
   },
   {
     id: "wind-chill",
@@ -248,6 +376,38 @@ export const scienceR7Calculators: CalculatorDefinition[] = [
     lastReviewed: "2026-08-30",
     formulaSource: "NWS wind chill temperature index (2001)",
     sourceUrl: "https://www.weather.gov/safety/cold-wind-chill-chart",
+    slugEs: "calculadora-de-sensacion-termica-por-viento",
+    titleEs: "Calculadora de Sensación Térmica por Viento",
+    shortDescriptionEs: "Halla la temperatura de 'sensación térmica' con frío y viento.",
+    seoTitleEs: "Calculadora de Sensación Térmica por Viento — Frío Percibido (NWS)",
+    metaDescriptionEs: "Calculadora de sensación térmica por viento gratis que usa la fórmula del NWS. Introduce la temperatura y la velocidad del viento para hallar la temperatura de 'sensación térmica' en Fahrenheit al instante.",
+    primaryKeywordEs: "calculadora de sensación térmica por viento",
+    secondaryKeywordsEs: ["calculadora de frío percibido", "fórmula de sensación térmica", "factor de enfriamiento por viento"],
+    formulaExplanationEs: "La sensación térmica por viento expresa cuán frío se siente el aire porque el viento arrastra la fina capa de aire cálido que el cuerpo calienta alrededor de la piel, acelerando la pérdida de calor y haciendo que un día frío se sienta más frío. La fórmula del Servicio Meteorológico Nacional eleva la velocidad del viento a la potencia 0,16 porque la pérdida de calor crece rápido al principio y luego se estabiliza al aumentar el viento. Los términos de temperatura y viento se combinan para modelar la tasa real de pérdida de calor de la piel expuesta, produciendo una temperatura equivalente de 'sensación térmica' que capta el peligro de congelación mejor que el termómetro.",
+    explanationEs: "La sensación térmica por viento es la temperatura de 'sensación' en un día frío, y capta cómo el viento hace que el aire gélido se sienta aún más frío contra la piel. Esta calculadora usa la fórmula oficial del Servicio Meteorológico Nacional, revisada en 2001 para reflejar mejor la rapidez con la que la piel humana expuesta pierde calor. A medida que el viento se acelera, se lleva la capa límite cálida que tu cuerpo mantiene, así que el calor escapa más rápido y la temperatura efectiva cae muy por debajo de la lectura del termómetro.\n\nEsto importa porque la sensación térmica por viento es una medida directa del riesgo de congelación e hipotermia. En un día en calma, el frío es incómodo pero manejable; añade un viento fuerte y la piel expuesta puede congelarse en minutos. Los meteorólogos emiten avisos y alertas de sensación térmica sobre esta base, y trabajadores, viajeros y aficionados a las actividades al aire libre la usan para decidir cómo vestirse y cuánto tiempo pueden permanecer fuera con seguridad. Una calculadora de sensación térmica convierte lecturas de temperatura y viento en un nivel de peligro accionable.\n\nLa fórmula funciona modelando la pérdida de calor de la piel desnuda como función tanto de la temperatura como de la velocidad del viento, con el efecto del viento atenuándose a velocidades más altas. Como refleja la fisiología y no solo la física, la sensación térmica puede estar muchos grados por debajo de la temperatura real del aire. Cualquiera que enfrente condiciones frías y ventosas confía en una calculadora de sensación térmica para entender la verdadera severidad del clima y protegerse de las lesiones por frío.",
+    exampleEs: { inputs: { temperatureF: 30, windSpeedMph: 15 }, explanation: "A 30 °F con un viento de 15 mph el aire se siente como unos 19 °F." },
+    faqsEs: [
+      {
+        question: "¿Cómo hace el viento que el frío se sienta más frío?",
+        answer: "Tu cuerpo calienta una capa fina de aire justo pegada a la piel, que actúa como aislante. El viento sopla constantemente esa capa cálida y la reemplaza con aire frío, obligando a tu cuerpo a recalentar aire nuevo y a perder calor más rápido. Cuanto más fuerte el viento, más rápida es esta pérdida de calor, y por eso un día frío y ventoso se siente mucho más cortante que uno en calma a la misma temperatura.",
+      },
+      {
+        question: "¿Afecta la sensación térmica a los objetos o solo a las personas?",
+        answer: "La sensación térmica describe cuán frío se siente el aire para la piel humana expuesta, según la tasa de pérdida de calor de un cuerpo cálido. Los objetos inanimados, como el radiador de un coche o las tuberías de agua, no pueden enfriarse por debajo de la temperatura real del aire por más que sople el viento, porque no generan calor propio. El viento acelera su enfriamiento hacia la temperatura del aire pero nunca la sobrepasa, así que la sensación térmica se aplica a cuerpos vivos que producen calor.",
+      },
+      {
+        question: "¿A qué sensación térmica hay riesgo de congelación?",
+        answer: "El Servicio Meteorológico Nacional advierte que la congelación puede producirse en la piel expuesta en unos 30 minutos cuando la sensación térmica baja a alrededor de menos 18 grados Fahrenheit, y en pocos minutos a menos 40 o menos. Cuanto más fría la sensación térmica, más rápido se congela la piel. Cubre la piel expuesta, limita el tiempo al aire libre y vigila el entumecimiento o las manchas blancas cerosas que señalan las primeras etapas de la congelación.",
+      },
+      {
+        question: "¿Por qué la fórmula solo se aplica con clima frío?",
+        answer: "La fórmula de sensación térmica del Servicio Meteorológico Nacional está definida para temperaturas de 50 grados Fahrenheit o menos y velocidades de viento superiores a unas 3 millas por hora, porque la sensación térmica solo tiene sentido cuando el aire es lo bastante frío para extraer calor del cuerpo. En condiciones cálidas, el aire en movimiento se siente refrescante y agradable en lugar de peligroso, así que se usa otro concepto, el índice de calor, para describir el confort con calor.",
+      },
+      {
+        question: "¿Qué unidades usa esta calculadora?",
+        answer: "Esta calculadora usa Fahrenheit para la temperatura y millas por hora para la velocidad del viento, acorde con la fórmula del Servicio Meteorológico Nacional. Si tu temperatura está en Celsius, conviértela multiplicando por 1,8 y sumando 32, y convierte la velocidad del viento de kilómetros por hora a millas por hora dividiendo entre 1,609. La sensación térmica resultante se expresa en Fahrenheit, la unidad estándar para los avisos de frío en Estados Unidos.",
+      },
+    ],
   },
   {
     id: "dew-point",
@@ -298,6 +458,38 @@ export const scienceR7Calculators: CalculatorDefinition[] = [
     lastReviewed: "2026-08-30",
     formulaSource: "Magnus-Tetens dew point approximation (NWS)",
     sourceUrl: "https://www.weather.gov/epz/wxcalc_rh",
+    slugEs: "calculadora-de-punto-de-rocio",
+    titleEs: "Calculadora de Punto de Rocío",
+    shortDescriptionEs: "Halla el punto de rocío a partir de la temperatura y la humedad.",
+    seoTitleEs: "Calculadora de Punto de Rocío — Temperatura y Humedad a Punto de Rocío",
+    metaDescriptionEs: "Calculadora de punto de rocío gratis que usa la fórmula de Magnus. Introduce la temperatura del aire y la humedad relativa para hallar el punto de rocío en Celsius al instante.",
+    primaryKeywordEs: "calculadora de punto de rocío",
+    secondaryKeywordsEs: ["calculadora de la fórmula del punto de rocío", "humedad y punto de rocío", "calculadora de la fórmula de Magnus"],
+    formulaExplanationEs: "El punto de rocío es la temperatura a la que el aire se satura por completo y el vapor de agua empieza a condensarse, así que depende tanto de cuán caliente está el aire como de cuánta humedad contiene. La fórmula de Magnus funciona relacionando la presión de vapor de saturación con la temperatura mediante un ajuste exponencial, y luego usa la humedad relativa para hallar la temperatura a la que el contenido de humedad actual saturaría el aire. El término intermedio gamma combina el efecto de la temperatura y el logaritmo de la humedad, y al despejar la temperatura de saturación se obtiene el punto de rocío directamente en Celsius.",
+    explanationEs: "El punto de rocío es la temperatura a la que debe enfriarse el aire para que el vapor de agua comience a condensarse en rocío, niebla o nubes. Esta calculadora de punto de rocío lo obtiene, mediante la reconocida fórmula de Magnus, a partir de la temperatura del aire y la humedad relativa que introduzcas. A diferencia de la humedad relativa, que cambia al calentarse o enfriarse el aire, el punto de rocío es una medida absoluta de cuánta humedad contiene realmente el aire, lo que lo convierte en el indicador favorito de los meteorólogos para juzgar condiciones bochornosas o secas.\n\nEsto importa para el confort, el clima y la construcción. Un punto de rocío alto, por encima de unos 20 °C, se siente pegajoso y opresivo porque el sudor no puede evaporarse, mientras que uno bajo se siente fresco y seco. Los pronosticadores lo usan para prever niebla, escarcha y tormentas, y los ingenieros para evitar la condensación que causa moho, corrosión y empañamiento de ventanas. Una calculadora de punto de rocío convierte una lectura de temperatura y humedad en este único indicador significativo de confort y humedad.\n\nLa fórmula funciona hallando la temperatura a la que el contenido de humedad actual del aire lo saturaría por completo. Como el punto de rocío nunca puede superar la temperatura del aire, enfriar el aire hacia su punto de rocío eleva la humedad relativa hasta que comienza la condensación. Observadores del clima, diseñadores de climatización, agricultores y pilotos confían en una calculadora de punto de rocío para anticipar el comportamiento de la humedad y juzgar cómo se sentirá realmente el aire.",
+    exampleEs: { inputs: { temperatureC: 25, humidityPercent: 60 }, explanation: "A 25 °C y 60 % de humedad el punto de rocío es de unos 16,7 °C, una sensación ligeramente húmeda y cómoda." },
+    faqsEs: [
+      {
+        question: "¿En qué se diferencia el punto de rocío de la humedad relativa?",
+        answer: "La humedad relativa es el porcentaje de humedad que contiene el aire en comparación con el máximo que podría contener a esa temperatura, así que cambia al calentarse o enfriarse el aire aunque la humedad real permanezca fija. El punto de rocío es una temperatura absoluta que refleja la cantidad real de vapor de agua presente. Como no varía con la temperatura, el punto de rocío es un indicador más fiable de cuán húmedo o bochornoso se siente el aire.",
+      },
+      {
+        question: "¿Qué punto de rocío resulta cómodo?",
+        answer: "Un punto de rocío por debajo de unos 10 grados Celsius se siente seco y cómodo, mientras que de 10 a 16 grados se siente agradable a ligeramente húmedo. De 16 a 20 grados el aire empieza a sentirse pegajoso, y por encima de 20 grados se vuelve opresivo e incómodo porque el sudor se evapora mal. Los puntos de rocío por encima de 24 grados son raros y se sienten opresivamente tropicales. Estas bandas hacen del punto de rocío una guía práctica del confort veraniego.",
+      },
+      {
+        question: "¿Puede el punto de rocío ser mayor que la temperatura del aire?",
+        answer: "No. El punto de rocío puede igualar la temperatura del aire, lo que ocurre al 100 por ciento de humedad relativa cuando el aire está totalmente saturado y se forma niebla o rocío, pero nunca puede superarla. Si pudiera, el aire contendría más humedad de la físicamente posible. A medida que el aire se enfría hacia su punto de rocío, la humedad relativa sube al 100 por ciento, y cualquier enfriamiento adicional obliga al vapor de agua a condensarse.",
+      },
+      {
+        question: "¿Por qué se forma rocío sobre la hierba durante la noche?",
+        answer: "En noches despejadas y en calma, el suelo irradia calor y se enfría más rápido que el aire de encima. Cuando superficies como la hierba o las ventanillas de un coche descienden por debajo del punto de rocío del aire circundante, el vapor de agua que las toca se condensa en gotas líquidas que llamamos rocío. Si el punto de rocío está por debajo del punto de congelación, ese mismo proceso produce escarcha, ya que el vapor se deposita directamente como cristales de hielo.",
+      },
+      {
+        question: "¿Qué unidades usa esta calculadora?",
+        answer: "Esta calculadora toma la temperatura del aire en grados Celsius y la humedad relativa como un porcentaje de 0 a 100, y devuelve el punto de rocío en grados Celsius. Si tu temperatura está en Fahrenheit, conviértela restando 32 y dividiendo entre 1,8 antes de introducirla. Los coeficientes de Magnus utilizados aquí, 17,27 y 237,7, son los valores estándar que mantienen el resultado preciso en las condiciones meteorológicas cotidianas.",
+      },
+    ],
   },
   {
     id: "terminal-velocity",
@@ -350,6 +542,38 @@ export const scienceR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard physics (drag equation)",
+    slugEs: "calculadora-de-velocidad-terminal",
+    titleEs: "Calculadora de Velocidad Terminal",
+    shortDescriptionEs: "Halla la velocidad máxima de caída a través de un fluido.",
+    seoTitleEs: "Calculadora de Velocidad Terminal — Velocidad Máxima de Caída",
+    metaDescriptionEs: "Calculadora de velocidad terminal gratis. Introduce la masa, el coeficiente de arrastre, el área y la densidad del fluido para hallar la velocidad máxima de caída en m/s. Ideal para física y paracaidismo.",
+    primaryKeywordEs: "calculadora de velocidad terminal",
+    secondaryKeywordsEs: ["calculadora de velocidad de caída", "fórmula de velocidad terminal por arrastre", "velocidad terminal del paracaidista"],
+    formulaExplanationEs: "La velocidad terminal es la velocidad constante que alcanza un objeto en caída cuando la resistencia del aire crece lo suficiente para equilibrar exactamente la gravedad, deteniendo la aceleración. Igualar la fuerza de arrastre al peso y despejar la velocidad da la raíz cuadrada del doble del peso dividido entre el producto de la densidad del fluido, el área de la sección transversal y el coeficiente de arrastre. La fórmula funciona porque el arrastre aumenta con el cuadrado de la velocidad, así que un objeto acelera solo hasta que el arrastre alcanza a su peso; un objeto más pesado necesita más velocidad para generar un arrastre equivalente, mientras que una forma mayor o más roma llega antes al equilibrio.",
+    explanationEs: "La velocidad terminal es la velocidad máxima constante que alcanza un objeto al caer a través de un fluido como el aire, cuando la fuerza de arrastre hacia arriba equilibra finalmente la atracción de la gravedad hacia abajo. Esta calculadora de velocidad terminal la calcula a partir de la masa del objeto, su coeficiente de arrastre, el área de su sección transversal y la densidad del fluido. Una vez que estas fuerzas se equilibran, el objeto deja de acelerar y cae a velocidad constante, y por eso un paracaidista no sigue acelerando indefinidamente.\n\nEsto importa en el paracaidismo, la balística, la meteorología y la ingeniería. Explica por qué un paracaidista con los brazos extendidos cae a unos 120 kilómetros por hora pero se frena drásticamente cuando un paracaídas aumenta enormemente el área y el arrastre, por qué las gotas de lluvia de distintos tamaños llegan al suelo a velocidades soportables, y cómo los diseñadores predicen la caída de todo, desde semillas hasta naves espaciales. Una calculadora de velocidad terminal te permite explorar cómo la masa, la forma y la densidad del aire desplazan esa velocidad límite.\n\nLa fórmula funciona porque la fuerza de arrastre aumenta con el cuadrado de la velocidad, así que un objeto acelera solo hasta que el arrastre iguala su peso y luego cae de forma estable. Los objetos más pesados o más aerodinámicos alcanzan velocidades terminales mayores, mientras que un área frontal más grande, un fluido más denso o una forma más roma la reducen. Estudiantes de física, paracaidistas e ingenieros usan una calculadora de velocidad terminal para entender y predecir cómo los objetos se asientan en su velocidad de caída estable.",
+    exampleEs: { inputs: { mass: 80, dragCoefficient: 1.0, crossSectionalArea: 0.7, fluidDensity: 1.225, gravity: 9.81 }, explanation: "Un paracaidista de 80 kg con Cd 1,0 y 0,7 m² de área alcanza unos 42,8 m/s (~154 km/h)." },
+    faqsEs: [
+      {
+        question: "¿Por qué un objeto en caída deja de acelerar?",
+        answer: "A medida que un objeto cae, la resistencia del aire, o arrastre, aumenta con el cuadrado de su velocidad. Sigue acelerando hasta que la fuerza de arrastre hacia arriba crece lo suficiente para cancelar exactamente la fuerza de gravedad hacia abajo. En ese punto la fuerza neta es cero, así que por la segunda ley de Newton la aceleración es cero y el objeto cae a velocidad constante, su velocidad terminal, durante el resto del descenso.",
+      },
+      {
+        question: "¿Qué es el coeficiente de arrastre y qué valor debo usar?",
+        answer: "El coeficiente de arrastre es un número adimensional que describe cuán aerodinámica es una forma, donde valores más bajos significan menos resistencia. Una esfera lisa ronda 0,5, una placa plana frente al flujo unos 1,1 y un paracaidista de vientre hacia la Tierra alrededor de 1,0. Las formas aerodinámicas, como un halcón en picado o una bala, tienen coeficientes mucho menores. Elige un valor que se ajuste a la forma y orientación de tu objeto para una velocidad terminal precisa.",
+      },
+      {
+        question: "¿Por qué los objetos más pesados caen más rápido en el aire?",
+        answer: "En el vacío, todos los objetos caen al mismo ritmo sin importar su masa, pero en el aire el arrastre depende del tamaño y la forma, no de la masa. Un objeto más pesado de la misma forma debe alcanzar una velocidad mayor antes de que el arrastre crezca lo suficiente para equilibrar su mayor peso, así que se asienta a una velocidad terminal más alta. Por eso una canica cae más rápido que una pluma en el aire, aunque caerían juntas en el vacío.",
+      },
+      {
+        question: "¿Cómo cambia un paracaídas la velocidad terminal?",
+        answer: "Un paracaídas aumenta drásticamente tanto el área de la sección transversal como el coeficiente de arrastre efectivo del sistema en caída. Como la velocidad terminal es inversamente proporcional a la raíz cuadrada del área y del coeficiente de arrastre, este gran aumento reduce marcadamente la velocidad de caída estable. Un paracaidista que cae a unos 55 metros por segundo puede frenarse a unos 5 metros por segundo bajo una vela abierta, haciendo posible un aterrizaje seguro.",
+      },
+      {
+        question: "¿Qué densidad del fluido debo introducir?",
+        answer: "Para un objeto que cae a través del aire a nivel del mar, usa unos 1,225 kilogramos por metro cúbico, que es el valor por defecto de esta calculadora. El aire es más delgado a gran altitud, lo que reduce la densidad y aumenta la velocidad terminal, mientras que fluidos más densos como el agua la reducen drásticamente. Si modelas una caída a través del agua, usa unos 1.000 kilogramos por metro cúbico, y el objeto alcanzará una velocidad estable mucho menor.",
+      },
+    ],
   },
   {
     id: "escape-velocity",
@@ -399,6 +623,38 @@ export const scienceR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard physics (Newtonian gravitation)",
+    slugEs: "calculadora-de-velocidad-de-escape",
+    titleEs: "Calculadora de Velocidad de Escape",
+    shortDescriptionEs: "Halla la velocidad necesaria para escapar de la gravedad de un planeta.",
+    seoTitleEs: "Calculadora de Velocidad de Escape — Velocidad para Escapar de la Gravedad",
+    metaDescriptionEs: "Calculadora de velocidad de escape gratis. Introduce la masa y el radio de un planeta o estrella para hallar la velocidad de escape en m/s al instante. Perfecta para astronomía y física.",
+    primaryKeywordEs: "calculadora de velocidad de escape",
+    secondaryKeywordsEs: ["calculadora de velocidad de escape gravitatoria", "fórmula de velocidad de escape", "velocidad de escape de un planeta"],
+    formulaExplanationEs: "La velocidad de escape es la velocidad mínima que necesita un objeto para liberarse de la gravedad de un cuerpo sin propulsión adicional, y surge de igualar la energía cinética del objeto con la energía potencial gravitatoria que lo retiene. Al despejar ese balance energético se obtiene la raíz cuadrada del doble de la constante gravitatoria por la masa del cuerpo dividido entre su radio. La fórmula funciona porque un cuerpo más masivo atrae con más fuerza y exige más velocidad, mientras que partir más lejos del centro, a un radio mayor, debilita la atracción y reduce la velocidad de escape. Notablemente, no depende de la masa del propio objeto que escapa.",
+    explanationEs: "La velocidad de escape es la velocidad mínima que debe alcanzar un objeto para liberarse de la atracción gravitatoria de un planeta, una luna o una estrella y no volver a caer, sin ningún empuje adicional. Esta calculadora de velocidad de escape la calcula a partir de la masa y el radio del cuerpo celeste usando la ley de gravitación de Newton. Para la Tierra esta velocidad es de unos 11,2 kilómetros por segundo, aproximadamente 33 veces la velocidad del sonido, y por eso lanzar al espacio exige cohetes tan enormes.\n\nEste concepto importa para los vuelos espaciales, la astronomía y las ciencias planetarias. Los planificadores de misiones usan la velocidad de escape para calcular la energía que necesita una nave para abandonar la Tierra o para aterrizar y despegar de otro mundo. También explica por qué cuerpos pequeños como la Luna no pueden retener una atmósfera, ya que las moléculas de gas superan con facilidad la baja velocidad de escape, mientras que planetas masivos como Júpiter conservan atmósferas espesas. Un agujero negro, en el extremo, tiene una velocidad de escape que supera la velocidad de la luz.\n\nLa fórmula funciona equilibrando la energía cinética con la energía potencial gravitatoria, así que la velocidad de escape aumenta con la masa del cuerpo y disminuye a medida que crece el radio de lanzamiento. Sorprendentemente, no depende de la masa del objeto que escapa, así que un guijarro y una nave espacial necesitan la misma velocidad. Astrónomos, ingenieros y estudiantes de física confían en una calculadora de velocidad de escape para comparar mundos y planificar los presupuestos energéticos de las misiones espaciales.",
+    exampleEs: { inputs: { mass: 5.972e24, radius: 6.371e6 }, explanation: "Para la masa y el radio de la Tierra, la velocidad de escape es de unos 11.186 m/s (11,2 km/s)." },
+    faqsEs: [
+      {
+        question: "¿Depende la velocidad de escape de la masa del objeto?",
+        answer: "No, y esto sorprende a mucha gente. La masa del objeto que escapa se cancela en la ecuación porque tanto su energía cinética como su energía potencial gravitatoria escalan con esa masa de la misma manera. Esto significa que un guijarro diminuto y una nave espacial masiva necesitan exactamente la misma velocidad para escapar de un cuerpo dado. Solo la masa y el radio del cuerpo del que se escapa determinan la velocidad requerida.",
+      },
+      {
+        question: "¿Por qué la velocidad de escape de la Tierra es de unos 11,2 km/s?",
+        answer: "Al introducir la masa de la Tierra, de unos 5,972×10²⁴ kilogramos, y su radio de unos 6.371 kilómetros en la fórmula, se obtienen alrededor de 11.186 metros por segundo, o 11,2 kilómetros por segundo. Esta es la velocidad que necesitaría un objeto lanzado hacia arriba para alejarse para siempre sin más impulso. Refleja el equilibrio entre la considerable masa de la Tierra, que atrae los objetos de vuelta, y su radio, que fija la distancia inicial desde el centro.",
+      },
+      {
+        question: "¿Alcanzan realmente los cohetes la velocidad de escape en el lanzamiento?",
+        answer: "No de forma instantánea. La velocidad de escape es la velocidad necesaria para alejarse sin más empuje desde la superficie, pero los cohetes queman combustible de forma continua, así que pueden partir más gradualmente manteniendo el empuje. La mayoría de los lanzamientos primero alcanzan la velocidad orbital, de unos 7,9 kilómetros por segundo, para orbitar la Tierra, y solo las misiones que la abandonan por completo llegan a la velocidad de escape. La propulsión continua significa que un cohete nunca tiene que alcanzar esa velocidad total de golpe.",
+      },
+      {
+        question: "¿Cómo afecta el radio a la velocidad de escape?",
+        answer: "La velocidad de escape es inversamente proporcional a la raíz cuadrada del radio, así que partir más lejos del centro de un cuerpo reduce la velocidad necesaria para escapar. Lanzar desde la cima de una montaña o desde la órbita requiere algo menos que lanzar desde la superficie. Esto también significa que, para dos cuerpos de igual masa, el más compacto, con menor radio, tiene la velocidad de escape más alta, porque su superficie se sitúa más profunda en el pozo gravitatorio.",
+      },
+      {
+        question: "¿Cuál es la conexión con los agujeros negros?",
+        answer: "Un agujero negro es un objeto tan compacto que su velocidad de escape en el horizonte de sucesos alcanza la velocidad de la luz. Como nada puede viajar más rápido que la luz, nada, ni siquiera la propia luz, puede escapar una vez que cruza esa frontera. Aplicar la misma fórmula con una masa enorme concentrada en un radio diminuto eleva la velocidad de escape hasta la velocidad de la luz y más allá, que es el rasgo definitorio de un agujero negro.",
+      },
+    ],
   },
   {
     id: "thin-lens",
@@ -448,6 +704,38 @@ export const scienceR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard physics (thin lens equation)",
+    slugEs: "calculadora-de-lentes-delgadas",
+    titleEs: "Calculadora de Lentes Delgadas",
+    shortDescriptionEs: "Halla la distancia focal a partir de las distancias del objeto y la imagen.",
+    seoTitleEs: "Calculadora de Lentes Delgadas — Distancia Focal desde Objeto e Imagen",
+    metaDescriptionEs: "Calculadora de lentes delgadas gratis. Introduce la distancia del objeto y la distancia de la imagen para hallar la distancia focal en centímetros con la ecuación de lentes delgadas. Ideal para óptica.",
+    primaryKeywordEs: "calculadora de lentes delgadas",
+    secondaryKeywordsEs: ["calculadora de la ecuación de lentes", "calculadora de distancia focal", "fórmula de lentes delgadas"],
+    formulaExplanationEs: "La ecuación de lentes delgadas relaciona la distancia focal de una lente con las distancias del objeto y su imagen porque una lente desvía la luz una cantidad fija determinada por su forma, enfocando los rayos de una distancia de objeto dada hacia una distancia de imagen correspondiente. Sumar los recíprocos de las distancias del objeto y de la imagen da el recíproco de la distancia focal, así que la distancia focal es uno dividido entre esa suma. La fórmula sirve para lentes lo bastante delgadas como para que su grosor sea despreciable, permitiendo tratar toda la desviación como si ocurriera en un solo plano, lo que mantiene sencilla la geometría de los rayos convergentes.",
+    explanationEs: "La ecuación de lentes delgadas es la piedra angular de la óptica geométrica y vincula la distancia focal de una lente con dónde se sitúa un objeto y dónde se forma su imagen. Esta calculadora de lentes delgadas toma la distancia del objeto y la distancia de la imagen que midas y devuelve la distancia focal en centímetros. La distancia focal describe con qué intensidad una lente desvía la luz: una distancia focal corta desvía los rayos con fuerza, mientras que una larga los desvía suavemente, y permanece fija para una lente dada sin importar lo que mires a través de ella.\n\nEsto importa en la fotografía, la ciencia de la visión y el diseño de instrumentos. Determina dónde debe enfocar una cámara, cómo las gafas corrigen la visión borrosa y cómo los microscopios y telescopios aumentan. Al relacionar tres distancias medibles, la ecuación permite predecir la posición de la imagen, diseñar sistemas de lentes y diagnosticar problemas de enfoque. Una calculadora de lentes delgadas elimina la engorrosa aritmética de recíprocos, para que pases rápido de las distancias medidas a la distancia focal que caracteriza la lente.\n\nLa fórmula funciona porque una lente delgada desvía la luz entrante una cantidad fija, así que los rayos de un objeto a una distancia dada siempre convergen a una distancia de imagen predecible. Sumar los recíprocos de esas dos distancias da el recíproco de la distancia focal. Siguiendo el convenio de signos, donde las imágenes reales y las lentes convergentes toman valores positivos, estudiantes, fotógrafos e ingenieros ópticos confían en una calculadora de lentes delgadas para diseñar y comprender sistemas de imagen.",
+    exampleEs: { inputs: { objectDistance: 30, imageDistance: 15 }, explanation: "1/f = 1/30 + 1/15 = 1/10, así que la distancia focal es 10 cm." },
+    faqsEs: [
+      {
+        question: "¿Qué convenio de signos usa esta calculadora?",
+        answer: "Esta calculadora sigue el convenio común en el que las distancias medidas en el lado real de la lente son positivas. Para una lente convergente que forma una imagen real, tanto la distancia del objeto como la de la imagen son positivas, dando una distancia focal positiva. Si trabajas con imágenes virtuales o lentes divergentes, introduce las distancias negativas apropiadas, y el signo de la distancia focal resultante indicará correctamente si la lente converge o diverge la luz.",
+      },
+      {
+        question: "¿Qué me dice la distancia focal sobre una lente?",
+        answer: "La distancia focal mide con qué intensidad una lente converge o diverge la luz. Una distancia focal corta desvía los rayos con fuerza y produce un campo de visión amplio con cambios de aumento pronunciados, mientras que una larga desvía la luz suavemente y estrecha el campo. En las cámaras, las distancias focales cortas dan tomas de gran angular y las largas dan zoom teleobjetivo. La distancia focal es una propiedad fija de la lente determinada por su forma y su material.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre una imagen real y una virtual?",
+        answer: "Una imagen real se forma donde los rayos de luz convergen realmente y puede proyectarse sobre una pantalla, como la imagen dentro de una cámara o en una pantalla de cine. Una imagen virtual se forma donde los rayos solo parecen originarse, como la vista derecha y aumentada a través de una lupa, y no puede proyectarse. El signo de la distancia de la imagen te dice cuál tienes: positivo para real, negativo para virtual, en este convenio.",
+      },
+      {
+        question: "¿Por qué se llama la ecuación de lentes delgadas?",
+        answer: "La ecuación supone que la lente es lo bastante delgada como para que su grosor físico sea despreciable frente a las distancias del objeto y de la imagen. Esto permite tratar toda la desviación de la luz como si ocurriera en un único plano en el centro de la lente, lo que simplifica mucho la geometría. Las lentes gruesas reales requieren un modelado más complejo con planos principales, pero para la mayoría de las lentes cotidianas la aproximación de lente delgada es precisa y cómoda.",
+      },
+      {
+        question: "¿Puedo usar esta ecuación para hallar el aumento?",
+        answer: "Sí, una vez que conoces las distancias del objeto y de la imagen puedes hallar el aumento por separado como la razón negativa entre la distancia de la imagen y la del objeto. Un valor de aumento mayor que uno significa que la imagen está ampliada, mientras que menor que uno significa que está reducida, y un signo negativo indica que la imagen está invertida. Esta calculadora se centra en la distancia focal, pero las mismas dos distancias alimentan directamente esa relación de aumento.",
+      },
+    ],
   },
   {
     id: "doppler-effect",
@@ -510,5 +798,37 @@ export const scienceR7Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard physics (Doppler effect)",
+    slugEs: "calculadora-del-efecto-doppler",
+    titleEs: "Calculadora del Efecto Doppler",
+    shortDescriptionEs: "Halla la frecuencia observada de una fuente en movimiento.",
+    seoTitleEs: "Calculadora del Efecto Doppler — Frecuencia Observada de una Fuente en Movimiento",
+    metaDescriptionEs: "Calculadora del efecto Doppler gratis. Introduce la frecuencia de la fuente, su velocidad y la dirección para hallar la frecuencia observada en Hz. Ideal para problemas de sonido y física.",
+    primaryKeywordEs: "calculadora del efecto doppler",
+    secondaryKeywordsEs: ["calculadora del desplazamiento doppler", "calculadora de frecuencia observada", "frecuencia del sonido doppler"],
+    formulaExplanationEs: "El efecto Doppler cambia la frecuencia que oye un observador cuando una fuente se mueve porque comprime las ondas sonoras que van por delante y estira las que quedan detrás. Cuando la fuente se acerca, cada cresta sucesiva se emite un poco más cerca, así que las ondas se agrupan, la longitud de onda se acorta y la frecuencia observada aumenta; dividir entre (c menos la velocidad de la fuente) capta esta compresión. Cuando la fuente se aleja, las crestas se separan y la frecuencia disminuye, así que la fórmula divide entre (c más la velocidad de la fuente). La velocidad del sonido fija cuán rápido viajan las ondas respecto a la fuente en movimiento.",
+    explanationEs: "El efecto Doppler es el cambio en la frecuencia de una onda que detecta un observador cuando la fuente se mueve respecto a él. Esta calculadora del efecto Doppler calcula la frecuencia observada para el sonido de una fuente en movimiento y un observador estacionario, usando la frecuencia de la fuente, su velocidad, la velocidad del sonido y si la fuente se acerca o se aleja. Es la física detrás del familiar ascenso y descenso del tono de una sirena o un coche de carreras que pasa.\n\nEsto importa mucho más allá del sonido cotidiano. El radar Doppler rastrea el movimiento de las tormentas y de los vehículos que exceden la velocidad, la ecografía médica mide el flujo sanguíneo, y los astrónomos usan el desplazamiento Doppler de la luz para descubrir que las galaxias lejanas se alejan, prueba de que el universo se expande. Entender cómo el movimiento desplaza la frecuencia permite a ingenieros y científicos convertir un cambio de tono o de color en una medición precisa de la velocidad.\n\nLa fórmula funciona porque una fuente que se mueve hacia ti emite cada cresta de onda desde una posición un poco más cercana, agrupando las ondas en una frecuencia más alta, mientras que una fuente que se aleja las estira en una más baja. Seleccionar la dirección le indica a la calculadora si debe dividir entre la velocidad del sonido menos o más la velocidad de la fuente. Estudiantes de física, ingenieros y cualquiera curioso por ese tono cambiante de la sirena confían en una calculadora del efecto Doppler para cuantificar exactamente cuánto cambia la frecuencia.",
+    exampleEs: { inputs: { sourceFrequency: 440, sourceSpeed: 30, speedOfSound: 343, direction: "approaching" }, explanation: "Una fuente de 440 Hz que se acerca a 30 m/s se oye a unos 482 Hz, un tono notablemente más alto." },
+    faqsEs: [
+      {
+        question: "¿Por qué una sirena que pasa cambia de tono?",
+        answer: "A medida que un vehículo de emergencia se acerca, sus ondas sonoras se comprimen en una longitud de onda más corta, elevando la frecuencia que oyes, así que la sirena suena más aguda. En el instante en que pasa y empieza a alejarse, las ondas se estiran, bajando la frecuencia y el tono. El cambio brusco que notas cuando el vehículo pasa a tu lado es el efecto Doppler pasando del caso de acercamiento al de alejamiento en tiempo real.",
+      },
+      {
+        question: "¿Esta calculadora supone que el observador está inmóvil?",
+        answer: "Sí. Esta versión modela una fuente en movimiento y un observador estacionario, lo que cubre las situaciones más comunes, como una sirena o un coche que pasa oído por alguien quieto. Si el observador también se mueve, la fórmula Doppler completa añade términos para la velocidad del observador. Para un primer análisis, el caso del observador estacionario capta el desplazamiento de frecuencia esencial y es preciso siempre que no te muevas hacia la fuente o alejándote de ella.",
+      },
+      {
+        question: "¿Qué velocidad del sonido debo usar?",
+        answer: "La velocidad del sonido en el aire es de unos 343 metros por segundo a 20 grados Celsius, que es el valor por defecto de esta calculadora. Aumenta con la temperatura, alcanzando unos 349 metros por segundo a 30 grados y bajando a unos 331 en el punto de congelación. El sonido también viaja mucho más rápido en el agua, alrededor de 1.480 metros por segundo, y aún más en los sólidos, así que ajusta el valor si tu medio no es aire a temperatura ambiente.",
+      },
+      {
+        question: "¿Qué ocurre cuando la fuente se acerca a la velocidad del sonido?",
+        answer: "A medida que la velocidad de la fuente se acerca a la del sonido, el denominador de la fórmula de acercamiento se encoge hacia cero, así que la frecuencia observada sube abruptamente hacia valores muy altos. Físicamente, las ondas se apilan casi unas sobre otras justo delante de la fuente. Cuando la fuente alcanza realmente la velocidad del sonido, las ondas se acumulan en una onda de choque, produciendo el estampido sónico que se oye cuando un avión rompe la barrera del sonido.",
+      },
+      {
+        question: "¿Se aplica el efecto Doppler también a la luz?",
+        answer: "Sí. Las ondas de luz cambian de frecuencia con el movimiento relativo igual que el sonido, aunque la fórmula exacta implica la relatividad. Una fuente que se aleja desplaza la luz hacia el extremo rojo del espectro, un corrimiento al rojo, mientras que una fuente que se acerca causa un corrimiento al azul. Los astrónomos miden estos desplazamientos para determinar la velocidad de estrellas y galaxias, y el corrimiento al rojo generalizado de las galaxias lejanas es prueba clave de que el universo se expande.",
+      },
+    ],
   },
 ];

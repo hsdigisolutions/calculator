@@ -63,6 +63,38 @@ export const technologyR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Shannon entropy (information theory)",
+    slugEs: "calculadora-de-seguridad-de-contrasena",
+    titleEs: "Calculadora de Seguridad de Contraseña",
+    shortDescriptionEs: "Estima la entropía de una contraseña en bits según su longitud y conjunto de caracteres.",
+    seoTitleEs: "Calculadora de Seguridad de Contraseña — Entropía en Bits",
+    metaDescriptionEs: "Calculadora gratuita de seguridad de contraseñas. Introduce la longitud y el conjunto de caracteres para estimar su entropía en bits y ver si se califica como débil, aceptable, fuerte o muy fuerte.",
+    primaryKeywordEs: "calculadora de seguridad de contraseña",
+    secondaryKeywordsEs: ["calculadora de entropía de contraseña", "calculadora de bits de contraseña", "qué tan fuerte es mi contraseña"],
+    formulaExplanationEs: "La entropía mide cuántas preguntas de sí o no necesitaría un atacante para adivinar una contraseña, y cada carácter tomado de un conjunto de un tamaño dado aporta el logaritmo en base dos de ese tamaño en bits. Multiplicar por la longitud suma esa contribución una vez por carácter, porque las elecciones son independientes. Un conjunto más grande o una contraseña más larga elevan el exponente sobre el número de combinaciones posibles, razón por la cual tanto la longitud como la variedad fortalecen una contraseña.",
+    explanationEs: "Una calculadora de seguridad de contraseña estima la entropía, la medida matemática de cuán impredecible es una contraseña, expresada en bits. Cada bit duplica el número de intentos que un atacante debe probar, así que una contraseña con 60 bits de entropía es más de mil veces más difícil de descifrar por fuerza bruta que una con 50 bits. Esta herramienta toma dos entradas que determinan la entropía: la longitud de la contraseña y el tamaño del conjunto de caracteres del que se extrae.\n\nComprender la entropía te ayuda a crear contraseñas que resistan el hardware moderno de descifrado, capaz de probar miles de millones de intentos por segundo. La longitud es la palanca más poderosa porque se multiplica directamente en el exponente, por lo que una frase de paso larga con palabras comunes puede superar a una cadena corta de símbolos aleatorios. El conjunto de caracteres también importa: añadir mayúsculas, dígitos y símbolos amplía el grupo del que se elige cada posición.\n\nLa fórmula funciona porque una contraseña aleatoria de longitud L tomada de un grupo de N caracteres tiene N elevado a L valores posibles, y el logaritmo en base dos de esa cantidad es la entropía en bits. Esta calculadora supone que cada carácter se elige de forma aleatoria e independiente; los patrones predecibles, las palabras del diccionario o las contraseñas reutilizadas reducen la fuerza real muy por debajo de la cifra teórica. Usuarios preocupados por la seguridad, desarrolladores que definen políticas de contraseñas y cualquiera que audite sus credenciales usan una calculadora de entropía para juzgar la calidad de forma objetiva.",
+    exampleEs: { inputs: { length: 16, charsetSize: 95 }, explanation: "16 × log2(95) ≈ 16 × 6,57 ≈ 105 bits, lo que se califica como muy fuerte." },
+    faqsEs: [
+      {
+        question: "¿En qué se mide la entropía de una contraseña?",
+        answer: "La entropía en bits describe cuán impredecible es una contraseña, donde cada bit adicional duplica el número de combinaciones posibles que un atacante debe probar. Una contraseña con 40 bits tiene alrededor de un billón de posibilidades, mientras que 80 bits superan el cuatrillón. Mayor entropía significa un esfuerzo de adivinación exponencialmente mayor. Como la escala es logarítmica, pequeños aumentos en longitud o variedad producen grandes saltos en la dificultad real de descifrado.",
+      },
+      {
+        question: "¿Cuántos bits de entropía son seguros?",
+        answer: "Como guía aproximada, por debajo de 40 bits es débil y se descifra rápido, de 40 a 60 es aceptable pero vulnerable a atacantes decididos, de 60 a 80 es fuerte para la mayoría de usos, y por encima de 80 bits es muy fuerte frente a la fuerza bruta con el hardware actual. Para cuentas sensibles, apunta a 80 bits o más. Recuerda que estas cifras suponen caracteres realmente aleatorios, así que los patrones y la reutilización reducen la fuerza real.",
+      },
+      {
+        question: "¿Una contraseña más larga supera a una más compleja?",
+        answer: "Normalmente sí. Como la longitud se multiplica directamente en la entropía, añadir caracteres eleva la fuerza más rápido que cambiar a un conjunto de símbolos mayor. Una frase de paso larga con varias palabras aleatorias puede superar la entropía de una cadena corta de símbolos mixtos y ser mucho más fácil de recordar. Por eso las guías de seguridad favorecen cada vez más la longitud, alentando frases de paso frente a contraseñas cortas y difíciles de recordar.",
+      },
+      {
+        question: "¿Por qué importa el tamaño del conjunto de caracteres?",
+        answer: "El conjunto de caracteres es el grupo del que se elige cada posición, y un grupo mayor implica que cada carácter aporta más entropía. Solo minúsculas dan 26 opciones, añadir mayúsculas llega a 52, añadir dígitos llega a 62 y añadir símbolos llega a unos 95. Ampliar el conjunto eleva la base del exponente, así que cada carácter contribuye con más bits. Combinado con la longitud, determina la impredecibilidad total de la contraseña.",
+      },
+      {
+        question: "¿Esto tiene en cuenta los ataques de diccionario?",
+        answer: "No, la cifra de entropía supone que cada carácter se elige de forma aleatoria e independiente. Las contraseñas reales construidas con palabras del diccionario, nombres, fechas o sustituciones predecibles son mucho más débiles de lo que sugiere su longitud, porque los atacantes prueban primero los patrones probables. Trata el resultado como un límite superior que solo aplica a contraseñas genuinamente aleatorias. Para seguridad real, usa un gestor de contraseñas que genere cadenas aleatorias.",
+      },
+    ],
   },
   {
     id: "hex-rgb",
@@ -114,6 +146,38 @@ export const technologyR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard digital media (sRGB)",
+    slugEs: "conversor-de-hex-a-rgb",
+    titleEs: "Conversor de Hex a RGB",
+    shortDescriptionEs: "Convierte un código de color hexadecimal en valores RGB.",
+    seoTitleEs: "Conversor de Hex a RGB — Código de Color Hex a RGB",
+    metaDescriptionEs: "Conversor gratuito de hex a RGB. Introduce un código de color hexadecimal de 3 o 6 dígitos como #0EA5E9 para obtener sus valores de canal rojo, verde y azul y una cadena rgb() lista para usar.",
+    primaryKeywordEs: "conversor de hex a rgb",
+    secondaryKeywordsEs: ["hex a rgb", "conversor de color hexadecimal", "código hex a rgb"],
+    formulaExplanationEs: "Un color hexadecimal empaqueta tres canales de color en seis dígitos hexadecimales, dos por canal. Cada par es un número en base 16, así que los dígitos se leen como decenas y unidades de dieciséis: el dígito izquierdo se multiplica por dieciséis y se le suma el dígito derecho, dando un valor de 0 a 255. Los códigos abreviados de tres dígitos duplican primero cada dígito. La conversión funciona porque el hexadecimal es simplemente una forma compacta de escribir el mismo byte de 0 a 255 que usa cada canal.",
+    explanationEs: "Un conversor de hex a RGB traduce un código de color hexadecimal, las cadenas de seis caracteres como #0EA5E9 usadas en todo el diseño web y gráfico, a los valores de rojo, verde y azul que describen el mismo color numéricamente. Ambos formatos representan colores idénticos; el hexadecimal es compacto y común en CSS y herramientas de diseño, mientras que el RGB es más fácil de leer, ajustar y usar en contextos como la edición de imágenes o el cálculo programático de color.\n\nEsta conversión es útil siempre que te muevas entre herramientas que prefieren notaciones distintas. Una guía de marca puede especificar códigos hexadecimales, pero una hoja de cálculo, una aplicación nativa o una librería de animación pueden querer los números R, G y B por separado. Ver los valores de canal también ayuda a entender y ajustar un color: subir el valor de rojo lo vuelve más cálido, mientras que canales iguales producen un gris. La herramienta acepta tanto códigos completos de seis dígitos como la abreviatura de tres dígitos.\n\nLa conversión funciona porque cada par de dígitos hexadecimales codifica un canal como un número de 0 a 255, el rango que puede contener un solo byte. Leer cada par en base dieciséis recupera ese valor directamente, y los tres juntos definen el color. Desarrolladores web, diseñadores y cualquiera que iguale colores entre aplicaciones usan un conversor de hex a RGB para mantener los colores coherentes cuando cruzan entre sistemas de diseño, código y contenido.",
+    exampleEs: { inputs: { hex: "#0EA5E9" }, explanation: "0E = 14, A5 = 165, E9 = 233, dando rgb(14, 165, 233)." },
+    faqsEs: [
+      {
+        question: "¿Cuál es la diferencia entre hex y RGB?",
+        answer: "El hex y el RGB describen exactamente los mismos colores en notaciones distintas. El RGB lista tres números de 0 a 255 para rojo, verde y azul. El hex codifica esos mismos tres valores como pares de dígitos en base 16 en una sola cadena precedida por una almohadilla. El hex es compacto y dominante en el CSS web, mientras que el RGB es más fácil de leer y ajustar aritméticamente. Convertir entre ellos nunca cambia el color en sí.",
+      },
+      {
+        question: "¿Puedo introducir un código hex de 3 dígitos?",
+        answer: "Sí. Los códigos hexadecimales abreviados de tres dígitos expanden cada dígito duplicándolo, así que #0af se convierte en #00aaff. Esta abreviatura solo funciona cuando ambos dígitos de cada canal son idénticos, por lo que puede expresar menos colores que la forma completa de seis dígitos. El conversor detecta y expande automáticamente los códigos de tres dígitos, luego lee cada par resultante como un valor de canal, así que cualquier formato devuelve el resultado RGB correcto.",
+      },
+      {
+        question: "¿Necesito incluir el símbolo de almohadilla?",
+        answer: "No. El conversor acepta códigos con o sin la almohadilla inicial, así que #0EA5E9 y 0EA5E9 funcionan igual. La almohadilla es una convención que marca un valor como color hexadecimal en CSS y herramientas de diseño, pero no lleva información de color en sí. De cualquier forma que pegues el código, el conversor elimina la almohadilla y lee los dígitos restantes como los tres canales de color.",
+      },
+      {
+        question: "¿Qué significan los números de rojo, verde y azul?",
+        answer: "Cada uno de los tres números va de 0 a 255 e indica la intensidad de ese canal de color primario. Cero significa que el canal está apagado y 255 que está a plena intensidad. Las pantallas mezclan estas tres luces de forma aditiva, así que los tres a 255 producen blanco, los tres a 0 producen negro y valores intermedios iguales producen gris. Ajustar un canal desplaza el color hacia o desde ese primario.",
+      },
+      {
+        question: "¿Por qué el rango es de 0 a 255 en cada canal?",
+        answer: "Cada canal se almacena en un byte, que contiene ocho bits y por tanto 256 valores distintos de 0 a 255. Dos dígitos hexadecimales expresan exactamente ese rango, ya que dieciséis por dieciséis es 256. Este esquema de ocho bits por canal da unos 16,7 millones de colores posibles entre los tres canales, suficientes para que el ojo perciba gradientes suaves. Es la profundidad estándar del color web y digital cotidiano.",
+      },
+    ],
   },
   {
     id: "image-file-size",
@@ -165,6 +229,38 @@ export const technologyR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard digital media",
+    slugEs: "calculadora-de-tamano-de-archivo-de-imagen",
+    titleEs: "Calculadora de Tamaño de Archivo de Imagen",
+    shortDescriptionEs: "Estima el tamaño de una imagen sin comprimir a partir de sus dimensiones.",
+    seoTitleEs: "Calculadora de Tamaño de Archivo de Imagen — De Píxeles y Profundidad a Tamaño",
+    metaDescriptionEs: "Calculadora gratuita de tamaño de archivo de imagen. Introduce ancho, alto y profundidad de bits para estimar el tamaño de una imagen sin comprimir en megabytes y kilobytes. Ideal para planificar almacenamiento.",
+    primaryKeywordEs: "calculadora de tamaño de archivo de imagen",
+    secondaryKeywordsEs: ["calculadora de tamaño de imagen", "tamaño de imagen sin comprimir", "calculadora de tamaño de mapa de bits"],
+    formulaExplanationEs: "Una imagen sin comprimir almacena un número fijo de bits por cada píxel, así que el total de bits es igual al recuento de píxeles, ancho por alto, multiplicado por la profundidad de bits. Dividir entre ocho convierte los bits en bytes, y dividir entre 1.048.576 (1.024 al cuadrado) convierte los bytes en megabytes. El método funciona porque un mapa de bits en bruto no tiene compresión, por lo que su tamaño es exactamente la suma de los bits que dedica a cada uno de sus píxeles.",
+    explanationEs: "Una calculadora de tamaño de archivo de imagen estima cuánto espacio ocupa una imagen sin comprimir a partir de tres números: su ancho y alto en píxeles y su profundidad de bits, el número de bits usados para describir el color de cada píxel. Como un mapa de bits en bruto almacena una cantidad fija de datos por píxel, esto da un límite superior preciso del tamaño, que es exactamente lo que producen formatos como BMP o TIFF sin comprimir y lo que un programa mantiene en memoria mientras edita.\n\nLa estimación ayuda al planificar el almacenamiento, el uso de memoria y el ancho de banda. Un fotógrafo procesando miles de fotogramas en bruto, un desarrollador dimensionando un presupuesto de texturas o cualquiera que decida si las imágenes caben en una tarjeta o en un límite de subida necesita conocer el peor caso antes de la compresión. También revela lo rápido que las dimensiones inflan el tamaño: duplicar ancho y alto cuadruplica el recuento de píxeles y el archivo.\n\nLa fórmula funciona contando los bits totales como píxeles multiplicados por la profundidad de bits, luego convirtiendo a bytes dividiendo entre ocho y a megabytes dividiendo entre 1.048.576. Las profundidades comunes son 24 bits para color completo y 32 bits cuando se añade un canal alfa de transparencia. Los archivos guardados reales suelen ser mucho más pequeños porque formatos como JPEG y PNG comprimen los datos, así que trata esto como el máximo sin comprimir. Diseñadores, fotógrafos y desarrolladores usan una calculadora de tamaño de imagen para planificar almacenamiento y memoria.",
+    exampleEs: { inputs: { widthPx: 1920, heightPx: 1080, bitDepth: 24 }, explanation: "1920 × 1080 × 24 ÷ 8 ÷ 1.048.576 ≈ 5,93 MB sin comprimir." },
+    faqsEs: [
+      {
+        question: "¿Por qué mi imagen guardada es mucho más pequeña que esto?",
+        answer: "Esta calculadora estima el tamaño sin comprimir, los datos en bruto sin ninguna compresión aplicada. Formatos reales como JPEG, PNG y WebP comprimen las imágenes de forma significativa, a menudo reduciéndolas a una fracción de la cifra en bruto. JPEG en particular puede reducir una foto diez veces o más con poca pérdida visible. El número sin comprimir es útil para planificar memoria y el peor caso de almacenamiento, mientras que el archivo guardado refleja la compresión de tu formato.",
+      },
+      {
+        question: "¿Qué profundidad de bits debo usar?",
+        answer: "Las imágenes estándar a color completo usan 24 bits por píxel, ocho para rojo, verde y azul cada uno. Añade un canal alfa de transparencia y pasa a 32 bits. Los flujos de alto rango dinámico o profesionales pueden usar 48 bits o más para una gradación más fina. Las imágenes en escala de grises usan 8 bits. Elige la profundidad que corresponda a tu imagen: 24 es adecuado para la mayoría de fotos a color y 32 cuando necesites transparencia.",
+      },
+      {
+        question: "¿Cómo afecta la resolución al tamaño del archivo?",
+        answer: "El tamaño del archivo escala con el recuento total de píxeles, que es el ancho por el alto. Como ambas dimensiones se multiplican, duplicar cada una cuadruplica los píxeles y por tanto el tamaño. Una imagen 4K tiene cuatro veces los píxeles de una de 1080p y aproximadamente cuatro veces el tamaño en bruto. Este crecimiento cuadrático es la razón por la que las imágenes de alta resolución consumen almacenamiento y memoria tan rápido, y por la que redimensionar ahorra tanto espacio.",
+      },
+      {
+        question: "¿Esto también aplica a las imágenes en memoria?",
+        answer: "Sí, y es una de sus aplicaciones más útiles. Cuando un programa abre una imagen para editarla o mostrarla, esta se mantiene normalmente sin comprimir en memoria a aproximadamente este tamaño, sin importar lo pequeño que sea el archivo comprimido en disco. Por eso editar muchas imágenes grandes puede agotar la memoria aunque los archivos guardados parezcan modestos. La calculadora estima esa huella en memoria con precisión.",
+      },
+      {
+        question: "¿Por qué dividir entre 1.048.576 para los megabytes?",
+        answer: "En informática, un megabyte suele definirse como 1.024 kilobytes, y un kilobyte como 1.024 bytes, así que un megabyte equivale a 1.024 por 1.024, que son 1.048.576 bytes. Esta calculadora usa esa convención binaria. Algunos fabricantes de almacenamiento usan en cambio 1.000.000 de bytes por megabyte, razón por la que las capacidades anunciadas pueden parecer algo mayores que lo que reporta el sistema operativo para el mismo espacio.",
+      },
+    ],
   },
   {
     id: "px-rem",
@@ -215,6 +311,38 @@ export const technologyR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "CSS specification (W3C)",
+    slugEs: "conversor-de-px-a-rem",
+    titleEs: "Conversor de PX a REM",
+    shortDescriptionEs: "Convierte píxeles a rem y em para CSS responsivo.",
+    seoTitleEs: "Conversor de PX a REM — Píxeles a REM y EM",
+    metaDescriptionEs: "Conversor gratuito de px a rem. Introduce un valor en píxeles y el tamaño de fuente raíz para obtener el equivalente en unidades rem y em para un CSS responsivo y accesible. Rápido y exacto.",
+    primaryKeywordEs: "conversor de px a rem",
+    secondaryKeywordsEs: ["píxeles a rem", "conversor de px a em", "conversor de unidades css"],
+    formulaExplanationEs: "La unidad rem se define como un múltiplo del tamaño de fuente raíz, así que convertir un valor en píxeles equivale a preguntar cuántos pasos del tamaño de fuente raíz caben en él, que es simplemente los píxeles divididos entre el tamaño raíz. Con el valor por defecto común de 16 píxeles, 16px equivale a 1rem y 24px equivale a 1,5rem. La unidad em usa la misma división contra su tamaño de fuente de referencia, así que con una referencia coincidente el valor numérico es idéntico.",
+    explanationEs: "Un conversor de px a rem traduce medidas fijas en píxeles a unidades rem, la unidad escalable que sustenta el CSS responsivo y accesible. Un rem se define en relación con el tamaño de fuente raíz de la página, así que dimensionar en rem permite que todo un diseño crezca o se reduzca proporcionalmente cuando un usuario cambia el tamaño de fuente base de su navegador, algo que los píxeles ignoran. Esta herramienta divide tu valor en píxeles entre el tamaño de fuente raíz para dar el equivalente exacto en rem, y el valor em correspondiente.\n\nUsar rem importa para la accesibilidad y el mantenimiento. Los lectores que aumentan su tamaño de fuente por defecto, a menudo porque necesitan texto más grande, ven cómo los diseños basados en rem escalan con elegancia mientras que los basados en píxeles quedan fijos. Trabajar en rem también hace trivial el escalado global de la tipografía: cambia el tamaño raíz una vez y todo lo dimensionado en rem lo sigue. Los diseñadores suelen pensar en píxeles, así que un conversor tiende un puente entre una maqueta y la hoja de estilos.\n\nLa conversión funciona porque un rem equivale al tamaño de fuente raíz, así que el número de rems es el valor en píxeles dividido entre ese tamaño raíz. Con el valor por defecto del navegador de 16 píxeles, 16px son 1rem y 24px son 1,5rem. La unidad em sigue la misma aritmética pero se mide contra su ancestro dimensionado más cercano en lugar de la raíz, por lo que puede acumularse en elementos anidados. Los desarrolladores front-end y diseñadores usan un conversor de px a rem para construir diseños que respeten las preferencias de fuente del usuario.",
+    exampleEs: { inputs: { pixels: 24, rootFontSize: 16 }, explanation: "24 ÷ 16 = 1,5, así que 24px equivale a 1,5rem." },
+    faqsEs: [
+      {
+        question: "¿Cuál es la diferencia entre rem y em?",
+        answer: "Ambas son unidades relativas, pero se miden contra referencias distintas. Un rem es siempre relativo al tamaño de fuente del elemento raíz, así que se mantiene consistente en toda la página. Un em es relativo al tamaño de fuente de su propio elemento o del ancestro dimensionado más cercano, por lo que puede acumularse cuando los elementos se anidan. El rem es predecible para el diseño, mientras que el em es útil para espaciados que deben escalar con el texto local.",
+      },
+      {
+        question: "¿Por qué el tamaño de fuente raíz por defecto es 16px?",
+        answer: "Los navegadores vienen con un tamaño de fuente raíz por defecto de 16 píxeles, razón por la que 16px equivale a 1rem de fábrica. Este valor equilibra la legibilidad en pantallas y distancias de visión típicas. Los usuarios pueden cambiarlo en la configuración de su navegador, y los diseños dimensionados en rem respetarán esa elección. Mantener la base estándar de 16 píxeles, en lugar de sobrescribirla, respeta a los usuarios que han fijado un tamaño mayor para leer con comodidad.",
+      },
+      {
+        question: "¿Debo usar rem o px para los tamaños de fuente?",
+        answer: "El rem suele preferirse para los tamaños de fuente porque escala con el tamaño base elegido por el usuario, mejorando la accesibilidad para lectores que amplían el texto. Los píxeles quedan fijos sin importar esa preferencia, lo que puede frustrar a quienes necesitan texto más grande. Muchos equipos usan rem para tipografía y espaciado para mantener los diseños flexibles, reservando los píxeles para detalles como bordes finos donde un tamaño fijo es deseable.",
+      },
+      {
+        question: "¿Cambiar el tamaño raíz rompe mi diseño?",
+        answer: "Si tu diseño está dimensionado consistentemente en rem, cambiar el tamaño de fuente raíz escala todo en conjunto de forma proporcional, que es el comportamiento previsto y una función, no un error. Los problemas surgen solo cuando el rem y los píxeles fijos se mezclan sin cuidado, de modo que algunos elementos escalan y otros no. Dimensionar consistentemente en rem te permite reajustar la escala de todo un diseño desde una sola declaración raíz.",
+      },
+      {
+        question: "¿Cómo convierto de rem a píxeles?",
+        answer: "Multiplica el valor en rem por el tamaño de fuente raíz. Con la base estándar de 16 píxeles, 1,5rem por 16 son 24 píxeles. Esta conversión inversa es útil al comprobar un diseño contra una maqueta basada en píxeles o al comunicar tamaños exactos a un diseñador. Recuerda que el resultado depende del tamaño raíz actual, así que si la base cambia, el valor en píxeles equivalente para el mismo rem cambia con ella.",
+      },
+    ],
   },
   {
     id: "typing-speed",
@@ -267,6 +395,38 @@ export const technologyR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard typing measurement (5-char word)",
+    slugEs: "calculadora-de-velocidad-de-escritura",
+    titleEs: "Calculadora de Velocidad de Escritura",
+    shortDescriptionEs: "Mide las palabras por minuto brutas y netas con precisión.",
+    seoTitleEs: "Calculadora de Velocidad de Escritura — Palabras por Minuto y Precisión",
+    metaDescriptionEs: "Calculadora gratuita de velocidad de escritura. Introduce palabras escritas, minutos y errores para hallar tus PPM brutas, PPM netas tras los errores y el porcentaje de precisión.",
+    primaryKeywordEs: "calculadora de velocidad de escritura",
+    secondaryKeywordsEs: ["calculadora de ppm", "calculadora de palabras por minuto", "calculadora de precisión de escritura"],
+    formulaExplanationEs: "La velocidad bruta es simplemente las palabras escritas divididas entre los minutos empleados, midiendo el ritmo puro. La velocidad neta resta primero el número de errores de las palabras, así que los errores cancelan el crédito de las palabras que estropearon, y luego divide entre el tiempo. La precisión es la proporción de palabras escritas correctamente, el recuento correcto sobre el total, como porcentaje. El enfoque funciona porque una puntuación justa debe premiar la velocidad y la corrección juntas, no solo la velocidad.",
+    explanationEs: "Una calculadora de velocidad de escritura convierte una prueba corta de mecanografía en tres números significativos: palabras por minuto brutas, palabras por minuto netas tras contar los errores y la precisión como porcentaje. Las palabras por minuto, o PPM, son la medida estándar del ritmo de escritura, y separar las brutas de las netas revela si la velocidad pura se ve socavada por errores que habría que corregir en un trabajo real.\n\nMedir esto importa para cualquiera cuyo trabajo dependa del teclado, desde estudiantes y escritores hasta personal de captura de datos y desarrolladores. Las PPM netas son la cifra que mejor refleja la producción útil, porque escribir rápido pero con errores implica retroceder constantemente para corregirlos. Seguir la precisión junto a la velocidad ayuda a practicar de forma deliberada: subir el ritmo mientras la precisión se mantiene es progreso, mientras que la velocidad a costa de errores no lo es.\n\nEl cálculo funciona dividiendo las palabras escritas entre los minutos para la velocidad bruta, restando los errores antes de dividir para la neta, y expresando las palabras correctas como proporción del total para la precisión. Una palabra estándar suele contarse como cinco caracteres, así que si partes de recuentos de caracteres, divide primero entre cinco. Los mecanógrafos promedio alcanzan unas 40 PPM, mientras que los competentes superan las 65. Aprendices, profesionales y cualquiera que evalúe su mecanografía usan una calculadora de velocidad de escritura para medir y mejorar la velocidad real y útil.",
+    exampleEs: { inputs: { words: 400, minutes: 5, errors: 10 }, explanation: "Bruta 400 ÷ 5 = 80 PPM; neta (400 − 10) ÷ 5 = 78 PPM; precisión 390 ÷ 400 = 97,5%." },
+    faqsEs: [
+      {
+        question: "¿Cuál es la diferencia entre PPM brutas y netas?",
+        answer: "Las PPM brutas son tu velocidad de escritura pura, el total de palabras dividido entre el tiempo, sin penalización por errores. Las PPM netas restan tus errores antes de dividir, así que reflejan cuántas palabras correctas y útiles produjiste por minuto. Las PPM netas son la medida más significativa de productividad real, porque los errores en un trabajo real deben encontrarse y corregirse, lo que cuesta tiempo que la cifra bruta ignora por completo.",
+      },
+      {
+        question: "¿Qué cuenta como palabra en las pruebas de escritura?",
+        answer: "Las pruebas de mecanografía definen convencionalmente una palabra como cinco caracteres, incluidos los espacios, en lugar de contar palabras reales que varían en longitud. Este estándar mantiene las puntuaciones comparables sin importar el vocabulario. Si tu fuente da un recuento de caracteres, divide entre cinco para obtener palabras estandarizadas antes de introducirlas aquí. Si en cambio cuentas palabras reales, el resultado sigue reflejando tu velocidad, solo que medida contra longitudes de palabra naturales.",
+      },
+      {
+        question: "¿Qué es una buena velocidad de escritura?",
+        answer: "El mecanógrafo promedio alcanza unas 40 palabras por minuto. Una velocidad de 60 a 70 PPM se considera competente y es típica de quienes escriben profesionalmente. Por encima de 80 PPM es rápido, y los mecanógrafos de competición superan las 120. Más importante que la velocidad pura es la precisión sostenida, ya que unas PPM netas altas dependen de cometer pocos errores. La práctica constante mejora velocidad y precisión juntas con el tiempo.",
+      },
+      {
+        question: "¿Cómo se calcula la precisión?",
+        answer: "La precisión es la proporción de palabras que escribiste correctamente, hallada restando los errores del total de palabras y dividiendo entre el total, luego multiplicando por 100 para un porcentaje. Escribir 400 palabras con 10 errores da 390 correctas, o un 97,5 por ciento de precisión. La alta precisión importa porque cada error en un trabajo real requiere detenerse a corregirlo, lo que erosiona la velocidad productiva que las PPM netas buscan capturar.",
+      },
+      {
+        question: "¿Cómo puedo mejorar mi velocidad de escritura?",
+        answer: "Concéntrate primero en la precisión, ya que los errores son lo que arrastra la velocidad neta, y luego deja que la velocidad crezca de forma natural con la práctica regular. Aprender mecanografía al tacto, escribir sin mirar las teclas, es la mayor mejora para la mayoría. Practicar en sesiones cortas y frecuentes con una colocación de dedos y postura correctas ayuda. Sigue tus PPM netas aquí para confirmar que escribir más rápido no produce simplemente más errores.",
+      },
+    ],
   },
   {
     id: "cloud-storage-cost",
@@ -318,6 +478,38 @@ export const technologyR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard cloud pricing model",
+    slugEs: "calculadora-de-costo-de-almacenamiento-en-la-nube",
+    titleEs: "Calculadora de Costo de Almacenamiento en la Nube",
+    shortDescriptionEs: "Estima las facturas mensuales y totales de almacenamiento en la nube.",
+    seoTitleEs: "Calculadora de Costo de Almacenamiento en la Nube — Precio Mensual y Total",
+    metaDescriptionEs: "Calculadora gratuita de costo de almacenamiento en la nube. Introduce gigabytes almacenados, precio por GB-mes y meses para estimar tu factura mensual y total. Rápida y clara.",
+    primaryKeywordEs: "calculadora de costo de almacenamiento en la nube",
+    secondaryKeywordsEs: ["calculadora de precios de almacenamiento en la nube", "calculadora de costo de s3", "estimación de costo de almacenamiento"],
+    formulaExplanationEs: "El almacenamiento en la nube se factura por gigabyte por cada mes que se conserva, así que el cargo mensual es la cantidad almacenada multiplicada por la tarifa por gigabyte. Multiplicar esa cifra mensual por el número de meses da el total del periodo. El modelo funciona porque el precio del almacenamiento es lineal tanto en tamaño como en tiempo: duplicar los datos conservados o la duración duplica la parte correspondiente de la factura, sin un mínimo fijo en esta estimación básica.",
+    explanationEs: "Una calculadora de costo de almacenamiento en la nube estima lo que costará conservar datos en un servicio como Amazon S3, Google Cloud Storage o Azure Blob, a partir de la cantidad almacenada, la tarifa mensual por gigabyte y cuántos meses lo conservas. Los proveedores de nube cobran el almacenamiento por gigabyte por mes, así que una estimación clara ayuda a presupuestar y comparar niveles antes de comprometer cargas de trabajo o archivos en la nube.\n\nLa estimación importa porque los costos de almacenamiento se acumulan silenciosamente. Unos pocos terabytes a una tarifa baja por gigabyte parecen baratos al mes, pero a lo largo de un año y en muchos buckets se suman, y los datos olvidados siguen facturando indefinidamente. Ver las cifras mensuales y totales lado a lado ayuda a decidir si mover datos fríos a un nivel de archivo más barato, borrar copias de seguridad obsoletas o negociar descuentos por uso comprometido.\n\nEl cálculo es deliberadamente simple: el costo de almacenamiento es lineal, así que multiplica los gigabytes por el precio por gigabyte-mes para la cifra mensual, y luego por el número de meses para el total. Las facturas reales también incluyen cargos por solicitudes, tarifas de transferencia de datos (egreso) y diferencias de nivel, que esta base no modela, así que trata el resultado como la porción de almacenamiento en reposo. Ingenieros, equipos de finanzas y cualquiera que proyecte el gasto en la nube usan una calculadora de costo de almacenamiento para dimensionar presupuestos y detectar ahorros.",
+    exampleEs: { inputs: { gigabytes: 1000, pricePerGbMonth: 0.023, months: 12 }, explanation: "1000 × $0,023 = $23 al mes, y $23 × 12 = $276 al año." },
+    faqsEs: [
+      {
+        question: "¿Qué es un GB-mes en los precios de la nube?",
+        answer: "Un GB-mes es la unidad estándar en la que los proveedores de nube facturan el almacenamiento: un gigabyte conservado durante un mes. Si almacenas 100 GB durante un mes completo, se te factura por 100 GB-mes. Almacenar los mismos datos durante medio mes factura unos 50 GB-mes, ya que la mayoría de proveedores prorratean por hora. Esta unidad permite que el precio escale de forma suave con cuánto almacenas y cuánto tiempo lo conservas.",
+      },
+      {
+        question: "¿Esto incluye los costos de transferencia de datos?",
+        answer: "No, esta calculadora estima solo el almacenamiento en reposo, el cargo por conservar los datos. Los proveedores facturan aparte la transferencia de datos, especialmente el egreso, el costo de mover datos fuera de la nube a internet o a otra región. El egreso puede igualar o superar los costos de almacenamiento en aplicaciones con mucho tráfico. También hay pequeños cargos por solicitud. Añádelos por separado al presupuestar, ya que dependen de tus patrones de acceso.",
+      },
+      {
+        question: "¿Cómo puedo reducir mi factura de almacenamiento en la nube?",
+        answer: "Mueve los datos de acceso poco frecuente a niveles de archivo o almacenamiento frío más baratos, que cuestan una fracción del almacenamiento estándar a cambio de una recuperación más lenta o costosa. Borra copias de seguridad, registros y datos huérfanos obsoletos que ya no sirvan. Activa políticas de ciclo de vida para transicionar o expirar objetos automáticamente. Para necesidades predecibles a largo plazo, los descuentos por uso comprometido bajan la tarifa. Auditar con regularidad suele ser el mayor ahorro.",
+      },
+      {
+        question: "¿Por qué varían tanto los precios de almacenamiento?",
+        answer: "Los precios difieren según el proveedor, la región y la clase de almacenamiento. Los niveles estándar optimizados para acceso frecuente cuestan más por gigabyte que los niveles de archivo pensados para datos raramente tocados. La región geográfica afecta el precio por los costos de infraestructura locales. Las opciones de redundancia, como almacenar copias en varias zonas, también elevan la tarifa. Introduce el precio exacto por gigabyte-mes del nivel y la región que usas para una estimación precisa.",
+      },
+      {
+        question: "¿Es el almacenamiento en la nube más barato que el local?",
+        answer: "Depende de la escala, las necesidades de acceso y el horizonte temporal. El almacenamiento en la nube evita costos iniciales de hardware y ofrece durabilidad, redundancia y escalado fácil, lo que conviene a necesidades variables o en crecimiento. Para conjuntos de datos muy grandes, estables y de larga vida, tener hardware propio puede salir más barato a lo largo de los años pese al mantenimiento. Esta calculadora ayuda a proyectar el lado de la nube de esa comparación.",
+      },
+    ],
   },
   {
     id: "api-rate-limit",
@@ -368,6 +560,38 @@ export const technologyR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard rate arithmetic",
+    slugEs: "calculadora-de-limite-de-tasa-de-api",
+    titleEs: "Calculadora de Límite de Tasa de API",
+    shortDescriptionEs: "Proyecta el total de solicitudes de API a partir de una tasa por segundo.",
+    seoTitleEs: "Calculadora de Límite de Tasa de API — Solicitudes en el Tiempo",
+    metaDescriptionEs: "Calculadora gratuita de límite de tasa de API. Introduce solicitudes por segundo y una ventana de tiempo en horas para proyectar el total de solicitudes y la tasa por minuto. Planifica cuotas con confianza.",
+    primaryKeywordEs: "calculadora de límite de tasa de api",
+    secondaryKeywordsEs: ["calculadora de solicitudes por segundo", "calculadora de cuota de api", "calculadora de límite de tasa"],
+    formulaExplanationEs: "Una tasa constante de solicitudes multiplicada por el número de segundos de la ventana da el total de solicitudes. Una hora tiene 3.600 segundos, así que multiplicar la tasa por segundo por 3.600 y luego por el número de horas produce el total del periodo. La cifra por minuto surge de multiplicar la tasa por segundo por 60. El enfoque funciona porque, a una tasa constante, el volumen total es simplemente la tasa por el tiempo transcurrido en unidades coincidentes.",
+    explanationEs: "Una calculadora de límite de tasa de API proyecta cuántas solicitudes produce una tasa constante por segundo a lo largo de una ventana elegida, y la tasa equivalente por minuto. Las API suelen regirse por límites expresados por segundo, por minuto, por día o por mes, y convertir entre estas unidades es esencial para mantenerse bajo una cuota, dimensionar un plan o estimar la carga que generará un cliente.\n\nEsto importa en ambos lados de una API. Si consumes una API, proyectar tu volumen de solicitudes te dice si tu uso cabe dentro de la asignación diaria o mensual de un proveedor antes de encontrarte con la limitación o cargos por exceso. Si operas una, las cifras ayudan a fijar límites que protejan tu infraestructura mientras acomodan el tráfico legítimo. Convertir una tasa de ráfaga en totales diarios y por minuto vuelve concreto y fácil de planificar un límite abstracto.\n\nEl cálculo funciona porque, a una tasa constante, el total de solicitudes es igual a la tasa multiplicada por el tiempo transcurrido una vez que las unidades coinciden. Multiplicar solicitudes por segundo por 3.600 da solicitudes por hora, y multiplicar por el número de horas da el total de la ventana; multiplicar la tasa por segundo por 60 da la cifra por minuto. El tráfico real es en ráfagas más que perfectamente constante, así que combina esta base con margen para los picos. Desarrolladores, ingenieros de plataforma y equipos de producto de API usan una calculadora de límite de tasa para alinear el uso con las cuotas.",
+    exampleEs: { inputs: { requestsPerSecond: 10, hours: 24 }, explanation: "10 sol/s × 3.600 × 24 = 864.000 solicitudes al día; 10 × 60 = 600 por minuto." },
+    faqsEs: [
+      {
+        question: "¿Cómo convierto entre unidades de límite de tasa?",
+        answer: "Multiplica o divide por el número de segundos del periodo objetivo. Solicitudes por segundo por 60 da por minuto, por 3.600 da por hora, y por 86.400 da por día. Para ir en sentido inverso, divide. Esta calculadora maneja la aritmética para que puedas comprobar si una tasa de cliente por segundo cabe dentro de la cuota diaria o mensual de un proveedor, que a menudo se expresan en unidades completamente distintas.",
+      },
+      {
+        question: "¿Debo planificar para la tasa promedio o la de pico?",
+        answer: "Ambas. La tasa promedio te dice si tu volumen total cabe en una cuota diaria o mensual, mientras que la tasa de pico determina si superas un límite de ráfaga por segundo o por minuto en los momentos de mayor actividad. El tráfico real se agrupa, así que un cliente con una tasa promedio modesta puede exceder un tope por segundo en un pico. Dimensiona contra tu pico realista para los límites de ráfaga y contra tu promedio para las cuotas de ventana larga.",
+      },
+      {
+        question: "¿Qué ocurre cuando supero un límite de tasa?",
+        answer: "La mayoría de las API responden con un error, comúnmente el estado HTTP 429 Demasiadas Solicitudes, y rechazan las llamadas excedentes hasta que la ventana se reinicia. Algunas encolan o limitan en su lugar, y otras cobran tarifas por exceso. Los clientes correctos respetan una cabecera Retry-After y se retiran. Proyectar tu volumen con esta calculadora ayuda a mantenerte bajo el límite, o a solicitar un nivel superior con antelación, en vez de descubrir el techo con solicitudes fallidas en producción.",
+      },
+      {
+        question: "¿Por qué expresar el límite también por minuto?",
+        answer: "Distintos proveedores publican los límites en unidades diferentes, así que tener una cifra por minuto y un total te permite comparar directamente contra lo que indica una API dada. El por minuto es una ventana común para los límites de ráfaga, mientras que el total en horas coincide con las cuotas diarias. Ver tu tasa en varias unidades a la vez facilita alinear tu uso proyectado con el formato de límite específico que cada proveedor decide aplicar.",
+      },
+      {
+        question: "¿Esto supone una tasa de solicitudes constante?",
+        answer: "Sí. La proyección multiplica una tasa constante por el tiempo, lo que da un total preciso para tráfico uniforme pero suaviza las ráfagas y periodos inactivos del mundo real. Los clientes reales envían solicitudes en grupos impulsados por la actividad del usuario o trabajos por lotes. Usa el total para planificar capacidad y cuota, pero añade un margen de seguridad para los picos, ya que una ráfaga puede superar un límite de ventana corta aunque el promedio a largo plazo quede holgado.",
+      },
+    ],
   },
   {
     id: "network-latency",
@@ -430,6 +654,38 @@ export const technologyR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Speed of light and refractive index (physics)",
+    slugEs: "calculadora-de-latencia-de-red",
+    titleEs: "Calculadora de Latencia de Red",
+    shortDescriptionEs: "Estima el retardo de propagación según la distancia y el medio.",
+    seoTitleEs: "Calculadora de Latencia de Red — De Distancia a Retardo de Propagación",
+    metaDescriptionEs: "Calculadora gratuita de latencia de red. Introduce una distancia en kilómetros y el medio de transmisión para estimar el retardo de propagación de ida y de ida y vuelta en milisegundos.",
+    primaryKeywordEs: "calculadora de latencia de red",
+    secondaryKeywordsEs: ["calculadora de retardo de propagación", "calculadora de ping por distancia", "calculadora de latencia de fibra"],
+    formulaExplanationEs: "La luz viaja a unos 299.792 kilómetros por segundo en el vacío, pero se ralentiza en un medio físico por un factor ligado a su índice de refracción, así que la velocidad efectiva es la velocidad en el vacío dividida entre ese factor. La distancia dividida entre esta velocidad efectiva da el tiempo de ida en segundos, multiplicado por 1.000 para milisegundos. El tiempo de ida y vuelta lo duplica, ya que una señal debe viajar de ida y de regreso. El método capta el retardo inevitable fijado solo por la física.",
+    explanationEs: "Una calculadora de latencia de red estima el retardo de propagación, el tiempo que tarda una señal en recorrer una distancia dada a través de un medio de transmisión como la fibra óptica, el cobre o el aire libre. Este es el piso de la latencia fijado por la física: ningún ancho de banda u optimización puede superar la velocidad a la que una señal cruza físicamente la distancia, razón por la que la geografía limita de forma fundamental lo rápido que dos puntos pueden comunicarse.\n\nComprender este retardo importa para cualquiera que diseñe sistemas distribuidos, elija ubicaciones de centros de datos o resuelva conexiones lentas. Explica por qué un servidor al otro lado del mundo siempre se siente menos ágil que uno cercano, por qué las redes de distribución de contenido colocan servidores cerca de los usuarios y por qué las aplicaciones en tiempo real como los juegos y las videollamadas son tan sensibles a la distancia. Separar el mínimo impuesto por la física de otros retardos ayuda a saber cuándo la latencia se puede mejorar y cuándo no.\n\nEl cálculo funciona porque las señales en cable viajan más lento que la luz en el vacío por un factor relacionado con el índice de refracción del material, aproximadamente 1,47 para la fibra y unos 1,5 para el cobre. Dividir la velocidad de la luz en el vacío entre ese factor da la velocidad efectiva, y la distancia dividida entre la velocidad efectiva da el tiempo de ida, duplicado para el viaje de ida y vuelta. La latencia real añade retardos de enrutamiento, conmutación, encolado y procesamiento, así que este es el mejor caso teórico. Arquitectos e ingenieros de red usan una calculadora de latencia para razonar sobre los límites geográficos del rendimiento.",
+    exampleEs: { inputs: { distanceKm: 1000, mediumFactor: 1.47 }, explanation: "Velocidad efectiva ≈ 203.940 km/s, así que 1000 ÷ 203.940 × 1000 ≈ 4,90 ms de ida, 9,81 ms de ida y vuelta." },
+    faqsEs: [
+      {
+        question: "¿Por qué la latencia es mayor de lo que sugiere la velocidad de la luz?",
+        answer: "Las señales en fibra o cobre viajan más lento que la luz en el vacío, típicamente en torno a dos tercios de la velocidad en el vacío, porque el índice de refracción del medio las ralentiza. Sobre ese piso físico, las redes reales añaden retardos de los enrutadores que conmutan paquetes, las colas bajo carga y el procesamiento en cada salto, además de que los cables rara vez siguen la ruta más directa. Esta calculadora estima solo el piso de propagación, así que el ping medido siempre es algo mayor.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre tiempo de ida y de ida y vuelta?",
+        answer: "La latencia de ida es el tiempo que tarda una señal en viajar del origen al destino. El tiempo de ida y vuelta, o RTT, es el tiempo que tarda en ir y volver, que es lo que miden herramientas como ping. El RTT es aproximadamente el doble del retardo de ida para una ruta simétrica. Muchas aplicaciones interactivas se fijan en el RTT porque una solicitud y su respuesta deben completarse antes de que el usuario vea un resultado.",
+      },
+      {
+        question: "¿Qué factor de medio debo elegir?",
+        answer: "Usa fibra óptica, unos 1,47, para los enlaces modernos de larga distancia y la red troncal de internet, que son mayoritariamente fibra. Elige cobre, unos 1,5, para conexiones cableadas más antiguas como Ethernet tradicional sobre par trenzado. Selecciona vacío o radio, 1,0, para señales inalámbricas de línea de visión, satélite o espacio libre que viajan esencialmente a la velocidad plena de la luz. El factor refleja cuánto ralentiza el medio la señal respecto a la luz en el vacío.",
+      },
+      {
+        question: "¿Cómo afecta la distancia al rendimiento de la aplicación?",
+        answer: "Como el retardo de propagación escala linealmente con la distancia, los servidores lejanos añaden latencia inevitable a cada interacción. Por eso una videollamada o un juego en línea con un servidor distante se sienten con retraso, y por eso las redes de distribución de contenido almacenan datos cerca de los usuarios. En protocolos que requieren muchos viajes de ida y vuelta, la distancia se acumula, ya que cada intercambio paga el retardo de nuevo. Acercar los servicios a los usuarios suele ser la mejora de latencia más eficaz.",
+      },
+      {
+        question: "¿Puedo reducir la latencia de propagación?",
+        answer: "No puedes superar la física para una distancia y un medio dados, pero puedes acortar la distancia efectiva o mejorar la ruta. Mover los servidores más cerca de los usuarios, usar redes de distribución de contenido y computación en el borde, y elegir rutas de red más directas reducen el retardo de propagación. Reducir el número de viajes de ida y vuelta que una aplicación necesita también ayuda, ya que menos intercambios significan pagar la penalización de distancia menos veces.",
+      },
+    ],
   },
   {
     id: "bandwidth-cost",
@@ -480,6 +736,38 @@ export const technologyR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard cloud pricing model",
+    slugEs: "calculadora-de-costo-de-ancho-de-banda",
+    titleEs: "Calculadora de Costo de Ancho de Banda",
+    shortDescriptionEs: "Estima los costos mensuales y anuales de transferencia de datos.",
+    seoTitleEs: "Calculadora de Costo de Ancho de Banda — Egreso Mensual y Anual",
+    metaDescriptionEs: "Calculadora gratuita de costo de ancho de banda. Introduce los gigabytes transferidos al mes y el precio por GB para estimar tu factura mensual y anual de ancho de banda o egreso. Rápida y clara.",
+    primaryKeywordEs: "calculadora de costo de ancho de banda",
+    secondaryKeywordsEs: ["calculadora de costo de transferencia de datos", "calculadora de costo de egreso", "costo de ancho de banda cdn"],
+    formulaExplanationEs: "La transferencia de datos, o egreso, se factura por gigabyte movido, así que el costo mensual es simplemente los gigabytes transferidos multiplicados por el precio por gigabyte. Multiplicar esa cifra mensual por doce da el costo anual, suponiendo tráfico constante. El modelo funciona porque el precio del ancho de banda es lineal en volumen: cada gigabyte adicional servido añade el mismo cargo fijo, así que escalar el tráfico escala la factura en proporción directa, sin una base fija en esta estimación simple.",
+    explanationEs: "Una calculadora de costo de ancho de banda estima lo que costará servir datos por internet, a partir de los gigabytes transferidos cada mes y el precio cobrado por gigabyte. Este cargo, a menudo llamado costo de egreso o de transferencia de datos, es una de las partidas más significativas y frecuentemente subestimadas de las facturas de nube y distribución de contenido, porque crece directamente con lo popular y lo pesado en datos que se vuelve un servicio.\n\nLa estimación importa porque los costos de ancho de banda pueden dominar un presupuesto a medida que el tráfico escala. Un sitio que sirve imágenes grandes, vídeo o descargas puede acumular tarifas de egreso sustanciales, y los proveedores de nube suelen cobrar un extra por los datos que salen de su red. Ver las cifras mensuales y anuales ayuda a decidir si añadir una red de distribución de contenido, optimizar el tamaño de los recursos, negociar precios comprometidos o elegir un proveedor con asignaciones de transferencia más generosas.\n\nEl cálculo es lineal: multiplica los gigabytes transferidos por el precio por gigabyte para el costo mensual, y luego por doce para la cifra anual a tráfico constante. Los precios reales suelen usar niveles donde la tarifa baja al subir el volumen, y muchos proveedores incluyen una asignación gratuita antes de cobrar, así que trata esto como una base sencilla. La compresión, el almacenamiento en caché y las CDN pueden recortar considerablemente el egreso facturable. Desarrolladores, operadores de sitios y equipos de finanzas usan una calculadora de costo de ancho de banda para prever el gasto de transferencia.",
+    exampleEs: { inputs: { monthlyGb: 1000, pricePerGb: 0.09 }, explanation: "1000 GB × $0,09 = $90 al mes, y $90 × 12 = $1.080 al año." },
+    faqsEs: [
+      {
+        question: "¿Qué es el egreso y por qué se cobra?",
+        answer: "El egreso son los datos que salen de la red de un proveedor, típicamente hacia internet o a otra región. Los proveedores lo cobran porque mover datos hacia afuera consume su capacidad de red y los acuerdos de interconexión tienen costos reales. Los datos entrantes, o ingreso, suelen ser gratuitos, mientras que el egreso se factura por gigabyte. Esta asimetría sorprende a muchos equipos, ya que un servicio que recibe poco pero sirve muchos datos puede enfrentar una factura grande y creciente.",
+      },
+      {
+        question: "¿Cómo puedo reducir los costos de ancho de banda?",
+        answer: "Usa una red de distribución de contenido para almacenar en caché y servir recursos desde ubicaciones en el borde, lo que suele ser más barato que el egreso directo y reduce la carga en tu origen. Comprime el texto y optimiza imágenes y vídeo para reducir los bytes enviados. Activa el almacenamiento en caché del navegador para que los visitantes recurrentes descarguen menos. Evita transferencias entre regiones innecesarias. Para volúmenes altos y estables, los precios comprometidos pueden bajar la tarifa por gigabyte.",
+      },
+      {
+        question: "¿El precio por GB se mantiene constante?",
+        answer: "A menudo no. Muchos proveedores usan precios escalonados donde la tarifa por gigabyte baja al subir el volumen mensual, y la mayoría incluye una asignación gratuita antes de cobrar. Las tarifas también varían por región y destino. Esta calculadora usa una única tarifa plana para una base clara, así que para usos grandes o escalonados consulta el esquema exacto de tu proveedor e introduce una tarifa combinada o marginal que refleje el nivel en el que realmente cae tu tráfico.",
+      },
+      {
+        question: "¿Por qué estimar el costo anual además del mensual?",
+        answer: "Las cifras mensuales pueden parecer pequeñas y fáciles de descartar, pero el ancho de banda es un costo recurrente que se acumula a lo largo de un año hasta una suma considerable. Ver el total anual pone el gasto en el contexto de un ciclo presupuestario y hace evidente el retorno de la optimización: un cambio que ahorra una cantidad modesta al mes se convierte en un ahorro anual sustancial. También ayuda al comparar proveedores en un horizonte más largo.",
+      },
+      {
+        question: "¿El ancho de banda de una CDN es más barato que el egreso de la nube?",
+        answer: "Con frecuencia, sí. Las redes de distribución de contenido están construidas para servir grandes volúmenes de datos de forma eficiente y a menudo cobran el egreso por debajo de las tarifas estándar de los proveedores de nube, a veces con mejores descuentos por uso comprometido. Una CDN también descarga tráfico de tu origen, recortando el egreso que pagas allí. El ahorro exacto depende de tu patrón de tráfico y de los proveedores implicados, así que compara la tarifa por gigabyte de la CDN.",
+      },
+    ],
   },
   {
     id: "gzip-savings",
@@ -531,5 +819,37 @@ export const technologyR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard data compression",
+    slugEs: "calculadora-de-ratio-de-compresion",
+    titleEs: "Calculadora de Ratio de Compresión",
+    shortDescriptionEs: "Halla el ratio y el porcentaje ahorrado tras la compresión.",
+    seoTitleEs: "Calculadora de Ratio de Compresión — Espacio Ahorrado por la Compresión",
+    metaDescriptionEs: "Calculadora gratuita de ratio de compresión. Introduce el tamaño original y el comprimido para hallar el ratio de compresión, el porcentaje de espacio ahorrado y los kilobytes ahorrados.",
+    primaryKeywordEs: "calculadora de ratio de compresión",
+    secondaryKeywordsEs: ["calculadora de ahorro de gzip", "calculadora de compresión de archivos", "calculadora de espacio ahorrado"],
+    formulaExplanationEs: "El ratio de compresión compara los tamaños antes y después dividiendo el tamaño original entre el comprimido, así que un valor de 4 significa que los datos se redujeron a una cuarta parte y se escribe como 4 a 1. El porcentaje ahorrado es la proporción del original que desapareció, uno menos la fracción comprimida, como porcentaje. Los kilobytes ahorrados son la diferencia simple entre ambos tamaños. Juntos expresan la misma reducción como un ratio, un porcentaje y una cantidad absoluta.",
+    explanationEs: "Una calculadora de ratio de compresión mide con qué eficacia se comprimieron unos datos, a partir del tamaño original y el comprimido. Reporta tres vistas complementarias: el ratio de compresión, el porcentaje de espacio ahorrado y los kilobytes absolutos eliminados. La compresión sustenta sitios web rápidos, almacenamiento eficiente y transferencias veloces, así que saber cuánto ahorró realmente una herramienta como gzip, Brotli o un optimizador de imágenes ayuda a juzgar si el esfuerzo mereció la pena.\n\nEsto importa en el rendimiento web y el almacenamiento. Un desarrollador web que activa gzip o Brotli en un servidor quiere confirmar que los recursos de texto se reducen de forma significativa, ya que las respuestas más pequeñas cargan más rápido y cuestan menos ancho de banda. Alguien que archiva ficheros quiere saber si un formato vale su tiempo de compresión más lento. Expresar el resultado de tres formas conviene a distintos públicos: ratios para la comparación técnica, porcentajes para el impacto intuitivo y kilobytes para el ahorro concreto de transferencia.\n\nEl cálculo funciona porque el ratio de compresión es el original dividido entre el comprimido, así que 4:1 significa que los datos son una cuarta parte de su tamaño anterior. El porcentaje ahorrado es uno menos la razón de comprimido a original, mostrando directamente cuánto se eliminó. El texto muy comprimible puede alcanzar del 70 al 90 por ciento de ahorro, mientras que los formatos ya comprimidos como JPEG o MP4 apenas se reducen. Desarrolladores, administradores de sistemas y cualquiera que optimice ficheros usan una calculadora de ratio de compresión para cuantificar y comparar cuán bien se comprimen sus datos.",
+    exampleEs: { inputs: { originalKb: 100, compressedKb: 25 }, explanation: "Ratio 100 ÷ 25 = 4:1; ahorrado (1 − 25 ÷ 100) × 100 = 75%; 75 KB eliminados." },
+    faqsEs: [
+      {
+        question: "¿Qué es un buen ratio de compresión?",
+        answer: "Depende por completo de los datos. El texto plano, HTML, CSS y JavaScript se comprimen extremadamente bien, alcanzando a menudo ratios de 4:1 a 10:1, lo que significa del 75 al 90 por ciento de ahorro. Los formatos ya comprimidos como imágenes JPEG, audio MP3 y vídeo MP4 apenas se reducen más, ya que su redundancia ya se eliminó. No hay un objetivo universal: juzga un ratio frente a lo típico para ese tipo de contenido, no contra un valor absoluto.",
+      },
+      {
+        question: "¿Cómo se relaciona el ratio con el porcentaje ahorrado?",
+        answer: "Describen la misma reducción de forma distinta. Un ratio de 4:1 significa que el archivo comprimido es un cuarto del original, así que se ahorraron tres cuartos, o el 75 por ciento. Un ratio de 2:1 ahorra el 50 por ciento, y 10:1 ahorra el 90 por ciento. El ratio enfatiza cuántas veces más pequeños se volvieron los datos, mientras que el porcentaje enfatiza la proporción eliminada. Usa el enfoque que comunique el resultado con mayor claridad a tu público.",
+      },
+      {
+        question: "¿Por qué algunos archivos apenas se comprimen?",
+        answer: "La compresión funciona eliminando redundancia y patrones predecibles. Los archivos ya comprimidos, como JPEG, PNG, MP3, MP4 y los archivos ZIP, han tenido la mayor parte de su redundancia eliminada, así que queda poco por quitar y el ratio se mantiene cerca de 1:1. Los datos cifrados parecen aleatorios y se comprimen aún menos. Intentar comprimir de nuevo tales archivos malgasta tiempo y a veces los agranda ligeramente por la sobrecarga del contenedor.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre gzip y Brotli?",
+        answer: "Ambos comprimen recursos web, pero Brotli, desarrollado más recientemente, suele lograr ratios más altos en texto que gzip, especialmente en sus ajustes más fuertes, gracias a un diccionario integrado y un mejor modelado. Gzip es más antiguo, universalmente compatible y más rápido al comprimir. Muchos servidores ofrecen ambos y eligen según lo que acepte el navegador. Esta calculadora mide el ahorro real de la herramienta que usaste, permitiéndote comparar sus resultados reales.",
+      },
+      {
+        question: "¿Una compresión más alta siempre mejora el rendimiento?",
+        answer: "No siempre. Una compresión más fuerte reduce más los archivos pero tarda más en comprimir y a veces en descomprimir, lo que puede importar en contenido generado sobre la marcha. Para recursos estáticos comprimidos una vez y servidos muchas, la compresión máxima suele merecer la pena. Para respuestas dinámicas, un nivel equilibrado evita añadir retardo al servidor. Sopesa el tiempo de transferencia ahorrado frente al costo de procesamiento, usando el espacio ahorrado aquí como un lado de ese equilibrio.",
+      },
+    ],
   },
 ];
