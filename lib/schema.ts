@@ -96,8 +96,24 @@ export function collectionPageSchema(
   };
 }
 
-/** Shared robots directives with the richer googleBot preview settings. */
+/**
+ * Shared robots directives. Default is noindex/nofollow — SEO experts opt each
+ * page into indexing per-page via WordPress (the is_indexed toggle).
+ */
 export const ROBOTS = {
+  index: false,
+  follow: false,
+  googleBot: {
+    index: false,
+    follow: false,
+    "max-video-preview": -1,
+    "max-image-preview": "large" as const,
+    "max-snippet": -1,
+  },
+};
+
+/** Applied only when a page is explicitly opted into indexing (via WordPress). */
+export const INDEX_ROBOTS = {
   index: true,
   follow: true,
   googleBot: {

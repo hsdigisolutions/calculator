@@ -53,7 +53,7 @@ export async function GET(
             textTransform: "uppercase",
           }}
         >
-          Calcvora
+          HSCalculadora
         </div>
         <div
           style={{

@@ -7,7 +7,6 @@ import { cn } from "@/lib/utils";
 import {
   type Locale,
   t,
-  DATE_LOCALE,
   calcPath,
   categoryPath,
   calcTitle,
@@ -94,10 +93,7 @@ export function CalculatorSidebar({
               </div>
             )}
             <div>
-              <dt className="text-text-tertiary">{s.lastReviewed}</dt>
-              <dd className="text-text-primary">
-                {formatDate(definition.lastReviewed, locale)}
-              </dd>
+              <dd className="text-text-secondary">{s.reviewNote}</dd>
             </div>
           </dl>
           <ul className="mt-4 space-y-2 border-t border-line pt-4 text-sm text-text-secondary">
@@ -115,16 +111,4 @@ export function CalculatorSidebar({
       </div>
     </aside>
   );
-}
-
-function formatDate(iso: string, locale: Locale): string {
-  try {
-    return new Date(iso + "T00:00:00").toLocaleDateString(DATE_LOCALE[locale], {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    });
-  } catch {
-    return iso;
-  }
 }

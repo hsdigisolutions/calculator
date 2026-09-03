@@ -7,7 +7,7 @@ import type { CalculatorDefinition, Category } from "./types";
 import type { CalculatorWPData } from "./wordpress-calculators";
 import { getCategory } from "./categories";
 import { SITE_NAME } from "./site";
-import { ROBOTS } from "./schema";
+import { ROBOTS, INDEX_ROBOTS } from "./schema";
 import {
   type Locale,
   OG_LOCALE,
@@ -46,15 +46,9 @@ export function calculatorMetadata(
   const canonical = es && wp?.rmCanonical ? wp.rmCanonical : url;
   const keywords = [calcPrimaryKeyword(def, locale), ...calcSecondaryKeywords(def, locale)];
 
-  // Index only what WP explicitly de-indexes; a missing entry stays indexed.
-  const index = wp ? wp.isIndexed : true;
-  const robots = index
-    ? ROBOTS
-    : {
-        index: false,
-        follow: true,
-        googleBot: { index: false, follow: true },
-      };
+  // Default is noindex; a page is indexed only when WordPress explicitly opts it in.
+  const index = wp ? wp.isIndexed : false;
+  const robots = index ? INDEX_ROBOTS : ROBOTS;
 
   return {
     title,

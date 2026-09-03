@@ -1,5 +1,5 @@
 /** Global site constants used for SEO, metadata and canonical URLs. */
-export const SITE_NAME = "Calcvora";
+export const SITE_NAME = "HSCalculadora";
 export const SITE_TAGLINE = "Calculate Anything.";
 export const SITE_DESCRIPTION =
   "Free, beautiful calculators for finance, health, math and everyday life. Fast, accurate and trusted.";

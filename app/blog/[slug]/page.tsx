@@ -47,7 +47,7 @@ export async function generateMetadata({
 
   return {
     // RankMath titles already include branding, so use `absolute` to bypass the
-    // site's "%s — Calcvora" template; fall back to the plain post title.
+    // site's "%s — HSCalculadora" template; fall back to the plain post title.
     title: rmTitle ? { absolute: rmTitle } : post.title,
     description,
     alternates: { canonical: seo?.canonicalUrl || pageUrl },

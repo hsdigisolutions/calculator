@@ -3,7 +3,6 @@ import { Icon } from "@/components/Icon";
 import {
   type Locale,
   t,
-  DATE_LOCALE,
   calcExplanation,
   calcFormula,
   calcFormulaExplanation,
@@ -68,22 +67,9 @@ export function FormulaPanel({
           ) : (
             <span>{definition.formulaSource}</span>
           )}
-          <span aria-hidden>·</span>
-          {s.lastReviewed} {formatDate(definition.lastReviewed, locale)}
         </p>
       )}
+      <p className="mt-3 text-sm text-text-tertiary">{s.reviewNote}</p>
     </section>
   );
-}
-
-function formatDate(iso: string, locale: Locale): string {
-  try {
-    return new Date(iso + "T00:00:00").toLocaleDateString(DATE_LOCALE[locale], {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
-  } catch {
-    return iso;
-  }
 }
