@@ -10,7 +10,7 @@ export const businessExtraCalculators: CalculatorDefinition[] = [
     shortDescription: "Calculate revenue and gross profit from sales.",
     seoTitle: "Revenue Calculator — Sales Revenue & Gross Profit",
     metaDescription:
-      "Free revenue calculator. Work out total revenue from units sold and price, plus cost, gross profit and margin.",
+      "Free revenue calculator. Work out total revenue from units sold and price, along with total cost, gross profit and profit margin, all in one place.",
     primaryKeyword: "revenue calculator",
     secondaryKeywords: ["sales revenue calculator", "gross profit calculator", "total revenue"],
     fields: [
@@ -74,7 +74,7 @@ export const businessExtraCalculators: CalculatorDefinition[] = [
     shortDescription: "Track net cash flow and ending balance.",
     seoTitle: "Cash Flow Calculator — Net Cash Flow & Balance",
     metaDescription:
-      "Free cash flow calculator. Find net cash flow from inflows and outflows and your ending balance for the period.",
+      "Free cash flow calculator. Find your net cash flow from total inflows and outflows and see the ending balance for the period, ideal for budgeting.",
     primaryKeyword: "cash flow calculator",
     secondaryKeywords: ["net cash flow calculator", "cash flow statement", "ending balance"],
     fields: [

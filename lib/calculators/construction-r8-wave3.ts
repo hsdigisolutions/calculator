@@ -597,7 +597,7 @@ export const constructionR8Calculators: CalculatorDefinition[] = [
     shortDescription: "Estimate how many sheets of plywood cover an area.",
     seoTitle: "Plywood Sheet Calculator — Sheets Needed",
     metaDescription:
-      "Free plywood sheet calculator. Estimate how many sheets of plywood or OSB you need to cover a floor, wall or roof area.",
+      "Free plywood sheet calculator. Estimate how many sheets of plywood or OSB you need to cover any floor, wall or roof area, with a waste margin added.",
     primaryKeyword: "plywood sheet calculator",
     secondaryKeywords: ["how many sheets of plywood do i need", "plywood calculator", "osb sheet calculator"],
     slugEs: "calculadora-de-hojas-de-contrachapado",

@@ -500,7 +500,7 @@ export const engineeringR6Calculators: CalculatorDefinition[] = [
     title: "Heat Transfer Rate Calculator",
     shortDescription: "Find conductive heat flow through a wall.",
     seoTitle: "Heat Transfer Rate Calculator — Fourier Conduction",
-    metaDescription: "Free heat transfer rate calculator using Fourier's law. Enter thermal conductivity, area, temperature difference, and thickness to find conductive heat flow in watts.",
+    metaDescription: "Free heat transfer rate calculator using Fourier's law. Enter thermal conductivity, area, temperature difference, and thickness to find conductive heat flow.",
     primaryKeyword: "heat transfer rate calculator",
     secondaryKeywords: ["conduction heat transfer calculator", "fouriers law calculator", "thermal conduction calculator"],
     fields: [

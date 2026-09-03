@@ -9,7 +9,7 @@ export const logisticsR7Calculators: CalculatorDefinition[] = [
     title: "Cost Per Mile Calculator",
     shortDescription: "Find your trucking cost per mile.",
     seoTitle: "Cost Per Mile Calculator — Trucking Cost Per Mile",
-    metaDescription: "Free cost per mile calculator. Enter total operating cost and miles driven to find your trucking cost per mile, the key number for pricing freight and setting rates.",
+    metaDescription: "Free cost per mile calculator. Enter total operating cost and miles driven to find your trucking cost per mile, the key number for pricing freight.",
     primaryKeyword: "cost per mile calculator",
     secondaryKeywords: ["trucking cost per mile calculator", "cpm calculator", "freight cost per mile calculator"],
     fields: [
@@ -748,7 +748,7 @@ export const logisticsR7Calculators: CalculatorDefinition[] = [
     title: "Pallet Stack Height Calculator",
     shortDescription: "Find the total height of a loaded pallet.",
     seoTitle: "Pallet Stack Height Calculator — Loaded Pallet Height",
-    metaDescription: "Free pallet stack height calculator. Enter box height, boxes per stack, and pallet base height to find the total loaded pallet height for container and truck fit.",
+    metaDescription: "Free pallet stack height calculator. Enter box height, boxes per stack, and pallet base height to find the total loaded pallet height for container and truck.",
     primaryKeyword: "pallet stack height calculator",
     secondaryKeywords: ["loaded pallet height calculator", "pallet height calculator", "carton stacking calculator"],
     fields: [

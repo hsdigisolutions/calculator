@@ -10,7 +10,7 @@ export const mathR4Calculators: CalculatorDefinition[] = [
     shortDescription: "Solve ax² + bx + c = 0 for both roots.",
     seoTitle: "Quadratic Formula Calculator — Solve ax² + bx + c = 0",
     metaDescription:
-      "Free quadratic formula calculator. Enter the coefficients a, b, and c to find both roots of a quadratic equation, the discriminant, and the nature of the solutions.",
+      "Free quadratic formula calculator. Enter the coefficients a, b, and c to find both roots of a quadratic equation and the discriminant instantly.",
     primaryKeyword: "quadratic formula calculator",
     secondaryKeywords: ["quadratic equation solver", "discriminant calculator", "solve for x calculator"],
     slugEs: "calculadora-de-formula-cuadratica",
@@ -387,7 +387,7 @@ export const mathR4Calculators: CalculatorDefinition[] = [
     shortDescription: "Count ordered arrangements with nPr.",
     seoTitle: "Permutations Calculator — nPr Ordered Arrangements",
     metaDescription:
-      "Free permutations calculator. Enter n and r to find the number of ordered arrangements (nPr) using the formula n! ÷ (n − r)!, the count of ways to arrange r items from n.",
+      "Free permutations calculator. Enter n and r to find the number of ordered arrangements (nPr) using the formula n! ÷ (n − r)!, the count of ways to arrange r.",
     primaryKeyword: "permutations calculator",
     secondaryKeywords: ["nPr calculator", "permutation formula calculator", "ordered arrangements calculator"],
     slugEs: "calculadora-de-permutaciones",
@@ -573,7 +573,7 @@ export const mathR4Calculators: CalculatorDefinition[] = [
     shortDescription: "Find the cube root of any number.",
     seoTitle: "Cube Root Calculator — Find the Cube Root of a Number",
     metaDescription:
-      "Free cube root calculator. Enter any number, positive or negative, to find its cube root, the value that when multiplied by itself three times gives the original.",
+      "Free cube root calculator. Enter any number, positive or negative, to find its exact cube root, the value that cubed returns your original number.",
     primaryKeyword: "cube root calculator",
     secondaryKeywords: ["cubed root calculator", "third root calculator", "find cube root"],
     slugEs: "calculadora-de-raiz-cubica",

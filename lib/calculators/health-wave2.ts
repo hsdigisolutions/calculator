@@ -571,7 +571,7 @@ export const healthWave2Calculators: CalculatorDefinition[] = [
     title: "Heart Rate Zone Calculator",
     shortDescription: "Find your maximum heart rate and training zones using the Karvonen method.",
     seoTitle: "Heart Rate Zone Calculator — Training Zones by Age",
-    metaDescription: "Calculate your maximum heart rate and 5 heart rate training zones using the Karvonen method. Optimize your cardio training for fat burn, endurance, and performance.",
+    metaDescription: "Calculate your maximum heart rate and 5 heart rate training zones using the Karvonen method. Optimize your cardio training for fat burn, endurance.",
     primaryKeyword: "heart rate zone calculator",
     secondaryKeywords: ["heart rate zones", "max heart rate calculator", "training zones by heart rate"],
     fields: [

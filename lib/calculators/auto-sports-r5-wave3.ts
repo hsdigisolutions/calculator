@@ -93,7 +93,7 @@ export const autoSportsR5Calculators: CalculatorDefinition[] = [
     shortDescription: "Find engine size from bore, stroke, and cylinders.",
     seoTitle: "Engine Displacement Calculator — CC and Litres from Bore & Stroke",
     metaDescription:
-      "Free engine displacement calculator. Enter bore, stroke, and cylinder count to find total displacement in cubic centimetres and litres using the standard formula.",
+      "Free engine displacement calculator. Enter bore, stroke, and cylinder count to find total displacement in cubic centimetres and litres using the standard.",
     primaryKeyword: "engine displacement calculator",
     secondaryKeywords: ["engine size calculator", "bore stroke calculator", "cc calculator engine"],
     fields: [

@@ -9,7 +9,7 @@ export const realEstateWave3Calculators: CalculatorDefinition[] = [
     title: "Cap Rate Calculator",
     shortDescription: "Measure a rental property's return from income and price.",
     seoTitle: "Cap Rate Calculator — Net Operating Income and Yield",
-    metaDescription: "Free cap rate calculator for rental property. Enter price, rent, vacancy, and expenses to find capitalization rate, net operating income, and gross rent multiplier.",
+    metaDescription: "Free cap rate calculator for rental property. Enter price, rent, vacancy, and expenses to find capitalization rate, net operating income, and gross rent.",
     primaryKeyword: "cap rate calculator",
     secondaryKeywords: ["capitalization rate calculator", "net operating income calculator", "rental property cap rate"],
     fields: [
@@ -94,7 +94,7 @@ export const realEstateWave3Calculators: CalculatorDefinition[] = [
     title: "Rent vs Buy Calculator",
     shortDescription: "Compare the monthly cost of renting against owning.",
     seoTitle: "Rent vs Buy Calculator — Monthly Cost Comparison",
-    metaDescription: "Free rent vs buy calculator. Compare the true monthly cost of owning a home, including mortgage, property tax, and maintenance, against renting to decide faster.",
+    metaDescription: "Free rent vs buy calculator. Compare the true monthly cost of owning a home, including mortgage, property tax, and maintenance, against renting to decide.",
     primaryKeyword: "rent vs buy calculator",
     secondaryKeywords: ["rent or buy calculator", "buy vs rent home calculator", "cost of owning a home"],
     fields: [
@@ -183,7 +183,7 @@ export const realEstateWave3Calculators: CalculatorDefinition[] = [
     title: "Loan-to-Value (LTV) Calculator",
     shortDescription: "Find your LTV ratio, equity, and equity percentage.",
     seoTitle: "Loan-to-Value (LTV) Calculator — Ratio and Home Equity",
-    metaDescription: "Free loan-to-value calculator. Enter your loan amount and property value to find your LTV ratio, dollar equity, and equity percentage for mortgage and refinance decisions.",
+    metaDescription: "Free loan-to-value calculator. Enter your loan amount and property value to find your LTV ratio, dollar equity, and equity percentage instantly.",
     primaryKeyword: "loan to value calculator",
     secondaryKeywords: ["ltv calculator", "home equity calculator", "ltv ratio calculator"],
     fields: [
@@ -516,7 +516,7 @@ export const realEstateWave3Calculators: CalculatorDefinition[] = [
     title: "Mortgage Refinance Calculator",
     shortDescription: "See your new payment, monthly savings, and break-even point.",
     seoTitle: "Mortgage Refinance Calculator — Savings and Break-Even",
-    metaDescription: "Free mortgage refinance calculator. Compare your current payment to a new rate and term to find your new payment, monthly savings, and break-even point in months.",
+    metaDescription: "Free mortgage refinance calculator. Compare your current payment to a new rate and term to find your new payment, monthly savings, and break-even point.",
     primaryKeyword: "mortgage refinance calculator",
     secondaryKeywords: ["refinance calculator", "refinance savings calculator", "refinance break even calculator"],
     fields: [

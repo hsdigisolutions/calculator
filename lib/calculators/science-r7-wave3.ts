@@ -9,7 +9,7 @@ export const scienceR7Calculators: CalculatorDefinition[] = [
     title: "Work Done Calculator",
     shortDescription: "Calculate mechanical work from force and distance.",
     seoTitle: "Work Done Calculator — Force × Distance in Joules",
-    metaDescription: "Free work done calculator. Enter force in newtons and distance in metres to find mechanical work in joules instantly. Ideal for physics homework and energy problems.",
+    metaDescription: "Free work done calculator. Enter force in newtons and distance in metres to find mechanical work in joules instantly. Ideal for physics homework and energy.",
     primaryKeyword: "work done calculator",
     secondaryKeywords: ["work formula calculator", "force times distance calculator", "mechanical work joules"],
     fields: [
@@ -90,7 +90,7 @@ export const scienceR7Calculators: CalculatorDefinition[] = [
     title: "Efficiency Calculator",
     shortDescription: "Find energy efficiency as a percentage.",
     seoTitle: "Efficiency Calculator — Useful Output ÷ Input as a Percentage",
-    metaDescription: "Free efficiency calculator. Enter useful output energy and total input energy to find efficiency as a percentage instantly. Perfect for physics and engineering problems.",
+    metaDescription: "Free efficiency calculator. Enter useful output energy and total input energy to find efficiency as a percentage instantly. Perfect for physics and engineering.",
     primaryKeyword: "efficiency calculator",
     secondaryKeywords: ["energy efficiency calculator", "mechanical efficiency formula", "output input ratio calculator"],
     fields: [
@@ -171,7 +171,7 @@ export const scienceR7Calculators: CalculatorDefinition[] = [
     title: "Hydrostatic Pressure Calculator",
     shortDescription: "Find fluid pressure at a given depth.",
     seoTitle: "Hydrostatic Pressure Calculator — Fluid Pressure at Depth",
-    metaDescription: "Free hydrostatic pressure calculator. Enter fluid density, depth, and gravity to find pressure in pascals instantly. Ideal for physics, diving, and engineering problems.",
+    metaDescription: "Free hydrostatic pressure calculator. Enter fluid density, depth, and gravity to find pressure in pascals instantly. Ideal for physics, diving, and engineering.",
     primaryKeyword: "hydrostatic pressure calculator",
     secondaryKeywords: ["fluid pressure calculator", "water pressure at depth", "pressure depth formula"],
     fields: [
@@ -253,7 +253,7 @@ export const scienceR7Calculators: CalculatorDefinition[] = [
     title: "Heat Index Calculator",
     shortDescription: "Find the 'feels like' temperature from heat and humidity.",
     seoTitle: "Heat Index Calculator — 'Feels Like' Temperature (NWS Formula)",
-    metaDescription: "Free heat index calculator using the NWS Rothfusz regression. Enter temperature and humidity to find the 'feels like' apparent temperature in Fahrenheit instantly.",
+    metaDescription: "Free heat index calculator using the NWS Rothfusz regression. Enter temperature and humidity to find the 'feels like' apparent temperature in Fahrenheit.",
     primaryKeyword: "heat index calculator",
     secondaryKeywords: ["feels like temperature calculator", "apparent temperature calculator", "heat humidity index"],
     fields: [
@@ -417,7 +417,7 @@ export const scienceR7Calculators: CalculatorDefinition[] = [
     title: "Dew Point Calculator",
     shortDescription: "Find the dew point from temperature and humidity.",
     seoTitle: "Dew Point Calculator — Temperature & Humidity to Dew Point",
-    metaDescription: "Free dew point calculator using the Magnus formula. Enter air temperature and relative humidity to find the dew point in Celsius instantly. Great for weather and comfort.",
+    metaDescription: "Free dew point calculator using the Magnus formula. Enter air temperature and relative humidity to find the dew point in Celsius instantly. Great for weather.",
     primaryKeyword: "dew point calculator",
     secondaryKeywords: ["dew point formula calculator", "humidity dew point", "magnus formula calculator"],
     fields: [
@@ -499,7 +499,7 @@ export const scienceR7Calculators: CalculatorDefinition[] = [
     title: "Terminal Velocity Calculator",
     shortDescription: "Find the maximum falling speed through a fluid.",
     seoTitle: "Terminal Velocity Calculator — Maximum Falling Speed",
-    metaDescription: "Free terminal velocity calculator. Enter mass, drag coefficient, area, and fluid density to find the maximum falling speed in m/s. Great for physics and skydiving.",
+    metaDescription: "Free terminal velocity calculator. Enter mass, drag coefficient, area, and fluid density to find the maximum falling speed in m/s. Great for physics.",
     primaryKeyword: "terminal velocity calculator",
     secondaryKeywords: ["falling speed calculator", "drag terminal velocity formula", "skydiver terminal velocity"],
     fields: [
@@ -583,7 +583,7 @@ export const scienceR7Calculators: CalculatorDefinition[] = [
     title: "Escape Velocity Calculator",
     shortDescription: "Find the speed needed to escape a planet's gravity.",
     seoTitle: "Escape Velocity Calculator — Speed to Escape Gravity",
-    metaDescription: "Free escape velocity calculator. Enter a planet or star's mass and radius to find the escape velocity in m/s instantly. Perfect for astronomy and physics problems.",
+    metaDescription: "Free escape velocity calculator. Enter a planet or star's mass and radius to find the escape velocity in m/s instantly. Perfect for astronomy and physics.",
     primaryKeyword: "escape velocity calculator",
     secondaryKeywords: ["escape speed calculator", "gravity escape velocity formula", "planet escape velocity"],
     fields: [
@@ -664,7 +664,7 @@ export const scienceR7Calculators: CalculatorDefinition[] = [
     title: "Thin Lens Calculator",
     shortDescription: "Find focal length from object and image distance.",
     seoTitle: "Thin Lens Calculator — Focal Length from Object & Image Distance",
-    metaDescription: "Free thin lens calculator. Enter object distance and image distance to find the focal length in centimetres using the thin lens equation. Ideal for optics problems.",
+    metaDescription: "Free thin lens calculator. Enter object distance and image distance to find the focal length in centimetres using the thin lens equation. Ideal for optics.",
     primaryKeyword: "thin lens calculator",
     secondaryKeywords: ["lens equation calculator", "focal length calculator", "optics thin lens formula"],
     fields: [

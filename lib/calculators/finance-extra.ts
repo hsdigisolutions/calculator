@@ -282,7 +282,7 @@ export const financeExtraCalculators: CalculatorDefinition[] = [
     shortDescription: "Find profit, margin and markup from revenue and cost.",
     seoTitle: "Profit Margin Calculator — Free Margin & Markup Tool",
     metaDescription:
-      "Free profit margin calculator. Enter revenue and cost to get profit, profit margin percentage and markup percentage.",
+      "Free profit margin calculator. Enter revenue and cost to get profit, profit margin percentage and markup percentage instantly, ideal for pricing.",
     primaryKeyword: "profit margin calculator",
     secondaryKeywords: ["margin calculator", "gross margin calculator", "markup vs margin"],
     fields: [

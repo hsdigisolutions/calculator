@@ -103,7 +103,7 @@ export const technologyR8Calculators: CalculatorDefinition[] = [
     title: "Video File Size Calculator",
     shortDescription: "Estimate a video's file size from its bitrate and length.",
     seoTitle: "Video File Size Calculator — Bitrate and Duration to Size",
-    metaDescription: "Free video file size calculator. Enter a video's duration in minutes and bitrate in Mbps to estimate its file size in gigabytes and megabytes. Plan storage and uploads.",
+    metaDescription: "Free video file size calculator. Enter a video's duration in minutes and bitrate in Mbps to estimate its file size in gigabytes and megabytes.",
     primaryKeyword: "video file size calculator",
     secondaryKeywords: ["video size calculator", "bitrate to file size", "how big is a video file"],
     fields: [
@@ -266,7 +266,7 @@ export const technologyR8Calculators: CalculatorDefinition[] = [
     title: "Color Contrast Ratio Calculator",
     shortDescription: "Check WCAG contrast between two hex colors for accessibility.",
     seoTitle: "Color Contrast Ratio Calculator — WCAG Accessibility Check",
-    metaDescription: "Free color contrast ratio calculator. Enter a foreground and background hex color to get the WCAG contrast ratio and see whether it passes AA for accessible text.",
+    metaDescription: "Free color contrast ratio calculator. Enter foreground and background hex colors to get the WCAG contrast ratio and see whether it passes AA.",
     primaryKeyword: "color contrast calculator",
     secondaryKeywords: ["wcag contrast checker", "contrast ratio calculator", "accessibility color checker"],
     fields: [
@@ -349,7 +349,7 @@ export const technologyR8Calculators: CalculatorDefinition[] = [
     title: "Binary to Decimal Converter",
     shortDescription: "Convert numbers between binary, decimal, and hexadecimal.",
     seoTitle: "Binary to Decimal Converter — Binary, Decimal, Hex",
-    metaDescription: "Free binary to decimal converter. Convert whole numbers between binary, decimal, and hexadecimal in any direction. Enter a value, choose the bases, get the result.",
+    metaDescription: "Free binary to decimal converter. Convert whole numbers between binary, decimal, and hexadecimal in any direction. Enter a value and get results.",
     primaryKeyword: "binary to decimal converter",
     secondaryKeywords: ["number base converter", "decimal to binary converter", "hex converter"],
     fields: [
@@ -617,7 +617,7 @@ export const technologyR8Calculators: CalculatorDefinition[] = [
     title: "Email Storage Calculator",
     shortDescription: "Project how much storage your email will use over years.",
     seoTitle: "Email Storage Calculator — Mailbox Size Over Time",
-    metaDescription: "Free email storage calculator. Enter emails received per day, average message size, and years to project how many gigabytes your mailbox will accumulate over time.",
+    metaDescription: "Free email storage calculator. Enter emails received per day, average message size, and years to project how many gigabytes your mailbox needs.",
     primaryKeyword: "email storage calculator",
     secondaryKeywords: ["mailbox size calculator", "email storage estimate", "inbox storage calculator"],
     fields: [

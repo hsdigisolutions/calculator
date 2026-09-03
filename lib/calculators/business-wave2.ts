@@ -500,7 +500,7 @@ export const businessWave2Calculators: CalculatorDefinition[] = [
       { question: "¿Qué es el costo de empleado totalmente cargado?", answer: "El costo totalmente cargado es el costo total para el empleador incluyendo todos los costos directos e indirectos: salario, todos los impuestos pagados por el empleador, todas las prestaciones, costos de reclutamiento (amortizados), costos de capacitación, equipo y software, espacio de oficina, tiempo de gestión dedicado al empleado y costos específicos del puesto. Los costos totalmente cargados suelen ser de 1.5 a 2.5 veces el salario base. Esta métrica se usa en casos de negocio para nuevas contrataciones, decisiones de subcontratación y para determinar si un puesto justifica su costo total." },
       { question: "¿Cómo uso esto para fijar el precio de mis servicios?", answer: "Si eres un negocio de servicios (consultoría, agencia, dotación de personal), tu precio debe cubrir los costos de empleado totalmente cargados más un margen de beneficio. Fórmula: tarifa facturable mínima = (costo anual totalmente cargado) / horas facturables × (1 / margen objetivo). Por ejemplo, un empleado con $90,000 de costo anual real, 1,600 horas facturables al año y un margen objetivo del 30%: tarifa mínima = $90,000 / 1,600 / (1 − 0.30) = $80.36/hora. En la práctica, los empleados rara vez son facturables el 100% del tiempo; contempla la tasa de utilización, típicamente del 60% al 80%." },
     ],
-    relatedCalculators: ["hourly-wage", "paycheck", "overtime"],
+    relatedCalculators: ["hourly-wage-calculator", "paycheck-calculator", "overtime-calculator"],
     status: "active",
     lastReviewed: "2025-01-01",
   },

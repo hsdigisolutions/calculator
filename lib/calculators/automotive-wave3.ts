@@ -179,7 +179,7 @@ export const automotiveWave3Calculators: CalculatorDefinition[] = [
     title: "EV Savings Calculator",
     shortDescription: "Compare EV and gas running costs.",
     seoTitle: "EV Savings Calculator — Electric vs Gas Annual Fuel Cost",
-    metaDescription: "Free EV savings calculator. Compare the annual cost of driving electric versus gas from your mileage, MPG, efficiency, and energy prices to see your yearly savings.",
+    metaDescription: "Free EV savings calculator. Compare the annual cost of driving electric versus gas using your mileage, MPG, efficiency, and local energy prices.",
     primaryKeyword: "ev savings calculator",
     secondaryKeywords: ["electric vs gas cost calculator", "ev cost calculator", "electric car savings"],
     fields: [

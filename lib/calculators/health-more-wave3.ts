@@ -72,6 +72,7 @@ export const healthMoreCalculators: CalculatorDefinition[] = [
     lastReviewed: "2026-08-20",
     sensitivity: "health",
     formulaSource: "DuBois & DuBois (1916)",
+    sourceUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3577186/",
   },
   {
     id: "waist-to-height-ratio",

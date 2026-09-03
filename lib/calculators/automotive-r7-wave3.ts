@@ -9,7 +9,7 @@ export const automotiveR7Calculators: CalculatorDefinition[] = [
     title: "MPG to L/100km Converter",
     shortDescription: "Convert miles per gallon into litres per 100 km.",
     seoTitle: "MPG to L/100km Converter — Fuel Economy Conversion",
-    metaDescription: "Free MPG to L/100km converter. Enter US miles per gallon to instantly see the equivalent litres per 100 kilometres used by European and metric fuel economy ratings.",
+    metaDescription: "Free MPG to L/100km converter. Enter US miles per gallon to instantly see the equivalent litres per 100 kilometres used by European and metric fuel economy.",
     primaryKeyword: "mpg to l/100km converter",
     secondaryKeywords: ["mpg to l100km", "fuel economy converter", "miles per gallon to litres per 100km"],
     fields: [
@@ -89,7 +89,7 @@ export const automotiveR7Calculators: CalculatorDefinition[] = [
     title: "Car Lease Payment Calculator",
     shortDescription: "Estimate a monthly car lease payment.",
     seoTitle: "Car Lease Payment Calculator — Monthly Lease Cost",
-    metaDescription: "Free car lease payment calculator. Enter vehicle price, residual value, down payment, term, and money factor to estimate your monthly lease payment before you sign.",
+    metaDescription: "Free car lease payment calculator. Enter vehicle price, residual value, down payment, term, and money factor to estimate your monthly payment.",
     primaryKeyword: "car lease payment calculator",
     secondaryKeywords: ["lease payment calculator", "auto lease calculator", "monthly lease cost"],
     fields: [
@@ -173,7 +173,7 @@ export const automotiveR7Calculators: CalculatorDefinition[] = [
     title: "Car Cost Per Mile Calculator",
     shortDescription: "Find the true cost of every mile you drive.",
     seoTitle: "Car Cost Per Mile Calculator — True Driving Cost",
-    metaDescription: "Free car cost per mile calculator. Divide your total annual vehicle costs by miles driven to see the real cost of each mile for budgeting, reimbursement, or comparison.",
+    metaDescription: "Free car cost per mile calculator. Divide your total annual vehicle costs by miles driven to see the real cost of each mile for budgeting, reimbursement.",
     primaryKeyword: "car cost per mile calculator",
     secondaryKeywords: ["cost per mile calculator", "driving cost per mile", "vehicle cost per mile"],
     fields: [
@@ -254,7 +254,7 @@ export const automotiveR7Calculators: CalculatorDefinition[] = [
     title: "Tire Diameter Calculator",
     shortDescription: "Find a tire's overall diameter in inches.",
     seoTitle: "Tire Diameter Calculator — Overall Diameter in Inches",
-    metaDescription: "Free tire diameter calculator. Enter section width, aspect ratio, and wheel diameter to find the overall tire diameter in inches for fitment and speedometer checks.",
+    metaDescription: "Free tire diameter calculator. Enter section width, aspect ratio, and wheel diameter to find the overall tire diameter in inches for fitment and speedometer.",
     primaryKeyword: "tire diameter calculator",
     secondaryKeywords: ["overall tire diameter", "tire height calculator", "tire size diameter"],
     fields: [
@@ -501,7 +501,7 @@ export const automotiveR7Calculators: CalculatorDefinition[] = [
     title: "Oil Change Cost Calculator",
     shortDescription: "Estimate your yearly oil change spending.",
     seoTitle: "Oil Change Cost Calculator — Annual Oil Change Spending",
-    metaDescription: "Free oil change cost calculator. Enter annual mileage, oil change interval, and cost per change to see how many changes you need per year and the total annual cost.",
+    metaDescription: "Free oil change cost calculator. Enter annual mileage, oil change interval, and cost per change to see changes needed per year and total cost.",
     primaryKeyword: "oil change cost calculator",
     secondaryKeywords: ["annual oil change cost", "oil change interval calculator", "car maintenance cost calculator"],
     fields: [

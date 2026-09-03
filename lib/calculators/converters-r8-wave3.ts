@@ -342,7 +342,7 @@ export const convertersR8Calculators: CalculatorDefinition[] = [
     shortDescription: "Convert between tesla, millitesla, microtesla and gauss.",
     seoTitle: "Magnetic Field Converter — Tesla, mT, µT, Gauss",
     metaDescription:
-      "Free magnetic flux density converter. Convert between tesla, millitesla, microtesla and gauss instantly and accurately.",
+      "Free magnetic flux density converter. Convert between tesla, millitesla, microtesla and gauss instantly and accurately, for physics and engineering.",
     primaryKeyword: "magnetic field converter",
     secondaryKeywords: ["tesla to gauss", "gauss to tesla", "mt to gauss"],
     fields: [

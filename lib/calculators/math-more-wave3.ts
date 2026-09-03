@@ -10,7 +10,7 @@ export const mathMoreCalculators: CalculatorDefinition[] = [
     shortDescription: "Compare a measured value to the true value.",
     seoTitle: "Percent Error Calculator — Measured vs Theoretical",
     metaDescription:
-      "Free percent error calculator. Enter your experimental and theoretical values to find the percent error and absolute error, the standard measure of measurement accuracy.",
+      "Free percent error calculator. Enter your experimental and theoretical values to find the percent error and absolute error of any measurement.",
     primaryKeyword: "percent error calculator",
     secondaryKeywords: ["percentage error calculator", "experimental error", "accuracy calculator"],
     fields: [
@@ -250,7 +250,7 @@ export const mathMoreCalculators: CalculatorDefinition[] = [
     shortDescription: "Find the straight-line distance between two points.",
     seoTitle: "Distance Between Two Points Calculator — Distance Formula",
     metaDescription:
-      "Free distance calculator. Enter two coordinate points to find the straight-line distance between them using the distance formula, plus the horizontal and vertical change.",
+      "Free distance calculator. Enter two coordinate points to find the straight-line distance between them using the distance formula, with steps shown.",
     primaryKeyword: "distance between two points calculator",
     secondaryKeywords: ["distance formula calculator", "coordinate distance", "euclidean distance calculator"],
     fields: [
@@ -332,7 +332,7 @@ export const mathMoreCalculators: CalculatorDefinition[] = [
     shortDescription: "Find the midpoint between two coordinate points.",
     seoTitle: "Midpoint Calculator — Midpoint of Two Points",
     metaDescription:
-      "Free midpoint calculator. Enter two coordinate points to find the midpoint of the segment joining them using the midpoint formula, with x and y coordinates shown.",
+      "Free midpoint calculator. Enter two coordinate points to find the midpoint of the segment joining them using the midpoint formula, with x and y coordinates.",
     primaryKeyword: "midpoint calculator",
     secondaryKeywords: ["midpoint formula calculator", "midpoint of two points", "segment midpoint"],
     fields: [

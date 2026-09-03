@@ -9,7 +9,7 @@ export const environmentWave3Calculators: CalculatorDefinition[] = [
     title: "Carbon Footprint Calculator",
     shortDescription: "Estimate yearly CO₂ from driving and home electricity.",
     seoTitle: "Carbon Footprint Calculator — Driving and Home Energy CO₂",
-    metaDescription: "Free carbon footprint calculator. Enter your annual miles, fuel economy, and monthly electricity use to estimate yearly CO₂ emissions in metric tons from driving and home energy.",
+    metaDescription: "Free carbon footprint calculator. Enter your annual miles, fuel economy, and monthly electricity use to estimate yearly CO₂ emissions in metric tons.",
     primaryKeyword: "carbon footprint calculator",
     secondaryKeywords: ["co2 emissions calculator", "household carbon calculator", "personal carbon footprint"],
     fields: [
@@ -94,7 +94,7 @@ export const environmentWave3Calculators: CalculatorDefinition[] = [
     title: "Solar Savings Calculator",
     shortDescription: "Estimate annual and lifetime savings from solar panels.",
     seoTitle: "Solar Savings Calculator — Annual and 25-Year Panel Savings",
-    metaDescription: "Free solar savings calculator. Enter your system size, daily sun hours, and electricity rate to estimate annual energy production, yearly bill savings, and 25-year lifetime savings.",
+    metaDescription: "Free solar savings calculator. Enter your system size, daily sun hours, and electricity rate to estimate annual energy production, yearly bill savings.",
     primaryKeyword: "solar savings calculator",
     secondaryKeywords: ["solar panel savings calculator", "solar energy savings", "solar payback calculator"],
     fields: [
@@ -178,7 +178,7 @@ export const environmentWave3Calculators: CalculatorDefinition[] = [
     title: "Flight Emissions Calculator",
     shortDescription: "Estimate CO₂ from a flight by distance and passengers.",
     seoTitle: "Flight Emissions Calculator — Air Travel CO₂ Footprint",
-    metaDescription: "Free flight emissions calculator. Enter flight distance in kilometres and number of passengers to estimate the carbon dioxide produced by air travel in kilograms and metric tons.",
+    metaDescription: "Free flight emissions calculator. Enter flight distance in kilometres and number of passengers to estimate the carbon dioxide produced by air travel.",
     primaryKeyword: "flight emissions calculator",
     secondaryKeywords: ["flight carbon calculator", "air travel co2 calculator", "airplane emissions calculator"],
     fields: [
@@ -261,7 +261,7 @@ export const environmentWave3Calculators: CalculatorDefinition[] = [
     title: "Home Energy Cost Calculator",
     shortDescription: "Find what an appliance costs to run per month and year.",
     seoTitle: "Home Energy Cost Calculator — Appliance Running Cost",
-    metaDescription: "Free home energy cost calculator. Enter an appliance's wattage, daily hours of use, and your electricity rate to find its monthly kilowatt-hours, monthly cost, and annual running cost.",
+    metaDescription: "Free home energy cost calculator. Enter an appliance's wattage, daily hours of use, and your electricity rate to find its monthly kilowatt-hours, monthly cost.",
     primaryKeyword: "home energy cost calculator",
     secondaryKeywords: ["appliance electricity cost calculator", "electricity usage calculator", "watts to cost calculator"],
     fields: [
@@ -345,7 +345,7 @@ export const environmentWave3Calculators: CalculatorDefinition[] = [
     title: "EV Charging Cost Calculator",
     shortDescription: "Estimate the cost to charge an electric vehicle.",
     seoTitle: "EV Charging Cost Calculator — Electric Car Charge Price",
-    metaDescription: "Free EV charging cost calculator. Enter your battery capacity, target charge percentage, and electricity rate to estimate the energy used and the cost of charging your electric vehicle.",
+    metaDescription: "Free EV charging cost calculator. Enter your battery capacity, target charge percentage, and electricity rate to estimate the energy used and the cost.",
     primaryKeyword: "ev charging cost calculator",
     secondaryKeywords: ["electric car charging cost", "ev charge cost calculator", "cost to charge electric vehicle"],
     fields: [
@@ -428,7 +428,7 @@ export const environmentWave3Calculators: CalculatorDefinition[] = [
     title: "Water Footprint Calculator",
     shortDescription: "Estimate your shower water use per week and year.",
     seoTitle: "Water Footprint Calculator — Shower Water Use",
-    metaDescription: "Free water footprint calculator. Enter your shower length, showers per week, and showerhead flow rate to estimate the water you use weekly and yearly in litres and gallons.",
+    metaDescription: "Free water footprint calculator. Enter your shower length, showers per week, and showerhead flow rate to estimate the water you use weekly and yearly in litres.",
     primaryKeyword: "water footprint calculator",
     secondaryKeywords: ["shower water usage calculator", "water usage calculator", "water consumption calculator"],
     fields: [

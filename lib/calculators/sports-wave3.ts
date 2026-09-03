@@ -418,7 +418,7 @@ export const sportsWave3Calculators: CalculatorDefinition[] = [
     title: "Steps to Distance Calculator",
     shortDescription: "Convert your step count into kilometres and miles.",
     seoTitle: "Steps to Distance Calculator — Steps to Km and Miles",
-    metaDescription: "Free steps to distance calculator. Enter your step count and height to estimate the distance you walked in kilometres and miles using your personal stride length.",
+    metaDescription: "Free steps to distance calculator. Enter your step count and height to estimate the distance you walked in kilometres and miles using your personal stride.",
     primaryKeyword: "steps to distance calculator",
     secondaryKeywords: ["steps to miles calculator", "steps to km calculator", "stride length calculator"],
     fields: [

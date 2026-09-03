@@ -509,7 +509,7 @@ export const engineeringWave3Calculators: CalculatorDefinition[] = [
     title: "Reynolds Number Calculator",
     shortDescription: "Find Reynolds number and flow regime.",
     seoTitle: "Reynolds Number Calculator — Laminar or Turbulent Flow",
-    metaDescription: "Free Reynolds number calculator. Enter fluid density, velocity, characteristic length, and viscosity to find the Reynolds number and whether flow is laminar or turbulent.",
+    metaDescription: "Free Reynolds number calculator. Enter fluid density, velocity, characteristic length, and viscosity to find the Reynolds number and whether flow is laminar.",
     primaryKeyword: "reynolds number calculator",
     secondaryKeywords: ["laminar turbulent flow calculator", "fluid flow regime calculator", "reynolds number formula"],
     fields: [

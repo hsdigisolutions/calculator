@@ -218,6 +218,7 @@ export const healthExtraCalculators: CalculatorDefinition[] = [
     lastReviewed: "2026-08-20",
     sensitivity: "health",
     formulaSource: "U.S. Navy body composition method (Hodgdon & Beckett, 1984)",
+    sourceUrl: "https://www.fitness.navy.mil",
     slugEs: "calculadora-de-grasa-corporal",
     titleEs: "Calculadora de Grasa Corporal",
     shortDescriptionEs: "Estima la grasa corporal con el método de la Marina de EE. UU.",
@@ -537,7 +538,7 @@ export const healthExtraCalculators: CalculatorDefinition[] = [
     shortDescription: "Find your pace per km and per mile.",
     seoTitle: "Running Pace Calculator — Pace per KM & Mile",
     metaDescription:
-      "Free running pace calculator. Enter distance and time to get your pace per kilometre and per mile, plus average speed.",
+      "Free running pace calculator. Enter your distance and time to get your pace per kilometre and per mile, plus your average speed, in a single click.",
     primaryKeyword: "running pace calculator",
     secondaryKeywords: ["pace calculator", "race pace calculator", "minutes per mile"],
     fields: [

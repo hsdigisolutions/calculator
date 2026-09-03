@@ -22,7 +22,7 @@ export const datetimeR5Calculators: CalculatorDefinition[] = [
     shortDescription: "Add or subtract days from a date.",
     seoTitle: "Add Days Calculator — Add or Subtract Days From a Date",
     metaDescription:
-      "Free add days calculator. Add or subtract any number of days from a start date and see the resulting date and weekday.",
+      "Free add days calculator. Add or subtract any number of days from a start date to see the resulting date and weekday, skipping the manual counting.",
     primaryKeyword: "add days calculator",
     secondaryKeywords: [
       "date plus days",
@@ -105,7 +105,7 @@ export const datetimeR5Calculators: CalculatorDefinition[] = [
     shortDescription: "Find the ISO week number of a date.",
     seoTitle: "Week Number Calculator — ISO-8601 Week of the Year",
     metaDescription:
-      "Free week number calculator. Find the ISO-8601 week number and the day of the year for any date.",
+      "Free week number calculator. Find the ISO-8601 week number and the day of the year for any date, plus which week today falls in and the days left.",
     primaryKeyword: "week number calculator",
     secondaryKeywords: [
       "iso week number",
@@ -177,7 +177,7 @@ export const datetimeR5Calculators: CalculatorDefinition[] = [
     shortDescription: "Find what day of the week a date falls on.",
     seoTitle: "Day of the Week Calculator — What Day Was a Date",
     metaDescription:
-      "Free day of the week calculator. Find which weekday any past or future date falls on, and whether it is a weekend.",
+      "Free day of the week calculator. Find which weekday any past or future date falls on and whether it is a weekend, using the Gregorian calendar.",
     primaryKeyword: "day of the week calculator",
     secondaryKeywords: [
       "what day was i born",
@@ -249,7 +249,7 @@ export const datetimeR5Calculators: CalculatorDefinition[] = [
     shortDescription: "Check if a year is a leap year.",
     seoTitle: "Leap Year Calculator — Is It a Leap Year?",
     metaDescription:
-      "Free leap year calculator. Check whether a year is a leap year, how many days it has, and the next leap year.",
+      "Free leap year calculator. Check whether any year is a leap year, how many days it has, and find the next and previous leap years in one click.",
     primaryKeyword: "leap year calculator",
     secondaryKeywords: [
       "is it a leap year",
@@ -331,7 +331,7 @@ export const datetimeR5Calculators: CalculatorDefinition[] = [
     shortDescription: "Work out hours worked from a shift.",
     seoTitle: "Time Card Calculator — Hours Worked From Clock In/Out",
     metaDescription:
-      "Free time card calculator. Enter clock-in, clock-out and break time to get hours worked as a decimal and in H:MM.",
+      "Free time card calculator. Enter your clock-in, clock-out and break times to get total hours worked as a decimal and in H:MM, ideal for payroll.",
     primaryKeyword: "time card calculator",
     secondaryKeywords: [
       "hours worked calculator",
@@ -407,7 +407,7 @@ export const datetimeR5Calculators: CalculatorDefinition[] = [
     shortDescription: "Convert decimal hours to hours and minutes.",
     seoTitle: "Decimal Hours to Time Calculator — Decimal to H:MM",
     metaDescription:
-      "Free decimal hours to time calculator. Convert decimal hours like 7.75 into hours and minutes (H:MM) and total minutes.",
+      "Free decimal hours to time calculator. Convert decimal hours like 7.75 into hours and minutes (H:MM) and total minutes, ideal for payroll and billing.",
     primaryKeyword: "decimal hours to time calculator",
     secondaryKeywords: [
       "decimal to hours and minutes",
@@ -488,7 +488,7 @@ export const datetimeR5Calculators: CalculatorDefinition[] = [
     shortDescription: "Convert a Unix timestamp to a UTC date.",
     seoTitle: "Unix Timestamp Converter — Epoch Seconds to UTC Date",
     metaDescription:
-      "Free Unix timestamp converter. Turn epoch seconds into a readable UTC date and time and the weekday.",
+      "Free Unix timestamp converter. Turn epoch seconds into a readable UTC date, time and weekday, or convert any date back into a Unix timestamp instantly.",
     primaryKeyword: "unix timestamp converter",
     secondaryKeywords: [
       "epoch to date",
@@ -569,7 +569,7 @@ export const datetimeR5Calculators: CalculatorDefinition[] = [
     shortDescription: "Estimate total work hours in a year.",
     seoTitle: "Annual Work Hours Calculator — Work Hours Per Year",
     metaDescription:
-      "Free annual work hours calculator. Estimate total working hours per year from weekly hours and weeks worked.",
+      "Free annual work hours calculator. Estimate your total working hours per year from weekly hours and weeks worked, minus holidays and paid time off.",
     primaryKeyword: "annual work hours calculator",
     secondaryKeywords: [
       "work hours per year",
@@ -643,7 +643,7 @@ export const datetimeR5Calculators: CalculatorDefinition[] = [
     shortDescription: "Find someone's age on a specific date.",
     seoTitle: "Age on Date Calculator — Age at a Specific Date",
     metaDescription:
-      "Free age on date calculator. Find exact age in years, months and total days at any chosen date, not just today.",
+      "Free age on date calculator. Find an exact age in years, months and total days at any chosen date, not just today, perfect for eligibility checks.",
     primaryKeyword: "age on date calculator",
     secondaryKeywords: [
       "age at a specific date",
@@ -719,7 +719,7 @@ export const datetimeR5Calculators: CalculatorDefinition[] = [
     shortDescription: "Add hours and minutes to a time.",
     seoTitle: "Add Time Calculator — Add Hours and Minutes to a Time",
     metaDescription:
-      "Free add time calculator. Add hours and minutes to a start time and see the end time and any day rollover.",
+      "Free add time calculator. Add hours and minutes to any start time to see the resulting end time and whether the total rolls into the next day.",
     primaryKeyword: "add time calculator",
     secondaryKeywords: [
       "add hours to time",

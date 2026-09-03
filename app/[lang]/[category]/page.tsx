@@ -6,6 +6,7 @@ import { categoryMetadata } from "@/lib/seo";
 import { LOCALES, isLocale, type Locale, categorySlugFor } from "@/lib/i18n";
 
 export const dynamicParams = false;
+export const revalidate = 3600;
 
 export function generateStaticParams() {
   const params: { lang: string; category: string }[] = [];

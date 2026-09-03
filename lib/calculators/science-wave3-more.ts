@@ -9,7 +9,7 @@ export const scienceMoreCalculators: CalculatorDefinition[] = [
     title: "Wavelength Calculator",
     shortDescription: "Find wavelength and period from wave speed and frequency.",
     seoTitle: "Wavelength Calculator — Wave Speed and Frequency to Wavelength",
-    metaDescription: "Free wavelength calculator. Enter wave speed and frequency to find wavelength in metres and the wave period in seconds instantly. Ideal for sound, light, and radio problems.",
+    metaDescription: "Free wavelength calculator. Enter wave speed and frequency to find wavelength in metres and the wave period in seconds instantly. Ideal for sound, light.",
     primaryKeyword: "wavelength calculator",
     secondaryKeywords: ["wave speed frequency wavelength", "wavelength formula calculator", "frequency to wavelength"],
     fields: [
@@ -91,7 +91,7 @@ export const scienceMoreCalculators: CalculatorDefinition[] = [
     title: "Electric Power Calculator",
     shortDescription: "Find electrical power and resistance from voltage and current.",
     seoTitle: "Electric Power Calculator — Voltage and Current to Watts",
-    metaDescription: "Free electric power calculator. Enter voltage and current to find power in watts and the resistance in ohms instantly. Perfect for circuits, devices, and energy use.",
+    metaDescription: "Free electric power calculator. Enter voltage and current to find power in watts and the resistance in ohms instantly. Perfect for circuits, devices.",
     primaryKeyword: "electric power calculator",
     secondaryKeywords: ["watts calculator", "voltage current power calculator", "electrical power formula"],
     fields: [
@@ -173,7 +173,7 @@ export const scienceMoreCalculators: CalculatorDefinition[] = [
     title: "Gravitational Force Calculator",
     shortDescription: "Find the gravitational attraction between two masses.",
     seoTitle: "Gravitational Force Calculator — Newton's Law of Gravitation",
-    metaDescription: "Free gravitational force calculator. Enter two masses and their distance to find the gravitational attraction in newtons using Newton's law of gravitation. Fast and accurate.",
+    metaDescription: "Free gravitational force calculator. Enter two masses and their distance to find the gravitational attraction in newtons using Newton's law of gravitation.",
     primaryKeyword: "gravitational force calculator",
     secondaryKeywords: ["newtons law of gravitation calculator", "gravity force calculator", "force between two masses"],
     fields: [
@@ -255,7 +255,7 @@ export const scienceMoreCalculators: CalculatorDefinition[] = [
     title: "Thermal Expansion Calculator",
     shortDescription: "Find how much a material expands when heated.",
     seoTitle: "Thermal Expansion Calculator — Length Change from Heat",
-    metaDescription: "Free thermal expansion calculator. Enter original length, expansion coefficient, and temperature change to find the change in length and new length in metres. Great for engineering.",
+    metaDescription: "Free thermal expansion calculator. Enter original length, expansion coefficient, and temperature change to find the change in length and new length in metres.",
     primaryKeyword: "thermal expansion calculator",
     secondaryKeywords: ["linear expansion calculator", "coefficient of thermal expansion", "length change temperature"],
     fields: [
@@ -338,7 +338,7 @@ export const scienceMoreCalculators: CalculatorDefinition[] = [
     title: "Pressure Volume Calculator",
     shortDescription: "Find a gas's new volume using Boyle's law.",
     seoTitle: "Pressure Volume Calculator — Boyle's Law (P₁V₁ = P₂V₂)",
-    metaDescription: "Free pressure volume calculator using Boyle's law. Enter initial pressure, initial volume, and final pressure to find the new gas volume instantly. Ideal for chemistry and diving.",
+    metaDescription: "Free pressure volume calculator using Boyle's law. Enter initial pressure, initial volume, and final pressure to find the new gas volume instantly.",
     primaryKeyword: "pressure volume calculator",
     secondaryKeywords: ["boyles law calculator", "p1v1 p2v2 calculator", "gas volume calculator"],
     fields: [

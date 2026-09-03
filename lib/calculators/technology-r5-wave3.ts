@@ -9,7 +9,7 @@ export const technologyR5Calculators: CalculatorDefinition[] = [
     title: "Password Strength Calculator",
     shortDescription: "Estimate password entropy in bits from length and character set.",
     seoTitle: "Password Strength Calculator — Entropy in Bits",
-    metaDescription: "Free password strength calculator. Enter a password length and character set to estimate its entropy in bits and see whether it rates as weak, fair, strong, or very strong.",
+    metaDescription: "Free password strength calculator. Enter a password length and character set to estimate its entropy in bits and see whether it rates as weak, fair, strong.",
     primaryKeyword: "password strength calculator",
     secondaryKeywords: ["password entropy calculator", "password bits calculator", "how strong is my password"],
     fields: [
@@ -187,7 +187,7 @@ export const technologyR5Calculators: CalculatorDefinition[] = [
     title: "Image File Size Calculator",
     shortDescription: "Estimate an uncompressed image's size from its dimensions.",
     seoTitle: "Image File Size Calculator — Pixels and Bit Depth to Size",
-    metaDescription: "Free image file size calculator. Enter width, height, and bit depth to estimate an uncompressed image's size in megabytes and kilobytes. Ideal for planning storage.",
+    metaDescription: "Free image file size calculator. Enter width, height, and bit depth to estimate an uncompressed image's size in megabytes and kilobytes. Ideal for planning.",
     primaryKeyword: "image file size calculator",
     secondaryKeywords: ["image size calculator", "uncompressed image size", "bitmap size calculator"],
     fields: [
@@ -436,7 +436,7 @@ export const technologyR5Calculators: CalculatorDefinition[] = [
     title: "Cloud Storage Cost Calculator",
     shortDescription: "Estimate monthly and total cloud storage bills.",
     seoTitle: "Cloud Storage Cost Calculator — Monthly and Total Price",
-    metaDescription: "Free cloud storage cost calculator. Enter gigabytes stored, price per GB-month, and months to estimate your monthly and total cloud storage bill. Fast and clear.",
+    metaDescription: "Free cloud storage cost calculator. Enter gigabytes stored, price per GB-month, and months to estimate your monthly and total cloud storage bill.",
     primaryKeyword: "cloud storage cost calculator",
     secondaryKeywords: ["cloud storage pricing calculator", "s3 cost calculator", "storage cost estimate"],
     fields: [
@@ -519,7 +519,7 @@ export const technologyR5Calculators: CalculatorDefinition[] = [
     title: "API Rate Limit Calculator",
     shortDescription: "Project total API requests from a per-second rate.",
     seoTitle: "API Rate Limit Calculator — Requests Over Time",
-    metaDescription: "Free API rate limit calculator. Enter requests per second and a time window in hours to project total requests and the per-minute rate. Plan quotas with confidence.",
+    metaDescription: "Free API rate limit calculator. Enter requests per second and a time window in hours to project total requests and the per-minute rate. Plan quotas.",
     primaryKeyword: "api rate limit calculator",
     secondaryKeywords: ["requests per second calculator", "api quota calculator", "rate limit calculator"],
     fields: [
@@ -601,7 +601,7 @@ export const technologyR5Calculators: CalculatorDefinition[] = [
     title: "Network Latency Calculator",
     shortDescription: "Estimate propagation delay over a distance and medium.",
     seoTitle: "Network Latency Calculator — Distance to Propagation Delay",
-    metaDescription: "Free network latency calculator. Enter a distance in kilometres and the transmission medium to estimate the one-way and round-trip propagation delay in milliseconds.",
+    metaDescription: "Free network latency calculator. Enter a distance in kilometres and the transmission medium to estimate the one-way and round-trip propagation delay.",
     primaryKeyword: "network latency calculator",
     secondaryKeywords: ["propagation delay calculator", "ping distance calculator", "fiber latency calculator"],
     fields: [
@@ -695,7 +695,7 @@ export const technologyR5Calculators: CalculatorDefinition[] = [
     title: "Bandwidth Cost Calculator",
     shortDescription: "Estimate monthly and annual data transfer costs.",
     seoTitle: "Bandwidth Cost Calculator — Monthly and Annual Egress",
-    metaDescription: "Free bandwidth cost calculator. Enter monthly gigabytes transferred and the price per GB to estimate your monthly and annual bandwidth or egress bill. Fast and clear.",
+    metaDescription: "Free bandwidth cost calculator. Enter monthly gigabytes transferred and the price per GB to estimate your monthly and annual bandwidth or egress bill.",
     primaryKeyword: "bandwidth cost calculator",
     secondaryKeywords: ["data transfer cost calculator", "egress cost calculator", "cdn bandwidth cost"],
     fields: [
@@ -777,7 +777,7 @@ export const technologyR5Calculators: CalculatorDefinition[] = [
     title: "Compression Ratio Calculator",
     shortDescription: "Find the ratio and percentage saved after compression.",
     seoTitle: "Compression Ratio Calculator — Space Saved by Compression",
-    metaDescription: "Free compression ratio calculator. Enter the original and compressed sizes to find the compression ratio, the percentage of space saved, and the kilobytes saved.",
+    metaDescription: "Free compression ratio calculator. Enter the original and compressed sizes to find the compression ratio, the percentage of space saved, and the kilobytes.",
     primaryKeyword: "compression ratio calculator",
     secondaryKeywords: ["gzip savings calculator", "file compression calculator", "space saved calculator"],
     fields: [

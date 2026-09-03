@@ -151,7 +151,7 @@ export const mathExtraCalculators: CalculatorDefinition[] = [
     shortDescription: "Find the greatest common factor of numbers.",
     seoTitle: "GCF Calculator — Greatest Common Factor",
     metaDescription:
-      "Free GCF calculator. Find the greatest common factor (GCD) of two or more numbers, plus their least common multiple.",
+      "Free GCF calculator. Find the greatest common factor (GCD) of two or more numbers, along with their least common multiple and the steps behind it.",
     primaryKeyword: "gcf calculator",
     secondaryKeywords: ["greatest common factor", "gcd calculator", "hcf calculator"],
     fields: [
@@ -214,7 +214,7 @@ export const mathExtraCalculators: CalculatorDefinition[] = [
     shortDescription: "Find the least common multiple of numbers.",
     seoTitle: "LCM Calculator — Least Common Multiple",
     metaDescription:
-      "Free LCM calculator. Find the least common multiple of two or more numbers, plus their greatest common factor.",
+      "Free LCM calculator. Find the least common multiple of two or more numbers, along with their greatest common factor and the steps behind the answer.",
     primaryKeyword: "lcm calculator",
     secondaryKeywords: ["least common multiple", "lcm of fractions", "lowest common multiple"],
     fields: [

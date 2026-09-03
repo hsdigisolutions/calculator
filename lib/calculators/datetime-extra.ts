@@ -10,7 +10,7 @@ export const dateTimeExtraCalculators: CalculatorDefinition[] = [
     shortDescription: "Count the time between two dates.",
     seoTitle: "Date Difference Calculator — Days Between Dates",
     metaDescription:
-      "Free date difference calculator. Find the number of days, weeks, months and years between any two dates.",
+      "Free date difference calculator. Find the number of days, weeks, months and years between any two dates, with or without counting the end date.",
     primaryKeyword: "date difference calculator",
     secondaryKeywords: ["days between dates", "days calculator", "time between dates"],
     fields: [
@@ -76,7 +76,7 @@ export const dateTimeExtraCalculators: CalculatorDefinition[] = [
     shortDescription: "Count working days between two dates.",
     seoTitle: "Business Days Calculator — Working Days Between Dates",
     metaDescription:
-      "Free business days calculator. Count the working days (Monday–Friday) between two dates, excluding weekends.",
+      "Free business days calculator. Count the working days from Monday to Friday between two dates, automatically excluding weekends, for accurate deadlines.",
     primaryKeyword: "business days calculator",
     secondaryKeywords: ["working days calculator", "weekdays between dates", "business day count"],
     fields: [
@@ -141,7 +141,7 @@ export const dateTimeExtraCalculators: CalculatorDefinition[] = [
     shortDescription: "Find the duration between two times.",
     seoTitle: "Time Duration Calculator — Hours Between Two Times",
     metaDescription:
-      "Free time duration calculator. Find the hours and minutes between a start and end time, including across midnight.",
+      "Free time duration calculator. Find the exact hours and minutes between a start and end time, including durations that run across midnight, instantly.",
     primaryKeyword: "time duration calculator",
     secondaryKeywords: ["hours between times", "time difference calculator", "time card calculator"],
     fields: [

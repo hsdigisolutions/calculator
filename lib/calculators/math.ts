@@ -201,7 +201,7 @@ export const mathCalculators: CalculatorDefinition[] = [
     shortDescription: "Find the mean, median, min and max of a list.",
     seoTitle: "Average Calculator — Mean, Median, Min & Max",
     metaDescription:
-      "Free average calculator. Enter a list of numbers to get the mean, median, sum, count, minimum and maximum instantly.",
+      "Free average calculator. Enter a list of numbers to instantly get the mean, median, sum, count, minimum and maximum, with the full breakdown shown.",
     primaryKeyword: "average calculator",
     secondaryKeywords: ["mean calculator", "median calculator", "how to find the average"],
     fields: [

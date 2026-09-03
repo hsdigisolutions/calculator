@@ -91,7 +91,7 @@ export const technologyWave3Calculators: CalculatorDefinition[] = [
     title: "Hosting Bandwidth Calculator",
     shortDescription: "Estimate monthly bandwidth for a website.",
     seoTitle: "Hosting Bandwidth Calculator — Monthly Data Transfer",
-    metaDescription: "Free hosting bandwidth calculator. Enter monthly visitors, average page size, and page views per visit to estimate the data transfer your website needs each month.",
+    metaDescription: "Free hosting bandwidth calculator. Enter monthly visitors, average page size, and page views per visit to estimate the data transfer you need.",
     primaryKeyword: "hosting bandwidth calculator",
     secondaryKeywords: ["website bandwidth calculator", "monthly data transfer calculator", "server bandwidth estimate"],
     fields: [

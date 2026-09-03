@@ -74,7 +74,7 @@ export const educationCalculators: CalculatorDefinition[] = [
     shortDescription: "Calculate your grade point average.",
     seoTitle: "GPA Calculator — Free Grade Point Average Calculator",
     metaDescription:
-      "Free GPA calculator. Enter your letter grades and credit hours to compute your grade point average on the 4.0 scale.",
+      "Free GPA calculator. Enter your letter grades and credit hours to compute your grade point average on the 4.0 scale, with each course weighted right.",
     primaryKeyword: "gpa calculator",
     secondaryKeywords: ["grade point average calculator", "college gpa calculator", "4.0 scale gpa"],
     fields: [

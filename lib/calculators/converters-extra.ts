@@ -109,7 +109,7 @@ export const converterExtraCalculators: CalculatorDefinition[] = [
     shortDescription: "Convert between kg, lb, oz and more.",
     seoTitle: "Weight Converter — kg, lb, oz, grams, stone",
     metaDescription:
-      "Free weight converter. Convert between milligrams, grams, kilograms, tonnes, ounces, pounds and stone instantly.",
+      "Free weight converter. Convert between milligrams, grams, kilograms, tonnes, ounces, pounds and stone instantly, across metric and imperial units.",
     primaryKeyword: "weight converter",
     secondaryKeywords: ["kg to lbs", "grams to ounces", "pounds to kg"],
     slugEs: "conversor-de-peso",
@@ -235,7 +235,7 @@ export const converterExtraCalculators: CalculatorDefinition[] = [
     shortDescription: "Convert between bytes, KB, MB, GB and TB.",
     seoTitle: "Data Storage Converter — Bytes, KB, MB, GB, TB",
     metaDescription:
-      "Free data storage converter. Convert between bits, bytes, kilobytes, megabytes, gigabytes, terabytes and petabytes.",
+      "Free data storage converter. Convert between bits, bytes, kilobytes, megabytes, gigabytes, terabytes and petabytes using decimal or binary units.",
     primaryKeyword: "data storage converter",
     secondaryKeywords: ["mb to gb", "bytes to megabytes", "gb to tb"],
     fields: [

@@ -9,7 +9,7 @@ export const sportsR8Calculators: CalculatorDefinition[] = [
     title: "Running Calories Calculator",
     shortDescription: "Estimate calories burned on a run from weight and distance.",
     seoTitle: "Running Calories Calculator — Calories Burned Running",
-    metaDescription: "Free running calories calculator. Enter your bodyweight and the distance you ran to estimate how many calories you burned, using the standard distance-based method.",
+    metaDescription: "Free running calories calculator. Enter your bodyweight and the distance you ran to estimate how many calories you burned on your run instantly.",
     primaryKeyword: "running calories calculator",
     secondaryKeywords: ["calories burned running", "run calorie calculator", "running energy calculator"],
     fields: [
@@ -254,7 +254,7 @@ export const sportsR8Calculators: CalculatorDefinition[] = [
     title: "Power-to-Weight Ratio Calculator",
     shortDescription: "Calculate cycling power-to-weight in watts per kilogram.",
     seoTitle: "Power-to-Weight Ratio Calculator — Watts per Kg",
-    metaDescription: "Free power-to-weight ratio calculator for cyclists. Enter your power output in watts and your bodyweight to find your watts per kilogram, the key climbing metric.",
+    metaDescription: "Free power-to-weight ratio calculator for cyclists. Enter your power output in watts and bodyweight to find your watts per kilogram instantly.",
     primaryKeyword: "power to weight ratio calculator",
     secondaryKeywords: ["watts per kg calculator", "cycling power to weight", "w/kg calculator"],
     fields: [

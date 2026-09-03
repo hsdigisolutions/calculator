@@ -95,7 +95,7 @@ export const datetimeR8Calculators: CalculatorDefinition[] = [
     shortDescription: "Count the weeks and days between two dates.",
     seoTitle: "Weeks Between Dates Calculator — Whole Weeks and Days",
     metaDescription:
-      "Free weeks between dates calculator. Find the number of full weeks, leftover days and total days between two dates.",
+      "Free weeks between dates calculator. Find the number of full weeks, leftover days and total days between any two dates, ideal for planning and payroll.",
     primaryKeyword: "weeks between dates calculator",
     secondaryKeywords: [
       "how many weeks between dates",
@@ -246,7 +246,7 @@ export const datetimeR8Calculators: CalculatorDefinition[] = [
     shortDescription: "Find which quarter a date falls in.",
     seoTitle: "Fiscal Quarter Calculator — Which Quarter Is a Date In",
     metaDescription:
-      "Free fiscal quarter calculator. Find which calendar quarter (Q1–Q4) any date falls in, with the quarter label.",
+      "Free fiscal quarter calculator. Find which calendar quarter, Q1 through Q4, any date falls in, with the quarter label and its start and end dates.",
     primaryKeyword: "fiscal quarter calculator",
     secondaryKeywords: [
       "what quarter is it",
@@ -317,7 +317,7 @@ export const datetimeR8Calculators: CalculatorDefinition[] = [
     shortDescription: "Add two durations in hours and minutes.",
     seoTitle: "Time Addition Calculator — Add Hours and Minutes Together",
     metaDescription:
-      "Free time addition calculator. Add two durations in hours and minutes and get the total as H:MM and in total minutes.",
+      "Free time addition calculator. Add two durations in hours and minutes to get the combined total as H:MM and in total minutes, with no manual carrying.",
     primaryKeyword: "time addition calculator",
     secondaryKeywords: [
       "add hours and minutes",
@@ -394,7 +394,7 @@ export const datetimeR8Calculators: CalculatorDefinition[] = [
     shortDescription: "Convert hours and minutes to decimal hours.",
     seoTitle: "Time to Decimal Calculator — Hours and Minutes to Decimal",
     metaDescription:
-      "Free time to decimal calculator. Convert hours and minutes into decimal hours for payroll, billing and timesheets.",
+      "Free time to decimal calculator. Convert hours and minutes into decimal hours for payroll, billing and timesheets, and switch back to H:MM instantly.",
     primaryKeyword: "time to decimal calculator",
     secondaryKeywords: [
       "hours and minutes to decimal",

@@ -123,7 +123,7 @@ export const cookingR6Calculators: CalculatorDefinition[] = [
     shortDescription: "Convert oven temperatures between Celsius, Fahrenheit and gas mark.",
     seoTitle: "Oven Temperature Converter — Celsius, Fahrenheit, Gas Mark",
     metaDescription:
-      "Free oven temperature converter. Convert between Celsius, Fahrenheit and UK gas mark for any recipe, with the gas-mark conversion clearly flagged as approximate.",
+      "Free oven temperature converter. Convert between Celsius, Fahrenheit and UK gas mark for any recipe, with the gas-mark conversion clearly flagged.",
     primaryKeyword: "oven temperature converter",
     secondaryKeywords: ["celsius to fahrenheit oven", "gas mark to celsius", "fahrenheit to gas mark"],
     fields: [

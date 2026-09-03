@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { CATEGORIES } from "@/lib/categories";
-import { SITE_NAME, SITE_TAGLINE } from "@/lib/site";
+import { SITE_NAME } from "@/lib/site";
 import { Icon } from "@/components/Icon";
 import {
   type Locale,
@@ -14,6 +14,7 @@ const HALF = Math.ceil(CATEGORIES.length / 2);
 
 const FOOTER_STRINGS = {
   es: {
+    tagline: "Calcula lo que sea.",
     blurb: "Calculadoras gratuitas, rápidas y fiables para la vida cotidiana, las finanzas, la salud y mucho más.",
     categories: "Categorías",
     more: "Más",
@@ -22,10 +23,11 @@ const FOOTER_STRINGS = {
     privacy: "Política de privacidad",
     terms: "Términos del servicio",
     sitemap: "Mapa del sitio",
-    rights: "Todas las cálculos son estimaciones ofrecidas a título informativo; consulta nuestros",
+    rights: "Todos los cálculos son estimaciones ofrecidas a título informativo; consulta nuestros",
     termsWord: "términos",
   },
   en: {
+    tagline: "Calculate Anything.",
     blurb: "Free, fast and trustworthy calculators for everyday life, finance, health and more.",
     categories: "Categories",
     more: "More",
@@ -57,7 +59,7 @@ export function Footer({ locale = "en" }: { locale?: Locale }) {
               <span className="font-bold text-text-primary">{SITE_NAME}</span>
             </Link>
             <p className="mt-3 max-w-xs text-sm text-text-secondary">
-              {SITE_TAGLINE} {s.blurb}
+              {s.tagline} {s.blurb}
             </p>
           </div>
 

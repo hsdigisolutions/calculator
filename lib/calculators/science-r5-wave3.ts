@@ -9,7 +9,7 @@ export const scienceR5Calculators: CalculatorDefinition[] = [
     title: "Molarity Calculator",
     shortDescription: "Find solution concentration from moles and volume.",
     seoTitle: "Molarity Calculator — Moles per Litre Concentration",
-    metaDescription: "Free molarity calculator. Enter moles of solute and solution volume in litres to find molar concentration instantly in mol/L. Perfect for chemistry lab work and homework.",
+    metaDescription: "Free molarity calculator. Enter moles of solute and solution volume in litres to find molar concentration instantly in mol/L. Perfect for chemistry lab work.",
     primaryKeyword: "molarity calculator",
     secondaryKeywords: ["molar concentration calculator", "moles per litre calculator", "solution concentration calculator"],
     fields: [
@@ -255,7 +255,7 @@ export const scienceR5Calculators: CalculatorDefinition[] = [
     title: "Momentum Calculator",
     shortDescription: "Calculate linear momentum from mass and velocity.",
     seoTitle: "Momentum Calculator — Linear Momentum (p = mv)",
-    metaDescription: "Free momentum calculator. Enter mass and velocity to find linear momentum in kilogram-metres per second using p = mv. Perfect for physics homework and collisions.",
+    metaDescription: "Free momentum calculator. Enter mass and velocity to find linear momentum in kilogram-metres per second using p = mv. Perfect for physics homework.",
     primaryKeyword: "momentum calculator",
     secondaryKeywords: ["linear momentum calculator", "p=mv calculator", "mass velocity momentum"],
     fields: [
@@ -500,7 +500,7 @@ export const scienceR5Calculators: CalculatorDefinition[] = [
     title: "Projectile Motion Calculator",
     shortDescription: "Range, height, and flight time of a projectile.",
     seoTitle: "Projectile Motion Calculator — Range, Height, Flight Time",
-    metaDescription: "Free projectile motion calculator. Enter launch speed and angle to find the range, maximum height, and time of flight of a projectile. Perfect for physics homework.",
+    metaDescription: "Free projectile motion calculator. Enter launch speed and angle to find the range, maximum height, and time of flight of a projectile. Perfect for physics.",
     primaryKeyword: "projectile motion calculator",
     secondaryKeywords: ["projectile range calculator", "launch angle calculator", "trajectory calculator"],
     fields: [
@@ -666,7 +666,7 @@ export const scienceR5Calculators: CalculatorDefinition[] = [
     title: "Coulomb's Law Calculator",
     shortDescription: "Electrostatic force between two point charges.",
     seoTitle: "Coulomb's Law Calculator — Force Between Two Charges",
-    metaDescription: "Free Coulomb's law calculator. Enter two charges in coulombs and their separation in metres to find the electrostatic force between them in newtons. Great for physics.",
+    metaDescription: "Free Coulomb's law calculator. Enter two charges in coulombs and their separation in metres to find the electrostatic force between them in newtons.",
     primaryKeyword: "coulombs law calculator",
     secondaryKeywords: ["electrostatic force calculator", "charge force calculator", "coulomb force calculator"],
     fields: [
@@ -748,7 +748,7 @@ export const scienceR5Calculators: CalculatorDefinition[] = [
     title: "Mass-Energy Equivalence Calculator",
     shortDescription: "Convert mass to energy with E = mc².",
     seoTitle: "Mass-Energy Equivalence Calculator — E = mc²",
-    metaDescription: "Free E = mc² calculator. Enter a mass in kilograms to find the equivalent energy in joules and megajoules using Einstein's mass-energy equivalence. Great for physics.",
+    metaDescription: "Free E = mc² calculator. Enter a mass in kilograms to find the equivalent energy in joules and megajoules using Einstein's mass-energy equivalence.",
     primaryKeyword: "e=mc2 calculator",
     secondaryKeywords: ["mass energy equivalence calculator", "einstein energy calculator", "mass to energy calculator"],
     fields: [

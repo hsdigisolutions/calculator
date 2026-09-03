@@ -10,7 +10,7 @@ export const constructionExtraCalculators: CalculatorDefinition[] = [
     shortDescription: "Estimate concrete volume and bags needed.",
     seoTitle: "Concrete Calculator — Cubic Yards & Bags",
     metaDescription:
-      "Free concrete calculator. Estimate the cubic yards, cubic feet and number of bags of concrete needed for a slab.",
+      "Free concrete calculator. Estimate the cubic yards, cubic feet and number of bags of concrete needed for any slab, footing or column in seconds.",
     primaryKeyword: "concrete calculator",
     secondaryKeywords: ["concrete yardage calculator", "concrete bags calculator", "cubic yards of concrete"],
     fields: [

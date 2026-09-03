@@ -9,7 +9,7 @@ export const environmentR7Calculators: CalculatorDefinition[] = [
     title: "Tree Carbon Offset Calculator",
     shortDescription: "Find how many trees offset your yearly CO₂ emissions.",
     seoTitle: "Tree Carbon Offset Calculator — Trees to Offset CO₂",
-    metaDescription: "Free tree carbon offset calculator. Enter your annual CO₂ emissions and the CO₂ each tree absorbs to find how many trees you need to plant to offset your yearly carbon footprint.",
+    metaDescription: "Free tree carbon offset calculator. Enter your annual CO₂ emissions and the CO₂ each tree absorbs to find how many trees you need to plant to offset.",
     primaryKeyword: "tree carbon offset calculator",
     secondaryKeywords: ["trees to offset carbon", "carbon offset trees calculator", "how many trees to offset co2"],
     fields: [
@@ -91,7 +91,7 @@ export const environmentR7Calculators: CalculatorDefinition[] = [
     title: "Recycling Impact Calculator",
     shortDescription: "Estimate the CO₂ you save by recycling household materials.",
     seoTitle: "Recycling Impact Calculator — CO₂ Saved by Recycling",
-    metaDescription: "Free recycling impact calculator. Enter the kilograms of paper, plastic, and glass you recycle to estimate the carbon dioxide emissions you save compared with sending it to landfill.",
+    metaDescription: "Free recycling impact calculator. Enter the kilograms of paper, plastic, and glass you recycle to estimate the carbon dioxide emissions you save compared.",
     primaryKeyword: "recycling impact calculator",
     secondaryKeywords: ["recycling co2 savings calculator", "recycling carbon savings", "recycling benefits calculator"],
     fields: [
@@ -174,7 +174,7 @@ export const environmentR7Calculators: CalculatorDefinition[] = [
     title: "Rainwater Harvesting Calculator",
     shortDescription: "Estimate how much rainwater your roof can collect each year.",
     seoTitle: "Rainwater Harvesting Calculator — Roof Water Collection",
-    metaDescription: "Free rainwater harvesting calculator. Enter your roof area, annual rainfall, and collection efficiency to estimate how many litres of rainwater you could capture from your roof each year.",
+    metaDescription: "Free rainwater harvesting calculator. Enter your roof area, annual rainfall, and collection efficiency to estimate how many litres of rainwater you could.",
     primaryKeyword: "rainwater harvesting calculator",
     secondaryKeywords: ["rainwater collection calculator", "roof water harvesting calculator", "rain barrel calculator"],
     fields: [
@@ -256,7 +256,7 @@ export const environmentR7Calculators: CalculatorDefinition[] = [
     title: "LED Savings Calculator",
     shortDescription: "See what switching to LED bulbs saves per year.",
     seoTitle: "LED Savings Calculator — LED vs Incandescent Bulb Savings",
-    metaDescription: "Free LED savings calculator. Compare LED and incandescent bulbs by wattage and usage to estimate the electricity and money you save each year by switching your lighting to LED.",
+    metaDescription: "Free LED savings calculator. Compare LED and incandescent bulbs by wattage and usage to estimate the electricity and money you save each year by switching.",
     primaryKeyword: "led savings calculator",
     secondaryKeywords: ["led vs incandescent calculator", "led bulb savings calculator", "lighting energy savings calculator"],
     fields: [
@@ -342,7 +342,7 @@ export const environmentR7Calculators: CalculatorDefinition[] = [
     title: "Driving Emissions Calculator",
     shortDescription: "Estimate the CO₂ a car trip or year of driving produces.",
     seoTitle: "Driving Emissions Calculator — Car CO₂ from Miles and MPG",
-    metaDescription: "Free driving emissions calculator. Enter your miles driven and fuel economy to estimate the carbon dioxide your car produces, using the EPA factor of 8.89 kg of CO₂ per gallon of gasoline.",
+    metaDescription: "Free driving emissions calculator. Enter your miles driven and fuel economy to estimate the carbon dioxide your car produces, using the EPA factor of 8.89 kg.",
     primaryKeyword: "driving emissions calculator",
     secondaryKeywords: ["car co2 calculator", "vehicle emissions calculator", "car carbon footprint calculator"],
     fields: [
@@ -425,7 +425,7 @@ export const environmentR7Calculators: CalculatorDefinition[] = [
     title: "Diet Carbon Footprint Calculator",
     shortDescription: "Estimate the yearly CO₂ from your meat and dairy diet.",
     seoTitle: "Diet Carbon Footprint Calculator — Food CO₂ from Diet",
-    metaDescription: "Free diet carbon footprint calculator. Enter your weekly beef, chicken, and dairy consumption to estimate the annual carbon dioxide emissions from your diet using published food emission factors.",
+    metaDescription: "Free diet carbon footprint calculator. Enter your weekly beef, chicken, and dairy consumption to estimate the annual carbon dioxide emissions from your diet.",
     primaryKeyword: "diet carbon footprint calculator",
     secondaryKeywords: ["food carbon footprint calculator", "meat emissions calculator", "diet co2 calculator"],
     fields: [
@@ -508,7 +508,7 @@ export const environmentR7Calculators: CalculatorDefinition[] = [
     title: "Household Water Usage Calculator",
     shortDescription: "Estimate your household's daily and yearly water use.",
     seoTitle: "Household Water Usage Calculator — Daily & Yearly Water Use",
-    metaDescription: "Free household water usage calculator. Enter the number of people and gallons used per person per day to estimate your home's total daily and annual water consumption in gallons.",
+    metaDescription: "Free household water usage calculator. Enter the number of people and gallons used per person per day to estimate your home's total daily and annual water.",
     primaryKeyword: "household water usage calculator",
     secondaryKeywords: ["home water usage calculator", "daily water consumption calculator", "family water use calculator"],
     fields: [
@@ -591,7 +591,7 @@ export const environmentR7Calculators: CalculatorDefinition[] = [
     title: "Wind Turbine Output Calculator",
     shortDescription: "Estimate the power a wind turbine generates at a given wind speed.",
     seoTitle: "Wind Turbine Output Calculator — Wind Power from Speed",
-    metaDescription: "Free wind turbine output calculator. Enter blade radius, wind speed, efficiency, and air density to estimate the electrical power a wind turbine generates using the wind power equation.",
+    metaDescription: "Free wind turbine output calculator. Enter blade radius, wind speed, efficiency, and air density to estimate the electrical power a wind turbine generates.",
     primaryKeyword: "wind turbine output calculator",
     secondaryKeywords: ["wind power calculator", "wind turbine power calculator", "wind energy calculator"],
     fields: [
@@ -675,7 +675,7 @@ export const environmentR7Calculators: CalculatorDefinition[] = [
     title: "Compost Impact Calculator",
     shortDescription: "See how much food waste and CO₂ composting diverts each year.",
     seoTitle: "Compost Impact Calculator — Food Waste & CO₂ Diverted",
-    metaDescription: "Free compost impact calculator. Enter your weekly food waste to estimate the kilograms you divert from landfill each year and the greenhouse gas emissions composting helps you avoid.",
+    metaDescription: "Free compost impact calculator. Enter your weekly food waste to estimate the kilograms you divert from landfill each year and the greenhouse gas emissions.",
     primaryKeyword: "compost impact calculator",
     secondaryKeywords: ["composting benefits calculator", "food waste calculator", "compost co2 calculator"],
     fields: [
@@ -757,7 +757,7 @@ export const environmentR7Calculators: CalculatorDefinition[] = [
     title: "Plastic Footprint Calculator",
     shortDescription: "Estimate your yearly plastic use and its carbon cost.",
     seoTitle: "Plastic Footprint Calculator — Bottle Plastic & CO₂",
-    metaDescription: "Free plastic footprint calculator. Enter how many plastic bottles you use per week and their weight to estimate your annual plastic consumption in kilograms and its associated CO₂ emissions.",
+    metaDescription: "Free plastic footprint calculator. Enter how many plastic bottles you use per week and their weight to estimate your annual plastic consumption in kilograms.",
     primaryKeyword: "plastic footprint calculator",
     secondaryKeywords: ["plastic waste calculator", "plastic bottle footprint calculator", "single use plastic calculator"],
     fields: [

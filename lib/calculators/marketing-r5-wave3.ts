@@ -201,7 +201,7 @@ export const marketingR5Calculators: CalculatorDefinition[] = [
     shortDescription: "Find the percentage of visitors who convert.",
     seoTitle: "Conversion Rate Calculator — Visitors to Conversions",
     metaDescription:
-      "Free conversion rate calculator. Divide conversions by visitors to find the percentage that took action, the core measure of funnel and landing-page effectiveness.",
+      "Free conversion rate calculator. Divide conversions by visitors to find the percentage that took action, the core metric for funnel optimization.",
     primaryKeyword: "conversion rate calculator",
     secondaryKeywords: ["conversion rate formula", "website conversion rate", "landing page conversion"],
     fields: [

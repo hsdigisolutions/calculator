@@ -9,7 +9,7 @@ export const realestateR6Calculators: CalculatorDefinition[] = [
     title: "Price Per Square Foot Calculator",
     shortDescription: "Turn a property price and size into a per-square-foot figure.",
     seoTitle: "Price Per Square Foot Calculator — Compare Home Values",
-    metaDescription: "Free price per square foot calculator. Enter a property price and its square footage to find the cost per square foot and compare homes of different sizes fairly.",
+    metaDescription: "Free price per square foot calculator. Enter a property price and its square footage to find the cost per square foot and compare homes of different sizes.",
     primaryKeyword: "price per square foot calculator",
     secondaryKeywords: ["cost per square foot calculator", "home price per sq ft", "real estate price per square foot"],
     fields: [
@@ -90,7 +90,7 @@ export const realestateR6Calculators: CalculatorDefinition[] = [
     title: "Gross Rent Multiplier (GRM) Calculator",
     shortDescription: "Screen rental deals by dividing price by annual gross rent.",
     seoTitle: "Gross Rent Multiplier Calculator — GRM for Rentals",
-    metaDescription: "Free gross rent multiplier calculator. Divide a property's price by its annual gross rent to find the GRM and quickly screen rental investments against local benchmarks.",
+    metaDescription: "Free gross rent multiplier calculator. Divide a property's price by its annual gross rent to find the GRM and quickly screen rental investments.",
     primaryKeyword: "gross rent multiplier calculator",
     secondaryKeywords: ["grm calculator", "gross rent multiplier formula", "rental property grm"],
     fields: [
@@ -500,7 +500,7 @@ export const realestateR6Calculators: CalculatorDefinition[] = [
     title: "Mortgage Payoff Calculator",
     shortDescription: "See how many months to clear your loan and the interest it costs.",
     seoTitle: "Mortgage Payoff Calculator — Months to Pay Off and Interest",
-    metaDescription: "Free mortgage payoff calculator. Enter your balance, monthly payment, and rate to find how many months until the loan is paid off and the total interest you will pay.",
+    metaDescription: "Free mortgage payoff calculator. Enter your balance, monthly payment, and rate to find how many months until payoff and the total interest paid.",
     primaryKeyword: "mortgage payoff calculator",
     secondaryKeywords: ["loan payoff calculator", "mortgage payoff time", "early mortgage payoff calculator"],
     fields: [
@@ -585,7 +585,7 @@ export const realestateR6Calculators: CalculatorDefinition[] = [
     title: "Home Appreciation Calculator",
     shortDescription: "Project a home's future value and gain from an annual growth rate.",
     seoTitle: "Home Appreciation Calculator — Future Home Value",
-    metaDescription: "Free home appreciation calculator. Enter a current value, annual appreciation rate, and years to project a home's future value and total gain from compounding growth.",
+    metaDescription: "Free home appreciation calculator. Enter a current value, annual appreciation rate, and years to project a home's future value and total gain from compounding.",
     primaryKeyword: "home appreciation calculator",
     secondaryKeywords: ["home value appreciation calculator", "house appreciation calculator", "property appreciation calculator"],
     fields: [
