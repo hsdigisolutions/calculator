@@ -24,11 +24,15 @@ class Calcvora_Revalidate {
 		if ( ! $slug ) {
 			return '';
 		}
-		// Prefer the stored ES path for this entry; fall back to the /en English route.
-		$es_path = '';
-		$found   = Calcvora_Background_Process::find_by_slug( $slug );
-		if ( $found ) {
-			$es_path = (string) get_post_meta( $found, 'calc_es_path', true );
+		// Prefer the freshly-bundled slug map (always current with the plugin build),
+		// then the stored per-entry meta, then the English route as a last resort.
+		$map     = Calcvora_Slugs::es_paths();
+		$es_path = isset( $map[ $slug ] ) ? $map[ $slug ] : '';
+		if ( ! $es_path ) {
+			$found = Calcvora_Background_Process::find_by_slug( $slug );
+			if ( $found ) {
+				$es_path = (string) get_post_meta( $found, 'calc_es_path', true );
+			}
 		}
 		$path = $es_path ? $es_path : '/en/' . ltrim( $slug, '/' );
 		return self::base_url() . $path;

@@ -46,6 +46,10 @@ The Next.js front end fails soft — pages render from their built-in JSON data.
 
 == Changelog ==
 
+= 1.2.0 =
+* Fixed broken "Preview" links: the bundled slug map is regenerated from the live Spanish registry, so Spanish preview URLs point to the real translated paths (e.g. /negocios/calculadora-de-markup-a-margen) instead of English-fallback slugs.
+* Preview URLs now resolve from the freshly-bundled slug map first, so a plugin update fixes existing pages without re-saving each entry.
+
 = 1.1.0 =
 * REST endpoint aligned to /wp-json/wp/v2/calculator_page for the content seeder.
 * RankMath auto-enabled on the Calculator Pages CPT (title-setting toggle + filters).

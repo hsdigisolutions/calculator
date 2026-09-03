@@ -3,7 +3,7 @@
  * Plugin Name:       Calcvora SEO Manager
  * Plugin URI:        https://hscalculadora.com
  * Description:        Manage SEO for every Calcvora calculator page from WordPress — RankMath meta, index toggle, editable content, JSON-LD, and an optimization tracker. Headless: exposes everything over WPGraphQL to the Next.js front end.
- * Version:           1.1.0
+ * Version:           1.2.0
  * Requires at least: 6.2
  * Requires PHP:      7.4
  * Author:            HS Digital Solutions
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'CALCVORA_SEO_VERSION', '1.1.0' );
+define( 'CALCVORA_SEO_VERSION', '1.2.0' );
 define( 'CALCVORA_SEO_FILE', __FILE__ );
 define( 'CALCVORA_SEO_DIR', plugin_dir_path( __FILE__ ) );
 define( 'CALCVORA_SEO_URL', plugin_dir_url( __FILE__ ) );
