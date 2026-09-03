@@ -50,6 +50,39 @@ export const autoSportsR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard horsepower equation (torque × rpm ÷ 5252)",
+    slugEs: "calculadora-de-caballos-de-fuerza",
+    titleEs: "Calculadora de Caballos de Fuerza",
+    shortDescriptionEs: "Convierte el par motor y las RPM en caballos de fuerza.",
+    seoTitleEs: "Calculadora de Caballos de Fuerza — HP a partir de Par y RPM",
+    metaDescriptionEs:
+      "Calculadora de caballos de fuerza gratuita. Introduce el par del motor en lb-ft y las RPM para hallar los caballos de fuerza con la fórmula estándar hp = par × rpm ÷ 5252 al instante.",
+    primaryKeywordEs: "calculadora de caballos de fuerza",
+    secondaryKeywordsEs: ["calculadora de par a hp", "calculadora de hp", "calculadora de potencia del motor"],
+    formulaExplanationEs: "La potencia es la rapidez con la que se realiza un trabajo, y en un motor giratorio eso significa el par multiplicado por la velocidad de rotación. Cuando el par se mide en libras-pie y la velocidad en revoluciones por minuto, la constante 5252 convierte el producto en caballos de fuerza mecánicos. Ese número surge de combinar la definición de un caballo de fuerza, 33.000 pies-libra por minuto, con los 2π radianes de cada revolución, y explica por qué las curvas de par y potencia siempre se cruzan a 5252 rpm en un dinamómetro.",
+    explanationEs: "Los caballos de fuerza son la cifra estrella que se cita para casi todos los motores, pero no se miden directamente; se calculan a partir del par y la velocidad del motor, y esta calculadora de caballos de fuerza hace exactamente eso. Introduce el par que produce tu motor en libras-pie y las RPM a las que lo produce, y la herramienta devuelve la potencia correspondiente usando la fórmula estándar de la industria.\n\nLa distinción entre par y potencia confunde a muchos conductores. El par es la fuerza de giro que entrega el cigüeñal, mientras que la potencia describe con qué rapidez esa fuerza puede realizar trabajo en el tiempo. Como la potencia es fuerza por velocidad de rotación, el mismo par produce más potencia a mayores RPM, razón por la que los motores que giran libremente suelen ofrecer grandes cifras de potencia incluso con un par modesto. Entender esta relación te ayuda a leer una gráfica de dinamómetro, comparar motores de forma justa y apreciar por qué las relaciones de cambio permiten que un motor pequeño y revolucionado se sienta rápido.\n\nLas matemáticas se basan en la física y no en el marketing. Multiplicar el par en libras-pie por las RPM y dividir entre 5252 da los caballos al freno en ese punto de operación, el mismo cálculo usado para convertir las lecturas de par del dinamómetro en las curvas de potencia que ves en las reseñas. Aficionados que afinan un motor, estudiantes de mecánica y compradores que comparan especificaciones pueden usar esta calculadora para moverse con confianza entre par y potencia a cualquier régimen.",
+    exampleEs: { inputs: { torqueLbFt: 300, rpm: 5252 }, explanation: "300 lb-ft × 5252 ÷ 5252 = 300 hp; el par y la potencia siempre coinciden a 5252 rpm." },
+    faqsEs: [
+      {
+        question: "¿Por qué aparece el número 5252 en la fórmula de la potencia?",
+        answer: "La constante 5252 proviene de la definición de caballo de fuerza como 33.000 pies-libra de trabajo por minuto combinada con los 2π radianes de una revolución completa. Al dividir 33.000 entre 2π se obtiene aproximadamente 5252, el factor que convierte el par en libras-pie a un régimen dado en potencia. También es la razón por la que cada dinamómetro muestra las curvas de par y potencia cruzándose exactamente a 5252 rpm.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre par y potencia?",
+        answer: "El par es la fuerza de rotación que produce un motor, sentida como el empuje que pone en movimiento un vehículo, mientras que la potencia mide con qué rapidez esa fuerza puede realizar trabajo en el tiempo. Como la potencia es igual al par multiplicado por la velocidad de rotación, un motor revolucionado puede generar mucha potencia a partir de un par modesto. Ambos importan: el par gobierna el arranque y la sensación de aceleración, la potencia el rendimiento a alto régimen.",
+      },
+      {
+        question: "¿Esto da potencia en el cigüeñal o en las ruedas?",
+        answer: "La fórmula devuelve la potencia en el punto donde se midió el par. Si introduces el par del cigüeñal obtienes los caballos al freno en el cigüeñal, la cifra que citan los fabricantes. Si introduces el par medido en las ruedas en un dinamómetro de chasis, obtienes la potencia en las ruedas, que es menor porque la transmisión absorbe algo de potencia. Sé coherente sobre de dónde procede tu cifra de par al interpretar el resultado.",
+      },
+      {
+        question: "¿Puedo calcular el par si conozco la potencia?",
+        answer: "Sí, la relación se reordena fácilmente. El par en libras-pie es igual a la potencia multiplicada por 5252 y dividida entre las RPM. Esto es útil cuando una especificación indica la potencia máxima y las RPM a las que ocurre pero omite el par. Recuerda que la potencia máxima y el par máximo suelen darse a regímenes distintos, así que el par que calcules en el pico de potencia no es la cifra de par máximo del motor.",
+      },
+      {
+        question: "¿Por qué la potencia sigue subiendo al aumentar las RPM aunque el par baje?",
+        answer: "Como la potencia es el par multiplicado por las RPM, el aumento del régimen puede compensar con creces una caída gradual del par, de modo que la potencia sigue subiendo más allá del pico de par. Con el tiempo el par cae lo bastante rápido como para que la potencia también llegue a su pico, normalmente cerca del corte. Por eso los motores se engranan para mantenerse en su banda de alta potencia durante una aceleración fuerte, manteniendo las RPM altas donde la potencia es máxima.",
+      },
+    ],
   },
   {
     id: "engine-displacement",
@@ -102,6 +135,39 @@ export const autoSportsR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard engine displacement geometry",
+    slugEs: "calculadora-de-cilindrada-del-motor",
+    titleEs: "Calculadora de Cilindrada del Motor",
+    shortDescriptionEs: "Halla el tamaño del motor a partir del diámetro, la carrera y los cilindros.",
+    seoTitleEs: "Calculadora de Cilindrada del Motor — CC y Litros según Diámetro y Carrera",
+    metaDescriptionEs:
+      "Calculadora de cilindrada del motor gratuita. Introduce el diámetro, la carrera y el número de cilindros para hallar la cilindrada total en centímetros cúbicos y litros con la fórmula estándar.",
+    primaryKeywordEs: "calculadora de cilindrada del motor",
+    secondaryKeywordsEs: ["calculadora de tamaño del motor", "calculadora de diámetro y carrera", "calculadora de cc del motor"],
+    formulaExplanationEs: "La cilindrada de un motor es el volumen total que barren sus pistones en un ciclo. Cada cilindro tiene un diámetro circular, por lo que su volumen barrido es el área de ese círculo, π dividido entre cuatro por el diámetro al cuadrado, multiplicado por la longitud de la carrera que recorre el pistón. Convertir el diámetro y la carrera de milímetros a centímetros da el volumen en centímetros cúbicos. Al multiplicar por el número de cilindros se totaliza todo el motor, y al dividir entre 1.000 se expresa en litros.",
+    explanationEs: "La cilindrada del motor, el volumen combinado que barren todos los pistones, es la cifra que más se usa para describir el tamaño de un motor, y esta calculadora de cilindrada del motor la deriva de las dimensiones fundamentales de diámetro, carrera y número de cilindros. Introduce el diámetro y la carrera en milímetros y el número de cilindros, y la herramienta devuelve la cilindrada tanto en centímetros cúbicos como en litros.\n\nLa cilindrada importa porque define en gran medida el carácter de un motor. Un mayor volumen barrido generalmente mueve más aire y combustible por ciclo, lo que tiende a elevar el par y el potencial de potencia, y también influye en los tramos fiscales, las categorías de seguro y las clases de competición en muchos países. Saber cómo se combinan el diámetro y la carrera para producir ese volumen ayuda a entender por qué dos motores de la misma cilindrada pueden sentirse muy distintos: un diámetro amplio con carrera corta gira libremente, mientras que un diámetro estrecho con carrera larga favorece el par a bajas vueltas.\n\nEl cálculo trata cada cilindro como un cilindro en el sentido geométrico. El diámetro circular da un área de sección, la carrera da la altura que barre el pistón, y multiplicar ambos da el volumen de un cilindro. Escalar por el número de cilindros totaliza el motor. Mecánicos que reconstruyen un motor, aficionados que comparan especificaciones y estudiantes de ingeniería pueden usar esta herramienta para pasar de las medidas brutas a la cifra familiar de cilindrada de forma rápida y precisa.",
+    exampleEs: { inputs: { boreMm: 86, strokeMm: 86, cylinders: 4 }, explanation: "(π ÷ 4) × 8,6² × 8,6 × 4 ≈ 1998 cc, o cerca de 2,0 litros — un clásico motor cuadrado de cuatro cilindros." },
+    faqsEs: [
+      {
+        question: "¿Qué son el diámetro y la carrera?",
+        answer: "El diámetro es el ancho de cada cilindro, el orificio circular en el que se mueve el pistón, mientras que la carrera es la distancia que recorre el pistón desde la parte inferior hasta la superior de ese cilindro. Juntos definen el volumen barrido de un cilindro. Ambos suelen indicarse en milímetros en la ficha técnica de un motor, y ambos son necesarios junto con el número de cilindros para calcular la cilindrada total con precisión.",
+      },
+      {
+        question: "¿Cómo convierto la cilindrada a litros?",
+        answer: "La cilindrada en litros es simplemente la cifra en centímetros cúbicos dividida entre 1.000, ya que un litro equivale a 1.000 centímetros cúbicos. Así, un motor de 1.998 cc es de unos 2,0 litros. Los fabricantes suelen redondear a un decimal por marketing, por lo que un motor de 1.998 cc o 2.499 cc se vende como de 2,0 o 2,5 litros. Esta calculadora muestra ambas cifras para que veas el volumen exacto.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre un motor supercuadrado y uno subcuadrado?",
+        answer: "Un motor supercuadrado tiene un diámetro mayor que su carrera, lo que le permite girar más alto y suele favorecer la potencia máxima, común en motores deportivos y de competición. Un motor subcuadrado o de carrera larga tiene una carrera mayor que su diámetro, tendiendo a producir un fuerte par a bajas vueltas, común en camiones y diseños antiguos. Un motor cuadrado tiene el diámetro igual a la carrera, equilibrando ambas características.",
+      },
+      {
+        question: "¿Mayor cilindrada significa siempre más potencia?",
+        answer: "No siempre. La cilindrada fija el aire y el combustible potenciales que un motor puede procesar, así que en igualdad de condiciones un motor más grande da más potencia. Pero la sobrealimentación, límites de RPM más altos, mejor respiración y el afinado moderno permiten que motores pequeños igualen o superen a los grandes. Un 2,0 litros turboalimentado puede superar a un 3,0 litros atmosférico. La cilindrada es un factor importante entre varios que determinan la salida de un motor.",
+      },
+      {
+        question: "¿Por qué se usa la cilindrada para impuestos y clases de competición?",
+        answer: "La cilindrada es una medida estable y fácil de verificar del tamaño del motor que se correlaciona en general con la potencia y el consumo, lo que la hace una base conveniente para la regulación. Muchos países fijan los tramos de impuestos y grupos de seguro por litros de motor, y los organizadores de competiciones definen clases por límites de cilindrada para mantener una competencia justa. Como está fijada por la geometría del motor, no puede cambiarse discretamente como un afinado.",
+      },
+    ],
   },
   {
     id: "tire-pressure-temp",
@@ -153,6 +219,39 @@ export const autoSportsR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Ideal gas law rule of thumb (~1 psi per 10°F)",
+    slugEs: "calculadora-de-presion-de-neumaticos",
+    titleEs: "Calculadora de Presión de Neumáticos por Temperatura",
+    shortDescriptionEs: "Observa cómo la temperatura desplaza la presión de tus neumáticos.",
+    seoTitleEs: "Calculadora de Presión de Neumáticos — Efecto del Cambio de Temperatura en el PSI",
+    metaDescriptionEs:
+      "Calculadora de presión de neumáticos gratuita. Introduce tu PSI actual y un cambio de temperatura para estimar la nueva presión, con la regla de aproximadamente 1 psi por cada 10 °F.",
+    primaryKeywordEs: "calculadora de presión de neumáticos",
+    secondaryKeywordsEs: ["calculadora de presión de neumáticos por temperatura", "calculadora de psi por temperatura", "calculadora de presión de neumáticos en frío"],
+    formulaExplanationEs: "El aire dentro de un neumático se comporta como un gas, por lo que su presión sube y baja con la temperatura a volumen aproximadamente constante. Una regla práctica muy usada es que la presión del neumático cambia cerca de una libra por pulgada cuadrada por cada diez grados Fahrenheit de cambio de temperatura. Dividir el cambio de temperatura entre diez estima el desplazamiento de presión, que se suma a tu presión actual cuando calienta y se resta cuando enfría, dando la nueva lectura esperada.",
+    explanationEs: "La presión de los neumáticos no es un número fijo; varía con el clima porque el aire de su interior se expande con el calor y se contrae con el frío, y esta calculadora de presión de neumáticos por temperatura estima cuánto. Introduce tu presión actual y el cambio de temperatura desde que la ajustaste, positivo si hace más calor y negativo si hace más frío, y la herramienta devuelve la presión ajustada y el tamaño del cambio.\n\nEsto importa más de lo que la mayoría de conductores cree. Una ola de frío puede bajar tus neumáticos varios psi por debajo de la cifra recomendada, activando la luz de advertencia del tablero, aumentando la resistencia a la rodadura y el consumo, y perjudicando el agarre y la vida del neumático. Un día caluroso o un viaje largo y rápido hacen lo contrario, elevando la presión por encima del objetivo. Como el efecto es predecible, puedes anticiparlo: ajusta las presiones pensando en la estación y entiende por qué la luz aparece la primera mañana helada.\n\nLa estimación se basa en la conocida pauta de aproximadamente un psi por cada diez grados Fahrenheit. Proviene de la ley de los gases que relaciona la presión con la temperatura en un volumen sellado y prácticamente fijo. La regla es una aproximación, no una cifra de laboratorio, pero es lo bastante cercana para planificar y para verificar una luz de advertencia. Ajusta y comprueba siempre las presiones con los neumáticos fríos, usando el valor recomendado de tu vehículo, y trata esta calculadora como una guía de cómo se moverá la lectura.",
+    exampleEs: { inputs: { currentPsi: 32, tempChangeF: -30 }, explanation: "Una caída de 30 °F reduce la presión unos 3 psi, así que 32 psi baja a aproximadamente 29 psi." },
+    faqsEs: [
+      {
+        question: "¿Por qué cambia la presión de los neumáticos con la temperatura?",
+        answer: "El aire sellado dentro de un neumático sigue las leyes de los gases: a volumen aproximadamente constante, su presión sube al calentarse y baja al enfriarse. Cuando las temperaturas caen de noche o con la estación, el aire se contrae y la presión marca más baja; cuando el día calienta o el neumático se calienta al conducir, la presión sube. Esto es física normal, no una fuga, y por eso las presiones deben comprobarse con los neumáticos fríos.",
+      },
+      {
+        question: "¿Cuánto cambia la presión por grado?",
+        answer: "Una regla práctica común es cerca de una libra por pulgada cuadrada por cada diez grados Fahrenheit de cambio de temperatura, o aproximadamente un psi por cada cinco o seis grados Celsius. Así, una variación de veinte grados Fahrenheit desplaza la presión unos dos psi. Es una aproximación que funciona bien para neumáticos de coche típicos cerca de la inflación normal, y es lo bastante precisa para anticipar luces de advertencia y ajustes estacionales.",
+      },
+      {
+        question: "¿Debo ajustar la presión en frío o en caliente?",
+        answer: "Ajusta y comprueba siempre la presión de los neumáticos cuando estén fríos, es decir, antes de conducir o tras varias horas de reposo, porque conducir calienta los neumáticos y eleva temporalmente la lectura. La presión impresa en la jamba de la puerta se refiere a la presión en frío. Si debes comprobar neumáticos calientes, espera que marquen unos psi más que el objetivo en frío, y no purgues aire para compensar.",
+      },
+      {
+        question: "¿Por qué aparece mi advertencia de baja presión en las mañanas frías?",
+        answer: "Al caer las temperaturas de noche, el aire de tus neumáticos se contrae y la presión puede bajar varios psi, suficiente para activar el sistema de control de presión. Por eso la luz de advertencia suele aparecer la primera mañana fría del otoño. Normalmente los neumáticos no están dañados; simplemente necesitan reponerse a la presión recomendada en frío. Si la luz persiste tras inflarlos, revisa los neumáticos por una fuga lenta.",
+      },
+      {
+        question: "¿Es exacta la regla de un psi por cada diez grados?",
+        answer: "No, es una aproximación práctica más que una ley precisa. El cambio exacto depende de la presión inicial, del volumen del neumático y de la altitud, y se deriva de la relación del gas ideal entre presión y temperatura absoluta. Para neumáticos de coche cotidianos a inflación normal la regla es lo bastante cercana para planificar ajustes estacionales y entender una luz de advertencia. Para aplicaciones críticas, mide directamente con un manómetro preciso.",
+      },
+    ],
   },
   {
     id: "towing-capacity",
@@ -204,6 +303,39 @@ export const autoSportsR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "GCWR-based towing capacity method",
+    slugEs: "calculadora-de-capacidad-de-remolque",
+    titleEs: "Calculadora de Capacidad de Remolque",
+    shortDescriptionEs: "Estima cuánto puede remolcar tu vehículo con seguridad.",
+    seoTitleEs: "Calculadora de Capacidad de Remolque — Peso Máximo de Remolque según el GCWR",
+    metaDescriptionEs:
+      "Calculadora de capacidad de remolque gratuita. Introduce el GCWR de tu vehículo, el peso en vacío y la carga de pasajeros y equipaje para estimar el peso máximo de remolque que puedes arrastrar con seguridad.",
+    primaryKeywordEs: "calculadora de capacidad de remolque",
+    secondaryKeywordsEs: ["calculadora de peso de remolque", "calculadora de remolque máximo", "calculadora de remolque gcwr"],
+    formulaExplanationEs: "El peso bruto combinado, o GCWR, es el máximo que tu vehículo cargado y tu remolque cargado pueden pesar juntos. Restar el peso en vacío del vehículo, su peso vacío, deja la carga total que la combinación aún puede llevar. Quitar el peso de los pasajeros y el equipaje que ya van dentro del vehículo deja lo que resta para el remolque y todo lo que lleva. Ese resto es el remolque más pesado que puedes arrastrar sin superar la clasificación combinada del fabricante.",
+    explanationEs: "Remolcar con seguridad empieza por saber cuánto remolque puede arrastrar tu vehículo una vez cargado, y esta calculadora de capacidad de remolque lo resuelve a partir de las clasificaciones del fabricante y tu carga real. Introduce el peso bruto combinado, el peso en vacío del vehículo y el peso de los pasajeros y el equipaje a bordo, y la herramienta devuelve el peso máximo de remolque que te queda.\n\nLa idea clave es que la clasificación máxima de remolque anunciada de una camioneta supone un vehículo casi vacío. Cada pasajero, caja de herramientas y depósito lleno consume presupuesto del peso combinado, así que una familia y su equipaje pueden reducir la capacidad real de remolque en varios cientos de libras. Trabajar desde el peso bruto combinado en lugar de la cifra destacada de remolque da un número mucho más honesto, que protege tu transmisión, frenos y neumáticos y te mantiene dentro de los límites legales.\n\nEl método es deliberadamente conservador y sencillo. El GCWR limita el peso total del vehículo más el remolque. Quitar el peso vacío del vehículo y luego el peso de todo y todos los que has cargado dentro deja el peso disponible para el remolque y su contenido. Esto es una estimación para planificar, no un sustituto de pesar tu conjunto real en una báscula y comprobar el peso en la lanza y las clasificaciones del enganche, pero muestra rápidamente si un remolque dado es realista antes de enganchar. Confirma siempre las cifras con tu manual del propietario y la etiqueta de la jamba de la puerta.",
+    exampleEs: { inputs: { gcwr: 12000, curbWeight: 6000, passengerCargoWeight: 1000 }, explanation: "12.000 GCWR − 6.000 en vacío − 1.000 pasajeros y equipaje = 5.000 lb disponibles para el remolque." },
+    faqsEs: [
+      {
+        question: "¿Qué es el GCWR?",
+        answer: "El GCWR significa peso bruto combinado, el peso total máximo que el fabricante permite para tu vehículo totalmente cargado y tu remolque totalmente cargado juntos. Aparece en el manual del propietario y a veces en una etiqueta de la jamba de la puerta. Como limita todo el conjunto, es el punto de partida correcto para calcular cuánto puedes remolcar realmente una vez contados los pasajeros y el equipaje, a diferencia de la optimista cifra destacada de remolque.",
+      },
+      {
+        question: "¿Por qué mi capacidad real de remolque es menor que la cifra anunciada?",
+        answer: "Las clasificaciones máximas de remolque anunciadas suelen suponer un vehículo ligeramente cargado con solo un conductor a bordo. En la práctica, pasajeros, combustible, herramientas y equipaje suman peso que cuenta contra el peso bruto combinado, dejando menos presupuesto para el remolque. Un grupo de personas y su equipaje puede recortar la capacidad útil de remolque en varios cientos de libras, así que calcular desde el GCWR y tu carga real da un número mucho más realista y seguro.",
+      },
+      {
+        question: "¿Qué es el peso en vacío?",
+        answer: "El peso en vacío es el peso del vehículo tal como está listo para conducir con todo el equipamiento estándar y los fluidos, incluido el depósito de combustible lleno, pero sin pasajeros ni equipaje. Es el peso base antes de añadir personas y carga. Restar el peso en vacío del peso bruto combinado muestra cuánta carga total puede llevar la combinación de vehículo y remolque entre ambos.",
+      },
+      {
+        question: "¿Esto tiene en cuenta el peso sobre la lanza?",
+        answer: "No, esta calculadora estima solo el peso máximo del remolque. El peso sobre la lanza, la fuerza descendente que el remolque ejerce sobre el enganche, es un límite aparte que debería rondar el diez a quince por ciento del peso del remolque para un remolcado estable. También debes mantenerte dentro de la clasificación del enganche y del eje trasero. Comprueba siempre el peso sobre la lanza y las especificaciones del enganche junto con esta cifra antes de remolcar.",
+      },
+      {
+        question: "¿Debo remolcar justo hasta el límite calculado?",
+        answer: "Es prudente dejar un margen de seguridad en lugar de remolcar al máximo exacto. Cargar hasta el límite exige el motor, la transmisión, los frenos y los neumáticos, especialmente en pendientes o con calor, y no deja margen para errores en tus estimaciones de peso. Mantenerte cómodamente por debajo de la capacidad calculada mejora el control, reduce el desgaste y da un colchón para el agua, combustible o equipaje extra que suelen acumular los viajes.",
+      },
+    ],
   },
   {
     id: "fuel-savings",
@@ -259,6 +391,39 @@ export const autoSportsR5Calculators: CalculatorDefinition[] = [
     lastReviewed: "2026-08-30",
     formulaSource: "U.S. EPA fuel economy",
     sourceUrl: "https://www.fueleconomy.gov/",
+    slugEs: "calculadora-de-ahorro-de-combustible",
+    titleEs: "Calculadora de Ahorro de Combustible",
+    shortDescriptionEs: "Compara los costos anuales de combustible de dos vehículos.",
+    seoTitleEs: "Calculadora de Ahorro de Combustible — Ahorro Anual por Mejor Rendimiento",
+    metaDescriptionEs:
+      "Calculadora de ahorro de combustible gratuita. Compara dos vehículos por millas anuales, rendimiento antiguo y nuevo, y precio del combustible para ver cuánto ahorras cada año al cambiar.",
+    primaryKeywordEs: "calculadora de ahorro de combustible",
+    secondaryKeywordsEs: ["calculadora de ahorro de gasolina", "calculadora de ahorro de mpg", "calculadora de ahorro de rendimiento de combustible"],
+    formulaExplanationEs: "El costo anual de combustible de cada vehículo es su kilometraje anual dividido entre su rendimiento, lo que da los galones consumidos, multiplicado por el precio por galón. Dividir entre una cifra mayor de millas por galón significa menos galones y una factura más pequeña. Restar el costo del vehículo más eficiente del actual deja el ahorro anual. Como el kilometraje y el precio son compartidos, la diferencia proviene por completo del cambio en el rendimiento de combustible entre los dos coches.",
+    explanationEs: "Cuando estás sopesando un vehículo más eficiente, la pregunta que importa es cuántos dólares ahorra realmente un mejor rendimiento cada año, y esta calculadora de ahorro de combustible la responde directamente. Introduce tu kilometraje anual, el rendimiento de tu vehículo actual, el rendimiento del vehículo que estás considerando y el precio del combustible, y la herramienta muestra la factura anual de combustible de cada coche y el ahorro entre ambos.\n\nVer los dos costos anuales lado a lado convierte una cifra abstracta de rendimiento en dinero. Las mejoras de rendimiento ofrecen rendimientos decrecientes: pasar de 15 a 20 mpg ahorra mucho más combustible que pasar de 40 a 45, aunque ambos sean ganancias de cinco mpg, porque los galones consumidos dependen del inverso del rendimiento. Esta calculadora capta ese efecto automáticamente, lo que ayuda a juzgar si un coche más eficiente, un híbrido o simplemente mejores hábitos de conducción justifican su costo.\n\nEl cálculo es transparente y fácil de comprobar. Convierte tus millas anuales en galones para cada vehículo, valora esos galones al precio de surtidor que introduces y resta para hallar el ahorro. Como el kilometraje y el precio del combustible se comparten entre ambos, toda la diferencia refleja el cambio de eficiencia. Prueba un precio de combustible mayor, más millas anuales o un salto de rendimiento más grande y observa crecer el ahorro anual, lo que te da una base clara y personalizada para decidir si el cambio vale la pena.",
+    exampleEs: { inputs: { annualMiles: 12000, oldMpg: 20, newMpg: 30, fuelPrice: 4 }, explanation: "Actual: 12.000 ÷ 20 × $4 = $2.400. Nuevo: 12.000 ÷ 30 × $4 = $1.600. Ahorras $800 al año." },
+    faqsEs: [
+      {
+        question: "¿Por qué se reduce el ahorro de combustible con un rendimiento alto?",
+        answer: "El combustible consumido depende del inverso del rendimiento, así que las ganancias importan más en el rango bajo. Pasar de 15 a 20 mpg ahorra muchos más galones que pasar de 40 a 45, aunque ambos sean mejoras de cinco mpg. Por eso una mejora modesta de eficiencia en un vehículo gastón puede ahorrar más dinero que una gran mejora en uno ya eficiente. La calculadora capta esto automáticamente mediante el paso de millas divididas entre rendimiento.",
+      },
+      {
+        question: "¿Qué kilometraje anual debo introducir?",
+        answer: "Usa el número de millas que realistamente esperas conducir en un año. Muchos conductores recorren entre 10.000 y 15.000 millas anuales, pero los trayectos, viajes por carretera y desplazamientos de trabajo varían mucho. Si no estás seguro, comprueba tu odómetro contra la cifra del año pasado o tus registros de servicio. Un mayor kilometraje amplifica el ahorro de combustible, así que usar una estimación precisa mantiene la comparación honesta en lugar de exagerar el beneficio de cambiar.",
+      },
+      {
+        question: "¿Esto incluye el costo de comprar el nuevo vehículo?",
+        answer: "No, esta calculadora compara solo los costos anuales de combustible entre dos cifras de rendimiento. No tiene en cuenta el precio de compra, la financiación, el seguro ni las diferencias de mantenimiento entre los vehículos. Usa el ahorro anual de combustible como un dato dentro de una decisión mayor. Para juzgar si un coche más eficiente se paga solo, compara el ahorro anual mostrado aquí con cualquier costo inicial extra a lo largo de los años que pienses conservarlo.",
+      },
+      {
+        question: "¿Puedo usar esto para comparar gasolina y diésel o un híbrido?",
+        answer: "Sí, siempre que ambos vehículos usen el mismo combustible con precio por galón, la comparación es directa. Si los dos usan combustibles distintos a precios distintos, esta versión sencilla, que comparte un precio de combustible, no será precisa. Para una comparación equivalente de eficiencia con el mismo combustible, o para probar el efecto del mayor rendimiento de un híbrido, introduce el rendimiento de cada vehículo y observa la diferencia anual a tu precio local.",
+      },
+      {
+        question: "¿Cómo afecta el precio del combustible al ahorro?",
+        answer: "El precio del combustible escala el ahorro directamente: cuanto mayor es el precio por galón, más vale cada galón evitado, así que el ahorro anual por un mejor rendimiento crece. Cuando los precios se disparan, la ventaja de un vehículo eficiente se amplía, y cuando bajan se reduce. Como el precio futuro es incierto, conviene probar varios valores, como el precio de hoy y uno más alto, para ver la sensibilidad de tu ahorro al surtidor.",
+      },
+    ],
   },
   {
     id: "ffmi",
@@ -311,6 +476,39 @@ export const autoSportsR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Kouri et al. 1995 (fat-free mass index)",
+    slugEs: "calculadora-de-ffmi",
+    titleEs: "Calculadora de FFMI",
+    shortDescriptionEs: "Mide la musculatura con el índice de masa libre de grasa.",
+    seoTitleEs: "Calculadora de FFMI — Índice de Masa Libre de Grasa según Peso y Grasa Corporal",
+    metaDescriptionEs:
+      "Calculadora de FFMI gratuita. Introduce tu peso, estatura y porcentaje de grasa corporal para hallar tu índice de masa libre de grasa ajustado por estatura y tu masa magra en kilogramos.",
+    primaryKeywordEs: "calculadora de ffmi",
+    secondaryKeywordsEs: ["calculadora de índice de masa libre de grasa", "calculadora de índice de masa magra", "calculadora de musculatura"],
+    formulaExplanationEs: "El índice de masa libre de grasa divide tu masa corporal magra en kilogramos entre tu estatura en metros al cuadrado, reflejando la estructura del índice de masa corporal pero contando solo músculo, hueso y órganos en lugar de grasa. La masa magra es el peso corporal multiplicado por uno menos tu fracción de grasa corporal. El término extra, 6,1 por la diferencia entre 1,8 metros y tu estatura, es una normalización que ajusta la puntuación para que personas más altas y más bajas puedan compararse en la misma escala.",
+    explanationEs: "El FFMI, el índice de masa libre de grasa, es una forma de estimar cuán musculoso eres en relación con tu estatura, y a diferencia del simple índice de masa corporal ignora la grasa por completo, lo que lo hace mucho más útil para atletas y levantadores. Esta calculadora de FFMI toma tu peso, estatura y porcentaje de grasa corporal y devuelve tu FFMI ajustado por estatura junto con tu masa corporal magra en kilogramos.\n\nEl índice responde a una pregunta que el peso corporal por sí solo no puede: ¿esa masa es músculo o grasa? Dos personas con el mismo IMC pueden tener físicos completamente distintos, así que el IMC a menudo etiqueta a atletas musculosos como con sobrepeso. Al eliminar la grasa y escalar la masa magra a la estatura, el FFMI produce un número que sigue la musculatura real. Los hombres entrenados y naturales suelen situarse en los veintipocos, y valores que superan alrededor de 25 se citan a menudo como difíciles de alcanzar sin ayuda, razón por la que la métrica aparece en debates sobre el potencial natural.\n\nEl cálculo primero halla la masa magra eliminando la fracción de grasa de tu peso corporal, luego divide entre la estatura al cuadrado exactamente como el IMC. Se añade un término de normalización por estatura para que la puntuación no favorezca injustamente a los más altos o bajos. Como el resultado depende mucho de tu cifra de grasa corporal, la precisión de ese dato importa: una estimación visual aproximada da un FFMI aproximado, mientras que un porcentaje de grasa medido da uno fiable. Levantadores que siguen su progreso, entrenadores que evalúan atletas y cualquiera con curiosidad por su desarrollo muscular pueden usar esta herramienta para poner un único número significativo a su constitución.",
+    exampleEs: { inputs: { weightKg: 90, heightCm: 180, bodyFatPercent: 15 }, explanation: "Masa magra = 90 × 0,85 = 76,5 kg; FFMI = 76,5 ÷ 1,8² + 6,1 × (1,8 − 1,8) ≈ 23,6." },
+    faqsEs: [
+      {
+        question: "¿Qué es un buen FFMI?",
+        answer: "Para los hombres, un FFMI de alrededor de 18 a 20 es promedio, los veintipocos indican una constitución atlética bien desarrollada, y valores que se acercan a 25 representan el extremo superior de lo que suele considerarse alcanzable de forma natural. Los valores de las mujeres corren varios puntos más bajos en la misma escala. Estas son guías amplias más que límites estrictos, y la genética, el historial de entrenamiento y la precisión de la medición influyen en dónde cae realmente un individuo.",
+      },
+      {
+        question: "¿En qué se diferencia el FFMI del IMC?",
+        answer: "El IMC divide el peso corporal total entre la estatura al cuadrado sin distinguir músculo de grasa, por lo que frecuentemente etiqueta mal a las personas musculosas como con sobrepeso. El FFMI primero elimina la grasa usando tu porcentaje de grasa corporal, luego escala la masa magra restante a la estatura. El resultado refleja la musculatura en lugar del mero tamaño, razón por la que atletas y levantadores lo prefieren. En resumen, el IMC mide la pesadez, mientras que el FFMI mide cuánta de esa masa es tejido magro.",
+      },
+      {
+        question: "¿Por qué importa tanto aquí el porcentaje de grasa corporal?",
+        answer: "El FFMI se construye sobre la masa magra, que se calcula restando tu grasa de tu peso total, así que la cifra de grasa corporal que introduces determina directamente el resultado. Una estimación imprecisa de grasa corporal produce un FFMI impreciso. Un cálculo a ojo aproximado puede desviarse varios puntos, mientras que una medición con calibradores, un escáner DEXA o impedancia bioeléctrica da un índice mucho más fiable. Usa la mejor cifra de grasa corporal que puedas obtener.",
+      },
+      {
+        question: "¿Cuál es la fórmula del FFMI ajustado?",
+        answer: "El FFMI ajustado, o normalizado, añade un término, 6,1 multiplicado por la diferencia entre 1,8 metros y tu estatura, al cálculo básico de masa magra sobre estatura al cuadrado. Esta corrección compensa el hecho de que el FFMI bruto favorece ligeramente a los individuos más altos. El ajuste permite comparar a personas de distintas estaturas en una escala común, razón por la que la versión normalizada es la que más se cita en contextos de fitness e investigación.",
+      },
+      {
+        question: "¿Puede el FFMI demostrar si alguien es natural?",
+        answer: "No. Aunque los valores de FFMI muy por encima de 25 se citan a menudo como difíciles de alcanzar sin fármacos que mejoran el rendimiento, la métrica es un indicador aproximado, no una prueba. La genética, un entrenamiento excepcional, proporciones favorables y el error de medición influyen todos en el número, y algunos atletas naturalmente dotados superan el techo habitual. Trata un FFMI alto como notable más que concluyente, y recuerda que el cálculo es tan preciso como la estimación de grasa corporal que lo respalda.",
+      },
+    ],
   },
   {
     id: "golf-handicap",
@@ -362,6 +560,39 @@ export const autoSportsR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "World Handicap System (handicap differential)",
+    slugEs: "calculadora-de-handicap-de-golf",
+    titleEs: "Calculadora de Hándicap de Golf",
+    shortDescriptionEs: "Halla el diferencial de hándicap de una ronda.",
+    seoTitleEs: "Calculadora de Hándicap de Golf — Diferencial de Hándicap de una Puntuación",
+    metaDescriptionEs:
+      "Calculadora de hándicap de golf gratuita. Introduce tu puntuación ajustada, el rating del campo y el rating de slope para calcular el diferencial de hándicap de una sola ronda.",
+    primaryKeywordEs: "calculadora de hándicap de golf",
+    secondaryKeywordsEs: ["calculadora de diferencial de hándicap", "calculadora de índice de hándicap de golf", "calculadora de hándicap de campo"],
+    formulaExplanationEs: "Un diferencial de hándicap mide lo bien que jugaste una ronda en relación con la dificultad del campo y del juego de salidas. Restar el rating del campo de tu puntuación ajustada muestra cuántos golpes por encima o por debajo de la puntuación esperada de un golfista scratch estuviste. Multiplicar por 113, el rating de slope de un campo de dificultad estándar, y dividir por el rating de slope real, escala ese resultado para que rondas jugadas en campos más fáciles y más difíciles puedan compararse con justicia en un mismo estándar.",
+    explanationEs: "Tu hándicap de golf empieza con el diferencial de hándicap de una sola ronda, y esta calculadora de hándicap de golf lo calcula usando la fórmula estándar detrás del sistema mundial de hándicap. Introduce tu puntuación bruta ajustada, el rating del campo y el rating de slope de las salidas que jugaste, y la herramienta devuelve el diferencial de esa ronda.\n\nEl diferencial es el bloque de construcción de un índice de hándicap. Expresa lo bien que puntuaste en relación con la dificultad del campo y las salidas concretas, así que una ronda fuerte en un campo brutal puede producir un diferencial más bajo que una ronda mediocre en uno fácil. Tu índice de hándicap oficial se deriva luego del promedio de tus mejores diferenciales recientes, razón por la que entender el diferencial de una sola ronda ayuda a ver cómo influirá cada puntuación en tu hándicap.\n\nEl cálculo usa tres datos que juntos capturan la dificultad del campo. El rating del campo es la puntuación que se espera que logre un golfista scratch, así que restarlo de tu puntuación muestra cuántos golpes por encima de esa marca estuviste. El rating de slope refleja cuánto más difícil juega el campo para un golfista bogey que para uno scratch, y dividir por él, luego multiplicar por el slope estándar de 113, normaliza tu rendimiento entre campos de distinta dificultad. Golfistas que siguen su progreso, estiman un nuevo hándicap o comparan rondas jugadas en distintos campos pueden usar esta calculadora para convertir cualquier puntuación en un número comparable y significativo.",
+    exampleEs: { inputs: { score: 90, courseRating: 72, slopeRating: 113 }, explanation: "(90 − 72) × 113 ÷ 113 = 18 × 1 = 18,0 de diferencial de hándicap para la ronda." },
+    faqsEs: [
+      {
+        question: "¿Qué es un diferencial de hándicap?",
+        answer: "Un diferencial de hándicap es un número que representa lo bien que jugaste una sola ronda en relación con la dificultad del campo y las salidas. Se calcula a partir de tu puntuación ajustada, el rating del campo y el rating de slope. Los diferenciales de tus rondas recientes se promedian, usando los mejores, para producir tu índice de hándicap. Así, cada diferencial es una medida de una sola ronda que alimenta tu hándicap general con el tiempo.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre el rating del campo y el rating de slope?",
+        answer: "El rating del campo es la puntuación que se espera que logre un golfista scratch, o de hándicap cero, en el campo, normalmente un número cercano al par, expresado a un decimal. El rating de slope mide cuánto más difícil juega el campo para un golfista bogey que para uno scratch, en una escala de 55 a 155, donde 113 es la dificultad estándar. Juntos permiten comparar con justicia puntuaciones de distintos campos.",
+      },
+      {
+        question: "¿Por qué aparece el número 113 en la fórmula?",
+        answer: "El valor 113 es el rating de slope de un campo de dificultad estándar y media. Dividir por el rating de slope real del campo y multiplicar por 113 reescala tu diferencial a esa base estándar, de modo que una ronda en un campo muy difícil, que tiene un slope mayor, se ajusta al alza respecto a una en uno más fácil. Esta normalización es lo que hace directamente comparables los diferenciales de distintos campos.",
+      },
+      {
+        question: "¿Qué es una puntuación bruta ajustada?",
+        answer: "La puntuación bruta ajustada es tu total de golpes con un máximo aplicado a cualquier hoyo bajo la regla de doble bogey neto, que limita los hoyos desastrosos para que uno solo no distorsione tu hándicap. Para fines de hándicap usas esta cifra ajustada en lugar de tu total bruto. Aplicar el límite mantiene los diferenciales representativos de tu capacidad típica en lugar de sesgados por un hoyo ocasional muy alto.",
+      },
+      {
+        question: "¿Cuántas rondas necesito para un hándicap oficial?",
+        answer: "Bajo el sistema mundial de hándicap, un índice de hándicap se calcula a partir del promedio de tus mejores ocho diferenciales de tus veinte puntuaciones más recientes. Puedes obtener un índice inicial tras registrar tan solo tres rondas de dieciocho hoyos, con ajustes aplicados mientras tengas menos puntuaciones. Esta calculadora te da el diferencial de una sola ronda, y reunir varios te permite estimar dónde se asentará tu índice.",
+      },
+    ],
   },
   {
     id: "points-per-game",
@@ -412,6 +643,39 @@ export const autoSportsR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Arithmetic mean (points ÷ games)",
+    slugEs: "calculadora-de-puntos-por-partido",
+    titleEs: "Calculadora de Puntos por Partido",
+    shortDescriptionEs: "Calcula un promedio de anotación a lo largo de los partidos.",
+    seoTitleEs: "Calculadora de Puntos por Partido — Promedio de Anotación (PPP)",
+    metaDescriptionEs:
+      "Calculadora de puntos por partido gratuita. Introduce los puntos totales anotados y el número de partidos jugados para hallar el promedio de anotación, usado en baloncesto y más.",
+    primaryKeywordEs: "calculadora de puntos por partido",
+    secondaryKeywordsEs: ["calculadora de ppp", "calculadora de promedio de anotación", "calculadora de promedio de puntos"],
+    formulaExplanationEs: "Los puntos por partido son un promedio simple: el total de puntos que un jugador o equipo ha anotado dividido entre el número de partidos en los que se anotaron esos puntos. Dividir el total acumulado entre la cantidad de partidos reparte la anotación de forma pareja entre ellos, produciendo una tasa por partido que describe la producción típica. Como es una media, unos pocos partidos inusualmente altos o bajos la arrastran hacia ellos, así que más partidos dan un promedio más estable y representativo.",
+    explanationEs: "Los puntos por partido, abreviados universalmente como PPP, son la forma más común de expresar la producción de un anotador, y esta calculadora de puntos por partido los produce a partir de dos números. Introduce los puntos totales anotados y el número de partidos jugados, y la herramienta devuelve el promedio de anotación.\n\nLos PPP importan porque los totales brutos de puntos son difíciles de comparar cuando jugadores o equipos han jugado distinto número de partidos. Un jugador con 500 puntos en 20 partidos anota mucho más prolíficamente que uno con 500 puntos en 40 partidos, y dividir entre partidos hace evidente esa diferencia. Entrenadores, jugadores de fantasía, analistas y aficionados se apoyan todos en los PPP para clasificar anotadores, proyectar totales de temporada y juzgar la forma, ya que una tasa por partido sigue siendo significativa tanto si la temporada va por un cuarto como si está completa.\n\nEl cálculo es una simple media aritmética, pero su sencillez es su fuerza: es transparente, fácil de actualizar tras cada partido y directamente comparable entre jugadores y épocas. Ten en cuenta que, como promedio, puede sesgarse por un pequeño número de partidos extremos al inicio de una temporada, y que no dice nada sobre la eficiencia, los minutos jugados o la contribución defensiva. Usados junto a otras estadísticas, sin embargo, los PPP siguen siendo un resumen rápido y fiable de la anotación, y esta calculadora te permite calcularlos o proyectarlos para cualquier jugador, equipo o deporte que cuente puntos.",
+    exampleEs: { inputs: { totalPoints: 250, games: 10 }, explanation: "250 puntos ÷ 10 partidos = 25,0 puntos por partido." },
+    faqsEs: [
+      {
+        question: "¿Qué miden los puntos por partido?",
+        answer: "Los puntos por partido miden el número promedio de puntos que un jugador o equipo anota en cada partido a lo largo de un tramo de partidos. Convierten un total acumulado en una tasa por partido, lo que hace la anotación comparable independientemente de cuántos partidos se hayan jugado. Es una estadística destacada en el baloncesto y muchos otros deportes, ofreciendo una idea rápida de la producción anotadora, aunque no capta la eficiencia ni otras contribuciones.",
+      },
+      {
+        question: "¿Cómo proyecto un total de temporada completa a partir de los PPP?",
+        answer: "Multiplica la cifra de puntos por partido por el número de partidos restantes o por la duración completa de la temporada. Por ejemplo, un jugador que promedia 25 puntos por partido en una temporada de 82 partidos proyecta 2.050 puntos si mantiene el ritmo. Es una proyección directa que supone una anotación constante, así que trátala como una estimación; lesiones, cambios de forma y rivales más duros pueden mover el total real en cualquier dirección.",
+      },
+      {
+        question: "¿Un PPP más alto es siempre mejor?",
+        answer: "Un PPP más alto muestra mayor producción anotadora, pero no cuenta toda la historia. Un jugador podría anotar muchos puntos de forma ineficiente, tomando muchos tiros, o jugando muchos minutos. Asistencias, rebotes, defensa y porcentajes de tiro también importan. Los PPP son un número destacado útil para comparar anotadores, pero es mejor leerlos junto a estadísticas de eficiencia y rol que tratarlos como una medida completa de valor.",
+      },
+      {
+        question: "¿Por qué los PPP de inicio de temporada pueden engañar?",
+        answer: "Como los puntos por partido son un promedio, un pequeño número de partidos le da poco que suavizar, así que un partido excepcional o malo lo mueve bruscamente. Un jugador que estalla con 50 puntos en el estreno muestra un promedio inflado hasta que más partidos lo diluyen. A medida que crece la muestra, la cifra se estabiliza y se vuelve más representativa, razón por la que los promedios de inicio de temporada deben leerse con cautela.",
+      },
+      {
+        question: "¿Puedo usar esto para equipos además de jugadores?",
+        answer: "Sí. El cálculo funciona idénticamente para un equipo: introduce los puntos totales anotados por el equipo y el número de partidos jugados para obtener el promedio de anotación por partido del equipo. Esto es útil para comparar ataques entre una liga o seguir la forma anotadora de un equipo durante un tramo de partidos. El mismo método también se aplica a los puntos permitidos, dando una cifra defensiva de puntos por partido cuando usas los puntos concedidos.",
+      },
+    ],
   },
   {
     id: "batting-average",
@@ -462,6 +726,39 @@ export const autoSportsR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Standard baseball batting average (hits ÷ at-bats)",
+    slugEs: "calculadora-de-promedio-de-bateo",
+    titleEs: "Calculadora de Promedio de Bateo",
+    shortDescriptionEs: "Calcula un promedio de bateo de béisbol.",
+    seoTitleEs: "Calculadora de Promedio de Bateo — Hits Divididos entre Turnos al Bate",
+    metaDescriptionEs:
+      "Calculadora de promedio de bateo gratuita. Introduce los hits y los turnos al bate para hallar un promedio de bateo de béisbol, mostrado a tres decimales como en las estadísticas oficiales.",
+    primaryKeywordEs: "calculadora de promedio de bateo",
+    secondaryKeywordsEs: ["calculadora de promedio de bateo de béisbol", "calculadora de avg de béisbol", "hits divididos entre turnos al bate"],
+    formulaExplanationEs: "El promedio de bateo es la proporción de turnos al bate que resultan en un hit, así que es simplemente los hits divididos entre los turnos al bate. El resultado es un decimal entre cero y uno, convencionalmente escrito a tres cifras, como .300, y leído como una tasa de éxito en el plato. Las bases por bolas, los golpes por lanzamiento y los sacrificios se excluyen de los turnos al bate, así que la cifra refleja solo las apariciones al plato que cuentan como oportunidades genuinas de registrar un hit.",
+    explanationEs: "El promedio de bateo es la medida más antigua y reconocida del éxito de un bateador en el béisbol, y esta calculadora de promedio de bateo lo calcula a partir de los dos números que lo definen. Introduce el número de hits y el número de turnos al bate, y la herramienta devuelve el promedio a tres decimales, exactamente como aparece en las estadísticas oficiales.\n\nLa estadística expresa con qué frecuencia un bateador consigue un hit por turno oficial al bate, dando una tasa limpia entre cero y uno. Un promedio de .300, que significa un hit en tres de cada diez turnos al bate, ha marcado durante mucho tiempo a un excelente bateador, mientras que .200, conocido como la línea de Mendoza, marca el umbral de la dificultad. Como estandariza los hits frente a las oportunidades, el promedio de bateo permite comparar jugadores con números muy distintos de apariciones al plato y seguir la forma de un bateador a lo largo de una temporada.\n\nEl cálculo es una división directa, pero la definición de un turno al bate es lo que le da sentido. Los turnos al bate excluyen las bases por bolas, los golpes por lanzamiento, los toques de sacrificio y los elevados de sacrificio, así que el denominador cuenta solo las apariciones al plato que ofrecieron una oportunidad real de registrar un hit. Por eso un bateador paciente que consigue muchas bases por bolas puede tener un buen promedio sin que esas bases lo ayuden ni lo perjudiquen. Aficionados, jugadores de fantasía, entrenadores y jóvenes que aprenden el juego pueden usar esta calculadora para calcular un promedio de cualquier periodo, desde un solo partido hasta una carrera entera, y ver la familiar cifra de tres decimales al instante.",
+    exampleEs: { inputs: { hits: 150, atBats: 500 }, explanation: "150 hits ÷ 500 turnos al bate = 0,300, escrito .300 — la marca clásica de un excelente bateador." },
+    faqsEs: [
+      {
+        question: "¿Qué cuenta como turno al bate?",
+        answer: "Un turno al bate es una aparición al plato que termina con un hit, un out por el bateador poniendo la bola en juego o ponchándose, o alcanzando base por un error o una jugada de selección. Excluye las bases por bolas, los golpes por lanzamiento, los toques de sacrificio, los elevados de sacrificio y la interferencia del receptor, que son apariciones al plato pero no turnos al bate. Esta distinción importa porque el promedio de bateo usa los turnos al bate como denominador.",
+      },
+      {
+        question: "¿Por qué se muestra el promedio de bateo a tres decimales?",
+        answer: "La convención del béisbol expresa el promedio de bateo como un decimal a tres cifras, como .285, y lo lee como si se multiplicara por mil, así que .285 se dice dos ochenta y cinco. El formato de tres decimales da suficiente precisión para separar a jugadores cuyos promedios están muy cerca, lo que importa en una larga temporada donde diferencias diminutas distinguen un título de bateo. Esta calculadora sigue ese estándar para que la cifra parezca una estadística oficial.",
+      },
+      {
+        question: "¿Qué es un buen promedio de bateo?",
+        answer: "En el béisbol moderno, un promedio de bateo de alrededor de .300 se considera excelente, de .250 a .270 es más o menos el promedio de un jugador regular, y bajar hacia .200, la llamada línea de Mendoza, señala a un bateador en apuros. Las temporadas de élite alcanzan ocasionalmente .350 o más. Los estándares cambian con la época y las condiciones de la liga, así que el contexto importa, pero .300 ha seguido siendo un punto de referencia reconocido de un bateador fuerte y fiable durante más de un siglo.",
+      },
+      {
+        question: "¿El promedio de bateo incluye las bases por bolas?",
+        answer: "No. Las bases por bolas no se cuentan como turnos al bate, así que no aparecen ni en el numerador ni en el denominador del promedio de bateo y no tienen efecto sobre él. Por eso un bateador con buen ojo que consigue muchas bases por bolas puede tener un promedio modesto y aun así ser muy valioso, ya que las bases por bolas alcanzan base sin registrarse como hits. El porcentaje de embasado, una estadística aparte, sí acredita las bases por bolas.",
+      },
+      {
+        question: "¿En qué se diferencia el promedio de bateo del porcentaje de embasado?",
+        answer: "El promedio de bateo cuenta solo los hits divididos entre los turnos al bate, mientras que el porcentaje de embasado cuenta hits, bases por bolas y golpes por lanzamiento divididos entre las apariciones totales al plato, midiendo con qué frecuencia un bateador alcanza base por cualquier medio. El porcentaje de embasado se considera generalmente un mejor indicador del valor ofensivo porque premia conseguir bases por bolas. El promedio de bateo sigue siendo popular por su historia y sencillez, pero los analistas suelen combinarlo con las cifras de embasado y slugging.",
+      },
+    ],
   },
   {
     id: "elo-rating",
@@ -526,5 +823,38 @@ export const autoSportsR5Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-30",
     formulaSource: "Elo rating system (Arpad Elo)",
+    slugEs: "calculadora-de-puntuacion-elo",
+    titleEs: "Calculadora de Puntuación Elo",
+    shortDescriptionEs: "Actualiza la puntuación Elo de un jugador tras una partida.",
+    seoTitleEs: "Calculadora de Puntuación Elo — Nueva Puntuación tras una Partida",
+    metaDescriptionEs:
+      "Calculadora de puntuación Elo gratuita. Introduce tu puntuación, la de tu oponente, el resultado y el factor K para hallar tu nueva puntuación Elo y los puntos ganados o perdidos.",
+    primaryKeywordEs: "calculadora de puntuación elo",
+    secondaryKeywordsEs: ["calculadora de elo", "calculadora de puntuación de ajedrez", "calculadora de cambio de elo"],
+    formulaExplanationEs: "El sistema Elo predice primero tu puntuación esperada frente a un oponente a partir de la diferencia de puntuación, usando una curva logística donde una ventaja de 400 puntos significa aproximadamente un favorito de diez a uno. Tu puntuación esperada se sitúa entre cero y uno. Tras la partida, tu puntuación se mueve por el factor K multiplicado por la diferencia entre tu resultado real y esa expectativa. Vencer a un jugador más fuerte, cuando se esperaba que perdieras, gana muchos puntos; vencer a uno más débil, como se esperaba, gana pocos.",
+    explanationEs: "El sistema de puntuación Elo, inventado para el ajedrez y ahora usado en innumerables juegos y deportes, actualiza la puntuación de un jugador tras cada partida según el resultado y la fuerza del oponente. Esta calculadora de puntuación Elo realiza esa actualización. Introduce tu puntuación actual, la de tu oponente, si ganaste, empataste o perdiste, y el factor K, y devuelve tu nueva puntuación y los puntos que ganaste o perdiste.\n\nLa elegancia del Elo es que premia los resultados en proporción a lo sorprendentes que son. Antes de la partida, el sistema calcula tu puntuación esperada a partir de la diferencia de puntuación: si superas ampliamente a tu oponente, se espera que ganes con comodidad, así que vencerlo gana solo unos pocos puntos, mientras que perder cuesta muchos. Sorprende a un jugador mucho más fuerte y ganarás una gran parte de puntuación. Este mecanismo autocorrector significa que las puntuaciones convergen con el tiempo en una medida justa de la habilidad, razón por la que el sistema sustenta las clasificaciones de ajedrez, el emparejamiento en línea y muchos modelos deportivos.\n\nEl cálculo de dos pasos es sencillo de seguir. Primero, la puntuación esperada proviene de una fórmula logística en la que cada 400 puntos de puntuación corresponden a un cambio de diez veces en las probabilidades. Segundo, tu puntuación se desplaza por el factor K por la diferencia entre tu resultado real y esa expectativa. El factor K controla la sensibilidad: un valor alto hace que las puntuaciones se muevan rápido, adecuado para jugadores nuevos o provisionales, mientras que un valor bajo mantiene estables las puntuaciones establecidas. Jugadores, organizadores de torneos y diseñadores de juegos pueden usar esta calculadora para ver exactamente cómo un solo resultado reconfigura una puntuación.",
+    exampleEs: { inputs: { playerRating: 1600, opponentRating: 1600, result: "1", kFactor: 32 }, explanation: "Puntuación esperada = 0,5 contra un oponente igual; ganar da 1600 + 32 × (1 − 0,5) = 1616, una ganancia de 16." },
+    faqsEs: [
+      {
+        question: "¿Qué es la puntuación esperada en Elo?",
+        answer: "La puntuación esperada es la predicción del sistema de cómo deberías rendir frente a un oponente dado, calculada a partir de la diferencia de puntuaciones y expresada como un número entre cero y uno. Contra un oponente igual es 0,5; contra uno mucho más fuerte es cercana a cero; contra uno mucho más débil, cercana a uno. Tu cambio de puntuación depende de cómo se compara tu resultado real con esta expectativa.",
+      },
+      {
+        question: "¿Qué es el factor K y qué valor debo usar?",
+        answer: "El factor K establece cuánto puede cambiar una sola partida tu puntuación. Un K más alto, como 40, mueve las puntuaciones rápido y conviene a jugadores nuevos o provisionales que aún encuentran su nivel, mientras que un K más bajo, como 10 o 20, mantiene estables las puntuaciones establecidas y de élite. Las federaciones de ajedrez usan comúnmente 32 para la mayoría de jugadores, así que 32 es un valor por defecto sensato aquí a menos que tu sistema específico prescriba otro.",
+      },
+      {
+        question: "¿Por qué gano más puntos por vencer a un jugador más fuerte?",
+        answer: "Porque el Elo premia los resultados en relación con la expectativa. Cuando te enfrentas a un oponente mejor clasificado, el sistema espera que pierdas, así que tu puntuación esperada es baja. Ganar produce una gran diferencia entre tu resultado real de uno y esa baja expectativa, y multiplicar por el factor K da una gran ganancia de puntuación. Por el contrario, vencer a un oponente mucho más débil, que se esperaba, produce una diferencia pequeña y solo una ganancia modesta.",
+      },
+      {
+        question: "¿Cómo se traduce una diferencia de 400 puntos en probabilidades?",
+        answer: "En la fórmula Elo, cada 400 puntos de puntuación corresponden a un cambio de diez veces en las probabilidades esperadas. Se espera que un jugador clasificado 400 puntos por encima de otro puntúe unas diez veces más a menudo, dando una puntuación esperada cercana a 0,91. Esta escala logarítmica es la razón por la que la diferencia entre 2000 y 2400 representa en la práctica una diferencia de habilidad mucho mayor de lo que el número bruto de 400 puntos podría sugerir a un principiante.",
+      },
+      {
+        question: "¿Funciona el Elo para juegos distintos del ajedrez?",
+        answer: "Sí. Aunque Arpad Elo diseñó el sistema para el ajedrez, su lógica se aplica a cualquier competición individual con victorias, derrotas y empates. El emparejamiento en videojuegos, los modelos de puntuación de tenis y fútbol, los juegos de mesa y las escaleras de esports usan todos el Elo o variantes cercanas. La idea central, ajustar las puntuaciones por la diferencia entre resultados reales y esperados, es general, así que esta calculadora funciona para cualquier enfrentamiento de dos jugadores que puedas expresar como victoria, empate o derrota.",
+      },
+    ],
   },
 ];

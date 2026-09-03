@@ -53,6 +53,38 @@ export const realEstateWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard real estate formula",
+    slugEs: "calculadora-de-tasa-de-capitalizacion",
+    titleEs: "Calculadora de Tasa de Capitalización",
+    shortDescriptionEs: "Mide el rendimiento de una propiedad en alquiler según ingresos y precio.",
+    seoTitleEs: "Calculadora de Tasa de Capitalización — Ingreso Operativo Neto y Rendimiento",
+    metaDescriptionEs: "Calculadora gratuita de tasa de capitalización para propiedades en alquiler. Ingresa precio, renta, vacancia y gastos para hallar la tasa de capitalización, el ingreso operativo neto y el multiplicador de renta bruta.",
+    primaryKeywordEs: "calculadora de tasa de capitalización",
+    secondaryKeywordsEs: ["calculadora de cap rate", "calculadora de ingreso operativo neto", "tasa de capitalización de propiedad en alquiler"],
+    formulaExplanationEs: "El ingreso operativo neto es la renta anual menos las pérdidas por vacancia y los gastos de operación, por lo que aísla el efectivo que genera la propiedad antes del financiamiento. Al dividir ese ingreso entre el precio de compra se expresa el rendimiento como un porcentaje, lo que permite comparar edificios de tamaños muy distintos en igualdad de condiciones. El multiplicador de renta bruta ignora los gastos y solo relaciona el precio con la renta, ofreciendo un indicador más rápido aunque más aproximado.",
+    explanationEs: "La tasa de capitalización, casi siempre abreviada como cap rate, es el indicador que los inversionistas usan para juzgar cuántos ingresos produce una propiedad en alquiler en relación con su precio. Una calculadora de tasa de capitalización reduce una operación a lo esencial: renta anual, vacancia esperada, costos de operación y el precio que pagarías. A partir de esos números deriva el ingreso operativo neto, la ganancia que queda después de los gastos pero antes de la hipoteca, y luego divide esa cifra entre el valor de la propiedad para obtener un rendimiento porcentual limpio.\n\nLa medida importa porque permite comparar un dúplex con un bloque de apartamentos, o una propiedad en una ciudad con otra, sin distraerse por los términos del préstamo ni por el tamaño de la compra. Una tasa de capitalización más alta señala más ingresos por cada dólar invertido, aunque suele venir acompañada de mayor riesgo o una ubicación más débil. Una tasa más baja normalmente refleja un activo estable y de primera categoría que los compradores aceptan por seguridad.\n\nLa fórmula funciona porque dividir el ingreso recurrente entre el precio normaliza cada operación en el mismo lenguaje de rendimiento, igual que un bono cotiza un cupón. Junto a la tasa de capitalización, el multiplicador de renta bruta ofrece una revisión rápida de precio a renta. Inversionistas, agentes y prestamistas se apoyan constantemente en una calculadora de tasa de capitalización para filtrar propiedades antes de una revisión más profunda.",
+    exampleEs: { inputs: { propertyValue: 500000, annualRent: 40000, vacancyRate: 5, annualExpenses: 8000 }, explanation: "La renta efectiva es $40,000 × (1 − 0.05) = $38,000. Resta $8,000 de gastos para un ingreso operativo neto de $30,000. Tasa de capitalización = $30,000 ÷ $500,000 = 6%, y el multiplicador de renta bruta es $500,000 ÷ $40,000 = 12.5." },
+    faqsEs: [
+      {
+        question: "¿Qué se considera una buena tasa de capitalización?",
+        answer: "No existe un único número correcto porque las tasas de capitalización equilibran rendimiento y riesgo. Muchos inversionistas consideran que un rango del 5% al 10% es habitual, donde las cifras más bajas reflejan mercados estables y de primera categoría y las más altas compensan edificios antiguos o ubicaciones más débiles. Compara la tasa de cualquier propiedad con ventas recientes de activos similares en la misma zona, ya que la demanda local y las tasas de interés mueven el punto de referencia constantemente.",
+      },
+      {
+        question: "¿La tasa de capitalización incluye el pago de mi hipoteca?",
+        answer: "No, y es intencional. La tasa de capitalización se construye sobre el ingreso operativo neto, que resta los gastos de operación pero excluye los costos de financiamiento como el capital e intereses de la hipoteca. Dejar la deuda fuera permite comparar la propiedad en sí, independientemente de cómo cada comprador decida financiarla. Para juzgar tu rendimiento real apalancado observarías en cambio el rendimiento sobre el efectivo invertido, que sí considera tu préstamo y tu enganche.",
+      },
+      {
+        question: "¿Qué gastos pertenecen al ingreso operativo neto?",
+        answer: "Incluye los costos recurrentes de poseer y operar la propiedad: impuestos prediales, seguro, mantenimiento y reparaciones, honorarios de administración, servicios que cubras y reservas razonables para vacancia. Excluye el pago de la hipoteca, los impuestos sobre la renta y las grandes mejoras de capital puntuales como un techo nuevo. Mantener la lista de gastos consistente de operación en operación es lo que hace de la tasa de capitalización una herramienta de comparación justa y equivalente en toda una cartera.",
+      },
+      {
+        question: "¿En qué se diferencia el multiplicador de renta bruta de la tasa de capitalización?",
+        answer: "El multiplicador de renta bruta divide el precio entre la renta bruta anual e ignora por completo los gastos, por lo que es una revisión más rápida pero más burda. Un multiplicador más bajo sugiere una propiedad más barata en relación con su renta. La tasa de capitalización es más precisa porque considera la vacancia y los costos de operación a través del ingreso operativo neto. Usa el multiplicador para filtrar muchas propiedades rápido y luego calcula la tasa de capitalización sobre las finalistas.",
+      },
+      {
+        question: "¿Por qué se mueven las tasas de capitalización cuando cambian las tasas de interés?",
+        answer: "Cuando pedir prestado se encarece, los inversionistas exigen mayores rendimientos para justificar una compra, así que los precios se suavizan y las tasas de capitalización suben. Cuando las tasas bajan, el financiamiento barato empuja a los compradores a aceptar rendimientos menores y los precios suben, comprimiendo las tasas de capitalización. Esta relación inversa significa que el mismo ingreso por alquiler puede sostener valuaciones muy distintas a lo largo del ciclo del mercado, por eso las comparaciones con el mercado actual importan más que los promedios históricos.",
+      },
+    ],
   },
   {
     id: "rent-vs-buy",
@@ -110,6 +142,38 @@ export const realEstateWave3Calculators: CalculatorDefinition[] = [
     sensitivity: "finance",
     formulaSource: "Standard amortization formula",
     sourceUrl: "https://www.consumerfinance.gov/owning-a-home/",
+    slugEs: "calculadora-de-alquilar-vs-comprar",
+    titleEs: "Calculadora de Alquilar vs Comprar",
+    shortDescriptionEs: "Compara el costo mensual de alquilar frente al de ser propietario.",
+    seoTitleEs: "Calculadora de Alquilar vs Comprar — Comparación de Costo Mensual",
+    metaDescriptionEs: "Calculadora gratuita de alquilar vs comprar. Compara el costo mensual real de tener una casa, incluyendo hipoteca, impuesto predial y mantenimiento, frente a alquilar para decidir más rápido.",
+    primaryKeywordEs: "calculadora de alquilar vs comprar",
+    secondaryKeywordsEs: ["calculadora alquilar o comprar", "calculadora comprar vs alquilar casa", "costo de tener una casa"],
+    formulaExplanationEs: "El capital e intereses de la hipoteca provienen de la fórmula estándar de amortización sobre el monto financiado, distribuyendo el pago de forma uniforme a lo largo del plazo. El impuesto predial se estima como un porcentaje anual del precio de la casa dividido en cuotas mensuales, y una provisión de mantenimiento de alrededor del uno por ciento del valor por año cubre el cuidado. La suma de estos da el costo mensual continuo de ser propietario, que la herramienta luego resta de tu alquiler para revelar la diferencia.",
+    explanationEs: "Decidir si alquilar o comprar es una de las mayores decisiones financieras que la mayoría de las personas enfrenta, y la respuesta honesta rara vez sale de comparar el alquiler contra el pago de una hipoteca por sí solo. Una calculadora de alquilar vs comprar construye una imagen más justa al sumar los costos mensuales ocultos de ser propietario que los inquilinos nunca ven: impuestos prediales y mantenimiento continuo además del préstamo en sí. Luego coloca ese total junto a tu alquiler actual para que la diferencia real quede visible.\n\nSer propietario conlleva costos que un contrato de alquiler agrupa o traslada al arrendador. Los impuestos prediales se repiten cada año, el cuidado y las reparaciones suelen rondar el uno por ciento del valor de la casa al año, y el financiamiento reparte la compra en décadas de intereses. Alquilar cambia esas obligaciones por un solo pago predecible, aunque no genera ningún patrimonio a cambio.\n\nLa comparación funciona porque convierte ambos caminos en una cifra mensual equivalente, permitiéndote ver de inmediato si comprar cuesta más o menos cada mes que alquilar hoy. Los números por sí solos no zanjarán la decisión, ya que el crecimiento del patrimonio, el tratamiento fiscal y cuánto tiempo planeas quedarte importan, pero ver la diferencia mensual con claridad es el primer paso esencial que tanto compradores como inquilinos deberían dar antes de comprometerse.",
+    exampleEs: { inputs: { homePrice: 400000, downPayment: 80000, rate: 6.5, term: 30, propertyTaxRate: 1.2, monthlyRent: 2000 }, explanation: "Un préstamo de $320,000 al 6.5% a 30 años cuesta cerca de $2,023 al mes en capital e intereses. Sumando aproximadamente $400 de impuesto predial mensual y $333 de mantenimiento da alrededor de $2,756 para comprar, frente a $2,000 para alquilar: una diferencia de unos $756 al mes." },
+    faqsEs: [
+      {
+        question: "¿Comprar siempre le gana a alquilar a largo plazo?",
+        answer: "No siempre. Comprar tiende a ganar cuando permaneces el tiempo suficiente para que la apreciación y el patrimonio superen los costos de transacción, a menudo cinco años o más. Si te mudas antes, los honorarios de agente, los costos de cierre y los intereses de los primeros años pueden dejar al alquiler por delante. Las tendencias de precios locales, las tasas de interés y cómo se invierta la diferencia entre alquilar y ser propietario inclinan el resultado en un sentido u otro.",
+      },
+      {
+        question: "¿Qué costos de ser propietario incluye la calculadora?",
+        answer: "Suma tres piezas recurrentes: capital e intereses de la hipoteca sobre el monto financiado, el impuesto predial anual estimado repartido por mes, y una provisión de mantenimiento de alrededor del uno por ciento del valor de la casa al año. No incluye el seguro de propietario, las cuotas de asociación, el seguro hipotecario privado ni los costos de cierre, así que trata el resultado como una base sólida y agrega esas cifras para tu propiedad específica para afinar la comparación.",
+      },
+      {
+        question: "¿Por qué incluir el mantenimiento si los inquilinos no lo pagan?",
+        answer: "Ese es justamente el punto. Los inquilinos trasladan las reparaciones y el cuidado a su arrendador, mientras que los propietarios los asumen directamente. Ignorar el mantenimiento subestimaría el costo real de ser propietario y haría que comprar pareciera artificialmente barato. Una regla común fija el cuidado anual cerca del uno por ciento del valor de la casa, cubriendo desde un calentador de agua averiado hasta el servicio de rutina, por eso la calculadora lo integra en la cifra mensual.",
+      },
+      {
+        question: "¿Debo contar el patrimonio que genero al comprar?",
+        answer: "Sí, al tomar la decisión final. Una parte de cada pago hipotecario reduce el saldo de tu préstamo, ahorrando efectivamente dinero que recuperas al vender, y la propiedad puede apreciarse además. Esta calculadora compara el costo mensual en efectivo bruto y no la riqueza neta, así que una cifra de compra que parece más alta aún puede ser el mejor trato a largo plazo una vez que se consideran el patrimonio y el crecimiento del precio.",
+      },
+      {
+        question: "¿Cómo cambia mi enganche la comparación?",
+        answer: "Un enganche más grande reduce el monto financiado, lo que baja el capital e intereses mensuales y puede hacer que comprar sea más competitivo frente a alquilar en términos de efectivo. También inmoviliza más capital por adelantado que podría invertirse en otro lugar. La calculadora resta tu enganche del precio para dimensionar el préstamo, así que probar distintos montos muestra cuánto se desplaza el costo mensual de ser propietario.",
+      },
+    ],
   },
   {
     id: "loan-to-value",
@@ -162,6 +226,38 @@ export const realEstateWave3Calculators: CalculatorDefinition[] = [
     lastReviewed: "2026-08-20",
     formulaSource: "Consumer Financial Protection Bureau",
     sourceUrl: "https://www.consumerfinance.gov/owning-a-home/",
+    slugEs: "calculadora-de-relacion-prestamo-valor",
+    titleEs: "Calculadora de Relación Préstamo-Valor (LTV)",
+    shortDescriptionEs: "Halla tu relación LTV, tu patrimonio y el porcentaje de patrimonio.",
+    seoTitleEs: "Calculadora de Relación Préstamo-Valor (LTV) — Ratio y Patrimonio de la Vivienda",
+    metaDescriptionEs: "Calculadora gratuita de relación préstamo-valor. Ingresa el monto de tu préstamo y el valor de la propiedad para hallar tu ratio LTV, tu patrimonio en dólares y el porcentaje de patrimonio para decisiones de hipoteca y refinanciamiento.",
+    primaryKeywordEs: "calculadora de relación préstamo-valor",
+    secondaryKeywordsEs: ["calculadora ltv", "calculadora de patrimonio de vivienda", "calculadora de ratio ltv"],
+    formulaExplanationEs: "La relación préstamo-valor divide el préstamo pendiente entre el valor de la propiedad, expresando la porción prestada como un porcentaje. Como la propiedad garantiza la deuda, este ratio le indica al prestamista cuánto colchón existe si alguna vez tuviera que vender tras un incumplimiento. El patrimonio es simplemente el valor que el préstamo no cubre, por lo que el patrimonio más el préstamo siempre equivalen al valor total de la propiedad, y el porcentaje de patrimonio es la imagen espejo del LTV.",
+    explanationEs: "La relación préstamo-valor, casi siempre escrita como LTV por sus siglas en inglés, es el ratio que más examinan los prestamistas al decidir si aprueban una hipoteca y en qué términos. Una calculadora de LTV toma dos números, el tamaño de tu préstamo y el valor de la propiedad que lo garantiza, y devuelve el porcentaje prestado junto con el patrimonio que posees, tanto en dólares como en porcentaje. Un LTV más bajo significa que has aportado más de tu propio dinero y que el prestamista corre menos riesgo.\n\nEl ratio produce resultados reales. La mayoría de los préstamos convencionales quieren un LTV igual o menor al 80% para evitar el seguro hipotecario privado, y las mejores tasas de interés se reservan para prestatarios con mucho patrimonio. Al cruzar por encima de aproximadamente el 80%, los prestamistas suelen agregar primas de seguro o rechazar la solicitud, porque un colchón de patrimonio delgado los deja expuestos si los precios caen.\n\nEl cálculo funciona porque la propiedad actúa como garantía, así que el prestamista necesita saber cuánto de su valor está en juego respecto a su propio margen de seguridad de reventa. Los compradores usan el LTV para ver qué tan grande debe ser su enganche, mientras que quienes refinancian o abren una línea de crédito sobre el patrimonio lo usan para confirmar que califican. Vigilar tu LTV a medida que pagas y a medida que suben los valores revela cuándo se abren mejores condiciones de préstamo.",
+    exampleEs: { inputs: { loanAmount: 320000, propertyValue: 400000 }, explanation: "Un préstamo de $320,000 sobre una propiedad de $400,000 da un LTV de $320,000 ÷ $400,000 = 80%. Los $80,000 restantes son tu patrimonio, que equivale al 20% del valor de la propiedad." },
+    faqsEs: [
+      {
+        question: "¿Por qué importa tanto un LTV del 80%?",
+        answer: "El ochenta por ciento es el umbral de la industria para las hipotecas convencionales. En ese nivel o por debajo, generalmente evitas el seguro hipotecario privado y calificas para las tasas de interés más fuertes, porque tu 20% de patrimonio le da al prestamista un margen de seguridad cómodo. Al subir por encima del 80%, los prestamistas suelen exigir seguro hipotecario para compensar su riesgo adicional, aumentando tu pago mensual hasta que el pago del préstamo o el alza de los valores devuelvan el ratio hacia abajo.",
+      },
+      {
+        question: "¿En qué se diferencia el LTV del patrimonio?",
+        answer: "Son dos caras de la misma moneda. El LTV es el porcentaje del valor de la propiedad que has prestado, mientras que el patrimonio es la porción que realmente posees. Siempre suman 100%, así que un LTV del 80% significa 20% de patrimonio. El patrimonio puede expresarse en dólares, el valor que tu préstamo no cubre, o como porcentaje, que es simplemente 100 menos tu LTV.",
+      },
+      {
+        question: "¿Puede cambiar mi LTV después de comprar?",
+        answer: "Sí, en ambas direcciones. Cada pago hipotecario reduce el saldo de tu préstamo, bajando el LTV con el tiempo, y el alza de los valores de la vivienda aumenta el denominador, bajándolo más. Un mercado a la baja hace lo contrario y puede empujar el LTV al alza, dejando ocasionalmente a los propietarios con un préstamo que excede el valor. Como el LTV cambia, vale la pena recalcularlo antes de refinanciar o de solicitar la eliminación del seguro hipotecario.",
+      },
+      {
+        question: "¿Qué LTV necesito para refinanciar?",
+        answer: "Los requisitos varían por tipo de préstamo, pero muchos refinanciamientos convencionales buscan un LTV del 80% o menos para asegurar las mejores tasas y evitar el seguro hipotecario. Algunos refinanciamientos con retiro de efectivo también limitan el LTV alrededor del 80%, mientras que ciertos programas respaldados por el gobierno permiten ratios más altos. Calcula tu LTV actual primero usando tu saldo restante y una valuación actualizada, luego compáralo con los límites publicados de tu prestamista objetivo.",
+      },
+      {
+        question: "¿El valor de la propiedad se refiere al precio de compra o al avalúo?",
+        answer: "Los prestamistas generalmente usan el menor entre el precio de compra y el valor de avalúo al comprar, y el valor de avalúo actual al refinanciar. Para una estimación rápida, ingresa tu mejor cifra de lo que vale la propiedad hoy. Si estás cerca de un umbral importante como el 80%, un avalúo oficial puede importar, ya que incluso una pequeña diferencia de valuación puede mover tu LTV a través del corte de un prestamista.",
+      },
+    ],
   },
   {
     id: "down-payment",
@@ -213,6 +309,38 @@ export const realEstateWave3Calculators: CalculatorDefinition[] = [
     lastReviewed: "2026-08-20",
     formulaSource: "Consumer Financial Protection Bureau",
     sourceUrl: "https://www.consumerfinance.gov/owning-a-home/",
+    slugEs: "calculadora-de-enganche",
+    titleEs: "Calculadora de Enganche",
+    shortDescriptionEs: "Convierte un precio de vivienda y un porcentaje en montos de efectivo y préstamo.",
+    seoTitleEs: "Calculadora de Enganche — Efectivo Necesario y Monto del Préstamo",
+    metaDescriptionEs: "Calculadora gratuita de enganche. Ingresa el precio de una vivienda y el porcentaje de enganche para ver el efectivo que necesitas por adelantado y el monto de la hipoteca resultante al instante.",
+    primaryKeywordEs: "calculadora de enganche",
+    secondaryKeywordsEs: ["calculadora de enganche de vivienda", "calculadora de enganche hipotecario", "cuánto enganche"],
+    formulaExplanationEs: "Multiplicar el precio de la vivienda por el porcentaje que elijas convierte una proporción en el efectivo exacto que debes llevar al cierre. Como el enganche y la hipoteca juntos cubren el precio total de compra, restar ese efectivo del precio deja el monto que necesitas financiar. Aumentar el porcentaje traslada dinero del préstamo a tu desembolso inicial, reduciendo el saldo que pides prestado y el interés que finalmente pagas.",
+    explanationEs: "El enganche es la porción del precio de una vivienda que pagas en efectivo por adelantado, y da forma a casi todo lo relacionado con la hipoteca que sigue. Una calculadora de enganche traduce un porcentaje en una cifra concreta en dólares para que veas exactamente cuánto debes ahorrar, y luego muestra el monto del préstamo que queda por financiar una vez aplicado ese efectivo. Ingresa una vivienda de $400,000 y una meta del 20% y la división aparece de inmediato.\n\nEl tamaño de tu enganche repercute en todo el trato. Uno más grande baja tu relación préstamo-valor, ayudando a menudo a esquivar el seguro hipotecario privado, a desbloquear mejores tasas de interés y a reducir tanto el saldo como el interés total pagado a lo largo de la vida del préstamo. Uno más pequeño preserva efectivo para la mudanza, reparaciones o emergencias, pero normalmente cuesta más cada mes.\n\nLa matemática funciona porque el enganche y la hipoteca siempre suman el precio de compra, así que fijar uno determina el otro. Elegir un porcentaje es un acto de equilibrio entre el atractivo de comprar antes con menos ahorrado y el ahorro a largo plazo de pedir prestado menos. Los compradores primerizos especialmente se benefician de probar varios porcentajes, ya que ver el requisito de efectivo y el préstamo resultante lado a lado hace concretos los compromisos en lugar de abstractos.",
+    exampleEs: { inputs: { homePrice: 400000, downPaymentPercent: 20 }, explanation: "Un enganche del 20% sobre una vivienda de $400,000 es $400,000 × 0.20 = $80,000 en efectivo. Al restar eso del precio queda un monto de préstamo de $320,000 por financiar." },
+    faqsEs: [
+      {
+        question: "¿Cuánto enganche necesito realmente?",
+        answer: "Depende del préstamo. El veinte por ciento es la meta clásica porque evita el seguro hipotecario privado y asegura tasas fuertes, pero muchos programas aceptan mucho menos: los préstamos convencionales pueden comenzar cerca del 3%, y algunas opciones respaldadas por el gobierno bajan aún más. Un enganche mayor reduce tu costo mensual y el interés total, mientras que uno menor te permite comprar antes. Ajusta la cifra a tus ahorros y a tu presupuesto mensual.",
+      },
+      {
+        question: "¿Qué pasa si doy menos del 20%?",
+        answer: "Normalmente aún puedes comprar, pero los prestamistas suelen exigir un seguro hipotecario privado, una prima mensual adicional que los protege contra el incumplimiento. Tu relación préstamo-valor comienza más alta, tu pago mensual es mayor y pagas más interés en total porque financiaste más. A medida que pagas el saldo o la vivienda se aprecia, a menudo puedes solicitar que se elimine el seguro una vez que tu patrimonio alcance aproximadamente el 20%.",
+      },
+      {
+        question: "¿El enganche cubre también los costos de cierre?",
+        answer: "No. El enganche se aplica directamente al precio de compra de la vivienda, mientras que los costos de cierre son cargos separados por el préstamo, el título y los servicios, que normalmente rondan del 2% al 5% del precio. Presupuesta para ambos, ya que necesitas el enganche más los costos de cierre en efectivo en la liquidación. Estimar cada uno por separado evita una sorpresa desagradable cuando llega la cifra final para cerrar.",
+      },
+      {
+        question: "¿Un enganche mayor siempre es mejor?",
+        answer: "No necesariamente. Un enganche más grande reduce tu préstamo, tu pago mensual y el interés de por vida, lo cual es genuinamente valioso. Pero agotar tus ahorros para alcanzarlo puede dejarte sin reservas para reparaciones, mudanza o emergencias, y el efectivo podría rendir más invertido en otro lugar. El monto correcto equilibra el ahorro garantizado de pedir prestado menos frente a la seguridad y flexibilidad de mantener un colchón de efectivo saludable.",
+      },
+      {
+        question: "¿El dinero del enganche puede provenir de un regalo?",
+        answer: "A menudo, sí. Muchos programas de préstamo permiten fondos de regalo de familiares para el enganche, aunque los prestamistas suelen exigir una carta de regalo que confirme que el dinero no es un préstamo y pueden pedir rastrear su origen. Las reglas sobre cuánto puede regalarse y si se requieren algunos de tus propios fondos varían según el tipo de préstamo, así que confirma los detalles con tu prestamista antes de depender del efectivo regalado.",
+      },
+    ],
   },
   {
     id: "closing-costs",
@@ -265,6 +393,38 @@ export const realEstateWave3Calculators: CalculatorDefinition[] = [
     lastReviewed: "2026-08-20",
     formulaSource: "Consumer Financial Protection Bureau",
     sourceUrl: "https://www.consumerfinance.gov/owning-a-home/",
+    slugEs: "calculadora-de-costos-de-cierre",
+    titleEs: "Calculadora de Costos de Cierre",
+    shortDescriptionEs: "Estima las tarifas que pagas para finalizar la compra de una vivienda.",
+    seoTitleEs: "Calculadora de Costos de Cierre — Estima las Tarifas de Compra de Vivienda",
+    metaDescriptionEs: "Calculadora gratuita de costos de cierre. Ingresa el precio de una vivienda y una tasa para estimar las tarifas que se deben en la liquidación, con un rango típico bajo y alto del 2% al 5% del precio.",
+    primaryKeywordEs: "calculadora de costos de cierre",
+    secondaryKeywordsEs: ["calculadora de costos de cierre de vivienda", "estimador de costos de cierre", "costos de cierre del comprador"],
+    formulaExplanationEs: "Los costos de cierre agrupan muchas tarifas separadas que tienden a escalar con el tamaño de la transacción, así que estimarlos como un solo porcentaje del precio de la vivienda da un aproximado confiable. Multiplicar el precio por la tasa que elijas produce la estimación central, mientras que aplicar los límites típicos del dos y el cinco por ciento acota el rango probable. Cuanto más ancha sea la banda, más dependerá tu factura final del prestamista, la ubicación y los servicios que uses.",
+    explanationEs: "Los costos de cierre son el conjunto de tarifas que un comprador paga para finalizar la compra de una vivienda, exigibles en efectivo en la liquidación además del enganche. Una calculadora de costos de cierre estima esta factura aplicando un porcentaje al precio de la vivienda, ya que los muchos cargos individuales tienden a subir y bajar con el tamaño del trato. También acota la estimación con un rango típico bajo y alto para que puedas planear para la dispersión realista en lugar de una sola cifra optimista.\n\nLos cargos incluidos en los costos de cierre son variados: tarifas de originación y suscripción del préstamo, avalúo e inspección, búsqueda y seguro de título, tarifas de custodia y registro, impuestos prediales pagados por adelantado y seguro de propietario. Individualmente parecen pequeños, pero juntos comúnmente totalizan entre el dos y el cinco por ciento del precio de compra, una suma lo bastante grande como para descarrilar a un comprador desprevenido en el último momento.\n\nEl enfoque del porcentaje funciona porque la mayoría de estas tarifas escalan con la transacción, haciendo de una proporción del precio una primera estimación confiable. Conocer el número temprano te permite ahorrar la cantidad correcta, comparar cotizaciones de prestamistas y decidir si negociar concesiones del vendedor. Todo comprador debería dimensionar los costos de cierre junto con su enganche mucho antes de la liquidación, porque subestimarlos es una de las sorpresas más comunes y estresantes del proceso de compra de vivienda.",
+    exampleEs: { inputs: { homePrice: 400000, rate: 3 }, explanation: "Con una tasa del 3%, los costos de cierre sobre una vivienda de $400,000 son aproximadamente $400,000 × 0.03 = $12,000. El rango típico va del 2% ($8,000) al 5% ($20,000), así que presupuesta dentro de esa banda." },
+    faqsEs: [
+      {
+        question: "¿Qué se incluye en los costos de cierre?",
+        answer: "Los costos de cierre agrupan las tarifas necesarias para completar la venta y configurar el préstamo: cargos de originación y suscripción, avalúo, inspección de la vivienda, búsqueda y seguro de título, tarifas de custodia y registro, honorarios de abogado donde se requieren, y conceptos pagados por adelantado como impuestos prediales y seguro de propietario. La mezcla exacta varía según el prestamista, el estado y la propiedad, por eso el total se estima mejor como un porcentaje del precio que como un monto fijo.",
+      },
+      {
+        question: "¿Cuánto suelen ser los costos de cierre?",
+        answer: "Para los compradores, los costos de cierre comúnmente caen entre el 2% y el 5% del precio de compra de la vivienda. En una vivienda de $400,000 eso es aproximadamente de $8,000 a $20,000. Dónde te ubiques dentro del rango depende de las tarifas de tu prestamista, los impuestos y costos de título locales, y de si compras puntos de descuento para bajar tu tasa. Obtener una estimación de préstamo de tu prestamista convierte esta banda aproximada en cifras precisas.",
+      },
+      {
+        question: "¿Puedo incluir los costos de cierre en mi hipoteca?",
+        answer: "A veces. Ciertos programas de préstamo y prestamistas te permiten financiar algunos costos de cierre dentro del préstamo o aceptar una tasa de interés ligeramente más alta a cambio de créditos del prestamista que los compensen. Esto reduce el efectivo que necesitas en la liquidación pero aumenta el saldo de tu préstamo o tu pago mensual. Es un intercambio entre la asequibilidad inicial y el costo a largo plazo, así que compáralo con simplemente pagar las tarifas directamente si puedes.",
+      },
+      {
+        question: "¿Quién paga los costos de cierre, el comprador o el vendedor?",
+        answer: "Ambas partes suelen tener costos de cierre, pero difieren. Los compradores normalmente cubren las tarifas relacionadas con el préstamo, el avalúo, la inspección y los impuestos y seguros pagados por adelantado, mientras que los vendedores a menudo pagan las comisiones de los agentes inmobiliarios y ciertos impuestos de transferencia. En las negociaciones, los compradores a veces piden a los vendedores concesiones que cubran parte de sus costos de cierre. La costumbre local y la fuerza del mercado influyen mucho en quién paga finalmente cada tarifa.",
+      },
+      {
+        question: "¿Los costos de cierre están separados del enganche?",
+        answer: "Sí. El enganche se aplica al precio de compra de la vivienda y construye tu patrimonio, mientras que los costos de cierre son tarifas por el préstamo y la transacción en sí. Necesitas ambos montos en efectivo en la liquidación, y ninguno reemplaza al otro. Presupuestarlos por separado es importante, porque concentrarse solo en el enganche puede dejarte miles de dólares corto cuando llega el estado de cuenta de cierre final.",
+      },
+    ],
   },
   {
     id: "property-tax",
@@ -315,6 +475,38 @@ export const realEstateWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard real estate formula",
+    slugEs: "calculadora-de-impuesto-predial",
+    titleEs: "Calculadora de Impuesto Predial",
+    shortDescriptionEs: "Estima el impuesto predial anual y mensual a partir del valor catastral.",
+    seoTitleEs: "Calculadora de Impuesto Predial — Estimación Anual y Mensual",
+    metaDescriptionEs: "Calculadora gratuita de impuesto predial. Ingresa tu valor catastral y tasa impositiva para estimar tu factura anual de impuesto predial y el monto mensual que debes apartar en custodia.",
+    primaryKeywordEs: "calculadora de impuesto predial",
+    secondaryKeywordsEs: ["calculadora de impuesto inmobiliario", "estimador de impuesto predial", "calculadora de impuesto predial anual"],
+    formulaExplanationEs: "El impuesto predial se cobra como un porcentaje del valor catastral de una vivienda, así que multiplicar ese valor por la tasa produce la factura anual. Dividir la cifra anual entre doce da el monto mensual, que importa porque la mayoría de los prestamistas lo cobran en una cuenta de custodia junto con el pago hipotecario. Un valor catastral o una tasa más altos elevan la factura proporcionalmente, por eso las apelaciones y los cambios de tasa locales mueven el número directamente.",
+    explanationEs: "El impuesto predial es un gravamen anual que los gobiernos locales cobran según el valor de tu vivienda, y financia escuelas, carreteras, servicios de emergencia y otras necesidades comunitarias. Una calculadora de impuesto predial estima la factura multiplicando tu valor catastral por la tasa impositiva local, luego la divide en una cifra mensual para que veas cuánto apartar cada mes. Como la mayoría de los prestamistas cobran el impuesto predial a través de la custodia, ese número mensual se integra directamente en tu pago de vivienda.\n\nDos datos determinan el resultado. El valor catastral es la cifra que tu asesor local asigna a la propiedad, que puede diferir de lo que pagaste o de lo que podrías venderla. La tasa impositiva, a veces expresada como tasa de milésimas, la fija tu municipio y puede variar drásticamente de un pueblo o condado a otro. Multiplícalos y tienes la obligación anual.\n\nEl cálculo funciona porque el impuesto predial es fundamentalmente proporcional: una tasa fija aplicada al valor. Eso facilita ver cómo una revaluación o un cambio de tasa moverían tu factura, y por qué dos viviendas similares en distritos distintos pueden deber montos muy diferentes. Los compradores siempre deberían considerar el impuesto predial en la asequibilidad, ya que se repite mientras seas propietario y puede subir con el tiempo a medida que cambian las valuaciones y los presupuestos locales.",
+    exampleEs: { inputs: { assessedValue: 300000, taxRate: 1.2 }, explanation: "Una tasa del 1.2% sobre un valor catastral de $300,000 es $300,000 × 0.012 = $3,600 al año. Dividido entre doce, son $300 al mes para apartar para el impuesto predial." },
+    faqsEs: [
+      {
+        question: "¿Qué es el valor catastral y cómo se determina?",
+        answer: "El valor catastral es la cifra en dólares que un asesor fiscal local asigna a tu propiedad para calcular el impuesto, y puede diferir del precio de mercado o de lo que pagaste. Los asesores usan métodos como ventas comparables, costo de reposición o potencial de ingresos, y muchas jurisdicciones revalúan periódicamente o aplican un ratio fijo al valor de mercado. Como el impuesto se basa en este número, una valuación inexacta infla directamente tu factura.",
+      },
+      {
+        question: "¿Cómo encuentro mi tasa de impuesto predial?",
+        answer: "Las tasas impositivas las fijan los gobiernos locales y normalmente se publican en el sitio web del asesor o tesorero de tu condado o municipio, a menudo como porcentaje o como tasa de milésimas. Tu factura anual de impuestos y tu estado de cuenta de custodia hipotecaria también listan la tasa efectiva. Las tasas varían mucho por ubicación porque reflejan los presupuestos locales para escuelas y servicios, así que usa siempre la cifra de tu distrito específico en lugar de un promedio estatal.",
+      },
+      {
+        question: "¿Por qué se cobra el impuesto predial mensualmente en custodia?",
+        answer: "Muchos prestamistas dividen tu impuesto predial anual entre doce y lo cobran junto con tu pago hipotecario, guardándolo en una cuenta de custodia y pagando a la autoridad fiscal cuando vence. Esto reparte una factura anual grande en montos mensuales manejables y protege al prestamista al asegurar que el impuesto se pague, ya que los impuestos prediales impagos pueden crear un gravamen que supera a la hipoteca sobre la propiedad.",
+      },
+      {
+        question: "¿Puedo reducir mi factura de impuesto predial?",
+        answer: "A veces. Si crees que tu valor catastral es demasiado alto, la mayoría de las jurisdicciones te permiten presentar una apelación con evidencia como ventas comparables recientes o un avalúo independiente. Muchas zonas también ofrecen exenciones que reducen el valor gravable para residencias principales, personas mayores, veteranos o personas con discapacidad. Consulta la oficina de tu asesor para conocer las exenciones disponibles y los plazos de apelación, ya que estos programas pueden recortar significativamente la factura para quienes califican.",
+      },
+      {
+        question: "¿El impuesto predial cambia con el tiempo?",
+        answer: "Sí. Tu factura puede subir o bajar cuando el gobierno local ajusta su tasa impositiva, cuando tu propiedad se revalúa a un nuevo valor, o cuando el desarrollo cercano desplaza el mercado. Algunas jurisdicciones limitan qué tan rápido pueden subir las valuaciones cada año, mientras que otras revalúan en cada venta. Como el impuesto se repite anualmente y puede crecer, considera posibles aumentos en tu presupuesto a largo plazo en lugar de asumir que la cifra de hoy es fija.",
+      },
+    ],
   },
   {
     id: "mortgage-refinance",
@@ -371,5 +563,37 @@ export const realEstateWave3Calculators: CalculatorDefinition[] = [
     sensitivity: "finance",
     formulaSource: "Standard amortization formula",
     sourceUrl: "https://www.consumerfinance.gov/owning-a-home/",
+    slugEs: "calculadora-de-refinanciamiento-hipotecario",
+    titleEs: "Calculadora de Refinanciamiento Hipotecario",
+    shortDescriptionEs: "Mira tu nuevo pago, el ahorro mensual y el punto de equilibrio.",
+    seoTitleEs: "Calculadora de Refinanciamiento Hipotecario — Ahorro y Punto de Equilibrio",
+    metaDescriptionEs: "Calculadora gratuita de refinanciamiento hipotecario. Compara tu pago actual con una nueva tasa y plazo para hallar tu nuevo pago, el ahorro mensual y el punto de equilibrio en meses.",
+    primaryKeywordEs: "calculadora de refinanciamiento hipotecario",
+    secondaryKeywordsEs: ["calculadora de refinanciamiento", "calculadora de ahorro por refinanciamiento", "calculadora de punto de equilibrio de refinanciamiento"],
+    formulaExplanationEs: "El nuevo pago de capital e intereses proviene de la fórmula estándar de amortización aplicada a tu saldo actual con la nueva tasa y plazo, distribuyendo el pago de forma uniforme. Restar ese pago del actual da el ahorro mensual. Dividir los costos de cierre entre ese ahorro te indica cuántos meses de pagos más bajos toma recuperar el gasto inicial, que es el momento en que el refinanciamiento empieza a devolver dinero a tu bolsillo.",
+    explanationEs: "Refinanciar reemplaza tu hipoteca existente por un nuevo préstamo, normalmente para capturar una tasa de interés más baja, acortar o alargar el plazo, o liberar efectivo mensual. Una calculadora de refinanciamiento hipotecario hace concreta la decisión al calcular tu nuevo pago de capital e intereses a partir de tu saldo actual, y luego lo compara con lo que pagas hoy para revelar el ahorro mensual y, sobre todo, cuánto tiempo toma recuperar el costo del refinanciamiento.\n\nEsa última cifra, el punto de equilibrio, es lo que separa un refinanciamiento inteligente de uno costoso. Refinanciar no es gratis: los costos de cierre del nuevo préstamo a menudo llegan a los miles. Dividir esos costos entre tu ahorro mensual muestra cuántos meses debes mantener el préstamo antes de que los ahorros superen el gasto inicial. Si planeas vender o volver a refinanciar antes de ese punto, el trato podría no compensar.\n\nLa matemática funciona porque el nuevo pago sigue la misma lógica de amortización que cualquier hipoteca, así que una tasa más baja o un plazo distinto produce una nueva cifra predecible. Sopesar el ahorro mensual frente al horizonte del punto de equilibrio te permite juzgar si un refinanciamiento realmente ayuda. Los propietarios también deberían considerar que alargar el plazo puede bajar el pago mientras eleva el interés total, así que el ahorro mensual por sí solo nunca cuenta toda la historia.",
+    exampleEs: { inputs: { currentBalance: 300000, currentPayment: 1800, newRate: 5, newTerm: 30, closingCosts: 6000 }, explanation: "Refinanciar $300,000 al 5% a 30 años produce un nuevo pago de alrededor de $1,610 al mes, unos $190 menos que los $1,800 actuales. Recuperar los $6,000 de costos de cierre toma aproximadamente $6,000 ÷ $190 ≈ 32 meses para alcanzar el punto de equilibrio." },
+    faqsEs: [
+      {
+        question: "¿Qué es el punto de equilibrio en un refinanciamiento?",
+        answer: "El punto de equilibrio es la cantidad de meses que tardan tus ahorros mensuales acumulados en igualar los costos de cierre que pagaste por refinanciar. Divide los costos de cierre entre el ahorro mensual para hallarlo. Si tu punto de equilibrio es de 32 meses, necesitas mantener el nuevo préstamo al menos ese tiempo para salir ganando. Refinanciar rara vez compensa si planeas mudarte o volver a refinanciar antes.",
+      },
+      {
+        question: "¿Un pago mensual más bajo siempre significa que ahorro dinero?",
+        answer: "No siempre. Un pago más bajo puede venir de una tasa genuinamente más baja, lo que sí ahorra dinero, o de estirar el saldo sobre un plazo más largo, lo que reduce la cifra mensual mientras aumenta el interés total que pagas a lo largo de la vida del préstamo. Mira más allá del pago hacia la tasa de interés, el nuevo plazo y el costo total. Un pago menor sobre un préstamo más largo puede costar más en total de forma silenciosa.",
+      },
+      {
+        question: "¿Qué costos de cierre vienen con el refinanciamiento?",
+        answer: "Refinanciar conlleva muchas de las mismas tarifas que una hipoteca original: originación del préstamo, avalúo, búsqueda y seguro de título, registro y a veces puntos para bajar la tasa. Estos comúnmente totalizan un pequeño porcentaje del saldo del préstamo. Algunos prestamistas ofrecen refinanciamientos sin costos de cierre que integran las tarifas en el saldo o en la tasa, lo que baja el efectivo inicial pero eleva el préstamo o el pago mensual, así que compara el costo total con cuidado.",
+      },
+      {
+        question: "¿Debo refinanciar a un plazo más corto?",
+        answer: "Refinanciar de un plazo de 30 años a uno de 15 normalmente eleva tu pago mensual pero reduce fuertemente el interés total y construye patrimonio más rápido, lo que conviene a propietarios que pueden pagar el pago más alto y quieren ser dueños plenos antes. Alargar el plazo hace lo contrario, bajando los pagos mientras aumenta el interés de por vida. La elección correcta depende de tu presupuesto y tus metas, así que compara tanto la cifra mensual como el interés total antes de decidir.",
+      },
+      {
+        question: "¿Cuándo suele valer la pena refinanciar?",
+        answer: "Refinanciar tiende a tener sentido cuando puedes bajar tu tasa de interés de forma significativa, planeas quedarte en la vivienda más allá del punto de equilibrio y el ahorro mensual justifica los costos de cierre. También puede ayudar si quieres cambiar de una tasa ajustable a una fija, eliminar el seguro hipotecario tras ganar patrimonio, o acortar el plazo. Analiza los números de tu préstamo específico en lugar de confiar en una regla general de caída de tasas.",
+      },
+    ],
   },
 ];

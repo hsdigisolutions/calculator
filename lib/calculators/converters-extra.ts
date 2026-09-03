@@ -49,6 +49,29 @@ export const converterExtraCalculators: CalculatorDefinition[] = [
       "Free length converter. Convert between millimetres, centimetres, metres, kilometres, inches, feet, yards and miles instantly.",
     primaryKeyword: "length converter",
     secondaryKeywords: ["cm to inches", "feet to meters", "miles to km"],
+    slugEs: "conversor-de-longitud",
+    titleEs: "Conversor de Longitud",
+    shortDescriptionEs: "Convierte entre unidades de longitud métricas e imperiales.",
+    seoTitleEs: "Conversor de Longitud — cm, m, pulgadas, pies, millas",
+    metaDescriptionEs:
+      "Conversor de longitud gratuito. Convierte entre milímetros, centímetros, metros, kilómetros, pulgadas, pies, yardas y millas al instante.",
+    primaryKeywordEs: "conversor de longitud",
+    secondaryKeywordsEs: ["cm a pulgadas", "pies a metros", "millas a km"],
+    formulaExplanationEs:
+      "El valor de entrada se multiplica por la proporción fija de su unidad respecto al metro para obtener un valor en metros, y luego se divide por la proporción de la unidad de destino para llegar a la respuesta. Este pivote en dos pasos funciona porque cada unidad de longitud se define como un número constante de metros, así que encadenar a través de la base compartida es algebraicamente exacto y evita almacenar un factor separado para cada uno de los muchos pares de unidades.",
+    explanationEs:
+      "Un conversor de longitud transforma una distancia expresada en una unidad en su equivalente en otra, abarcando unidades métricas como milímetros, centímetros, metros y kilómetros, y unidades imperiales como pulgadas, pies, yardas y millas. Funciona reduciendo tu valor a metros, la unidad base, y luego escalándolo a la unidad que selecciones, de modo que un único mecanismo cubre todos los emparejamientos de ambos sistemas.\n\nEsto importa porque el sistema métrico y el imperial conviven en la vida cotidiana, y mezclarlos causa errores reales. Un mueble medido en centímetros tiene que caber en una habitación indicada en pies; una receta extranjera, una ruta para correr o una especificación de construcción pueden llegar en el sistema que no usas a diario. Un conversor de longitud elimina las conjeturas y el riesgo de un decimal desplazado que convierte un número sensato en un disparate.\n\nEl enfoque de normalizar a metros se usa porque cada unidad de longitud tiene una proporción fija y definida internacionalmente respecto al metro: una pulgada es exactamente 0.0254 m, una milla son 1,609.344 m, así que pivotar a través de esa base mantiene resultados exactos en lugar de aproximados. Estudiantes, profesionales de oficios, viajeros, ingenieros y compradores en línea recurren a un conversor de longitud siempre que una medida aparece en la unidad equivocada.",
+    exampleEs: {
+      inputs: { value: 100, from: "cm", to: "in" },
+      explanation: "100 cm = 1 m, y 1 m ÷ 0.0254 ≈ 39.3701 pulgadas.",
+    },
+    faqsEs: [
+      { question: "¿Cuántos centímetros hay en una pulgada?", answer: "Exactamente 2.54 centímetros, por definición internacional desde 1959. No es una cifra redondeada, sino exacta, por lo que las conversiones de pulgadas a centímetros son precisas. De ello se deduce que un pie son 30.48 cm y un metro son unas 39.37 pulgadas. Como la definición es exacta, cualquier redondeo que veas proviene solo del número de decimales mostrados, no del factor subyacente." },
+      { question: "¿Cómo convierto millas a kilómetros?", answer: "Multiplica el número de millas por 1.609344 para obtener kilómetros. Así, 5 millas son unos 8.05 km, y un maratón de 26.2 millas equivale aproximadamente a 42.2 km. Para hacerlo al revés, divide los kilómetros entre 1.609344, o multiplica por unos 0.6214. El factor es exacto porque una milla se define como exactamente 1,609.344 metros, o 1,760 yardas." },
+      { question: "¿Cuántos pies hay en un metro?", answer: "Un metro son unos 3.2808 pies, ya que un pie se define como exactamente 0.3048 metros. Eso significa que 10 metros son aproximadamente 32.81 pies. Para una estimación mental rápida, un metro es algo más de tres pies y tres pulgadas. La vía exacta es dividir el valor en metros entre 0.3048, que el conversor hace automáticamente con la precisión mostrada." },
+      { question: "¿Son exactas las conversiones?", answer: "Sí. El conversor usa los factores definidos internacionalmente, todos los cuales se remontan al metro, por lo que los resultados son precisos hasta los decimales mostrados. Donde ves una cifra redondeada como 39.3701 pulgadas, el redondeo es puramente para la visualización; el cálculo en sí conserva la precisión completa. Los factores métrico-imperiales como la pulgada y la milla son definiciones exactas, no aproximaciones medidas." },
+      { question: "¿Cuál es la diferencia entre las unidades de longitud métricas e imperiales?", answer: "Las unidades métricas (milímetro, centímetro, metro, kilómetro) escalan en potencias de diez, lo que hace que las conversiones dentro del sistema sean simples desplazamientos del punto decimal. Las unidades imperiales (pulgada, pie, yarda, milla) usan factores variados de 12, 3 y 1,760. La mayor parte del mundo usa el sistema métrico, mientras que EE. UU. y, de manera informal, el Reino Unido conservan el imperial para algunos usos, lo que hace tan útil un conversor entre ambos." },
+    ],
     fields: [
       { id: "value", label: "Value", type: "number", placeholder: "100", required: true, span: 2, step: 0.0001 },
       { id: "from", label: "From", type: "select", required: true, span: 1, defaultValue: "cm", options: lengthUnits },
@@ -89,6 +112,29 @@ export const converterExtraCalculators: CalculatorDefinition[] = [
       "Free weight converter. Convert between milligrams, grams, kilograms, tonnes, ounces, pounds and stone instantly.",
     primaryKeyword: "weight converter",
     secondaryKeywords: ["kg to lbs", "grams to ounces", "pounds to kg"],
+    slugEs: "conversor-de-peso",
+    titleEs: "Conversor de Peso",
+    shortDescriptionEs: "Convierte entre kg, lb, oz y más.",
+    seoTitleEs: "Conversor de Peso — kg, lb, oz, gramos, stone",
+    metaDescriptionEs:
+      "Conversor de peso gratuito. Convierte entre miligramos, gramos, kilogramos, toneladas, onzas, libras y stone al instante.",
+    primaryKeywordEs: "conversor de peso",
+    secondaryKeywordsEs: ["kg a lbs", "gramos a onzas", "libras a kg"],
+    formulaExplanationEs:
+      "El valor de entrada se multiplica por la proporción fija de su unidad respecto al kilogramo para expresarlo en kilogramos, y luego se divide por la proporción de la unidad de destino para completar la conversión. Como cada unidad de masa se define como un número constante de kilogramos, encadenar a través de esta única base es exacto y hace que el conversor almacene solo un factor por unidad en lugar de un factor para cada emparejamiento posible.",
+    explanationEs:
+      "Un conversor de peso cambia una masa de una unidad a otra, abarcando unidades métricas como miligramos, gramos, kilogramos y toneladas junto con unidades imperiales y usuales como onzas, libras y stone. Reduce lo que introduces a kilogramos, la unidad base, y luego lo escala a la unidad elegida, de modo que una ruta consistente maneja todas las combinaciones de ambos sistemas de medición.\n\nEsto importa porque la masa se expresa de forma distinta según dónde estés y qué hagas. El peso corporal aparece en kilogramos, libras o stone según el país; las recetas mezclan gramos y onzas; el envío y la carga combinan kilogramos, libras y toneladas. Un conversor de peso resuelve esas diferencias de una vez y evita el tipo de error que convierte el coste de un paquete o el cálculo de una dosis en una equivocación costosa.\n\nEl método de normalizar a kilogramos se usa porque cada unidad de masa tiene una proporción fija respecto al kilogramo: una libra son exactamente 0.45359237 kg, una onza es una dieciseisava parte de una libra, así que pivotar a través de esa base mantiene cada resultado exacto. Cocineros, viajeros, personas que siguen su progreso en el gimnasio, personal de almacén y logística, y trabajadores sanitarios recurren a un conversor de peso siempre que una cifra aparece en una unidad desconocida.",
+    exampleEs: {
+      inputs: { value: 70, from: "kg", to: "lb" },
+      explanation: "70 kg ÷ 0.45359237 ≈ 154.3236 lb.",
+    },
+    faqsEs: [
+      { question: "¿Cuántas libras hay en un kilogramo?", answer: "Unas 2.20462 libras por kilogramo. Así, 70 kg son aproximadamente 154.32 lb, y 100 kg son unas 220.46 lb. Para invertirlo, multiplica las libras por 0.453592 para obtener kilogramos. El factor proviene de la definición exacta de que una libra equivale a 0.45359237 kilogramos, por lo que la cifra de libras por kilogramo es simplemente el recíproco de ese valor." },
+      { question: "¿Cómo convierto kilogramos a libras?", answer: "Multiplica la cifra en kilogramos por 2.20462, o de forma equivalente divide entre 0.453592. Por ejemplo, 5 kg son unas 11.02 lb. Para una estimación mental aproximada, duplica los kilogramos y suma alrededor del diez por ciento. La ruta precisa que usa el conversor pivota a través de la definición exacta de la libra, por lo que la respuesta mostrada es precisa hasta los decimales indicados en lugar de una aproximación." },
+      { question: "¿Qué es un stone en peso?", answer: "Un stone equivale a 14 libras, o unos 6.35 kilogramos, y todavía se usa mucho para el peso corporal en el Reino Unido e Irlanda. Así, 70 kg son aproximadamente 11 stone. El stone normalmente se expresa con un resto en libras, como 11 stone 0 libras, en lugar de como decimal. El conversor informa el valor decimal en stone, que puedes dividir en stone enteros y libras." },
+      { question: "¿Es el peso lo mismo que la masa?", answer: "En sentido estricto, la masa mide la cantidad de materia mientras que el peso es la fuerza que la gravedad ejerce sobre ella, pero en el uso cotidiano los términos son intercambiables. Las unidades aquí (gramos, kilogramos, libras, etc.) miden todas la masa. Como las conversiones entre ellas son proporciones, y la gravedad es prácticamente constante en la superficie de la Tierra, la distinción no afecta a los números que produce este conversor." },
+      { question: "¿Cuántos gramos hay en una onza?", answer: "Una onza son unos 28.3495 gramos, ya que una onza se define como una dieciseisava parte de una libra. Así, cuatro onzas son aproximadamente 113.4 gramos, una cifra común en cocina. Esta es la onza avoirdupois usada para el peso cotidiano; la onza troy usada para metales preciosos es más pesada, unos 31.10 gramos, así que no uses este conversor para el precio del oro o la plata." },
+    ],
     fields: [
       { id: "value", label: "Value", type: "number", placeholder: "70", required: true, span: 2, step: 0.0001 },
       { id: "from", label: "From", type: "select", required: true, span: 1, defaultValue: "kg", options: weightUnits },
@@ -129,6 +175,29 @@ export const converterExtraCalculators: CalculatorDefinition[] = [
       "Free speed converter. Convert between metres per second, kilometres per hour, miles per hour, knots and feet per second.",
     primaryKeyword: "speed converter",
     secondaryKeywords: ["mph to kmh", "km/h to mph", "knots to mph"],
+    slugEs: "conversor-de-velocidad",
+    titleEs: "Conversor de Velocidad",
+    shortDescriptionEs: "Convierte entre mph, km/h, m/s y nudos.",
+    seoTitleEs: "Conversor de Velocidad — mph, km/h, m/s, nudos",
+    metaDescriptionEs:
+      "Conversor de velocidad gratuito. Convierte entre metros por segundo, kilómetros por hora, millas por hora, nudos y pies por segundo.",
+    primaryKeywordEs: "conversor de velocidad",
+    secondaryKeywordsEs: ["mph a kmh", "km/h a mph", "nudos a mph"],
+    formulaExplanationEs:
+      "El valor de entrada se multiplica por la proporción fija de su unidad respecto a los metros por segundo, y luego se divide por la proporción de la unidad de destino para llegar a la respuesta. Esto funciona porque cada unidad de velocidad es una unidad de distancia sobre una unidad de tiempo, y ambas se reducen a constantes frente al metro y el segundo, de modo que su proporción combinada respecto a m/s es fija y pivotar a través de esa única base sigue siendo exacto.",
+    explanationEs:
+      "Un conversor de velocidad reformula un ritmo de desplazamiento en una unidad diferente, moviéndose entre metros por segundo, kilómetros por hora, millas por hora, nudos y pies por segundo. Reduce tu cifra a metros por segundo, la base del SI para la velocidad, y luego la escala a la unidad que quieras, de modo que un único pivote maneja velocidades de carretera, velocidades del viento, ritmos de carrera y velocidades de embarcaciones por igual.\n\nEsto importa porque la velocidad se expresa en distintas unidades según el contexto, y el mismo trayecto puede parecer más rápido o más lento solo por la unidad. El velocímetro de un auto puede marcar km/h donde el límite está señalado en mph; un pronóstico del tiempo da el viento en nudos o metros por segundo; la aviación y la navegación funcionan enteramente con nudos. Un conversor de velocidad los reconcilia al instante para que las comparaciones sean equivalentes.\n\nEl método de convertir a través de metros por segundo se usa porque cada unidad tiene una proporción fija respecto a esa base: 1 km/h es exactamente 1000/3600 m/s, un nudo es una milla náutica por hora a 0.514444 m/s, así que pivotar a través de ella mantiene resultados exactos. Conductores que cruzan fronteras, pilotos y marineros, meteorólogos, atletas que comprueban su ritmo y estudiantes de física usan un conversor de velocidad siempre que un ritmo llega en una unidad desconocida.",
+    exampleEs: {
+      inputs: { value: 100, from: "km/h", to: "mph" },
+      explanation: "100 km/h ≈ 27.78 m/s ≈ 62.14 mph.",
+    },
+    faqsEs: [
+      { question: "¿Cómo convierto km/h a mph?", answer: "Multiplica la cifra en km/h por unos 0.6214 para obtener mph. Así, 100 km/h son aproximadamente 62.1 mph, y un límite urbano de 50 km/h son unas 31 mph. Para invertirlo, multiplica las mph por 1.60934. El factor es la proporción de un kilómetro respecto a una milla, ya que ambas velocidades comparten la unidad de tiempo por hora, por lo que solo hay que convertir la parte de distancia." },
+      { question: "¿Qué es un nudo?", answer: "Un nudo es una milla náutica por hora, usado en aviación y navegación marítima porque una milla náutica corresponde a un minuto de latitud, lo que simplifica el trabajo con cartas. Un nudo son unas 1.151 mph o 1.852 km/h. Así, un barco a 20 nudos va a unas 23 mph. El nombre de la unidad proviene de la línea con nudos que los marineros usaban antaño para medir la velocidad de una embarcación." },
+      { question: "¿Qué tan rápido es 100 km/h en mph?", answer: "Unas 62.14 mph, lo que pasa por aproximadamente 27.78 metros por segundo. Es una velocidad común de autopista. Un atajo mental rápido es multiplicar los km/h por 0.6, dando 60 como ligera subestimación, y luego ajustar hacia arriba. El conversor lleva el factor completo de 0.62137, por lo que su respuesta es precisa hasta los decimales mostrados en lugar de la estimación aproximada." },
+      { question: "¿Por qué convertir a través de metros por segundo?", answer: "Los metros por segundo son la unidad base del SI para la velocidad, así que cada otra unidad tiene una proporción fija y definida con exactitud respecto a ella. Usarla como pivote significa que el conversor solo necesita un factor por unidad en lugar de una regla separada para cada par, y mantiene resultados exactos. También es la unidad que esperan las ecuaciones de física, por lo que el trabajo científico expresa la velocidad en m/s." },
+      { question: "¿Cuál es un buen ritmo de carrera en estas unidades?", answer: "La carrera suele registrarse como ritmo, el tiempo por kilómetro o milla, pero se convierte directamente a velocidad. Un enérgico 10 km/h equivale a unas 6.2 mph, o un kilómetro en seis minutos. La velocidad de un maratón de élite ronda los 20 km/h, unas 12.4 mph. Para convertir una velocidad en ritmo, divide 60 entre la cifra en km/h para obtener minutos por kilómetro, que muchos corredores encuentran más fácil de juzgar." },
+    ],
     fields: [
       { id: "value", label: "Value", type: "number", placeholder: "100", required: true, span: 2, step: 0.0001 },
       { id: "from", label: "From", type: "select", required: true, span: 1, defaultValue: "km/h", options: speedUnits },
@@ -192,6 +261,30 @@ export const converterExtraCalculators: CalculatorDefinition[] = [
       { question: "How many bits are in a byte?", answer: "Eight bits make one byte, which is why file sizes in bytes and connection speeds in bits differ by a factor of eight. A byte is the smallest unit that typically stores a single character, while a bit is a single binary digit. Network speeds are usually quoted in bits per second, so an 80 Mbps line transfers roughly 10 megabytes per second before overhead." },
       { question: "What is the difference between binary and decimal storage units?", answer: "Binary units step by 1,024 (2 to the tenth power) and reflect how memory is physically addressed; decimal units step by 1,000 and follow the standard metric prefixes. Strictly, the binary units should be labelled kibibyte, mebibyte and so on, but common usage keeps KB, MB and GB for both. This converter applies the 1,024 binary step, which matches what most operating systems display." },
       { question: "How do I convert MB to GB?", answer: "Divide the megabyte figure by 1,024 to get gigabytes in binary units. So 1,024 MB is exactly 1 GB, and 512 MB is 0.5 GB. To go the other way, multiply gigabytes by 1,024. If a source is using decimal units, the divisor would be 1,000 instead, but for file and disk sizes shown by your operating system, 1,024 is the correct step." },
+    ],
+    slugEs: "conversor-de-almacenamiento-de-datos",
+    titleEs: "Conversor de Almacenamiento de Datos",
+    shortDescriptionEs: "Convierte entre bytes, KB, MB, GB y TB.",
+    seoTitleEs: "Conversor de Almacenamiento de Datos — Bytes, KB, MB, GB, TB",
+    metaDescriptionEs:
+      "Conversor de almacenamiento de datos gratuito. Convierte entre bits, bytes, kilobytes, megabytes, gigabytes, terabytes y petabytes.",
+    primaryKeywordEs: "conversor de almacenamiento de datos",
+    secondaryKeywordsEs: ["mb a gb", "bytes a megabytes", "gb a tb"],
+    formulaEs: "Unidades binarias: 1 KB = 1024 B, 1 MB = 1024 KB, y así sucesivamente (1 byte = 8 bits)",
+    formulaExplanationEs:
+      "Cada unidad se define como un número fijo de bytes —una potencia de 1.024 en la convención binaria, con un byte igual a 8 bits—. La entrada se reduce a bytes multiplicándola por el valor en bytes de su unidad y luego se divide por el valor en bytes de la unidad de destino. Esto funciona porque la memoria del ordenador se direcciona en potencias de dos, por lo que 1.024 es el multiplicador natural y cada unidad es una constante exacta de bytes.",
+    explanationEs:
+      "Un conversor de almacenamiento de datos reexpresa una cantidad de información digital en una unidad distinta, moviéndose entre bits, bytes, kilobytes, megabytes, gigabytes, terabytes y petabytes. Reduce tu cifra a una base común y la escala hasta la unidad que elijas, usando pasos binarios (basados en 1024) donde cada peldaño de la escalera es 1.024 veces el de abajo y un byte son ocho bits.\n\nEsto importa porque las cifras de almacenamiento guían decisiones reales y las unidades se confunden con facilidad. Si una biblioteca de vídeo cabe en un disco, cuánto tarda un archivo en descargarse o si una copia de seguridad se completará dependen de comparar tamaños en una unidad consistente. Un conversor hace esas comparaciones fiables, y la base binaria refleja cómo los sistemas operativos informan realmente los tamaños de archivos y discos.\n\nSe usa el método binario porque la memoria del ordenador se organiza en potencias de dos, así que 1.024 en lugar de 1.000 es el paso natural entre unidades. Los fabricantes de discos, en cambio, suelen usar unidades decimales (basadas en 1000), por lo que un disco vendido como 1 TB muestra menos espacio utilizable en tu sistema operativo. Personal de TI, desarrolladores, estudiantes y cualquiera que gestione archivos o ancho de banda recurren a un conversor cuando los tamaños aparecen en unidades que no coinciden.",
+    exampleEs: {
+      inputs: { value: 1024, from: "MB", to: "GB" },
+      explanation: "1024 MB ÷ 1024 = 1 GB (binario).",
+    },
+    faqsEs: [
+      { question: "¿Por qué mi disco duro muestra menos espacio del anunciado?", answer: "Los fabricantes miden la capacidad en unidades decimales, donde 1 TB equivale a 1.000.000.000.000 bytes, mientras que los sistemas operativos suelen informar en unidades binarias, donde 1 TB son 1.099.511.627.776 bytes. Dividir la capacidad decimal entre la unidad binaria mayor hace que la cifra informada parezca menor —alrededor de un siete por ciento menos a escala de terabyte— aunque no falte espacio en realidad. La sobrecarga de formateo puede reducir un poco más el espacio utilizable." },
+      { question: "¿Cuántos megabytes hay en un gigabyte?", answer: "En la convención binaria que usa este conversor, hay 1.024 megabytes en un gigabyte, igual que cuentan los sistemas operativos. En la convención decimal que prefiere el marketing de almacenamiento, son 1.000. La brecha se acumula en cada nivel, así que la diferencia entre binario y decimal crece más para terabytes y petabytes. Esta calculadora usa el paso de 1.024 en todo para ser coherente con los tamaños de archivo informados." },
+      { question: "¿Cuántos bits hay en un byte?", answer: "Ocho bits forman un byte, por eso los tamaños de archivo en bytes y las velocidades de conexión en bits difieren en un factor de ocho. Un byte es la unidad más pequeña que suele almacenar un solo carácter, mientras que un bit es un único dígito binario. Las velocidades de red se citan normalmente en bits por segundo, así que una línea de 80 Mbps transfiere unos 10 megabytes por segundo antes de la sobrecarga." },
+      { question: "¿Cuál es la diferencia entre unidades de almacenamiento binarias y decimales?", answer: "Las unidades binarias avanzan de 1.024 en 1.024 (2 elevado a la décima potencia) y reflejan cómo se direcciona físicamente la memoria; las decimales avanzan de 1.000 en 1.000 y siguen los prefijos métricos estándar. En rigor, las unidades binarias deberían llamarse kibibyte, mebibyte, etc., pero el uso común mantiene KB, MB y GB para ambas. Este conversor aplica el paso binario de 1.024, que coincide con lo que muestran la mayoría de los sistemas operativos." },
+      { question: "¿Cómo convierto MB a GB?", answer: "Divide la cifra de megabytes entre 1.024 para obtener gigabytes en unidades binarias. Así, 1.024 MB son exactamente 1 GB, y 512 MB son 0,5 GB. Para ir al revés, multiplica los gigabytes por 1.024. Si una fuente usa unidades decimales, el divisor sería 1.000, pero para los tamaños de archivo y disco que muestra tu sistema operativo, 1.024 es el paso correcto." },
     ],
     relatedCalculators: ["length-converter", "weight-converter", "speed-converter"],
     status: "active",

@@ -12,6 +12,38 @@ export const cookingWave3Calculators: CalculatorDefinition[] = [
     metaDescription: "Free recipe scaler calculator. Enter original and desired servings to get an exact scaling factor and instantly resize any ingredient amount up or down.",
     primaryKeyword: "recipe scaler calculator",
     secondaryKeywords: ["recipe scaling calculator", "adjust recipe servings", "recipe multiplier calculator"],
+    slugEs: "calculadora-para-escalar-recetas",
+    titleEs: "Calculadora para Escalar Recetas",
+    shortDescriptionEs: "Escala cualquier receta hacia arriba o hacia abajo según las porciones.",
+    seoTitleEs: "Calculadora para Escalar Recetas — Ajusta Porciones e Ingredientes",
+    metaDescriptionEs: "Calculadora gratuita para escalar recetas. Introduce las porciones originales y deseadas para obtener un factor de escala exacto y redimensionar cualquier ingrediente.",
+    primaryKeywordEs: "calculadora para escalar recetas",
+    secondaryKeywordsEs: ["calculadora de escalado de recetas", "ajustar porciones de receta", "calculadora multiplicadora de recetas"],
+    formulaExplanationEs: "Escalar una receta significa mantener cada ingrediente en la misma proporción mientras cambia el rendimiento total. Dividir las porciones deseadas entre las porciones originales da un único factor por el que se multiplica cada cantidad, de modo que las proporciones se conservan intactas. El método funciona porque una receta es un conjunto de proporciones fijas, y multiplicarlas todas por el mismo número preserva esas proporciones en cualquier tamaño de tanda.",
+    explanationEs: "Escalar una receta hacia arriba para una multitud o hacia abajo para una pareja se reduce a un solo número, y esta calculadora para escalar recetas lo encuentra por ti y lo aplica a cualquier ingrediente que introduzcas. Indicas las porciones para las que se escribió la receta y las porciones que realmente quieres, y la herramienta devuelve el factor de escala exacto junto con la cantidad redimensionada del ingrediente que escribas.\n\nAcertar con el factor importa porque calcular a ojo una receta duplicada o dividida a la mitad es donde se cuelan los errores, sobre todo con números incómodos como llevar una receta para cuatro hasta siete. Una calculadora para escalar recetas elimina la aritmética mental para que cada cantidad se mantenga en la misma proporción, conservando el equilibrio del plato tanto si cocinas en tandas para una fiesta como si reduces un plato familiar para una cena en solitario.\n\nEl factor funciona porque una receta es en realidad un conjunto de proporciones, y multiplicarlas todas por el mismo número las preserva a cualquier tamaño. Un par de cosas no escalan de forma lineal, sin embargo: la sal, las especias fuertes y la levadura suelen necesitar mano más ligera al multiplicarse, y el tiempo de cocción cambia con la profundidad del molde más que con el volumen. Cocineros caseros, servicios de catering y quienes preparan comidas por adelantado se apoyan en una calculadora para escalar recetas para redimensionar platos rápido y comprobar el sazón después.",
+    exampleEs: { inputs: { originalServings: 4, desiredServings: 6, ingredientAmount: 2 }, explanation: "6 ÷ 4 = factor de escala de 1,5×, así que 2 tazas se convierten en 2 × 1,5 = 3 tazas." },
+    faqsEs: [
+      {
+        question: "¿Cómo calcula el factor la calculadora para escalar recetas?",
+        answer: "La herramienta divide tu número deseado de porciones entre el número original de porciones para el que se escribió la receta. Esa única cifra es el factor de escala, y multiplicar cualquier ingrediente por él da la nueva cantidad. Llevar una receta de cuatro a seis produce un factor de 1,5, así que cada cantidad crece la mitad de nuevo. El factor mantiene todas las proporciones de ingredientes perfectamente en su sitio en el nuevo rendimiento.",
+      },
+      {
+        question: "¿Tengo que introducir una cantidad de ingrediente?",
+        answer: "No, el campo de ingrediente es opcional. Si solo quieres el factor de escala, déjalo en blanco y la calculadora sigue devolviendo el multiplicador para que lo apliques tú mismo. Introducir una cantidad es útil cuando quieres comprobar un ingrediente concreto, como cuántos gramos de harina necesita una tanda duplicada. Puedes volver a introducir cantidades distintas de una en una para convertir cada línea de una receta por turnos.",
+      },
+      {
+        question: "¿El sazón se escala igual que los demás ingredientes?",
+        answer: "No siempre. Los ingredientes en volumen como harina, azúcar y líquidos escalan limpiamente con el factor, pero la sal, las especias fuertes, el ajo y el chile a menudo saben demasiado intensos al multiplicarse directamente. Un hábito seguro es escalarlos a unas tres cuartas partes del factor, luego probar y ajustar. Los agentes leudantes como la levadura en polvo también pueden comportarse distinto en tandas grandes, así que trata esos números como punto de partida más que como regla.",
+      },
+      {
+        question: "¿Por qué el tiempo de cocción no escala con la receta?",
+        answer: "El tiempo de cocción depende de cómo penetra el calor en el alimento, que se rige por el grosor y la superficie, no por el volumen total. Una masa de pastel duplicada en un molde más profundo necesita más tiempo, mientras que la misma masa repartida en dos moldes se hornea en aproximadamente el tiempo original. Por eso, vigila las señales de cocción —color, temperatura interna, un palillo limpio— en lugar de suponer que el tiempo escala con el mismo factor.",
+      },
+      {
+        question: "¿Puedo reducir una receta a una sola porción?",
+        answer: "Sí. Introduce las porciones originales y fija las porciones deseadas en una, y la calculadora produce un factor fraccionario para reducir cada ingrediente. Las cantidades muy pequeñas pueden ser difíciles de medir con precisión, así que apóyate en una báscula de cocina y cucharas medidoras para cantidades diminutas. Para ingredientes como un solo huevo que no se pueden dividir con limpieza, redondea con sentido y ajusta las cantidades circundantes para mantener el plato equilibrado.",
+      },
+    ],
     fields: [
       { id: "originalServings", label: "Original servings", type: "number", required: true, span: 1, min: 0, helpText: "Servings the recipe is written for." },
       { id: "desiredServings", label: "Desired servings", type: "number", required: true, span: 1, min: 0 },
@@ -63,6 +95,38 @@ export const cookingWave3Calculators: CalculatorDefinition[] = [
     metaDescription: "Free baking conversion calculator. Convert cups to grams and grams to cups for flour, sugar, butter, and water using accurate per-ingredient densities.",
     primaryKeyword: "baking conversion calculator",
     secondaryKeywords: ["cups to grams calculator", "grams to cups calculator", "baking measurement converter"],
+    slugEs: "calculadora-de-conversion-de-reposteria",
+    titleEs: "Calculadora de Conversión de Repostería",
+    shortDescriptionEs: "Convierte tazas a gramos para ingredientes de repostería comunes.",
+    seoTitleEs: "Calculadora de Conversión de Repostería — Tazas a Gramos",
+    metaDescriptionEs: "Calculadora gratuita de conversión de repostería. Convierte tazas a gramos y gramos a tazas para harina, azúcar, mantequilla y agua con densidades exactas.",
+    primaryKeywordEs: "calculadora de conversión de repostería",
+    secondaryKeywordsEs: ["calculadora de tazas a gramos", "calculadora de gramos a tazas", "conversor de medidas de repostería"],
+    formulaExplanationEs: "Una taza es un volumen fijo, pero cada ingrediente tiene una masa distinta empaquetada en ese volumen, así que la conversión depende de la densidad. Multiplicar tazas por la densidad en gramos por taza de un ingrediente da su peso, mientras que dividir gramos entre la misma densidad recupera el volumen. El enfoque funciona porque la densidad es la relación entre masa y volumen, y difiere para harina, azúcar, mantequilla y agua, por lo que un único factor no puede servir para todos.",
+    explanationEs: "La repostería premia la precisión, y esta calculadora de conversión de repostería convierte medidas en tazas a gramos y gramos de vuelta a tazas usando la densidad correcta de cada ingrediente. Las tazas miden volumen mientras que los gramos miden peso, y como una taza de harina pesa mucho menos que una de azúcar o mantequilla, un único número de conversión no sirve: la herramienta aplica automáticamente la cifra correcta de gramos por taza para harina, azúcar, mantequilla o agua.\n\nEsta exactitud importa porque la repostería se parece más a la química que a la cocina libre. Una taza de harina puede variar hasta un tercio según cómo se llene y se compacte, y esa diferencia basta para dejar un pastel seco o una masa floja. Pesar los ingredientes en gramos elimina esa ambigüedad, de modo que una calculadora de conversión de repostería te permite seguir una receta métrica con tazas medidoras, o llevar una receta favorita en tazas a una báscula de cocina para resultados repetibles cada vez.\n\nLa conversión funciona porque la densidad es la relación entre masa y volumen, y es fija para cada ingrediente. La harina ronda los 120 gramos por taza, el azúcar granulado unos 200, la mantequilla unos 227 y el agua alrededor de 236. Multiplicar tazas por esa densidad da gramos, y dividir gramos entre ella devuelve tazas. Reposteros, autores de recetas y cualquiera que combine recetas métricas e imperiales confían en una calculadora de conversión de repostería para cambiar de unidades sin dudar.",
+    exampleEs: { inputs: { ingredient: "flour", amount: 2, fromUnit: "cups", toUnit: "grams" }, explanation: "2 tazas de harina × 120 g por taza = 240 g." },
+    faqsEs: [
+      {
+        question: "¿Por qué no puedo usar una sola conversión para todos los ingredientes?",
+        answer: "Porque una taza mide volumen, no peso, y distintos ingredientes empaquetan cantidades diferentes de masa en la misma taza. Una taza de harina pesa unos 120 gramos, pero una taza de azúcar granulado pesa unos 200 gramos y una de mantequilla unos 227. Usar un solo número desviaría cualquier receta. Esta calculadora almacena una densidad separada para cada ingrediente, de modo que la conversión refleja lo que realmente estás midiendo.",
+      },
+      {
+        question: "¿Qué ingredientes admite la calculadora?",
+        answer: "Cubre cuatro básicos comunes de repostería: harina a unos 120 gramos por taza, azúcar granulado a 200, mantequilla a 227 y agua a 236 gramos por taza. Estas densidades coinciden con referencias de repostería ampliamente usadas. Si tu ingrediente no aparece, elige la coincidencia más cercana por textura: la mayoría de harinas comunes y de pan rondan la cifra de la harina, mientras que los jarabes y la leche se comportan de forma muy similar al agua en peso por taza.",
+      },
+      {
+        question: "¿Qué precisión tienen las conversiones de tazas a gramos?",
+        answer: "Las cifras en gramos son fiables, pero la verdadera variabilidad está en cómo llenas una taza. Recoger la harina directamente de la bolsa la compacta y puede añadir hasta un tercio más de peso que la densidad estándar supone. Para resultados más consistentes, echa la harina con cuchara ligeramente en la taza y nivélala, o mejor aún, pesa directamente en gramos. La calculadora usa densidades estándar adecuadas para tazas medidas correctamente.",
+      },
+      {
+        question: "¿Puedo convertir gramos de vuelta a tazas?",
+        answer: "Sí. Fija la unidad de origen en gramos y la de destino en tazas, y la calculadora divide tu cantidad en gramos entre la densidad del ingrediente para devolver el volumen equivalente. Esto es útil cuando una receta indica pesos pero solo tienes tazas medidoras. Ten en cuenta que los resultados en tazas fraccionarias, como 0,75 tazas, se miden más fácilmente con un juego de tazas graduadas o convirtiendo a cucharadas cuando sea necesario.",
+      },
+      {
+        question: "¿El mismo peso de harina y azúcar ocupa el mismo volumen?",
+        answer: "No. Como el azúcar es más denso que la harina, 200 gramos de azúcar ocupan alrededor de una taza mientras que 200 gramos de harina llenan cerca de una taza y dos tercios. Esta es exactamente la razón por la que la repostería basada en peso es más fiable que la basada en volumen. Siempre que una receta importe, convertir todo a gramos con esta herramienta elimina las conjeturas que surgen al intercambiar ingredientes de distinta densidad taza por taza.",
+      },
+    ],
     fields: [
       {
         id: "ingredient",
@@ -149,6 +213,38 @@ export const cookingWave3Calculators: CalculatorDefinition[] = [
     metaDescription: "Free cooking time calculator. Choose beef, chicken, pork, or turkey and enter the weight to estimate roasting time plus the safe internal target temperature.",
     primaryKeyword: "cooking time calculator",
     secondaryKeywords: ["roasting time calculator", "meat cooking time calculator", "roast timing calculator"],
+    slugEs: "calculadora-de-tiempo-de-coccion",
+    titleEs: "Calculadora de Tiempo de Cocción",
+    shortDescriptionEs: "Estima el tiempo de asado según el tipo de carne y el peso.",
+    seoTitleEs: "Calculadora de Tiempo de Cocción — Tiempo de Asado por Peso",
+    metaDescriptionEs: "Calculadora gratuita de tiempo de cocción. Elige ternera, pollo, cerdo o pavo e introduce el peso para estimar el tiempo de asado y la temperatura interna segura.",
+    primaryKeywordEs: "calculadora de tiempo de cocción",
+    secondaryKeywordsEs: ["calculadora de tiempo de asado", "calculadora de tiempo de cocción de carne", "calculadora de tiempos de asado"],
+    formulaExplanationEs: "El tiempo de asado escala con el peso porque el calor tiene que viajar desde la superficie hasta el centro, y una pieza más pesada tiene más masa que calentar por completo. Multiplicar el peso por una tasa por libra para cada carne da una estimación de trabajo. Las tasas difieren según la carne porque el punto de cocción deseado y la densidad varían, por lo que la guía siempre acompaña el tiempo con una temperatura interna segura que confirma que el asado está realmente hecho.",
+    explanationEs: "Cronometrar un asado es pura conjetura hasta que lo anclas al peso, y esta calculadora de tiempo de cocción estima cuánto necesitan la ternera, el pollo, el cerdo o el pavo según lo que pesan. Elige la carne, introduce el peso en libras y la herramienta lo multiplica por una tasa sensata por libra para dar un tiempo de asado de partida, junto con la temperatura interna segura que deberías confirmar con un termómetro antes de servir.\n\nEsto importa porque las aves y el cerdo poco hechos conllevan riesgos reales de seguridad alimentaria, mientras que cocinar de más reseca un corte caro. Una calculadora de tiempo de cocción te da un horario fiable para planificar cuándo se enciende el horno y cuándo debería estar listo el resto de la comida. La ternera y el pollo rondan los veinte minutos por libra, el cerdo se acerca a los veinticinco y el pavo a los quince, reflejando cómo se comporta cada carne en un horno caliente.\n\nLa estimación funciona porque el calor penetra un asado de fuera hacia dentro, así que más masa tarda proporcionalmente más en alcanzar un centro seguro. El tiempo es una guía, no una garantía: la precisión del horno, el contenido de hueso, la temperatura inicial y si la pieza va rellena desplazan la cifra real. Por eso la calculadora acompaña cada estimación con una temperatura interna objetivo, la única prueba infalible del punto de cocción. Cocineros caseros que planean un almuerzo dominical o un banquete festivo se apoyan en una calculadora de tiempo de cocción para que toda la comida cuadre a tiempo.",
+    exampleEs: { inputs: { meatType: "chicken", weight: 3 }, explanation: "Pollo de 3 lb × 20 minutos por libra = 60 minutos, asado hasta 74 °C (165 °F)." },
+    faqsEs: [
+      {
+        question: "¿Cómo estima la calculadora el tiempo de cocción?",
+        answer: "Multiplica el peso que introduces por una tasa de asado por libra elegida para el tipo de carne. La ternera y el pollo usan unos veinte minutos por libra, el cerdo veinticinco y el pavo quince. Así, un pollo de tres libras suma sesenta minutos. Estas tasas asumen un horno de asado estándar en torno a los 180 °C, así que trata el resultado como un punto de partida bien fundado y verifica siempre el punto con un termómetro de carne antes de servir.",
+      },
+      {
+        question: "¿Por qué la calculadora muestra una temperatura objetivo?",
+        answer: "El tiempo por sí solo nunca garantiza que un asado esté cocido de forma segura, porque los hornos, los cortes y las temperaturas iniciales varían. La temperatura interna segura es la prueba definitiva: 74 °C para pollo y pavo, y 63 °C para ternera y cerdo con un reposo después. Inserta un termómetro en la parte más gruesa, evitando el hueso, y cocina hasta que marque el objetivo. Combinar tiempo con temperatura es la forma fiable de evitar tanto la cocción insuficiente como la excesiva.",
+      },
+      {
+        question: "¿La carne con hueso cambia el tiempo de cocción?",
+        answer: "Puede hacerlo. El hueso conduce el calor de forma distinta y cambia la rapidez con que se calienta la carne circundante, así que los asados con hueso a veces se cocinan algo más rápido cerca del hueso pero más despacio en el músculo denso. Rellenar un ave también añade tiempo considerable porque el calor debe penetrar el relleno hasta una temperatura segura. Usa la estimación como horario y confía en un termómetro en la sección más gruesa para decidir cuándo está realmente listo.",
+      },
+      {
+        question: "¿Debo dejar reposar la carne tras cocinarla?",
+        answer: "Sí. El reposo permite que los jugos se redistribuyan y que la temperatura interna suba unos grados más por la cocción residual, razón por la que puedes retirar los asados grandes algo antes del objetivo. Deja reposar los cortes pequeños unos diez minutos y las piezas grandes o aves enteras de quince a treinta bajo papel de aluminio suelto. Saltarse el reposo deja que los jugos escapen al cortar, dejando la carne más seca pese a un horneado perfecto.",
+      },
+      {
+        question: "¿Puedo usar esto para otras carnes o temperaturas de horno?",
+        answer: "La calculadora cubre ternera, pollo, cerdo y pavo a temperaturas de asado típicas, y cualquier carne no listada usa por defecto la tasa de la ternera como guía aproximada. Cocinar a una temperatura de horno marcadamente mayor o menor desplazará el tiempo real, igual que el calor con ventilador frente al convencional. Siempre que cambies las condiciones, mantén la temperatura interna objetivo como ancla y ajusta el horario en torno a las lecturas del termómetro en lugar de al reloj.",
+      },
+    ],
     fields: [
       {
         id: "meatType",

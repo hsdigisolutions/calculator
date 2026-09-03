@@ -51,6 +51,38 @@ export const sportsWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Epley 1985 (one-rep max)",
+    slugEs: "calculadora-de-una-repeticion-maxima",
+    titleEs: "Calculadora de una repetición máxima",
+    shortDescriptionEs: "Estima tu 1RM a partir de una serie y sus repeticiones.",
+    seoTitleEs: "Calculadora de una repetición máxima — Estima tu 1RM (Epley)",
+    metaDescriptionEs: "Calculadora gratuita de una repetición máxima con la fórmula de Epley. Ingresa el peso levantado y las repeticiones completadas para estimar tu 1RM y tus cargas de entrenamiento al 90% y 80%.",
+    primaryKeywordEs: "calculadora de una repeticion maxima",
+    secondaryKeywordsEs: ["calculadora 1rm", "calculadora formula de epley", "calculadora de levantamiento maximo"],
+    formulaExplanationEs: "La fórmula de Epley estima tu repetición máxima escalando el peso que levantaste en proporción a las repeticiones que lograste. Cada repetición adicional suma aproximadamente una treintava parte del peso levantado, porque completar más repeticiones con una carga dada implica un máximo verdadero más alto. Dividir las repeticiones entre 30 y sumar uno da el multiplicador que se aplica al peso para proyectar un único levantamiento máximo total.",
+    explanationEs: "Tu repetición máxima es el mayor peso que puedes levantar en una sola repetición de un ejercicio, y esta calculadora de una repetición máxima lo estima a partir de una serie que ya completaste sin que intentes nunca un levantamiento máximo arriesgado. Ingresa el peso que moviste y el número de repeticiones limpias que terminaste, y aplica la fórmula de Epley para proyectar tu 1RM, luego calcula tus cargas del 90% y 80% para programar días de entrenamiento pesado y moderado.\n\nConocer tu repetición máxima importa porque la mayoría de los programas de fuerza prescriben pesos como un porcentaje de ella. Los levantadores de potencia, los atletas y quienes entrenan a diario usan el número para fijar la intensidad, seguir el progreso durante semanas y comparar levantamientos de forma justa entre pesos corporales. Probar un máximo real es fatigante y conlleva riesgo de lesión, así que una estimación a partir de una serie submáxima es más segura y se puede repetir con frecuencia.\n\nLa fórmula funciona porque las repeticiones que puedes completar con una carga están fuertemente relacionadas con el máximo único que podrías manejar, y Epley captura esa relación con un ajuste lineal simple. Entrenadores, entrenadores personales y aficionados al gimnasio confían en una calculadora de una repetición máxima para programar sentadillas, press de banca y peso muerto con confianza.",
+    exampleEs: { inputs: { weight: 100, reps: 5 }, explanation: "100 × (1 + 5 ÷ 30) = 100 × 1.1667 ≈ 116.7 kg de 1RM estimado." },
+    faqsEs: [
+      {
+        question: "¿Qué tan precisa es una repetición máxima estimada?",
+        answer: "Las estimaciones son más precisas cuando el número de repeticiones se mantiene bajo, aproximadamente por debajo de diez, porque la relación entre repeticiones y fuerza máxima es casi lineal en ese rango. Por encima de diez repeticiones, la resistencia y la técnica empiezan a influir en el resultado, así que la proyección se desvía. Usa una serie de tres a ocho repeticiones sólidas para la cifra más fiable y vuelve a medir de forma periódica.",
+      },
+      {
+        question: "¿Qué es la fórmula de Epley?",
+        answer: "La fórmula de Epley estima la repetición máxima como el peso levantado multiplicado por uno más las repeticiones divididas entre treinta. Publicada por Boyd Epley en 1985, es una de las ecuaciones de fuerza más usadas porque es simple y razonablemente precisa para rangos de repeticiones moderados. Existen varias fórmulas alternativas, como Brzycki, que dan números ligeramente distintos, pero Epley sigue siendo un estándar de confianza para programar entrenamientos.",
+      },
+      {
+        question: "¿Por qué la calculadora muestra cargas del 90% y 80%?",
+        answer: "Los programas de fuerza suelen prescribir pesos de trabajo como un porcentaje de tu repetición máxima en lugar del máximo mismo. Mostrar tus cargas del 90% y 80% te permite traducir la estimación directamente a números de entrenamiento: aproximadamente 90% para triples pesados y 80% para series de mayor volumen. Esto te ahorra la aritmética y te ayuda a elegir pesos que se ajusten a la intensidad que tu programa exige cada día.",
+      },
+      {
+        question: "¿Debería intentar realmente mi repetición máxima?",
+        answer: "Intentar una repetición máxima real es exigente y conlleva un mayor riesgo de lesión, sobre todo sin un observador y sin un calentamiento adecuado. Para la mayoría de los levantadores, estimar a partir de una serie submáxima es más seguro y da un número lo bastante preciso para programar. Los levantadores de potencia competitivos sí prueban máximos reales en condiciones controladas, pero para el entrenamiento general una estimación permite seguir el progreso con frecuencia.",
+      },
+      {
+        question: "¿La repetición máxima difiere entre ejercicios?",
+        answer: "Sí. Tu repetición máxima es específica de cada levantamiento porque los distintos ejercicios reclutan músculos y palancas diferentes. Un máximo de peso muerto suele ser más alto que un máximo de sentadilla, que a su vez es más alto que un máximo de press de banca, para la mayoría de las personas. Estima cada levantamiento por separado usando una serie realizada en ese ejercicio y evita aplicar un porcentaje de sentadilla a tu press de banca.",
+      },
+    ],
   },
   {
     id: "vo2-max",
@@ -99,6 +131,38 @@ export const sportsWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Cooper test (VO2 max)",
+    slugEs: "calculadora-de-vo2-max",
+    titleEs: "Calculadora de VO2 máx",
+    shortDescriptionEs: "Estima tu condición aeróbica con el test de Cooper.",
+    seoTitleEs: "Calculadora de VO2 máx — Test de carrera de 12 minutos de Cooper",
+    metaDescriptionEs: "Calculadora gratuita de VO2 máx con el test de carrera de 12 minutos de Cooper. Ingresa la distancia que recorriste en metros para estimar tu capacidad aeróbica máxima al instante.",
+    primaryKeywordEs: "calculadora de vo2 max",
+    secondaryKeywordsEs: ["calculadora del test de cooper", "calculadora de capacidad aerobica", "estimacion de vo2max"],
+    formulaExplanationEs: "El test de Cooper relaciona la distancia que corres en doce minutos con tu consumo máximo de oxígeno, porque cubrir más terreno exige que tu cuerpo entregue y use más oxígeno por minuto. Restar 504.9 fija la distancia base que cubriría un esfuerzo mínimo, y dividir entre 44.73 escala los metros restantes a mililitros de oxígeno por kilogramo de peso corporal por minuto, la unidad estándar para la capacidad aeróbica.",
+    explanationEs: "El VO2 máx es el volumen máximo de oxígeno que tu cuerpo puede usar durante el ejercicio intenso, y es una de las mejores medidas individuales de la condición cardiovascular. Esta calculadora de VO2 máx lo estima con el test de Cooper, una evaluación de campo sencilla en la que corres lo más lejos que puedas en exactamente doce minutos. Ingresa la distancia que recorriste en metros y devuelve tu consumo máximo de oxígeno estimado en mililitros por kilogramo por minuto.\n\nEste número importa porque un VO2 máx más alto significa que tu corazón, pulmones y músculos son mejores entregando y usando oxígeno, lo que respalda el rendimiento de resistencia y se asocia con la salud a largo plazo. Corredores, ciclistas y atletas de deportes de equipo lo siguen para evaluar el acondicionamiento aeróbico y comprobar si el entrenamiento da frutos. También permite comparar tu condición con las normas de edad y sexo.\n\nEl test de Cooper funciona porque la distancia que puedes sostener durante doce minutos está estrechamente ligada a tu capacidad aeróbica, así que un esfuerzo máximo bien dosificado produce una estimación fiable sin equipo de laboratorio. Entrenadores, instructores militares y atletas recreativos usan una calculadora de VO2 máx para medir la condición de forma económica, repetir el test durante una temporada y fijar metas de resistencia realistas.",
+    exampleEs: { inputs: { distance: 2800 }, explanation: "(2800 − 504.9) ÷ 44.73 = 2295.1 ÷ 44.73 ≈ 51.3 ml/kg/min." },
+    faqsEs: [
+      {
+        question: "¿Cómo realizo el test de Cooper correctamente?",
+        answer: "Calienta a fondo y luego corre lo más lejos que puedas en exactamente doce minutos en un circuito plano y medido, como una pista de atletismo. Dosifica el esfuerzo para terminar con fuerza en lugar de desfallecer pronto, y registra la distancia total cubierta en metros. Una medición precisa de la distancia importa, así que una pista marcada o un reloj GPS fiable es ideal. Ingresa esa distancia para estimar tu consumo máximo de oxígeno.",
+      },
+      {
+        question: "¿Qué es un buen valor de VO2 máx?",
+        answer: "Los buenos valores dependen mucho de la edad y el sexo. Para hombres adultos jóvenes, cifras por encima de 50 ml/kg/min se consideran buenas y los atletas de resistencia de élite pueden superar los 70, mientras que para las mujeres los rangos comparables se sitúan algo más bajos. El VO2 máx disminuye de forma natural con la edad, así que compara siempre tu resultado con las normas de tu propio grupo de edad y sexo.",
+      },
+      {
+        question: "¿Qué tan precisa es la estimación del test de Cooper?",
+        answer: "El test de Cooper da una estimación de campo razonable pero menos precisa que una prueba de laboratorio que mide el oxígeno de tu respiración directamente. Su precisión depende del ritmo, la motivación, el terreno y el clima, así que un esfuerzo inconsistente distorsiona el resultado. Para seguir tu propio progreso es muy útil porque la misma persona en el mismo circuito produce números comparables, revelando cambios genuinos en la condición física.",
+      },
+      {
+        question: "¿Cómo puedo mejorar mi VO2 máx?",
+        answer: "El entrenamiento aeróbico regular eleva el VO2 máx, y el trabajo por intervalos es especialmente eficaz. Alternar esfuerzos duros cerca de tu máximo con periodos de recuperación empuja a tu sistema cardiovascular a adaptarse, mientras que las carreras de resistencia constante construyen la base aeróbica que lo sostiene. La constancia durante semanas importa más que cualquier sesión aislada. Volver a medir con el test de Cooper cada cuatro a seis semanas confirma que tu entrenamiento produce ganancias medibles.",
+      },
+      {
+        question: "¿En qué unidades se mide el VO2 máx?",
+        answer: "El VO2 máx se expresa en mililitros de oxígeno consumido por kilogramo de peso corporal por minuto, escrito ml/kg/min. Reportarlo en relación con el peso corporal permite una comparación justa entre personas de distintos tamaños, ya que una persona más grande usa naturalmente más oxígeno total. Esta calculadora devuelve el valor en esas unidades estándar para que puedas comparar tu resultado directamente con las tablas publicadas y tus pruebas anteriores.",
+      },
+    ],
   },
   {
     id: "swim-pace",
@@ -149,6 +213,38 @@ export const sportsWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard sports science",
+    slugEs: "calculadora-de-ritmo-de-natacion",
+    titleEs: "Calculadora de ritmo de natación",
+    shortDescriptionEs: "Encuentra tu ritmo por 100 m y tu velocidad al nadar.",
+    seoTitleEs: "Calculadora de ritmo de natación — Ritmo por 100 m y velocidad",
+    metaDescriptionEs: "Calculadora gratuita de ritmo de natación. Ingresa tu distancia en metros y tu tiempo en segundos para hallar tu ritmo por 100 metros y tu velocidad al nadar en metros por segundo.",
+    primaryKeywordEs: "calculadora de ritmo de natacion",
+    secondaryKeywordsEs: ["calculadora de ritmo al nadar", "calculadora de ritmo por 100m", "calculadora de velocidad al nadar"],
+    formulaExplanationEs: "El ritmo por cien metros normaliza tu nado a una distancia estándar para que distintas sesiones se comparen de forma justa. Dividir tu tiempo entre la distancia da los segundos empleados en cada metro, y multiplicar por cien lo escala al tiempo que tardaría un segmento completo de cien metros al mismo ritmo. La velocidad es la vista inversa, distancia dividida entre tiempo, que muestra cuántos metros cubres cada segundo.",
+    explanationEs: "El ritmo de natación te indica qué tan rápido te mueves por el agua, y esta calculadora de ritmo de natación convierte una distancia y un tiempo en dos cifras útiles: tu ritmo por cien metros y tu velocidad en metros por segundo. Ingresa cuánto nadaste en metros y cuánto tardaste en segundos, y devuelve ambos al instante para que puedas evaluar y planear tus sesiones.\n\nEl ritmo por cien metros es la moneda estándar de la natación porque las piscinas y las series se miden en esa unidad, así que expresar cada nado de la misma forma permite comparar un esprint de cincuenta metros con un esfuerzo de mil quinientos metros en igualdad de condiciones. Los triatletas y nadadores de piscina lo usan para fijar parciales objetivo, dosificar nados largos de forma uniforme y comprobar si su acondicionamiento mejora semana a semana.\n\nEl cálculo funciona porque el ritmo es simplemente el tiempo repartido sobre la distancia, reescalado a una referencia de cien metros, mientras que la velocidad es la misma información vista como distancia por segundo. Los entrenadores usan una calculadora de ritmo de natación para escribir series con tiempos de salida realistas, y los nadadores la usan para comprobar que un ritmo de competición es sostenible antes de comprometerse con él el día de la prueba.",
+    exampleEs: { inputs: { distance: 100, time: 90 }, explanation: "90 s ÷ 100 m × 100 = 90 s por 100 m, y una velocidad de unos 1.11 m/s." },
+    faqsEs: [
+      {
+        question: "¿Por qué se mide el ritmo por 100 metros?",
+        answer: "Las distancias de natación son casi siempre múltiplos del largo de una piscina, y cien metros es una referencia natural sobre la que se construyen la mayoría de las series y competiciones. Expresar cada nado como segundos por cien metros permite comparar esfuerzos de distinta longitud directamente, ya sea un esprint corto o un nado largo continuo. También coincide con cómo los entrenadores escriben los tiempos de salida, así que tu cifra se traduce en planificación práctica.",
+      },
+      {
+        question: "¿Cómo convierto mi tiempo a segundos?",
+        answer: "La calculadora espera tu tiempo en segundos, así que convierte primero cualquier minuto multiplicándolo por sesenta y sumando los segundos restantes. Un nado de un minuto y treinta segundos se convierte en noventa segundos, y dos minutos y quince segundos en ciento treinta y cinco segundos. Ingresar los minutos crudos sin convertir haría que tu ritmo pareciera mucho más rápido de lo que realmente es, así que suma siempre los segundos.",
+      },
+      {
+        question: "¿Cuál es un buen ritmo de natación?",
+        answer: "Un buen ritmo depende de tu nivel y de la distancia. Muchos nadadores recreativos cubren cien metros en unos dos minutos, los nadadores de club competentes en aproximadamente noventa segundos, y los nadadores de élite muy por debajo de un minuto en distancias de esprint. En lugar de perseguir un objetivo universal, sigue tu propio ritmo a lo largo del tiempo; una cifra descendente de segundos por cien al mismo esfuerzo es prueba clara de que nadas más rápido.",
+      },
+      {
+        question: "¿Sirve tanto para piscina como para aguas abiertas?",
+        answer: "Sí, siempre que conozcas la distancia y el tiempo con precisión. En una piscina la distancia está fijada por el largo de la calle, así que es fácil de medir. En aguas abiertas necesitas un reloj GPS o un circuito marcado para estimar la distancia, y las corrientes o los errores de navegación pueden afectar el resultado. La fórmula del ritmo en sí es idéntica; solo cambia la fiabilidad de tu medición de distancia.",
+      },
+      {
+        question: "¿En qué se diferencia la velocidad del ritmo?",
+        answer: "La velocidad y el ritmo describen el mismo nado desde direcciones opuestas. La velocidad es distancia dividida entre tiempo, que te dice cuántos metros cubres cada segundo, así que un número mayor significa más rápido. El ritmo es tiempo dividido entre distancia, que te dice cuánto tarda cada cien metros, así que un número menor significa más rápido. Los nadadores suelen hablar en ritmo, mientras que la velocidad en metros por segundo es útil para la física.",
+      },
+    ],
   },
   {
     id: "calorie-burn",
@@ -199,6 +295,38 @@ export const sportsWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard sports science",
+    slugEs: "calculadora-de-calorias-quemadas",
+    titleEs: "Calculadora de calorías quemadas",
+    shortDescriptionEs: "Estima las calorías quemadas en cualquier actividad.",
+    seoTitleEs: "Calculadora de calorías quemadas — Calorías por actividad (MET)",
+    metaDescriptionEs: "Calculadora gratuita de calorías quemadas con valores MET. Ingresa la intensidad de la actividad, tu peso en kilogramos y la duración para estimar las calorías que quemaste.",
+    primaryKeywordEs: "calculadora de calorias quemadas",
+    secondaryKeywordsEs: ["calculadora de calorias gastadas", "calculadora met", "calculadora de calorias de ejercicio"],
+    formulaExplanationEs: "El valor MET expresa cuántas veces más energía usa una actividad que estar sentado en reposo, así que multiplicarlo por tu peso corporal y las horas invertidas da el gasto energético total. Un MET equivale aproximadamente a una kilocaloría por kilogramo de peso corporal por hora, por lo que la ecuación multiplica el MET por el peso y por la fracción de hora que hiciste ejercicio para producir las calorías quemadas.",
+    explanationEs: "Saber cuántas calorías quema una actividad te ayuda a equilibrar la energía para el control del peso y a alimentar tu entrenamiento, y esta calculadora de calorías quemadas lo estima a partir de tres datos: el valor MET de la actividad, tu peso corporal en kilogramos y cuánto tiempo hiciste ejercicio en minutos. Devuelve una estimación del total de calorías, o más precisamente kilocalorías, que gastaste durante la sesión.\n\nMET significa equivalente metabólico de la tarea, una calificación estándar de qué tan intensa es una actividad comparada con el reposo. Caminar a paso ligero ronda los tres a cuatro MET, trotar unos siete, y correr vigoroso o pedalear rápido más cerca de diez o más. Como los cuerpos más pesados queman más energía haciendo el mismo trabajo, el peso forma parte de la ecuación, por lo que dos personas haciendo un entrenamiento idéntico queman cantidades distintas.\n\nLa fórmula funciona porque un MET corresponde aproximadamente a una kilocaloría por kilogramo de peso corporal por hora, así que escalar por intensidad, peso y tiempo da el total. Quienes hacen dieta, atletas y aficionados al fitness usan una calculadora de calorías quemadas para planear un déficit energético, comparar el costo de distintas actividades y fijar metas realistas, recordando que la cifra es una estimación y no una medición precisa.",
+    exampleEs: { inputs: { met: 8, weight: 70, minutes: 30 }, explanation: "8 × 70 × (30 ÷ 60) = 8 × 70 × 0.5 = 280 kcal quemadas." },
+    faqsEs: [
+      {
+        question: "¿Qué es un valor MET y dónde lo encuentro?",
+        answer: "Un MET, o equivalente metabólico de la tarea, califica cuánta energía usa una actividad respecto a estar sentado en reposo, que se define como un MET. Los compendios publicados listan valores MET para cientos de actividades: caminar ligero ronda tres, trotar unos siete y pedalear vigoroso diez o más. Busca la actividad más parecida a la tuya e ingresa su valor MET, eligiendo una cifra mayor para esfuerzos más duros y una menor para los más suaves.",
+      },
+      {
+        question: "¿Por qué el peso corporal afecta las calorías quemadas?",
+        answer: "Mover un cuerpo más pesado requiere más energía, así que una persona más grande quema más calorías haciendo exactamente la misma actividad que una persona más ligera. Por eso la fórmula multiplica por tu peso en kilogramos. Dos personas corriendo lado a lado durante el mismo tiempo al mismo ritmo quemarán cantidades distintas, y la más pesada gastará más. Ingresar tu peso exacto mantiene la estimación realista para tu cuerpo.",
+      },
+      {
+        question: "¿Qué tan precisa es esta estimación de calorías?",
+        answer: "El método MET da una buena aproximación pero no una medición precisa, porque el gasto energético real varía con la condición física, la eficiencia, el terreno y el metabolismo individual. Dos personas con el mismo peso pueden quemar cantidades ligeramente distintas al mismo MET. Trata el número como una guía útil para planear en lugar de un conteo exacto, y evita comer de vuelta cada caloría estimada si tu meta es un déficit energético fiable.",
+      },
+      {
+        question: "¿Una caloría es lo mismo que una kilocaloría aquí?",
+        answer: "En la nutrición y el fitness cotidianos, la caloría a la que se refiere la gente es en realidad una kilocaloría, y esta calculadora reporta kilocalorías, coincidiendo con las etiquetas de los alimentos. Una kilocaloría equivale a mil de las pequeñas calorías científicas usadas en física. Así que cuando el resultado dice que quemaste 280 calorías, significa 280 kilocalorías, la misma unidad de tu empaque de alimentos, para comparar ingesta y gasto directamente.",
+      },
+      {
+        question: "¿Puedo sumar calorías de varias actividades?",
+        answer: "Sí. Calcula cada actividad por separado usando su propio valor MET y duración, luego suma los resultados para hallar tu total del día. Esto funciona bien cuando una sesión mezcla esfuerzos, como una caminata de calentamiento seguida de una carrera dura. Mantener cada segmento por separado es más preciso que promediar, porque aplica la intensidad correcta a la duración correcta de cada parte de tu entrenamiento.",
+      },
+    ],
   },
   {
     id: "race-time-predictor",
@@ -249,6 +377,38 @@ export const sportsWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Riegel model (race prediction)",
+    slugEs: "calculadora-de-prediccion-de-tiempo-de-carrera",
+    titleEs: "Predictor de tiempo de carrera",
+    shortDescriptionEs: "Predice un tiempo de carrera a partir de un resultado conocido.",
+    seoTitleEs: "Predictor de tiempo de carrera — Fórmula de Riegel para corredores",
+    metaDescriptionEs: "Predictor gratuito de tiempo de carrera con la fórmula de Riegel. Ingresa una distancia y un tiempo conocidos más una distancia objetivo para estimar tu tiempo de meta en la nueva carrera.",
+    primaryKeywordEs: "predictor de tiempo de carrera",
+    secondaryKeywordsEs: ["calculadora de la formula de riegel", "predictor de tiempo de carrera a pie", "predictor de tiempo de maraton"],
+    formulaExplanationEs: "El modelo de Riegel predice un tiempo de carrera escalando un resultado conocido a una nueva distancia y elevando la razón de distancias a la potencia 1.06. Ese exponente, ligeramente superior a uno, capta la realidad de que el ritmo se ralentiza a medida que crece la distancia, porque no puedes mantener la velocidad de una carrera corta en una más larga. Multiplicar tu tiempo conocido por este factor proyecta un tiempo de meta realista para la distancia objetivo.",
+    explanationEs: "Un predictor de tiempo de carrera estima qué tan rápido podrías correr una carrera a una distancia basándose en un resultado que ya lograste en otra. Esta herramienta usa la fórmula de Riegel: ingresa una distancia que hayas corrido y tu tiempo en ella, luego la distancia objetivo a la que apuntas, y proyecta un tiempo de meta realista. Los tiempos se manejan en segundos para que las matemáticas se mantengan limpias.\n\nEsto importa porque los corredores quieren constantemente traducir un rendimiento en una meta para otra carrera. Un resultado reciente de 5K puede sugerir un objetivo sensato de 10K o media maratón, ayudándote a fijar la estrategia de ritmo y a evitar empezar demasiado rápido. Los entrenadores usan predicciones para escribir ritmos de entrenamiento, y los corredores las usan para elegir una meta que exija sin ser irreal el día de la carrera.\n\nLa fórmula funciona porque el ritmo no se mantiene constante a medida que aumenta la distancia; se ralentiza de forma predecible que el exponente 1.06 capta bien en las distancias de competición comunes. La predicción asume un entrenamiento de resistencia adecuado para el evento más largo, así que es más fiable cuando las dos distancias están razonablemente cerca. Trata el resultado como una meta informada y no como una garantía, ya que las condiciones, el terreno y el ritmo moldean el resultado real.",
+    exampleEs: { inputs: { knownDistance: 5, knownTime: 1500, targetDistance: 10 }, explanation: "1500 × (10 ÷ 5)^1.06 = 1500 × 2.085 ≈ 3127 s, unos 52 minutos 7 segundos." },
+    faqsEs: [
+      {
+        question: "¿Qué es la fórmula de Riegel?",
+        answer: "La fórmula de Riegel, publicada por Peter Riegel, predice tiempos de carrera entre distancias multiplicando un tiempo conocido por la razón de distancias elevada a la potencia 1.06. El exponente refleja que los corredores se ralentizan ligeramente a medida que las carreras se alargan. Se usa mucho porque es simple y coincide bien con resultados reales en distancias desde unos 1.500 metros hasta la maratón, siendo una herramienta de confianza para fijar metas.",
+      },
+      {
+        question: "¿Por qué debo ingresar mi tiempo en segundos?",
+        answer: "La calculadora trabaja en segundos para mantener las matemáticas inequívocas y la salida consistente. Convierte primero tu tiempo de meta: multiplica las horas por 3.600, los minutos por 60, y suma los segundos restantes. Un tiempo de 25 minutos se convierte en 1.500 segundos, y 1 hora 45 minutos en 6.300 segundos. El tiempo predicho también se devuelve en segundos, que puedes convertir de nuevo a minutos y segundos para un parcial de carrera familiar.",
+      },
+      {
+        question: "¿Qué tan precisas son estas predicciones?",
+        answer: "Las predicciones son más precisas cuando las distancias conocida y objetivo están cerca y has entrenado adecuadamente para el evento más largo. Saltar de un 5K directo a una predicción de maratón asume una resistencia que quizá aún no tengas, así que la estimación puede ser optimista. Usa un resultado reciente y bien dosificado como dato de entrada, trata la salida como una meta hacia la cual entrenar, y espera que el calor, las cuestas y el ritmo desplacen el tiempo real.",
+      },
+      {
+        question: "¿Puede predecir distancias más rápidas y más lentas?",
+        answer: "Sí. Puedes proyectar hacia arriba desde una carrera corta a una más larga o hacia abajo desde una carrera larga a una más corta, ya que la fórmula funciona en ambas direcciones. Predecir una carrera más corta y rápida a partir de un resultado más largo suele dar una meta algo conservadora, porque tu velocidad en distancias cortas puede superar lo que asume la fórmula basada en resistencia. En cualquier caso, usa un resultado reciente que refleje tu condición actual.",
+      },
+      {
+        question: "¿El terreno o el clima afectan la predicción?",
+        answer: "La fórmula asume condiciones ampliamente similares entre tu carrera conocida y tu objetivo. Las cuestas, el calor, la humedad, el viento y la altitud ralentizan los rendimientos reales, así que una predicción basada en una carrera plana y fresca puede ser demasiado rápida para una con cuestas o calor. Trata la salida como una base para condiciones ideales y ajusta tus expectativas de tiempo al alza si la carrera objetivo presenta circunstancias más duras que tu referencia.",
+      },
+    ],
   },
   {
     id: "steps-to-distance",
@@ -299,6 +459,38 @@ export const sportsWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard sports science",
+    slugEs: "calculadora-de-pasos-a-distancia",
+    titleEs: "Calculadora de pasos a distancia",
+    shortDescriptionEs: "Convierte tu conteo de pasos en kilómetros y millas.",
+    seoTitleEs: "Calculadora de pasos a distancia — Pasos a km y millas",
+    metaDescriptionEs: "Calculadora gratuita de pasos a distancia. Ingresa tu conteo de pasos y tu altura para estimar la distancia que caminaste en kilómetros y millas usando la longitud de tu zancada personal.",
+    primaryKeywordEs: "calculadora de pasos a distancia",
+    secondaryKeywordsEs: ["calculadora de pasos a millas", "calculadora de pasos a km", "calculadora de longitud de zancada"],
+    formulaExplanationEs: "La longitud de la zancada escala con la altura, así que multiplicar tu altura por 0.415 da una estimación fiable de la distancia cubierta por paso en centímetros. Multiplicar esa zancada por tu conteo de pasos da la distancia total en centímetros, que luego se divide a kilómetros y se convierte a millas. Las personas más altas cubren más terreno por paso, por lo que la altura personaliza la estimación en lugar de usar un promedio fijo.",
+    explanationEs: "Un conteo de pasos de un podómetro o del teléfono solo tiene sentido cuando sabes cuánta distancia representa, y esta calculadora de pasos a distancia convierte tus pasos en una distancia estimada tanto en kilómetros como en millas. Ingresa cuántos pasos diste y tu altura en centímetros, y usa tu altura para estimar la longitud de tu zancada y luego multiplicar hasta una distancia total.\n\nUsar la altura importa porque la longitud de la zancada varía con el tamaño del cuerpo, así que una persona más alta cubre más terreno con cada paso que una más baja. Basar la estimación en tu propia altura da un resultado mucho más personal que un promedio genérico, por lo que la calculadora la pide. Los caminantes que persiguen una meta diaria de pasos, quienes siguen su actividad por salud y cualquiera que compare rutas se benefician de ver la distancia real detrás del número.\n\nEl cálculo funciona porque la investigación muestra que la longitud de la zancada es aproximadamente una fracción constante de la altura, cercana a 0.415, así que multiplicar la altura por ese factor estima los centímetros por paso. Multiplicar por tus pasos y convertir las unidades da la distancia. Sigue siendo una estimación, ya que el terreno, el ritmo y caminar frente a correr desplazan la zancada, pero es una forma rápida y útil de traducir un recuento de pasos en terreno cubierto significativo.",
+    exampleEs: { inputs: { steps: 10000, height: 170 }, explanation: "Zancada = 170 × 0.415 = 70.55 cm; 10.000 pasos ≈ 7.06 km o unas 4.38 millas." },
+    faqsEs: [
+      {
+        question: "¿Cómo se estima la longitud de la zancada a partir de la altura?",
+        answer: "La calculadora multiplica tu altura por 0.415, un factor extraído de la investigación que muestra que la longitud de la zancada es aproximadamente una fracción constante de la altura al caminar. Una persona de 170 centímetros de altura tiene una zancada estimada de unos 70.5 centímetros. Esto da una cifra personalizada sin que tengas que medir tu zancada directamente, aunque tu zancada real puede variar un poco con el ritmo, el calzado y si caminas o corres.",
+      },
+      {
+        question: "¿Por qué la calculadora necesita mi altura?",
+        answer: "La altura es el predictor fiable más simple de la longitud de la zancada, y la longitud de la zancada es lo que convierte los pasos en distancia. Las personas más altas dan pasos más largos, así que 10.000 pasos cubren más terreno para ellas que para una persona más baja. Sin tu altura la herramienta tendría que asumir una zancada promedio, produciendo un resultado menos preciso. Proporcionar tu altura ajusta la estimación a tu cuerpo y da una distancia más fiable.",
+      },
+      {
+        question: "¿Cuántos pasos hay en un kilómetro o una milla?",
+        answer: "Depende de tu zancada, pero como guía aproximada una persona de altura media da alrededor de 1.300 a 1.500 pasos por kilómetro y unos 2.000 a 2.500 pasos por milla al caminar. Las personas más altas necesitan menos pasos y las más bajas más. En lugar de basarte en estos promedios, ingresa tu propia altura y conteo de pasos aquí para obtener una distancia ajustada a la longitud de tu zancada personal.",
+      },
+      {
+        question: "¿Correr cambia el resultado?",
+        answer: "Sí. Correr suele alargar tu zancada en comparación con caminar, así que el mismo número de pasos al correr cubre más distancia de la que asume el factor fijo de caminata. Esta calculadora está ajustada para caminar, así que para carreras subestimará ligeramente la distancia. Si corres principalmente, un reloj GPS que mide la distancia directamente es más preciso, o puedes medir tu propia zancada al correr y ajustar tus expectativas al alza en consecuencia.",
+      },
+      {
+        question: "¿Por qué mostrar kilómetros y millas?",
+        answer: "Distintos países y aplicaciones de fitness usan unidades diferentes, así que mostrar ambas te ahorra una conversión. Los kilómetros son estándar en la mayor parte del mundo y en el atletismo, mientras que las millas siguen siendo comunes en Estados Unidos y el Reino Unido para distancias cotidianas. Mostrar el resultado en ambas te permite compararlo con metas de pasos, distancias de carrera o lecturas de aplicaciones, usando la conversión exacta de 1.609344 kilómetros por milla.",
+      },
+    ],
   },
   {
     id: "cycling-speed",
@@ -349,5 +541,37 @@ export const sportsWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard sports science",
+    slugEs: "calculadora-de-velocidad-de-ciclismo",
+    titleEs: "Calculadora de velocidad de ciclismo",
+    shortDescriptionEs: "Halla tu velocidad media de ciclismo en km/h y mph.",
+    seoTitleEs: "Calculadora de velocidad de ciclismo — Velocidad media en km/h y mph",
+    metaDescriptionEs: "Calculadora gratuita de velocidad de ciclismo. Ingresa la distancia en kilómetros y el tiempo en horas para hallar tu velocidad media de ciclismo en kilómetros por hora y millas por hora.",
+    primaryKeywordEs: "calculadora de velocidad de ciclismo",
+    secondaryKeywordsEs: ["calculadora de velocidad media de ciclismo", "calculadora de velocidad de bicicleta", "km/h a mph ciclismo"],
+    formulaExplanationEs: "La velocidad media es la distancia total dividida entre el tiempo total, dando el ritmo constante que cubriría el mismo terreno en la misma duración. Dividir kilómetros entre horas da kilómetros por hora directamente, y dividir esa cifra entre 1.609344 la convierte a millas por hora. El resultado suaviza las aceleraciones, las subidas y los descensos por inercia de un recorrido real en un único número representativo de todo el trayecto.",
+    explanationEs: "La velocidad media es el número principal de cualquier recorrido en bicicleta, y esta calculadora de velocidad de ciclismo lo obtiene a partir de la distancia que cubriste y el tiempo que tardaste. Ingresa la distancia en kilómetros y el tiempo en horas, y devuelve tu velocidad media en kilómetros por hora junto con el equivalente en millas por hora, para que puedas leerla en la unidad que prefieras.\n\nSeguir la velocidad media importa porque es la forma más simple de evaluar la condición física y el esfuerzo entre recorridos. Comparar tu media en la misma ruta en días distintos muestra si tu acondicionamiento mejora, y conocer tu velocidad típica ayuda a planear cuánto tardará una ruta. Los que se desplazan al trabajo la usan para estimar tiempos de viaje, y los ciclistas que entrenan para eventos la usan para fijar y comprobar objetivos de ritmo.\n\nEl cálculo funciona porque la velocidad es por definición distancia dividida entre tiempo, así que un recorrido de cuarenta kilómetros completado en dos horas promedia veinte kilómetros por hora sin importar cómo varió el ritmo a lo largo del camino. Al mostrar unidades métricas e imperiales lado a lado, una calculadora de velocidad de ciclismo salva la brecha entre países y pantallas de ordenador, dejándote comparar contra amigos, aplicaciones y guías de ritmo de eventos sin hacer ninguna conversión.",
+    exampleEs: { inputs: { distance: 40, time: 2 }, explanation: "40 km ÷ 2 h = 20 km/h, que son unas 12.43 mph." },
+    faqsEs: [
+      {
+        question: "¿Cómo ingreso un tiempo dado en minutos?",
+        answer: "La calculadora espera el tiempo en horas, así que convierte primero los minutos dividiendo entre sesenta. Un recorrido de noventa minutos se convierte en 1.5 horas, y cuarenta y cinco minutos en 0.75 horas. Ingresar los minutos crudos haría que tu velocidad pareciera sesenta veces demasiado pequeña. Una vez que tu tiempo esté expresado en horas, tanto la velocidad media como la conversión a millas por hora salen correctamente para tu recorrido.",
+      },
+      {
+        question: "¿Cuál es una buena velocidad media de ciclismo?",
+        answer: "Una buena media depende del terreno, la condición física y el tipo de recorrido. Los ciclistas casuales suelen promediar unos 15 a 20 kilómetros por hora, los recreativos más en forma 20 a 30, y los ciclistas de ruta entrenados pueden sostener 30 o más en rutas planas. Las cuestas, el viento y el tráfico bajan la cifra. En lugar de perseguir un objetivo universal, compara tu velocidad en la misma ruta con el tiempo para ver progreso genuino.",
+      },
+      {
+        question: "¿Es velocidad media o velocidad máxima?",
+        answer: "Es velocidad media a lo largo de todo el recorrido, calculada como distancia total dividida entre tiempo total. No muestra el instante más rápido que alcanzaste, lo que necesitaría un velocímetro o GPS leyendo un intervalo muy corto. Como promedia todo el trayecto, incluidas subidas, descensos y cualquier parada contada en tu tiempo, representa la velocidad constante que habría cubierto la misma distancia en la misma duración.",
+      },
+      {
+        question: "¿Cómo convierto entre km/h y mph?",
+        answer: "Para convertir kilómetros por hora a millas por hora, divide entre 1.609344, y para ir en el otro sentido, multiplica por el mismo factor. La calculadora realiza la conversión por ti, mostrando ambas unidades lado a lado para que nunca tengas que hacer la aritmética. Esto es útil para comparar tu recorrido con ordenadores de ciclismo, aplicaciones o guías de ritmo de eventos que reportan en una unidad distinta de la que usas.",
+      },
+      {
+        question: "¿Debo incluir las paradas en el tiempo?",
+        answer: "Eso depende de qué quieras medir. Incluye las paradas para hallar tu media general, que refleja cuánto tardó toda la salida incluidas pausas y semáforos, útil para planear. Excluye el tiempo detenido para hallar tu media en movimiento, que representa mejor tu ritmo de pedaleo y tu condición física. Muchos ordenadores de bicicleta reportan ambas cifras por separado, así que decide qué pregunta respondes antes de elegir qué tiempo ingresar aquí.",
+      },
+    ],
   },
 ];
