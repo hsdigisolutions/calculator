@@ -96,7 +96,7 @@ export function CalculatorFinder({ index }: { index: SearchIndexItem[] }) {
       <button
         onClick={() => setOpen(true)}
         aria-label="Find a calculator"
-        className="fixed bottom-6 right-6 z-40 inline-flex items-center gap-2 rounded-full bg-[linear-gradient(135deg,var(--brand),var(--brand-600))] px-5 py-3.5 text-sm font-semibold text-white shadow-xl hover:shadow-glow hover:scale-105 active:scale-95 transition-all duration-200 print:hidden"
+        className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40 inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-[linear-gradient(135deg,var(--brand),var(--brand-600))] p-4 sm:px-5 sm:py-3.5 text-sm font-semibold text-white shadow-xl hover:shadow-glow hover:scale-105 active:scale-95 transition-all duration-200 print:hidden"
       >
         <Icon name="Sparkles" size={17} />
         <span className="hidden sm:inline">Find a Calculator</span>

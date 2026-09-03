@@ -109,15 +109,17 @@ export function HomeView({ locale }: { locale: Locale }) {
 
   return (
     <div className="w-full">
-      {/* Hero */}
-      <section className="relative w-full overflow-hidden border-b border-line">
+      {/* Hero — no overflow-hidden here: the .mesh background self-clips (its own
+          overflow:hidden), and clipping the section would cut off the SearchBar's
+          absolute autocomplete dropdown (it must overflow into the space below). */}
+      <section className="relative w-full border-b border-line">
         <MeshGradient />
         <div className={`${INNER} pt-16 sm:pt-24 pb-16 text-center`}>
           <div className="inline-flex items-center gap-2 rounded-full bg-surface-2 px-4 py-1.5 text-sm text-text-secondary">
             <Icon name="Sparkles" size={15} className="text-brand" />
             {all.length} {s.andGrowing}
           </div>
-          <h1 className="mt-6 text-5xl sm:text-7xl font-extrabold tracking-tight text-text-primary">
+          <h1 className="mt-6 text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-text-primary">
             {s.tagline}
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-lg text-text-secondary">

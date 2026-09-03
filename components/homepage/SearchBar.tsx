@@ -60,7 +60,7 @@ export function SearchBar({
       </div>
 
       {open && (
-        <div className="absolute z-40 mt-2 w-full overflow-hidden rounded-2xl border border-line bg-surface shadow-xl animate-fade-up">
+        <div className="absolute z-30 mt-2 w-full overflow-hidden rounded-2xl border border-line bg-surface shadow-xl animate-fade-up">
           <ul className="max-h-80 overflow-y-auto py-2">
             {results.map((r) => (
               <li key={r.href}>
