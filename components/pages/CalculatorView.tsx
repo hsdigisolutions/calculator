@@ -1,4 +1,6 @@
 import type { CalculatorDefinition } from "@/lib/types";
+import type { CalculatorWPData } from "@/lib/wordpress-calculators";
+import { parseSchemaOverride } from "@/lib/wordpress-calculators";
 import { getCategory } from "@/lib/categories";
 import { SITE_URL } from "@/lib/site";
 import { calculatorAppSchema, articleSchema } from "@/lib/schema";
@@ -25,17 +27,28 @@ import {
 export function CalculatorView({
   calc,
   locale,
+  wp,
 }: {
   calc: CalculatorDefinition;
   locale: Locale;
+  wp?: CalculatorWPData | null;
 }) {
   const s = t(locale);
   const category = getCategory(calc.categorySlug);
   const catName = category ? categoryName(category, locale) : calc.category;
   const pageUrl = `${SITE_URL}${calcPath(calc, category, locale)}`;
 
+  // WP content overrides apply to Spanish pages only.
+  const cms = locale === "es" ? wp : null;
+  const introHtml = cms?.intro?.trim() || "";
+  const explanationHtml = cms?.explanation?.trim() || "";
+  const exampleHtml = cms?.example?.trim() || "";
+  const faqsOverride = cms?.faqs && cms.faqs.length > 0 ? cms.faqs : undefined;
+
+  // Schema override replaces the auto WebApplication schema when valid JSON.
+  const override = cms?.schemaOverride ? parseSchemaOverride(cms.schemaOverride) : null;
   const schemas = [
-    calculatorAppSchema(calc, pageUrl, locale),
+    override ?? calculatorAppSchema(calc, pageUrl, locale),
     articleSchema(calc, pageUrl, locale),
   ];
 
@@ -63,15 +76,22 @@ export function CalculatorView({
             </div>
           </header>
 
+          {introHtml && (
+            <div
+              className="calcvora-cms mt-6 max-w-calc text-text-secondary leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: introHtml }}
+            />
+          )}
+
           <div className="mt-8 max-w-calc">
             <CalculatorShell definition={calc} locale={locale} />
           </div>
 
           <div className="max-w-calc">
-            <FormulaPanel definition={calc} locale={locale} />
-            <ExamplePanel definition={calc} locale={locale} />
+            <FormulaPanel definition={calc} locale={locale} explanationHtml={explanationHtml || undefined} />
+            <ExamplePanel definition={calc} locale={locale} exampleHtml={exampleHtml || undefined} />
             <HowToUse definition={calc} locale={locale} />
-            <FAQSection definition={calc} locale={locale} />
+            <FAQSection definition={calc} locale={locale} faqsOverride={faqsOverride} />
           </div>
         </div>
 

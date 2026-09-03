@@ -5,9 +5,12 @@ import { type Locale, t, calcExample, fieldLabel } from "@/lib/i18n";
 export function ExamplePanel({
   definition,
   locale = "en",
+  exampleHtml,
 }: {
   definition: CalculatorDefinition;
   locale?: Locale;
+  /** Optional CMS-authored HTML that replaces the worked-example prose. */
+  exampleHtml?: string;
 }) {
   const { fields } = definition;
   const example = calcExample(definition, locale);
@@ -33,10 +36,14 @@ export function ExamplePanel({
             </span>
           ))}
         </div>
-        <p className="mt-4 flex gap-2.5 text-text-secondary leading-relaxed">
+        <div className="mt-4 flex gap-2.5 text-text-secondary leading-relaxed">
           <Icon name="Sparkles" size={18} className="mt-0.5 shrink-0 text-brand" />
-          <span>{example.explanation}</span>
-        </p>
+          {exampleHtml ? (
+            <div className="calcvora-cms" dangerouslySetInnerHTML={{ __html: exampleHtml }} />
+          ) : (
+            <span>{example.explanation}</span>
+          )}
+        </div>
       </div>
     </section>
   );

@@ -1,0 +1,58 @@
+/* Calcvora SEO Manager — admin styling */
+
+.calcvora-badge {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 10px;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 1.6;
+	color: #fff;
+}
+.calcvora-badge--pending { background: #b0b4b9; }
+.calcvora-badge--in_progress { background: #d98a00; }
+.calcvora-badge--done { background: #1e8e3e; }
+
+.calcvora-words.low { color: #d63638; font-weight: 600; }
+.calcvora-words.ok { color: #1e8e3e; }
+
+.calcvora-index { cursor: pointer; font-size: 15px; }
+
+/* FAQ repeater */
+.calcvora-faqs { margin: 8px 0; }
+.calcvora-faq-row {
+	border: 1px solid #dcdcde;
+	border-radius: 6px;
+	padding: 10px;
+	margin-bottom: 8px;
+	background: #fff;
+}
+.calcvora-faq-row input,
+.calcvora-faq-row textarea { margin-bottom: 6px; }
+.calcvora-remove-faq { color: #d63638; text-decoration: none; }
+
+/* SEO sidebar facts */
+.calcvora-facts { margin: 6px 0; }
+.calcvora-facts li { margin: 2px 0; }
+
+/* Dashboard widget */
+.calcvora-dash .calcvora-bar {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 8px 0;
+	font-size: 12px;
+}
+.calcvora-dash .calcvora-bar > span { flex: 0 0 150px; }
+.calcvora-dash .calcvora-bar__track {
+	flex: 1;
+	height: 10px;
+	background: #f0f0f1;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.calcvora-dash .calcvora-bar__fill {
+	height: 100%;
+	background: linear-gradient(90deg, #2271b1, #135e96);
+}
+.calcvora-dash .calcvora-bar > em { flex: 0 0 40px; text-align: right; font-style: normal; }

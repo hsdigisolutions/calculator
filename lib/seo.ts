@@ -4,6 +4,7 @@
  */
 import type { Metadata } from "next";
 import type { CalculatorDefinition, Category } from "./types";
+import type { CalculatorWPData } from "./wordpress-calculators";
 import { getCategory } from "./categories";
 import { SITE_NAME } from "./site";
 import { ROBOTS } from "./schema";
@@ -31,27 +32,43 @@ function ogLocaleBlock(locale: Locale) {
 
 export function calculatorMetadata(
   def: CalculatorDefinition,
-  locale: Locale
+  locale: Locale,
+  wp?: CalculatorWPData | null
 ): Metadata {
   const cat = getCategory(def.categorySlug);
   const pathFor = (l: Locale) => calcPath(def, cat, l);
   const url = pathFor(locale);
-  const title = calcSeoTitle(def, locale);
-  const description = calcMetaDescription(def, locale);
+
+  // WP content overrides are Spanish-only; the index toggle applies to both locales.
+  const es = locale === "es";
+  const title = es && wp?.rmTitle ? wp.rmTitle : calcSeoTitle(def, locale);
+  const description = es && wp?.rmDescription ? wp.rmDescription : calcMetaDescription(def, locale);
+  const canonical = es && wp?.rmCanonical ? wp.rmCanonical : url;
   const keywords = [calcPrimaryKeyword(def, locale), ...calcSecondaryKeywords(def, locale)];
+
+  // Index only what WP explicitly de-indexes; a missing entry stays indexed.
+  const index = wp ? wp.isIndexed : true;
+  const robots = index
+    ? ROBOTS
+    : {
+        index: false,
+        follow: true,
+        googleBot: { index: false, follow: true },
+      };
+
   return {
     title,
     description,
     keywords,
     alternates: {
-      canonical: url,
+      canonical,
       languages: {
         es: pathFor("es"),
         en: pathFor("en"),
         "x-default": pathFor("es"),
       },
     },
-    robots: ROBOTS,
+    robots,
     openGraph: {
       title,
       description,
