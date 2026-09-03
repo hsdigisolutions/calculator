@@ -46,5 +46,10 @@ The Next.js front end fails soft — pages render from their built-in JSON data.
 
 == Changelog ==
 
+= 1.1.0 =
+* REST endpoint aligned to /wp-json/wp/v2/calculator_page for the content seeder.
+* RankMath auto-enabled on the Calculator Pages CPT (title-setting toggle + filters).
+* Word count now recomputes when content is written via REST/GraphQL, not just the editor form.
+
 = 1.0.0 =
 * Initial release: CPT, taxonomy, meta fields, background creation, admin list/filters/bulk actions, dashboard widget, content-quality checks, CSV export, WPGraphQL exposure, ISR revalidation webhook.

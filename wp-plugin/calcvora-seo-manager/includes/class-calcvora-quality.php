@@ -21,7 +21,21 @@ class Calcvora_Quality {
 		if ( wp_is_post_revision( $post_id ) ) {
 			return;
 		}
+		self::recompute( $post_id );
+	}
 
+	/**
+	 * Recompute word count + warnings from whatever is currently stored. Fired
+	 * both on form save and when content meta is written directly (REST seeding).
+	 */
+	public static function on_meta_update( $meta_id, $post_id, $meta_key ) {
+		if ( in_array( $meta_key, array( 'calc_explanation', 'calc_intro', 'calc_faqs' ), true )
+			&& get_post_type( $post_id ) === CALCVORA_SEO_CPT ) {
+			self::recompute( $post_id );
+		}
+	}
+
+	public static function recompute( $post_id ) {
 		$explanation = (string) get_post_meta( $post_id, 'calc_explanation', true );
 		$intro       = (string) get_post_meta( $post_id, 'calc_intro', true );
 		$faqs        = json_decode( (string) get_post_meta( $post_id, 'calc_faqs', true ), true );

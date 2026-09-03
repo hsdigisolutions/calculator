@@ -50,11 +50,58 @@ class Calcvora_CPT {
 				'map_meta_cap'        => true,
 				'supports'            => array( 'title', 'editor', 'custom-fields', 'revisions', 'author' ),
 				'show_in_rest'        => true,
-				'rest_base'           => 'calculator-pages',
+				// Default rest_base = the post-type key, so the endpoint is
+				// /wp-json/wp/v2/calculator_page (used by the content seeder).
 				'show_in_graphql'     => true,
 				'graphql_single_name' => 'calculatorPage',
 				'graphql_plural_name' => 'calculatorPages',
 			)
+		);
+
+		self::enable_rankmath();
+	}
+
+	/**
+	 * Make RankMath track this CPT so its metabox + SEO fields apply here even
+	 * though the post type is public:false.
+	 */
+	public static function enable_rankmath() {
+		// As requested — these are no-ops on RankMath versions that don't expose
+		// the hooks, but are harmless and future-proof.
+		add_filter(
+			'rank_math/settings/general',
+			function ( $settings ) {
+				$settings['calculator_page'] = true;
+				return $settings;
+			}
+		);
+		add_filter(
+			'rank_math/metabox/post_types',
+			function ( $post_types ) {
+				$post_types[] = CALCVORA_SEO_CPT;
+				return $post_types;
+			}
+		);
+
+		// The reliable mechanism: RankMath decides whether to show its metabox from
+		// the `pt_{cpt}_add_meta_box` title setting. Turn it on once (idempotent) so
+		// the SEO fields appear on Calculator Pages without manual configuration.
+		add_action(
+			'admin_init',
+			function () {
+				if ( ! class_exists( 'RankMath' ) ) {
+					return;
+				}
+				$titles = get_option( 'rank-math-options-titles', array() );
+				if ( ! is_array( $titles ) ) {
+					$titles = array();
+				}
+				$key = 'pt_' . CALCVORA_SEO_CPT . '_add_meta_box';
+				if ( ! isset( $titles[ $key ] ) ) {
+					$titles[ $key ] = 'on';
+					update_option( 'rank-math-options-titles', $titles );
+				}
+			}
 		);
 	}
 }

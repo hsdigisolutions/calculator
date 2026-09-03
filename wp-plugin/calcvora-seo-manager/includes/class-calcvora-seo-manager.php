@@ -54,6 +54,9 @@ class Calcvora_SEO_Manager {
 
 		// Content quality + word count + status nudges on save.
 		add_action( 'save_post_' . CALCVORA_SEO_CPT, array( 'Calcvora_Quality', 'on_save' ), 20, 3 );
+		// Keep word count correct when content is written via REST/GraphQL (e.g. seeding).
+		add_action( 'updated_post_meta', array( 'Calcvora_Quality', 'on_meta_update' ), 10, 3 );
+		add_action( 'added_post_meta', array( 'Calcvora_Quality', 'on_meta_update' ), 10, 3 );
 
 		// Fire Next.js ISR revalidation on save.
 		add_action( 'save_post_' . CALCVORA_SEO_CPT, array( 'Calcvora_Revalidate', 'on_save' ), 30, 3 );
