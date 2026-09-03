@@ -43,6 +43,8 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  // Skip Next internals, the OG image routes, sitemaps, robots and any file with an extension.
-  matcher: ["/((?!_next|og|sitemap|robots\\.txt|.*\\.).*)"],
+  // Skip Next internals, API routes (e.g. /api/revalidate), the OG image routes,
+  // sitemaps, robots, the language-neutral /blog section, and any file with an
+  // extension. Everything else is locale-routed.
+  matcher: ["/((?!_next|api|og|sitemap|robots\\.txt|blog|.*\\.).*)"],
 };

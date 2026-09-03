@@ -7,6 +7,7 @@ import {
 import { getCategory } from "@/lib/categories";
 import { CalculatorView } from "@/components/pages/CalculatorView";
 import { calculatorMetadata } from "@/lib/seo";
+import { getCalculatorSEO } from "@/lib/wordpress-calculators";
 import {
   LOCALES,
   isLocale,
@@ -16,6 +17,8 @@ import {
 } from "@/lib/i18n";
 
 export const dynamicParams = false;
+// ISR: rebuild at most hourly; the WordPress save webhook also revalidates on demand.
+export const revalidate = 3600;
 
 export function generateStaticParams() {
   const params: { lang: string; category: string; calculator: string }[] = [];
@@ -41,7 +44,10 @@ export async function generateMetadata({
   if (!isLocale(lang)) return {};
   const calc = getCalculatorByLocalizedSlug(lang as Locale, category, calculator);
   if (!calc) return {};
-  return calculatorMetadata(calc, lang as Locale);
+  // Canonical English key is stable across locales; getCalculatorSEO is React.cache'd
+  // so this shares one request with the page render below.
+  const wp = await getCalculatorSEO(`${calc.categorySlug}/${calc.slug}`);
+  return calculatorMetadata(calc, lang as Locale, wp);
 }
 
 export default async function Page({
@@ -53,5 +59,6 @@ export default async function Page({
   if (!isLocale(lang)) notFound();
   const calc = getCalculatorByLocalizedSlug(lang as Locale, category, calculator);
   if (!calc) notFound();
-  return <CalculatorView calc={calc} locale={lang as Locale} />;
+  const wp = await getCalculatorSEO(`${calc.categorySlug}/${calc.slug}`);
+  return <CalculatorView calc={calc} locale={lang as Locale} wp={wp} />;
 }

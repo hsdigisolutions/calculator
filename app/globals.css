@@ -495,3 +495,12 @@ input:-webkit-autofill:focus {
     transform: none;
   }
 }
+
+/* CMS-authored HTML content (WordPress calculator SEO manager) */
+.calcvora-cms > * + * { margin-top: 0.85em; }
+.calcvora-cms p { line-height: 1.7; }
+.calcvora-cms ul, .calcvora-cms ol { margin-left: 1.25rem; list-style: revert; }
+.calcvora-cms li { margin-top: 0.35em; }
+.calcvora-cms a { color: var(--brand); text-decoration: underline; text-underline-offset: 2px; }
+.calcvora-cms strong { color: var(--text-primary); font-weight: 600; }
+.calcvora-cms h2, .calcvora-cms h3 { color: var(--text-primary); font-weight: 600; margin-top: 1.2em; }

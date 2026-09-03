@@ -5,12 +5,18 @@ import { type Locale, t, calcFaqs } from "@/lib/i18n";
 export function FAQSection({
   definition,
   locale = "en",
+  faqsOverride,
 }: {
   definition: CalculatorDefinition;
   locale?: Locale;
+  /** Optional CMS-authored FAQs (answers may be HTML) that replace the JSON FAQs. */
+  faqsOverride?: { question: string; answer: string }[];
 }) {
-  const faqs = calcFaqs(definition, locale);
+  const isOverride = Array.isArray(faqsOverride) && faqsOverride.length > 0;
+  const faqs = isOverride ? faqsOverride! : calcFaqs(definition, locale);
   if (!faqs.length) return null;
+
+  const stripTags = (s: string) => s.replace(/<[^>]*>/g, "").trim();
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -18,7 +24,7 @@ export function FAQSection({
     mainEntity: faqs.map((f) => ({
       "@type": "Question",
       name: f.question,
-      acceptedAnswer: { "@type": "Answer", text: f.answer },
+      acceptedAnswer: { "@type": "Answer", text: isOverride ? stripTags(f.answer) : f.answer },
     })),
   };
 
@@ -38,9 +44,16 @@ export function FAQSection({
                 className="shrink-0 text-text-tertiary transition-transform group-open:rotate-180"
               />
             </summary>
-            <p className="pb-4 -mt-1 text-text-secondary leading-relaxed">
-              {f.answer}
-            </p>
+            {isOverride ? (
+              <div
+                className="calcvora-cms pb-4 -mt-1 text-text-secondary leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: f.answer }}
+              />
+            ) : (
+              <p className="pb-4 -mt-1 text-text-secondary leading-relaxed">
+                {f.answer}
+              </p>
+            )}
           </details>
         ))}
       </div>

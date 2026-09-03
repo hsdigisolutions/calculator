@@ -12,9 +12,12 @@ import {
 export function FormulaPanel({
   definition,
   locale = "en",
+  explanationHtml,
 }: {
   definition: CalculatorDefinition;
   locale?: Locale;
+  /** Optional CMS-authored HTML explanation that replaces the JSON prose. */
+  explanationHtml?: string;
 }) {
   const s = t(locale);
   const formulaExplanation = calcFormulaExplanation(definition, locale);
@@ -23,9 +26,16 @@ export function FormulaPanel({
       <h2 id="how-it-works" className="text-2xl font-semibold text-text-primary">
         {s.howItWorks}
       </h2>
-      <p className="mt-3 text-text-secondary leading-relaxed max-w-2xl">
-        {calcExplanation(definition, locale)}
-      </p>
+      {explanationHtml ? (
+        <div
+          className="calcvora-cms mt-3 text-text-secondary leading-relaxed max-w-2xl"
+          dangerouslySetInnerHTML={{ __html: explanationHtml }}
+        />
+      ) : (
+        <p className="mt-3 text-text-secondary leading-relaxed max-w-2xl">
+          {calcExplanation(definition, locale)}
+        </p>
+      )}
 
       <div className="mt-5 rounded-xl bg-surface-2 p-5 border border-line">
         <div className="text-xs font-medium uppercase tracking-widest text-text-tertiary">
