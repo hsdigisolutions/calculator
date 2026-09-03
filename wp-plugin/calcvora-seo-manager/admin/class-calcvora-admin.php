@@ -93,7 +93,7 @@ class Calcvora_Admin {
 				break;
 			case 'is_indexed':
 				$raw = get_post_meta( $post_id, 'is_indexed', true );
-				$on  = ( '' === $raw ) ? true : (bool) $raw;
+				$on  = ( '' === $raw ) ? false : (bool) $raw;
 				echo '<span class="calcvora-index" data-id="' . esc_attr( $post_id ) . '">' . ( $on ? '✅' : '❌' ) . '</span>';
 				break;
 			case 'words':
@@ -250,7 +250,7 @@ class Calcvora_Admin {
 			wp_send_json_error();
 		}
 		$raw = get_post_meta( $id, 'is_indexed', true );
-		$on  = ( '' === $raw ) ? true : (bool) $raw;
+		$on  = ( '' === $raw ) ? false : (bool) $raw;
 		update_post_meta( $id, 'is_indexed', ! $on );
 		wp_send_json_success( array( 'indexed' => ! $on ) );
 	}
@@ -418,7 +418,7 @@ class Calcvora_Admin {
 		fputcsv( $out, array( 'slug', 'category', 'title', 'seo_status', 'indexed', 'word_count', 'rankmath_score', 'priority', 'assignee', 'last_seo_review', 'last_synced', 'modified' ) );
 		foreach ( $posts as $p ) {
 			$raw = get_post_meta( $p->ID, 'is_indexed', true );
-			$on  = ( '' === $raw ) ? 'yes' : ( $raw ? 'yes' : 'no' );
+			$on  = ( '' === $raw ) ? 'no' : ( $raw ? 'yes' : 'no' );
 			fputcsv(
 				$out,
 				array(

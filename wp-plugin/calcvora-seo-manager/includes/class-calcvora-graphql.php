@@ -92,7 +92,8 @@ class Calcvora_GraphQL {
 		) : array();
 
 		$indexed_raw = get_post_meta( $id, 'is_indexed', true );
-		$is_indexed  = ( '' === $indexed_raw ) ? true : (bool) $indexed_raw; // Default true.
+		// Default FALSE (strict opt-in): unset OR explicit-noindex ('') both read as noindex.
+		$is_indexed  = ( '' === $indexed_raw ) ? false : (bool) $indexed_raw;
 
 		return array(
 			'calcSlug'         => (string) get_post_meta( $id, 'calc_slug', true ),

@@ -3,8 +3,8 @@
  * Registers meta fields + edit-screen metaboxes for calculator_page.
  *
  * All fields are self-contained via register_post_meta (no ACF dependency).
- * `is_indexed` defaults to TRUE (safer default, per product decision): a page
- * indexes unless an SEO expert explicitly sets noindex.
+ * `is_indexed` defaults to FALSE (strict opt-in, per product decision): a page
+ * stays noindex until an SEO expert explicitly opts it into indexing.
  *
  * @package Calcvora_SEO_Manager
  */
@@ -26,7 +26,7 @@ class Calcvora_Meta_Fields {
 			'calc_explanation'   => array( 'type' => 'string',  'default' => '' ),
 			'calc_example'       => array( 'type' => 'string',  'default' => '' ),
 			'calc_faqs'          => array( 'type' => 'string',  'default' => '[]' ),
-			'is_indexed'         => array( 'type' => 'boolean', 'default' => true ),
+			'is_indexed'         => array( 'type' => 'boolean', 'default' => false ),
 			'schema_override'    => array( 'type' => 'string',  'default' => '' ),
 			'seo_status'         => array( 'type' => 'string',  'default' => 'pending' ),
 			'content_word_count' => array( 'type' => 'integer', 'default' => 0 ),

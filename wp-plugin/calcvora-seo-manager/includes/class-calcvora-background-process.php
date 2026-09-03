@@ -88,7 +88,7 @@ class Calcvora_Background_Process {
 		update_post_meta( $post_id, 'calc_category', $rec['category'] );
 		update_post_meta( $post_id, 'calc_es_path', isset( $rec['es_path'] ) ? $rec['es_path'] : '' );
 		update_post_meta( $post_id, 'seo_status', 'pending' );
-		// is_indexed intentionally left unset -> defaults to true (indexed).
+		// is_indexed intentionally left unset -> defaults to false (noindex, strict opt-in).
 
 		$term_id = Calcvora_Taxonomy::ensure_term( $rec['category'], $rec['category_name'] );
 		if ( $term_id ) {

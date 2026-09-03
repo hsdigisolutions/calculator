@@ -46,6 +46,10 @@ The Next.js front end fails soft — pages render from their built-in JSON data.
 
 == Changelog ==
 
+= 1.2.1 =
+* is_indexed now defaults to FALSE (strict opt-in): new and existing un-toggled Calculator Pages stay noindex until an SEO expert explicitly opts them into indexing.
+* Fixed a read-back bug where a page explicitly set to noindex could report as indexed (GraphQL isIndexed, admin index column/toggle, CSV export).
+
 = 1.2.0 =
 * Fixed broken "Preview" links: the bundled slug map is regenerated from the live Spanish registry, so Spanish preview URLs point to the real translated paths (e.g. /negocios/calculadora-de-markup-a-margen) instead of English-fallback slugs.
 * Preview URLs now resolve from the freshly-bundled slug map first, so a plugin update fixes existing pages without re-saving each entry.
