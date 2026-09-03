@@ -53,6 +53,38 @@ export const scienceWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard physics (Ohm's law)",
+    slugEs: "calculadora-de-ley-de-ohm",
+    titleEs: "Calculadora de Ley de Ohm",
+    shortDescriptionEs: "Resuelve voltaje, corriente, resistencia y potencia.",
+    seoTitleEs: "Calculadora de Ley de Ohm — Voltaje, Corriente, Resistencia, Potencia",
+    metaDescriptionEs: "Calculadora gratuita de la ley de Ohm. Introduce dos de tres (voltaje, corriente o resistencia) para resolver al instante el tercer valor y la potencia. Ideal para circuitos y electrónica.",
+    primaryKeywordEs: "calculadora de ley de ohm",
+    secondaryKeywordsEs: ["calculadora de voltaje corriente resistencia", "calculadora de potencia eléctrica", "calculadora de circuitos"],
+    formulaExplanationEs: "La ley de Ohm afirma que la corriente que atraviesa un conductor es proporcional al voltaje aplicado e inversamente proporcional a su resistencia, porque la resistencia es la constante de proporcionalidad que limita el flujo de electrones. Al reordenar V = I × R puedes recuperar la magnitud desconocida a partir de las otras dos. La potencia se obtiene como P = V × I, ya que la potencia es la velocidad a la que cada culombio de carga entrega su energía por el circuito.",
+    explanationEs: "La ley de Ohm es la relación más importante de la electrónica, ya que une voltaje, corriente y resistencia en una sola ecuación limpia. Esta calculadora de ley de Ohm te permite introducir dos de las tres magnitudes y devuelve al instante la que falta junto con la potencia disipada. El voltaje es la presión eléctrica que empuja la carga por el circuito, la corriente es la velocidad de flujo de carga y la resistencia mide con qué fuerza el material se opone a ese flujo.\n\nComprender este trío importa porque casi toda decisión práctica de un circuito depende de él: dimensionar una resistencia para proteger un LED, elegir el calibre del cable para que no se sobrecaliente o confirmar que una fuente entrega suficiente corriente. Cuando conoces dos valores, el tercero queda fijado, así que una buena calculadora elimina el cálculo mental y el riesgo de un decimal mal puesto que podría quemar un componente.\n\nLa fórmula funciona porque la resistencia se comporta como una relación constante entre voltaje y corriente en los materiales óhmicos. Aficionados, electricistas e ingenieros recurren a diario a una calculadora de ley de Ohm, ya sea depurando una placa de pruebas, planificando la instalación de una vivienda o enseñando los fundamentos de la electricidad.",
+    exampleEs: { inputs: { voltage: 12, current: 2 }, explanation: "12 V con 2 A dan R = 12 ÷ 2 = 6 Ω y P = 12 × 2 = 24 W." },
+    faqsEs: [
+      {
+        question: "¿Cuántos valores necesito introducir?",
+        answer: "Necesitas introducir exactamente dos de las tres magnitudes: voltaje, corriente o resistencia. A partir de esos dos la calculadora resuelve la incógnita restante mediante la ley de Ohm y después calcula la potencia. Si solo introduces un valor el sistema no puede determinar el circuito, y si introduces los tres de forma incoherente la potencia reflejará simplemente los números que escribiste.",
+      },
+      {
+        question: "¿Qué unidades usa esta calculadora?",
+        answer: "El voltaje se expresa en voltios (V), la corriente en amperios (A), la resistencia en ohmios (Ω) y la potencia en vatios (W). Son las unidades SI estándar para circuitos eléctricos. Si tus valores están en miliamperios o kiloohmios, conviértelos primero: 1000 mA equivalen a 1 A y 1000 Ω equivalen a 1 kΩ. Mantener todo en unidades base garantiza que la potencia salga correcta en vatios.",
+      },
+      {
+        question: "¿Cómo se calcula la potencia a partir del voltaje y la corriente?",
+        answer: "La potencia es igual al voltaje multiplicado por la corriente, escrito P = V × I. Esto indica con qué rapidez se convierte la energía eléctrica en calor, luz o movimiento. También puedes expresar la potencia como I² × R o V² ÷ R sustituyendo con la ley de Ohm. La potencia importa al dimensionar componentes, porque una resistencia debe soportar al menos los vatios que manejará sin sobrecalentarse.",
+      },
+      {
+        question: "¿Se aplica la ley de Ohm a todos los componentes?",
+        answer: "La ley de Ohm se aplica limpiamente a materiales óhmicos como la mayoría de las resistencias y los conductores metálicos, donde la resistencia permanece constante sin importar el voltaje. No se cumple en componentes no óhmicos como diodos, transistores y bombillas, cuya resistencia cambia con la temperatura o el voltaje aplicado. Para esas piezas se usan sus curvas características específicas, pero la ley sigue gobernando las resistencias y el cableado del circuito.",
+      },
+      {
+        question: "¿Qué ocurre si la resistencia es cero?",
+        answer: "Una resistencia de cero representa un cortocircuito, y la ley de Ohm predice que la corriente se volvería infinita para cualquier voltaje distinto de cero, ya que I = V ÷ R. En la realidad los cables tienen una pequeña resistencia, por lo que la corriente sube a un valor muy alto que puede fundir fusibles, dañar componentes o provocar un incendio. Por eso los circuitos incluyen fusibles y resistencias limitadoras.",
+      },
+    ],
   },
   {
     id: "density",
@@ -103,6 +135,38 @@ export const scienceWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard physics (density)",
+    slugEs: "calculadora-de-densidad",
+    titleEs: "Calculadora de Densidad",
+    shortDescriptionEs: "Halla la densidad a partir de la masa y el volumen.",
+    seoTitleEs: "Calculadora de Densidad — Masa y Volumen a Densidad",
+    metaDescriptionEs: "Calculadora gratuita de densidad. Introduce la masa y el volumen para hallar la densidad al instante en kg/m³ y g/cm³. Ideal para física, química y ciencia de materiales.",
+    primaryKeywordEs: "calculadora de densidad",
+    secondaryKeywordsEs: ["calculadora de masa volumen densidad", "calculadora de fórmula de densidad", "kg/m3 a g/cm3"],
+    formulaExplanationEs: "La densidad mide cuánta masa se concentra en un volumen dado, por lo que dividir la masa entre el volumen da la cantidad de materia por unidad de espacio. La fórmula funciona porque tanto la masa como el volumen son propiedades extensivas que escalan juntas en una sustancia uniforme, dejando su cociente constante. Ese cociente es una propiedad intensiva, única de cada material sin importar la cantidad que tengas, por lo que identifica las sustancias de forma tan fiable.",
+    explanationEs: "La densidad es una propiedad fundamental de la materia que indica con qué firmeza se concentra la masa en un volumen, y esta calculadora de densidad la devuelve al instante a partir de la masa y el volumen que introduzcas. Muestra la respuesta en kilogramos por metro cúbico y también la convierte a gramos por centímetro cúbico, la unidad que químicos y estudiantes usan con más frecuencia. Un material denso como el plomo concentra mucha masa en poco espacio, mientras que uno ligero como el corcho reparte poca masa en un volumen mayor.\n\nLa densidad importa porque predice el comportamiento sin pesar el objeto entero: si algo flota o se hunde, cuál de dos líquidos queda arriba y de qué está hecho probablemente un metal. La flotabilidad, el diseño de barcos e incluso la interpretación de análisis de sangre dependen de comparar densidades, así que una calculadora rápida ahorra tiempo en el laboratorio y en el taller.\n\nLa fórmula funciona porque la densidad es simplemente masa dividida entre volumen, una relación intrínseca que se mantiene igual midas un gramo o una tonelada de la sustancia. Ingenieros, geólogos, joyeros y estudiantes recurren a una calculadora de densidad para identificar materiales, comprobar la pureza y resolver problemas de libro de texto con confianza.",
+    exampleEs: { inputs: { mass: 10, volume: 2 }, explanation: "10 kg ÷ 2 m³ = 5 kg/m³." },
+    faqsEs: [
+      {
+        question: "¿Qué unidades debo usar para la masa y el volumen?",
+        answer: "Introduce la masa en kilogramos y el volumen en metros cúbicos para obtener la densidad directamente en kilogramos por metro cúbico. La calculadora también convierte ese resultado a gramos por centímetro cúbico por comodidad. Si tus medidas están en gramos y centímetros cúbicos, puedes convertirlas primero, pero mantener las unidades SI indicadas garantiza que ambas cifras de salida sean correctas sin escalado adicional.",
+      },
+      {
+        question: "¿Por qué la calculadora muestra kg/m³ y g/cm³?",
+        answer: "Cada campo prefiere unidades distintas. Ingenieros y físicos suelen trabajar en kilogramos por metro cúbico, el estándar SI, mientras que químicos y estudiantes citan gramos por centímetro cúbico porque el agua queda convenientemente cerca de 1 g/cm³. Mostrar ambas te permite comparar tu resultado con tablas de referencia sin importar el convenio. El factor de conversión es 1000: un g/cm³ equivale a 1000 kg/m³.",
+      },
+      {
+        question: "¿Cómo predice la densidad si algo flota?",
+        answer: "Un objeto flota en un fluido si su densidad es menor que la del fluido, y se hunde si es mayor. El agua tiene una densidad cercana a 1000 kg/m³, así que cualquier material por debajo, como la madera o el hielo, flota, mientras que materiales más densos como el hierro se hunden. Por eso comparar la densidad de un objeto con la del agua es una prueba de flotabilidad rápida y fiable.",
+      },
+      {
+        question: "¿La temperatura cambia la densidad de un material?",
+        answer: "Sí. La mayoría de las sustancias se expanden al calentarse, repartiendo la misma masa en un volumen mayor, lo que reduce la densidad. Por eso el aire caliente sube y los líquidos se estratifican por temperatura. El agua es una excepción famosa, alcanzando su densidad máxima cerca de 4 °C antes de expandirse al congelarse. Para trabajos precisos, anota siempre la temperatura a la que se midió una densidad de referencia.",
+      },
+      {
+        question: "¿Puedo usar esto para identificar un material desconocido?",
+        answer: "A menudo, sí. Mide la masa y el volumen del objeto, calcula su densidad aquí y compara la cifra con una tabla de densidades conocidas. Una coincidencia cercana sugiere con fuerza la identidad del material, ya que la densidad es una propiedad intensiva única de cada sustancia. Ten cuidado con las aleaciones, las muestras porosas o el aire atrapado, que pueden alterar la lectura, y confirma con una segunda propiedad cuando la precisión importe.",
+      },
+    ],
   },
   {
     id: "force",
@@ -153,6 +217,38 @@ export const scienceWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard physics (Newton's second law)",
+    slugEs: "calculadora-de-fuerza",
+    titleEs: "Calculadora de Fuerza",
+    shortDescriptionEs: "Calcula la fuerza a partir de la masa y la aceleración.",
+    seoTitleEs: "Calculadora de Fuerza — Segunda Ley de Newton (F = ma)",
+    metaDescriptionEs: "Calculadora gratuita de fuerza con la segunda ley de Newton. Introduce masa y aceleración para hallar la fuerza en newtons y libras-fuerza al instante. Ideal para tareas de física.",
+    primaryKeywordEs: "calculadora de fuerza",
+    secondaryKeywordsEs: ["calculadora de segunda ley de newton", "calculadora f=ma", "masa aceleración fuerza"],
+    formulaExplanationEs: "La segunda ley de Newton establece que la fuerza es igual a la masa por la aceleración, porque la fuerza es lo que cambia el movimiento de un objeto, y los objetos más pesados necesitan proporcionalmente más fuerza para alcanzar la misma aceleración. Multiplicar la masa por la aceleración capta tanto cuánta materia hay que mover como con qué rapidez debe cambiar su velocidad. El resultado se mide en newtons, donde un newton acelera un kilogramo a un metro por segundo al cuadrado.",
+    explanationEs: "La fuerza es el empuje o tirón que cambia cómo se mueve un objeto, y esta calculadora de fuerza aplica la segunda ley de Newton para convertir una masa y una aceleración en una respuesta precisa en newtons y libras-fuerza. Siempre que algo acelera, frena o cambia de dirección, actúa sobre él una fuerza neta, y la ecuación F igual a masa por aceleración cuantifica exactamente cuán intensa es esa fuerza.\n\nEsta relación importa porque sustenta casi toda la mecánica: explica por qué un camión cargado necesita una distancia de frenado mayor, cuánto empuje requiere un cohete para despegar y por qué los cinturones de seguridad deben resistir grandes fuerzas en un choque. Al separar la masa de la aceleración, una calculadora de fuerza facilita ver cómo contribuye cada factor, de modo que puedes duplicar una masa o reducir a la mitad una aceleración y leer el efecto de inmediato.\n\nLa fórmula funciona porque la aceleración es la medida directa de cómo cambia el movimiento, y la masa es la resistencia a ese cambio, así que su producto es la fuerza responsable. Estudiantes, ingenieros y profesores de física usan una calculadora de fuerza para revisar tareas, diseñar mecanismos y predecir cómo responderán los objetos reales cuando se les aplica una fuerza conocida.",
+    exampleEs: { inputs: { mass: 10, acceleration: 9.81 }, explanation: "10 kg × 9,81 m/s² = 98,1 N." },
+    faqsEs: [
+      {
+        question: "¿Qué es un newton y cómo de grande es?",
+        answer: "Un newton es la unidad SI de fuerza, definida como la fuerza necesaria para acelerar una masa de un kilogramo a un metro por segundo al cuadrado. Es una unidad bastante pequeña en términos cotidianos: sostener una manzana pequeña contra la gravedad requiere aproximadamente un newton. El peso de una persona o un coche alcanza cientos o miles de newtons, por lo que las fuerzas en ingeniería a menudo se expresan en kilonewtons.",
+      },
+      {
+        question: "¿Por qué la calculadora también muestra libras-fuerza?",
+        answer: "La libra-fuerza es la unidad tradicional aún muy usada en Estados Unidos y en muchas especificaciones de ingeniería. Mostrarla junto a los newtons te permite comunicar resultados a públicos de cualquier sistema de medida sin un paso de conversión aparte. Una libra-fuerza equivale a unos 4,448 newtons, así que la calculadora divide tu resultado en newtons entre ese factor para producir automáticamente la cifra en libras-fuerza.",
+      },
+      {
+        question: "¿Qué aceleración debo usar para el peso?",
+        answer: "Para hallar el peso de un objeto, usa la aceleración gravitatoria de la Tierra, de unos 9,81 metros por segundo al cuadrado, como valor de aceleración. El peso es simplemente la fuerza que la gravedad ejerce sobre una masa, así que un objeto de 10 kilogramos pesa unos 98,1 newtons. En la Luna usarías unos 1,62 m/s², por lo que la misma masa pesa mucho menos allí pese a tener idéntica masa.",
+      },
+      {
+        question: "¿Pueden ser negativas la fuerza o la aceleración?",
+        answer: "Sí. Una aceleración negativa significa simplemente que el objeto está frenando o acelerando en la dirección opuesta a la que elegiste como positiva. Introducir una aceleración negativa produce una fuerza negativa, lo que indica que la fuerza apunta al otro lado; por ejemplo, la fuerza de frenado que desacelera un coche. La magnitud te dice cuán intensa es la fuerza; el signo indica su dirección.",
+      },
+      {
+        question: "¿En qué se diferencia la masa del peso?",
+        answer: "La masa mide cuánta materia contiene un objeto y es la misma en todas partes, mientras que el peso es la fuerza que la gravedad ejerce sobre esa masa y cambia con la ubicación. Esta calculadora calcula fuerza, así que cuando la aceleración es la gravedad la salida es el peso en newtons. Confundir ambas es común porque las balanzas cotidianas informan la masa en kilogramos, aunque en rigor la infieren del peso que detectan.",
+      },
+    ],
   },
   {
     id: "kinetic-energy",
@@ -203,6 +299,38 @@ export const scienceWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard physics (kinetic energy)",
+    slugEs: "calculadora-de-energia-cinetica",
+    titleEs: "Calculadora de Energía Cinética",
+    shortDescriptionEs: "Calcula la energía cinética y el momento lineal.",
+    seoTitleEs: "Calculadora de Energía Cinética — Energía y Momento",
+    metaDescriptionEs: "Calculadora gratuita de energía cinética. Introduce masa y velocidad para hallar la energía cinética en julios y el momento al instante. Ideal para tareas de física y problemas de movimiento.",
+    primaryKeywordEs: "calculadora de energía cinética",
+    secondaryKeywordsEs: ["fórmula de energía cinética", "calculadora de momento", "calculadora de energía de movimiento"],
+    formulaExplanationEs: "La energía cinética es el trabajo necesario para acelerar una masa desde el reposo hasta su velocidad actual, e integrar la fuerza a lo largo de la distancia produce la forma un medio de masa por velocidad al cuadrado. La velocidad se eleva al cuadrado porque duplicar la rapidez duplica tanto la distancia recorrida por segundo como el cambio de momento, de modo que la energía crece cuatro veces. El momento, en cambio, es solo masa por velocidad y escala linealmente con la rapidez.",
+    explanationEs: "La energía cinética es la energía que un objeto posee por estar en movimiento, y esta calculadora de energía cinética la devuelve en julios a partir de una masa y una velocidad, junto con el momento lineal del objeto. Cuanto más rápido y pesado se mueva algo, más energía cinética contiene, que es precisamente la energía que hay que absorber para detenerlo. Por eso un coche a gran velocidad es mucho más difícil de frenar que uno lento de la misma masa.\n\nEsta magnitud importa en la ciencia y la seguridad: explica la gravedad de un choque, el poder destructivo de un huracán, el alcance de una pelota lanzada y cuánto frenado necesita un vehículo. Como la velocidad se eleva al cuadrado en la fórmula, una calculadora de energía cinética deja obvio el efecto dramático de la rapidez: duplicar la velocidad cuadruplica la energía, un hecho que da forma a los límites de velocidad y a las normas de impacto.\n\nLa fórmula funciona porque la energía cinética es igual al trabajo acumulado al acelerar la masa, y ese trabajo crece con el cuadrado de la rapidez. El momento, mostrado al lado, sigue la masa por la velocidad y gobierna las colisiones. Estudiantes, ingenieros y analistas de seguridad recurren a una calculadora de energía cinética para resolver problemas de movimiento y entender cómo se comportan los objetos en movimiento.",
+    exampleEs: { inputs: { mass: 2, velocity: 3 }, explanation: "½ × 2 × 3² = ½ × 2 × 9 = 9 J." },
+    faqsEs: [
+      {
+        question: "¿Por qué se eleva al cuadrado la velocidad en la fórmula?",
+        answer: "La velocidad se eleva al cuadrado porque la energía cinética es igual al trabajo total realizado para acelerar un objeto, y ese trabajo crece tanto con la fuerza aplicada como con la distancia recorrida, cada una de las cuales aumenta con la rapidez. El resultado práctico es dramático: duplicar la velocidad cuadruplica la energía cinética, y triplicarla la multiplica por nueve. Por eso pequeños aumentos de velocidad causan aumentos desproporcionados de energía de impacto.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre energía cinética y momento?",
+        answer: "La energía cinética mide la energía del movimiento y depende del cuadrado de la velocidad, mientras que el momento mide la cantidad de movimiento y depende linealmente de la velocidad. El momento se conserva en toda colisión, mientras que la energía cinética solo se conserva en las perfectamente elásticas. La calculadora muestra ambos porque los físicos necesitan el momento para analizar colisiones y la energía cinética para entender cuánto daño puede producir el movimiento.",
+      },
+      {
+        question: "¿Qué unidades usa esta calculadora?",
+        answer: "Introduce la masa en kilogramos y la velocidad en metros por segundo. La energía cinética se devuelve entonces en julios, la unidad SI de energía, y el momento en kilogramos-metro por segundo. Un julio es la energía de una masa de dos kilogramos moviéndose a un metro por segundo. Si tu velocidad está en kilómetros por hora, conviértela primero dividiendo entre 3,6 para mantener el resultado exacto.",
+      },
+      {
+        question: "¿Puede ser negativa la energía cinética?",
+        answer: "No. La energía cinética siempre es cero o positiva porque depende de la velocidad al cuadrado, y elevar al cuadrado cualquier número da un resultado no negativo. Un objeto en reposo tiene energía cinética cero, y cualquier movimiento da un valor positivo sin importar la dirección. El momento, en cambio, puede ser negativo porque lleva dirección, así que allí el signo indica hacia dónde viaja el objeto.",
+      },
+      {
+        question: "¿Cómo se relaciona la energía cinética con la distancia de frenado?",
+        answer: "El frenado debe eliminar toda la energía cinética de un objeto, y como esa energía escala con el cuadrado de la rapidez, la distancia de frenado aumenta con fuerza al crecer la velocidad. Un coche que viaja al doble de rapidez lleva cuatro veces la energía cinética y necesita aproximadamente cuatro veces la distancia para detenerse con la misma fuerza de frenado. Esta relación cuadrática es la razón física de que los límites de velocidad influyan tanto.",
+      },
+    ],
   },
   {
     id: "ph",
@@ -253,6 +381,38 @@ export const scienceWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard chemistry (pH scale)",
+    slugEs: "calculadora-de-ph",
+    titleEs: "Calculadora de pH",
+    shortDescriptionEs: "Halla el pH y el pOH a partir de la concentración de iones de hidrógeno.",
+    seoTitleEs: "Calculadora de pH — Concentración de Iones de Hidrógeno a pH y pOH",
+    metaDescriptionEs: "Calculadora gratuita de pH. Introduce la concentración de iones de hidrógeno en mol/L para hallar el pH, el pOH y si una disolución es ácida, neutra o básica. Resultados de química al instante.",
+    primaryKeywordEs: "calculadora de ph",
+    secondaryKeywordsEs: ["calculadora de concentración de iones de hidrógeno", "calculadora de poh", "calculadora ácido base"],
+    formulaExplanationEs: "El pH es el logaritmo negativo en base diez de la concentración de iones de hidrógeno porque esas concentraciones abarcan muchos órdenes de magnitud, y un logaritmo comprime ese enorme rango en una cómoda escala de 0 a 14. El signo negativo hace que las disoluciones ácidas, que tienen concentraciones altas, correspondan a números de pH bajos. El pOH suma con el pH un total de 14 a 25 °C porque la autoionización del agua fija el producto de las concentraciones de iones de hidrógeno e hidróxido.",
+    explanationEs: "El pH te dice cuán ácida o básica es una disolución, y esta calculadora de pH convierte una concentración de iones de hidrógeno en moles por litro en un valor de pH, su pOH correspondiente y una clasificación en lenguaje sencillo de ácida, neutra o básica. Como las concentraciones de iones de hidrógeno abarcan muchas potencias de diez, la escala logarítmica del pH las empaqueta ordenadamente entre 0 y 14, donde 7 es neutro, los números menores son ácidos y los mayores son básicos.\n\nAcertar con el pH importa en todas partes, desde el laboratorio hasta la vida diaria: gobierna la actividad enzimática del cuerpo, la seguridad del agua potable, la salud del suelo y los acuarios, y el resultado de innumerables reacciones químicas. Una calculadora de pH fiable elimina la complicada aritmética del logaritmo y el signo fácil de pasar por alto, para que pases directamente de una concentración medida a un resultado interpretable.\n\nLa fórmula funciona porque el pH es el logaritmo negativo de la concentración de iones de hidrógeno, convirtiendo números fraccionarios diminutos en una escala legible, mientras que el pOH completa la imagen ya que ambos suman siempre 14 en el agua a temperatura ambiente. Estudiantes de química, técnicos de laboratorio y científicos ambientales se apoyan en una calculadora de pH para comprobar la acidez con rapidez y precisión.",
+    exampleEs: { inputs: { concentration: 0.001 }, explanation: "−log₁₀(0,001) = 3, así que pH = 3 (ácido) y pOH = 11." },
+    faqsEs: [
+      {
+        question: "¿Qué mide realmente la escala de pH?",
+        answer: "La escala de pH mide la concentración de iones de hidrógeno en una disolución en una escala logarítmica, indicando cuán ácida o básica es. Normalmente va de 0 a 14, con 7 como neutro, los valores por debajo de 7 ácidos y los superiores a 7 básicos. Como es logarítmica, cada paso de un número entero representa un cambio de diez veces en la concentración de iones de hidrógeno, así que el pH 4 es diez veces más ácido que el pH 5.",
+      },
+      {
+        question: "¿Cómo se relacionan el pH y el pOH?",
+        answer: "En el agua a 25 °C, el pH y el pOH siempre suman 14. Esto proviene de la autoionización del agua, donde el producto de las concentraciones de iones de hidrógeno e hidróxido es fijo en 10⁻¹⁴. Así que si conoces uno, conoces de inmediato el otro: una disolución con pH 3 tiene pOH 11. La calculadora calcula el pOH restando el pH de 14 automáticamente por ti.",
+      },
+      {
+        question: "¿Qué concentración da un pH neutro?",
+        answer: "Una disolución neutra a 25 °C tiene una concentración de iones de hidrógeno de 1×10⁻⁷ moles por litro, que produce un pH de exactamente 7. A esta concentración los iones de hidrógeno e hidróxido están perfectamente equilibrados, así que la disolución no es ni ácida ni básica. El agua pura se sitúa en este punto. Introducir 0,0000001 mol/L en la calculadora devuelve un pH de 7 y una clasificación de neutra.",
+      },
+      {
+        question: "¿Puede el pH ser negativo o mayor que 14?",
+        answer: "Sí, aunque es poco común en entornos cotidianos. Los ácidos fuertes muy concentrados pueden tener concentraciones de iones de hidrógeno superiores a 1 mol/L, produciendo un pH negativo, mientras que las bases fuertes extremadamente concentradas pueden empujar el pH por encima de 14. El rango de 0 a 14 es simplemente el que cubre la mayoría de las disoluciones acuosas, no un límite rígido. La calculadora maneja correctamente los valores fuera de esa ventana.",
+      },
+      {
+        question: "¿Por qué la escala de pH es logarítmica en lugar de lineal?",
+        answer: "Las concentraciones de iones de hidrógeno en disoluciones reales varían en un rango enorme, desde alrededor de 1 mol/L en ácidos fuertes hasta 10⁻¹⁴ mol/L en bases fuertes. Una escala lineal sería inservible a través de tantos órdenes de magnitud. La escala logarítmica de pH comprime ese rango en números simples entre 0 y 14, facilitando las comparaciones mientras aún capta las enormes diferencias subyacentes de acidez entre disoluciones.",
+      },
+    ],
   },
   {
     id: "speed-distance-time",
@@ -307,5 +467,37 @@ export const scienceWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard physics (kinematics)",
+    slugEs: "calculadora-de-velocidad-distancia-tiempo",
+    titleEs: "Calculadora de Velocidad Distancia Tiempo",
+    shortDescriptionEs: "Resuelve la velocidad, la distancia o el tiempo.",
+    seoTitleEs: "Calculadora de Velocidad Distancia Tiempo — Resuelve Cualquiera de los Tres",
+    metaDescriptionEs: "Calculadora gratuita de velocidad distancia tiempo. Introduce dos de tres (velocidad, distancia o tiempo) para resolver el tercero, con resultados en km/h, mph y m/s. Rápida y precisa.",
+    primaryKeywordEs: "calculadora de velocidad distancia tiempo",
+    secondaryKeywordsEs: ["calculadora de velocidad media", "calculadora de distancia", "calculadora de tiempo de viaje"],
+    formulaExplanationEs: "La velocidad se define como la distancia recorrida por unidad de tiempo, así que dividir la distancia entre el tiempo da el ritmo medio de viaje. Reordenar la misma relación te permite hallar la distancia como velocidad por tiempo, o el tiempo como distancia dividida entre velocidad. La fórmula funciona porque es la definición misma de velocidad media, suponiendo movimiento constante durante el intervalo, y por eso dos cualesquiera de las tres magnitudes fijan la tercera.",
+    explanationEs: "La velocidad, la distancia y el tiempo están unidos por una relación sencilla, y esta calculadora de velocidad distancia tiempo te permite introducir dos de ellas para resolver automáticamente el valor que falta. Ya sea que sepas qué distancia recorriste y cuánto tardaste, o que conozcas tu velocidad y necesites calcular la hora de llegada, la herramienta reordena la ecuación por ti e incluso convierte la velocidad en kilómetros por hora, millas por hora y metros por segundo.\n\nEsto importa tanto para la planificación cotidiana como para el trabajo técnico: conductores que estiman tiempos de viaje, corredores que controlan su ritmo, pilotos y navegantes que trazan rutas y estudiantes de física que resuelven problemas de movimiento dependen de ella. Una calculadora fiable elimina la incertidumbre de dividir o multiplicar con prisa y el riesgo de confundir qué magnitud despejar.\n\nLa fórmula funciona porque la velocidad es por definición la distancia recorrida en un tiempo dado, así que los tres valores forman un triángulo fijo donde conocer dos siempre determina el tercero. Al ofrecer varias unidades de velocidad lado a lado, una calculadora de velocidad distancia tiempo conecta los sistemas métrico e imperial en un solo paso, útil para viajes, deporte, ingeniería y ejercicios de clase.",
+    exampleEs: { inputs: { distance: 100, time: 2 }, explanation: "100 km ÷ 2 h = 50 km/h (unas 31,07 mph)." },
+    faqsEs: [
+      {
+        question: "¿Qué dos valores necesito introducir?",
+        answer: "Introduce dos cualesquiera de las tres magnitudes (velocidad, distancia o tiempo) y la calculadora resuelve la restante. Por ejemplo, aporta distancia y tiempo para hallar la velocidad, o velocidad y tiempo para hallar la distancia. También convierte la velocidad resultante en millas por hora y metros por segundo. Si introduces solo un valor la relación queda indeterminada y no puede producirse una respuesta única.",
+      },
+      {
+        question: "¿Esto da la velocidad media o la instantánea?",
+        answer: "Da la velocidad media de todo el trayecto, calculada como la distancia total dividida entre el tiempo total. No capta los cambios de momento a momento, así que si aceleraste y frenaste por el camino, la cifra representa la velocidad constante que habría cubierto la misma distancia en el mismo tiempo. La velocidad instantánea, como la del velocímetro, requiere medir la distancia en un intervalo de tiempo muy pequeño.",
+      },
+      {
+        question: "¿Qué unidades usa la calculadora?",
+        answer: "La velocidad se introduce en kilómetros por hora, la distancia en kilómetros y el tiempo en horas. El resultado principal de velocidad aparece en km/h, y la calculadora también lo convierte a millas por hora y metros por segundo por comodidad. Para convertir un tiempo como 90 minutos en horas, divide entre 60 para obtener 1,5 horas antes de introducirlo, lo que mantiene cada resultado coherente.",
+      },
+      {
+        question: "¿Cómo convierto entre km/h, mph y m/s?",
+        answer: "Para convertir kilómetros por hora en millas por hora, multiplica por unos 0,6214. Para convertir km/h en metros por segundo, divide entre 3,6. La calculadora realiza ambas conversiones automáticamente, mostrando las tres unidades lado a lado para que nunca tengas que hacer la aritmética. Esto resulta especialmente práctico al comparar señales de carretera métricas con vehículos imperiales o al convertir cifras para un problema de física.",
+      },
+      {
+        question: "¿Cómo manejo el tiempo dado en minutos?",
+        answer: "Convierte los minutos en horas antes de introducir el tiempo, porque la calculadora espera horas. Divide el número de minutos entre 60: 30 minutos se convierten en 0,5 horas, y 90 minutos en 1,5 horas. Introducir minutos directamente haría que la velocidad pareciera sesenta veces menor. Una vez que el tiempo esté en horas, la velocidad, la distancia y las conversiones de unidad salen correctamente para tu trayecto.",
+      },
+    ],
   },
 ];

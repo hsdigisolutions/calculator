@@ -12,6 +12,41 @@ export const mathWave2Calculators: CalculatorDefinition[] = [
     metaDescription: "Calculate standard deviation, variance, and mean of any data set. Supports both population and sample standard deviation. Free and instant.",
     primaryKeyword: "standard deviation calculator",
     secondaryKeywords: ["variance calculator", "statistics calculator", "population standard deviation", "sample standard deviation"],
+    slugEs: "calculadora-de-desviacion-estandar",
+    titleEs: "Calculadora de Desviación Estándar",
+    shortDescriptionEs: "Calcula la desviación estándar, la varianza y la media de un conjunto de datos.",
+    seoTitleEs: "Calculadora de Desviación Estándar — Herramienta Estadística Gratis",
+    metaDescriptionEs: "Calcula la desviación estándar, la varianza y la media de cualquier conjunto de datos. Admite desviación estándar poblacional y muestral. Gratis e instantánea.",
+    primaryKeywordEs: "calculadora de desviación estándar",
+    secondaryKeywordsEs: ["calculadora de varianza", "calculadora de estadística", "desviación estándar poblacional", "desviación estándar muestral"],
+    formulaExplanationEs: "Elevar al cuadrado cada desviación (x − media) elimina los signos negativos para que las distancias por encima y por debajo de la media no se cancelen, y penaliza con más fuerza las diferencias grandes. Promediar esos cuadrados da la varianza, y sacar la raíz cuadrada devuelve el resultado a las unidades originales. Los datos muestrales dividen entre n−1 en lugar de N porque usar la media muestral subestima ligeramente la dispersión, y la corrección de Bessel compensa ese sesgo.",
+    explanationEs: "La desviación estándar es una de las estadísticas más fundamentales, ya que mide cuánto se alejan los valores individuales de un conjunto de datos respecto al promedio. Una desviación estándar baja indica que los valores se agrupan cerca de la media; una desviación estándar alta señala una gran dispersión.\n\nLa elección entre desviación estándar poblacional y muestral depende de tus datos. Si tienes datos de cada miembro de un grupo (por ejemplo, todos los estudiantes de una clase), usa la desviación estándar poblacional. Si tus datos son una muestra tomada de un grupo mayor (por ejemplo, 50 estudiantes encuestados de todo un país), usa la desviación estándar muestral. La fórmula muestral usa n−1 en el denominador (corrección de Bessel) para producir una estimación insesgada de la verdadera desviación estándar poblacional.\n\nEn la práctica, la desviación estándar se usa en todas partes: control de calidad (¿es consistente un proceso de fabricación?), finanzas (¿qué tan volátil es una acción?), educación (¿qué tan dispersas están las calificaciones?) y ciencia (¿qué tan precisas son las mediciones?). Junto con la media, la desviación estándar define la distribución normal — aproximadamente el 68% de los datos cae dentro de una desviación estándar de la media, el 95% dentro de dos y el 99,7% dentro de tres (la regla 68-95-99,7).",
+    exampleEs: {
+      inputs: { numbers: "2, 4, 4, 4, 5, 5, 7, 9", type: "population" },
+      explanation: "Para el conjunto {2, 4, 4, 4, 5, 5, 7, 9}, la media es 5. Al restar la media y elevar al cuadrado cada valor, y luego promediar esos cuadrados, se obtiene una varianza de 4. La raíz cuadrada de 4 es 2, por lo que la desviación estándar poblacional es 2.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cuál es la diferencia entre desviación estándar poblacional y muestral?",
+        answer: "La desviación estándar poblacional (σ) se usa cuando tu conjunto de datos contiene a cada miembro del grupo que estudias y divide la suma de las desviaciones al cuadrado entre N. La desviación estándar muestral (s) se usa cuando tus datos son un subconjunto de una población mayor y divide entre n−1 (corrección de Bessel) para no subestimar la verdadera desviación estándar poblacional. En la mayoría de las investigaciones reales trabajas con una muestra, así que usa n−1.",
+      },
+      {
+        question: "¿Qué significa una desviación estándar de 0?",
+        answer: "Una desviación estándar de exactamente cero significa que todos los valores del conjunto de datos son idénticos: no hay ninguna variación. Por ejemplo, el conjunto {5, 5, 5, 5} tiene una desviación estándar de 0. En la práctica, una desviación estándar muy baja (cercana a cero) indica muy poca variabilidad, lo que puede reflejar un proceso de fabricación muy consistente, calificaciones muy parecidas o mediciones estables.",
+      },
+      {
+        question: "¿Cómo interpreto la desviación estándar en la vida real?",
+        answer: "La desviación estándar indica la distancia 'típica' de los datos respecto al promedio. Por ejemplo, si las calificaciones promedian 75 con una desviación estándar de 10, la mayoría de los estudiantes obtuvo entre 65 y 85. En finanzas, una acción con desviación estándar alta es más volátil. En fabricación, una desviación baja implica calidad constante. La regla 68-95-99,7 dice que cerca del 68% de los valores cae dentro de una desviación estándar de la media.",
+      },
+      {
+        question: "¿Por qué se prefiere la desviación estándar sobre la varianza?",
+        answer: "Se prefiere la desviación estándar porque se expresa en las mismas unidades que los datos originales, lo que la hace intuitiva de interpretar. La varianza se expresa en unidades al cuadrado, difíciles de relacionar con las mediciones originales. Por ejemplo, si mides alturas en centímetros, la varianza estaría en cm², pero la desviación estándar sigue en cm. Además, la desviación estándar se usa directamente en pruebas estadísticas e intervalos de confianza.",
+      },
+      {
+        question: "¿Puede ser negativa la desviación estándar?",
+        answer: "No, la desviación estándar nunca puede ser negativa. Se calcula como la raíz cuadrada de la varianza, y la varianza es una suma de valores al cuadrado (siempre no negativos) dividida entre un número positivo. La desviación estándar mínima posible es 0, que ocurre solo cuando todos los valores son idénticos. Si alguna vez obtienes un resultado negativo, hay un error en el cálculo; revisa siempre tus datos.",
+      },
+    ],
     fields: [
       {
         id: "numbers",
@@ -85,6 +120,41 @@ export const mathWave2Calculators: CalculatorDefinition[] = [
     metaDescription: "Calculate mean, median, mode, range, and sum of any data set. Enter numbers separated by commas for instant results. Free online statistics calculator.",
     primaryKeyword: "mean median mode calculator",
     secondaryKeywords: ["average calculator", "statistics calculator", "mode calculator", "median calculator"],
+    slugEs: "calculadora-de-media-mediana-y-moda",
+    titleEs: "Calculadora de Media, Mediana y Moda",
+    shortDescriptionEs: "Encuentra la media, la mediana, la moda, el rango y la suma de cualquier conjunto de datos al instante.",
+    seoTitleEs: "Calculadora de Media, Mediana y Moda — Herramienta Estadística Gratis",
+    metaDescriptionEs: "Calcula la media, la mediana, la moda, el rango y la suma de cualquier conjunto de datos. Introduce números separados por comas para obtener resultados instantáneos. Calculadora de estadística gratis.",
+    primaryKeywordEs: "calculadora de media mediana y moda",
+    secondaryKeywordsEs: ["calculadora de promedio", "calculadora de estadística", "calculadora de moda", "calculadora de mediana"],
+    formulaExplanationEs: "Cada medida capta el centro de forma distinta, por eso se combinan. La media divide el total entre la cantidad, así que cada valor influye en el resultado, lo que la hace precisa pero sensible a valores atípicos. La mediana toma el valor central de la lista ordenada e ignora qué tan extremos son los extremos, por lo que resiste los atípicos. La moda cuenta la frecuencia, así que funciona incluso con categorías. El rango resta el valor menor del mayor para mostrar la dispersión total.",
+    explanationEs: "La media, la mediana y la moda son las tres medidas de tendencia central, y cada una resume un conjunto de datos con un único valor representativo de manera diferente. Saber cuándo usar cada una es la habilidad central detrás de un análisis honesto, por eso suelen reportarse juntas y no de forma aislada.\n\nLa media (promedio aritmético) suma todos los valores y los divide entre la cantidad. Es la medida más usada, pero es sensible a los valores atípicos. Unos pocos valores muy altos o muy bajos pueden alejar la media de donde se concentran la mayoría de los datos.\n\nLa mediana es el valor central cuando los datos están ordenados. Es robusta frente a los atípicos y representa mejor los valores 'típicos' en distribuciones sesgadas. Por ejemplo, el ingreso mediano se reporta a menudo en lugar del ingreso medio porque unos pocos multimillonarios pueden elevar mucho la media.\n\nLa moda es el valor que aparece con más frecuencia, y es la única medida que funciona con datos categóricos (no numéricos). Un conjunto puede no tener moda, tener una (unimodal), dos (bimodal) o muchas (multimodal). Junto con el rango — la dispersión entre el mínimo y el máximo —, estas estadísticas ofrecen un resumen rápido y potente de la forma y el centro de cualquier distribución.",
+    exampleEs: {
+      inputs: { numbers: "3, 7, 7, 2, 9, 4" },
+      explanation: "Para {2, 3, 4, 7, 7, 9}: media = 32/6 ≈ 5,33; mediana = (4+7)/2 = 5,5 (promedio del 3.º y 4.º valor); moda = 7 (aparece dos veces); rango = 9−2 = 7.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cuándo debo usar media, mediana o moda?",
+        answer: "Usa la media cuando los datos están distribuidos de forma simétrica y sin valores atípicos importantes: aprovecha todos los datos y es la más precisa. Usa la mediana cuando los datos están sesgados o tienen atípicos (como ingresos, precios de vivienda o edades), porque representa mejor el valor 'típico'. Usa la moda para datos categóricos (como el color de producto más popular) o cuando quieres el valor más frecuente. Reportar las tres suele dar la imagen más completa.",
+      },
+      {
+        question: "¿Qué pasa si mi conjunto no tiene moda o tiene varias?",
+        answer: "Un conjunto no tiene moda si cada valor aparece exactamente una vez, sin que ninguno sea más frecuente. Tiene dos modas (bimodal) si dos valores empatan como los más frecuentes, y es multimodal si empatan más de dos. Nuestra calculadora reporta todas las modas. No tener moda simplemente significa que no hay un único valor más común, algo habitual en datos numéricos continuos donde la repetición es poco probable.",
+      },
+      {
+        question: "¿Cómo afecta un valor atípico a la media frente a la mediana?",
+        answer: "Agregar un valor atípico extremo puede desplazar drásticamente la media pero apenas afecta a la mediana. Por ejemplo, en {2, 3, 4, 5, 6} la media es 4. Agregar 1000 la convierte en {2, 3, 4, 5, 6, 1000} con una media de 170, muy lejos de donde están la mayoría de los datos. Pero la mediana solo pasa de 4 a 4,5. Esta resistencia hace que la mediana sea preferida cuando se esperan atípicos.",
+      },
+      {
+        question: "¿Qué relación hay entre media, mediana y sesgo?",
+        answer: "La relación entre la media y la mediana revela la forma de una distribución. Si la media es mayor que la mediana, la distribución está sesgada a la derecha (sesgo positivo) con una cola larga hacia valores altos, común en los ingresos. Si la media es menor que la mediana, está sesgada a la izquierda. Si media ≈ mediana, la distribución es aproximadamente simétrica. En una campana perfectamente simétrica, media, mediana y moda coinciden.",
+      },
+      {
+        question: "¿Pueden la media, la mediana y la moda ser números distintos?",
+        answer: "Sí, y es común en datos reales. Por ejemplo, en el conjunto {1, 1, 2, 3, 10}: la moda es 1 (aparece dos veces), la mediana es 2 (valor central) y la media es 17/5 = 3,4. El valor atípico grande (10) eleva mucho la media, mientras que el valor pequeño repetido (1) ancla la moda en el extremo bajo. Por eso los estadísticos reportan varias medidas de tendencia central.",
+      },
+    ],
     fields: [
       {
         id: "numbers",
@@ -149,6 +219,41 @@ export const mathWave2Calculators: CalculatorDefinition[] = [
     metaDescription: "Calculate the z-score of any value to find how many standard deviations it is from the mean. Includes percentile interpretation. Free online stats tool.",
     primaryKeyword: "z-score calculator",
     secondaryKeywords: ["standard score calculator", "z score formula", "percentile calculator", "normal distribution calculator"],
+    slugEs: "calculadora-de-puntuacion-z",
+    titleEs: "Calculadora de Puntuación Z",
+    shortDescriptionEs: "Calcula la puntuación z (puntuación estándar) para ver a cuántas desviaciones estándar está un valor de la media.",
+    seoTitleEs: "Calculadora de Puntuación Z — Puntuación Estándar y Percentil",
+    metaDescriptionEs: "Calcula la puntuación z de cualquier valor para saber a cuántas desviaciones estándar está de la media. Incluye interpretación de percentil. Herramienta estadística gratis.",
+    primaryKeywordEs: "calculadora de puntuación z",
+    secondaryKeywordsEs: ["calculadora de puntuación estándar", "fórmula de puntuación z", "calculadora de percentil", "calculadora de distribución normal"],
+    formulaExplanationEs: "Restar la media μ al valor x desplaza el centro de los datos a cero, así que el resultado indica la distancia bruta por encima o por debajo del promedio. Dividir entre la desviación estándar σ convierte esa distancia en unidades de desviación estándar, lo que permite comparar valores de conjuntos distintos en una escala común. Una puntuación z positiva está por encima de la media, una negativa por debajo, y cero coincide exactamente con la media.",
+    explanationEs: "La puntuación z, también llamada puntuación estándar, es una herramienta fundamental en estadística para comparar valores de distribuciones diferentes o entender dónde cae un valor respecto a un grupo.\n\nUna puntuación z indica exactamente a cuántas desviaciones estándar por encima o por debajo de la media está un valor concreto. Una puntuación z de +2 significa que el valor está 2 desviaciones estándar por encima de la media; una de −1,5 significa que está 1,5 desviaciones por debajo.\n\nLas puntuaciones z permiten comparar entre escalas distintas. Por ejemplo, si un estudiante obtuvo 85 en un examen de matemáticas (media 70, DE 10) y 72 en uno de inglés (media 65, DE 5), su puntuación z en matemáticas es +1,5 y en inglés +1,4, así que rindió algo mejor en matemáticas respecto a sus compañeros, aunque los puntajes brutos difieran.\n\nMediante la tabla de la distribución normal estándar (tabla Z), las puntuaciones z también se asignan a rangos de percentil. Una puntuación z de +1,96 corresponde aproximadamente al percentil 97,5. En muchos campos — medicina, educación, finanzas — las puntuaciones z se usan para identificar valores atípicos, normalizar datos y construir pruebas estadísticas. Como el cálculo elimina las unidades originales, coloca cualquier medición en una escala común.",
+    exampleEs: {
+      inputs: { value: "85", mean: "70", stdDev: "10" },
+      explanation: "Una calificación de 85 con una media de clase de 70 y una desviación estándar de 10 da z = (85 − 70) / 10 = 1,5. Esto significa que la calificación está 1,5 desviaciones estándar por encima del promedio, ubicándola aproximadamente en el percentil 93.",
+    },
+    faqsEs: [
+      {
+        question: "¿Qué es una buena o mala puntuación z?",
+        answer: "No existe una puntuación z 'buena' o 'mala' universal: depende del contexto. En educación, una puntuación z positiva alta significa estar por encima del promedio, lo que suele ser deseable. En control de calidad, valores muy alejados de 0 pueden indicar defectos. En pruebas médicas, valores lejos de 0 suelen señalar resultados anormales. En general, las puntuaciones z entre −2 y +2 incluyen cerca del 95% de los valores de una distribución normal, así que más allá de ±2 se considera inusual.",
+      },
+      {
+        question: "¿Cómo convierto una puntuación z en percentil?",
+        answer: "Las puntuaciones z se asignan a percentiles mediante la distribución normal estándar. Una puntuación z de 0 está en el percentil 50 (exactamente el promedio). Una de +1 está aproximadamente en el percentil 84. Una de +2 en cerca del percentil 97,7. Una de −1 en aproximadamente el percentil 16. Para conversiones precisas se usa una tabla de la distribución normal estándar (tabla Z) o una calculadora estadística. El patrón general: mayor puntuación z, mayor percentil.",
+      },
+      {
+        question: "¿Qué significa una puntuación z negativa?",
+        answer: "Una puntuación z negativa significa que el valor está por debajo de la media. Por ejemplo, una puntuación z de −1,5 indica que el valor está 1,5 desviaciones estándar por debajo del promedio. Que esto sea preocupante depende del contexto: una puntuación z de −2 en temperatura corporal podría indicar hipotermia, mientras que una de −0,5 en un examen solo significa ligeramente por debajo del promedio. La magnitud indica la distancia; el signo indica la dirección.",
+      },
+      {
+        question: "¿Se pueden usar las puntuaciones z con cualquier distribución?",
+        answer: "Las puntuaciones z se pueden calcular para cualquier dato numérico, pero sus interpretaciones de percentil solo son precisas cuando los datos siguen una distribución normal (campana). Para distribuciones muy sesgadas o con varios picos, una puntuación z de +2 puede no corresponder al percentil 97,7. En esos casos, las puntuaciones z siguen midiendo la distancia a la media en unidades de desviación estándar, útil para comparar y detectar atípicos, pero interpreta los percentiles con cautela.",
+      },
+      {
+        question: "¿Cómo se usan las puntuaciones z en la vida real?",
+        answer: "Las puntuaciones z se usan en muchos campos. En medicina, las puntuaciones z de densidad ósea comparan a un paciente con pares de su edad, y valores por debajo de −2 indican preocupación clínica. En finanzas, la puntuación Z de Altman ayuda a predecir el riesgo de quiebra. En educación, muchas pruebas estandarizadas se reportan como puntuaciones z. En fabricación, miden la capacidad del proceso. En aprendizaje automático, la normalización por puntuación z escala las variables a media 0 y desviación 1.",
+      },
+    ],
     fields: [
       {
         id: "value",
@@ -222,6 +327,41 @@ export const mathWave2Calculators: CalculatorDefinition[] = [
     metaDescription: "Calculate combinations nCr — the number of ways to choose r items from n without regard to order. Free online calculator with formula and examples.",
     primaryKeyword: "combinations calculator",
     secondaryKeywords: ["nCr calculator", "combinatorics calculator", "choose function", "binomial coefficient"],
+    slugEs: "calculadora-de-combinaciones",
+    titleEs: "Calculadora de Combinaciones (nCr)",
+    shortDescriptionEs: "Calcula el número de formas de elegir r elementos de un conjunto de n, donde el orden no importa.",
+    seoTitleEs: "Calculadora de Combinaciones (nCr) — Herramienta de Combinatoria Gratis",
+    metaDescriptionEs: "Calcula combinaciones nCr — el número de formas de elegir r elementos de n sin importar el orden. Calculadora gratis con fórmula y ejemplos.",
+    primaryKeywordEs: "calculadora de combinaciones",
+    secondaryKeywordsEs: ["calculadora nCr", "calculadora de combinatoria", "función combinatoria", "coeficiente binomial"],
+    formulaExplanationEs: "El n! del numerador cuenta todas las ordenaciones posibles de los elementos. Como una combinación ignora el orden, se divide entre r! para borrar las distintas ordenaciones de los r elementos elegidos, y entre (n−r)! para borrar las ordenaciones de los que quedan fuera. Lo que resta es el número de grupos distintos. Las permutaciones omiten el paso de r!, ya que allí el orden sí importa, por eso siempre superan a las combinaciones.",
+    explanationEs: "Las combinaciones responden a la pregunta: '¿De cuántas formas puedo elegir r elementos de un grupo de n si el orden en que los elijo no importa?' Se escribe como C(n, r), nCr o el coeficiente binomial (n sobre r).\n\nLa distinción clave está entre combinaciones y permutaciones. Si eliges 3 personas de un grupo de 10 para un comité (donde no importa quién es primero, segundo o tercero), usa combinaciones: C(10, 3) = 120. Pero si asignas a 3 personas los cargos de Presidente, Vicepresidente y Tesorero (donde el orden importa), usa permutaciones: P(10, 3) = 720.\n\nLas combinaciones aparecen por todas partes en probabilidad, estadística y la vida cotidiana. Las probabilidades de lotería se calculan con combinaciones (elegir 6 números de 49). En genética, cuentan las combinaciones de genes posibles. En los juegos de cartas, determinan el número de manos posibles.\n\nLa fórmula usa factoriales (n! = n × (n−1) × (n−2) × ... × 1). Para valores grandes, los números crecen muy rápido — C(50, 25) supera los 126 billones, por eso las loterías son tan difíciles de ganar. Como se ignora el orden, un recuento de combinaciones siempre resulta menor que el recuento de permutaciones correspondiente, y esa diferencia se amplía a medida que r crece.",
+    exampleEs: {
+      inputs: { n: "10", r: "3" },
+      explanation: "Elegir 3 jugadores de una plantilla de 10 para un minijuego: C(10, 3) = 10! / (3! × 7!) = (10 × 9 × 8) / (3 × 2 × 1) = 720 / 6 = 120 formas.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cuál es la diferencia entre combinaciones y permutaciones?",
+        answer: "La diferencia clave es si el orden importa. Las combinaciones se usan cuando lo que cuenta es la selección en sí, sin importar el orden de los elementos. Las permutaciones se usan cuando el orden o la disposición de los elementos seleccionados importa. Por ejemplo, elegir 3 sabores de 10 para un plato de muestra es una combinación (el plato es el mismo sin importar el orden). Ordenar esos 3 sabores del favorito al menos favorito es una permutación. Las permutaciones siempre igualan o superan a las combinaciones.",
+      },
+      {
+        question: "¿Cuánto valen C(n, 0) y C(n, n)?",
+        answer: "C(n, 0) siempre es 1: hay exactamente una forma de no elegir nada de cualquier conjunto. Del mismo modo, C(n, n) siempre es 1: hay exactamente una forma de elegirlo todo. Estos son casos límite importantes en combinatoria. C(n, 1) = n, porque hay n formas de elegir un solo elemento de n. Estos casos base son fundamentales para el Triángulo de Pascal, donde cada número es la suma de los dos que tiene encima.",
+      },
+      {
+        question: "¿Cómo se relacionan las combinaciones con el Triángulo de Pascal?",
+        answer: "El Triángulo de Pascal es una representación directa de las combinaciones. Cada entrada en la fila n, posición r, es igual a C(n, r). Por ejemplo, la fila 4 es: 1, 4, 6, 4, 1, que son C(4,0)=1, C(4,1)=4, C(4,2)=6, C(4,3)=4, C(4,4)=1. El triángulo revela la simetría de las combinaciones: C(n, r) = C(n, n−r). Esta simetría tiene sentido: elegir r elementos para incluir equivale a elegir n−r para excluir.",
+      },
+      {
+        question: "¿Qué es el coeficiente binomial y cómo se relaciona con las combinaciones?",
+        answer: "El coeficiente binomial es otro nombre para C(n, r), escrito como (n sobre r). Se llama 'binomial' porque aparece en el Teorema del Binomio: (a + b)^n se expande en una suma de términos, cada uno con un coeficiente binomial. Por ejemplo, (a + b)^3 = C(3,0)a³ + C(3,1)a²b + C(3,2)ab² + C(3,3)b³ = a³ + 3a²b + 3ab² + b³. Estos coeficientes (1, 3, 3, 1) coinciden con la tercera fila del Triángulo de Pascal.",
+      },
+      {
+        question: "¿Cómo calculo combinaciones cuando n y r son muy grandes?",
+        answer: "Los cálculos con factoriales estándar se vuelven poco prácticos con valores grandes porque los números crecen muy rápido (100! tiene 158 dígitos). Los enfoques prácticos incluyen: cancelar factores comunes antes de multiplicar (C(100, 3) = (100 × 99 × 98) / (3 × 2 × 1) en lugar de calcular 100! completo), usar logaritmos de factoriales o emplear bibliotecas de enteros grandes. Muchos programas estadísticos manejan combinaciones grandes con precisión. Para valores aproximados, la aproximación de Stirling estima factoriales.",
+      },
+    ],
     fields: [
       {
         id: "n",
@@ -289,6 +429,41 @@ export const mathWave2Calculators: CalculatorDefinition[] = [
     metaDescription: "Calculate probability as a fraction, decimal, and percentage. Enter favorable outcomes and total outcomes for instant results. Free online probability calculator.",
     primaryKeyword: "probability calculator",
     secondaryKeywords: ["chance calculator", "odds calculator", "likelihood calculator", "event probability"],
+    slugEs: "calculadora-de-probabilidad",
+    titleEs: "Calculadora de Probabilidad",
+    shortDescriptionEs: "Calcula la probabilidad de que ocurra un evento dados los resultados favorables y totales.",
+    seoTitleEs: "Calculadora de Probabilidad — Fracción, Decimal y Porcentaje",
+    metaDescriptionEs: "Calcula la probabilidad como fracción, decimal y porcentaje. Introduce los resultados favorables y totales para obtener resultados instantáneos. Calculadora de probabilidad gratis.",
+    primaryKeywordEs: "calculadora de probabilidad",
+    secondaryKeywordsEs: ["calculadora de posibilidades", "calculadora de probabilidades", "calculadora de verosimilitud", "probabilidad de un evento"],
+    formulaExplanationEs: "La probabilidad clásica supone que cada resultado es igualmente probable, así que la posibilidad de un evento es simplemente la proporción de resultados que se consideran favorables. Dividir los resultados favorables entre el total obliga a que la respuesta esté entre 0 y 1, porque nunca puede haber más casos favorables que totales. El complemento, 1 − P(E), funciona porque cada intento produce el evento o no, de modo que ambas posibilidades deben sumar uno.",
+    explanationEs: "La probabilidad cuantifica la posibilidad de que ocurra un evento específico. Va de 0 (el evento nunca sucederá) a 1 (el evento sucederá con seguridad), y a menudo se expresa como porcentaje (de 0% a 100%).\n\nLa definición clásica de probabilidad — llamada de 'resultados igualmente probables' — se aplica cuando cada resultado posible tiene la misma posibilidad de ocurrir. Por ejemplo, lanzar un dado justo tiene 6 resultados igualmente probables. La probabilidad de sacar un 4 es 1/6 ≈ 0,167 o 16,7%.\n\nLa probabilidad sustenta prácticamente todos los campos: los actuarios la usan para fijar primas de seguros, los médicos para interpretar la precisión de las pruebas diagnósticas, los apostadores para evaluar apuestas, los meteorólogos para expresar pronósticos y los analistas financieros para modelar el riesgo de mercado.\n\nMás allá de la fórmula básica, cálculos más complejos involucran eventos independientes (P(A y B) = P(A) × P(B)), eventos mutuamente excluyentes (P(A o B) = P(A) + P(B)) y probabilidad condicional (P(A|B) = P(A y B) / P(B)). El caso fundamental de un solo evento mostrado aquí es el punto de partida y el primer paso antes de abordar problemas compuestos o condicionales.",
+    exampleEs: {
+      inputs: { favorable: "3", total: "52" },
+      explanation: "Sacar un Rey de una baraja estándar de 52 cartas: hay 4 Reyes, pero si queremos un palo específico, digamos el Rey de Corazones: probabilidad = 1/52 ≈ 0,0192 o 1,92%. Sacar cualquier Rey: 4 favorables / 52 totales = 0,0769 o 7,69%.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cuál es la diferencia entre probabilidad y cuotas (odds)?",
+        answer: "La probabilidad y las cuotas están relacionadas pero son expresiones distintas de la posibilidad. Probabilidad = favorables / totales, de 0 a 1. Las cuotas = favorables / desfavorables (no el total). Por ejemplo, con 3 resultados favorables de 10 totales, la probabilidad es 3/10 = 0,3, pero las cuotas son 3/7 ≈ 0,429 (o '3 a 7'). Las apuestas deportivas usan cuotas; el trabajo científico y estadístico suele usar probabilidad.",
+      },
+      {
+        question: "¿Qué significa una probabilidad de 0 o 1?",
+        answer: "Una probabilidad de exactamente 0 significa que el evento es imposible: no puede ocurrir bajo ninguna circunstancia. Por ejemplo, sacar un 7 en un dado estándar de 6 caras tiene probabilidad 0. Una probabilidad de exactamente 1 significa que el evento es seguro: ocurrirá con certeza. Por ejemplo, sacar un número entre 1 y 6 en un dado estándar tiene probabilidad 1. En la práctica, pocos eventos reales tienen probabilidad exactamente 0 o 1; la mayoría está en el medio.",
+      },
+      {
+        question: "¿Cómo calculo la probabilidad de varios eventos?",
+        answer: "Para eventos independientes (uno no afecta al otro), usa la multiplicación: P(A y B) = P(A) × P(B). Por ejemplo, sacar dos caras seguidas: (1/2) × (1/2) = 1/4. Para eventos mutuamente excluyentes (no pueden ocurrir a la vez), usa la suma: P(A o B) = P(A) + P(B). Para eventos no excluyentes, usa: P(A o B) = P(A) + P(B) − P(A y B). La regla del complemento P(no A) = 1 − P(A) es útil para calcular probabilidades de 'al menos uno'.",
+      },
+      {
+        question: "¿Qué es la probabilidad condicional?",
+        answer: "La probabilidad condicional es la probabilidad de un evento dado que otro ya ocurrió, escrita P(A|B) = 'probabilidad de A dado B'. Se calcula como P(A|B) = P(A y B) / P(B). Por ejemplo, la probabilidad de sacar un Rey dado que ya sacaste una carta roja: P(Rey|Roja) = P(Rey y Roja) / P(Roja) = (2/52) / (26/52) = 2/26 ≈ 7,7%. La probabilidad condicional es la base del Teorema de Bayes, usado en diagnóstico médico, filtros de spam e IA.",
+      },
+      {
+        question: "¿Por qué la probabilidad no me dice lo que ocurrirá realmente?",
+        answer: "La probabilidad describe la frecuencia a largo plazo y la incertidumbre, no los resultados individuales. Incluso con una probabilidad del 99%, el 1% restante puede ocurrir en cualquier intento. Esto es una característica esencial, no un defecto: refleja la aleatoriedad inherente del universo. La Ley de los Grandes Números garantiza que, al repetir un experimento muchas veces, la frecuencia observada se acerca a la probabilidad teórica. Pero a corto plazo, cualquier resultado es posible sin importar su probabilidad.",
+      },
+    ],
     fields: [
       {
         id: "favorable",
@@ -357,6 +532,41 @@ export const mathWave2Calculators: CalculatorDefinition[] = [
     metaDescription: "Calculate n factorial (n!) instantly. Shows the factorial value and step-by-step formula. Handles large numbers. Free online math calculator.",
     primaryKeyword: "factorial calculator",
     secondaryKeywords: ["n factorial", "n! calculator", "combinatorics factorial", "permutations calculator"],
+    slugEs: "calculadora-de-factorial",
+    titleEs: "Calculadora de Factorial (n!)",
+    shortDescriptionEs: "Calcula el factorial de cualquier número entero no negativo. Muestra resultados también para valores grandes.",
+    seoTitleEs: "Calculadora de Factorial — Resultados Instantáneos de n! en Línea",
+    metaDescriptionEs: "Calcula n factorial (n!) al instante. Muestra el valor del factorial y la fórmula paso a paso. Maneja números grandes. Calculadora matemática gratis.",
+    primaryKeywordEs: "calculadora de factorial",
+    secondaryKeywordsEs: ["n factorial", "calculadora n!", "factorial en combinatoria", "calculadora de permutaciones"],
+    formulaExplanationEs: "Un factorial cuenta de cuántas formas se pueden ordenar n elementos distintos: la primera posición tiene n opciones, la siguiente n−1, y así hasta la última, de modo que las opciones se multiplican entre sí. Por eso la definición es un producto que va de n hasta 1. Definir 0! = 1 mantiene coherente la regla del producto vacío y permite que las fórmulas de combinaciones y permutaciones sigan siendo correctas en sus casos límite.",
+    explanationEs: "La función factorial, denotada n!, multiplica un entero positivo n por todos los enteros positivos menores que él hasta 1. Por ejemplo, 5! = 5 × 4 × 3 × 2 × 1 = 120.\n\nPor convención matemática, 0! = 1. Esto puede parecer contradictorio, pero se deriva de la regla del producto vacío (un producto sin números equivale al elemento identidad de la multiplicación, 1) y garantiza que las fórmulas de combinaciones y permutaciones funcionen correctamente en los casos límite.\n\nLos factoriales crecen asombrosamente rápido — 10! ya es 3.628.800, y 20! supera los 2,4 trillones. Este crecimiento explosivo es responsable directo de lo difícil que resulta ganar loterías o descifrar claves criptográficas por fuerza bruta. El número 52! (barajadas posibles de una baraja estándar) es aproximadamente 8 × 10^67, un número mayor que la cantidad de átomos del universo observable, lo que significa que casi con seguridad cada barajada de la historia ha sido única.\n\nLos factoriales aparecen por todas partes en matemáticas: en combinatoria (contar arreglos), en las series de Taylor (sen x = x − x³/3! + x⁵/5! − ...), en la función Gamma (que extiende los factoriales a los no enteros) y en estadística. Esta mezcla de una definición de una línea y un crecimiento explosivo hace del factorial una de las primeras grandes ideas que los estudiantes encuentran en combinatoria.",
+    exampleEs: {
+      inputs: { n: "8" },
+      explanation: "8! = 8 × 7 × 6 × 5 × 4 × 3 × 2 × 1 = 40.320. Este es también el número de formas de ordenar 8 libros en un estante, cada vez en un orden diferente.",
+    },
+    faqsEs: [
+      {
+        question: "¿Por qué 0! es igual a 1?",
+        answer: "El factorial de cero es 1 por definición, y hay varias formas de entender por qué tiene sentido. Matemáticamente, sigue la convención del 'producto vacío': un producto sin factores equivale a 1 (igual que una suma sin términos equivale a 0). En la práctica, garantiza que la fórmula de combinaciones C(n, 0) = 1 funcione correctamente: hay exactamente una forma de no elegir nada. También satisface la relación de recurrencia n! = n × (n−1)!: con n=1 da 1! = 1 × 0!, así que 0! debe ser 1.",
+      },
+      {
+        question: "¿Cuál es el factorial más grande que una calculadora puede calcular?",
+        answer: "Depende de la precisión numérica de la calculadora. Los números de punto flotante de doble precisión estándar (usados en la mayoría de la informática, incluido JavaScript) pueden representar factoriales hasta 170! (≈7,26 × 10^306) antes de superar el valor máximo representable y convertirse en 'Infinity'. Para resultados enteros exactos de factoriales mayores se necesita aritmética de enteros grandes. Los enteros de Python manejan factoriales arbitrariamente grandes. 171! ≈ 1,24 × 10^309, que supera el máximo de doble precisión.",
+      },
+      {
+        question: "¿Cómo se usan los factoriales en combinaciones y permutaciones?",
+        answer: "Los factoriales son la base de contar arreglos. Permutaciones (arreglos ordenados) de r elementos de n: P(n, r) = n! / (n−r)!. Combinaciones (selecciones sin orden) de r elementos de n: C(n, r) = n! / (r! × (n−r)!). Por ejemplo, ordenar 3 libros de un estante de 5 en distintos órdenes: P(5,3) = 5!/2! = 60. Elegir 3 libros cualesquiera de 5 sin importar el orden: C(5,3) = 5!/(3!×2!) = 10. También aparecen en distribuciones de probabilidad como la de Poisson.",
+      },
+      {
+        question: "¿Qué es la función Gamma y cómo se relaciona con el factorial?",
+        answer: "La función Gamma Γ(n) es una extensión de la función factorial a números no enteros y complejos. Para enteros positivos, Γ(n) = (n−1)!. Así, Γ(5) = 4! = 24. La función Gamma se define mediante una fórmula integral que funciona para todos los números reales positivos y complejos con parte real positiva. Esto permite calcular 'factoriales' de no enteros: por ejemplo, Γ(1,5) = 0,5! × 2 ≈ 0,886. La función Gamma aparece en estadística, física e ingeniería.",
+      },
+      {
+        question: "¿Por qué los factoriales crecen tan increíblemente rápido?",
+        answer: "Los factoriales crecen de forma superexponencial porque cada factor adicional es mayor que el anterior. El crecimiento exponencial (como 2^n) multiplica por el mismo factor cada vez. El crecimiento factorial multiplica por un factor cada vez mayor. Según la aproximación de Stirling, n! ≈ √(2πn) × (n/e)^n, que crece mucho más rápido que cualquier función exponencial. Por eso el número de arreglos posibles de conjuntos grandes es astronómicamente grande.",
+      },
+    ],
     fields: [
       {
         id: "n",
@@ -417,6 +627,41 @@ export const mathWave2Calculators: CalculatorDefinition[] = [
     metaDescription: "Calculate any base raised to any power. Handles negative exponents, fractional powers, and large numbers. Free online exponent calculator.",
     primaryKeyword: "exponent calculator",
     secondaryKeywords: ["power calculator", "base exponent calculator", "b to the power of n", "scientific notation calculator"],
+    slugEs: "calculadora-de-exponentes",
+    titleEs: "Calculadora de Exponentes",
+    shortDescriptionEs: "Calcula una base elevada a una potencia (bⁿ). Maneja cualquier exponente real, incluidas fracciones y negativos.",
+    seoTitleEs: "Calculadora de Exponentes — Potencia bⁿ Gratis en Línea",
+    metaDescriptionEs: "Calcula cualquier base elevada a cualquier potencia. Maneja exponentes negativos, potencias fraccionarias y números grandes. Calculadora de exponentes gratis.",
+    primaryKeywordEs: "calculadora de exponentes",
+    secondaryKeywordsEs: ["calculadora de potencias", "calculadora de base y exponente", "b elevado a la n", "calculadora de notación científica"],
+    formulaExplanationEs: "Un exponente registra la multiplicación repetida, así que bⁿ significa simplemente usar b como factor n veces. Las reglas se derivan de ese significado: sumar exponentes combina factores repetidos, y un exponente cero deja un producto vacío de 1. Un exponente negativo invierte el resultado porque deshace la multiplicación, dando 1/bⁿ. Un exponente fraccionario pregunta qué número, multiplicado por sí mismo tantas veces como indica el denominador, reconstruye la base: eso es una raíz.",
+    explanationEs: "La exponenciación es una operación matemática en la que un número base se multiplica por sí mismo un número determinado de veces. Es la tercera operación central construida sobre la repetición: la suma repite el conteo, la multiplicación repite la suma y un exponente repite la multiplicación. La expresión b^n (leída 'b elevado a la n') significa: multiplicar b por sí mismo n veces.\n\nLos exponentes siguen reglas importantes que facilitan los cálculos: b^m × b^n = b^(m+n), (b^m)^n = b^(m×n), b^0 = 1 (para cualquier b distinto de cero), b^(-n) = 1/b^n y b^(1/n) = la raíz n-ésima de b.\n\nLos exponentes fraccionarios son especialmente potentes: 4^(0,5) = √4 = 2, 8^(1/3) = ∛8 = 2, 32^(0,2) = ⁵√32 = 2. Esto conecta la exponenciación con las raíces.\n\nLos exponentes también domestican números muy grandes y muy pequeños mediante la notación científica, donde un valor se escribe como un número por una potencia de 10. Escribir 300.000.000 como 3 × 10^8, o 0,0000004 como 4 × 10^(−7), mantiene las cifras compactas y legibles en ciencia e ingeniería.\n\nEl crecimiento exponencial aparece en la naturaleza y la tecnología: interés compuesto, crecimiento poblacional, desintegración radiactiva y la Ley de Moore (la duplicación de transistores aproximadamente cada 18 meses). Dominar los exponentes es esencial para la ciencia, la ingeniería, las finanzas y la informática.",
+    exampleEs: {
+      inputs: { base: "2", exponent: "10" },
+      explanation: "2^10 = 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 = 1.024. Por eso 1 kilobyte = 2^10 = 1.024 bytes en la informática binaria.",
+    },
+    faqsEs: [
+      {
+        question: "¿Cuánto es cualquier número elevado a la potencia 0?",
+        answer: "Cualquier número distinto de cero elevado a la potencia 0 es igual a 1. Esto se deriva de la regla b^n / b^n = b^(n−n) = b^0, y cualquier número dividido entre sí mismo es 1. Así, b^0 = 1 para cualquier b ≠ 0. La expresión 0^0 es matemáticamente indeterminada (lleva a valores contradictorios según cómo se aborde), pero en muchos contextos combinatorios se define como 1 por conveniencia. Esta regla es esencial para los polinomios y el teorema del binomio.",
+      },
+      {
+        question: "¿Cómo funcionan los exponentes negativos?",
+        answer: "Un exponente negativo significa tomar el recíproco del resultado del exponente positivo: b^(-n) = 1/b^n. Por ejemplo, 2^(-3) = 1/2^3 = 1/8 = 0,125. Los exponentes negativos no son números negativos: representan fracciones menores que 1 (para bases mayores que 1). Esta regla es fundamental en la notación científica: 10^(-3) = 0,001 (una milésima). Los exponentes negativos también aparecen en física para unidades como m/s² = m × s^(-2).",
+      },
+      {
+        question: "¿Qué son los exponentes fraccionarios?",
+        answer: "Los exponentes fraccionarios representan raíces. La regla es b^(1/n) = la raíz n-ésima de b, y b^(m/n) = (raíz n-ésima de b)^m = raíz n-ésima de b^m. Por ejemplo: 4^(1/2) = √4 = 2; 8^(1/3) = ∛8 = 2; 16^(3/4) = (raíz cuarta de 16)^3 = 2^3 = 8. Esto conecta la operación de exponente con la extracción de raíces y explica por qué las raíces cuadradas y cúbicas son casos especiales de exponenciación con potencias fraccionarias.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre crecimiento exponencial y crecimiento lineal?",
+        answer: "El crecimiento lineal suma la misma cantidad cada vez (por ejemplo, ahorrar 100 $ al mes: 100, 200, 300...). El crecimiento exponencial multiplica por el mismo factor cada vez (por ejemplo, 10% de interés compuesto: 1.000, 1.100, 1.210, 1.331...). A corto plazo pueden parecer similares. Con el tiempo, el crecimiento exponencial se vuelve enormemente mayor: por eso el interés compuesto es tan poderoso y las enfermedades virales se propagan tan rápido. Cualquier exponencial acaba superando a cualquier polinomio.",
+      },
+      {
+        question: "¿Qué ocurre al elevar un número negativo a un exponente fraccionario?",
+        answer: "Elevar un número negativo a un exponente fraccionario con denominador par produce un número complejo (imaginario) en las matemáticas estándar, ya que habría que tomar una raíz par de un número negativo. Por ejemplo, (-4)^(1/2) = √(-4) = 2i (donde i es la unidad imaginaria). Para denominadores impares, el resultado es real: (-8)^(1/3) = ∛(-8) = -2. La mayoría de las calculadoras, incluida la nuestra, devuelven NaN en los casos que darían resultados complejos.",
+      },
+    ],
     fields: [
       {
         id: "base",
@@ -482,6 +727,41 @@ export const mathWave2Calculators: CalculatorDefinition[] = [
     metaDescription: "Calculate logarithms to any base — common log (base 10), natural log (base e), binary log (base 2), or custom base. Free online logarithm calculator.",
     primaryKeyword: "logarithm calculator",
     secondaryKeywords: ["log calculator", "ln calculator", "natural log calculator", "log base 10 calculator", "log base 2"],
+    slugEs: "calculadora-de-logaritmos",
+    titleEs: "Calculadora de Logaritmos",
+    shortDescriptionEs: "Calcula el logaritmo de cualquier número en cualquier base, incluidos el logaritmo natural (ln) y el logaritmo en base 10.",
+    seoTitleEs: "Calculadora de Logaritmos — log, ln, log₂ Gratis en Línea",
+    metaDescriptionEs: "Calcula logaritmos en cualquier base — logaritmo común (base 10), natural (base e), binario (base 2) o base personalizada. Calculadora de logaritmos gratis.",
+    primaryKeywordEs: "calculadora de logaritmos",
+    secondaryKeywordsEs: ["calculadora de log", "calculadora de ln", "calculadora de logaritmo natural", "calculadora de log base 10", "log base 2"],
+    formulaExplanationEs: "Un logaritmo invierte la exponenciación, así que log_b(x) es el exponente que convierte la base b en x; por eso b elevado a log_b(x) devuelve x. Las calculadoras rara vez guardan una tabla para cada base, así que la fórmula de cambio de base reescribe el logaritmo como un cociente de dos logaritmos en una base que sí conocen, normalmente el logaritmo natural o el de base 10. Dividir ln(x) entre ln(b) cancela la base compartida y deja la respuesta.",
+    explanationEs: "El logaritmo es la operación inversa de la exponenciación. Si 10^3 = 1000, entonces log₁₀(1000) = 3. Si 2^8 = 256, entonces log₂(256) = 8. Los logaritmos responden a la pregunta: '¿A qué exponente debo elevar la base b para obtener x?'\n\nTres logaritmos son especialmente comunes. El logaritmo en base 10 (logaritmo común, log₁₀ o simplemente 'log') se usa en la escala de pH, la escala de Richter para terremotos y los decibelios del sonido. El logaritmo natural (ln, base e donde e ≈ 2,718) aparece en el cálculo, la física y las matemáticas del crecimiento y la desintegración — interés, población y desintegración radiactiva involucran logaritmos naturales. El logaritmo en base 2 (log₂) es fundamental en la teoría de la información y la informática — sistemas binarios, compresión de datos y complejidad de algoritmos (O(log n)) usan log₂.\n\nLa fórmula de cambio de base (log_b(x) = ln(x)/ln(b)) permite calcular cualquier logaritmo usando el logaritmo natural o el común, que es como lo implementan calculadoras y computadoras.\n\nAntes de las calculadoras electrónicas, los logaritmos eran la forma más rápida de multiplicar números grandes a mano: las tablas de logaritmos y la regla de cálculo convertían la multiplicación en una simple suma. Esa misma relación inversa con los exponentes hace del logaritmo la herramienta natural para resolver ecuaciones donde la incógnita está en el exponente, desde la datación por carbono hasta problemas de interés compuesto.",
+    exampleEs: {
+      inputs: { value: "1000", base: "10" },
+      explanation: "log₁₀(1000) = 3 porque 10³ = 1.000. El logaritmo común de 1.000 es 3. Por eso la escala de pH va de 0 a 14, y cada paso representa una diferencia de 10× en acidez.",
+    },
+    faqsEs: [
+      {
+        question: "¿Qué es el logaritmo natural (ln) y por qué es especial?",
+        answer: "El logaritmo natural usa la constante matemática e (≈ 2,71828) como base. Lo que hace especial a e es que es el único número donde la función e^x tiene una derivada igual a sí misma: modela perfectamente el crecimiento y la desintegración continuos. El logaritmo natural aparece en el interés compuesto (capitalizado de forma continua), en distribuciones de probabilidad (normal, Poisson), en la entropía de la teoría de la información y en innumerables ecuaciones físicas. Es la elección 'natural' matemática y científica.",
+      },
+      {
+        question: "¿Por qué no existe el logaritmo de un número negativo (en los reales)?",
+        answer: "Ningún exponente real puede hacer que una base positiva produzca un resultado negativo. Como b^x siempre es positivo para b positivo (por ejemplo, 10^x siempre es positivo), no existe un x real tal que b^x = número negativo. Por tanto, el logaritmo de un número negativo es indefinido en los números reales. En las matemáticas de números complejos sí pueden definirse, pero para cálculos cotidianos log(x) requiere x > 0. Intentar log(0) también es indefinido: requeriría un exponente de −∞.",
+      },
+      {
+        question: "¿Cómo funcionan las escalas logarítmicas en el mundo real?",
+        answer: "Las escalas logarítmicas comprimen rangos grandes en números manejables. La escala de Richter: cada paso es 10× más energía — un terremoto de magnitud 7 es 10× más fuerte que uno de magnitud 6 y 1.000× más que uno de magnitud 4. Los decibelios de sonido: cada aumento de 10 dB es 10× más intensidad. El pH: cada unidad representa un cambio de 10× en la concentración de iones de hidrógeno; el pH 4 es 100× más ácido que el pH 6. Así se comparan cantidades de muchos órdenes de magnitud.",
+      },
+      {
+        question: "¿Cuáles son las reglas clave de los logaritmos que debo conocer?",
+        answer: "Las cuatro reglas fundamentales de los logaritmos son: Regla del producto — log(a × b) = log(a) + log(b); Regla del cociente — log(a/b) = log(a) − log(b); Regla de la potencia — log(a^n) = n × log(a); Cambio de base — log_b(x) = log_a(x) / log_a(b). Estas reglas fueron históricamente importantes porque convertían la multiplicación en suma (usada en reglas de cálculo y tablas). Hoy son esenciales para resolver ecuaciones exponenciales: si 2^x = 50, entonces x = log₂(50) = log(50)/log(2) ≈ 5,64.",
+      },
+      {
+        question: "¿Para qué se usa el logaritmo en base 2 en la informática?",
+        answer: "El logaritmo en base 2 (log₂) es fundamental en la informática y la teoría de la información. El conteo binario usa la base 2, así que log₂(n) indica cuántos bits se necesitan para representar n estados: log₂(256) = 8 bits (1 byte), log₂(65.536) = 16 bits. La complejidad de los algoritmos a menudo crece como O(log n) — la búsqueda binaria, los árboles binarios equilibrados y los algoritmos de divide y vencerás tienen complejidad log₂. En teoría de la información, log₂ mide la información en bits.",
+      },
+    ],
     fields: [
       {
         id: "value",
@@ -549,6 +829,41 @@ export const mathWave2Calculators: CalculatorDefinition[] = [
     metaDescription: "Calculate the modulo (remainder) of any division. Shows quotient, remainder, and full division result. Essential for programming and number theory.",
     primaryKeyword: "modulo calculator",
     secondaryKeywords: ["remainder calculator", "mod calculator", "modulus calculator", "division remainder"],
+    slugEs: "calculadora-de-modulo",
+    titleEs: "Calculadora de Módulo",
+    shortDescriptionEs: "Calcula el residuo de una operación de división (a mod b) junto con el cociente.",
+    seoTitleEs: "Calculadora de Módulo — Residuo de la División (a mod b)",
+    metaDescriptionEs: "Calcula el módulo (residuo) de cualquier división. Muestra el cociente, el residuo y el resultado completo de la división. Esencial para programación y teoría de números.",
+    primaryKeywordEs: "calculadora de módulo",
+    secondaryKeywordsEs: ["calculadora de residuo", "calculadora de mod", "calculadora de modulo", "residuo de la división"],
+    formulaExplanationEs: "La división divide a en un cociente entero y una parte sobrante. El suelo de a/b indica cuántas veces completas cabe b dentro de a, y multiplicar ese cociente por b y restarlo de a deja exactamente lo que no pudo dividirse de forma exacta: el residuo. Esto garantiza la identidad a = b × cociente + residuo, con el residuo siempre menor en magnitud que el divisor b.",
+    explanationEs: "La operación módulo (a menudo escrita como %, mod o a mod b) devuelve el residuo al dividir un número entre otro. Por ejemplo, 17 mod 5 = 2, porque 17 = 5 × 3 + 2 (el cinco cabe tres veces en 17, con 2 de sobra).\n\nEl módulo es una de las operaciones más fundamentales en programación y teoría de números. En el código, suele ser el operador %. Se usa constantemente en la programación cotidiana: determinar si un número es par (n % 2 == 0), recorrer arreglos de forma circular (índice = i % longitud), aritmética del reloj (horas = (actual + transcurrido) % 12) y ciclos de color en las interfaces.\n\nEn matemáticas, la aritmética modular (trabajar con residuos) es la base de la criptografía. El algoritmo de cifrado RSA, que protege la mayoría de las comunicaciones de internet, se basa por completo en la exponenciación modular. Los últimos dígitos de grandes cálculos exponenciales, determinados por el módulo, crean las funciones unidireccionales que hacen segura la encriptación.\n\nEl módulo también aparece en algoritmos de suma de verificación (validación de números de tarjeta de crédito), funciones hash, generadores de números aleatorios y problemas de programación de tareas. Siempre que un valor deba dar la vuelta dentro de un rango fijo — una hora en un reloj, un día de la semana o una casilla en una tabla hash — la operación módulo suele ser la forma más limpia de expresar ese ciclo en un solo paso.",
+    exampleEs: {
+      inputs: { dividend: "17", divisor: "5" },
+      explanation: "17 ÷ 5 = 3 con residuo 2. Por tanto, 17 mod 5 = 2, y el cociente es 3. Verificación: 5 × 3 + 2 = 15 + 2 = 17 ✓",
+    },
+    faqsEs: [
+      {
+        question: "¿Para qué se usa el módulo en programación?",
+        answer: "El módulo es una de las operaciones más usadas en programación. Usos comunes: comprobar si un número es par o impar (n % 2 == 0 significa par); recorrer índices en estructuras de datos circulares (arreglo[i % longitud] cicla indefinidamente); aritmética del reloj (hora = (hora_actual + horas_a_sumar) % 12); generar patrones repetitivos; implementar tablas hash (hash % tamaño_tabla asigna cualquier hash a un índice válido); y crear ciclos en animaciones (fotograma % total_fotogramas). También es central en algoritmos criptográficos.",
+      },
+      {
+        question: "¿Cómo funciona el módulo con números negativos?",
+        answer: "El módulo con números negativos puede dar resultados diferentes según el lenguaje de programación o la convención matemática. En la mayoría de los contextos matemáticos, el resultado tiene el mismo signo que el divisor (b). En Python: −7 mod 3 = 2. En C/Java/JavaScript, % da el residuo con el signo del dividendo: −7 % 3 = −1. Nuestra calculadora usa la definición matemática basada en el suelo. Para números negativos, ajusta con: si (resultado < 0) resultado += b para obtener el módulo positivo.",
+      },
+      {
+        question: "¿Qué es la aritmética modular?",
+        answer: "La aritmética modular es un sistema de aritmética de enteros donde los números 'dan la vuelta' al alcanzar cierto valor (el módulo). En un reloj de 12 horas, después del 12 viene el 1 (no el 13): eso es mod 12. Los días de la semana ciclan mod 7. La aritmética modular sigue su propia álgebra: puedes sumar, restar y multiplicar números módulo m, y los resultados permanecen entre 0 y m−1. Tiene aplicaciones profundas en criptografía, informática, algoritmos de calendario y álgebra abstracta.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre módulo y residuo?",
+        answer: "Para números positivos, módulo y residuo son lo mismo. La distinción surge con los números negativos. La operación módulo matemática (usada en teoría de números) siempre devuelve un resultado no negativo en [0, b−1]. El residuo de programación (%) suele devolver un resultado con el mismo signo que el dividendo. Por ejemplo: −7 mod 3 = 2 (matemático), pero −7 % 3 = −1 (residuo estilo C). Ambos son útiles; el módulo matemático se prefiere en criptografía y el residuo estilo C es lo que implementan la mayoría de los lenguajes.",
+      },
+      {
+        question: "¿Cómo se usa el módulo en criptografía?",
+        answer: "La aritmética modular es la columna vertebral matemática de la criptografía moderna. El cifrado RSA usa la exponenciación modular: dados primos grandes p y q, su producto n = pq crea una 'trampa' — es fácil calcular m^e mod n (cifrar), pero computacionalmente inviable revertirlo sin la clave privada. El intercambio de claves Diffie-Hellman usa logaritmos discretos en aritmética modular. El cifrado AES usa operaciones en un campo finito. Sin la aritmética modular, la criptografía de clave pública no sería posible.",
+      },
+    ],
     fields: [
       {
         id: "dividend",

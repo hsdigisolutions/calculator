@@ -53,6 +53,38 @@ export const automotiveWave3Calculators: CalculatorDefinition[] = [
     lastReviewed: "2026-08-20",
     formulaSource: "U.S. EPA fuel economy",
     sourceUrl: "https://www.fueleconomy.gov/",
+    slugEs: "calculadora-de-costo-de-combustible",
+    titleEs: "Calculadora de Costo de Combustible",
+    shortDescriptionEs: "Estima el costo de combustible de cualquier viaje.",
+    seoTitleEs: "Calculadora de Costo de Combustible — Costo de Gasolina por Distancia y MPG",
+    metaDescriptionEs: "Calculadora de costo de combustible gratuita. Introduce la distancia del viaje, el MPG de tu vehículo y el precio del combustible para ver el costo total de gasolina, los galones usados y el costo por milla al instante.",
+    primaryKeywordEs: "calculadora de costo de combustible",
+    secondaryKeywordsEs: ["calculadora de costo de gasolina", "costo de combustible de viaje", "calculadora de costo por milla"],
+    formulaExplanationEs: "El viaje primero convierte la distancia en combustible usado dividiendo las millas entre las millas por galón de tu vehículo, ya que el MPG es exactamente cuánto te lleva cada galón. Multiplicar esos galones por el precio por galón da el gasto total. Dividir ese gasto de nuevo entre la distancia produce el costo por milla, una tasa que te permite comparar viajes de cualquier longitud en igualdad de condiciones.",
+    explanationEs: "Saber lo que costará un trayecto antes de girar la llave hace mucho más fácil presupuestar viajes por carretera, desplazamientos y entregas, y esta calculadora de costo de combustible convierte tres números familiares en una cifra clara en dólares. Aportas la distancia que planeas recorrer, la economía de combustible de tu vehículo en millas por galón y el precio actual del combustible, y devuelve el costo total, los galones que quemarás y el costo de cada milla.\n\nEl combustible es uno de los mayores gastos de funcionamiento de tener un coche, pero los conductores rara vez traducen una ruta en un precio real hasta que llegan al surtidor. Ver el número por adelantado cambia las decisiones: si combinar recados, tomar el vehículo más eficiente o reconsiderar un viaje largo de fin de semana cuando los precios suben. Los operadores de flotas y los conductores de plataformas se apoyan en la misma matemática para tarificar trabajos y proteger sus márgenes.\n\nEl cálculo se basa en una cadena simple: la distancia dividida entre el MPG da los galones, los galones por el precio dan el costo, y el costo dividido entre la distancia da una tasa por milla. Como cada paso es transparente, puedes ajustar cualquier entrada y ver al instante cómo responde el total, facilitando probar una gasolinera más barata, un coche más económico o una ruta más corta frente a tu presupuesto.",
+    exampleEs: { inputs: { distance: 300, mpg: 30, fuelPrice: 4 }, explanation: "300 mi ÷ 30 mpg = 10 galones; 10 × $4 = $40 en total, unos $0,1333 por milla." },
+    faqsEs: [
+      {
+        question: "¿Qué información necesito para estimar el costo de combustible?",
+        answer: "Necesitas tres números: la distancia del viaje en millas, la economía de combustible de tu vehículo en millas por galón y el precio actual del combustible por galón. A partir de estos la calculadora determina cuántos galones consume el trayecto y multiplica por el precio para llegar al total. Tu MPG puede venir del ordenador de a bordo, de la pegatina de la ventana o de tu propio seguimiento de millas conducidas por depósito.",
+      },
+      {
+        question: "¿Para qué sirve el costo por milla?",
+        answer: "El costo por milla expresa el gasto de combustible como una tasa independiente de cuánto conduces, así que puedes comparar un trayecto corto en ciudad con un largo recorrido por autopista de forma justa. Es especialmente útil para conductores de plataformas, mensajeros y cualquiera que reembolse kilometraje, porque multiplicar la tasa por cualquier distancia da una estimación de combustible instantánea sin repetir el cálculo completo cada vez.",
+      },
+      {
+        question: "¿Incluye esto el mantenimiento o la depreciación?",
+        answer: "No, esta herramienta estima solo el costo de combustible. El costo total de propiedad también incluye seguro, mantenimiento, neumáticos, depreciación y financiación, que varían mucho según el vehículo y el conductor. Trata la cifra de combustible como una línea importante dentro de un presupuesto mayor. Si necesitas un costo de funcionamiento completo, añade tus propias estimaciones para esas otras categorías encima del número de combustible mostrado aquí.",
+      },
+      {
+        question: "¿Por qué el costo de combustible real difiere a veces de la estimación?",
+        answer: "El MPG real cambia con el estilo de conducción, el tráfico, el terreno, el clima, el peso de la carga y la presión de los neumáticos, así que una calificación de autopista rara vez coincide con la conducción urbana de arranque y parada. Los precios del combustible también cambian entre gasolineras y con el tiempo. Para la estimación más precisa, usa el MPG que observas personalmente en depósitos recientes en lugar de la cifra del fabricante, e introduce el precio que esperas pagar realmente.",
+      },
+      {
+        question: "¿Cómo puedo reducir mi costo de combustible por viaje?",
+        answer: "Mejorar la economía de combustible es la palanca más directa: mantén los neumáticos bien inflados, retira el peso excesivo, conduce con suavidad y evita el ralentí prolongado. Elegir una ruta más corta o menos congestionada reduce la distancia, y repostar en gasolineras más baratas baja el precio de entrada. Combinar varios recados en un solo viaje reparte la eficiencia del motor caliente entre más millas, reduciendo el costo de cada trayecto individual.",
+      },
+    ],
   },
   {
     id: "mpg",
@@ -106,6 +138,38 @@ export const automotiveWave3Calculators: CalculatorDefinition[] = [
     lastReviewed: "2026-08-20",
     formulaSource: "U.S. EPA fuel economy",
     sourceUrl: "https://www.fueleconomy.gov/",
+    slugEs: "calculadora-de-mpg",
+    titleEs: "Calculadora de MPG",
+    shortDescriptionEs: "Calcula tu economía de combustible real.",
+    seoTitleEs: "Calculadora de MPG — Millas por Galón y L/100km",
+    metaDescriptionEs: "Calculadora de MPG gratuita. Introduce las millas conducidas y los galones usados para hallar tus millas por galón reales, el equivalente en L/100km y el costo por milla opcional.",
+    primaryKeywordEs: "calculadora de mpg",
+    secondaryKeywordsEs: ["calculadora de millas por galon", "calculadora de economia de combustible", "mpg a l/100km"],
+    formulaExplanationEs: "Las millas por galón son simplemente la distancia recorrida dividida entre el combustible consumido, dando el alcance medio de cada galón durante el depósito que mediste. El equivalente métrico invierte la idea, informando los litros necesarios para recorrer 100 kilómetros, así que el factor fijo 235,215 convierte entre ambos. Si añades un precio de combustible, dividirlo entre el MPG da el costo de combustible de una sola milla.",
+    explanationEs: "El MPG de la pegatina de la ventana de tu coche es una estimación, pero el número que importa es el que realmente consigues, y esta calculadora de MPG te lo da a partir de dos cifras que puedes leer en el surtidor. Introduce las millas conducidas con un depósito y los galones que costó llenarlo, y obtienes las millas por galón reales, el equivalente métrico en L/100km y, si añades un precio de combustible, el costo de cada milla.\n\nMedir la economía de combustible real revela cosas que una calificación de fábrica no puede. Muestra cómo tu trayecto, tu pie derecho y tus hábitos de mantenimiento afectan a la eficiencia, y señala problemas pronto: una caída repentina del MPG puede indicar neumáticos poco inflados, un freno que roza o un sensor sucio mucho antes de que se encienda una luz de aviso. Rastrearlo depósito tras depósito convierte una vaga sensación de sed en datos duros.\n\nEl método es sencillo y fiable. Llena el depósito, resetea el cuentakilómetros parcial, conduce con normalidad, luego rellena y registra tanto las millas como los galones añadidos. Dividir la distancia entre el combustible da el MPG, y la calculadora maneja la conversión métrica usando el factor estándar 235,215 para que puedas comparar con las calificaciones europeas. Hacer esto durante varios depósitos suaviza el ruido y produce una imagen fiable de cómo rinde realmente tu vehículo.",
+    exampleEs: { inputs: { miles: 300, gallons: 10, fuelPrice: 4 }, explanation: "300 mi ÷ 10 gal = 30 MPG, unos 7,84 L/100km, y $0,1333 por milla a $4/gal." },
+    faqsEs: [
+      {
+        question: "¿Cómo mido las millas y los galones con precisión?",
+        answer: "Llena el depósito por completo y resetea tu cuentakilómetros parcial. Conduce como lo harías normalmente, luego vuelve al mismo surtidor y llena de nuevo hasta el primer clic. El cuentakilómetros parcial muestra las millas conducidas, y el surtidor muestra los galones añadidos para rellenar. Usar el mismo surtidor y nivel de llenado cada vez mantiene la medición coherente, lo cual importa mucho más que la lectura exacta de un solo depósito.",
+      },
+      {
+        question: "¿Qué es una buena cifra de MPG?",
+        answer: "Depende mucho de la clase de vehículo. Un híbrido compacto puede superar los 50 MPG, un sedán eficiente ronda los 30 a 40, mientras que las camionetas y SUV grandes suelen quedar entre 15 y 25. En lugar de perseguir un objetivo universal, rastrea tu propio vehículo con el tiempo y vigila los cambios. Una cifra estable es saludable; una que cae suele apuntar a un problema de mantenimiento que vale la pena investigar.",
+      },
+      {
+        question: "¿Cómo se relaciona el MPG con el L/100km?",
+        answer: "Describen la misma eficiencia desde direcciones opuestas. El MPG mide la distancia por unidad de combustible, así que más alto es mejor, mientras que el L/100km mide el combustible por distancia fija, así que más bajo es mejor. Como la relación es recíproca en lugar de lineal, se convierte con el factor fijo 235,215 dividido entre el MPG. Esta calculadora muestra ambos, lo cual es útil al comparar un coche con calificación estadounidense con una especificación europea.",
+      },
+      {
+        question: "¿Por qué cambia mi MPG de un depósito a otro?",
+        answer: "La economía de combustible responde a cómo y dónde conduces. El clima frío, los trayectos cortos, el tráfico denso, las colinas, las barras de techo, la carga extra y la aceleración agresiva reducen todos el MPG, mientras que la conducción constante por autopista lo eleva. La presión de los neumáticos y el estado del motor también importan. Debido a esta variación, un solo depósito puede engañar. Promediar varios depósitos consecutivos da una imagen mucho más fiable de tu economía de combustible real.",
+      },
+      {
+        question: "¿Puedo calcular el costo por milla aquí también?",
+        answer: "Sí. El campo de precio de combustible es opcional, pero si introduces el precio que pagaste por galón, la calculadora lo divide entre tu MPG para mostrar el costo de combustible de cada milla que conduces. Esa cifra por milla es útil para presupuestar, comparar vehículos o fijar tasas de reembolso de kilometraje. Deja el precio en blanco y la herramienta simplemente informa el MPG y el equivalente en L/100km sin un costo.",
+      },
+    ],
   },
   {
     id: "ev-savings",
@@ -161,6 +225,38 @@ export const automotiveWave3Calculators: CalculatorDefinition[] = [
     lastReviewed: "2026-08-20",
     formulaSource: "U.S. EPA fuel economy",
     sourceUrl: "https://www.fueleconomy.gov/",
+    slugEs: "calculadora-de-ahorro-de-vehiculo-electrico",
+    titleEs: "Calculadora de Ahorro de Vehículo Eléctrico",
+    shortDescriptionEs: "Compara los costos de funcionamiento de un eléctrico y uno de gasolina.",
+    seoTitleEs: "Calculadora de Ahorro de Vehículo Eléctrico — Costo Anual de Combustible Eléctrico vs Gasolina",
+    metaDescriptionEs: "Calculadora de ahorro de vehículo eléctrico gratuita. Compara el costo anual de conducir eléctrico frente a gasolina a partir de tu kilometraje, MPG, eficiencia y precios de energía para ver tu ahorro anual.",
+    primaryKeywordEs: "calculadora de ahorro de vehiculo electrico",
+    secondaryKeywordsEs: ["calculadora de costo electrico vs gasolina", "calculadora de costo ev", "ahorro de coche electrico"],
+    formulaExplanationEs: "Cada lado de la comparación convierte las millas anuales en una factura de energía. Para el coche de gasolina, dividir las millas entre el MPG da los galones quemados, que multiplicados por el precio del surtidor dan el costo anual de combustible. Para el coche eléctrico, dividir las millas entre la eficiencia en millas por kilovatio-hora da los kilovatios-hora extraídos, multiplicados por la tarifa eléctrica para su costo anual. Restar ambos revela el ahorro anual.",
+    explanationEs: "Cambiar a eléctrico promete costos de funcionamiento más bajos, pero la diferencia real depende de tu kilometraje y de los precios locales de la energía, y esta calculadora de ahorro de vehículo eléctrico pone una cifra anual honesta sobre ello. Introduces cuánto conduces cada año, la economía de combustible del coche de gasolina que usarías de otro modo, su precio de combustible, y luego la eficiencia del coche eléctrico y tu tarifa eléctrica. La herramienta devuelve el costo anual de cada opción y el ahorro de pasarse a eléctrico.\n\nLa comparación importa porque el combustible es donde los vehículos eléctricos más claramente se adelantan. La electricidad suele entregar una milla mucho más barata que la gasolina, pero la ventaja oscila con cuánto conduces, lo eficiente que es cada vehículo y la diferencia entre los precios del surtidor y tu tarifa por kilovatio-hora. Alguien con un trayecto largo y carga nocturna barata ahorra drásticamente, mientras que un conductor de poco kilometraje con electricidad cara puede ahorrar menos de lo esperado.\n\nAl aislar las dos facturas de energía lado a lado, la calculadora hace concretas esas compensaciones. Puedes probar un precio de gasolina más alto, un clima más frío que reduce la eficiencia del eléctrico o un plan eléctrico por horas y ver cómo cambia el ahorro anual al instante. Se centra puramente en combustible frente a carga, dándote una base limpia para sopesar frente al precio de compra, los incentivos y el mantenimiento al decidir si el cambio se amortiza.",
+    exampleEs: { inputs: { annualMiles: 12000, gasMpg: 30, gasPrice: 4, evEfficiency: 3.5, electricityRate: 0.15 }, explanation: "Gasolina: 12000 ÷ 30 × $4 = $1.600. Eléctrico: 12000 ÷ 3,5 × $0,15 ≈ $514,29. Ahorro ≈ $1.085,71 al año." },
+    faqsEs: [
+      {
+        question: "¿Qué es la eficiencia del eléctrico en millas por kWh?",
+        answer: "Las millas por kilovatio-hora te dicen cuánto viaja un coche eléctrico con una unidad de electricidad, muy parecido a como el MPG lo hace para el combustible. Los eléctricos típicos logran aproximadamente de 3 a 4 millas por kWh, aunque esto cae en clima frío, a altas velocidades o con cargas pesadas. Comprueba la pantalla de tu coche o la calificación de la EPA para una cifra realista, y bájala un poco si conduces a menudo en condiciones exigentes.",
+      },
+      {
+        question: "¿Dónde encuentro mi tarifa eléctrica?",
+        answer: "Tu tarifa eléctrica aparece en tu factura de servicios, expresada en dólares o céntimos por kilovatio-hora. Muchos hogares pagan entre $0,10 y $0,30 por kWh, pero los planes por horas cobran menos de noche, que es cuando la mayoría de los propietarios de eléctricos cargan. Si tu plan varía según la hora, usa la tarifa de horas valle a la que realmente cargas para la estimación de ahorro más precisa en lugar del promedio.",
+      },
+      {
+        question: "¿Incluye esto el mayor precio de compra de un eléctrico?",
+        answer: "No, esta calculadora compara solo el costo de funcionamiento de combustible frente a carga. Los vehículos eléctricos a menudo cuestan más por adelantado, aunque los incentivos, los créditos fiscales y el menor mantenimiento pueden reducir la diferencia. Usa el ahorro anual de combustible mostrado aquí como una entrada dentro de una decisión más amplia que también sopese el precio de compra, la financiación, la garantía de la batería y el valor de reventa a lo largo de los años que esperes conservar el coche.",
+      },
+      {
+        question: "¿Cuánto puedo ahorrar realmente cada año?",
+        answer: "El ahorro escala con cuánto conduces y la diferencia de precio entre la gasolina y la electricidad. Un conductor típico que recorre 12.000 millas al año comúnmente ahorra de varios cientos a más de mil dólares anuales solo en combustible. Un kilometraje más alto, gasolina cara y carga nocturna barata amplían la diferencia, mientras que el poco kilometraje o la electricidad costosa la reducen. Introduce tus propias cifras para ver un número adaptado a ti.",
+      },
+      {
+        question: "¿Afectan al resultado el clima frío y el estilo de conducción?",
+        answer: "Sí, de forma significativa para el lado eléctrico. Las temperaturas frías reducen la eficiencia de la batería y la calefacción de la cabina consume energía extra, así que las millas por kWh en invierno pueden caer notablemente. La conducción rápida por autopista y la aceleración fuerte también reducen la eficiencia de ambos tipos de vehículo. Para mantener la estimación realista, usa una cifra de eficiencia que refleje tu clima y conducción típica en lugar del mejor número de una prueba con clima templado.",
+      },
+    ],
   },
   {
     id: "tire-size",
@@ -213,6 +309,38 @@ export const automotiveWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard P-metric tire sizing",
+    slugEs: "calculadora-de-tamano-de-neumaticos",
+    titleEs: "Calculadora de Tamaño de Neumáticos",
+    shortDescriptionEs: "Descifra un tamaño de neumático P-métrico.",
+    seoTitleEs: "Calculadora de Tamaño de Neumáticos — Diámetro Total y Revoluciones por Milla",
+    metaDescriptionEs: "Calculadora de tamaño de neumáticos gratuita. Introduce el ancho, la relación de aspecto y el diámetro de la llanta para hallar el diámetro total del neumático en pulgadas, la altura del flanco y las revoluciones por milla.",
+    primaryKeywordEs: "calculadora de tamano de neumaticos",
+    secondaryKeywordsEs: ["calculadora de diametro de neumaticos", "calculadora de dimensiones de neumaticos", "calculadora de revoluciones por milla"],
+    formulaExplanationEs: "Un tamaño P-métrico como 225/45R17 empaqueta tres números. La altura del flanco en milímetros es el ancho de sección por el porcentaje de la relación de aspecto, ya que la relación de aspecto es el flanco expresado como una proporción del ancho. El diámetro total es el diámetro de la llanta convertido a milímetros más dos flancos, uno arriba y otro abajo. Dividir 63.360 pulgadas por milla entre la circunferencia del neumático da las revoluciones por milla.",
+    explanationEs: "El código estampado en el flanco de un neumático oculta sus dimensiones reales, y esta calculadora de tamaño de neumáticos lo traduce en los números que realmente importan al montar goma nueva. Introduce el ancho de sección en milímetros, la relación de aspecto como porcentaje y el diámetro de la llanta en pulgadas, y devuelve el diámetro total, la altura del flanco y cuántas veces gira el neumático en una milla.\n\nEsas cifras deciden si un neumático encajará y si tu velocímetro se mantiene honesto. El diámetro total afecta a la altura de marcha, la distancia al suelo y la relación de transmisión, mientras que las revoluciones por milla determinan las lecturas del velocímetro y el cuentakilómetros. Monta un neumático con un diámetro diferente y cada lectura de velocidad y distancia se desplaza, por lo que comparar un tamaño potencial con el actual antes de comprar es tan importante.\n\nLa matemática sigue la convención P-métrica estándar. La relación de aspecto expresa la altura del flanco como un porcentaje del ancho de sección, así que multiplicar ambos da el flanco en milímetros. La rueda aporta su diámetro de llanta, convertido de pulgadas, y el neumático añade un flanco arriba y abajo, produciendo el diámetro total. A partir de ahí la circunferencia fija las revoluciones por milla. Ya sea que estés aumentando el tamaño de las ruedas, buscando un aspecto concreto o restaurando la relación de fábrica, ver estos números lado a lado te permite elegir un reemplazo que mantiene intactos el manejo y la precisión de los instrumentos.",
+    exampleEs: { inputs: { width: 225, aspectRatio: 45, rimDiameter: 17 }, explanation: "Flanco = 225 × 45 ÷ 100 = 101,25 mm; diámetro = 17 × 25,4 + 2 × 101,25 = 634,3 mm ≈ 24,97 in." },
+    faqsEs: [
+      {
+        question: "¿Cómo leo un tamaño de neumático como 225/45R17?",
+        answer: "El primer número, 225, es el ancho de sección en milímetros. El segundo, 45, es la relación de aspecto, que significa que la altura del flanco es el 45 por ciento del ancho. La letra R indica construcción radial, y el número final, 17, es el diámetro de la llanta de la rueda en pulgadas. Introduce el ancho, la relación de aspecto y el diámetro de la llanta en esta calculadora para ver las dimensiones totales reales del neumático.",
+      },
+      {
+        question: "¿Por qué importa el diámetro total del neumático?",
+        answer: "El diámetro total determina la altura de marcha, la distancia al suelo y la relación de transmisión efectiva, y afecta directamente a la precisión del velocímetro. Un diámetro mayor eleva el vehículo y hace que el velocímetro marque ligeramente lento, mientras que uno menor hace lo contrario. Al reemplazar neumáticos, mantener el diámetro total cerca del original preserva el manejo, la precisión de los instrumentos y los sistemas electrónicos que dependen de la velocidad de la rueda, como el ABS y el control de tracción.",
+      },
+      {
+        question: "¿Para qué se usan las revoluciones por milla?",
+        answer: "Las revoluciones por milla cuentan cuántas vueltas completas da un neumático para recorrer una milla, derivadas de su circunferencia. Los velocímetros y cuentakilómetros están calibrados a un valor específico, así que un neumático con un conteo diferente hará esas lecturas inexactas. También importa para emparejar neumáticos en un eje y para configuraciones que leen la velocidad de la rueda, ya que las revoluciones desiguales pueden confundir la electrónica del vehículo.",
+      },
+      {
+        question: "¿Puedo cambiar mi tamaño de neumático de forma segura?",
+        answer: "Los cambios modestos son comunes, especialmente el aumento de tamaño donde un neumático más ancho en una llanta mayor mantiene el diámetro total similar. La clave es mantener el diámetro total cerca del original, idealmente dentro de un tres por ciento, para preservar la precisión del velocímetro y la distancia al suelo. Confirma siempre que el nuevo tamaño encaja en el paso de rueda sin rozar y coincide con las calificaciones de carga y velocidad que tu vehículo requiere antes de montar.",
+      },
+      {
+        question: "¿Afecta la relación de aspecto a la calidad de marcha?",
+        answer: "Sí. Una relación de aspecto más baja significa un flanco más corto y rígido, que agudiza la respuesta de la dirección y el paso por curva pero transmite más baches de la carretera a la cabina. Una relación de aspecto más alta da un flanco más alto y amortiguado que suaviza la marcha y resiste mejor los daños por baches. Elegir una relación de aspecto es un compromiso entre la precisión del manejo y la comodidad, junto con su efecto en el diámetro total del neumático.",
+      },
+    ],
   },
   {
     id: "car-loan",
@@ -267,5 +395,37 @@ export const automotiveWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard loan amortization",
+    slugEs: "calculadora-de-prestamo-de-auto",
+    titleEs: "Calculadora de Préstamo de Auto",
+    shortDescriptionEs: "Estima tu pago mensual del coche.",
+    seoTitleEs: "Calculadora de Préstamo de Auto — Pago Mensual e Interés Total",
+    metaDescriptionEs: "Calculadora de préstamo de auto gratuita. Introduce el precio del vehículo, el pago inicial, el vehículo a cuenta, la tasa de interés y el plazo para ver tu pago mensual, el interés total y el monto financiado.",
+    primaryKeywordEs: "calculadora de prestamo de auto",
+    secondaryKeywordsEs: ["calculadora de prestamo de coche", "calculadora de pago mensual de auto", "calculadora de financiacion de vehiculo"],
+    formulaExplanationEs: "El monto financiado es el precio del vehículo menos cualquier pago inicial y vehículo a cuenta. La fórmula estándar de amortización luego reparte ese principal a lo largo del plazo, donde r es la tasa mensual (APR ÷ 12) y n es el número de meses. El denominador descuenta cada pago futuro hasta hoy para que cada cuota igual cubra primero el interés y reduzca el principal, hasta que el saldo llega a cero en el pago final.",
+    explanationEs: "Financiar un coche convierte un gran precio único en un flujo de pagos mensuales, y esta calculadora de préstamo de auto muestra exactamente cómo se ve ese flujo antes de firmar. Introduce el precio del vehículo, cualquier pago inicial y vehículo a cuenta, la tasa de interés anual y el plazo en meses, y devuelve tu pago mensual, el interés total que pagarás y el monto realmente financiado.\n\nVer las tres cifras juntas evita el error clásico de comprar solo por el pago mensual. Un plazo más largo reduce la cifra mensual pero infla silenciosamente el interés total, así que un pago que parece asequible puede ocultar un costo de por vida mucho mayor. El monto financiado hace concreto el efecto de tu pago inicial y vehículo a cuenta: cada dólar que aportas es un dólar por el que nunca pagas interés, por lo que un depósito mayor reduce tanto el pago como el total.\n\nEl motor usa la amortización estándar de préstamos, la misma matemática que aplican los prestamistas. Cada pago igual cubre primero el interés del mes sobre el saldo pendiente, luego reduce el principal, así que los pagos iniciales cargan mucho interés y los posteriores pagan cada vez más el préstamo. Ajustando la tasa, el plazo o el pago inicial y viendo cómo se mueven los resultados, puedes encontrar una estructura que se ajuste a tu presupuesto manteniendo bajo control el interés que entregas al prestamista.",
+    exampleEs: { inputs: { vehiclePrice: 30000, downPayment: 5000, tradeIn: 0, rate: 6, term: 60 }, explanation: "Financiar $25.000 al 6% APR durante 60 meses da unos $483,32 al mes y aproximadamente $3.999 de interés total." },
+    faqsEs: [
+      {
+        question: "¿Qué cuenta como monto financiado?",
+        answer: "El monto financiado es el precio del vehículo menos tu pago inicial y cualquier valor del vehículo a cuenta. Este es el principal que el préstamo realmente cubre y la cifra sobre la que se cobra el interés. Reducirlo con un pago inicial mayor o un vehículo a cuenta más alto baja directamente tanto tu pago mensual como el interés total. Si tu pago inicial y vehículo a cuenta igualan o superan el precio, no queda nada que financiar.",
+      },
+      {
+        question: "¿Cómo afecta el plazo del préstamo a lo que pago?",
+        answer: "Un plazo más largo reparte el saldo entre más meses, así que cada pago es menor, pero pagas interés durante más tiempo y el interés total sube. Un plazo más corto eleva el pago mensual pero reduce el costo global. Esta calculadora muestra tanto el pago como el interés total para que puedas sopesar una cifra mensual cómoda frente al verdadero costo de por vida del préstamo antes de decidir.",
+      },
+      {
+        question: "¿Es el APR lo mismo que la tasa de interés?",
+        answer: "Están estrechamente relacionados pero no son idénticos. La tasa de interés es el costo de tomar prestado el principal, mientras que el APR, la tasa de porcentaje anual, también incorpora ciertas comisiones para reflejar el verdadero costo anual del préstamo. Esta calculadora trata la tasa que introduces como la tasa anual aplicada mensualmente. Para el pago más preciso, introduce el APR que cita tu prestamista, ya que captura el costo efectivo de tomar prestado.",
+      },
+      {
+        question: "¿Por qué es tan importante comprobar el interés total?",
+        answer: "El interés total es el dinero extra que pagas al prestamista además del monto financiado, y puede ser sustancial en préstamos más largos. Centrarse solo en un pago mensual bajo puede disfrazar un total grande, porque estirar el plazo reduce cada pago mientras añade interés mes tras mes. Comprobar el interés total junto al pago revela el precio real de la financiación y te ayuda a evitar pagar de más.",
+      },
+      {
+        question: "¿Cómo puedo reducir mi pago mensual del coche?",
+        answer: "Puedes reducir el pago aumentando tu pago inicial o vehículo a cuenta, lo que reduce el monto financiado, asegurando una tasa de interés más baja mediante mejor crédito o comparando prestamistas, o extendiendo el plazo. Sé cauteloso con la última opción, ya que un plazo más largo reduce el pago pero eleva el interés total. Ajusta cada entrada aquí para encontrar un equilibrio que se ajuste a tu presupuesto y costo total.",
+      },
+    ],
   },
 ];

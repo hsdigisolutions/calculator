@@ -53,6 +53,38 @@ export const engineeringWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard mechanical engineering",
+    slugEs: "calculadora-de-relacion-de-transmision",
+    titleEs: "Calculadora de Relación de Transmisión",
+    shortDescriptionEs: "Calcula la relación de transmisión, la velocidad y el par de salida.",
+    seoTitleEs: "Calculadora de Relación de Transmisión — Relación, RPM y Par de Salida",
+    metaDescriptionEs: "Calculadora de relación de transmisión gratuita. Introduce los dientes del engranaje conductor y conducido más la velocidad y el par de entrada para obtener al instante la relación, las RPM de salida y el par de salida.",
+    primaryKeywordEs: "calculadora de relación de transmisión",
+    secondaryKeywordsEs: ["calculadora de reducción de engranajes", "calculadora de rpm de salida", "calculadora de relación de par"],
+    formulaExplanationEs: "La relación de transmisión es igual a los dientes del engranaje conducido divididos entre los dientes del engranaje conductor, porque los engranajes que engranan comparten el mismo paso de diente, de modo que el número de dientes fija cuántas vueltas del conductor producen una vuelta del conducido. La velocidad de salida disminuye según esa relación mientras que el par de salida aumenta en la misma proporción, ya que la potencia se mantiene casi constante y la velocidad cedida regresa convertida en fuerza de giro.",
+    explanationEs: "Una relación de transmisión describe cómo un par de engranajes que engranan intercambia velocidad de rotación por fuerza de giro, y esta calculadora de relación de transmisión devuelve esa relación junto con la velocidad y el par de salida a partir del número de dientes y los valores de entrada que introduces. Cuando un engranaje conductor pequeño mueve un engranaje conducido más grande, el eje de salida gira más despacio pero entrega más par, que es exactamente como un coche sube una cuesta o un cabrestante levanta una carga pesada.\n\nEsta relación importa porque casi toda máquina con piezas giratorias depende de ella: cajas de cambios, bicicletas, relojes, taladros, aerogeneradores y transportadores eligen su número de dientes para alcanzar una velocidad o fuerza objetivo. Acertar con la relación permite que el motor trabaje en su rango eficiente mientras la salida realiza el trabajo requerido, así que una calculadora de relación de transmisión ahorra horas de prueba y error en la fase de diseño.\n\nLa fórmula funciona porque los engranajes que engranan comparten el mismo tamaño de diente, de modo que su número de dientes fija cómo se relacionan sus giros. La velocidad baja en proporción a la relación mientras el par sube en el mismo factor, ya que la potencia que pasa se mantiene casi constante. Ingenieros mecánicos, mecanizadores, constructores de robótica y estudiantes usan una calculadora de relación de transmisión para dimensionar transmisiones de forma rápida y correcta.",
+    exampleEs: { inputs: { drivingTeeth: 10, drivenTeeth: 30, inputRpm: 1000, inputTorque: 5 }, explanation: "30 ÷ 10 = 3, así que la velocidad de salida es 1000 ÷ 3 ≈ 333,33 rpm y el par de salida es 5 × 3 = 15 N·m." },
+    faqsEs: [
+      {
+        question: "¿Cómo se calcula la relación de transmisión?",
+        answer: "La relación de transmisión es el número de dientes del engranaje conducido dividido entre el número de dientes del engranaje conductor. Si el conducido tiene 30 dientes y el conductor 10, la relación es 3 a 1. Esto significa que el engranaje conductor gira tres veces por cada vuelta del conducido, una reducción que intercambia velocidad por par adicional en el eje de salida.",
+      },
+      {
+        question: "¿Por qué aumenta el par de salida cuando cae la velocidad?",
+        answer: "La potencia es igual al par multiplicado por la velocidad de rotación, y un par de engranajes ideal transmite la potencia con pocas pérdidas. Cuando la relación reduce la velocidad de salida, el par debe subir en el mismo factor para mantener el producto casi constante. Por eso una caja reductora da a un motor pequeño suficiente fuerza de giro para mover una carga pesada, a costa de que la salida gire más despacio que la entrada.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre engranaje conductor y conducido?",
+        answer: "El engranaje conductor, también llamado motriz, es el que se conecta a la fuente de potencia como un motor o un pedal. El engranaje conducido es el que aquel mueve, unido a la carga. La relación entre sus números de dientes determina si el conjunto aumenta la velocidad o el par. Intercambiar cuál engranaje mueve al otro invierte la relación, convirtiendo una reducción en una sobremarcha y viceversa.",
+      },
+      {
+        question: "¿Qué significa una relación de transmisión mayor que uno?",
+        answer: "Una relación por encima de uno es una reducción: la salida gira más despacio que la entrada pero con más par. Una relación por debajo de uno es una sobremarcha, que da mayor velocidad de salida pero menos par. Una relación de exactamente uno transmite velocidad y par sin cambios. Elegir el número depende de si tu aplicación necesita más fuerza, como un cabrestante, o más velocidad, como un ventilador.",
+      },
+      {
+        question: "¿Puedo encadenar varias etapas de engranajes?",
+        answer: "Sí. Cuando los engranajes se disponen en etapas, la relación total es el producto de la relación individual de cada etapa. Dos etapas de 3 a 1 en serie dan una reducción global de 9 a 1. Los trenes de engranajes compuestos permiten a los diseñadores alcanzar relaciones muy grandes en un espacio compacto sin un engranaje enorme. Usa esta calculadora etapa por etapa y luego multiplica las relaciones para hallar la reducción completa de la transmisión.",
+      },
+    ],
   },
   {
     id: "voltage-divider",
@@ -104,6 +136,38 @@ export const engineeringWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard electrical engineering",
+    slugEs: "calculadora-de-divisor-de-tension",
+    titleEs: "Calculadora de Divisor de Tensión",
+    shortDescriptionEs: "Calcula la tensión de salida y la corriente de un divisor.",
+    seoTitleEs: "Calculadora de Divisor de Tensión — Tensión de Salida y Corriente",
+    metaDescriptionEs: "Calculadora de divisor de tensión gratuita. Introduce la tensión de entrada y dos valores de resistencia para hallar al instante la tensión de salida y la corriente en serie de un divisor resistivo.",
+    primaryKeywordEs: "calculadora de divisor de tensión",
+    secondaryKeywordsEs: ["calculadora de divisor resistivo", "calculadora de vout", "calculadora de divisor de potencial"],
+    formulaExplanationEs: "En un divisor de dos resistencias la misma corriente circula por ambas, así que la tensión de entrada se reparte entre ellas en proporción a sus resistencias. La salida tomada en R2 es por tanto Vin escalada por R2 dividida entre la resistencia total R1 más R2. La corriente en serie es igual a Vin dividida entre esa resistencia total, siguiendo la ley de Ohm para el único bucle que forman las dos resistencias del circuito.",
+    explanationEs: "Un divisor de tensión usa dos resistencias en serie para producir una tensión de salida más pequeña y predecible a partir de una entrada mayor, y esta calculadora de divisor de tensión devuelve esa salida junto con la corriente que circula por el par. Al conectar en el punto de unión entre las dos resistencias obtienes una fracción de la tensión de alimentación fijada únicamente por la relación de los valores de resistencia, lo que convierte a los divisores en uno de los bloques constructivos más comunes de la electrónica.\n\nEsto importa porque los divisores aparecen en todas partes: para fijar tensiones de referencia, escalar una señal para que un microcontrolador pueda leerla con seguridad, polarizar transistores y leer sensores como termistores y resistencias dependientes de la luz. Elegir valores de resistencia equivocados desperdicia potencia o carga demasiado el circuito, así que una calculadora de divisor de tensión te permite comprobar tanto la tensión de salida como el consumo de corriente antes de soldar nada.\n\nLa fórmula funciona porque ambas resistencias llevan la misma corriente en serie, de modo que la tensión de alimentación se reparte entre ellas en proporción a sus resistencias. La salida en la resistencia inferior es simplemente la entrada escalada por la parte de esa resistencia dentro del total. Aficionados, estudiantes de electrónica e ingenieros de hardware confían en una calculadora de divisor de tensión para diseñar niveles de referencia y etapas de entrada de sensores con confianza en lugar de a ciegas.",
+    exampleEs: { inputs: { vin: 12, r1: 1000, r2: 2000 }, explanation: "12 × 2000 ÷ (1000 + 2000) = 12 × 2000 ÷ 3000 = 8 V, con una corriente en serie de 12 ÷ 3000 = 0,004 A." },
+    faqsEs: [
+      {
+        question: "¿Cómo funciona un divisor de tensión?",
+        answer: "Dos resistencias se colocan en serie a través de la tensión de entrada, y la salida se toma del punto entre ambas. Como la misma corriente circula por las dos, la tensión de entrada se reparte entre ellas en proporción a sus resistencias. La salida es igual a la entrada multiplicada por la resistencia inferior dividida entre la suma de ambas, dando una fracción estable de la alimentación fijada por completo por la relación de resistencias.",
+      },
+      {
+        question: "¿Conectar una carga cambia la tensión de salida?",
+        answer: "Sí. Conectar una carga a la salida pone su resistencia en paralelo con R2, lo que baja la resistencia inferior efectiva y arrastra la tensión de salida hacia abajo. Para mantener el divisor preciso, la resistencia de carga debe ser mucho mayor que R2, o deberías tenerla en cuenta en el cálculo. Este efecto de carga es la principal limitación de un divisor resistivo simple usado como referencia de tensión.",
+      },
+      {
+        question: "¿Cuánta corriente consume un divisor de tensión?",
+        answer: "La corriente en serie es igual a la tensión de entrada dividida entre la suma de las dos resistencias. Valores de resistencia mayores reducen esta corriente y ahorran potencia, lo que importa en dispositivos alimentados por batería, pero también hacen el divisor más sensible a la carga y al ruido. Resistencias más pequeñas dan una salida más firme y precisa a costa de mayor corriente continua. Equilibrar estas dos preocupaciones es el compromiso central del diseño.",
+      },
+      {
+        question: "¿Cuáles son los usos comunes de un divisor de tensión?",
+        answer: "Los divisores de tensión fijan tensiones de referencia, escalan señales altas a niveles seguros para convertidores analógico-digitales, polarizan etapas de transistores y forman la mitad de circuitos de sensores con termistores, fotorresistencias o potenciómetros. Son sencillos, baratos y solo requieren dos componentes. Para cualquier tarea que necesite una fracción fija de una tensión de alimentación con poca corriente, un divisor resistivo suele ser la primera herramienta a la que recurre un ingeniero.",
+      },
+      {
+        question: "¿Puede un divisor de tensión alimentar un circuito?",
+        answer: "No de forma eficaz. Un divisor resistivo está pensado para fijar una tensión de referencia, no para entregar corriente significativa. En cuanto una carga real consume corriente, la salida cae y el divisor desperdicia potencia como calor en las resistencias. Para alimentar un circuito a una tensión menor, usa un regulador o un convertidor reductor, que mantienen la salida estable bajo carga de forma mucho más eficiente.",
+      },
+    ],
   },
   {
     id: "spring-constant",
@@ -154,6 +218,38 @@ export const engineeringWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard physics (Hooke's law)",
+    slugEs: "calculadora-de-constante-de-resorte",
+    titleEs: "Calculadora de Constante de Resorte",
+    shortDescriptionEs: "Calcula la rigidez del resorte y la energía almacenada.",
+    seoTitleEs: "Calculadora de Constante de Resorte — Rigidez y Energía de la Ley de Hooke",
+    metaDescriptionEs: "Calculadora de constante de resorte gratuita según la ley de Hooke. Introduce la fuerza y el desplazamiento para hallar la constante del resorte en N/m y la energía potencial elástica almacenada.",
+    primaryKeywordEs: "calculadora de constante de resorte",
+    secondaryKeywordsEs: ["calculadora de ley de hooke", "calculadora de rigidez de resorte", "calculadora de energía potencial elástica"],
+    formulaExplanationEs: "La ley de Hooke establece que la fuerza que ejerce un resorte es proporcional a cuánto se estira o se comprime, así que dividir la fuerza entre el desplazamiento da la constante de proporcionalidad k, la rigidez. La energía elástica almacenada es un medio de k por el desplazamiento al cuadrado, porque la fuerza crece linealmente desde cero a medida que el resorte se deforma, y la energía es el área bajo esa recta de fuerza frente a distancia.",
+    explanationEs: "La constante de resorte mide cuán rígido es un resorte, y esta calculadora de constante de resorte la halla a partir de la fuerza aplicada y el desplazamiento resultante, y luego informa de la energía potencial elástica que el resorte almacena. Una constante alta significa un resorte rígido que necesita una fuerza grande para estirarse aunque sea poco, mientras que una constante baja describe un resorte blando y fácil de deformar. El valor se expresa en newtons por metro.\n\nEsta propiedad importa en todo el diseño mecánico y estructural: las suspensiones de vehículos, el soporte de un colchón, los bolígrafos retráctiles, los mecanismos de puertas, las básculas y los aislantes de vibración dependen de elegir la rigidez adecuada. Demasiado rígido y la marcha es dura; demasiado blando y el resorte toca fondo. Una calculadora de constante de resorte te permite confirmar la rigidez a partir de una simple medida de fuerza y estiramiento en vez de adivinar.\n\nLa fórmula funciona porque la ley de Hooke dice que la fuerza restauradora de un resorte crece en proporción directa a su desplazamiento, así que la relación entre fuerza y estiramiento es una constante fija para ese resorte. La energía almacenada resulta ser un medio de la constante por el desplazamiento al cuadrado, el área bajo la gráfica de fuerza y distancia. Ingenieros, diseñadores de productos y estudiantes de física usan una calculadora de constante de resorte para dimensionar resortes y predecir cuánta energía retendrán.",
+    exampleEs: { inputs: { force: 20, displacement: 0.1 }, explanation: "20 N ÷ 0,1 m = 200 N/m, almacenando ½ × 200 × 0,1² = 1 J de energía elástica." },
+    faqsEs: [
+      {
+        question: "¿Qué es la constante de resorte?",
+        answer: "La constante de resorte, escrita k, mide la rigidez de un resorte. Es igual a la fuerza necesaria para estirar o comprimir el resorte dividida entre cuánto se mueve, y se expresa en newtons por metro. Un valor grande significa un resorte rígido que resiste fuertemente la deformación, mientras que un valor pequeño significa un resorte blando y flexible. Es una propiedad fija de cada resorte, fijada por su material, diámetro de espira, grosor del alambre y número de vueltas.",
+      },
+      {
+        question: "¿Qué es la ley de Hooke?",
+        answer: "La ley de Hooke establece que la fuerza que ejerce un resorte es directamente proporcional a su desplazamiento desde la posición de reposo, siempre que el resorte no se estire demasiado. Escrita F igual a k por x, significa que duplicar el estiramiento duplica la fuerza. La ley se cumple dentro del límite elástico; más allá de ese punto el resorte se deforma de forma permanente y la simple relación lineal ya no describe su comportamiento.",
+      },
+      {
+        question: "¿Cómo se calcula la energía almacenada?",
+        answer: "La energía potencial elástica es igual a un medio de la constante de resorte multiplicada por el desplazamiento al cuadrado. Como la fuerza restauradora sube linealmente desde cero a medida que el resorte se deforma, la energía es el área triangular bajo la recta de fuerza frente a distancia. Por eso estirar un resorte el doble de lejos almacena cuatro veces la energía. Esa energía almacenada se libera cuando el resorte vuelve a su longitud natural.",
+      },
+      {
+        question: "¿Cuáles son las unidades de la constante de resorte?",
+        answer: "La constante de resorte se mide en newtons por metro en unidades del SI, es decir, el número de newtons de fuerza necesarios para estirar el resorte un metro. En trabajo imperial puedes ver libras por pulgada en su lugar. Para mantener esta calculadora precisa, introduce la fuerza en newtons y el desplazamiento en metros. Un desplazamiento dado en centímetros debe dividirse entre 100 antes de introducirlo.",
+      },
+      {
+        question: "¿Funciona la ley de Hooke para todos los resortes?",
+        answer: "La ley de Hooke solo se aplica dentro del rango elástico de un resorte, donde la deformación es reversible y proporcional a la fuerza. Estira un resorte más allá de su límite elástico y se deforma de forma permanente, así que la fuerza ya no sube linealmente y la constante deja de aplicarse. Los resortes reales también tienen una carga máxima. Para resultados precisos, mantente dentro del rango de trabajo especificado por el fabricante donde la relación lineal se cumple con fiabilidad.",
+      },
+    ],
   },
   {
     id: "stress-strain",
@@ -207,6 +303,38 @@ export const engineeringWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard mechanical engineering",
+    slugEs: "calculadora-de-esfuerzo-deformacion",
+    titleEs: "Calculadora de Esfuerzo y Deformación",
+    shortDescriptionEs: "Calcula el esfuerzo, la deformación y el módulo de Young.",
+    seoTitleEs: "Calculadora de Esfuerzo y Deformación — Esfuerzo, Deformación y Módulo de Young",
+    metaDescriptionEs: "Calculadora de esfuerzo y deformación gratuita. Introduce fuerza, área, longitud original y deformación para hallar el esfuerzo en pascales, la deformación unitaria y el módulo de Young de un material.",
+    primaryKeywordEs: "calculadora de esfuerzo y deformación",
+    secondaryKeywordsEs: ["calculadora de módulo de young", "calculadora de esfuerzo de tracción", "calculadora de módulo elástico"],
+    formulaExplanationEs: "El esfuerzo es la fuerza repartida sobre el área de la sección transversal, así que dividir la fuerza entre el área da la carga interna que soporta cada unidad de material. La deformación es el cambio fraccionario de longitud, la deformación dividida entre la longitud original, lo que la hace una medida adimensional de cuánto se estiró el material. El módulo de Young es el esfuerzo dividido entre la deformación, la rigidez del propio material, porque en la región elástica ambos suben en proporción directa.",
+    explanationEs: "El esfuerzo y la deformación describen cómo responde un material a una carga, y esta calculadora de esfuerzo y deformación devuelve ambas magnitudes más el módulo de Young a partir de la fuerza, el área, la longitud y la deformación que introduces. El esfuerzo es la fuerza interna por unidad de área que soporta el material, mientras que la deformación es la fracción en que se estira. Su relación, el módulo de Young, es una huella de la rigidez del material que te permite predecir cómo se comportará cualquier pieza fabricada con él.\n\nEsto importa en toda la ingeniería: los cables de puentes, los fuselajes de aviones, los tornillos, los ejes de máquinas y las columnas de edificios deben soportar cargas sin estirarse demasiado ni romperse. Comparar el esfuerzo calculado con los límites conocidos de un material te dice si un diseño es seguro, y comparar la deformación con las tolerancias te dice si encajará y funcionará. Una calculadora de esfuerzo y deformación convierte medidas brutas en estos números decisivos con rapidez.\n\nLa fórmula funciona porque el esfuerzo divide la fuerza entre el área que la resiste, y la deformación divide el cambio de longitud entre la longitud original, dando una deformación adimensional. En la región elástica, el esfuerzo y la deformación suben juntos en proporción, así que su relación es la constante módulo de Young. Ingenieros civiles, mecánicos y de materiales, junto con estudiantes, confían en una calculadora de esfuerzo y deformación para comprobar la resistencia y la rigidez antes de comprometerse con un diseño.",
+    exampleEs: { inputs: { force: 1000, area: 0.01, originalLength: 2, deformation: 0.001 }, explanation: "Esfuerzo = 1000 ÷ 0,01 = 100000 Pa, deformación = 0,001 ÷ 2 = 0,0005, así que el módulo de Young = 100000 ÷ 0,0005 = 200000000 Pa." },
+    faqsEs: [
+      {
+        question: "¿Cuál es la diferencia entre esfuerzo y deformación?",
+        answer: "El esfuerzo es la fuerza interna por unidad de área dentro de un material cargado, medida en pascales, y describe con qué intensidad se empuja o tira del material. La deformación es el cambio fraccionario de longitud resultante, un número adimensional sin unidades. El esfuerzo es la causa y la deformación el efecto: aplica esfuerzo a un material y responde con deformación. Su relación revela cuán rígido es el material.",
+      },
+      {
+        question: "¿Qué es el módulo de Young?",
+        answer: "El módulo de Young es la relación entre esfuerzo y deformación dentro del rango elástico de un material, y mide la rigidez. Un módulo alto, como los aproximadamente 200 gigapascales del acero, significa que el material apenas se estira bajo carga. Un módulo bajo, como el del caucho, significa que se deforma con facilidad. Como es una propiedad del propio material, no de la forma de la pieza, permite a los ingenieros comparar materiales candidatos directamente cuando importan la resistencia y la rigidez.",
+      },
+      {
+        question: "¿Qué unidades usa esta calculadora?",
+        answer: "Introduce la fuerza en newtons, el área de la sección transversal en metros cuadrados, y tanto la longitud original como la deformación en metros. El esfuerzo y el módulo de Young salen entonces en pascales, y la deformación es adimensional. Como los pascales son pequeños, los resultados reales suelen ser números grandes; quizá prefieras leerlos en megapascales o gigapascales dividiendo entre un millón o mil millones respectivamente para compararlos con tablas de referencia.",
+      },
+      {
+        question: "¿Qué es el límite elástico?",
+        answer: "El límite elástico es el máximo esfuerzo que un material puede soportar mientras aún vuelve a su forma original una vez retirada la carga. Por debajo de él, el esfuerzo y la deformación se mantienen proporcionales y el módulo de Young se aplica. Más allá, el material se deforma de forma permanente y con el tiempo se fractura. Esta calculadora supone comportamiento elástico, así que su resultado de módulo de Young solo tiene sentido para cargas que mantengan el material dentro de ese rango reversible.",
+      },
+      {
+        question: "¿Por qué importa el área de la sección transversal para el esfuerzo?",
+        answer: "El esfuerzo es la fuerza dividida entre el área, así que una pieza más gruesa con más área de sección reparte la misma fuerza sobre más material y experimenta menos esfuerzo. Por eso los componentes portantes se hacen más gruesos donde se concentran las fuerzas. Duplicar el área reduce a la mitad el esfuerzo para una carga dada. Elegir el área adecuada mantiene el esfuerzo por debajo del límite del material, algo central para diseñar piezas que no fallen.",
+      },
+    ],
   },
   {
     id: "motor-power",
@@ -257,6 +385,38 @@ export const engineeringWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard mechanical engineering",
+    slugEs: "calculadora-de-potencia-de-motor",
+    titleEs: "Calculadora de Potencia de Motor",
+    shortDescriptionEs: "Convierte par y RPM en caballos y kW.",
+    seoTitleEs: "Calculadora de Potencia de Motor — Par y RPM a HP y kW",
+    metaDescriptionEs: "Calculadora de potencia de motor gratuita. Introduce el par y la velocidad de rotación en RPM para hallar al instante la potencia mecánica de salida en caballos y kilovatios de cualquier motor.",
+    primaryKeywordEs: "calculadora de potencia de motor",
+    secondaryKeywordsEs: ["calculadora de par a caballos", "calculadora de hp", "calculadora de potencia par rpm"],
+    formulaExplanationEs: "La potencia mecánica es el par por la velocidad de rotación. Usando libras-pie y revoluciones por minuto, la constante 5252 convierte el producto en caballos, porque un caballo son 33.000 libras-pie por minuto y dividir eso entre dos pi radianes por revolución da 5252. Multiplicar el resultado en caballos por 0,7457 lo convierte en kilovatios, ya que un caballo equivale a 745,7 vatios por definición.",
+    explanationEs: "La potencia de un motor indica cuánto trabajo puede realizar una máquina giratoria cada segundo, y esta calculadora de potencia de motor convierte un par y una velocidad de rotación en potencia expresada tanto en caballos como en kilovatios. El par es la fuerza de torsión sobre el eje y las RPM son la rapidez con que gira; la potencia combina ambos, porque un motor que produce par alto a velocidad alta entrega más salida útil que uno que solo logra uno de esos dos.\n\nEsto importa al seleccionar o comparar motores: ventiladores, bombas, transportadores, vehículos y máquinas herramienta se especifican por potencia porque fija la rapidez con que pueden mover una carga. Solo el par o solo la velocidad pueden inducir a error, así que una calculadora de potencia de motor da la cifra única que capta la capacidad real, permitiéndote adaptar un motor a la tarea sin sobredimensionarlo ni quedarte corto.\n\nLa fórmula funciona porque la potencia es igual al par multiplicado por la velocidad de rotación, y la constante 5252 convierte libras-pie y RPM en caballos de forma limpia. Multiplicar por 0,7457 reexpresa esa cifra en kilovatios para especificaciones métricas. Ingenieros de automoción, diseñadores de máquinas y técnicos confían en una calculadora de potencia de motor para relacionar curvas de par con potencias nominales y comparar accionamientos en igualdad de condiciones.",
+    exampleEs: { inputs: { torque: 100, rpm: 2000 }, explanation: "100 × 2000 ÷ 5252 ≈ 38,08 hp, que son unos 38,08 × 0,7457 ≈ 28,40 kW." },
+    faqsEs: [
+      {
+        question: "¿Cómo se calculan los caballos a partir del par y las RPM?",
+        answer: "Los caballos son iguales al par en libras-pie multiplicado por la velocidad de rotación en RPM, dividido entre la constante 5252. Esta constante surge porque un caballo se define como 33.000 libras-pie de trabajo por minuto, y dividir entre dos pi convierte la rotación en esa unidad. La fórmula muestra que la potencia depende tanto de cuánta fuerza de torsión produce un eje como de la rapidez con que gira.",
+      },
+      {
+        question: "¿Por qué se usa la constante 5252?",
+        answer: "El número 5252 procede de la definición de caballo como 33.000 libras-pie por minuto dividido entre dos pi radianes de una revolución, lo que da aproximadamente 5252. Vincula las unidades habituales de par en libras-pie y velocidad en revoluciones por minuto. Por esta constante, las curvas de par y de caballos de cualquier motor siempre se cruzan exactamente a 5252 RPM cuando se dibujan juntas en la misma gráfica.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre par y potencia?",
+        answer: "El par es la fuerza de torsión instantánea que puede aplicar un eje, mientras que la potencia es la rapidez con que esa fuerza realiza trabajo a lo largo del tiempo. Un motor puede tener par alto pero potencia baja si gira despacio, o potencia alta con par modesto si gira rápido. La potencia, que combina ambos, determina la rapidez con que se puede mover una carga, por lo que es la cifra destacada de la mayoría de las máquinas.",
+      },
+      {
+        question: "¿Cómo convierto caballos a kilovatios?",
+        answer: "Multiplica los caballos por 0,7457 para obtener kilovatios, porque un caballo equivale a 745,7 vatios por definición. Esta calculadora realiza la conversión automáticamente, mostrando ambas unidades una junto a otra. Los kilovatios son la unidad métrica estándar de potencia de motor y aparecen en la mayoría de las placas de motores eléctricos del mundo, mientras que los caballos siguen siendo comunes para motores y equipos especificados en Estados Unidos y maquinaria antigua.",
+      },
+      {
+        question: "¿Funciona esto igual para motores eléctricos y de combustión?",
+        answer: "Sí. La relación entre par, velocidad y potencia es la misma para cualquier eje giratorio, ya sea accionado por un motor eléctrico, un motor de gasolina o una turbina. Mientras suministres el par del eje en libras-pie y la velocidad en RPM, la potencia calculada se aplica. Ten en cuenta que los motores eléctricos suelen indicar una potencia continua, mientras que los motores de combustión indican una cifra máxima a una velocidad concreta.",
+      },
+    ],
   },
   {
     id: "beam-deflection",
@@ -308,6 +468,38 @@ export const engineeringWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard mechanical engineering",
+    slugEs: "calculadora-de-deflexion-de-viga",
+    titleEs: "Calculadora de Deflexión de Viga",
+    shortDescriptionEs: "Calcula la deflexión de una viga con carga uniforme.",
+    seoTitleEs: "Calculadora de Deflexión de Viga — Viga Simplemente Apoyada con Carga Uniforme",
+    metaDescriptionEs: "Calculadora de deflexión de viga gratuita para una viga simplemente apoyada con carga uniforme. Introduce carga, luz, módulo y momento de inercia para hallar la deflexión máxima.",
+    primaryKeywordEs: "calculadora de deflexión de viga",
+    secondaryKeywordsEs: ["calculadora de viga simplemente apoyada", "fórmula de deflexión de viga", "calculadora de deflexión estructural"],
+    formulaExplanationEs: "Para una viga simplemente apoyada que soporta una carga uniforme, la deflexión máxima en el centro de la luz es cinco veces la carga por la luz a la cuarta potencia, dividido entre 384 por el módulo por el momento de inercia. La luz aparece a la cuarta potencia porque la deflexión se acumula a lo largo de la longitud y la flexión que causa se compone. Materiales más rígidos y secciones mayores, captados por el módulo y la inercia, resisten esa flexión proporcionalmente.",
+    explanationEs: "La deflexión de una viga es cuánto se hunde una viga cargada respecto a su posición recta, y esta calculadora de deflexión de viga halla la deflexión máxima de una viga simplemente apoyada que soporta una carga distribuida de forma uniforme. Usa la carga por unidad de longitud, la luz, el módulo de Young del material y el momento de inercia de la sección para devolver el hundimiento en el centro de la luz en metros, el punto donde una viga con carga uniforme se flexiona más.\n\nEsto importa porque los forjados, los puentes, las estanterías y los bastidores de máquinas no deben hundirse más allá de límites aceptables aunque sean lo bastante fuertes para no romperse. Una deflexión excesiva agrieta los acabados, provoca suelos que rebotan y desalinea la maquinaria, por lo que los códigos de construcción la limitan como una fracción de la luz. Una calculadora de deflexión de viga te permite comprobar un diseño frente a esos límites antes de elegir un tamaño de viga o un material.\n\nLa fórmula funciona porque la deflexión crece con la cuarta potencia de la luz, así que la longitud domina el resultado, mientras que un material más rígido y una sección más profunda resisten la flexión mediante el módulo y el momento de inercia en el denominador. Por eso duplicar la luz de una viga aumenta el hundimiento dieciséis veces. Ingenieros estructurales y mecánicos y estudiantes usan una calculadora de deflexión de viga para dimensionar vigas que se mantengan cómodamente dentro de los límites de servicio.",
+    exampleEs: { inputs: { load: 1000, length: 4, modulus: 200000000000, inertia: 0.0001 }, explanation: "δ = 5 × 1000 × 4⁴ ÷ (384 × 200000000000 × 0,0001) = 1280000 ÷ 7680000 ≈ 0,0001667 m." },
+    faqsEs: [
+      {
+        question: "¿Qué tipo de viga modela esta calculadora?",
+        answer: "Modela una viga simplemente apoyada, la que descansa sobre un apoyo en cada extremo, que soporta una carga distribuida de forma uniforme a lo largo de toda su longitud. Es uno de los casos más comunes en el trabajo estructural, cubriendo viguetas de forjado, luces de estantería y tableros de puentes simples. La deflexión máxima ocurre en el centro de la luz. Otras condiciones de apoyo, como un voladizo o extremos empotrados, usan fórmulas distintas y darían resultados diferentes.",
+      },
+      {
+        question: "¿Por qué la luz tiene un efecto tan grande en la deflexión?",
+        answer: "La luz aparece a la cuarta potencia en la fórmula de deflexión, así que domina el resultado. Duplicar la longitud de una viga manteniendo todo lo demás igual aumenta su deflexión en un factor de dieciséis. Esta fuerte dependencia es por lo que las luces largas necesitan vigas mucho más profundas o rígidas, y por lo que añadir un apoyo intermedio para acortar la luz efectiva reduce el hundimiento de forma tan drástica en la práctica.",
+      },
+      {
+        question: "¿Qué es el momento de inercia?",
+        answer: "El momento de inercia, o segundo momento de área, mide cómo se distribuye el material de una sección respecto al eje de flexión. Colocar material más lejos del eje neutro, como en una viga en I, lo aumenta mucho y resiste la flexión de forma mucho más eficiente que una barra maciza del mismo peso. Un momento de inercia mayor significa menos deflexión, por lo que las secciones estructurales se diseñan para maximizarlo.",
+      },
+      {
+        question: "¿Qué unidades debo usar?",
+        answer: "Introduce la carga distribuida en newtons por metro, la luz en metros, el módulo de Young en pascales y el momento de inercia en metros a la cuarta potencia. La deflexión sale entonces en metros. Como las deflexiones estructurales son pequeñas, el resultado suele ser una fracción de milímetro; multiplica por 1000 para leerlo en milímetros, la unidad más usada al comprobar frente a los límites de los códigos.",
+      },
+      {
+        question: "¿Cuánta deflexión es aceptable?",
+        answer: "Los códigos de construcción suelen limitar la deflexión a una fracción de la luz, comúnmente la luz dividida entre 250 o 360 según el elemento y el acabado. Una viga puede ser lo bastante fuerte para no romperse y aun así hundirse demasiado para el confort o para proteger acabados frágiles como el yeso. Compara siempre la deflexión calculada frente al límite de servicio pertinente para tu aplicación en lugar de solo la resistencia.",
+      },
+    ],
   },
   {
     id: "reynolds-number",
@@ -360,5 +552,37 @@ export const engineeringWave3Calculators: CalculatorDefinition[] = [
     status: "active",
     lastReviewed: "2026-08-20",
     formulaSource: "Standard fluid mechanics (Reynolds number)",
+    slugEs: "calculadora-de-numero-de-reynolds",
+    titleEs: "Calculadora de Número de Reynolds",
+    shortDescriptionEs: "Calcula el número de Reynolds y el régimen de flujo.",
+    seoTitleEs: "Calculadora de Número de Reynolds — Flujo Laminar o Turbulento",
+    metaDescriptionEs: "Calculadora de número de Reynolds gratuita. Introduce densidad, velocidad, longitud característica y viscosidad del fluido para hallar el número de Reynolds y si el flujo es laminar o turbulento.",
+    primaryKeywordEs: "calculadora de número de reynolds",
+    secondaryKeywordsEs: ["calculadora de flujo laminar turbulento", "calculadora de régimen de flujo de fluido", "fórmula del número de reynolds"],
+    formulaExplanationEs: "El número de Reynolds es la relación entre las fuerzas de inercia y las fuerzas viscosas en un fluido en movimiento, formado al multiplicar densidad, velocidad y una longitud característica y dividir entre la viscosidad dinámica. Cuando domina la inercia, el número es grande y el flujo se vuelve turbulento; cuando domina la viscosidad, el número es pequeño y el flujo se mantiene suave y laminar. Al ser una relación de fuerzas, el número de Reynolds es adimensional.",
+    explanationEs: "El número de Reynolds predice si un fluido fluirá de forma suave o caótica, y esta calculadora de número de Reynolds lo calcula a partir de la densidad del fluido, la velocidad, una longitud característica y su viscosidad dinámica, y luego clasifica el flujo como laminar, transicional o turbulento. Es un único número adimensional que capta el equilibrio entre la tendencia del fluido a seguir moviéndose y su fricción interna, que juntas deciden el carácter del flujo.\n\nEsto importa en toda la ingeniería de fluidos: el diseño de tuberías, la selección de bombas, la aerodinámica de aviones y coches, los intercambiadores de calor y la mezcla química dependen de conocer el régimen de flujo. El flujo laminar es ordenado y predecible con poca resistencia, mientras que el turbulento mezcla con fuerza pero resiste más el movimiento. Una calculadora de número de Reynolds te dice qué régimen se aplica para que puedas elegir las ecuaciones, correlaciones y márgenes de seguridad adecuados para un diseño.\n\nLa fórmula funciona porque el número de Reynolds es la relación entre las fuerzas de inercia, representadas por densidad por velocidad por longitud, y las fuerzas viscosas representadas por la viscosidad. Por debajo de unos 2300 las fuerzas viscosas mantienen el flujo laminar; por encima de unos 4000 la inercia lo vuelve turbulento, con una banda transicional intermedia. Ingenieros mecánicos, químicos y aeroespaciales junto con estudiantes usan una calculadora de número de Reynolds para caracterizar el flujo antes de dimensionar tuberías y analizar la resistencia.",
+    exampleEs: { inputs: { density: 1000, velocity: 2, length: 0.1, viscosity: 0.001 }, explanation: "Re = 1000 × 2 × 0,1 ÷ 0,001 = 200 ÷ 0,001 = 200000, muy por encima de 4000, así que el flujo es turbulento." },
+    faqsEs: [
+      {
+        question: "¿Qué indica el número de Reynolds?",
+        answer: "El número de Reynolds indica si un flujo de fluido será laminar, suave y ordenado, o turbulento, caótico y con mezcla. Es la relación entre las fuerzas de inercia y las fuerzas viscosas en el fluido. Un valor bajo significa que la viscosidad mantiene el flujo suave, mientras que un valor alto significa que la inercia supera a la viscosidad y el flujo se rompe en remolinos. Este único número orienta qué física y ecuaciones de diseño se aplican a una situación dada.",
+      },
+      {
+        question: "¿Cuáles son los umbrales laminar y turbulento?",
+        answer: "Para el flujo en una tubería, un número de Reynolds por debajo de unos 2300 es generalmente laminar, por encima de unos 4000 es turbulento, y el rango intermedio es transicional, donde el flujo puede alternar de forma impredecible entre ambos estados. Estos umbrales son aproximados y dependen de la geometría y la rugosidad de la superficie, pero proporcionan la regla práctica estándar que los ingenieros usan para clasificar el flujo en tuberías.",
+      },
+      {
+        question: "¿Qué es la longitud característica?",
+        answer: "La longitud característica es una dimensión representativa de la geometría del flujo. Para el flujo dentro de una tubería circular es el diámetro interior; para el flujo sobre una placa plana es la longitud a lo largo de la placa; para una esfera es el diámetro. Elegir la longitud característica correcta importa porque el número de Reynolds, y por tanto el régimen predicho, cambia directamente con el valor de longitud que introduces.",
+      },
+      {
+        question: "¿Qué unidades usa esta calculadora?",
+        answer: "Introduce la densidad en kilogramos por metro cúbico, la velocidad en metros por segundo, la longitud característica en metros y la viscosidad dinámica en pascales-segundo. Como el número de Reynolds es una relación de fuerzas, todas las unidades se cancelan y el resultado es adimensional, solo un número puro. Usar unidades del SI consistentes en todo momento es esencial, ya que mezclar unidades daría un valor que ya no corresponde a los umbrales estándar de régimen de flujo.",
+      },
+      {
+        question: "¿Por qué importa el régimen de flujo en el diseño?",
+        answer: "El régimen de flujo determina la caída de presión, la transferencia de calor, la mezcla y la resistencia, todo lo cual guía las decisiones de ingeniería. El flujo laminar tiene menores pérdidas por fricción y comportamiento predecible, mientras que el turbulento mejora la mezcla y la transferencia de calor pero exige más potencia de bombeo. Conocer el número de Reynolds te permite elegir las correlaciones correctas de fricción y calor, dimensionar bombas y anticipar si un sistema funcionará con eficiencia.",
+      },
+    ],
   },
 ];
