@@ -23,6 +23,8 @@ const WP_URL = process.env.WP_URL?.replace(/\/$/, "");
 const WP_USER = process.env.WP_USER;
 const WP_APP_PASSWORD = process.env.WP_APP_PASSWORD;
 const BATCH = 10;
+/** --force overwrites content even when the entry already has an explanation. */
+const FORCE = process.argv.includes("--force");
 
 if (!WP_URL || !WP_USER || !WP_APP_PASSWORD) {
   console.error("Missing env. Set WP_URL, WP_USER and WP_APP_PASSWORD.");
@@ -87,7 +89,9 @@ async function main() {
   const total = calcs.length;
   console.log(`Fetching existing WordPress calculator pages…`);
   const wpMap = await fetchAll();
-  console.log(`Found ${wpMap.size} entries in WordPress. Seeding ${total} calculators.\n`);
+  console.log(
+    `Found ${wpMap.size} entries in WordPress. Seeding ${total} calculators${FORCE ? " (--force: overwriting existing)" : ""}.\n`
+  );
 
   let updated = 0;
   let skipped = 0;
@@ -105,8 +109,8 @@ async function main() {
           console.warn(`  ! no WP entry for ${slug}`);
           return;
         }
-        // Idempotent: skip if content already present.
-        if ((wp.meta?.calc_explanation ?? "").trim() !== "") {
+        // Idempotent by default: skip if content already present (unless --force).
+        if (!FORCE && (wp.meta?.calc_explanation ?? "").trim() !== "") {
           skipped += 1;
           return;
         }
